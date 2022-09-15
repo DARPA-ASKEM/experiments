@@ -1,0 +1,11 @@
+numpy
+scipy
+matplotlib
+jupyterlab
+networkx
+scikit-learn
+pandas
+tqdm
+pylint
+regex
+requests
