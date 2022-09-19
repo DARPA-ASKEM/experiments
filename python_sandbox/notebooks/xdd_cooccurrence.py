@@ -29,8 +29,10 @@ def build_coocc_matrix(
         'max': str(MAX_NUM_PER_PAGE),
         'include_score': 'true'
     },
+    remove_empty = True,
+    sort = True,
     plot: bool = True,
-    plot_savepath: str = './figures/coocc_matrix.png'
+    plot_savepath: str = '../figures/coocc_matrix.png'
     ) -> Any:
 
     # Plot result
@@ -38,22 +40,18 @@ def build_coocc_matrix(
 
         num_rows = len(dict_terms[0])
         num_cols = len(dict_terms[1])
+        m = min([num_top, num_rows])
+        n = min([num_top, num_cols])
 
-        # Sort array
-        i = np.argsort(np.sum(coocc, axis = 1))[::-1]
-        coocc = coocc[i, :]
-        j = np.argsort(np.sum(coocc, axis = 0))[::-1]
-        coocc = coocc[:, j]
-
-        # Re-order labels
-        labels_0 = np.array(list(dict_terms[0].keys()))[i]
-        labels_1 = np.array(list(dict_terms[1].keys()))[j]
-
+        # Labels
+        labels_0 = np.array(list(dict_terms[0].keys()))
+        labels_1 = np.array(list(dict_terms[1].keys()))
 
         fig, ax = plt.subplots(1, 1, figsize = (8, 8))
-        __ = ax.imshow(np.log10(coocc[:num_top, :num_top] + 0.1), cmap = 'cividis', origin = 'upper')
-        ax.set_xticks(np.arange(0, num_top), labels = labels_1[:num_top])
-        ax.set_yticks(np.arange(0, num_top), labels = labels_0[:num_top])
+        __ = ax.imshow(np.log10(coocc[:m, :n] + 0.1), cmap = 'cividis', origin = 'upper')
+
+        ax.set_xticks(np.arange(0, n), labels = labels_1[:n])
+        ax.set_yticks(np.arange(0, m), labels = labels_0[:m])
 
         __ = plt.setp(ax, 
             xlabel = params['dict'].split(',')[1], 
@@ -62,8 +60,8 @@ def build_coocc_matrix(
         )
         __ = plt.setp(ax.get_xticklabels(), rotation = 45, ha = 'right', rotation_mode = 'anchor')
 
-        for i in np.arange(0, num_top):
-            for j in np.arange(0, num_top):
+        for i in np.arange(m):
+            for j in np.arange(n):
                 __ = ax.text(j, i, f"{coocc[i, j]:d}", ha = 'center', va = 'center', color = 'w')
 
         return fig
@@ -168,6 +166,28 @@ def build_coocc_matrix(
                 pbar.update(1)
                 next_page = r.json()['success']['next_page']
 
+    # Remove empty rows & columns
+    if remove_empty == True:
+        i = np.sum(coocc, axis = 1) != 0
+        j = np.sum(coocc, axis = 0) != 0
+        coocc_ = coocc[i, :]
+        coocc_ = coocc_[:, j]
+        coocc = coocc_
+        print(f"Non-empty matrix shape: {coocc.shape[0]} x {coocc.shape[1]}")
+
+    # Sort rows & columns
+    if sort == True:
+        i = np.argsort(np.sum(coocc, axis = 1))[::-1]
+        coocc = coocc[i, :]
+        j = np.argsort(np.sum(coocc, axis = 0))[::-1]
+        coocc = coocc[:, j]
+
+        # Re-order labels
+        labels_0 = np.array(list(dict_terms[0].keys()))[i]
+        labels_1 = np.array(list(dict_terms[1].keys()))[j]
+
+        dict_terms[0] = {l: i for i, l in enumerate(labels_0)}
+        dict_terms[1] = {l: i for i, l in enumerate(labels_1)}
 
     # Optional plotting
     if plot == True:
@@ -176,7 +196,24 @@ def build_coocc_matrix(
 
     return coocc, dict_terms, params
 
+# %%[markdown]
+## Default - Top N, Ranked
+
 # %%
 coocc, dict_terms, params = build_coocc_matrix()
+
+# %%[markdown]
+## Option - Full Results, Unranked
+
+params = {
+    'dataset': 'xdd-covid-19', 
+    'term': 'github',
+    'dict': 'genes,covid-19_drugs', 
+    'full_results': 'true',
+    'max': str(MAX_NUM_PER_PAGE),
+    'include_score': 'true'
+}
+
+coocc, dict_terms, params = build_coocc_matrix(params = params)
 
 # %%
