@@ -1,0 +1,11 @@
+{
+  "susceptible"           : 164689383,
+  "exposed"               : 89383,
+  "presymptomatic"        : 89383,
+  "symptomatic_infected"  : 689383,
+  "asymptomatic_infected" : 689383,
+  "quarantined"           : 0,
+  "isolated"              : 0,
+  "recovered"             : 689383,
+  "death"                 : 0 
+}
