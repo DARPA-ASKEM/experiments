@@ -6,6 +6,7 @@
 # %%
 # - Example of a model in meta-model-template (MMT) representation
 # - Provided by Ben Gyori at HMS
+# - From [EMBL BioModels](https://www.ebi.ac.uk/biomodels/BIOMD0000000955)
 
 # %%
 import requests
