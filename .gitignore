@@ -1,4 +1,3 @@
 .ipynb_checkpoints
 .venv
-.json
-./python_sandbox/data
+/python_sandbox/data/*
