@@ -127,15 +127,15 @@ fig.savefig('../figures/starterkit_model_outputs.png', dpi = 150)
 # params = [u, R0, t_incubation, t_infective, E_i, I_i, R_i]
 params = [0.2, 2.4, 5.1, 3.3, 1.0 / 20000.0, 0.0, 0.0]
 
-# time: 6 months in 12-h steps
-time = np.arange(0.0, 6.0 * 30.0, 0.5)
+# time: 6 months in 1-day steps
+time = np.arange(0.0, 6.0 * 30.0, 1.0)
 
 # u: [0, 1]
 # R0: [1, 10]
 # t_incubation: [1, 10]
 # t_infective: [1, 10]
 
-p = np.meshgrid(np.linspace(0, 1, 10), np.linspace(1, 10, 10), np.linspace(1, 10, 10), np.linspace(1, 10, 10))
+p = np.meshgrid(np.linspace(0, 1, 2), np.linspace(1, 10, 2), np.linspace(1, 10, 2), np.linspace(1, 10, 2))
 for i, __ in enumerate(p):
     p[i] = p[i].reshape((-1, 1)).squeeze()
 
