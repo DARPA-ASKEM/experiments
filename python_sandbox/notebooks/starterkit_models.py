@@ -11,6 +11,7 @@
 # %%
 import numpy as np
 import scipy as sp
+import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from typing import NoReturn, Optional, Any
@@ -130,12 +131,12 @@ params = [0.2, 2.4, 5.1, 3.3, 1.0 / 20000.0, 0.0, 0.0]
 # time: 6 months in 1-day steps
 time = np.arange(0.0, 6.0 * 30.0, 1.0)
 
-# u: [0, 1]
-# R0: [1, 10]
-# t_incubation: [1, 10]
-# t_infective: [1, 10]
+# u: [0.1, 0.3]
+# R0: [2, 4]
+# t_incubation: [2, 5]
+# t_infective: [3, 6]
 
-p = np.meshgrid(np.linspace(0, 1, 2), np.linspace(1, 10, 2), np.linspace(1, 10, 2), np.linspace(1, 10, 2))
+p = np.meshgrid(np.linspace(0.1, 0.3, 4), np.linspace(2, 4, 4), np.linspace(2, 5, 4), np.linspace(3, 6, 4))
 for i, __ in enumerate(p):
     p[i] = p[i].reshape((-1, 1)).squeeze()
 
@@ -143,21 +144,15 @@ output = []
 for i in range(len(p[0])):
     params = [p[0][i], p[1][i], p[2][i], p[3][i], 1.0 / 20000.0, 0.0, 0.0]
     sol = kantor_models(model_id = 1, time = time, params = params)
+    output += [['kantor_SEIR_interv', '_'.join([f"{p:.1f}" for p in params]), k] + list(v) for k, v in sol.items() if k != 'params']
 
-    name = f"kantor_{params[0]:.1f}_{params[1]:.1f}_{params[2]:.1f}_{params[3]:.1f}"
-
-    output.append({
-        name: [
-            {k: sol[k][j] for k in sol.keys() if k != 'params'}
-            for j in range(len(sol['time']))
-        ]
-    })
-
+output = pd.DataFrame(output, columns = ['_model', '_scenario', '_varname'] + list(range(len(sol['time']))))
 
 with open('../data/starterkit_models.json', 'w') as f:
-    json.dump(output, f)
+    f.write(output.to_json(orient = 'records'))
 
 # %%
+
 
 
 
