@@ -9,6 +9,7 @@
 # - From [EMBL BioModels](https://www.ebi.ac.uk/biomodels/BIOMD0000000955)
 
 # %%
+import json
 import requests
 import pandas as pd
 import numpy as np
@@ -22,13 +23,13 @@ from typing import NoReturn, Optional, Any
 res = requests.get('http://34.230.33.149:8771/api/biomodels/BIOMD0000000955')
 
 # Model in MMT representation and JSON format
-model_mmt = res.json()['templates']
+model_mmt = res.json()
 
 # %%
 # Request conversion to Petri net
 res = requests.post('http://34.230.33.149:8771/api/to_petrinet', json = res.json())
 
-model_petrinet = res.json()
+model_petri = res.json()
 
 # S = species
 # T = transition
@@ -45,7 +46,7 @@ x = {
 }
 
 i = 0
-for l in model_mmt:
+for l in model_mmt['templates']:
 
     # subject -> process
     x['source'].append(l['subject']['name'])
@@ -80,17 +81,17 @@ df_mmt
 # %%
 # Build source-target DataFrame
 
-map_petrinet_names = {'S': {(i + 1): s['sname'] for i, s in enumerate(model_petrinet['S'])}, 'T': {(j + 1): s['tname'] for j, s in enumerate(model_petrinet['T'])}}
+map_petrinet_names = {'S': {(i + 1): s['sname'] for i, s in enumerate(model_petri['S'])}, 'T': {(j + 1): s['tname'] for j, s in enumerate(model_petri['T'])}}
 
-df_petrinet = pd.DataFrame({
-    'source': [map_petrinet_names['S'][d['is']] for d in model_petrinet['I']] + [map_petrinet_names['T'][d['ot']] for d in model_petrinet['O']],
-    'source_type': ['S' for d in model_petrinet['I']] + ['T' for d in model_petrinet['O']],
-    'target': [map_petrinet_names['T'][d['it']] for d in model_petrinet['I']] + [map_petrinet_names['S'][d['os']] for d in model_petrinet['O']],
-    'target_type': ['T' for d in model_petrinet['I']] + ['S' for d in model_petrinet['O']],
-    'edge_type': ['I' for d in model_petrinet['I']] + ['O' for d in model_petrinet['O']]
+df_petri = pd.DataFrame({
+    'source': [map_petrinet_names['S'][d['is']] for d in model_petri['I']] + [map_petrinet_names['T'][d['ot']] for d in model_petri['O']],
+    'source_type': ['S' for d in model_petri['I']] + ['T' for d in model_petri['O']],
+    'target': [map_petrinet_names['T'][d['it']] for d in model_petri['I']] + [map_petrinet_names['S'][d['os']] for d in model_petri['O']],
+    'target_type': ['T' for d in model_petri['I']] + ['S' for d in model_petri['O']],
+    'edge_type': ['I' for d in model_petri['I']] + ['O' for d in model_petri['O']]
 })
 
-df_petrinet
+df_petri
 
 # %%
 # Build NetworkX graph
@@ -175,15 +176,16 @@ def draw_graph(G: nx.DiGraph, ax: Optional[Any] = None, node_type: Optional[list
 # %%
 # Draw graphs
 G_mmt = build_graph(df_mmt)
-G_petrinet = build_graph(df_petrinet)
+G_petri = build_graph(df_petri)
 
+# %%
 fig, axes = plt.subplots(nrows = 1, ncols = 2, figsize = (12, 6))
 fig.subplots_adjust(wspace = 0.01)
 
 draw_graph(G_mmt, ax = axes[0])
 __ = plt.setp(axes[0], title = 'MMT Representation')
 
-draw_graph(G_petrinet, ax = axes[1])
+draw_graph(G_petri, ax = axes[1])
 __ = plt.setp(axes[1], title = 'Petri Net Representation')
 
 fig.suptitle('Model at TA1-TA2 Integration Point')
