@@ -1,0 +1,11 @@
+{
+    "parameters": {
+        "beta": 0.16668,
+        "omega": 0.01667,
+        "sigma": 0.19231,
+        "gamma": 0.05556,
+        "R_fixed": 3.0,
+        "Fraction_infected": 0.001,
+        "USA": 1.0
+    }
+}

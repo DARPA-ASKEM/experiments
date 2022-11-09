@@ -1,0 +1,740 @@
+{
+    "S": [
+        {
+            "sname": "A1",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "A2",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "A2+",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "A2-",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "A2+act",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "A2-act",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "AT",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "I_act",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "I",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "F",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "A",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "D",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "T",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "M_act",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "V",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "X",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "A2act",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "M",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        }
+    ],
+    "T": [
+        {
+            "tname": "t1",
+            "template_type": "GroupedControlledProduction",
+            "parameter_name": "('A1', ('A2', 'A2+', 'A2-', 'A2+act', 'A2-act'), 'GroupedControlledProduction', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t2",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "muA",
+            "parameter_value": "0.00035"
+        },
+        {
+            "tname": "t3",
+            "template_type": "GroupedControlledProduction",
+            "parameter_name": "('A2+', ('AT', 'A2-', 'A2+act', 'A1', 'A2+', 'A2-act', 'I_act'), 'GroupedControlledProduction', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t4",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('A2+act', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t5",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('A2-act', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t6",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('I', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t7",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "alpha",
+            "parameter_value": "0.6"
+        },
+        {
+            "tname": "t8",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('I_act', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t9",
+            "template_type": "GroupedControlledProduction",
+            "parameter_name": "('D', ('I', 'I_act', 'T'), 'GroupedControlledProduction', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t10",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('D', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t11",
+            "template_type": "GroupedControlledProduction",
+            "parameter_name": "('F', ('I', 'I_act', 'M_act'), 'GroupedControlledProduction', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t12",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('A2+', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t13",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "alpha",
+            "parameter_value": "0.6"
+        },
+        {
+            "tname": "t14",
+            "template_type": "ControlledConversion",
+            "parameter_name": "beta",
+            "parameter_value": "0.16666"
+        },
+        {
+            "tname": "t15",
+            "template_type": "GroupedControlledProduction",
+            "parameter_name": "('A2-', ('AT', 'A2+', 'A2-act', 'A1', 'A2-', 'A2+act', 'I_act'), 'GroupedControlledProduction', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t16",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('A2-', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t17",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "alpha",
+            "parameter_value": "0.6"
+        },
+        {
+            "tname": "t18",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "muF",
+            "parameter_value": "0.35"
+        },
+        {
+            "tname": "t19",
+            "template_type": "GroupedControlledProduction",
+            "parameter_name": "('X', ('I', 'I_act', 'A2act', 'M_act', 'A2+act', 'A2-act'), 'GroupedControlledProduction', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t20",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "muX",
+            "parameter_value": "1.0"
+        },
+        {
+            "tname": "t21",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('T', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t22",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "('M', 'M_act', ('V', 'D'), 'GroupedControlledConversion', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t23",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('M', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t24",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "('M_act', (), 'NaturalDegradation', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t25",
+            "template_type": "GroupedControlledProduction",
+            "parameter_name": "('V', ('I_act', 'I', 'M', 'M_act', 'V'), 'GroupedControlledProduction', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t26",
+            "template_type": "NaturalDegradation",
+            "parameter_name": "muV",
+            "parameter_value": "0.3333"
+        }
+    ],
+    "I": [
+        {
+            "is": 2,
+            "it": 1
+        },
+        {
+            "is": 3,
+            "it": 1
+        },
+        {
+            "is": 4,
+            "it": 1
+        },
+        {
+            "is": 5,
+            "it": 1
+        },
+        {
+            "is": 6,
+            "it": 1
+        },
+        {
+            "is": 1,
+            "it": 2
+        },
+        {
+            "is": 7,
+            "it": 3
+        },
+        {
+            "is": 4,
+            "it": 3
+        },
+        {
+            "is": 5,
+            "it": 3
+        },
+        {
+            "is": 1,
+            "it": 3
+        },
+        {
+            "is": 3,
+            "it": 3
+        },
+        {
+            "is": 6,
+            "it": 3
+        },
+        {
+            "is": 8,
+            "it": 3
+        },
+        {
+            "is": 5,
+            "it": 4
+        },
+        {
+            "is": 6,
+            "it": 5
+        },
+        {
+            "is": 9,
+            "it": 6
+        },
+        {
+            "is": 10,
+            "it": 7
+        },
+        {
+            "is": 11,
+            "it": 7
+        },
+        {
+            "is": 9,
+            "it": 7
+        },
+        {
+            "is": 8,
+            "it": 8
+        },
+        {
+            "is": 9,
+            "it": 9
+        },
+        {
+            "is": 8,
+            "it": 9
+        },
+        {
+            "is": 13,
+            "it": 9
+        },
+        {
+            "is": 12,
+            "it": 10
+        },
+        {
+            "is": 9,
+            "it": 11
+        },
+        {
+            "is": 8,
+            "it": 11
+        },
+        {
+            "is": 14,
+            "it": 11
+        },
+        {
+            "is": 3,
+            "it": 12
+        },
+        {
+            "is": 10,
+            "it": 13
+        },
+        {
+            "is": 11,
+            "it": 13
+        },
+        {
+            "is": 3,
+            "it": 13
+        },
+        {
+            "is": 15,
+            "it": 14
+        },
+        {
+            "is": 3,
+            "it": 14
+        },
+        {
+            "is": 7,
+            "it": 15
+        },
+        {
+            "is": 3,
+            "it": 15
+        },
+        {
+            "is": 6,
+            "it": 15
+        },
+        {
+            "is": 1,
+            "it": 15
+        },
+        {
+            "is": 4,
+            "it": 15
+        },
+        {
+            "is": 5,
+            "it": 15
+        },
+        {
+            "is": 8,
+            "it": 15
+        },
+        {
+            "is": 4,
+            "it": 16
+        },
+        {
+            "is": 10,
+            "it": 17
+        },
+        {
+            "is": 11,
+            "it": 17
+        },
+        {
+            "is": 4,
+            "it": 17
+        },
+        {
+            "is": 10,
+            "it": 18
+        },
+        {
+            "is": 9,
+            "it": 19
+        },
+        {
+            "is": 8,
+            "it": 19
+        },
+        {
+            "is": 17,
+            "it": 19
+        },
+        {
+            "is": 14,
+            "it": 19
+        },
+        {
+            "is": 5,
+            "it": 19
+        },
+        {
+            "is": 6,
+            "it": 19
+        },
+        {
+            "is": 16,
+            "it": 20
+        },
+        {
+            "is": 13,
+            "it": 21
+        },
+        {
+            "is": 15,
+            "it": 22
+        },
+        {
+            "is": 12,
+            "it": 22
+        },
+        {
+            "is": 18,
+            "it": 22
+        },
+        {
+            "is": 18,
+            "it": 23
+        },
+        {
+            "is": 14,
+            "it": 24
+        },
+        {
+            "is": 8,
+            "it": 25
+        },
+        {
+            "is": 9,
+            "it": 25
+        },
+        {
+            "is": 18,
+            "it": 25
+        },
+        {
+            "is": 14,
+            "it": 25
+        },
+        {
+            "is": 15,
+            "it": 25
+        },
+        {
+            "is": 15,
+            "it": 26
+        }
+    ],
+    "O": [
+        {
+            "os": 2,
+            "ot": 1
+        },
+        {
+            "os": 3,
+            "ot": 1
+        },
+        {
+            "os": 4,
+            "ot": 1
+        },
+        {
+            "os": 5,
+            "ot": 1
+        },
+        {
+            "os": 6,
+            "ot": 1
+        },
+        {
+            "os": 1,
+            "ot": 1
+        },
+        {
+            "os": 7,
+            "ot": 3
+        },
+        {
+            "os": 4,
+            "ot": 3
+        },
+        {
+            "os": 5,
+            "ot": 3
+        },
+        {
+            "os": 1,
+            "ot": 3
+        },
+        {
+            "os": 3,
+            "ot": 3
+        },
+        {
+            "os": 6,
+            "ot": 3
+        },
+        {
+            "os": 8,
+            "ot": 3
+        },
+        {
+            "os": 3,
+            "ot": 3
+        },
+        {
+            "os": 10,
+            "ot": 7
+        },
+        {
+            "os": 11,
+            "ot": 7
+        },
+        {
+            "os": 8,
+            "ot": 7
+        },
+        {
+            "os": 9,
+            "ot": 9
+        },
+        {
+            "os": 8,
+            "ot": 9
+        },
+        {
+            "os": 13,
+            "ot": 9
+        },
+        {
+            "os": 12,
+            "ot": 9
+        },
+        {
+            "os": 9,
+            "ot": 11
+        },
+        {
+            "os": 8,
+            "ot": 11
+        },
+        {
+            "os": 14,
+            "ot": 11
+        },
+        {
+            "os": 10,
+            "ot": 11
+        },
+        {
+            "os": 10,
+            "ot": 13
+        },
+        {
+            "os": 11,
+            "ot": 13
+        },
+        {
+            "os": 5,
+            "ot": 13
+        },
+        {
+            "os": 15,
+            "ot": 14
+        },
+        {
+            "os": 9,
+            "ot": 14
+        },
+        {
+            "os": 7,
+            "ot": 15
+        },
+        {
+            "os": 3,
+            "ot": 15
+        },
+        {
+            "os": 6,
+            "ot": 15
+        },
+        {
+            "os": 1,
+            "ot": 15
+        },
+        {
+            "os": 4,
+            "ot": 15
+        },
+        {
+            "os": 5,
+            "ot": 15
+        },
+        {
+            "os": 8,
+            "ot": 15
+        },
+        {
+            "os": 4,
+            "ot": 15
+        },
+        {
+            "os": 10,
+            "ot": 17
+        },
+        {
+            "os": 11,
+            "ot": 17
+        },
+        {
+            "os": 6,
+            "ot": 17
+        },
+        {
+            "os": 9,
+            "ot": 19
+        },
+        {
+            "os": 8,
+            "ot": 19
+        },
+        {
+            "os": 17,
+            "ot": 19
+        },
+        {
+            "os": 14,
+            "ot": 19
+        },
+        {
+            "os": 5,
+            "ot": 19
+        },
+        {
+            "os": 6,
+            "ot": 19
+        },
+        {
+            "os": 16,
+            "ot": 19
+        },
+        {
+            "os": 15,
+            "ot": 22
+        },
+        {
+            "os": 12,
+            "ot": 22
+        },
+        {
+            "os": 14,
+            "ot": 22
+        },
+        {
+            "os": 8,
+            "ot": 25
+        },
+        {
+            "os": 9,
+            "ot": 25
+        },
+        {
+            "os": 18,
+            "ot": 25
+        },
+        {
+            "os": 14,
+            "ot": 25
+        },
+        {
+            "os": 15,
+            "ot": 25
+        },
+        {
+            "os": 15,
+            "ot": 25
+        }
+    ]
+}

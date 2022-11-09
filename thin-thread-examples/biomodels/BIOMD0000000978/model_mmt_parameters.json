@@ -1,0 +1,12 @@
+{
+    "parameters": {
+        "beta": 1.3,
+        "epsilon": 0.0,
+        "sigma": 0.311,
+        "gamma": 0.3389830508,
+        "N": 36196938.0,
+        "Event_trigger": 1.0,
+        "Cumulative_cases": 2.0,
+        "South_Africa": 1.0
+    }
+}

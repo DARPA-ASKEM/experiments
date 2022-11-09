@@ -1,0 +1,12 @@
+{
+    "parameters": {
+        "alpha": 0.55,
+        "gamma_1": 0.1,
+        "gamma_2": 0.061,
+        "tau": 2e-09,
+        "mu": 0.02,
+        "Lockdown_start": 19.0,
+        "Lockdown_end": 33.0,
+        "Iran": 1.0
+    }
+}

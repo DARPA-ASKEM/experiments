@@ -1,0 +1,70 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*Infected*Susceptible*beta_0*(0.4374*Trigger_Stage_1 + 0.3914*Trigger_Stage_2 + 0.4047*Trigger_Stage_3)*(-0.0784*Trigger_Stage_1 - 0.045*Trigger_Stage_2 - 0.0466*Trigger_Stage_3 + 1)**time/(Infected + Removed + Susceptible)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000982:Infected"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Removed",
+                    "identifiers": {
+                        "ido": "0000621",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000982:Removed"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000982:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000982:Infected"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*(0.025*Trigger_Stage_1 + 0.042*Trigger_Stage_2 + 0.05*Trigger_Stage_3)",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000982:Infected"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Removed",
+                "identifiers": {
+                    "ido": "0000621",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000982:Removed"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ]
+}

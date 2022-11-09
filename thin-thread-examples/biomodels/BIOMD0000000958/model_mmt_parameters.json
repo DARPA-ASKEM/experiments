@@ -1,0 +1,19 @@
+{
+    "parameters": {
+        "beta": 2.8,
+        "beta_prime": 7.65,
+        "rho1": 0.58,
+        "rho2": 0.001,
+        "l": 1.56,
+        "kappa": 0.25,
+        "gamma_a": 0.94,
+        "gamma_i": 0.27,
+        "gamma_r": 0.5,
+        "delta_i": 0.035,
+        "delta_p": 1.0,
+        "delta_h": 0.085,
+        "N": 44000.0,
+        "Confimed_cases": 6.0,
+        "Wuhan": 1.0
+    }
+}

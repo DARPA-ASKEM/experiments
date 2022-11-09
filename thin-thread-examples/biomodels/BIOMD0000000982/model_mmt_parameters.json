@@ -1,0 +1,15 @@
+{
+    "parameters": {
+        "z": 0.4047,
+        "beta_0": 0.4114,
+        "delta": 0.05,
+        "p": 0.0466,
+        "beta": 0.4114,
+        "I_total": 790.0,
+        "N": 32680790.0,
+        "Trigger_Stage_1": 0.0,
+        "Trigger_Stage_2": 0.0,
+        "Trigger_Stage_3": 1.0,
+        "Malayasia": 1.0
+    }
+}

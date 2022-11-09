@@ -1,0 +1,22 @@
+{
+    "parameters": {
+        "transmission_rate_effective": 0.4236,
+        "gamma_a": 0.13978,
+        "gamma_0": 0.13978,
+        "gamma_i": 0.0666666666666667,
+        "psi": 0.0135,
+        "theta": 1.8999e-12,
+        "d_0": 0.015,
+        "d_D": 0.015,
+        "sigma": 0.192307692307692,
+        "nu": 0.5,
+        "alpha": 0.5,
+        "eps": 0.0,
+        "delta": 0.0,
+        "lam": 9.02103115891956e-06,
+        "exposed_start": 441.0,
+        "asymptomatic_start": 188.0,
+        "symptomatic_start": 212.0,
+        "Lagos": 1.0
+    }
+}
