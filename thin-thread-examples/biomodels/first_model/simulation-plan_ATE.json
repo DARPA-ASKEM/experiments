@@ -1,0 +1,263 @@
+{
+    "InPort": [
+      {
+        "in_port_box": 1,
+        "in_port_type": "Simplex"
+      },
+      {
+        "in_port_box": 2,
+        "in_port_type": "Simplex"
+      },
+      {
+        "in_port_box": 3,
+        "in_port_type": "Simplex"
+      },
+      {
+        "in_port_box": 3,
+        "in_port_type": "Simplex"
+      },
+      {
+        "in_port_box": 5,
+        "in_port_type": "Petri"
+      },
+      {
+        "in_port_box": 5,
+        "in_port_type": "Number"
+      },
+      {
+        "in_port_box": 5,
+        "in_port_type": "Number"
+      },
+      {
+        "in_port_box": 5,
+        "in_port_type": "Simplex"
+      },
+      {
+        "in_port_box": 7,
+        "in_port_type": "Petri"
+      },
+      {
+        "in_port_box": 7,
+        "in_port_type": "Number"
+      },
+      {
+        "in_port_box": 7,
+        "in_port_type": "Number"
+      },
+      {
+        "in_port_box": 7,
+        "in_port_type": "Simplex"
+      },
+      {
+        "in_port_box": 8,
+        "in_port_type": "Trajectory"
+      },
+      {
+        "in_port_box": 9,
+        "in_port_type": "Trajectory"
+      },
+      {
+        "in_port_box": 10,
+        "in_port_type": "Number"
+      },
+      {
+        "in_port_box": 10,
+        "in_port_type": "Number"
+      }
+    ],
+    "Wire": [
+      {
+        "src": 4,
+        "tgt": 5,
+        "wire_value": null
+      },
+      {
+        "src": 1,
+        "tgt": 3,
+        "wire_value": null
+      },
+      {
+        "src": 1,
+        "tgt": 8,
+        "wire_value": null
+      },
+      {
+        "src": 9,
+        "tgt": 16,
+        "wire_value": null
+      },
+      {
+        "src": 5,
+        "tgt": 13,
+        "wire_value": null
+      },
+      {
+        "src": 7,
+        "tgt": 14,
+        "wire_value": null
+      },
+      {
+        "src": 6,
+        "tgt": 9,
+        "wire_value": null
+      },
+      {
+        "src": 2,
+        "tgt": 4,
+        "wire_value": null
+      },
+      {
+        "src": 3,
+        "tgt": 12,
+        "wire_value": null
+      },
+      {
+        "src": 8,
+        "tgt": 15,
+        "wire_value": null
+      }
+    ],
+    "OuterOutPort": [
+      {
+        "outer_out_port_type": "Number"
+      }
+    ],
+    "InWire": [
+      {
+        "in_src": 1,
+        "in_tgt": 1,
+        "in_wire_value": null
+      },
+      {
+        "in_src": 2,
+        "in_tgt": 2,
+        "in_wire_value": null
+      },
+      {
+        "in_src": 3,
+        "in_tgt": 6,
+        "in_wire_value": null
+      },
+      {
+        "in_src": 4,
+        "in_tgt": 7,
+        "in_wire_value": null
+      },
+      {
+        "in_src": 3,
+        "in_tgt": 10,
+        "in_wire_value": null
+      },
+      {
+        "in_src": 4,
+        "in_tgt": 11,
+        "in_wire_value": null
+      }
+    ],
+    "OuterInPort": [
+      {
+        "outer_in_port_type": "Simplex"
+      },
+      {
+        "outer_in_port_type": "Simplex"
+      },
+      {
+        "outer_in_port_type": "Number"
+      },
+      {
+        "outer_in_port_type": "Number"
+      }
+    ],
+    "OutWire": [
+      {
+        "out_src": 10,
+        "out_tgt": 1,
+        "out_wire_value": null
+      }
+    ],
+    "Box": [
+      {
+        "value": "multinomial",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "multinomial",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "ptwisesum",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "P",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "solve",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "P",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "solve",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "measure",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "measure",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      },
+      {
+        "value": "difference",
+        "box_type": "Catlab.WiringDiagrams.DirectedWiringDiagrams.Box{Symbol}"
+      }
+    ],
+    "OutPort": [
+      {
+        "out_port_box": 1,
+        "out_port_type": "Simplex"
+      },
+      {
+        "out_port_box": 2,
+        "out_port_type": "Simplex"
+      },
+      {
+        "out_port_box": 3,
+        "out_port_type": "Simplex"
+      },
+      {
+        "out_port_box": 4,
+        "out_port_type": "Petri"
+      },
+      {
+        "out_port_box": 5,
+        "out_port_type": "Trajectory"
+      },
+      {
+        "out_port_box": 6,
+        "out_port_type": "Petri"
+      },
+      {
+        "out_port_box": 7,
+        "out_port_type": "Trajectory"
+      },
+      {
+        "out_port_box": 8,
+        "out_port_type": "Number"
+      },
+      {
+        "out_port_box": 9,
+        "out_port_type": "Number"
+      },
+      {
+        "out_port_box": 10,
+        "out_port_type": "Number"
+      }
+    ],
+    "PassWire": []
+  }
