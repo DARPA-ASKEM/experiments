@@ -3,6 +3,8 @@ scipy
 matplotlib
 jupyterlab
 networkx
+hypernetx
+nwhy
 scikit-learn
 pandas
 tqdm
@@ -10,3 +12,4 @@ pylint
 regex
 requests
 arviz
+lxml
