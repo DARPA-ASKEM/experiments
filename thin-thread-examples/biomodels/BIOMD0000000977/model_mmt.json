@@ -386,5 +386,29 @@
             },
             "provenance": []
         }
-    ]
+    ],
+    "parameters": {
+        "lambda_s": 0.0,
+        "beta_s": 0.8799,
+        "rho_s": 0.3199,
+        "epsilon_s": 14.83,
+        "delta": 0.0,
+        "m_s": 0.04167,
+        "gamma_a": 0.0168,
+        "xi_a": 0.71,
+        "gamma_i": 0.07151,
+        "xi_i": 0.0286,
+        "xi_q": 0.13369,
+        "Total_population": 913554.0,
+        "Cumulative_cases": 0.0,
+        "Wuhan": 1.0
+    },
+    "initials": {
+        "Susceptible": 902654.0,
+        "Infected": 1.0,
+        "Asymptomatic": 114.0,
+        "Susceptible_quarantined": 10785.0,
+        "Infected_quarantined": 0.0,
+        "Recovered": 0.0
+    }
 }

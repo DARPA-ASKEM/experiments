@@ -73,7 +73,7 @@ for i, (doi, source, info) in tqdm(models.iterrows()):
         os.mkdir(path)
 
     # Write artifact files
-    for data, filename in zip([doi, xdd_gddid, model_sbml, model_mmt_templates, model_mmt_parameters, model_petri], ['document_doi.txt', 'document_xdd_gddid.txt', 'model_sbml.xml', 'model_mmt_templates.json', 'model_mmt_parameters.json', 'model_petri.json']):
+    for data, filename in zip([doi, xdd_gddid, model_sbml, model_mmt, model_mmt_templates, model_mmt_parameters, model_petri], ['document_doi.txt', 'document_xdd_gddid.txt', 'model_sbml.xml', 'model_mmt.json', 'model_mmt_templates.json', 'model_mmt_parameters.json', 'model_petri.json']):
 
         if data != None:
 

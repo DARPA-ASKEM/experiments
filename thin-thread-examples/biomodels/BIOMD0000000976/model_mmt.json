@@ -1,0 +1,164 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*Susceptible*alpha*tau*(Infected_strong_immune_system + Infected_weak_immune_system)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Infected_weak_immune_system",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000976:Infected_weak_immune_system"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Infected_strong_immune_system",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000976:Infected_strong_immune_system"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000976:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected_strong_immune_system",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000976:Infected_strong_immune_system"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Susceptible*tau*(1.0 - alpha)*(Infected_strong_immune_system + Infected_weak_immune_system)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Infected_strong_immune_system",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000976:Infected_strong_immune_system"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Infected_weak_immune_system",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000976:Infected_weak_immune_system"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000976:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected_weak_immune_system",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000976:Infected_weak_immune_system"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected_strong_immune_system*gamma_1",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected_strong_immune_system",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000976:Infected_strong_immune_system"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ido": "0000621",
+                    "biomodels.species": "BIOMD0000000976:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected_weak_immune_system*gamma_2",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected_weak_immune_system",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000976:Infected_weak_immune_system"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ido": "0000621",
+                    "biomodels.species": "BIOMD0000000976:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected_weak_immune_system*mu",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Infected_weak_immune_system",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000976:Infected_weak_immune_system"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ],
+    "parameters": {
+        "alpha": 0.55,
+        "gamma_1": 0.1,
+        "gamma_2": 0.061,
+        "tau": 2e-09,
+        "mu": 0.02,
+        "Lockdown_start": 19.0,
+        "Lockdown_end": 33.0,
+        "Iran": 1.0
+    },
+    "initials": {
+        "Susceptible": 78841214.132441,
+        "Infected_strong_immune_system": 5060.4,
+        "Infected_weak_immune_system": 4487.6,
+        "Recovered": 4590.0
+    }
+}

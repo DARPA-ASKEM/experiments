@@ -1,0 +1,83 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*Infected*Susceptible*beta/(Recovered*alpha + 1.0)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Recovered",
+                    "identifiers": {
+                        "ido": "0000621",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000963:Recovered"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000963:Infected"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000963:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000963:Infected"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*k1",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000963:Infected"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ido": "0000621",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000963:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ],
+    "parameters": {
+        "alpha": 0.0,
+        "beta": 0.25,
+        "gamma": 0.1,
+        "Epidemic_size": 0.0,
+        "Uninfected": 0.0,
+        "Country": 1.0
+    },
+    "initials": {
+        "Susceptible": 0.999,
+        "Infected": 0.001,
+        "Recovered": 0.0
+    }
+}
