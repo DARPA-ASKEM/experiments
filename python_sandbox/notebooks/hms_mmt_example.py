@@ -4,9 +4,10 @@
 # Email: [nliu@uncharted.software](mailto:nliu@uncharted.software)
 
 # %%
-# - Example of a model in meta-model-template (MMT) representation
-# - Provided by Ben Gyori at HMS
-# - From [EMBL BioModels](https://www.ebi.ac.uk/biomodels/BIOMD0000000955)
+# * Example of a model in meta-model-template (MMT) representation
+# * Provided by Ben Gyori at HMS
+# * From [EMBL BioModels](https://www.ebi.ac.uk/biomodels/BIOMD0000000955)
+# * Test hypergraph viz
 
 # %%
 import json
@@ -14,6 +15,7 @@ import requests
 import pandas as pd
 import numpy as np
 import networkx as nx
+import hypernetx as hnx
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from typing import NoReturn, Optional, Any
@@ -191,5 +193,24 @@ __ = plt.setp(axes[1], title = 'Petri Net Representation')
 fig.suptitle('Model at TA1-TA2 Integration Point')
 
 fig.savefig('../figures/example_mmt_petrinet_graphs.png', dpi = 150)
+
+# %%
+# Construct hypergraph from MMT object
+
+def build_mmt_hypergraph(model: dict) -> hnx.Hypergraph:
+
+    h = {
+        i: [he['subject']['name'], he['outcome']['name']] if 'controllers' not in he.keys() else [he['subject']['name'], he['outcome']['name']] + [n['name'] for n in he['controllers']]
+        for i, he in enumerate(model)
+    }
+
+    H = hnx.Hypergraph(h)
+
+    return H
+
+# %%
+
+H = build_mmt_hypergraph(model_mmt['templates'])
+hnx.draw(H)
 
 # %%

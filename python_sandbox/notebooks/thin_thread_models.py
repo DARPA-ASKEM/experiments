@@ -15,8 +15,9 @@ from tqdm import tqdm
 #
 # 1. Document DOI
 # 2. xDD identifier
-# 3. Meta-model template (MMT) representation
-# 4. Petri net representation
+# 3. SBML representation
+# 4. Meta-model template (MMT) representation
+# 5. Petri net representation
 
 # %%
 models = pd.read_csv('../../thin-thread-examples/models.csv')
@@ -91,8 +92,4 @@ for i, (doi, source, info) in tqdm(models.iterrows()):
 
 
 # %%
-
-
-
-
 
