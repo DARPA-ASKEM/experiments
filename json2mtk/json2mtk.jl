@@ -25,7 +25,7 @@ function compile(bn::Union{AbstractLabelledBilayerNetwork, AbstractBilayerNetwor
   params = bn[:parameter]
   append!(paramstmt.args, bn[:parameter])
 
-  diffstmt = :(D = Differential(t))
+  diffstmt = :(_D_ = Differential(t))
 
   ϕs = map(parts(bn, :Box)) do b
     vars = map(incident(bn, b,:call)) do i
@@ -56,7 +56,7 @@ function compile(bn::Union{AbstractLabelledBilayerNetwork, AbstractBilayerNetwor
 
   zparts = zip(bn[:tanvar], infs)
 
-  eqns = [:(D($tanvar) ~ $rhs) for (tanvar, rhs) in zparts]
+  eqns = [:(_D_($tanvar) ~ $rhs) for (tanvar, rhs) in zparts]
   eq = :([])
   append!(eq.args, eqns)
   eqnstmt = :(eqs = $eq)
