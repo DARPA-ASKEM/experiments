@@ -1,0 +1,60 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*Infected*Susceptible*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)*(ModelValue_5*Ro_CA + ModelValue_6*Ro_NY)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000956:Infected"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000956:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000956:Infected"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000956:Infected"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000956:Recovered"
+                },
+                "context": {
+                    "property": "ido:0000621"
+                }
+            },
+            "provenance": []
+        }
+    ]
+}

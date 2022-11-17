@@ -1,0 +1,298 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*Hospitalised*Susceptible*beta*l/N + 1.0*Infectious*Susceptible*beta/N + 1.0*Super_spreaders*Susceptible*beta_prime/N",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Infectious",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171549",
+                        "biomodels.species": "BIOMD0000000958:Infectious"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Hospitalised",
+                    "identifiers": {
+                        "ncit": "C25179",
+                        "biomodels.species": "BIOMD0000000958:Hospitalised"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Super_spreaders",
+                    "identifiers": {
+                        "ido": "0000463",
+                        "ncit": "C49508",
+                        "biomodels.species": "BIOMD0000000958:Super_spreaders"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000958:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000597",
+                    "biomodels.species": "BIOMD0000000958:Exposed"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*kappa*(-rho1 - rho2 + 1.0)",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000597",
+                    "biomodels.species": "BIOMD0000000958:Exposed"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Asymptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000569",
+                    "biomodels.species": "BIOMD0000000958:Asymptomatic"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*kappa*rho2",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000597",
+                    "biomodels.species": "BIOMD0000000958:Exposed"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Super_spreaders",
+                "identifiers": {
+                    "ido": "0000463",
+                    "ncit": "C49508",
+                    "biomodels.species": "BIOMD0000000958:Super_spreaders"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*kappa*rho1",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000597",
+                    "biomodels.species": "BIOMD0000000958:Exposed"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infectious",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171549",
+                    "biomodels.species": "BIOMD0000000958:Infectious"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Super_spreaders*delta_p",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Super_spreaders",
+                "identifiers": {
+                    "ido": "0000463",
+                    "ncit": "C49508",
+                    "biomodels.species": "BIOMD0000000958:Super_spreaders"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Fatalities",
+                "identifiers": {
+                    "ncit": "C28554",
+                    "biomodels.species": "BIOMD0000000958:Fatalities"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Super_spreaders*gamma_a",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Super_spreaders",
+                "identifiers": {
+                    "ido": "0000463",
+                    "ncit": "C49508",
+                    "biomodels.species": "BIOMD0000000958:Super_spreaders"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Hospitalised",
+                "identifiers": {
+                    "ncit": "C25179",
+                    "biomodels.species": "BIOMD0000000958:Hospitalised"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Super_spreaders*gamma_i",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Super_spreaders",
+                "identifiers": {
+                    "ido": "0000463",
+                    "ncit": "C49508",
+                    "biomodels.species": "BIOMD0000000958:Super_spreaders"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000958:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infectious*delta_i",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infectious",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171549",
+                    "biomodels.species": "BIOMD0000000958:Infectious"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Fatalities",
+                "identifiers": {
+                    "ncit": "C28554",
+                    "biomodels.species": "BIOMD0000000958:Fatalities"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infectious*gamma_a",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infectious",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171549",
+                    "biomodels.species": "BIOMD0000000958:Infectious"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Hospitalised",
+                "identifiers": {
+                    "ncit": "C25179",
+                    "biomodels.species": "BIOMD0000000958:Hospitalised"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infectious*gamma_i",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infectious",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171549",
+                    "biomodels.species": "BIOMD0000000958:Infectious"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000958:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Hospitalised*gamma_r",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Hospitalised",
+                "identifiers": {
+                    "ncit": "C25179",
+                    "biomodels.species": "BIOMD0000000958:Hospitalised"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000958:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Hospitalised*delta_h",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Hospitalised",
+                "identifiers": {
+                    "ncit": "C25179",
+                    "biomodels.species": "BIOMD0000000958:Hospitalised"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Fatalities",
+                "identifiers": {
+                    "ncit": "C28554",
+                    "biomodels.species": "BIOMD0000000958:Fatalities"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ]
+}

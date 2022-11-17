@@ -1,0 +1,379 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*Susceptible*beta*(1.0 - q)*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000972:Infected"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Asymptomatic",
+                    "identifiers": {
+                        "ido": "0000569",
+                        "biomodels.species": "BIOMD0000000972:Asymptomatic"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000972:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000972:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Susceptible*q*(1.0 - beta)*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000972:Infected"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Asymptomatic",
+                    "identifiers": {
+                        "ido": "0000569",
+                        "biomodels.species": "BIOMD0000000972:Asymptomatic"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000972:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Susceptible_quarantined",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C71902",
+                    "biomodels.species": "BIOMD0000000972:Susceptible_quarantined"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Susceptible_quarantined*XXlambdaXX",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Susceptible_quarantined",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C71902",
+                    "biomodels.species": "BIOMD0000000972:Susceptible_quarantined"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000972:Susceptible"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*rho*sigma",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000972:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000972:Infected"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*sigma*(1.0 - rho)",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000972:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "Asymptomatic",
+                "identifiers": {
+                    "ido": "0000569",
+                    "biomodels.species": "BIOMD0000000972:Asymptomatic"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*delta_I_0*delta_I_f/(delta_I_0 + (-delta_I_0 + delta_I_f)*exp(-r_2*time))",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000972:Infected"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Hospitalised",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000972:Hospitalised"
+                },
+                "context": {
+                    "property": "ncit:C25179"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*gamma_I",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000972:Infected"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000972:Recovered"
+                },
+                "context": {
+                    "property": "ido:0000621"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Asymptomatic*gamma_A",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Asymptomatic",
+                "identifiers": {
+                    "ido": "0000569",
+                    "biomodels.species": "BIOMD0000000972:Asymptomatic"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000972:Recovered"
+                },
+                "context": {
+                    "property": "ido:0000621"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Hospitalised*gamma_H",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Hospitalised",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000972:Hospitalised"
+                },
+                "context": {
+                    "property": "ncit:C25179"
+                }
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000972:Recovered"
+                },
+                "context": {
+                    "property": "ido:0000621"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*alpha",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000972:Infected"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Hospitalised*alpha",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Hospitalised",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000972:Hospitalised"
+                },
+                "context": {
+                    "property": "ncit:C25179"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Susceptible*beta*q*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000972:Infected"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Asymptomatic",
+                    "identifiers": {
+                        "ido": "0000569",
+                        "biomodels.species": "BIOMD0000000972:Asymptomatic"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000972:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Exposed_quarantined",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C71902",
+                    "biomodels.species": "BIOMD0000000972:Exposed_quarantined"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed_quarantined*delta_q",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed_quarantined",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C71902",
+                    "biomodels.species": "BIOMD0000000972:Exposed_quarantined"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "Hospitalised",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000972:Hospitalised"
+                },
+                "context": {
+                    "property": "ncit:C25179"
+                }
+            },
+            "provenance": []
+        }
+    ],
+    "parameters": {
+        "c": 14.781,
+        "beta": 2.1011e-08,
+        "q": 1.2858e-05,
+        "sigma": 0.142857,
+        "rho": 0.86834,
+        "delta_I": 0.13266,
+        "delta_q": 0.1259,
+        "gamma_I": 0.33029,
+        "gamma_A": 0.13978,
+        "gamma_H": 0.11624,
+        "alpha": 1.7826e-05,
+        "theta": 1.0,
+        "c_lockdown": 14.781,
+        "q_lockdown": 1.2858e-05,
+        "Infected_0": 2731.176,
+        "c_0": 14.781,
+        "c_b": 2.9253,
+        "r_1": 1.3768,
+        "r_2": 0.3283,
+        "delta_I_0": 0.13266,
+        "delta_I_f": 2.7367,
+        "Wuhan": 1.0,
+        "XXlambdaXX": 0.0714285
+    },
+    "initials": {
+        "Susceptible": 11081000.0,
+        "Exposed": 23382.3126079714,
+        "Infected": 2200.0,
+        "Asymptomatic": 531.176,
+        "Susceptible_quarantined": 163804.0,
+        "Exposed_quarantined": 0.378022,
+        "Hospitalised": 515.168,
+        "Recovered": 1898.36
+    }
+}

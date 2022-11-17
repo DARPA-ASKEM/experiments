@@ -1,0 +1,134 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*Infected*R_fixed*Susceptible*gamma/Total_population",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Total_population",
+                    "identifiers": {
+                        "biomodels.species": "BIOMD0000000979:Total_population"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000979:Infected"
+                    },
+                    "context": {}
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000979:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000979:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*sigma",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000979:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000979:Infected"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*gamma",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000979:Infected"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000979:Recovered"
+                },
+                "context": {
+                    "property": "ido:0000569"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Recovered*omega",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000979:Recovered"
+                },
+                "context": {
+                    "property": "ido:0000569"
+                }
+            },
+            "outcome": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000979:Susceptible"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ],
+    "parameters": {
+        "beta": 0.16668,
+        "omega": 0.01667,
+        "sigma": 0.19231,
+        "gamma": 0.05556,
+        "R_fixed": 3.0,
+        "Fraction_infected": 0.001,
+        "USA": 1.0
+    },
+    "initials": {
+        "Susceptible": 315283090.04,
+        "Exposed": 14439817.0,
+        "Infected": 330052.96,
+        "Recovered": 0.0,
+        "Total_population": 330052960.0
+    }
+}

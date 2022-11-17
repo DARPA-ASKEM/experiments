@@ -1,0 +1,463 @@
+{
+    "S": [
+        {
+            "sname": "uninfected_nontested",
+            "mira_ids": "[('identity', 'efo:0001460')]",
+            "mira_context": "[('property', 'ncit:C101887')]"
+        },
+        {
+            "sname": "infected_nontested",
+            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
+            "mira_context": "[('property', 'ncit:C101887')]"
+        },
+        {
+            "sname": "infected_tested",
+            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
+            "mira_context": "[('property', 'ncit:C47891')]"
+        },
+        {
+            "sname": "symptoms_nontested",
+            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
+            "mira_context": "[('property', 'ncit:C101887')]"
+        },
+        {
+            "sname": "symptoms_tested",
+            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
+            "mira_context": "[('property', 'ncit:C47891')]"
+        },
+        {
+            "sname": "uninfected_tested",
+            "mira_ids": "[('identity', 'efo:0001460')]",
+            "mira_context": "[('property', 'ncit:C47891')]"
+        },
+        {
+            "sname": "dead_corona_tested",
+            "mira_ids": "[('identity', 'ncit:C28554')]",
+            "mira_context": "[('property', 'ncit:C47891')]"
+        },
+        {
+            "sname": "recovered_tested",
+            "mira_ids": "[]",
+            "mira_context": "[('property', 'ido:0000621')]"
+        },
+        {
+            "sname": "recovered_nontested",
+            "mira_ids": "[]",
+            "mira_context": "[('property', 'ncit:C101887')]"
+        },
+        {
+            "sname": "susceptible",
+            "mira_ids": "[('identity', 'ido:0000514')]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "total_population",
+            "mira_ids": "[]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "dead_noncorona",
+            "mira_ids": "[('identity', 'ncit:C28554')]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "dead_corona_nontested",
+            "mira_ids": "[('identity', 'ncit:C28554')]",
+            "mira_context": "[('property', 'ncit:C101887')]"
+        }
+    ],
+    "T": [
+        {
+            "tname": "t1",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "(('uninfected_nontested', ('identity', 'efo:0001460'), ('property', 'ncit:C101887')), ('infected_nontested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C101887')), (('infected_nontested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C101887')), ('infected_tested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C47891')), ('symptoms_nontested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C101887')), ('symptoms_tested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C47891'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t2",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Testing_Randome",
+            "parameter_value": "0.0008"
+        },
+        {
+            "tname": "t3",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "(('uninfected_tested', ('identity', 'efo:0001460'), ('property', 'ncit:C47891')), ('infected_nontested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C101887')), (('infected_nontested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C101887')), ('infected_tested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C47891')), ('symptoms_nontested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C101887')), ('symptoms_tested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C47891'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t4",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Testing_Randome",
+            "parameter_value": "0.0008"
+        },
+        {
+            "tname": "t5",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Symptoms_appear",
+            "parameter_value": "0.30165"
+        },
+        {
+            "tname": "t6",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Symptoms_appear",
+            "parameter_value": "0.30165"
+        },
+        {
+            "tname": "t7",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Testing_for_Symptoms",
+            "parameter_value": "500.0"
+        },
+        {
+            "tname": "t8",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Corona_death_rate_constant",
+            "parameter_value": "0.002"
+        },
+        {
+            "tname": "t9",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Corona_recover",
+            "parameter_value": "0.067"
+        },
+        {
+            "tname": "t10",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Corona_recover",
+            "parameter_value": "0.067"
+        },
+        {
+            "tname": "t11",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "Birth_rate",
+            "parameter_value": "3.29e-05"
+        },
+        {
+            "tname": "t12",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Normal_death_rate_constant_0",
+            "parameter_value": "3.29e-05"
+        },
+        {
+            "tname": "t13",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Normal_death_rate_constant_0",
+            "parameter_value": "3.29e-05"
+        },
+        {
+            "tname": "t14",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Normal_death_rate_constant_0",
+            "parameter_value": "3.29e-05"
+        },
+        {
+            "tname": "t15",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Corona_death_rate_constant",
+            "parameter_value": "0.002"
+        },
+        {
+            "tname": "t16",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Corona_death_rate_constant",
+            "parameter_value": "0.002"
+        },
+        {
+            "tname": "t17",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Normal_death_rate_constant_0",
+            "parameter_value": "3.29e-05"
+        },
+        {
+            "tname": "t18",
+            "template_type": "NaturalConversion",
+            "parameter_name": "Corona_death_rate_constant",
+            "parameter_value": "0.002"
+        }
+    ],
+    "I": [
+        {
+            "is": 2,
+            "it": 1
+        },
+        {
+            "is": 3,
+            "it": 1
+        },
+        {
+            "is": 4,
+            "it": 1
+        },
+        {
+            "is": 5,
+            "it": 1
+        },
+        {
+            "is": 1,
+            "it": 1
+        },
+        {
+            "is": 1,
+            "it": 2
+        },
+        {
+            "is": 2,
+            "it": 3
+        },
+        {
+            "is": 3,
+            "it": 3
+        },
+        {
+            "is": 4,
+            "it": 3
+        },
+        {
+            "is": 5,
+            "it": 3
+        },
+        {
+            "is": 6,
+            "it": 3
+        },
+        {
+            "is": 2,
+            "it": 4
+        },
+        {
+            "is": 2,
+            "it": 5
+        },
+        {
+            "is": 3,
+            "it": 6
+        },
+        {
+            "is": 4,
+            "it": 7
+        },
+        {
+            "is": 5,
+            "it": 8
+        },
+        {
+            "is": 5,
+            "it": 9
+        },
+        {
+            "is": 4,
+            "it": 10
+        },
+        {
+            "is": 11,
+            "it": 11
+        },
+        {
+            "is": 2,
+            "it": 11
+        },
+        {
+            "is": 3,
+            "it": 11
+        },
+        {
+            "is": 9,
+            "it": 11
+        },
+        {
+            "is": 8,
+            "it": 11
+        },
+        {
+            "is": 4,
+            "it": 11
+        },
+        {
+            "is": 5,
+            "it": 11
+        },
+        {
+            "is": 1,
+            "it": 11
+        },
+        {
+            "is": 6,
+            "it": 11
+        },
+        {
+            "is": 10,
+            "it": 11
+        },
+        {
+            "is": 1,
+            "it": 12
+        },
+        {
+            "is": 8,
+            "it": 13
+        },
+        {
+            "is": 9,
+            "it": 14
+        },
+        {
+            "is": 3,
+            "it": 15
+        },
+        {
+            "is": 2,
+            "it": 16
+        },
+        {
+            "is": 6,
+            "it": 17
+        },
+        {
+            "is": 4,
+            "it": 18
+        }
+    ],
+    "O": [
+        {
+            "os": 2,
+            "ot": 1
+        },
+        {
+            "os": 3,
+            "ot": 1
+        },
+        {
+            "os": 4,
+            "ot": 1
+        },
+        {
+            "os": 5,
+            "ot": 1
+        },
+        {
+            "os": 2,
+            "ot": 1
+        },
+        {
+            "os": 6,
+            "ot": 2
+        },
+        {
+            "os": 2,
+            "ot": 3
+        },
+        {
+            "os": 3,
+            "ot": 3
+        },
+        {
+            "os": 4,
+            "ot": 3
+        },
+        {
+            "os": 5,
+            "ot": 3
+        },
+        {
+            "os": 2,
+            "ot": 3
+        },
+        {
+            "os": 3,
+            "ot": 4
+        },
+        {
+            "os": 4,
+            "ot": 5
+        },
+        {
+            "os": 5,
+            "ot": 6
+        },
+        {
+            "os": 5,
+            "ot": 7
+        },
+        {
+            "os": 7,
+            "ot": 8
+        },
+        {
+            "os": 8,
+            "ot": 9
+        },
+        {
+            "os": 9,
+            "ot": 10
+        },
+        {
+            "os": 11,
+            "ot": 11
+        },
+        {
+            "os": 2,
+            "ot": 11
+        },
+        {
+            "os": 3,
+            "ot": 11
+        },
+        {
+            "os": 9,
+            "ot": 11
+        },
+        {
+            "os": 8,
+            "ot": 11
+        },
+        {
+            "os": 4,
+            "ot": 11
+        },
+        {
+            "os": 5,
+            "ot": 11
+        },
+        {
+            "os": 1,
+            "ot": 11
+        },
+        {
+            "os": 6,
+            "ot": 11
+        },
+        {
+            "os": 1,
+            "ot": 11
+        },
+        {
+            "os": 12,
+            "ot": 12
+        },
+        {
+            "os": 12,
+            "ot": 13
+        },
+        {
+            "os": 12,
+            "ot": 14
+        },
+        {
+            "os": 7,
+            "ot": 15
+        },
+        {
+            "os": 13,
+            "ot": 16
+        },
+        {
+            "os": 12,
+            "ot": 17
+        },
+        {
+            "os": 13,
+            "ot": 18
+        }
+    ]
+}

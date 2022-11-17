@@ -1,0 +1,357 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*b",
+            "type": "NaturalProduction",
+            "outcome": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000964:Susceptible"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*psi",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000964:Susceptible"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Susceptible*beta_1/(1.0*alpha_1 + 1.0) + Susceptible*beta_2*(Infected_Asymptomatic + Infected_Symptomatic)/(alpha_2*(Infected_Asymptomatic + Infected_Symptomatic) + 1.0)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "Pathogen",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000964:Pathogen_0"
+                    },
+                    "context": {}
+                },
+                {
+                    "name": "Infected_Asymptomatic",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000964:Infected_Asymptomatic"
+                    },
+                    "context": {
+                        "property": "ncit:C3833"
+                    }
+                },
+                {
+                    "name": "Infected_Symptomatic",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000964:Infected_Symptomatic"
+                    },
+                    "context": {
+                        "property": "ncit:C25269"
+                    }
+                }
+            ],
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000964:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Susceptible*mu",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000964:Susceptible"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*mu",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*delta*omega",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "Infected_Symptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000964:Infected_Symptomatic"
+                },
+                "context": {
+                    "property": "ncit:C25269"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Exposed*omega*(1.0 - delta)",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "Infected_Asymptomatic",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Infected_Asymptomatic"
+                },
+                "context": {
+                    "property": "ncit:C3833"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected_Symptomatic*(mu + sigma)",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Infected_Symptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000964:Infected_Symptomatic"
+                },
+                "context": {
+                    "property": "ncit:C25269"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected_Asymptomatic*(mu + sigma)",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Infected_Asymptomatic",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Infected_Asymptomatic"
+                },
+                "context": {
+                    "property": "ncit:C3833"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected_Symptomatic*gamma_S",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected_Symptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000964:Infected_Symptomatic"
+                },
+                "context": {
+                    "property": "ncit:C25269"
+                }
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000621",
+                    "biomodels.species": "BIOMD0000000964:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected_Asymptomatic*gamma_A",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected_Asymptomatic",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Infected_Asymptomatic"
+                },
+                "context": {
+                    "property": "ncit:C3833"
+                }
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000621",
+                    "biomodels.species": "BIOMD0000000964:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Recovered*mu",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000621",
+                    "biomodels.species": "BIOMD0000000964:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": null,
+            "type": "GroupedControlledProduction",
+            "controllers": [
+                {
+                    "name": "Infected_Asymptomatic",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000964:Infected_Asymptomatic"
+                    },
+                    "context": {
+                        "property": "ncit:C3833"
+                    }
+                },
+                {
+                    "name": "Infected_Symptomatic",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000964:Infected_Symptomatic"
+                    },
+                    "context": {
+                        "property": "ncit:C25269"
+                    }
+                }
+            ],
+            "outcome": {
+                "name": "Pathogen",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Pathogen_0"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*mu_p",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Pathogen",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000964:Pathogen_0"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ],
+    "parameters": {
+        "alpha_1": 0.1,
+        "alpha_2": 0.1,
+        "b": 0.00018,
+        "mu": 4.563e-05,
+        "mu_p": 0.1724,
+        "beta_1": 0.00414,
+        "beta_2": 0.0115,
+        "delta": 0.7,
+        "psi": 0.005,
+        "omega": 0.09,
+        "sigma": 0.0018,
+        "gamma_S": 0.05,
+        "gamma_A": 0.0714,
+        "eta_S": 0.1,
+        "eta_A": 0.05,
+        "Human": 1.0,
+        "Pathogen": 1.0
+    },
+    "initials": {
+        "Susceptible": 93000.0,
+        "Exposed": 1000.0,
+        "Infected_Symptomatic": 50.0,
+        "Infected_Asymptomatic": 50.0,
+        "Recovered": 0.0,
+        "Pathogen": 500.0
+    }
+}

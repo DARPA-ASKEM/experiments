@@ -1,0 +1,21 @@
+{
+    "parameters": {
+        "c": 14.781,
+        "beta": 2.1011e-08,
+        "q": 1.8887e-07,
+        "sigma": 0.142857,
+        "rho": 0.86834,
+        "delta_I": 0.13266,
+        "delta_q": 0.1259,
+        "gamma_I": 0.33029,
+        "gamma_A": 0.13978,
+        "gamma_H": 0.11624,
+        "alpha": 1.7826e-05,
+        "theta": 1.0,
+        "c_lockdown": 14.781,
+        "q_lockdown": 1.8887e-07,
+        "Infected_0": 81.218,
+        "Wuhan": 1.0,
+        "XXlambdaXX": 0.0714285
+    }
+}

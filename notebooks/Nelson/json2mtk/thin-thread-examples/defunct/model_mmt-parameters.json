@@ -1,0 +1,33 @@
+{
+    "parameters": {
+        "alpha": 0.57,
+        "beta": 0.011,
+        "gamma": 0.456,
+        "delta": 0.011,
+        "epsilon": 0.171,
+        "theta": 0.371,
+        "zeta": 0.125,
+        "eta": 0.125,
+        "mu": 0.017,
+        "nu": 0.027,
+        "tau": 0.01,
+        "kappa": 0.017,
+        "rho": 0.034,
+        "sigma": 0.017,
+        "xi": 0.017,
+        "Event_trigger_Fig3b": 0.0,
+        "Event_trigger_Fig3d": 0.0,
+        "Event_trigger_Fig4b": 0.0,
+        "Event_trigger_Fig4d": 0.0,
+        "epsilon_modifier": 1.0,
+        "alpha_modifier": 1.0,
+        "ModelValue_16": 0.0,
+        "ModelValue_17": 0.0,
+        "ModelValue_18": 0.0,
+        "ModelValue_19": 0.0,
+        "ModelValue_21": 1.0,
+        "ModelValue_20": 1.0,
+        "Italy": 1.0,
+        "XXlambdaXX": 0.034
+    }
+}

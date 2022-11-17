@@ -1,0 +1,80 @@
+{
+    "S": [
+        {
+            "sname": "Susceptible",
+            "mira_ids": "[('identity', 'ido:0000514')]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "Exposed",
+            "mira_ids": "[('identity', 'ido:0000597'), ('identity', 'ncit:C171133')]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "Infected",
+            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
+            "mira_context": "[]"
+        },
+        {
+            "sname": "Recovered",
+            "mira_ids": "[]",
+            "mira_context": "[('property', 'ido:0000621')]"
+        }
+    ],
+    "T": [
+        {
+            "tname": "t1",
+            "template_type": "ControlledConversion",
+            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'ido:0000597'), ('identity', 'ncit:C171133')), ('Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), 'ControlledConversion', 'rate')",
+            "parameter_value": null
+        },
+        {
+            "tname": "t2",
+            "template_type": "NaturalConversion",
+            "parameter_name": "sigma",
+            "parameter_value": "0.311"
+        },
+        {
+            "tname": "t3",
+            "template_type": "NaturalConversion",
+            "parameter_name": "gamma",
+            "parameter_value": "0.3389830508"
+        }
+    ],
+    "I": [
+        {
+            "is": 3,
+            "it": 1
+        },
+        {
+            "is": 1,
+            "it": 1
+        },
+        {
+            "is": 2,
+            "it": 2
+        },
+        {
+            "is": 3,
+            "it": 3
+        }
+    ],
+    "O": [
+        {
+            "os": 3,
+            "ot": 1
+        },
+        {
+            "os": 2,
+            "ot": 1
+        },
+        {
+            "os": 3,
+            "ot": 2
+        },
+        {
+            "os": 4,
+            "ot": 3
+        }
+    ]
+}

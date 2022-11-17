@@ -1,0 +1,11 @@
+{
+    "parameters": {
+        "mu": 0.012048,
+        "beta": 0.833,
+        "epsilon": 0.33333,
+        "gamma": 0.125,
+        "alpha": 0.006,
+        "City": 1.0,
+        "XXlambdaXX": 120480.0
+    }
+}

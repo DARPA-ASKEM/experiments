@@ -1,0 +1,243 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*susceptible*transmission_rate_effective*(1 - delta)*(1 - eps)*(alpha*asymptomatic + symptomatic)/(asymptomatic + exposed + recovered + susceptible + symptomatic)",
+            "type": "GroupedControlledConversion",
+            "controllers": [
+                {
+                    "name": "asymptomatic",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000991:asymptomatic"
+                    },
+                    "context": {
+                        "property": "ido:0000569"
+                    }
+                },
+                {
+                    "name": "exposed",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000991:exposed"
+                    },
+                    "context": {
+                        "property": "ido:0000597"
+                    }
+                },
+                {
+                    "name": "recovered",
+                    "identifiers": {
+                        "biomodels.species": "BIOMD0000000991:recovered"
+                    },
+                    "context": {
+                        "property": "ido:0000621"
+                    }
+                },
+                {
+                    "name": "symptomatic",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000991:symptomatic"
+                    },
+                    "context": {
+                        "property": "ido:0000573"
+                    }
+                }
+            ],
+            "subject": {
+                "name": "susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000991:susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000991:exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*exposed*sigma*(1.0 - nu)",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000991:exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "symptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000991:symptomatic"
+                },
+                "context": {
+                    "property": "ido:0000573"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*exposed*nu*sigma",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000991:exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "outcome": {
+                "name": "asymptomatic",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000991:asymptomatic"
+                },
+                "context": {
+                    "property": "ido:0000569"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*gamma_0*symptomatic",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "symptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000991:symptomatic"
+                },
+                "context": {
+                    "property": "ido:0000573"
+                }
+            },
+            "outcome": {
+                "name": "recovered",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000991:recovered"
+                },
+                "context": {
+                    "property": "ido:0000621"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*asymptomatic*gamma_a",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "asymptomatic",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000991:asymptomatic"
+                },
+                "context": {
+                    "property": "ido:0000569"
+                }
+            },
+            "outcome": {
+                "name": "recovered",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000991:recovered"
+                },
+                "context": {
+                    "property": "ido:0000621"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*detected*gamma_i",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "detected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000991:detected"
+                },
+                "context": {
+                    "property": "ncit:C16210"
+                }
+            },
+            "outcome": {
+                "name": "recovered",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000991:recovered"
+                },
+                "context": {
+                    "property": "ido:0000621"
+                }
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*d_0*symptomatic",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "symptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000991:symptomatic"
+                },
+                "context": {
+                    "property": "ido:0000573"
+                }
+            },
+            "outcome": {
+                "name": "deceased",
+                "identifiers": {
+                    "ncit": "C28554",
+                    "biomodels.species": "BIOMD0000000991:deceased"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*d_D*detected",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "detected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000991:detected"
+                },
+                "context": {
+                    "property": "ncit:C16210"
+                }
+            },
+            "outcome": {
+                "name": "deceased",
+                "identifiers": {
+                    "ncit": "C28554",
+                    "biomodels.species": "BIOMD0000000991:deceased"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ]
+}

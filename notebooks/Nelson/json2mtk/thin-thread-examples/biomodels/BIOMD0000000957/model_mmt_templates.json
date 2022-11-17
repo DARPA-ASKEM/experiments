@@ -1,0 +1,81 @@
+{
+    "templates": [
+        {
+            "rate_law": "1.0*Infected*Susceptible*beta",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000957:Infected"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000957:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000957:Infected"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*mu",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000957:Infected"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000621",
+                    "biomodels.species": "BIOMD0000000957:Recovered"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.0*Infected*rho",
+            "type": "NaturalConversion",
+            "subject": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000957:Infected"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Confirmed",
+                "identifiers": {
+                    "ncit": "C15220",
+                    "biomodels.species": "BIOMD0000000957:Confirmed"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ]
+}
