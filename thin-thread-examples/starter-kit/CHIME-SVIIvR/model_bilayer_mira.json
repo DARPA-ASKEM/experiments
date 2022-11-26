@@ -1,0 +1,139 @@
+{
+ "templates": [
+  {
+   "rate_law": "I*S*beta_1",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "I",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "S",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "I",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I_v*S*beta_2",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "I_v",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "S",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "I",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "S*v_r",
+   "type": "NaturalConversion",
+   "subject": {
+    "name": "S",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "V",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I*V*v_s1",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "I",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "V",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "I_v",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I_v*V*v_s2",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "I_v",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "V",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "I_v",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I*gamma_1",
+   "type": "NaturalConversion",
+   "subject": {
+    "name": "I",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I_v*gamma_2",
+   "type": "NaturalConversion",
+   "subject": {
+    "name": "I_v",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  }
+ ],
+ "parameters": {
+  "beta_1": 1.0,
+  "beta_2": 1.0,
+  "v_r": 1.0,
+  "v_s1": 1.0,
+  "v_s2": 1.0,
+  "gamma_1": 1.0,
+  "gamma_2": 1.0
+ },
+ "initials": {}
+}

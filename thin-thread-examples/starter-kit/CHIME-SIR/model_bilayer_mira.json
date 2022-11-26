@@ -1,0 +1,44 @@
+{
+ "templates": [
+  {
+   "rate_law": "I*S*beta",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "I",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "S",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "I",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I*gamma",
+   "type": "NaturalConversion",
+   "subject": {
+    "name": "I",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  }
+ ],
+ "parameters": {
+  "beta": 1.0,
+  "gamma": 1.0
+ },
+ "initials": {}
+}

@@ -1,0 +1,196 @@
+{
+ "templates": [
+  {
+   "rate_law": "E*S*beta",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "E",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "S",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "E",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "E*I_asym*delta_1",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "I_asym",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "E",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "I_asym",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "E*I_mild*delta_2",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "I_mild",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "E",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "I_mild",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "E*I_hosp*delta_3",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "I_hosp",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "E",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "I_hosp",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I_asym*R*gamma_1",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "I_asym",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I_mild*R*gamma_2",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "I_mild",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "I_hosp*R_hosp*delta_4",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "R_hosp",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "I_hosp",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "R_hosp",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "R*R_hosp*tau",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "R_hosp",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "R",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  },
+  {
+   "rate_law": "D*R_hosp*delta_5",
+   "type": "ControlledConversion",
+   "controller": {
+    "name": "D",
+    "identifiers": {},
+    "context": {}
+   },
+   "subject": {
+    "name": "R_hosp",
+    "identifiers": {},
+    "context": {}
+   },
+   "outcome": {
+    "name": "D",
+    "identifiers": {},
+    "context": {}
+   },
+   "provenance": []
+  }
+ ],
+ "parameters": {
+  "beta": 1.0,
+  "delta_1": 1.0,
+  "delta_2": 1.0,
+  "delta_3": 1.0,
+  "gamma_1": 1.0,
+  "gamma_2": 1.0,
+  "delta_4": 1.0,
+  "tau": 1.0,
+  "delta_5": 1.0
+ },
+ "initials": {}
+}
