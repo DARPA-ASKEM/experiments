@@ -3,27 +3,32 @@
         {
             "sname": "Susceptible",
             "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "11080778.0"
         },
         {
             "sname": "Exposed",
             "mira_ids": "[('identity', 'ido:0000597'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "193.0"
         },
         {
             "sname": "Infected",
             "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "27.0"
         },
         {
             "sname": "Total_Population",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "11081000.0"
         },
         {
             "sname": "Recovered",
             "mira_ids": "[('identity', 'ncit:C171133')]",
-            "mira_context": "[('property', 'ido:0000621')]"
+            "mira_context": "[('property', 'ido:0000621')]",
+            "mira_initial_value": "2.0"
         }
     ],
     "T": [

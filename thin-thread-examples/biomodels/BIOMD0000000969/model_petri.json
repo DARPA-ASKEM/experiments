@@ -3,142 +3,170 @@
         {
             "sname": "Susceptible_Counties_with_airports",
             "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "4052876.0"
         },
         {
             "sname": "Infected_Counties_with_airports",
             "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "30.0"
         },
         {
             "sname": "Hospitalised_Counties_with_airports",
             "mira_ids": "[('identity', 'ncit:C25179')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Deceased_Counties_with_airports",
             "mira_ids": "[('identity', 'ncit:C28554')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Recovered_Counties_with_airports",
             "mira_ids": "[('identity', 'ido:0000621')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "ICU_Counties_with_airports",
             "mira_ids": "[('identity', 'ncit:C53511')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Discharged_Counties_with_airports",
             "mira_ids": "[('identity', 'ncit:C154475')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Susceptible_Counties_neighbouring_counties_with_airports",
             "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "4431673.0"
         },
         {
             "sname": "Infected_Counties_neighbouring_counties_with_airports",
             "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "26.0"
         },
         {
             "sname": "Hospitalised_Counties_neighbouring_counties_with_airports",
             "mira_ids": "[('identity', 'ncit:C25179')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Deceased_Counties_neighbouring_counties_with_airports",
             "mira_ids": "[('identity', 'ncit:C28554')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Recovered_Counties_neighbouring_counties_with_airports",
             "mira_ids": "[('identity', 'ido:0000621')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "ICU_Counties_neighbouring_counties_with_airports",
             "mira_ids": "[('identity', 'ncit:C25179')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Discharged_Counties_neighbouring_counties_with_airports",
             "mira_ids": "[('identity', 'ncit:C154475')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Susceptible_Counties_with_highways",
             "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "1811059.0"
         },
         {
             "sname": "Infected_Counties_with_highways",
             "mira_ids": "[('identity', 'ido:0000511')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "10.0"
         },
         {
             "sname": "Hospitalised_Counties_with_highways",
             "mira_ids": "[('identity', 'ncit:C25179')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Deceased_Counties_with_highways",
             "mira_ids": "[('identity', 'ncit:C28554')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Recovered_Counties_with_highways",
             "mira_ids": "[('identity', 'ido:0000621')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "ICU_Counties_with_highways",
             "mira_ids": "[('identity', 'ncit:C53511')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Discharged_Counties_with_highways",
             "mira_ids": "[('identity', 'ncit:C154475')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Susceptible_Low_risk_counties",
             "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "1269942.0"
         },
         {
             "sname": "Infected_Low_risk_counties",
             "mira_ids": "[('identity', 'ido:0000511')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "6.0"
         },
         {
             "sname": "Hospitalised_Low_risk_counties",
             "mira_ids": "[('identity', 'ncit:C25179')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Deceased_Low_risk_counties",
             "mira_ids": "[('identity', 'ncit:C28554')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Recovered_Low_risk_counties",
             "mira_ids": "[('identity', 'ido:0000621')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "ICU_Low_risk_counties",
             "mira_ids": "[('identity', 'ncit:C53511')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Discharged_Low_risk_counties",
             "mira_ids": "[('identity', 'ncit:C154475')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         }
     ],
     "T": [

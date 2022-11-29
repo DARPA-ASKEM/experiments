@@ -3,37 +3,44 @@
         {
             "sname": "susceptible",
             "mira_ids": "[('identity', 'ido:0000514')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "14367982.0"
         },
         {
             "sname": "exposed",
             "mira_ids": "[('identity', 'ido:0000514')]",
-            "mira_context": "[('property', 'ido:0000597')]"
+            "mira_context": "[('property', 'ido:0000597')]",
+            "mira_initial_value": "441.0"
         },
         {
             "sname": "asymptomatic",
             "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[('property', 'ido:0000569')]"
+            "mira_context": "[('property', 'ido:0000569')]",
+            "mira_initial_value": "188.0"
         },
         {
             "sname": "recovered",
             "mira_ids": "[]",
-            "mira_context": "[('property', 'ido:0000621')]"
+            "mira_context": "[('property', 'ido:0000621')]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "symptomatic",
             "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[('property', 'ido:0000573')]"
+            "mira_context": "[('property', 'ido:0000573')]",
+            "mira_initial_value": "212.0"
         },
         {
             "sname": "detected",
             "mira_ids": "[('identity', 'ido:0000511')]",
-            "mira_context": "[('property', 'ncit:C16210')]"
+            "mira_context": "[('property', 'ncit:C16210')]",
+            "mira_initial_value": "1.0"
         },
         {
             "sname": "deceased",
             "mira_ids": "[('identity', 'ncit:C28554')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         }
     ],
     "T": [

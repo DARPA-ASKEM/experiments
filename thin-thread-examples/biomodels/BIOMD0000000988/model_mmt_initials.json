@@ -1,0 +1,134 @@
+{
+    "initials": {
+        "uninfected_nontested": {
+            "name": "uninfected_nontested",
+            "identifiers": {
+                "efo": "0001460",
+                "biomodels.species": "BIOMD0000000988:uninfected_nontested_0"
+            },
+            "context": {
+                "property": "ncit:C101887"
+            },
+            "value": 630000.0
+        },
+        "uninfected_tested": {
+            "name": "uninfected_tested",
+            "identifiers": {
+                "efo": "0001460",
+                "biomodels.species": "BIOMD0000000988:uninfected_tested_0"
+            },
+            "context": {
+                "property": "ncit:C47891"
+            },
+            "value": 0.0
+        },
+        "infected_nontested": {
+            "name": "infected_nontested",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000988:infected_nontested_0"
+            },
+            "context": {
+                "property": "ncit:C101887"
+            },
+            "value": 2.0
+        },
+        "infected_tested": {
+            "name": "infected_tested",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000988:infected_tested_0"
+            },
+            "context": {
+                "property": "ncit:C47891"
+            },
+            "value": 1.0
+        },
+        "symptoms_nontested": {
+            "name": "symptoms_nontested",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000988:symptoms_nontested_0"
+            },
+            "context": {
+                "property": "ncit:C101887"
+            },
+            "value": 0.0
+        },
+        "symptoms_tested": {
+            "name": "symptoms_tested",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000988:symptoms_tested_0"
+            },
+            "context": {
+                "property": "ncit:C47891"
+            },
+            "value": 0.0
+        },
+        "susceptible": {
+            "name": "susceptible",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000988:susceptible_0"
+            },
+            "context": {},
+            "value": 1.0
+        },
+        "recovered_tested": {
+            "name": "recovered_tested",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000988:recovered_tested_0"
+            },
+            "context": {
+                "property": "ido:0000621"
+            },
+            "value": 0.0
+        },
+        "recovered_nontested": {
+            "name": "recovered_nontested",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000988:recovered_nontested_0"
+            },
+            "context": {
+                "property": "ncit:C101887"
+            },
+            "value": 0.0
+        },
+        "dead_corona_tested": {
+            "name": "dead_corona_tested",
+            "identifiers": {
+                "ncit": "C28554",
+                "biomodels.species": "BIOMD0000000988:dead_corona_tested_0"
+            },
+            "context": {
+                "property": "ncit:C47891"
+            },
+            "value": 0.0
+        },
+        "dead_noncorona": {
+            "name": "dead_noncorona",
+            "identifiers": {
+                "ncit": "C28554",
+                "biomodels.species": "BIOMD0000000988:dead_noncorona_0"
+            },
+            "context": {},
+            "value": 0.0
+        },
+        "dead_corona_nontested": {
+            "name": "dead_corona_nontested",
+            "identifiers": {
+                "ncit": "C28554",
+                "biomodels.species": "BIOMD0000000988:dead_corona_nontested_0"
+            },
+            "context": {
+                "property": "ncit:C101887"
+            },
+            "value": 0.0
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "initials": {
+        "Susceptible": {
+            "name": "Susceptible",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000955:Susceptible"
+            },
+            "context": {
+                "property": "ido:0000468"
+            },
+            "value": 0.9999963
+        },
+        "Infected": {
+            "name": "Infected",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000955:Infected"
+            },
+            "context": {
+                "property": "ncit:C113725"
+            },
+            "value": 3.33333333e-06
+        },
+        "Diagnosed": {
+            "name": "Diagnosed",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000955:Diagnosed"
+            },
+            "context": {
+                "property": "ncit:C15220"
+            },
+            "value": 3.33333333e-07
+        },
+        "Ailing": {
+            "name": "Ailing",
+            "identifiers": {
+                "ido": "0000573",
+                "biomodels.species": "BIOMD0000000955:Ailing"
+            },
+            "context": {
+                "property": "ncit:C113725"
+            },
+            "value": 1.66666666e-08
+        },
+        "Recognized": {
+            "name": "Recognized",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000955:Recognized"
+            },
+            "context": {
+                "property": "ncit:C25587"
+            },
+            "value": 3.33333333e-08
+        },
+        "Threatened": {
+            "name": "Threatened",
+            "identifiers": {
+                "ido": "0000573",
+                "biomodels.species": "BIOMD0000000955:Threatened"
+            },
+            "context": {
+                "property": "ncit:C15220"
+            },
+            "value": 0.0
+        },
+        "Healed": {
+            "name": "Healed",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000955:Healed"
+            },
+            "context": {
+                "property": "ido:0000621"
+            },
+            "value": 0.0
+        },
+        "Extinct": {
+            "name": "Extinct",
+            "identifiers": {
+                "ncit": "C28554",
+                "biomodels.species": "BIOMD0000000955:Extinct"
+            },
+            "context": {},
+            "value": 0.0
+        }
+    }
+}

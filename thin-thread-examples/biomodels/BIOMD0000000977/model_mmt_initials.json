@@ -1,0 +1,61 @@
+{
+    "initials": {
+        "Susceptible": {
+            "name": "Susceptible",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000977:Susceptible"
+            },
+            "context": {},
+            "value": 902654.0
+        },
+        "Infected": {
+            "name": "Infected",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000977:Infected"
+            },
+            "context": {},
+            "value": 1.0
+        },
+        "Susceptible_quarantined": {
+            "name": "Susceptible_quarantined",
+            "identifiers": {
+                "ido": "0000514",
+                "ncit": "C71902",
+                "biomodels.species": "BIOMD0000000977:Susceptible_quarantined"
+            },
+            "context": {},
+            "value": 10785.0
+        },
+        "Asymptomatic": {
+            "name": "Asymptomatic",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000977:Asymptomatic"
+            },
+            "context": {},
+            "value": 114.0
+        },
+        "Infected_quarantined": {
+            "name": "Infected_quarantined",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C71902",
+                "biomodels.species": "BIOMD0000000977:Exposed_quarantined"
+            },
+            "context": {},
+            "value": 0.0
+        },
+        "Recovered": {
+            "name": "Recovered",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000977:Recovered"
+            },
+            "context": {
+                "property": "ido:0000621"
+            },
+            "value": 0.0
+        }
+    }
+}

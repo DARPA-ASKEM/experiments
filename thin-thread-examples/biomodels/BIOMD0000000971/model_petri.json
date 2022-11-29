@@ -3,42 +3,50 @@
         {
             "sname": "Susceptible",
             "mira_ids": "[('identity', 'ido:0000514')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "11081000.0"
         },
         {
             "sname": "Exposed",
             "mira_ids": "[('identity', 'ido:0000514')]",
-            "mira_context": "[('property', 'ido:0000597')]"
+            "mira_context": "[('property', 'ido:0000597')]",
+            "mira_initial_value": "105.1"
         },
         {
             "sname": "Infected",
             "mira_ids": "[('identity', 'ido:0000511')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "27.679"
         },
         {
             "sname": "Asymptomatic",
             "mira_ids": "[('identity', 'ido:0000511')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "53.539"
         },
         {
             "sname": "Susceptible_quarantined",
             "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C71902')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "739.0"
         },
         {
             "sname": "Hospitalised",
             "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[('property', 'ncit:C25179')]"
+            "mira_context": "[('property', 'ncit:C25179')]",
+            "mira_initial_value": "1.0"
         },
         {
             "sname": "Recovered",
             "mira_ids": "[]",
-            "mira_context": "[('property', 'ido:0000621')]"
+            "mira_context": "[('property', 'ido:0000621')]",
+            "mira_initial_value": "2.0"
         },
         {
             "sname": "Exposed_quarantined",
             "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C71902')]",
-            "mira_context": "[('property', 'ido:0000597')]"
+            "mira_context": "[('property', 'ido:0000597')]",
+            "mira_initial_value": "1.1642"
         }
     ],
     "T": [

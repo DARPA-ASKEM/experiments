@@ -1,0 +1,79 @@
+{
+    "initials": {
+        "Susceptible_confined": {
+            "name": "Susceptible_confined",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000983:S_c"
+            },
+            "context": {
+                "property": "ncit:C25549"
+            },
+            "value": 0.0
+        },
+        "Susceptible_unconfined": {
+            "name": "Susceptible_unconfined",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000983:S_u"
+            },
+            "context": {},
+            "value": 66990000.0
+        },
+        "Quarantined": {
+            "name": "Quarantined",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000983:Q"
+            },
+            "context": {
+                "property": "ncit:C71902"
+            },
+            "value": 36.0
+        },
+        "Exposed": {
+            "name": "Exposed",
+            "identifiers": {
+                "ido": "0000514",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000983:E"
+            },
+            "context": {
+                "property": "ido:0000597"
+            },
+            "value": 112.0
+        },
+        "Infected_reported": {
+            "name": "Infected_reported",
+            "identifiers": {
+                "ncit": "C171133",
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000983:I_r"
+            },
+            "context": {},
+            "value": 12.0
+        },
+        "Infected_unreported": {
+            "name": "Infected_unreported",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000983:I_u"
+            },
+            "context": {
+                "property": "ncit:C43234"
+            },
+            "value": 50.0
+        },
+        "Recovered": {
+            "name": "Recovered",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000983:R"
+            },
+            "context": {
+                "property": "ido:0000621"
+            },
+            "value": 0.0
+        }
+    }
+}

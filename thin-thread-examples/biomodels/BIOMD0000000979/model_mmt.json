@@ -116,13 +116,48 @@
         }
     ],
     "parameters": {
-        "beta": 0.16668,
-        "omega": 0.01667,
-        "sigma": 0.19231,
-        "gamma": 0.05556,
-        "R_fixed": 3.0,
-        "Fraction_infected": 0.001,
-        "USA": 1.0
+        "beta": {
+            "name": "beta",
+            "identifiers": {},
+            "context": {},
+            "value": 0.16668
+        },
+        "omega": {
+            "name": "omega",
+            "identifiers": {},
+            "context": {},
+            "value": 0.01667
+        },
+        "sigma": {
+            "name": "sigma",
+            "identifiers": {},
+            "context": {},
+            "value": 0.19231
+        },
+        "gamma": {
+            "name": "gamma",
+            "identifiers": {},
+            "context": {},
+            "value": 0.05556
+        },
+        "R_fixed": {
+            "name": "R_fixed",
+            "identifiers": {},
+            "context": {},
+            "value": 3.0
+        },
+        "Fraction_infected": {
+            "name": "Fraction_infected",
+            "identifiers": {},
+            "context": {},
+            "value": 0.001
+        },
+        "USA": {
+            "name": "USA",
+            "identifiers": {},
+            "context": {},
+            "value": 1.0
+        }
     },
     "initials": {
         "Susceptible": 315283090.04,

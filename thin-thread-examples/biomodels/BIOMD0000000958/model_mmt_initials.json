@@ -1,0 +1,81 @@
+{
+    "initials": {
+        "Susceptible": {
+            "name": "Susceptible",
+            "identifiers": {
+                "ido": "0000514",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000958:Susceptible"
+            },
+            "context": {},
+            "value": 43994.0
+        },
+        "Exposed": {
+            "name": "Exposed",
+            "identifiers": {
+                "ncit": "C171133",
+                "ido": "0000597",
+                "biomodels.species": "BIOMD0000000958:Exposed"
+            },
+            "context": {},
+            "value": 0.0
+        },
+        "Super_spreaders": {
+            "name": "Super_spreaders",
+            "identifiers": {
+                "ido": "0000463",
+                "ncit": "C49508",
+                "biomodels.species": "BIOMD0000000958:Super_spreaders"
+            },
+            "context": {},
+            "value": 5.0
+        },
+        "Infectious": {
+            "name": "Infectious",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171549",
+                "biomodels.species": "BIOMD0000000958:Infectious"
+            },
+            "context": {},
+            "value": 1.0
+        },
+        "Hospitalised": {
+            "name": "Hospitalised",
+            "identifiers": {
+                "ncit": "C25179",
+                "biomodels.species": "BIOMD0000000958:Hospitalised"
+            },
+            "context": {},
+            "value": 0.0
+        },
+        "Asymptomatic": {
+            "name": "Asymptomatic",
+            "identifiers": {
+                "ncit": "C171133",
+                "ido": "0000569",
+                "biomodels.species": "BIOMD0000000958:Asymptomatic"
+            },
+            "context": {},
+            "value": 0.0
+        },
+        "Fatalities": {
+            "name": "Fatalities",
+            "identifiers": {
+                "ncit": "C28554",
+                "biomodels.species": "BIOMD0000000958:Fatalities"
+            },
+            "context": {},
+            "value": 0.0
+        },
+        "Recovered": {
+            "name": "Recovered",
+            "identifiers": {
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000958:Recovered"
+            },
+            "context": {},
+            "value": 0.0
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "initials": {
+        "Susceptible": {
+            "name": "Susceptible",
+            "identifiers": {
+                "ido": "0000514",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000982:Susceptible"
+            },
+            "context": {},
+            "value": 32680000.0
+        },
+        "Infected": {
+            "name": "Infected",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000982:Infected"
+            },
+            "context": {},
+            "value": 728.0
+        },
+        "Removed": {
+            "name": "Removed",
+            "identifiers": {
+                "ido": "0000621",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000982:Removed"
+            },
+            "context": {},
+            "value": 62.0000000000001
+        }
+    }
+}
