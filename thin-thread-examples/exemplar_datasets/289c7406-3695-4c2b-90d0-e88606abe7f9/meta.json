@@ -1,0 +1,227 @@
+{
+	"id": "289c7406-3695-4c2b-90d0-e88606abe7f9",
+	"name": "Monthly State Retail Sales (Year on Year)",
+	"family_name": null,
+	"description": "The Monthly State Retail Sales (MSRS) is the Census Bureau's new experimental data product featuring modeled state-level retail sales. This is a blended data product using Monthly Retail Trade Survey data, administrative data, and third-party data. Year-over-year percentage changes are available for Total Retail Sales excluding Nonstore Retailers as well as 11 retail North American Industry Classification System (NAICS) retail subsectors. These data are provided by state and NAICS codes beginning with January 2019. The Census Bureau plans to continue to improve the methodology to be able to publish more data in the future.",
+	"created_at": 1665094453860,
+	"category": null,
+	"domains": [
+		"Economic Sciences"
+	],
+	"maintainer": {
+		"name": "Brandon Rose",
+		"email": "brandon@jataware.com",
+		"organization": "United States Census Bureau",
+		"website": "https://www.census.gov/retail/state_retail_sales.html"
+	},
+	"data_paths": [
+		"file:///datasets/289c7406-3695-4c2b-90d0-e88606abe7f9/289c7406-3695-4c2b-90d0-e88606abe7f9.parquet.gzip"
+	],
+	"outputs": [
+		{
+			"name": "Retail Sales YoY",
+			"display_name": "",
+			"description": "Not Adjusted State Retail Sales Year-over-Year Percentage Changes",
+			"type": "float",
+			"unit": "Percentage Change",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		}
+	],
+	"qualifier_outputs": [
+		{
+			"name": "naics",
+			"display_name": "",
+			"description": "Three-digit numeric NAICS value for retail subsector code",
+			"type": "int",
+			"unit": "NA",
+			"unit_description": "",
+			"related_features": [
+				"Retail Sales YoY"
+			],
+			"ontologies": {}
+		},
+		{
+			"name": "Date",
+			"display_name": "",
+			"description": "Month",
+			"type": "datetime",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Retail Sales YoY",
+				"naics"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "country",
+			"display_name": "country",
+			"description": "location",
+			"type": "country",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Retail Sales YoY",
+				"naics"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin1",
+			"display_name": "admin1",
+			"description": "location",
+			"type": "admin1",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Retail Sales YoY",
+				"naics"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin2",
+			"display_name": "admin2",
+			"description": "location",
+			"type": "admin2",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Retail Sales YoY",
+				"naics"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin3",
+			"display_name": "admin3",
+			"description": "location",
+			"type": "admin3",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Retail Sales YoY",
+				"naics"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lat",
+			"display_name": "lat",
+			"description": "location",
+			"type": "lat",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Retail Sales YoY",
+				"naics"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lng",
+			"display_name": "lng",
+			"description": "location",
+			"type": "lng",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Retail Sales YoY",
+				"naics"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		}
+	],
+	"tags": [],
+	"geography": {
+		"country": [
+			"United States"
+		],
+		"admin1": [
+			"Alabama",
+			"Alaska",
+			"Arizona",
+			"Arkansas",
+			"California",
+			"Colorado",
+			"Connecticut",
+			"Delaware",
+			"District Of Columbia",
+			"Florida",
+			"Georgia",
+			"Hawaii",
+			"Idaho",
+			"Illinois",
+			"Indiana",
+			"Iowa",
+			"Kansas",
+			"Kentucky",
+			"Louisiana",
+			"Maine",
+			"Maryland",
+			"Massachusetts",
+			"Michigan",
+			"Minnesota",
+			"Mississippi",
+			"Missouri",
+			"Montana",
+			"Nebraska",
+			"Nevada",
+			"New Hampshire",
+			"New Jersey",
+			"New Mexico",
+			"New York",
+			"North Carolina",
+			"North Dakota",
+			"Ohio",
+			"Oklahoma",
+			"Oregon",
+			"Pennsylvania",
+			"Rhode Island",
+			"South Carolina",
+			"South Dakota",
+			"Tennessee",
+			"Texas",
+			"Utah",
+			"Vermont",
+			"Virginia",
+			"Washington",
+			"West Virginia",
+			"Wisconsin",
+			"Wyoming"
+		],
+		"admin2": [],
+		"admin3": []
+	},
+	"period": {
+		"gte": 1654041600000,
+		"lte": 1546300800000
+	},
+	"deprecated": false,
+	"data_sensitivity": "",
+	"data_quality": "",
+	"published": true,
+	"temporal_resolution": "annual",
+	"fileData": {
+		"raw": {
+			"uploaded": true,
+			"url": "census_retail_sales.csv",
+			"rawFileName": "raw_data.csv"
+		}
+	}
+}
