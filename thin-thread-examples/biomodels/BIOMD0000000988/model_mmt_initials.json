@@ -129,6 +129,14 @@
                 "property": "ncit:C101887"
             },
             "value": 0.0
+        },
+        "total_population": {
+            "name": "total_population",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000988:total_population_0"
+            },
+            "context": {},
+            "value": 630003.0
         }
     }
 }

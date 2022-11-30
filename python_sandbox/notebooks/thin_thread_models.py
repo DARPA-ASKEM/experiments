@@ -78,8 +78,9 @@ for i, (doi, source, info) in tqdm(models.iterrows()):
         state_vars = [t['subject'] for t in model_mmt['templates'] if 'subject' in t.keys()]
         state_vars.extend([t['outcome'] for t in model_mmt['templates'] if 'outcome' in t.keys()])
         state_vars.extend([i for t in model_mmt['templates'] if 'controllers' in t.keys() for i in t['controllers']])
+        state_vars.extend([t['controller'] for t in model_mmt['templates'] if 'controller' in t.keys()])
         state_vars_uniq = {hash(json.dumps(v, sort_keys = True, default = str, ensure_ascii = True).encode()): v for v in state_vars}
-        model_mmt_initials = {'initials': {var['name']: {**var, **{'value': None}}  for var in state_vars_uniq.values()}}
+        model_mmt_initials = {'initials': {var['name']: {**var, **{'value': None}} for var in state_vars_uniq.values()}}
 
         # Populate with given values
         for k, v in model_mmt['initials'].items():
@@ -165,8 +166,9 @@ for info in tqdm(('CHIME-SIR', 'CHIME-SVIIvR', 'Bucky')):
     state_vars = [t['subject'] for t in model_mmt['templates'] if 'subject' in t.keys()]
     state_vars.extend([t['outcome'] for t in model_mmt['templates'] if 'outcome' in t.keys()])
     state_vars.extend([i for t in model_mmt['templates'] if 'controllers' in t.keys() for i in t['controllers']])
+    state_vars.extend([t['controller'] for t in model_mmt['templates'] if 'controller' in t.keys()])
     state_vars_uniq = {hash(json.dumps(v, sort_keys = True, default = str, ensure_ascii = True).encode()): v for v in state_vars}
-    model_mmt_initials = {'initials': {var['name']: {**var, **{'value': None}}  for var in state_vars_uniq.values()}}
+    model_mmt_initials = {'initials': {var['name']: {**var, **{'value': None}} for var in state_vars_uniq.values()}}
 
     # Populate with given values
     for k, v in model_mmt['initials'].items():
