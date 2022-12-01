@@ -1,0 +1,349 @@
+{
+	"id": "6d274390-ca90-407e-a9cc-39e5be57d53a",
+	"name": "New York Positive Tests Over Time",
+	"family_name": null,
+	"description": "Positive COVID-19 tests over time for New York by Region and County.\n\nThis dataset includes information on the number of tests of individuals for COVID-19 infection performed in New York State beginning March 1, 2020, when the first case of COVID-19 was identified in the state. The primary goal of publishing this dataset is to provide users timely information about local disease spread and reporting of positive cases. The data will be updated daily, reflecting tests completed by 12:00 am (midnight) the day of the update (i.e., all tests reported by the end of the day on the day before the update).",
+	"created_at": 1669862637717,
+	"category": null,
+	"domains": [
+		"Life Sciences",
+		"Demographics"
+	],
+	"maintainer": {
+		"name": "Brandon Rose",
+		"email": "brandon@jataware.com",
+		"organization": "New York",
+		"website": "https://coronavirus.health.ny.gov/positive-tests-over-time-region-and-county"
+	},
+	"data_paths": [
+		"file:///datasets/6d274390-ca90-407e-a9cc-39e5be57d53a/6d274390-ca90-407e-a9cc-39e5be57d53a.parquet.gzip",
+		"file:///datasets/6d274390-ca90-407e-a9cc-39e5be57d53a/6d274390-ca90-407e-a9cc-39e5be57d53a_str.parquet.gzip"
+	],
+	"outputs": [
+		{
+			"name": "New Positives",
+			"display_name": "",
+			"description": "New positives",
+			"type": "int",
+			"unit": "cases",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Cumulative Number of Positives",
+			"display_name": "",
+			"description": "Cumulative positive cases",
+			"type": "int",
+			"unit": "cases",
+			"unit_description": "",
+			"primaryOntologyId": "cemo:cumulative_cases",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Total Number of Tests Performed",
+			"display_name": "",
+			"description": "Total Number of Tests Performed",
+			"type": "int",
+			"unit": "tests",
+			"unit_description": "",
+			"primaryOntologyId": "cemo:number_of_tests",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Cumulative Number of Tests Performed",
+			"display_name": "",
+			"description": "Cumulative Number of Tests Performed",
+			"type": "int",
+			"unit": "tests",
+			"unit_description": "",
+			"primaryOntologyId": "cemo:number_of_tests",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Test % Positive",
+			"display_name": "",
+			"description": "Test % Positive",
+			"type": "str",
+			"unit": "Percent positive",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		}
+	],
+	"qualifier_outputs": [
+		{
+			"name": "Geography",
+			"display_name": "",
+			"description": "geography type",
+			"type": "str",
+			"unit": "na",
+			"unit_description": "",
+			"related_features": [
+				"New Positives",
+				"Cumulative Number of Positives",
+				"Total Number of Tests Performed",
+				"Cumulative Number of Tests Performed",
+				"Test % Positive"
+			],
+			"ontologies": {}
+		},
+		{
+			"name": "Test Date",
+			"display_name": "",
+			"description": "test date",
+			"type": "datetime",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"New Positives",
+				"Cumulative Number of Positives",
+				"Total Number of Tests Performed",
+				"Cumulative Number of Tests Performed",
+				"Test % Positive",
+				"Geography"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "country",
+			"display_name": "country",
+			"description": "location",
+			"type": "country",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"New Positives",
+				"Cumulative Number of Positives",
+				"Total Number of Tests Performed",
+				"Cumulative Number of Tests Performed",
+				"Test % Positive",
+				"Geography"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin1",
+			"display_name": "admin1",
+			"description": "location",
+			"type": "admin1",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"New Positives",
+				"Cumulative Number of Positives",
+				"Total Number of Tests Performed",
+				"Cumulative Number of Tests Performed",
+				"Test % Positive",
+				"Geography"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin2",
+			"display_name": "admin2",
+			"description": "location",
+			"type": "admin2",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"New Positives",
+				"Cumulative Number of Positives",
+				"Total Number of Tests Performed",
+				"Cumulative Number of Tests Performed",
+				"Test % Positive",
+				"Geography"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin3",
+			"display_name": "admin3",
+			"description": "location",
+			"type": "admin3",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"New Positives",
+				"Cumulative Number of Positives",
+				"Total Number of Tests Performed",
+				"Cumulative Number of Tests Performed",
+				"Test % Positive",
+				"Geography"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lat",
+			"display_name": "lat",
+			"description": "location",
+			"type": "lat",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"New Positives",
+				"Cumulative Number of Positives",
+				"Total Number of Tests Performed",
+				"Cumulative Number of Tests Performed",
+				"Test % Positive",
+				"Geography"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lng",
+			"display_name": "lng",
+			"description": "location",
+			"type": "lng",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"New Positives",
+				"Cumulative Number of Positives",
+				"Total Number of Tests Performed",
+				"Cumulative Number of Tests Performed",
+				"Test % Positive",
+				"Geography"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		}
+	],
+	"tags": [],
+	"geography": {
+		"country": [
+			"United States"
+		],
+		"admin1": [
+			"New York"
+		],
+		"admin2": [
+			"Albany",
+			"Allegany",
+			"Bronx",
+			"Broome",
+			"Capital Region",
+			"Cattaraugus",
+			"Cayuga",
+			"Central New York",
+			"Chautauqua",
+			"Chemung",
+			"Chenango",
+			"Clinton",
+			"Columbia",
+			"Cortland",
+			"Delaware",
+			"Dutchess",
+			"Erie",
+			"Essex",
+			"Finger Lakes",
+			"Franklin",
+			"Fulton",
+			"Genesee",
+			"Greene",
+			"Hamilton",
+			"Herkimer",
+			"Jefferson",
+			"Kings",
+			"Lewis",
+			"Livingston",
+			"Long Island",
+			"Madison",
+			"Mid-Hudson",
+			"Mohawk Valley",
+			"Monroe",
+			"Montgomery",
+			"Nassau",
+			"New York",
+			"New York City",
+			"Niagara",
+			"North Country",
+			"Oneida",
+			"Onondaga",
+			"Ontario",
+			"Orange",
+			"Orleans",
+			"Oswego",
+			"Otsego",
+			"Putnam",
+			"Queens",
+			"Rensselaer",
+			"Richmond",
+			"Rockland",
+			"STATEWIDE",
+			"Saratoga",
+			"Schenectady",
+			"Schoharie",
+			"Schuyler",
+			"Seneca",
+			"Southern Tier",
+			"St. Lawrence",
+			"Steuben",
+			"Suffolk",
+			"Sullivan",
+			"Tioga",
+			"Tompkins",
+			"Ulster",
+			"Warren",
+			"Washington",
+			"Wayne",
+			"Westchester",
+			"Western New York",
+			"Wyoming",
+			"Yates"
+		],
+		"admin3": []
+	},
+	"period": {
+		"gte": 1669680000000,
+		"lte": 1583020800000
+	},
+	"deprecated": false,
+	"data_sensitivity": "",
+	"data_quality": "",
+	"published": true,
+	"temporal_resolution": "annual",
+	"fileData": {
+		"raw": {
+			"uploaded": true,
+			"url": "new_york_state_statewide_covid-19_testing.csv",
+			"rawFileName": "raw_data.csv"
+		}
+	}
+}

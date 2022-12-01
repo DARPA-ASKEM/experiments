@@ -1,0 +1,501 @@
+Year,Country,State,City,pop2022,pop2020,growth,density,aland_sqmi
+2022,United States,New York,New York City,8930002,8804190,0.00709,29729,300.381
+2022,United States,New York,Buffalo,281757,278349,0.00608,6978,40.378
+2022,United States,New York,Yonkers,214687,211569,0.00731,11919,18.012
+2022,United States,New York,Rochester,211480,211328,0.00036,5913,35.766
+2022,United States,New York,Syracuse,149310,148620,0.00232,5965,25.03
+2022,United States,New York,Albany,99498,99224,0.00138,4649,21.403
+2022,United States,New York,New Rochelle,80258,79726,0.00333,7754,10.35
+2022,United States,New York,Cheektowaga,77159,76829,0.00214,3041,25.376
+2022,United States,New York,Mount Vernon,75213,73893,0.00885,17156,4.384
+2022,United States,New York,Schenectady,67229,67047,0.00136,6230,10.792
+2022,United States,New York,Utica,65893,65283,0.00465,3932,16.76
+2022,United States,New York,Brentwood,62731,62387,0.00275,5720,10.967
+2022,United States,New York,Hempstead,60225,59169,0.00884,16348,3.684
+2022,United States,New York,White Plains,60101,59559,0.00453,6138,9.792
+2022,United States,New York,Levittown,51734,51758,-0.00023,7595,6.812
+2022,United States,New York,Troy,51655,51401,0.00246,4987,10.357
+2022,United States,New York,Irondequoit,50913,51043,-0.00128,3396,14.992
+2022,United States,New York,Niagara Falls,48367,48671,-0.00313,3434,14.086
+2022,United States,New York,Binghamton,48087,47969,0.00123,4589,10.479
+2022,United States,New York,West Seneca,45658,45500,0.00173,2135,21.387
+2022,United States,New York,Freeport,44794,44472,0.00361,9785,4.578
+2022,United States,New York,Hicksville,44333,43869,0.00526,6527,6.792
+2022,United States,New York,West Babylon,43213,43213,0.0,5555,7.779
+2022,United States,New York,Valley Stream,41258,40634,0.00762,11859,3.479
+2022,United States,New York,Coram,40442,40220,0.00275,2925,13.826
+2022,United States,New York,East Meadow,37728,37796,-0.0009,5986,6.303
+2022,United States,New York,Brighton,37243,37137,0.00143,2417,15.407
+2022,United States,New York,Central Islip,37166,36714,0.00612,5228,7.109
+2022,United States,New York,Commack,36618,36536,0.00112,3062,11.96
+2022,United States,New York,Baldwin,35897,33919,0.02833,12144,2.956
+2022,United States,New York,Elmont,35679,35265,0.00584,10463,3.41
+2022,United States,New York,Kiryas Joel,35510,32954,0.03733,26053,1.363
+2022,United States,New York,Long Beach,35379,35029,0.00497,15951,2.218
+2022,United States,New York,Huntington Station,35248,34878,0.00528,6438,5.475
+2022,United States,New York,New City,34251,34135,0.0017,2199,15.573
+2022,United States,New York,Uniondale,34015,32473,0.02319,5957,5.71
+2022,United States,New York,Spring Valley,33410,33066,0.00517,16614,2.011
+2022,United States,New York,Oceanside,32743,32637,0.00162,6643,4.929
+2022,United States,New York,Ithaca,32526,32108,0.00647,6036,5.389
+2022,United States,New York,Port Chester,32239,31693,0.00854,13831,2.331
+2022,United States,New York,Rome,31807,32127,-0.00501,425,74.854
+2022,United States,New York,Poughkeepsie,31345,31577,-0.00369,6094,5.144
+2022,United States,New York,Franklin Square,31219,30903,0.00509,10847,2.878
+2022,United States,New York,Centereach,30860,30980,-0.00194,3535,8.729
+2022,United States,New York,Middletown,30797,30345,0.00739,5795,5.314
+2022,United States,New York,North Tonawanda,30282,30496,-0.00352,2998,10.1
+2022,United States,New York,Bay Shore,29826,29244,0.00985,5522,5.401
+2022,United States,New York,Deer Park,29055,28837,0.00377,4711,6.168
+2022,United States,New York,Saratoga Springs,28871,28491,0.00662,1029,28.065
+2022,United States,New York,Newburgh,28854,28856,-3e-05,7581,3.806
+2022,United States,New York,Monsey,28662,26954,0.03071,12632,2.269
+2022,United States,New York,Glen Cove,28645,28365,0.00491,4304,6.655
+2022,United States,New York,Harrison,28368,28218,0.00265,1692,16.763
+2022,United States,New York,Jamestown,28226,28712,-0.00854,3159,8.934
+2022,United States,New York,Ossining,28049,27551,0.00896,8885,3.157
+2022,United States,New York,Plainview,27276,27100,0.00324,4765,5.724
+2022,United States,New York,Lindenhurst,27128,27148,-0.00037,7230,3.752
+2022,United States,New York,West Islip,26790,27048,-0.00479,4250,6.303
+2022,United States,New York,Auburn,26702,26866,-0.00306,3204,8.335
+2022,United States,New York,Rockville Centre,26414,26016,0.00759,8125,3.251
+2022,United States,New York,Holbrook,26345,26487,-0.00269,3672,7.174
+2022,United States,New York,Shirley,26062,26360,-0.00568,2272,11.472
+2022,United States,New York,Dix Hills,26038,26180,-0.00272,1634,15.938
+2022,United States,New York,Elmira,25987,26523,-0.01021,3583,7.252
+2022,United States,New York,Peekskill,25801,25431,0.00722,5907,4.368
+2022,United States,New York,Smithtown,25461,25629,-0.00329,2192,11.617
+2022,United States,New York,Medford,24267,24247,0.00041,2247,10.799
+2022,United States,New York,Watertown,24217,24685,-0.00957,2681,9.032
+2022,United States,New York,Kingston,24105,24069,0.00075,3222,7.482
+2022,United States,New York,Copiague,23517,23429,0.00187,7606,3.092
+2022,United States,New York,Garden City,23452,23272,0.00385,4401,5.329
+2022,United States,New York,Rotterdam,23432,22968,0.01,3400,6.891
+2022,United States,New York,Merrick,22028,22040,-0.00027,5533,3.981
+2022,United States,New York,Selden,21544,21262,0.00659,4986,4.321
+2022,United States,New York,East Patchogue,21402,21580,-0.00414,2571,8.324
+2022,United States,New York,Massapequa,21289,21355,-0.00155,5982,3.559
+2022,United States,New York,Mineola,21200,20800,0.00952,11277,1.88
+2022,United States,New York,Eastchester,21171,20901,0.00642,6427,3.294
+2022,United States,New York,Lockport,20818,20876,-0.00139,2478,8.4
+2022,United States,New York,North Bellmore,20711,20583,0.0031,7905,2.62
+2022,United States,New York,Lynbrook,20640,20438,0.00492,10253,2.013
+2022,United States,New York,Mamaroneck,20395,20151,0.00602,6434,3.17
+2022,United States,New York,Lackawanna,20311,19949,0.00899,3102,6.548
+2022,United States,New York,West Hempstead,20029,19835,0.00487,7541,2.656
+2022,United States,New York,East Northport,20014,20048,-0.00085,3874,5.166
+2022,United States,New York,East Massapequa,20010,19854,0.00391,5846,3.423
+2022,United States,New York,Huntington,19965,19645,0.00808,2629,7.594
+2022,United States,New York,Hauppauge,19923,20083,-0.004,1857,10.728
+2022,United States,New York,Plattsburgh,19811,19841,-0.00076,3932,5.039
+2022,United States,New York,North Bay Shore,19755,19619,0.00345,6147,3.214
+2022,United States,New York,Syosset,19345,19259,0.00223,3888,4.975
+2022,United States,New York,Melville,19344,19284,0.00155,1600,12.093
+2022,United States,New York,Nanuet,19086,18886,0.00527,3512,5.434
+2022,United States,New York,Woodmere,18979,18669,0.00823,7353,2.581
+2022,United States,New York,Ronkonkoma,18929,18955,-0.00069,2420,7.822
+2022,United States,New York,North Amityville,18799,18643,0.00417,7986,2.354
+2022,United States,New York,Holtsville,18781,18937,-0.00414,2642,7.109
+2022,United States,New York,Wantagh,18561,18613,-0.0014,4846,3.83
+2022,United States,New York,Cohoes,18543,18147,0.01079,4915,3.773
+2022,United States,New York,North Valley Stream,18511,18197,0.00855,9925,1.865
+2022,United States,New York,Scarsdale,18471,18253,0.00594,2773,6.66
+2022,United States,New York,Roosevelt,18428,18066,0.00992,10411,1.77
+2022,United States,New York,Islip,18364,18418,-0.00147,3805,4.826
+2022,United States,New York,Lake Ronkonkoma,18311,18619,-0.00834,3709,4.937
+2022,United States,New York,Amsterdam,18139,18219,-0.0022,3089,5.872
+2022,United States,New York,North Babylon,18011,17927,0.00234,5341,3.372
+2022,United States,New York,North Massapequa,17817,17829,-0.00034,5951,2.994
+2022,United States,New York,Cortland,17226,17556,-0.00949,4424,3.894
+2022,United States,New York,Massapequa Park,17129,17109,0.00058,7814,2.192
+2022,United States,New York,Kings Park,17045,17085,-0.00117,2736,6.231
+2022,United States,New York,Port Washington,16935,16753,0.0054,4048,4.184
+2022,United States,New York,Rye,16766,16592,0.00522,2864,5.854
+2022,United States,New York,Pearl River,16705,16567,0.00415,2458,6.795
+2022,United States,New York,Bethpage,16704,16658,0.00138,4671,3.576
+2022,United States,New York,Oswego,16677,16921,-0.00726,2190,7.614
+2022,United States,New York,Sayville,16513,16569,-0.00169,3112,5.306
+2022,United States,New York,Fort Drum,16484,15896,0.01816,1149,14.342
+2022,United States,New York,Bellmore,16313,16297,0.00049,6915,2.359
+2022,United States,New York,Floral Park,16234,16172,0.00191,11489,1.413
+2022,United States,New York,Westbury,16008,15864,0.00452,6829,2.344
+2022,United States,New York,North New Hyde Park,15809,15657,0.00483,8005,1.975
+2022,United States,New York,Eggertsville,15669,15561,0.00346,5477,2.861
+2022,United States,New York,Batavia,15628,15600,0.0009,3008,5.195
+2022,United States,New York,Hampton Bays,15552,15228,0.01053,1211,12.837
+2022,United States,New York,Mastic,15388,15404,-0.00052,3943,3.903
+2022,United States,New York,Johnson City,15377,15343,0.00111,3378,4.552
+2022,United States,New York,Riverhead,15331,14993,0.01115,1016,15.093
+2022,United States,New York,Seaford,15243,15251,-0.00026,5840,2.61
+2022,United States,New York,Kenmore,15161,15205,-0.00145,10558,1.436
+2022,United States,New York,Depew,15154,15178,-0.00079,2985,5.076
+2022,United States,New York,Tonawanda,15129,15129,0.0,3978,3.803
+2022,United States,New York,Jericho,15056,14808,0.0083,3800,3.962
+2022,United States,New York,Gloversville,15025,15131,-0.00352,2978,5.046
+2022,United States,New York,Farmingville,14883,14983,-0.00335,3612,4.121
+2022,United States,New York,Glens Falls,14856,14830,0.00088,3858,3.851
+2022,United States,New York,Jefferson Valley-Yorktown,14504,14444,0.00207,2087,6.951
+2022,United States,New York,Mastic Beach,14453,14199,0.00887,3062,4.72
+2022,United States,New York,Greece,14411,14429,-0.00062,3295,4.373
+2022,United States,New York,Manorville,14317,14317,0.0,564,25.4
+2022,United States,New York,South Farmingdale,14317,14345,-0.00098,6455,2.218
+2022,United States,New York,New Cassel,14227,14199,0.00099,9619,1.479
+2022,United States,New York,Olean,13833,13937,-0.00375,2345,5.9
+2022,United States,New York,East Islip,13823,13931,-0.00389,3477,3.976
+2022,United States,New York,Endicott,13723,13667,0.00204,4296,3.194
+2022,United States,New York,Greenlawn,13645,13661,-0.00059,3664,3.724
+2022,United States,New York,Rocky Point,13557,13633,-0.0028,1198,11.32
+2022,United States,New York,St. James,13517,13487,0.00111,2964,4.561
+2022,United States,New York,Beacon,13415,13769,-0.01302,2831,4.739
+2022,United States,New York,Stony Brook,13413,13467,-0.00201,2310,5.806
+2022,United States,New York,Ridge,13259,13271,-0.00045,1004,13.201
+2022,United States,New York,Wyandanch,13258,12990,0.01021,2973,4.46
+2022,United States,New York,Nesconset,13171,13207,-0.00136,3447,3.821
+2022,United States,New York,East Glenville,12952,11896,0.0425,1807,7.168
+2022,United States,New York,Oneonta,12915,13079,-0.00631,2961,4.361
+2022,United States,New York,Dunkirk,12779,12743,0.00141,2837,4.505
+2022,United States,New York,Geneva,12722,12812,-0.00352,3022,4.21
+2022,United States,New York,Salisbury,12722,12618,0.0041,7291,1.745
+2022,United States,New York,Patchogue,12530,12408,0.00489,5544,2.26
+2022,United States,New York,Haverstraw,12405,12323,0.00332,6256,1.983
+2022,United States,New York,North Merrick,12232,12238,-0.00025,7116,1.719
+2022,United States,New York,Babylon,12192,12188,0.00016,5023,2.427
+2022,United States,New York,Stony Point,12122,12126,-0.00016,2227,5.442
+2022,United States,New York,North Lindenhurst,12070,12000,0.00291,6254,1.93
+2022,United States,New York,Tarrytown,11976,11860,0.00487,4093,2.926
+2022,United States,New York,North Bellport,11972,11900,0.00302,2445,4.897
+2022,United States,New York,North Wantagh,11925,11931,-0.00025,6266,1.903
+2022,United States,New York,Endwell,11826,11762,0.00271,3159,3.744
+2022,United States,New York,Woodbury,11694,11526,0.00724,329,35.576
+2022,United States,New York,Dobbs Ferry,11675,11541,0.00577,4807,2.429
+2022,United States,New York,Inwood,11650,11340,0.01348,7304,1.595
+2022,United States,New York,Miller Place,11599,11723,-0.00532,1771,6.549
+2022,United States,New York,Suffern,11585,11441,0.00625,5525,2.097
+2022,United States,New York,Mount Sinai,11523,11623,-0.00432,1921,5.998
+2022,United States,New York,Elwood,11476,11426,0.00218,2401,4.78
+2022,United States,New York,Terryville,11396,11472,-0.00332,3530,3.228
+2022,United States,New York,Great Neck,11377,11145,0.0103,8528,1.334
+2022,United States,New York,Myers Corner,11360,10598,0.0347,2256,5.036
+2022,United States,New York,Fulton,11287,11389,-0.0045,2955,3.82
+2022,United States,New York,Lake Grove,11054,11072,-0.00081,3741,2.955
+2022,United States,New York,Chestnut Ridge,11023,10505,0.02406,2226,4.952
+2022,United States,New York,Mount Kisco,10975,10959,0.00073,3608,3.042
+2022,United States,New York,Scotchtown,10852,10578,0.01279,2568,4.226
+2022,United States,New York,West Haverstraw,10780,10678,0.00475,7083,1.522
+2022,United States,New York,Stony Brook University,10647,10409,0.0113,6267,1.699
+2022,United States,New York,Canandaigua,10582,10576,0.00028,2310,4.58
+2022,United States,New York,Middle Island,10558,10546,0.00057,1285,8.219
+2022,United States,New York,Airmont,10474,10166,0.01492,2294,4.565
+2022,United States,New York,Corning,10425,10551,-0.00601,3380,3.084
+2022,United States,New York,Watervliet,10399,10375,0.00116,7732,1.345
+2022,United States,New York,New Hyde Park,10365,10257,0.00524,12066,0.859
+2022,United States,New York,Orange Lake,10328,9770,0.02776,1944,5.312
+2022,United States,New York,Fairmount,10252,10248,0.0002,3075,3.334
+2022,United States,New York,East Rockaway,10227,10159,0.00334,10046,1.018
+2022,United States,New York,New Square,10227,9679,0.02753,27866,0.367
+2022,United States,New York,Rye Brook,10187,10047,0.00692,2967,3.433
+2022,United States,New York,Oneida,10117,10329,-0.01037,459,22.053
+2022,United States,New York,Sleepy Hollow,10010,9986,0.0012,4552,2.199
+2022,United States,New York,Massena,9995,10151,-0.00774,2209,4.524
+2022,United States,New York,Lancaster,9963,10027,-0.0032,3691,2.699
+2022,United States,New York,West Glens Falls,9953,9473,0.02471,2118,4.7
+2022,United States,New York,Ogdensburg,9852,10064,-0.01064,1988,4.956
+2022,United States,New York,Greenville,9850,9394,0.0237,3845,2.562
+2022,United States,New York,Bohemia,9786,9852,-0.00336,1137,8.61
+2022,United States,New York,Hamburg,9754,9696,0.00298,3935,2.479
+2022,United States,New York,Glens Falls North,9748,9530,0.01131,1184,8.232
+2022,United States,New York,Plainedge,9657,9517,0.0073,6878,1.404
+2022,United States,New York,South Huntington,9589,9561,0.00146,2808,3.415
+2022,United States,New York,Fort Salonga,9580,9652,-0.00374,977,9.803
+2022,United States,New York,South Lockport,9561,9355,0.01089,1673,5.715
+2022,United States,New York,Monroe,9539,9343,0.01038,2763,3.453
+2022,United States,New York,Amityville,9496,9500,-0.00021,4628,2.052
+2022,United States,New York,North Gates,9448,9458,-0.00053,3551,2.661
+2022,United States,New York,Woodbury,9421,9335,0.00459,1881,5.008
+2022,United States,New York,Fredonia,9257,9585,-0.01741,1784,5.189
+2022,United States,New York,Rensselaer,9174,9210,-0.00196,2886,3.179
+2022,United States,New York,Mahopac,9044,8932,0.00623,1713,5.28
+2022,United States,New York,Valley Cottage,9024,9038,-0.00078,2081,4.337
+2022,United States,New York,Newark,8991,9017,-0.00144,1663,5.406
+2022,United States,New York,New Windsor,8874,8882,-0.00045,2359,3.762
+2022,United States,New York,Port Jervis,8765,8775,-0.00057,3466,2.529
+2022,United States,New York,Hastings-on-Hudson,8738,8590,0.00854,4476,1.952
+2022,United States,New York,Malverne,8570,8560,0.00058,8100,1.058
+2022,United States,New York,Congers,8566,8532,0.00199,2792,3.068
+2022,United States,New York,Bayport,8551,8609,-0.00338,2292,3.731
+2022,United States,New York,Farmingdale,8522,8466,0.0033,7602,1.121
+2022,United States,New York,Viola,8476,8208,0.01606,3039,2.789
+2022,United States,New York,Springs,8384,8086,0.01809,989,8.478
+2022,United States,New York,Croton-on-Hudson,8379,8327,0.00311,1805,4.642
+2022,United States,New York,Mechanicstown,8307,8065,0.01478,2478,3.352
+2022,United States,New York,Hillcrest,8286,8164,0.00742,6374,1.3
+2022,United States,New York,Hornell,8203,8263,-0.00364,2502,3.279
+2022,United States,New York,Manhasset,8196,8176,0.00122,3435,2.386
+2022,United States,New York,Center Moriches,8140,8046,0.00581,1553,5.241
+2022,United States,New York,Johnstown,8096,8204,-0.00663,1680,4.82
+2022,United States,New York,Potsdam,8088,8312,-0.01366,1645,4.917
+2022,United States,New York,Lake Carmel,8027,8069,-0.00261,1555,5.161
+2022,United States,New York,Garden City Park,8021,7985,0.00225,8135,0.986
+2022,United States,New York,Port Jefferson,8004,7962,0.00263,2617,3.058
+2022,United States,New York,Baldwinsville,8002,7898,0.00654,2571,3.113
+2022,United States,New York,Port Jefferson Station,7972,7950,0.00138,3006,2.652
+2022,United States,New York,Mount Ivy,7813,7657,0.01008,5396,1.448
+2022,United States,New York,Baywood,7802,7726,0.00489,3413,2.286
+2022,United States,New York,Colonie,7779,7781,-0.00013,2399,3.242
+2022,United States,New York,Wading River,7733,7731,0.00013,791,9.781
+2022,United States,New York,Williston Park,7651,7591,0.00394,12222,0.626
+2022,United States,New York,Great Neck Plaza,7638,7482,0.01032,24559,0.311
+2022,United States,New York,Westmere,7616,7560,0.00369,2403,3.169
+2022,United States,New York,Pleasantville,7611,7513,0.00648,4166,1.827
+2022,United States,New York,Ilion,7564,7646,-0.00539,3034,2.493
+2022,United States,New York,Cedarhurst,7530,7374,0.01047,11156,0.675
+2022,United States,New York,Briarcliff Manor,7509,7569,-0.00398,1261,5.957
+2022,United States,New York,Geneseo,7482,7574,-0.00611,2633,2.842
+2022,United States,New York,Binghamton University,7477,7261,0.01466,9648,0.775
+2022,United States,New York,Hudson Falls,7457,7427,0.00202,4003,1.863
+2022,United States,New York,West Point,7457,7341,0.00784,397,18.803
+2022,United States,New York,New Paltz,7426,7324,0.00692,4215,1.762
+2022,United States,New York,Pelham,7410,7326,0.0057,8938,0.829
+2022,United States,New York,Sound Beach,7376,7416,-0.0027,4506,1.637
+2022,United States,New York,Nyack,7365,7265,0.00684,9565,0.77
+2022,United States,New York,South Hill,7359,7245,0.00781,1248,5.896
+2022,United States,New York,East Hills,7350,7284,0.00451,3232,2.274
+2022,United States,New York,Hewlett,7350,7262,0.00602,8343,0.881
+2022,United States,New York,Northport,7337,7347,-0.00068,3176,2.31
+2022,United States,New York,Canton,7323,7155,0.0116,2015,3.635
+2022,United States,New York,Oakdale,7322,7430,-0.00732,2212,3.31
+2022,United States,New York,Monticello,7263,7173,0.00623,1785,4.069
+2022,United States,New York,Tuckahoe,7204,7084,0.0084,12047,0.598
+2022,United States,New York,Scotia,7180,7272,-0.00637,4269,1.682
+2022,United States,New York,Herkimer,7132,7234,-0.0071,2756,2.588
+2022,United States,New York,Oyster Bay,7117,7049,0.0048,5631,1.264
+2022,United States,New York,Manorhaven,7036,6956,0.00572,15099,0.466
+2022,United States,New York,Norwich,7023,7051,-0.00199,3306,2.124
+2022,United States,New York,University at Buffalo,6944,6798,0.01062,5144,1.35
+2022,United States,New York,East Shoreham,6877,6841,0.00262,1276,5.39
+2022,United States,New York,Lawrence,6875,6809,0.00482,1845,3.726
+2022,United States,New York,Brockport,6852,7104,-0.01806,3152,2.174
+2022,United States,New York,Walden,6786,6818,-0.00235,3448,1.968
+2022,United States,New York,Larchmont,6784,6630,0.01148,6299,1.077
+2022,United States,New York,Roslyn Heights,6781,6747,0.00251,4594,1.476
+2022,United States,New York,Bayville,6764,6748,0.00118,4649,1.455
+2022,United States,New York,North Syracuse,6727,6739,-0.00089,3436,1.958
+2022,United States,New York,Bronxville,6722,6656,0.00493,6988,0.962
+2022,United States,New York,Irvington,6698,6652,0.00345,2415,2.773
+2022,United States,New York,Southport,6690,6782,-0.00683,1049,6.376
+2022,United States,New York,Tappan,6685,6673,0.0009,2425,2.757
+2022,United States,New York,Solvay,6657,6645,0.0009,4025,1.654
+2022,United States,New York,North Patchogue,6651,6751,-0.00746,3371,1.973
+2022,United States,New York,East Farmingdale,6643,6617,0.00196,1160,5.725
+2022,United States,New York,Warwick,6636,6652,-0.0012,2744,2.418
+2022,United States,New York,Horseheads,6634,6606,0.00211,1706,3.888
+2022,United States,New York,East Greenbush,6622,6266,0.02762,2486,2.664
+2022,United States,New York,Old Bethpage,6579,6403,0.01356,1573,4.182
+2022,United States,New York,Highland,6533,6385,0.01146,1394,4.686
+2022,United States,New York,South Valley Stream,6470,6386,0.00653,7437,0.87
+2022,United States,New York,East Rochester,6284,6334,-0.00396,4743,1.325
+2022,United States,New York,Mattydale,6266,6296,-0.00239,3264,1.92
+2022,United States,New York,Wappingers Falls,6219,6103,0.00941,5548,1.121
+2022,United States,New York,Wesley Hills,6214,6116,0.00795,1853,3.353
+2022,United States,New York,Lakeview,6169,6077,0.00751,6163,1.001
+2022,United States,New York,Southold,6098,6040,0.00478,583,10.465
+2022,United States,New York,East Moriches,6086,5946,0.01164,1108,5.495
+2022,United States,New York,Hilton,6055,6027,0.00232,3390,1.786
+2022,United States,New York,Medina,6043,6047,-0.00033,1832,3.299
+2022,United States,New York,Hampton Manor,6025,5423,0.05259,9655,0.624
+2022,United States,New York,Yaphank,5980,5974,0.0005,438,13.644
+2022,United States,New York,Country Knolls,5973,5349,0.05511,3776,1.582
+2022,United States,New York,Salamanca,5951,5929,0.00185,993,5.994
+2022,United States,New York,East Aurora,5950,5998,-0.00402,2370,2.511
+2022,United States,New York,Harris Hill,5905,5839,0.00562,1462,4.04
+2022,United States,New York,Centerport,5884,5822,0.0053,2778,2.118
+2022,United States,New York,Lake Mohegan,5874,5896,-0.00187,2042,2.876
+2022,United States,New York,Goshen,5841,5777,0.00551,1758,3.322
+2022,United States,New York,Calverton,5818,5934,-0.00987,207,28.044
+2022,United States,New York,Pelham Manor,5806,5752,0.00467,4323,1.343
+2022,United States,New York,Kings Point,5741,5619,0.01074,1709,3.359
+2022,United States,New York,Hudson,5730,5894,-0.01411,2655,2.158
+2022,United States,New York,East Quogue,5717,5557,0.01419,650,8.797
+2022,United States,New York,Webster,5701,5651,0.0044,2588,2.203
+2022,United States,New York,North Sea,5661,5461,0.01798,512,11.051
+2022,United States,New York,Kaser,5645,5491,0.01383,32820,0.172
+2022,United States,New York,East Hampton North,5625,5377,0.02254,998,5.639
+2022,United States,New York,Big Flats,5611,5555,0.00502,344,16.3
+2022,United States,New York,Washingtonville,5609,5657,-0.00426,2210,2.538
+2022,United States,New York,Albion,5553,5637,-0.00751,1902,2.92
+2022,United States,New York,North Hills,5542,5464,0.00709,2009,2.758
+2022,United States,New York,Fairport,5531,5501,0.00272,3501,1.58
+2022,United States,New York,New Hempstead,5529,5463,0.006,1945,2.842
+2022,United States,New York,Bath,5527,5571,-0.00396,1742,3.172
+2022,United States,New York,Blauvelt,5520,5548,-0.00253,1226,4.502
+2022,United States,New York,Fairview,5467,5475,-0.00073,1569,3.484
+2022,United States,New York,Williamsville,5447,5423,0.00221,4330,1.258
+2022,United States,New York,Malone,5397,5483,-0.0079,1730,3.119
+2022,United States,New York,Elmsford,5355,5239,0.01095,5184,1.033
+2022,United States,New York,West Hills,5343,5385,-0.00391,1085,4.924
+2022,United States,New York,Islip Terrace,5309,5323,-0.00132,3956,1.342
+2022,United States,New York,Thiells,5282,5240,0.00399,2864,1.844
+2022,United States,New York,Blue Point,5232,5156,0.00732,2903,1.802
+2022,United States,New York,Albertson,5228,5220,0.00077,7700,0.679
+2022,United States,New York,Flanders,5224,5098,0.01221,454,11.514
+2022,United States,New York,Ardsley,5205,5079,0.01225,3934,1.323
+2022,United States,New York,Mechanicville,5157,5163,-0.00058,6132,0.841
+2022,United States,New York,Wheatley Heights,5142,5140,0.00019,3910,1.315
+2022,United States,New York,Westvale,5116,5090,0.00255,3751,1.364
+2022,United States,New York,Hamlin,5109,5177,-0.00661,665,7.682
+2022,United States,New York,Sea Cliff,5076,5062,0.00138,4552,1.115
+2022,United States,New York,Searingtown,5070,5044,0.00257,5457,0.929
+2022,United States,New York,Ballston Spa,5051,5111,-0.0059,3155,1.601
+2022,United States,New York,Firthcliffe,5036,5022,0.00139,1698,2.965
+2022,United States,New York,Penn Yan,5036,5056,-0.00198,2098,2.4
+2022,United States,New York,Carle Place,5009,5005,0.0004,5357,0.935
+2022,United States,New York,Island Park,4982,4928,0.00545,11196,0.445
+2022,United States,New York,Milton,4979,4663,0.03277,3348,1.487
+2022,United States,New York,Gates,4966,4956,0.00101,2509,1.979
+2022,United States,New York,Northwest Harbor,4901,4637,0.02768,339,14.473
+2022,United States,New York,Glen Head,4865,4837,0.00289,2961,1.643
+2022,United States,New York,Chittenango,4860,4896,-0.00369,1957,2.484
+2022,United States,New York,West Sayville,4844,4872,-0.00288,2524,1.919
+2022,United States,New York,Grandyle Village,4841,4805,0.00373,2574,1.881
+2022,United States,New York,Southampton,4838,4550,0.03068,717,6.745
+2022,United States,New York,West Elmira,4826,4850,-0.00248,1589,3.038
+2022,United States,New York,Flower Hill,4820,4794,0.0027,2981,1.617
+2022,United States,New York,Saranac Lake,4783,4887,-0.01075,1721,2.779
+2022,United States,New York,Clarkson,4762,4694,0.00719,523,9.109
+2022,United States,New York,Liberty,4762,4700,0.00655,1817,2.621
+2022,United States,New York,Waterloo,4738,4810,-0.00754,2197,2.157
+2022,United States,New York,Menands,4666,4554,0.01215,1526,3.058
+2022,United States,New York,Hawthorne,4658,4646,0.00129,4242,1.098
+2022,United States,New York,Manlius,4654,4662,-0.00086,2583,1.802
+2022,United States,New York,West Bay Shore,4621,4625,-0.00043,2113,2.187
+2022,United States,New York,Heritage Hills,4619,4511,0.01183,2478,1.864
+2022,United States,New York,Gardnertown,4576,4542,0.00373,948,4.826
+2022,United States,New York,Wellsville,4569,4587,-0.00197,1885,2.424
+2022,United States,New York,Orangeburg,4565,4565,0.0,1488,3.068
+2022,United States,New York,Little Falls,4537,4605,-0.00744,1182,3.838
+2022,United States,New York,Armonk,4527,4495,0.00355,760,5.959
+2022,United States,New York,Montauk,4516,4318,0.02241,258,17.479
+2022,United States,New York,Canastota,4506,4556,-0.00552,1349,3.34
+2022,United States,New York,Montebello,4503,4507,-0.00044,1043,4.318
+2022,United States,New York,Noyack,4477,4325,0.01727,533,8.404
+2022,United States,New York,Galeville,4454,4482,-0.00313,3866,1.152
+2022,United States,New York,Herricks,4418,4398,0.00227,7710,0.573
+2022,United States,New York,Lyncourt,4402,4376,0.00296,3541,1.243
+2022,United States,New York,University Gardens,4384,4358,0.00297,8335,0.526
+2022,United States,New York,Dansville,4375,4433,-0.00658,1678,2.608
+2022,United States,New York,Waverly,4359,4373,-0.0016,1911,2.281
+2022,United States,New York,Mattituck,4342,4322,0.00231,483,8.997
+2022,United States,New York,North Great River,4318,4266,0.00606,1854,2.329
+2022,United States,New York,Haviland,4282,4174,0.01277,1113,3.847
+2022,United States,New York,Le Roy,4282,4300,-0.0021,1592,2.69
+2022,United States,New York,Bardonia,4277,4249,0.00328,1669,2.562
+2022,United States,New York,Gang Mills,4277,4261,0.00187,977,4.376
+2022,United States,New York,Spackenkill,4243,4223,0.00236,2390,1.775
+2022,United States,New York,Old Westbury,4213,4289,-0.00894,491,8.577
+2022,United States,New York,Springville,4211,4225,-0.00166,1144,3.68
+2022,United States,New York,Wynantskill,4204,4050,0.01866,1719,2.446
+2022,United States,New York,Fayetteville,4195,4225,-0.00356,2404,1.745
+2022,United States,New York,Cayuga Heights,4190,4114,0.00915,2371,1.767
+2022,United States,New York,Ellenville,4173,4167,0.00072,480,8.693
+2022,United States,New York,Walton Park,4155,3907,0.03076,1784,2.329
+2022,United States,New York,Garden City South,4139,4119,0.00242,10220,0.405
+2022,United States,New York,South Blooming Grove,4121,3973,0.01829,882,4.67
+2022,United States,New York,Hamilton,4081,4107,-0.00318,1636,2.494
+2022,United States,New York,Cobleskill,4073,4173,-0.01213,1143,3.564
+2022,United States,New York,Thornwood,4000,3960,0.00503,3578,1.118
+2022,United States,New York,Chester,3997,3993,0.0005,1861,2.148
+2022,United States,New York,Alfred,3996,4026,-0.00374,3358,1.19
+2022,United States,New York,Glenwood Landing,3982,3948,0.00429,4092,0.973
+2022,United States,New York,Gordon Heights,3969,3981,-0.00151,2329,1.704
+2022,United States,New York,Pomona,3968,3824,0.01848,1655,2.397
+2022,United States,New York,Saugerties,3885,3899,-0.0018,2178,1.784
+2022,United States,New York,Brewerton,3883,3907,-0.00308,1225,3.17
+2022,United States,New York,Elmira Heights,3880,3916,-0.00462,3386,1.146
+2022,United States,New York,Red Oaks Mill,3850,3810,0.00522,1692,2.276
+2022,United States,New York,Montgomery,3838,3834,0.00052,2730,1.406
+2022,United States,New York,Village Green,3822,3834,-0.00157,3312,1.154
+2022,United States,New York,Sloan,3797,3775,0.00291,4868,0.78
+2022,United States,New York,South Glens Falls,3790,3744,0.00611,2791,1.358
+2022,United States,New York,Putnam Lake,3762,3776,-0.00186,979,3.841
+2022,United States,New York,Westhampton,3729,3621,0.01469,295,12.66
+2022,United States,New York,Marlboro,3705,3699,0.00081,831,4.456
+2022,United States,New York,Port Ewen,3704,3678,0.00352,1877,1.973
+2022,United States,New York,Spencerport,3701,3685,0.00217,2678,1.382
+2022,United States,New York,Minoa,3699,3657,0.00571,2726,1.357
+2022,United States,New York,West Nyack,3691,3649,0.00572,1261,2.928
+2022,United States,New York,Warsaw,3680,3646,0.00464,896,4.106
+2022,United States,New York,Catskill,3677,3745,-0.00916,1613,2.28
+2022,United States,New York,Lansing,3672,3648,0.00328,797,4.61
+2022,United States,New York,Manhasset Hills,3661,3649,0.00164,6195,0.591
+2022,United States,New York,Sidney,3657,3697,-0.00544,1537,2.38
+2022,United States,New York,Highland Falls,3640,3684,-0.00601,3327,1.094
+2022,United States,New York,Newfane,3630,3662,-0.00439,685,5.303
+2022,United States,New York,Islandia,3613,3567,0.00641,1632,2.214
+2022,United States,New York,Owego,3606,3654,-0.00661,1415,2.548
+2022,United States,New York,Locust Valley,3603,3571,0.00446,3972,0.907
+2022,United States,New York,Calcium,3589,3573,0.00223,642,5.594
+2022,United States,New York,Whitesboro,3580,3612,-0.00445,3410,1.05
+2022,United States,New York,Lloyd Harbor,3553,3571,-0.00253,380,9.358
+2022,United States,New York,Muttontown,3516,3512,0.00057,580,6.057
+2022,United States,New York,Perry,3508,3536,-0.00398,1501,2.337
+2022,United States,New York,Brinckerhoff,3473,3377,0.01401,3101,1.12
+2022,United States,New York,Cutchogue,3455,3437,0.00261,355,9.726
+2022,United States,New York,Gouverneur,3442,3526,-0.01206,1571,2.191
+2022,United States,New York,South Hempstead,3438,3406,0.00468,5948,0.578
+2022,United States,New York,SUNY Oswego,3407,3451,-0.00642,10110,0.337
+2022,United States,New York,Avon,3399,3399,0.0,1082,3.142
+2022,United States,New York,Lake Erie Beach,3387,3467,-0.01167,886,3.822
+2022,United States,New York,Vails Gate,3368,3368,0.0,3267,1.031
+2022,United States,New York,East Ithaca,3363,3175,0.02875,1941,1.733
+2022,United States,New York,Hurley,3324,3346,-0.0033,606,5.487
+2022,United States,New York,Eden,3312,3346,-0.00511,592,5.594
+2022,United States,New York,Brookhaven,3306,3330,-0.00362,570,5.803
+2022,United States,New York,Bedford Hills,3287,3239,0.00736,3264,1.007
+2022,United States,New York,Ravena,3271,3271,0.0,2228,1.468
+2022,United States,New York,Palmyra,3259,3305,-0.00701,2419,1.347
+2022,United States,New York,Fairview,3241,3217,0.00372,7572,0.428
+2022,United States,New York,Lowville,3232,3272,-0.00615,1691,1.911
+2022,United States,New York,New York Mills,3228,3244,-0.00247,2736,1.18
+2022,United States,New York,Ticonderoga,3224,3250,-0.00402,755,4.272
+2022,United States,New York,Valhalla,3223,3213,0.00155,3916,0.823
+2022,United States,New York,Tupper Lake,3206,3282,-0.01171,1533,2.091
+2022,United States,New York,Remsenburg-Speonk,3204,3110,0.01489,890,3.599
+2022,United States,New York,Balmville,3201,3197,0.00063,1512,2.117
+2022,United States,New York,Brightwaters,3197,3181,0.00251,3310,0.966
+2022,United States,New York,Homer,3194,3210,-0.0025,1659,1.925
+2022,United States,New York,Bridgehampton,3193,2953,0.03905,245,13.014
+2022,United States,New York,Maybrook,3188,3150,0.006,2355,1.354
+2022,United States,New York,Port Washington North,3162,3160,0.00032,6560,0.482
+2022,United States,New York,Hoosick Falls,3160,3216,-0.00878,1977,1.598
+2022,United States,New York,Dannemora,3157,3287,-0.02017,2616,1.207
+2022,United States,New York,Carthage,3134,3236,-0.01601,1292,2.425
+2022,United States,New York,Wanakah,3125,3137,-0.00192,2596,1.204
+2022,United States,New York,Cornwall-on-Hudson,3087,3075,0.00195,1554,1.987
+2022,United States,New York,Orchard Park,3080,3108,-0.00452,2293,1.343
+2022,United States,New York,Sherrill,3079,3077,0.00032,1332,2.311
+2022,United States,New York,East Syracuse,3076,3078,-0.00032,1898,1.621
+2022,United States,New York,Moriches,3064,3026,0.00624,1476,2.076
+2022,United States,New York,Fort Edward,3054,3108,-0.00876,1733,1.762
+2022,United States,New York,Great Neck Estates,3036,2990,0.00763,3963,0.766
+2022,United States,New York,Sloatsburg,3036,3036,0.0,1228,2.473
+2022,United States,New York,Warrensburg,3033,3045,-0.00197,449,6.756
+2022,United States,New York,Roslyn,3032,2988,0.00731,4693,0.646
+2022,United States,New York,Lakewood,3002,3002,0.0,1519,1.976
+2022,United States,New York,Green Island,2996,2934,0.01046,4011,0.747
+2022,United States,New York,Hartsdale,2993,3377,-0.06028,3344,0.895
+2022,United States,New York,Baiting Hollow,2987,2763,0.03896,933,3.203
+2022,United States,New York,Greenwood Lake,2962,2994,-0.00537,1464,2.023
+2022,United States,New York,Apalachin,2932,2632,0.05392,2010,1.459
+2022,United States,New York,Elma Center,2907,2851,0.00973,463,6.278
+2022,United States,New York,Florida,2900,2888,0.00207,1288,2.251
+2022,United States,New York,Akron,2892,2888,0.00069,1437,2.012
+2022,United States,New York,Sag Harbor,2892,2772,0.02119,1603,1.804
+2022,United States,New York,Montrose,2888,2862,0.00452,1789,1.614
+2022,United States,New York,Chenango Bridge,2884,2884,0.0,1178,2.449
+2022,United States,New York,Mount Morris,2880,2898,-0.00312,1406,2.048
+2022,United States,New York,Crown Heights,2878,2872,0.00104,3410,0.844
+2022,United States,New York,Riverside,2876,2882,-0.00104,1059,2.716
+2022,United States,New York,Voorheesville,2851,2841,0.00176,1333,2.139
+2022,United States,New York,Westfield,2848,2910,-0.01077,745,3.822
+2022,United States,New York,Walton,2845,2885,-0.00698,1845,1.542
+2022,United States,New York,Brookville,2833,2939,-0.01836,718,3.947
