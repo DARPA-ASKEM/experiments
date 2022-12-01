@@ -1,0 +1,78 @@
+{
+    "initials": {
+        "susceptible": {
+            "name": "susceptible",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000991:susceptible"
+            },
+            "context": {},
+            "value": 14367982.0
+        },
+        "exposed": {
+            "name": "exposed",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000991:exposed"
+            },
+            "context": {
+                "property": "ido:0000597"
+            },
+            "value": 441.0
+        },
+        "symptomatic": {
+            "name": "symptomatic",
+            "identifiers": {
+                "ncit": "C171133",
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000991:symptomatic"
+            },
+            "context": {
+                "property": "ido:0000573"
+            },
+            "value": 212.0
+        },
+        "asymptomatic": {
+            "name": "asymptomatic",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000991:asymptomatic"
+            },
+            "context": {
+                "property": "ido:0000569"
+            },
+            "value": 188.0
+        },
+        "detected": {
+            "name": "detected",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000991:detected"
+            },
+            "context": {
+                "property": "ncit:C16210"
+            },
+            "value": 1.0
+        },
+        "recovered": {
+            "name": "recovered",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000991:recovered"
+            },
+            "context": {
+                "property": "ido:0000621"
+            },
+            "value": 0.0
+        },
+        "deceased": {
+            "name": "deceased",
+            "identifiers": {
+                "ncit": "C28554",
+                "biomodels.species": "BIOMD0000000991:deceased"
+            },
+            "context": {},
+            "value": 0.0
+        }
+    }
+}

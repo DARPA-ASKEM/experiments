@@ -1,0 +1,43 @@
+{
+    "initials": {
+        "Susceptible": {
+            "name": "Susceptible",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000978:Susceptible"
+            },
+            "context": {},
+            "value": 36196938.0
+        },
+        "Exposed": {
+            "name": "Exposed",
+            "identifiers": {
+                "ido": "0000597",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000978:Exposed"
+            },
+            "context": {},
+            "value": 0.0
+        },
+        "Infected": {
+            "name": "Infected",
+            "identifiers": {
+                "ido": "0000511",
+                "ncit": "C171133",
+                "biomodels.species": "BIOMD0000000978:Infected"
+            },
+            "context": {},
+            "value": 2.0
+        },
+        "Recovered": {
+            "name": "Recovered",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000978:Recovered"
+            },
+            "context": {
+                "property": "ido:0000621"
+            },
+            "value": 0.0
+        }
+    }
+}

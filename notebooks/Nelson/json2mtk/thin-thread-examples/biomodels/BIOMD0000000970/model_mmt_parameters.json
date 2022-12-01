@@ -1,11 +1,46 @@
 {
     "parameters": {
-        "r_1": 6.0,
-        "r_2": 18.0,
-        "beta_1": 0.04,
-        "beta_2": 0.02,
-        "alpha": 0.14,
-        "gamma": 0.048,
-        "Wuhan": 1.0
+        "r_1": {
+            "name": "r_1",
+            "identifiers": {},
+            "context": {},
+            "value": 6.0
+        },
+        "r_2": {
+            "name": "r_2",
+            "identifiers": {},
+            "context": {},
+            "value": 18.0
+        },
+        "beta_1": {
+            "name": "beta_1",
+            "identifiers": {},
+            "context": {},
+            "value": 0.04
+        },
+        "beta_2": {
+            "name": "beta_2",
+            "identifiers": {},
+            "context": {},
+            "value": 0.02
+        },
+        "alpha": {
+            "name": "alpha",
+            "identifiers": {},
+            "context": {},
+            "value": 0.14
+        },
+        "gamma": {
+            "name": "gamma",
+            "identifiers": {},
+            "context": {},
+            "value": 0.048
+        },
+        "Wuhan": {
+            "name": "Wuhan",
+            "identifiers": {},
+            "context": {},
+            "value": 1.0
+        }
     }
 }

@@ -3,42 +3,50 @@
         {
             "sname": "Susceptible",
             "mira_ids": "[('identity', 'ido:0000514')]",
-            "mira_context": "[('property', 'ido:0000468')]"
+            "mira_context": "[('property', 'ido:0000468')]",
+            "mira_initial_value": "0.9999963"
         },
         {
             "sname": "Infected",
             "mira_ids": "[('identity', 'ido:0000511')]",
-            "mira_context": "[('property', 'ncit:C113725')]"
+            "mira_context": "[('property', 'ncit:C113725')]",
+            "mira_initial_value": "3.33333333e-06"
         },
         {
             "sname": "Diagnosed",
             "mira_ids": "[('identity', 'ido:0000511')]",
-            "mira_context": "[('property', 'ncit:C15220')]"
+            "mira_context": "[('property', 'ncit:C15220')]",
+            "mira_initial_value": "3.33333333e-07"
         },
         {
             "sname": "Ailing",
             "mira_ids": "[('identity', 'ido:0000573')]",
-            "mira_context": "[('property', 'ncit:C113725')]"
+            "mira_context": "[('property', 'ncit:C113725')]",
+            "mira_initial_value": "1.66666666e-08"
         },
         {
             "sname": "Recognized",
             "mira_ids": "[('identity', 'ido:0000511')]",
-            "mira_context": "[('property', 'ncit:C25587')]"
+            "mira_context": "[('property', 'ncit:C25587')]",
+            "mira_initial_value": "3.33333333e-08"
         },
         {
             "sname": "Healed",
             "mira_ids": "[]",
-            "mira_context": "[('property', 'ido:0000621')]"
+            "mira_context": "[('property', 'ido:0000621')]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Threatened",
             "mira_ids": "[('identity', 'ido:0000573')]",
-            "mira_context": "[('property', 'ncit:C15220')]"
+            "mira_context": "[('property', 'ncit:C15220')]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Extinct",
             "mira_ids": "[('identity', 'ncit:C28554')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         }
     ],
     "T": [

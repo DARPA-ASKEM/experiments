@@ -3,42 +3,50 @@
         {
             "sname": "Susceptible",
             "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "43994.0"
         },
         {
             "sname": "Exposed",
             "mira_ids": "[('identity', 'ido:0000597'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Infectious",
             "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171549')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "1.0"
         },
         {
             "sname": "Hospitalised",
             "mira_ids": "[('identity', 'ncit:C25179')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Super_spreaders",
             "mira_ids": "[('identity', 'ido:0000463'), ('identity', 'ncit:C49508')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "5.0"
         },
         {
             "sname": "Asymptomatic",
             "mira_ids": "[('identity', 'ido:0000569'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Fatalities",
             "mira_ids": "[('identity', 'ncit:C28554')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "Recovered",
             "mira_ids": "[('identity', 'ncit:C171133')]",
-            "mira_context": "[]"
+            "mira_context": "[]",
+            "mira_initial_value": "0.0"
         }
     ],
     "T": [
