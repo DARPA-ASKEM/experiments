@@ -1,0 +1,224 @@
+{
+	"id": "419e141a-2ba9-4fc8-91ba-27698a12a6e6",
+	"name": "CDC COVID-19 Vaccination and Case Trends by Age Group",
+	"family_name": null,
+	"description": "COVID-19 Vaccination and Case Trends by Age Group",
+	"created_at": 1669863073452,
+	"category": null,
+	"domains": [
+		"Life Sciences",
+		"Demographics"
+	],
+	"maintainer": {
+		"name": "Brandon Rose",
+		"email": "brandon@jataware.com",
+		"organization": "Centers for Disease Control and Prevention",
+		"website": "https://data.cdc.gov/Vaccinations/Archive-COVID-19-Vaccination-and-Case-Trends-by-Ag/gxj9-t96f/data"
+	},
+	"data_paths": [
+		"file:///datasets/419e141a-2ba9-4fc8-91ba-27698a12a6e6/419e141a-2ba9-4fc8-91ba-27698a12a6e6.parquet.gzip"
+	],
+	"outputs": [
+		{
+			"name": "7-day_avg_group_cases_per_100k",
+			"display_name": "",
+			"description": "7 day average cases per 100,000 people by age group",
+			"type": "float",
+			"unit": "cases",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Administered_Dose1_pct_agegroup",
+			"display_name": "",
+			"description": "Percent of age group receiving 1 dose of COVID-19 vaccine",
+			"type": "float",
+			"unit": "percent",
+			"unit_description": "",
+			"primaryOntologyId": "vo:0004908",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Series_Complete_Pop_pct_agegroup",
+			"display_name": "",
+			"description": "Completion of COVID-19 vaccine series by age group as a percentage",
+			"type": "float",
+			"unit": "percent",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		}
+	],
+	"qualifier_outputs": [
+		{
+			"name": "AgeGroupVacc",
+			"display_name": "",
+			"description": "Age group",
+			"type": "str",
+			"unit": "na",
+			"unit_description": "",
+			"related_features": [
+				"7-day_avg_group_cases_per_100k",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Pop_pct_agegroup"
+			],
+			"ontologies": {}
+		},
+		{
+			"name": "Date Administered",
+			"display_name": "",
+			"description": "Date",
+			"type": "datetime",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"7-day_avg_group_cases_per_100k",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Pop_pct_agegroup",
+				"AgeGroupVacc"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "country",
+			"display_name": "country",
+			"description": "location",
+			"type": "country",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"7-day_avg_group_cases_per_100k",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Pop_pct_agegroup",
+				"AgeGroupVacc"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin1",
+			"display_name": "admin1",
+			"description": "location",
+			"type": "admin1",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"7-day_avg_group_cases_per_100k",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Pop_pct_agegroup",
+				"AgeGroupVacc"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin2",
+			"display_name": "admin2",
+			"description": "location",
+			"type": "admin2",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"7-day_avg_group_cases_per_100k",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Pop_pct_agegroup",
+				"AgeGroupVacc"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin3",
+			"display_name": "admin3",
+			"description": "location",
+			"type": "admin3",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"7-day_avg_group_cases_per_100k",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Pop_pct_agegroup",
+				"AgeGroupVacc"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lat",
+			"display_name": "lat",
+			"description": "location",
+			"type": "lat",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"7-day_avg_group_cases_per_100k",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Pop_pct_agegroup",
+				"AgeGroupVacc"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lng",
+			"display_name": "lng",
+			"description": "location",
+			"type": "lng",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"7-day_avg_group_cases_per_100k",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Pop_pct_agegroup",
+				"AgeGroupVacc"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		}
+	],
+	"tags": [],
+	"geography": {
+		"country": [
+			"United States"
+		],
+		"admin1": [],
+		"admin2": [],
+		"admin3": []
+	},
+	"period": {
+		"gte": 1665446400000,
+		"lte": 1607904000000
+	},
+	"deprecated": false,
+	"data_sensitivity": "",
+	"data_quality": "",
+	"published": true,
+	"temporal_resolution": "annual",
+	"fileData": {
+		"raw": {
+			"uploaded": true,
+			"url": "archive__covid-19_vaccination_and_case_trends_by_age_group__united_states.csv",
+			"rawFileName": "raw_data.csv"
+		}
+	}
+}

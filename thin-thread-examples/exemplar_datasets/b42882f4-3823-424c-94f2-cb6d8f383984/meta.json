@@ -1,0 +1,380 @@
+{
+	"id": "b42882f4-3823-424c-94f2-cb6d8f383984",
+	"name": "New York State Daily Hospitalization Summary",
+	"family_name": null,
+	"description": "Daily hospitalization summary by region. \n\nNew admissions and total hospitalization data come from the Health Electronic Response Data System (HERDS). Hospitals are required to complete this survey Monday through Friday and data reflects information reported by hospitals through the survey each day. These data include NYS resident and non-NYS resident hospitalizations.\n\nHealth care facilities pause COVID-19 data submission through the Health Electronic Response Data System (HERDS) during weekends and certain holidays. Therefore, the dashboard will show no data for those dates. The first reporting date thereafter will contain those data and estimated 7-day averages are provided for all days.",
+	"created_at": 1669862228317,
+	"category": null,
+	"domains": [
+		"Life Sciences",
+		"Demographics"
+	],
+	"maintainer": {
+		"name": "Brandon Rose",
+		"email": "brandon@jataware.com",
+		"organization": "New York State",
+		"website": "https://coronavirus.health.ny.gov/daily-hospitalization-summary"
+	},
+	"data_paths": [
+		"file:///datasets/b42882f4-3823-424c-94f2-cb6d8f383984/b42882f4-3823-424c-94f2-cb6d8f383984.parquet.gzip"
+	],
+	"outputs": [
+		{
+			"name": "Patients Currently Hospitalized",
+			"display_name": "",
+			"description": "Patients Currently Hospitalized",
+			"type": "int",
+			"unit": "People",
+			"unit_description": "",
+			"primaryOntologyId": "ncit:C25179",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Patients Admitted Due to COVID",
+			"display_name": "",
+			"description": "Patients Admitted Due to COVID",
+			"type": "int",
+			"unit": "people",
+			"unit_description": "",
+			"primaryOntologyId": "ncit:C173779",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Cumulative COVID-19 Fatalities to Date",
+			"display_name": "",
+			"description": "Cumulative COVID-19 Fatalities to Date",
+			"type": "int",
+			"unit": "deaths",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Total Staffed Beds",
+			"display_name": "",
+			"description": "Total staffed beds",
+			"type": "int",
+			"unit": "bed",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Total Staffed Beds Currently Available",
+			"display_name": "",
+			"description": "Total Staffed Beds Currently Available",
+			"type": "int",
+			"unit": "beds",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Total Staffed ICU Beds",
+			"display_name": "",
+			"description": "Total Staffed ICU Beds",
+			"type": "int",
+			"unit": "ICU beds",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Total Staffed ICU Beds Currently Available",
+			"display_name": "",
+			"description": "Total Staffed ICU Beds Currently Available",
+			"type": "int",
+			"unit": "ICU beds",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		}
+	],
+	"qualifier_outputs": [
+		{
+			"name": "Facility Name",
+			"display_name": "",
+			"description": "facility name",
+			"type": "str",
+			"unit": "na",
+			"unit_description": "",
+			"related_features": [
+				"Patients Currently Hospitalized",
+				"Patients Admitted Due to COVID",
+				"Cumulative COVID-19 Fatalities to Date",
+				"Total Staffed Beds",
+				"Total Staffed Beds Currently Available",
+				"Total Staffed ICU Beds",
+				"Total Staffed ICU Beds Currently Available"
+			],
+			"ontologies": {}
+		},
+		{
+			"name": "As of Date",
+			"display_name": "",
+			"description": "Date",
+			"type": "datetime",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Patients Currently Hospitalized",
+				"Patients Admitted Due to COVID",
+				"Cumulative COVID-19 Fatalities to Date",
+				"Total Staffed Beds",
+				"Total Staffed Beds Currently Available",
+				"Total Staffed ICU Beds",
+				"Total Staffed ICU Beds Currently Available",
+				"Facility Name"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "country",
+			"display_name": "country",
+			"description": "location",
+			"type": "country",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Patients Currently Hospitalized",
+				"Patients Admitted Due to COVID",
+				"Cumulative COVID-19 Fatalities to Date",
+				"Total Staffed Beds",
+				"Total Staffed Beds Currently Available",
+				"Total Staffed ICU Beds",
+				"Total Staffed ICU Beds Currently Available",
+				"Facility Name"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin1",
+			"display_name": "admin1",
+			"description": "location",
+			"type": "admin1",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Patients Currently Hospitalized",
+				"Patients Admitted Due to COVID",
+				"Cumulative COVID-19 Fatalities to Date",
+				"Total Staffed Beds",
+				"Total Staffed Beds Currently Available",
+				"Total Staffed ICU Beds",
+				"Total Staffed ICU Beds Currently Available",
+				"Facility Name"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin2",
+			"display_name": "admin2",
+			"description": "location",
+			"type": "admin2",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Patients Currently Hospitalized",
+				"Patients Admitted Due to COVID",
+				"Cumulative COVID-19 Fatalities to Date",
+				"Total Staffed Beds",
+				"Total Staffed Beds Currently Available",
+				"Total Staffed ICU Beds",
+				"Total Staffed ICU Beds Currently Available",
+				"Facility Name"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin3",
+			"display_name": "admin3",
+			"description": "location",
+			"type": "admin3",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Patients Currently Hospitalized",
+				"Patients Admitted Due to COVID",
+				"Cumulative COVID-19 Fatalities to Date",
+				"Total Staffed Beds",
+				"Total Staffed Beds Currently Available",
+				"Total Staffed ICU Beds",
+				"Total Staffed ICU Beds Currently Available",
+				"Facility Name"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lat",
+			"display_name": "lat",
+			"description": "location",
+			"type": "lat",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Patients Currently Hospitalized",
+				"Patients Admitted Due to COVID",
+				"Cumulative COVID-19 Fatalities to Date",
+				"Total Staffed Beds",
+				"Total Staffed Beds Currently Available",
+				"Total Staffed ICU Beds",
+				"Total Staffed ICU Beds Currently Available",
+				"Facility Name"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lng",
+			"display_name": "lng",
+			"description": "location",
+			"type": "lng",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Patients Currently Hospitalized",
+				"Patients Admitted Due to COVID",
+				"Cumulative COVID-19 Fatalities to Date",
+				"Total Staffed Beds",
+				"Total Staffed Beds Currently Available",
+				"Total Staffed ICU Beds",
+				"Total Staffed ICU Beds Currently Available",
+				"Facility Name"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		}
+	],
+	"tags": [],
+	"geography": {
+		"country": [
+			"United States"
+		],
+		"admin1": [
+			"New York"
+		],
+		"admin2": [
+			"ALBANY",
+			"ALLEGANY",
+			"BROOME",
+			"CATTARAUGUS",
+			"CAYUGA",
+			"CHAUTAUQUA",
+			"CHEMUNG",
+			"CHENANGO",
+			"CLINTON",
+			"COLUMBIA",
+			"CORTLAND",
+			"DELAWARE",
+			"DUTCHESS",
+			"ERIE",
+			"SUFFOLK",
+			"ESSEX",
+			"FRANKLIN",
+			"FULTON",
+			"GENESEE",
+			"HERKIMER",
+			"JEFFERSON",
+			"LEWIS",
+			"LIVINGSTON",
+			"MADISON",
+			"MONROE",
+			"MONTGOMERY",
+			"NASSAU",
+			"NIAGARA",
+			"ONEIDA",
+			"ONONDAGA",
+			"ONTARIO",
+			"ORANGE",
+			"ORLEANS",
+			"OSWEGO",
+			"OTSEGO",
+			"PUTNAM",
+			"RENSSELAER",
+			"ROCKLAND",
+			"ST.LAWRENCE",
+			"SARATOGA",
+			"SCHENECTADY",
+			"SCHUYLER",
+			"STEUBEN",
+			"SULLIVAN",
+			"TOMPKINS",
+			"ULSTER",
+			"WARREN",
+			"WAYNE",
+			"WESTCHESTER",
+			"WYOMING",
+			"YATES",
+			"BRONX",
+			"KINGS",
+			"NEW YORK",
+			"QUEENS",
+			"RICHMOND",
+			"SCHOHARIE"
+		],
+		"admin3": []
+	},
+	"period": {
+		"gte": 1669680000000,
+		"lte": 1585180800000
+	},
+	"deprecated": false,
+	"data_sensitivity": "",
+	"data_quality": "",
+	"published": true,
+	"temporal_resolution": "annual",
+	"fileData": {
+		"raw": {
+			"uploaded": true,
+			"url": "new_york_state_statewide_covid-19_hospitalizations_and_beds.csv",
+			"rawFileName": "raw_data.csv"
+		}
+	}
+}

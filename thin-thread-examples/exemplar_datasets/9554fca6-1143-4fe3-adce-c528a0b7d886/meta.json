@@ -1,0 +1,392 @@
+{
+	"id": "9554fca6-1143-4fe3-adce-c528a0b7d886",
+	"name": "COVID-19 Vaccination Demographics in the United States",
+	"family_name": null,
+	"description": "Overall Demographic Characteristics of People Receiving COVID-19 Vaccinations in the United States at national level. Data represents all vaccine partners including jurisdictional partner clinics, retail pharmacies, long-term care facilities, dialysis centers, Federal Emergency Management Agency and Health Resources and Services Administration partner sites, and federal entity facilities. ",
+	"created_at": 1669863955074,
+	"category": null,
+	"domains": [
+		"Life Sciences",
+		"Demographics"
+	],
+	"maintainer": {
+		"name": "Brandon Rose",
+		"email": "brandon@jataware.com",
+		"organization": "Centers for Disease Control and Prevention",
+		"website": "https://data.cdc.gov/Vaccinations/COVID-19-Vaccination-Demographics-in-the-United-St/km4m-vcsb/data"
+	},
+	"data_paths": [
+		"file:///datasets/9554fca6-1143-4fe3-adce-c528a0b7d886/9554fca6-1143-4fe3-adce-c528a0b7d886.parquet.gzip"
+	],
+	"outputs": [
+		{
+			"name": "Administered_Dose1",
+			"display_name": "",
+			"description": "COVID-19 dose 1 administered",
+			"type": "int",
+			"unit": "dosed people",
+			"unit_description": "",
+			"primaryOntologyId": "vo:0000595",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Administered_Dose1_pct_agegroup",
+			"display_name": "",
+			"description": "COVID-19 vaccine dose 1 administered as percent of age group",
+			"type": "float",
+			"unit": "percent",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Series_Complete_Yes",
+			"display_name": "",
+			"description": "COVID-19 vaccine series complete",
+			"type": "int",
+			"unit": "people",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Series_Complete_Pop_pct_agegroup",
+			"display_name": "",
+			"description": "Series complete as percent of age group",
+			"type": "float",
+			"unit": "percent",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Booster_Doses_Yes",
+			"display_name": "",
+			"description": "Booster doses total for age group",
+			"type": "int",
+			"unit": "people",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Booster_Doses_Vax_pct_agegroup",
+			"display_name": "",
+			"description": "Booster doses as percent of age group",
+			"type": "float",
+			"unit": "percent",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Second_Booster",
+			"display_name": "",
+			"description": "Second booster administered by age group",
+			"type": "int",
+			"unit": "people",
+			"unit_description": "",
+			"primaryOntologyId": "ncit:C28320",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Booster_Doses_Pop_Pct_known",
+			"display_name": "",
+			"description": "Booster doses as percent of known",
+			"type": "int",
+			"unit": "percent",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Bivalent_Booster",
+			"display_name": "",
+			"description": "Bivalent booster administered",
+			"type": "int",
+			"unit": "people",
+			"unit_description": "",
+			"primaryOntologyId": "ncit:C28320",
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		},
+		{
+			"name": "Bivalent_Booster_Pop_Pct_agegroup",
+			"display_name": "",
+			"description": "Bivalent booster as percent of age group",
+			"type": "float",
+			"unit": "percent",
+			"unit_description": "",
+			"primaryOntologyId": null,
+			"is_primary": true,
+			"data_resolution": {
+				"temporal_resolution": "annual",
+				"spatial_resolution": null
+			},
+			"alias": {},
+			"ontologies": {}
+		}
+	],
+	"qualifier_outputs": [
+		{
+			"name": "Demographic_category",
+			"display_name": "",
+			"description": "Demographic category",
+			"type": "str",
+			"unit": "na",
+			"unit_description": "",
+			"related_features": [
+				"Administered_Dose1",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Yes",
+				"Series_Complete_Pop_pct_agegroup",
+				"Booster_Doses_Yes",
+				"Booster_Doses_Vax_pct_agegroup",
+				"Second_Booster",
+				"Booster_Doses_Pop_Pct_known",
+				"Bivalent_Booster",
+				"Bivalent_Booster_Pop_Pct_agegroup"
+			],
+			"ontologies": {}
+		},
+		{
+			"name": "Date",
+			"display_name": "",
+			"description": "date",
+			"type": "datetime",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Administered_Dose1",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Yes",
+				"Series_Complete_Pop_pct_agegroup",
+				"Booster_Doses_Yes",
+				"Booster_Doses_Vax_pct_agegroup",
+				"Second_Booster",
+				"Booster_Doses_Pop_Pct_known",
+				"Bivalent_Booster",
+				"Bivalent_Booster_Pop_Pct_agegroup",
+				"Demographic_category"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "country",
+			"display_name": "country",
+			"description": "location",
+			"type": "country",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Administered_Dose1",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Yes",
+				"Series_Complete_Pop_pct_agegroup",
+				"Booster_Doses_Yes",
+				"Booster_Doses_Vax_pct_agegroup",
+				"Second_Booster",
+				"Booster_Doses_Pop_Pct_known",
+				"Bivalent_Booster",
+				"Bivalent_Booster_Pop_Pct_agegroup",
+				"Demographic_category"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin1",
+			"display_name": "admin1",
+			"description": "location",
+			"type": "admin1",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Administered_Dose1",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Yes",
+				"Series_Complete_Pop_pct_agegroup",
+				"Booster_Doses_Yes",
+				"Booster_Doses_Vax_pct_agegroup",
+				"Second_Booster",
+				"Booster_Doses_Pop_Pct_known",
+				"Bivalent_Booster",
+				"Bivalent_Booster_Pop_Pct_agegroup",
+				"Demographic_category"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin2",
+			"display_name": "admin2",
+			"description": "location",
+			"type": "admin2",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Administered_Dose1",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Yes",
+				"Series_Complete_Pop_pct_agegroup",
+				"Booster_Doses_Yes",
+				"Booster_Doses_Vax_pct_agegroup",
+				"Second_Booster",
+				"Booster_Doses_Pop_Pct_known",
+				"Bivalent_Booster",
+				"Bivalent_Booster_Pop_Pct_agegroup",
+				"Demographic_category"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "admin3",
+			"display_name": "admin3",
+			"description": "location",
+			"type": "admin3",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Administered_Dose1",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Yes",
+				"Series_Complete_Pop_pct_agegroup",
+				"Booster_Doses_Yes",
+				"Booster_Doses_Vax_pct_agegroup",
+				"Second_Booster",
+				"Booster_Doses_Pop_Pct_known",
+				"Bivalent_Booster",
+				"Bivalent_Booster_Pop_Pct_agegroup",
+				"Demographic_category"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lat",
+			"display_name": "lat",
+			"description": "location",
+			"type": "lat",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Administered_Dose1",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Yes",
+				"Series_Complete_Pop_pct_agegroup",
+				"Booster_Doses_Yes",
+				"Booster_Doses_Vax_pct_agegroup",
+				"Second_Booster",
+				"Booster_Doses_Pop_Pct_known",
+				"Bivalent_Booster",
+				"Bivalent_Booster_Pop_Pct_agegroup",
+				"Demographic_category"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		},
+		{
+			"name": "lng",
+			"display_name": "lng",
+			"description": "location",
+			"type": "lng",
+			"unit": null,
+			"unit_description": null,
+			"related_features": [
+				"Administered_Dose1",
+				"Administered_Dose1_pct_agegroup",
+				"Series_Complete_Yes",
+				"Series_Complete_Pop_pct_agegroup",
+				"Booster_Doses_Yes",
+				"Booster_Doses_Vax_pct_agegroup",
+				"Second_Booster",
+				"Booster_Doses_Pop_Pct_known",
+				"Bivalent_Booster",
+				"Bivalent_Booster_Pop_Pct_agegroup",
+				"Demographic_category"
+			],
+			"ontologies": {},
+			"qualifier_role": "breakdown"
+		}
+	],
+	"tags": [],
+	"geography": {
+		"country": [
+			"United States"
+		],
+		"admin1": [],
+		"admin2": [],
+		"admin3": []
+	},
+	"period": {
+		"gte": 1669161600000,
+		"lte": 1607817600000
+	},
+	"deprecated": false,
+	"data_sensitivity": "",
+	"data_quality": "",
+	"published": true,
+	"temporal_resolution": "annual",
+	"fileData": {
+		"raw": {
+			"uploaded": true,
+			"url": "covid-19_vaccination_demographics_in_the_united_states_national.csv",
+			"rawFileName": "raw_data.csv"
+		}
+	}
+}
