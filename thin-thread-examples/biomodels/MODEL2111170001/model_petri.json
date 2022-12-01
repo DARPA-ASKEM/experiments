@@ -3,92 +3,110 @@
         {
             "sname": "A1",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "A2",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "A2+",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "A2-",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "A2+act",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "A2-act",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "AT",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "I_act",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "I",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "F",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "A",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "D",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "T",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "M_act",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "V",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "X",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "A2act",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         },
         {
             "sname": "M",
             "mira_ids": "[]",
-            "mira_context": "[]"
+            "mira_context": "[]", 
+            "mira_initial_value": "0.0"
         }
     ],
     "T": [
