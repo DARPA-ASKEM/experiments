@@ -213,7 +213,8 @@ for i, (__, __, info) in model_list.iterrows():
         models[info] = {}
 
         # SBML XML as pretty string
-        models[info]['SBML'] = etree.tostring(etree.parse(path + '/model_sbml.xml'), pretty_print = True, encoding = str)
+        root, dirs, files = next(os.walk(path + "/src/main"))
+        models[info]['SBML'] = etree.tostring(etree.parse(os.path.join(root, files[0])), pretty_print = True, encoding = str)
 
         # MMT templates JSON
         with open(path + '/model_mmt_templates.json', 'r') as f:
@@ -234,7 +235,6 @@ for i, (__, __, info) in model_list.iterrows():
             # HyperNetX hypergraph
             models[info][f'{rep}_H'] = build_hypergraph(models[info][rep], rep = rep)
         
-
 
 # %%
 # Draw representations
