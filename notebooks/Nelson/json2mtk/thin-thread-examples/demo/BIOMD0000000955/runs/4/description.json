@@ -1,1 +1,3 @@
-"Baseline scenario for Day 22 to 28 of the epidemic; introduction of incomplete lockdown; R0 = 1.60; see Fig. 2."
+{
+    "description": "Baseline scenario for Day 22 to 28 of the epidemic; introduction of incomplete lockdown; R0 = 1.60; see Fig. 2."
+}

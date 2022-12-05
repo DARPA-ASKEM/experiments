@@ -1,1 +1,3 @@
-"Future scenario for Day 50 onwards of the epidemic; the lockdown is strengthened by decreasing the S-I transmission rate `alpha` from 0.210 to 0.105; R0 = 0.50; see Fig. 3c, d."
+{
+    "description": "Future scenario for Day 50 onwards of the epidemic; the lockdown is strengthened by decreasing the S-I transmission rate `alpha` from 0.210 to 0.105; R0 = 0.50; see Fig. 3c, d."
+}
