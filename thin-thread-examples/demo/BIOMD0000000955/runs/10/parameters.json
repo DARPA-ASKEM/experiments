@@ -33,7 +33,7 @@
         "sigma": {
             "name": "sigma",
             "identifiers": {},
-            "value": 0.017,
+            "value": 0.01,
             "context": {}
         },
         "theta": {
@@ -45,37 +45,37 @@
         "kappa": {
             "name": "kappa",
             "identifiers": {},
-            "value": 0.017,
+            "value": 0.02,
             "context": {}
         },
         "xi": {
             "name": "xi",
             "identifiers": {},
-            "value": 0.017,
+            "value": 0.02,
             "context": {}
         },
         "alpha": {
             "name": "alpha",
             "identifiers": {},
-            "value": 0.21,
+            "value": 0.42,
             "context": {}
         },
         "zeta": {
             "name": "zeta",
             "identifiers": {},
-            "value": 0.0034,
+            "value": 0.0025,
             "context": {}
         },
         "eta": {
             "name": "eta",
             "identifiers": {},
-            "value": 0.0034,
+            "value": 0.0025,
             "context": {}
         },
         "rho": {
             "name": "rho",
             "identifiers": {},
-            "value": 0.017,
+            "value": 0.02,
             "context": {}
         },
         "beta": {
@@ -87,7 +87,7 @@
         "epsilon": {
             "name": "epsilon",
             "identifiers": {},
-            "value": 0.143,
+            "value": 0.6,
             "context": {}
         },
         "gamma": {
