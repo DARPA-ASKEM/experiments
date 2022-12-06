@@ -25,7 +25,7 @@
 			"type": "float",
 			"unit": "Percentage share",
 			"unit_description": "",
-			"primaryOntologyId": "cemo:percentage_of_cases",
+			"primaryOntologyId": null,
 			"is_primary": true,
 			"data_resolution": {
 				"temporal_resolution": "weekly",
