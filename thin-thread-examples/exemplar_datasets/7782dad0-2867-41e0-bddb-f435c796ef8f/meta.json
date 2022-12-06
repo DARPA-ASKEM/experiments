@@ -25,7 +25,7 @@
 			"type": "int",
 			"unit": "persons",
 			"unit_description": "persons",
-			"primaryOntologyId": "cemo:daily_cases",
+			"primaryOntologyId": null,
 			"is_primary": true,
 			"data_resolution": {
 				"temporal_resolution": "daily",
