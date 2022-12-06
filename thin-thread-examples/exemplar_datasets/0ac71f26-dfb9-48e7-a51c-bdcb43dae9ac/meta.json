@@ -25,7 +25,7 @@
 			"type": "int",
 			"unit": "People",
 			"unit_description": "",
-			"primaryOntologyId": null,
+			"primaryOntologyId": "covoc:0010003",
 			"is_primary": true,
 			"data_resolution": {
 				"temporal_resolution": "annual",

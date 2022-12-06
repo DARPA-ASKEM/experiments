@@ -25,7 +25,7 @@
 			"type": "float",
 			"unit": "cases",
 			"unit_description": "",
-			"primaryOntologyId": null,
+			"primaryOntologyId": "cemo:cumulative_cases",
 			"is_primary": true,
 			"data_resolution": {
 				"temporal_resolution": "annual",
@@ -41,7 +41,7 @@
 			"type": "float",
 			"unit": "people",
 			"unit_description": "",
-			"primaryOntologyId": null,
+			"primaryOntologyId": "cemo:number_of_deaths_new_this_week",
 			"is_primary": true,
 			"data_resolution": {
 				"temporal_resolution": "annual",
