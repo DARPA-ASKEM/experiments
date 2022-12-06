@@ -9,7 +9,7 @@
         "nu": {
             "name": "nu",
             "identifiers": {},
-            "value": 0.015,
+            "value": 0.027,
             "context": {}
         },
         "tau": {
@@ -21,19 +21,19 @@
         "delta": {
             "name": "delta",
             "identifiers": {},
-            "value": 0.005,
+            "value": 0.0011,
             "context": {}
         },
         "mu": {
             "name": "mu",
             "identifiers": {},
-            "value": 0.008,
+            "value": 0.017,
             "context": {}
         },
         "sigma": {
             "name": "sigma",
             "identifiers": {},
-            "value": 0.01,
+            "value": 0.017,
             "context": {}
         },
         "theta": {
@@ -45,55 +45,55 @@
         "kappa": {
             "name": "kappa",
             "identifiers": {},
-            "value": 0.02,
+            "value": 0.017,
             "context": {}
         },
         "xi": {
             "name": "xi",
             "identifiers": {},
-            "value": 0.02,
+            "value": 0.017,
             "context": {}
         },
         "alpha": {
             "name": "alpha",
             "identifiers": {},
-            "value": 0.105,
+            "value": 0.57,
             "context": {}
         },
         "zeta": {
             "name": "zeta",
             "identifiers": {},
-            "value": 0.0025,
+            "value": 0.125,
             "context": {}
         },
         "eta": {
             "name": "eta",
             "identifiers": {},
-            "value": 0.0025,
+            "value": 0.125,
             "context": {}
         },
         "rho": {
             "name": "rho",
             "identifiers": {},
-            "value": 0.02,
+            "value": 0.034,
             "context": {}
         },
         "beta": {
             "name": "beta",
             "identifiers": {},
-            "value": 0.005,
+            "value": 0.011,
             "context": {}
         },
         "epsilon": {
             "name": "epsilon",
             "identifiers": {},
-            "value": 0.2,
+            "value": 0.171,
             "context": {}
         },
         "gamma": {
             "name": "gamma",
             "identifiers": {},
-            "value": 0.11,
+            "value": 0.456,
             "context": {}
         }
     }
