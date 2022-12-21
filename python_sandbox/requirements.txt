@@ -6,10 +6,13 @@ networkx
 hypernetx
 nwhy
 scikit-learn
+scikit-image
 pandas
 tqdm
 pylint
 regex
 requests
 arviz
+netCDF4
+xarray
 lxml
