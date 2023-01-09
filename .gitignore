@@ -1,3 +1,4 @@
 .ipynb_checkpoints
 .venv
 /python_sandbox/data/*
+demo_results
