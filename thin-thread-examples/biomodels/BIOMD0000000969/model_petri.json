@@ -173,7 +173,7 @@
         {
             "tname": "t1",
             "template_type": "ControlledConversion",
-            "parameter_name": "(('Susceptible_Counties_with_airports', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Infected_Counties_with_airports', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Infected_Counties_with_airports', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), 'ControlledConversion', 'rate')",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
@@ -220,144 +220,168 @@
         },
         {
             "tname": "t9",
-            "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Infected_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), (('Infected_Counties_with_airports', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Infected_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'))), 'GroupedControlledConversion', 'rate')",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_9",
             "parameter_value": null
         },
         {
             "tname": "t10",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "p_petri_10",
+            "parameter_value": null
+        },
+        {
+            "tname": "t11",
             "template_type": "NaturalConversion",
             "parameter_name": "eta_Counties_neighbouring_counties_with_airports",
             "parameter_value": "0.07"
         },
         {
-            "tname": "t11",
+            "tname": "t12",
             "template_type": "NaturalConversion",
             "parameter_name": "psi",
             "parameter_value": "0.01"
         },
         {
-            "tname": "t12",
+            "tname": "t13",
             "template_type": "NaturalConversion",
             "parameter_name": "delta",
             "parameter_value": "0.229885"
         },
         {
-            "tname": "t13",
+            "tname": "t14",
             "template_type": "NaturalConversion",
             "parameter_name": "omega_Counties_neighbouring_counties_with_airports",
             "parameter_value": "0.06"
         },
         {
-            "tname": "t14",
+            "tname": "t15",
             "template_type": "NaturalConversion",
             "parameter_name": "sigma",
             "parameter_value": "0.08"
         },
         {
-            "tname": "t15",
+            "tname": "t16",
             "template_type": "NaturalConversion",
             "parameter_name": "xi",
             "parameter_value": "0.06"
         },
         {
-            "tname": "t16",
+            "tname": "t17",
             "template_type": "NaturalConversion",
             "parameter_name": "mu_Counties_neighbouring_counties_with_airports",
             "parameter_value": "0.17"
         },
         {
-            "tname": "t17",
-            "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible_Counties_with_highways', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Infected_Counties_with_highways', ('identity', 'ido:0000511')), (('Infected_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Infected_Counties_with_highways', ('identity', 'ido:0000511'))), 'GroupedControlledConversion', 'rate')",
+            "tname": "t18",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_18",
             "parameter_value": null
         },
         {
-            "tname": "t18",
+            "tname": "t19",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "p_petri_19",
+            "parameter_value": null
+        },
+        {
+            "tname": "t20",
             "template_type": "NaturalConversion",
             "parameter_name": "eta_Counties_with_highways",
             "parameter_value": "0.07"
         },
         {
-            "tname": "t19",
+            "tname": "t21",
             "template_type": "NaturalConversion",
             "parameter_name": "psi",
             "parameter_value": "0.01"
         },
         {
-            "tname": "t20",
+            "tname": "t22",
             "template_type": "NaturalConversion",
             "parameter_name": "delta",
             "parameter_value": "0.229885"
         },
         {
-            "tname": "t21",
+            "tname": "t23",
             "template_type": "NaturalConversion",
             "parameter_name": "omega_Counties_with_highways",
             "parameter_value": "0.04"
         },
         {
-            "tname": "t22",
+            "tname": "t24",
             "template_type": "NaturalConversion",
             "parameter_name": "sigma",
             "parameter_value": "0.08"
         },
         {
-            "tname": "t23",
+            "tname": "t25",
             "template_type": "NaturalConversion",
             "parameter_name": "xi",
             "parameter_value": "0.06"
         },
         {
-            "tname": "t24",
+            "tname": "t26",
             "template_type": "NaturalConversion",
             "parameter_name": "mu_Counties_with_highways",
             "parameter_value": "0.05"
         },
         {
-            "tname": "t25",
-            "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible_Low_risk_counties', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Infected_Low_risk_counties', ('identity', 'ido:0000511')), (('Infected_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Infected_Counties_with_highways', ('identity', 'ido:0000511')), ('Infected_Low_risk_counties', ('identity', 'ido:0000511'))), 'GroupedControlledConversion', 'rate')",
+            "tname": "t27",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_27",
             "parameter_value": null
         },
         {
-            "tname": "t26",
+            "tname": "t28",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_28",
+            "parameter_value": null
+        },
+        {
+            "tname": "t29",
+            "template_type": "GroupedControlledConversion",
+            "parameter_name": "p_petri_29",
+            "parameter_value": null
+        },
+        {
+            "tname": "t30",
             "template_type": "NaturalConversion",
             "parameter_name": "eta_Low_risk_counties",
             "parameter_value": "0.14"
         },
         {
-            "tname": "t27",
+            "tname": "t31",
             "template_type": "NaturalConversion",
             "parameter_name": "psi",
             "parameter_value": "0.01"
         },
         {
-            "tname": "t28",
+            "tname": "t32",
             "template_type": "NaturalConversion",
             "parameter_name": "delta",
             "parameter_value": "0.229885"
         },
         {
-            "tname": "t29",
+            "tname": "t33",
             "template_type": "NaturalConversion",
             "parameter_name": "omega_Low_risk_counties",
             "parameter_value": "0.07"
         },
         {
-            "tname": "t30",
+            "tname": "t34",
             "template_type": "NaturalConversion",
             "parameter_name": "sigma",
             "parameter_value": "0.08"
         },
         {
-            "tname": "t31",
+            "tname": "t35",
             "template_type": "NaturalConversion",
             "parameter_name": "xi",
             "parameter_value": "0.06"
         },
         {
-            "tname": "t32",
+            "tname": "t36",
             "template_type": "NaturalConversion",
             "parameter_name": "mu_Low_risk_counties",
             "parameter_value": "0.25"
@@ -405,15 +429,15 @@
             "it": 9
         },
         {
-            "is": 9,
-            "it": 9
-        },
-        {
             "is": 8,
             "it": 9
         },
         {
             "is": 9,
+            "it": 10
+        },
+        {
+            "is": 8,
             "it": 10
         },
         {
@@ -425,7 +449,7 @@
             "it": 12
         },
         {
-            "is": 10,
+            "is": 9,
             "it": 13
         },
         {
@@ -433,7 +457,7 @@
             "it": 14
         },
         {
-            "is": 13,
+            "is": 10,
             "it": 15
         },
         {
@@ -441,19 +465,15 @@
             "it": 16
         },
         {
-            "is": 9,
+            "is": 13,
             "it": 17
         },
         {
-            "is": 16,
-            "it": 17
+            "is": 9,
+            "it": 18
         },
         {
             "is": 15,
-            "it": 17
-        },
-        {
-            "is": 16,
             "it": 18
         },
         {
@@ -461,68 +481,88 @@
             "it": 19
         },
         {
+            "is": 15,
+            "it": 19
+        },
+        {
             "is": 16,
             "it": 20
         },
         {
-            "is": 17,
+            "is": 16,
             "it": 21
         },
         {
-            "is": 17,
+            "is": 16,
             "it": 22
         },
         {
-            "is": 20,
+            "is": 17,
             "it": 23
         },
         {
-            "is": 20,
+            "is": 17,
             "it": 24
         },
         {
-            "is": 9,
+            "is": 20,
             "it": 25
         },
         {
-            "is": 16,
-            "it": 25
-        },
-        {
-            "is": 23,
-            "it": 25
-        },
-        {
-            "is": 22,
-            "it": 25
-        },
-        {
-            "is": 23,
+            "is": 20,
             "it": 26
         },
         {
-            "is": 23,
+            "is": 9,
             "it": 27
         },
         {
-            "is": 23,
+            "is": 22,
+            "it": 27
+        },
+        {
+            "is": 16,
             "it": 28
         },
         {
-            "is": 24,
+            "is": 22,
+            "it": 28
+        },
+        {
+            "is": 23,
             "it": 29
         },
         {
-            "is": 24,
+            "is": 22,
+            "it": 29
+        },
+        {
+            "is": 23,
             "it": 30
         },
         {
-            "is": 27,
+            "is": 23,
             "it": 31
         },
         {
-            "is": 27,
+            "is": 23,
             "it": 32
+        },
+        {
+            "is": 24,
+            "it": 33
+        },
+        {
+            "is": 24,
+            "it": 34
+        },
+        {
+            "is": 27,
+            "it": 35
+        },
+        {
+            "is": 27,
+            "it": 36
         }
     ],
     "O": [
@@ -572,119 +612,135 @@
         },
         {
             "os": 9,
-            "ot": 9
-        },
-        {
-            "os": 10,
             "ot": 10
         },
         {
-            "os": 11,
-            "ot": 11
-        },
-        {
-            "os": 12,
-            "ot": 12
-        },
-        {
-            "os": 13,
-            "ot": 13
-        },
-        {
-            "os": 14,
-            "ot": 14
+            "os": 9,
+            "ot": 10
         },
         {
             "os": 10,
-            "ot": 15
+            "ot": 11
         },
         {
             "os": 11,
+            "ot": 12
+        },
+        {
+            "os": 12,
+            "ot": 13
+        },
+        {
+            "os": 13,
+            "ot": 14
+        },
+        {
+            "os": 14,
+            "ot": 15
+        },
+        {
+            "os": 10,
             "ot": 16
         },
         {
+            "os": 11,
+            "ot": 17
+        },
+        {
             "os": 9,
-            "ot": 17
-        },
-        {
-            "os": 16,
-            "ot": 17
-        },
-        {
-            "os": 16,
-            "ot": 17
-        },
-        {
-            "os": 17,
             "ot": 18
         },
         {
-            "os": 18,
-            "ot": 19
-        },
-        {
-            "os": 19,
-            "ot": 20
-        },
-        {
-            "os": 20,
-            "ot": 21
-        },
-        {
-            "os": 21,
-            "ot": 22
-        },
-        {
-            "os": 17,
-            "ot": 23
-        },
-        {
-            "os": 18,
-            "ot": 24
-        },
-        {
-            "os": 9,
-            "ot": 25
+            "os": 16,
+            "ot": 18
         },
         {
             "os": 16,
+            "ot": 19
+        },
+        {
+            "os": 16,
+            "ot": 19
+        },
+        {
+            "os": 17,
+            "ot": 20
+        },
+        {
+            "os": 18,
+            "ot": 21
+        },
+        {
+            "os": 19,
+            "ot": 22
+        },
+        {
+            "os": 20,
+            "ot": 23
+        },
+        {
+            "os": 21,
+            "ot": 24
+        },
+        {
+            "os": 17,
             "ot": 25
         },
         {
-            "os": 23,
-            "ot": 25
-        },
-        {
-            "os": 23,
-            "ot": 25
-        },
-        {
-            "os": 24,
+            "os": 18,
             "ot": 26
         },
         {
-            "os": 25,
+            "os": 9,
             "ot": 27
         },
         {
-            "os": 26,
+            "os": 23,
+            "ot": 27
+        },
+        {
+            "os": 16,
             "ot": 28
         },
         {
-            "os": 27,
+            "os": 23,
+            "ot": 28
+        },
+        {
+            "os": 23,
             "ot": 29
         },
         {
-            "os": 28,
-            "ot": 30
+            "os": 23,
+            "ot": 29
         },
         {
             "os": 24,
-            "ot": 31
+            "ot": 30
         },
         {
             "os": 25,
+            "ot": 31
+        },
+        {
+            "os": 26,
             "ot": 32
+        },
+        {
+            "os": 27,
+            "ot": 33
+        },
+        {
+            "os": 28,
+            "ot": 34
+        },
+        {
+            "os": 24,
+            "ot": 35
+        },
+        {
+            "os": 25,
+            "ot": 36
         }
     ]
 }

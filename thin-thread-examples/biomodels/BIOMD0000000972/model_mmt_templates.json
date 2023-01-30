@@ -1,7 +1,7 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Susceptible*beta*(1.0 - q)*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
+            "rate_law": "Susceptible*beta*(1.0 - q)*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
             "type": "GroupedControlledConversion",
             "controllers": [
                 {
@@ -42,7 +42,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Susceptible*q*(1.0 - beta)*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
+            "rate_law": "Susceptible*q*(1.0 - beta)*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
             "type": "GroupedControlledConversion",
             "controllers": [
                 {
@@ -82,7 +82,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Susceptible_quarantined*XXlambdaXX",
+            "rate_law": "Susceptible_quarantined*XXlambdaXX",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Susceptible_quarantined",
@@ -104,7 +104,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*rho*sigma",
+            "rate_law": "Exposed*rho*sigma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
@@ -127,7 +127,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*sigma*(1.0 - rho)",
+            "rate_law": "Exposed*sigma*(1.0 - rho)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
@@ -150,7 +150,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*delta_I_0*delta_I_f/(delta_I_0 + (-delta_I_0 + delta_I_f)*exp(-r_2*time))",
+            "rate_law": "Infected*delta_I_0*delta_I_f/(delta_I_0 + (-delta_I_0 + delta_I_f)*exp(-r_2*time))",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",
@@ -163,8 +163,8 @@
             "outcome": {
                 "name": "Hospitalised",
                 "identifiers": {
-                    "ido": "0000511",
                     "ncit": "C171133",
+                    "ido": "0000511",
                     "biomodels.species": "BIOMD0000000972:Hospitalised"
                 },
                 "context": {
@@ -174,7 +174,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*gamma_I",
+            "rate_law": "Infected*gamma_I",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",
@@ -187,16 +187,15 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "biomodels.species": "BIOMD0000000972:Recovered"
+                    "biomodels.species": "BIOMD0000000972:Recovered",
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "provenance": []
         },
         {
-            "rate_law": "1.0*Asymptomatic*gamma_A",
+            "rate_law": "Asymptomatic*gamma_A",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Asymptomatic",
@@ -209,22 +208,21 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "biomodels.species": "BIOMD0000000972:Recovered"
+                    "biomodels.species": "BIOMD0000000972:Recovered",
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised*gamma_H",
+            "rate_law": "Hospitalised*gamma_H",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised",
                 "identifiers": {
-                    "ido": "0000511",
                     "ncit": "C171133",
+                    "ido": "0000511",
                     "biomodels.species": "BIOMD0000000972:Hospitalised"
                 },
                 "context": {
@@ -234,16 +232,15 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "biomodels.species": "BIOMD0000000972:Recovered"
+                    "biomodels.species": "BIOMD0000000972:Recovered",
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*alpha",
+            "rate_law": "Infected*alpha",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "Infected",
@@ -256,13 +253,13 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised*alpha",
+            "rate_law": "Hospitalised*alpha",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "Hospitalised",
                 "identifiers": {
-                    "ido": "0000511",
                     "ncit": "C171133",
+                    "ido": "0000511",
                     "biomodels.species": "BIOMD0000000972:Hospitalised"
                 },
                 "context": {
@@ -272,7 +269,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Susceptible*beta*q*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
+            "rate_law": "Susceptible*beta*q*(c_b + (c_0 - c_b)*exp(-r_1*time))*(Asymptomatic*theta + Infected)",
             "type": "GroupedControlledConversion",
             "controllers": [
                 {
@@ -314,7 +311,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed_quarantined*delta_q",
+            "rate_law": "Exposed_quarantined*delta_q",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed_quarantined",
@@ -330,8 +327,8 @@
             "outcome": {
                 "name": "Hospitalised",
                 "identifiers": {
-                    "ido": "0000511",
                     "ncit": "C171133",
+                    "ido": "0000511",
                     "biomodels.species": "BIOMD0000000972:Hospitalised"
                 },
                 "context": {

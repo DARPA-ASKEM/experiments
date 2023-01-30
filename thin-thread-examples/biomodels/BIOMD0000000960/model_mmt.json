@@ -1,37 +1,17 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Susceptible*(Asymptomatic*(ModelValue_0*l_a_1_China + ModelValue_1*l_a_1_Italy + ModelValue_2*ModelValue_64 + ModelValue_3*l_a_1_France + ModelValue_4*l_a_1_Germany + ModelValue_5*l_a_1_USA) + Hospitalized*(ModelValue_0*l_1_China + ModelValue_1*l_1_Italy + ModelValue_2*l_1_Spain + ModelValue_3*l_1_France + ModelValue_4*l_1_Germany + ModelValue_5*l_1_USA) + Infectious)*(ModelValue_0*beta_1_China + ModelValue_1*beta_1_Italy + ModelValue_2*beta_1_Spain + ModelValue_3*beta_1_France + ModelValue_4*beta_1_Germany + ModelValue_5*beta_1_USA)/(ModelValue_0*ModelValue_130 + ModelValue_1*ModelValue_131 + ModelValue_132*ModelValue_2 + ModelValue_133*ModelValue_3 + ModelValue_134*ModelValue_4 + ModelValue_135*ModelValue_5)",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "Infectious",
-                    "identifiers": {
-                        "ncit": "C171133",
-                        "ido": "0000511",
-                        "biomodels.species": "BIOMD0000000960:Infectious"
-                    },
-                    "context": {}
+            "rate_law": "Infectious*Susceptible*(ModelValue_0*beta_1_China + ModelValue_1*beta_1_Italy + ModelValue_2*beta_1_Spain + ModelValue_3*beta_1_France + ModelValue_4*beta_1_Germany + ModelValue_5*beta_1_USA)/(ModelValue_0*ModelValue_130 + ModelValue_1*ModelValue_131 + ModelValue_132*ModelValue_2 + ModelValue_133*ModelValue_3 + ModelValue_134*ModelValue_4 + ModelValue_135*ModelValue_5)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infectious",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000960:Infectious"
                 },
-                {
-                    "name": "Asymptomatic",
-                    "identifiers": {
-                        "ido": "0000569",
-                        "ncit": "C171133",
-                        "biomodels.species": "BIOMD0000000960:Asymptomatic"
-                    },
-                    "context": {}
-                },
-                {
-                    "name": "Hospitalized",
-                    "identifiers": {
-                        "ido": "0000511",
-                        "ncit": "C25179",
-                        "biomodels.species": "BIOMD0000000960:Hospitalized"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
             "subject": {
                 "name": "Susceptible",
                 "identifiers": {
@@ -45,7 +25,7 @@
                 "name": "Exposed",
                 "identifiers": {
                     "ncit": "C171133",
-                    "ido": "0000597",
+                    "ido": "0000514",
                     "biomodels.species": "BIOMD0000000960:Exposed"
                 },
                 "context": {}
@@ -53,13 +33,79 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*ModelValue_12*ModelValue_13",
+            "rate_law": "Asymptomatic*Susceptible*(ModelValue_0*beta_1_China + ModelValue_1*beta_1_Italy + ModelValue_2*beta_1_Spain + ModelValue_3*beta_1_France + ModelValue_4*beta_1_Germany + ModelValue_5*beta_1_USA)*(ModelValue_0*l_a_1_China + ModelValue_1*l_a_1_Italy + ModelValue_2*ModelValue_64 + ModelValue_3*l_a_1_France + ModelValue_4*l_a_1_Germany + ModelValue_5*l_a_1_USA)/(ModelValue_0*ModelValue_130 + ModelValue_1*ModelValue_131 + ModelValue_132*ModelValue_2 + ModelValue_133*ModelValue_3 + ModelValue_134*ModelValue_4 + ModelValue_135*ModelValue_5)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Asymptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000960:Asymptomatic"
+                },
+                "context": {
+                    "disease_status": "ncit:C3833"
+                }
+            },
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000960:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000960:Exposed"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "Hospitalized*Susceptible*(ModelValue_0*beta_1_China + ModelValue_1*beta_1_Italy + ModelValue_2*beta_1_Spain + ModelValue_3*beta_1_France + ModelValue_4*beta_1_Germany + ModelValue_5*beta_1_USA)*(ModelValue_0*l_1_China + ModelValue_1*l_1_Italy + ModelValue_2*l_1_Spain + ModelValue_3*l_1_France + ModelValue_4*l_1_Germany + ModelValue_5*l_1_USA)/(ModelValue_0*ModelValue_130 + ModelValue_1*ModelValue_131 + ModelValue_132*ModelValue_2 + ModelValue_133*ModelValue_3 + ModelValue_134*ModelValue_4 + ModelValue_135*ModelValue_5)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Hospitalized",
+                "identifiers": {
+                    "ncit": "C168447",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000960:Hospitalized"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000960:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000960:Exposed"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "Exposed*ModelValue_12*ModelValue_13",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
                 "identifiers": {
                     "ncit": "C171133",
-                    "ido": "0000597",
+                    "ido": "0000514",
                     "biomodels.species": "BIOMD0000000960:Exposed"
                 },
                 "context": {}
@@ -76,13 +122,13 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*ModelValue_12*(1 - ModelValue_13)",
+            "rate_law": "Exposed*ModelValue_12*(1 - ModelValue_13)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
                 "identifiers": {
                     "ncit": "C171133",
-                    "ido": "0000597",
+                    "ido": "0000514",
                     "biomodels.species": "BIOMD0000000960:Exposed"
                 },
                 "context": {}
@@ -90,16 +136,18 @@
             "outcome": {
                 "name": "Asymptomatic",
                 "identifiers": {
-                    "ido": "0000569",
                     "ncit": "C171133",
+                    "ido": "0000511",
                     "biomodels.species": "BIOMD0000000960:Asymptomatic"
                 },
-                "context": {}
+                "context": {
+                    "disease_status": "ncit:C3833"
+                }
             },
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infectious*(ModelValue_0*ModelValue_30 + ModelValue_1*ModelValue_52 + ModelValue_102*ModelValue_4 + ModelValue_119*ModelValue_5 + ModelValue_2*ModelValue_68 + ModelValue_3*ModelValue_85)",
+            "rate_law": "Infectious*(ModelValue_0*ModelValue_30 + ModelValue_1*ModelValue_52 + ModelValue_102*ModelValue_4 + ModelValue_119*ModelValue_5 + ModelValue_2*ModelValue_68 + ModelValue_3*ModelValue_85)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infectious",
@@ -113,8 +161,8 @@
             "outcome": {
                 "name": "Hospitalized",
                 "identifiers": {
+                    "ncit": "C168447",
                     "ido": "0000511",
-                    "ncit": "C25179",
                     "biomodels.species": "BIOMD0000000960:Hospitalized"
                 },
                 "context": {}
@@ -122,7 +170,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infectious*(ModelValue_0*ModelValue_29 + ModelValue_1*ModelValue_53 + ModelValue_103*ModelValue_4 + ModelValue_120*ModelValue_5 + ModelValue_2*ModelValue_69 + ModelValue_3*ModelValue_86)",
+            "rate_law": "Infectious*(ModelValue_0*ModelValue_29 + ModelValue_1*ModelValue_53 + ModelValue_103*ModelValue_4 + ModelValue_120*ModelValue_5 + ModelValue_2*ModelValue_69 + ModelValue_3*ModelValue_86)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infectious",
@@ -136,8 +184,8 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "ido": "0000621",
                     "ncit": "C171133",
+                    "ido": "0000621",
                     "biomodels.species": "BIOMD0000000960:Recovered"
                 },
                 "context": {}
@@ -145,7 +193,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infectious*(ModelValue_0*ModelValue_41 + ModelValue_1*ModelValue_57 + ModelValue_108*ModelValue_4 + ModelValue_125*ModelValue_5 + ModelValue_2*ModelValue_74 + ModelValue_3*ModelValue_91)",
+            "rate_law": "Infectious*(ModelValue_0*ModelValue_41 + ModelValue_1*ModelValue_57 + ModelValue_108*ModelValue_4 + ModelValue_125*ModelValue_5 + ModelValue_2*ModelValue_74 + ModelValue_3*ModelValue_91)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infectious",
@@ -167,22 +215,24 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Asymptomatic*ModelValue_17*(1 - ModelValue_18)",
+            "rate_law": "Asymptomatic*ModelValue_17*(1 - ModelValue_18)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Asymptomatic",
                 "identifiers": {
-                    "ido": "0000569",
                     "ncit": "C171133",
+                    "ido": "0000511",
                     "biomodels.species": "BIOMD0000000960:Asymptomatic"
                 },
-                "context": {}
+                "context": {
+                    "disease_status": "ncit:C3833"
+                }
             },
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "ido": "0000621",
                     "ncit": "C171133",
+                    "ido": "0000621",
                     "biomodels.species": "BIOMD0000000960:Recovered"
                 },
                 "context": {}
@@ -190,16 +240,18 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Asymptomatic*ModelValue_17*ModelValue_18",
+            "rate_law": "Asymptomatic*ModelValue_17*ModelValue_18",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Asymptomatic",
                 "identifiers": {
-                    "ido": "0000569",
                     "ncit": "C171133",
+                    "ido": "0000511",
                     "biomodels.species": "BIOMD0000000960:Asymptomatic"
                 },
-                "context": {}
+                "context": {
+                    "disease_status": "ncit:C3833"
+                }
             },
             "outcome": {
                 "name": "Deceased",
@@ -212,13 +264,13 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalized*(ModelValue_0*ModelValue_40 + ModelValue_1*ModelValue_56 + ModelValue_107*ModelValue_4 + ModelValue_124*ModelValue_5 + ModelValue_2*ModelValue_73 + ModelValue_3*ModelValue_90)",
+            "rate_law": "Hospitalized*(ModelValue_0*ModelValue_40 + ModelValue_1*ModelValue_56 + ModelValue_107*ModelValue_4 + ModelValue_124*ModelValue_5 + ModelValue_2*ModelValue_73 + ModelValue_3*ModelValue_90)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalized",
                 "identifiers": {
+                    "ncit": "C168447",
                     "ido": "0000511",
-                    "ncit": "C25179",
                     "biomodels.species": "BIOMD0000000960:Hospitalized"
                 },
                 "context": {}
@@ -234,13 +286,13 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalized*(ModelValue_0*ModelValue_28 + ModelValue_1*ModelValue_128 + ModelValue_104*ModelValue_4 + ModelValue_121*ModelValue_5 + ModelValue_2*ModelValue_70 + ModelValue_3*ModelValue_87)",
+            "rate_law": "Hospitalized*(ModelValue_0*ModelValue_28 + ModelValue_1*ModelValue_128 + ModelValue_104*ModelValue_4 + ModelValue_121*ModelValue_5 + ModelValue_2*ModelValue_70 + ModelValue_3*ModelValue_87)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalized",
                 "identifiers": {
+                    "ncit": "C168447",
                     "ido": "0000511",
-                    "ncit": "C25179",
                     "biomodels.species": "BIOMD0000000960:Hospitalized"
                 },
                 "context": {}
@@ -248,8 +300,8 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "ido": "0000621",
                     "ncit": "C171133",
+                    "ido": "0000621",
                     "biomodels.species": "BIOMD0000000960:Recovered"
                 },
                 "context": {}
@@ -1568,13 +1620,102 @@
         }
     },
     "initials": {
-        "Susceptible": 9900000.0,
-        "Exposed": 36600.0,
-        "Infectious": 732.0,
-        "Asymptomatic": 2196.0,
-        "Hospitalized": 0.0,
-        "Recovered": 0.0,
-        "Deceased": 0.0,
-        "Cumulative_Cases": 0.0
+        "Susceptible": {
+            "concept": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000960:Susceptible"
+                },
+                "context": {}
+            },
+            "value": 9900000.0
+        },
+        "Exposed": {
+            "concept": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000960:Exposed"
+                },
+                "context": {}
+            },
+            "value": 36600.0
+        },
+        "Infectious": {
+            "concept": {
+                "name": "Infectious",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000960:Infectious"
+                },
+                "context": {}
+            },
+            "value": 732.0
+        },
+        "Asymptomatic": {
+            "concept": {
+                "name": "Asymptomatic",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000960:Asymptomatic"
+                },
+                "context": {
+                    "disease_status": "ncit:C3833"
+                }
+            },
+            "value": 2196.0
+        },
+        "Hospitalized": {
+            "concept": {
+                "name": "Hospitalized",
+                "identifiers": {
+                    "ncit": "C168447",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000960:Hospitalized"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        },
+        "Recovered": {
+            "concept": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000621",
+                    "biomodels.species": "BIOMD0000000960:Recovered"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        },
+        "Deceased": {
+            "concept": {
+                "name": "Deceased",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000960:Deceased"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        },
+        "Cumulative_Cases": {
+            "concept": {
+                "name": "Cumulative_Cases",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000480",
+                    "biomodels.species": "BIOMD0000000960:Cumulative_Cases"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        }
     }
 }

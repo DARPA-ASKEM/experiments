@@ -19,12 +19,6 @@
             "mira_initial_value": "1.0"
         },
         {
-            "sname": "Total_population",
-            "mira_ids": "[]",
-            "mira_context": "[]",
-            "mira_initial_value": "10000000.0"
-        },
-        {
             "sname": "Recovered",
             "mira_ids": "[('identity', 'ido:0000621')]",
             "mira_context": "[]",
@@ -34,8 +28,8 @@
     "T": [
         {
             "tname": "t1",
-            "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'ido:0000514'), ('property', 'ido:0000597')), (('Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), 'Total_population'), 'GroupedControlledConversion', 'rate')",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
@@ -57,10 +51,6 @@
             "it": 1
         },
         {
-            "is": 4,
-            "it": 1
-        },
-        {
             "is": 1,
             "it": 1
         },
@@ -79,10 +69,6 @@
             "ot": 1
         },
         {
-            "os": 4,
-            "ot": 1
-        },
-        {
             "os": 2,
             "ot": 1
         },
@@ -91,7 +77,7 @@
             "ot": 2
         },
         {
-            "os": 5,
+            "os": 4,
             "ot": 3
         }
     ]

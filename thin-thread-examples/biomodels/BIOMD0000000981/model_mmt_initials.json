@@ -7,7 +7,17 @@
                 "biomodels.species": "BIOMD0000000981:Susceptible"
             },
             "context": {},
-            "value": 1336210000.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000981:Susceptible"
+                    },
+                    "context": {}
+                },
+                "value": 1336210000.0
+            }
         },
         "Susceptible_isolated": {
             "name": "Susceptible_isolated",
@@ -18,7 +28,19 @@
             "context": {
                 "property": "ncit:C25549"
             },
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible_isolated",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000981:Susceptible_isolated"
+                    },
+                    "context": {
+                        "property": "ncit:C25549"
+                    }
+                },
+                "value": 0.0
+            }
         },
         "Exposed": {
             "name": "Exposed",
@@ -30,7 +52,20 @@
             "context": {
                 "property": "ido:0000597"
             },
-            "value": 501.23
+            "value": {
+                "concept": {
+                    "name": "Exposed",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000981:Exposed"
+                    },
+                    "context": {
+                        "property": "ido:0000597"
+                    }
+                },
+                "value": 501.23
+            }
         },
         "Infected": {
             "name": "Infected",
@@ -40,7 +75,18 @@
                 "biomodels.species": "BIOMD0000000981:Infected"
             },
             "context": {},
-            "value": 0.22839
+            "value": {
+                "concept": {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000981:Infected"
+                    },
+                    "context": {}
+                },
+                "value": 0.22839
+            }
         },
         "Asymptomatic": {
             "name": "Asymptomatic",
@@ -52,7 +98,20 @@
             "context": {
                 "property": "ido:0000569"
             },
-            "value": 991.29
+            "value": {
+                "concept": {
+                    "name": "Asymptomatic",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000981:Asymptomatic"
+                    },
+                    "context": {
+                        "property": "ido:0000569"
+                    }
+                },
+                "value": 991.29
+            }
         },
         "Quarantined": {
             "name": "Quarantined",
@@ -64,7 +123,20 @@
             "context": {
                 "property": "ncit:C71902"
             },
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Quarantined",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000981:Quarantined"
+                    },
+                    "context": {
+                        "property": "ncit:C71902"
+                    }
+                },
+                "value": 0.0
+            }
         },
         "Hospitalised": {
             "name": "Hospitalised",
@@ -76,7 +148,20 @@
             "context": {
                 "property": "ncit:C25179"
             },
-            "value": 2.0
+            "value": {
+                "concept": {
+                    "name": "Hospitalised",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000981:Hospitalised"
+                    },
+                    "context": {
+                        "property": "ncit:C25179"
+                    }
+                },
+                "value": 2.0
+            }
         },
         "Recovered": {
             "name": "Recovered",
@@ -85,7 +170,17 @@
                 "biomodels.species": "BIOMD0000000981:Recovered"
             },
             "context": {},
-            "value": 240.76
+            "value": {
+                "concept": {
+                    "name": "Recovered",
+                    "identifiers": {
+                        "ido": "0000621",
+                        "biomodels.species": "BIOMD0000000981:Recovered"
+                    },
+                    "context": {}
+                },
+                "value": 240.76
+            }
         },
         "Deceased": {
             "name": "Deceased",
@@ -94,23 +189,17 @@
                 "biomodels.species": "BIOMD0000000981:Deceased"
             },
             "context": {},
-            "value": 0.0
-        },
-        "Total_population": {
-            "name": "Total_population",
-            "identifiers": {
-                "biomodels.species": "BIOMD0000000981:Total_population"
-            },
-            "context": {},
-            "value": 1336211733.50839
-        },
-        "Total_reported_cases": {
-            "name": "Total_reported_cases",
-            "identifiers": {
-                "biomodels.species": "BIOMD0000000981:Total_reported_cases"
-            },
-            "context": {},
-            "value": 21.0
+            "value": {
+                "concept": {
+                    "name": "Deceased",
+                    "identifiers": {
+                        "ncit": "C28554",
+                        "biomodels.species": "BIOMD0000000981:Deceased"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         }
     }
 }

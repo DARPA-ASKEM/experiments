@@ -3,22 +3,44 @@
         "Susceptible": {
             "name": "Susceptible",
             "identifiers": {
-                "ido": "0000514",
                 "ncit": "C171133",
+                "ido": "0000514",
                 "biomodels.species": "BIOMD0000000957:Susceptible"
             },
             "context": {},
-            "value": 5999755.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000957:Susceptible"
+                    },
+                    "context": {}
+                },
+                "value": 5999755.0
+            }
         },
         "Infected": {
             "name": "Infected",
             "identifiers": {
-                "ido": "0000511",
                 "ncit": "C171133",
+                "ido": "0000511",
                 "biomodels.species": "BIOMD0000000957:Infected"
             },
             "context": {},
-            "value": 60.0
+            "value": {
+                "concept": {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000957:Infected"
+                    },
+                    "context": {}
+                },
+                "value": 60.0
+            }
         },
         "Recovered": {
             "name": "Recovered",
@@ -28,7 +50,18 @@
                 "biomodels.species": "BIOMD0000000957:Recovered"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Recovered",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000621",
+                        "biomodels.species": "BIOMD0000000957:Recovered"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Confirmed": {
             "name": "Confirmed",
@@ -37,7 +70,17 @@
                 "biomodels.species": "BIOMD0000000957:Confirmed"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Confirmed",
+                    "identifiers": {
+                        "ncit": "C15220",
+                        "biomodels.species": "BIOMD0000000957:Confirmed"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         }
     }
 }

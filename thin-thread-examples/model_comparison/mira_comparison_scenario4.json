@@ -1,0 +1,4414 @@
+{
+ "template_models": {
+  "0": {
+   "templates": [
+    {
+     "rate_law": "Susceptible*(Ailing*gamma + Diagnosed*beta + Infected*alpha + Recognized*delta)",
+     "type": "GroupedControlledConversion",
+     "controllers": [
+      {
+       "name": "Diagnosed",
+       "identifiers": {
+        "ido": "0000511"
+       },
+       "context": {
+        "property": "ncit:C15220"
+       }
+      },
+      {
+       "name": "Ailing",
+       "identifiers": {
+        "ido": "0000511"
+       },
+       "context": {
+        "property": "ncit:C113725",
+        "disease_status": "ncit:C25269"
+       }
+      },
+      {
+       "name": "Recognized",
+       "identifiers": {
+        "ido": "0000511"
+       },
+       "context": {
+        "property": "ncit:C25587",
+        "disease_status": "ncit:C25269"
+       }
+      },
+      {
+       "name": "Infected",
+       "identifiers": {
+        "ido": "0000511"
+       },
+       "context": {
+        "property": "ncit:C113725",
+        "disease_status": "ncit:C3833"
+       }
+      }
+     ],
+     "subject": {
+      "name": "Susceptible",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "outcome": {
+      "name": "Infected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C3833"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Infected*epsilon",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Infected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C3833"
+      }
+     },
+     "outcome": {
+      "name": "Diagnosed",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Infected*zeta",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Infected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C3833"
+      }
+     },
+     "outcome": {
+      "name": "Ailing",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Infected*XXlambdaXX",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Infected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C3833"
+      }
+     },
+     "outcome": {
+      "name": "Healed",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Diagnosed*eta",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Diagnosed",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220"
+      }
+     },
+     "outcome": {
+      "name": "Recognized",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C25587",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Diagnosed*rho",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Diagnosed",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220"
+      }
+     },
+     "outcome": {
+      "name": "Healed",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Ailing*theta",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Ailing",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "outcome": {
+      "name": "Recognized",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C25587",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Ailing*kappa",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Ailing",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "outcome": {
+      "name": "Healed",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Ailing*mu",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Ailing",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "outcome": {
+      "name": "Threatened",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Recognized*nu",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Recognized",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C25587",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "outcome": {
+      "name": "Threatened",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Recognized*xi",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Recognized",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C25587",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "outcome": {
+      "name": "Healed",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Threatened*tau",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Threatened",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "outcome": {
+      "name": "Extinct",
+      "identifiers": {
+       "ncit": "C28554"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Threatened*sigma",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Threatened",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "outcome": {
+      "name": "Healed",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    }
+   ],
+   "parameters": {
+    "alpha": {
+     "name": "alpha",
+     "identifiers": {},
+     "context": {},
+     "value": 0.57
+    },
+    "beta": {
+     "name": "beta",
+     "identifiers": {},
+     "context": {},
+     "value": 0.011
+    },
+    "gamma": {
+     "name": "gamma",
+     "identifiers": {},
+     "context": {},
+     "value": 0.456
+    },
+    "delta": {
+     "name": "delta",
+     "identifiers": {},
+     "context": {},
+     "value": 0.011
+    },
+    "epsilon": {
+     "name": "epsilon",
+     "identifiers": {},
+     "context": {},
+     "value": 0.171
+    },
+    "theta": {
+     "name": "theta",
+     "identifiers": {},
+     "context": {},
+     "value": 0.371
+    },
+    "zeta": {
+     "name": "zeta",
+     "identifiers": {},
+     "context": {},
+     "value": 0.125
+    },
+    "eta": {
+     "name": "eta",
+     "identifiers": {},
+     "context": {},
+     "value": 0.125
+    },
+    "mu": {
+     "name": "mu",
+     "identifiers": {},
+     "context": {},
+     "value": 0.017
+    },
+    "nu": {
+     "name": "nu",
+     "identifiers": {},
+     "context": {},
+     "value": 0.027
+    },
+    "tau": {
+     "name": "tau",
+     "identifiers": {},
+     "context": {},
+     "value": 0.01
+    },
+    "kappa": {
+     "name": "kappa",
+     "identifiers": {},
+     "context": {},
+     "value": 0.017
+    },
+    "rho": {
+     "name": "rho",
+     "identifiers": {},
+     "context": {},
+     "value": 0.034
+    },
+    "sigma": {
+     "name": "sigma",
+     "identifiers": {},
+     "context": {},
+     "value": 0.017
+    },
+    "xi": {
+     "name": "xi",
+     "identifiers": {},
+     "context": {},
+     "value": 0.017
+    },
+    "Event_trigger_Fig3b": {
+     "name": "Event_trigger_Fig3b",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "Event_trigger_Fig3d": {
+     "name": "Event_trigger_Fig3d",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "Event_trigger_Fig4b": {
+     "name": "Event_trigger_Fig4b",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "Event_trigger_Fig4d": {
+     "name": "Event_trigger_Fig4d",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "epsilon_modifier": {
+     "name": "epsilon_modifier",
+     "identifiers": {},
+     "context": {},
+     "value": 1.0
+    },
+    "alpha_modifier": {
+     "name": "alpha_modifier",
+     "identifiers": {},
+     "context": {},
+     "value": 1.0
+    },
+    "ModelValue_16": {
+     "name": "ModelValue_16",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "ModelValue_17": {
+     "name": "ModelValue_17",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "ModelValue_18": {
+     "name": "ModelValue_18",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "ModelValue_19": {
+     "name": "ModelValue_19",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "ModelValue_21": {
+     "name": "ModelValue_21",
+     "identifiers": {},
+     "context": {},
+     "value": 1.0
+    },
+    "ModelValue_20": {
+     "name": "ModelValue_20",
+     "identifiers": {},
+     "context": {},
+     "value": 1.0
+    },
+    "Italy": {
+     "name": "Italy",
+     "identifiers": {},
+     "context": {},
+     "value": 1.0
+    },
+    "XXlambdaXX": {
+     "name": "XXlambdaXX",
+     "identifiers": {},
+     "context": {},
+     "value": 0.034
+    }
+   },
+   "initials": {
+    "Susceptible": {
+     "concept": {
+      "name": "Susceptible",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "value": 0.9999963
+    },
+    "Infected": {
+     "concept": {
+      "name": "Infected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C3833"
+      }
+     },
+     "value": 3.33333333e-06
+    },
+    "Diagnosed": {
+     "concept": {
+      "name": "Diagnosed",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220"
+      }
+     },
+     "value": 3.33333333e-07
+    },
+    "Ailing": {
+     "concept": {
+      "name": "Ailing",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "value": 1.66666666e-08
+    },
+    "Recognized": {
+     "concept": {
+      "name": "Recognized",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C25587",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "value": 3.33333333e-08
+    },
+    "Threatened": {
+     "concept": {
+      "name": "Threatened",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     "value": 0.0
+    },
+    "Healed": {
+     "concept": {
+      "name": "Healed",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "value": 0.0
+    },
+    "Extinct": {
+     "concept": {
+      "name": "Extinct",
+      "identifiers": {
+       "ncit": "C28554"
+      },
+      "context": {}
+     },
+     "value": 0.0
+    }
+   }
+  },
+  "1": {
+   "templates": [
+    {
+     "rate_law": "susceptible*transmission_rate_effective*(1 - delta)*(1 - eps)*(alpha*asymptomatic + symptomatic)/(asymptomatic + exposed + recovered + susceptible + symptomatic)",
+     "type": "GroupedControlledConversion",
+     "controllers": [
+      {
+       "name": "asymptomatic",
+       "identifiers": {
+        "ido": "0000511",
+        "ncit": "C171133"
+       },
+       "context": {
+        "property": "ido:0000569"
+       }
+      },
+      {
+       "name": "exposed",
+       "identifiers": {
+        "ido": "0000514"
+       },
+       "context": {
+        "property": "ido:0000597"
+       }
+      },
+      {
+       "name": "recovered",
+       "identifiers": {
+        "ido": "0000592"
+       },
+       "context": {}
+      },
+      {
+       "name": "symptomatic",
+       "identifiers": {
+        "ncit": "C171133",
+        "ido": "0000511"
+       },
+       "context": {
+        "property": "ido:0000573"
+       }
+      }
+     ],
+     "subject": {
+      "name": "susceptible",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "outcome": {
+      "name": "exposed",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "exposed*sigma*(1.0 - nu)",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "exposed",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     "outcome": {
+      "name": "symptomatic",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ido:0000573"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "exposed*nu*sigma",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "exposed",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     "outcome": {
+      "name": "asymptomatic",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000569"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "psi*symptomatic",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "symptomatic",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ido:0000573"
+      }
+     },
+     "outcome": {
+      "name": "detected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C16210"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "asymptomatic*theta",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "asymptomatic",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000569"
+      }
+     },
+     "outcome": {
+      "name": "detected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C16210"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "gamma_0*symptomatic",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "symptomatic",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ido:0000573"
+      }
+     },
+     "outcome": {
+      "name": "recovered",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "asymptomatic*gamma_a",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "asymptomatic",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000569"
+      }
+     },
+     "outcome": {
+      "name": "recovered",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "detected*gamma_i",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "detected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C16210"
+      }
+     },
+     "outcome": {
+      "name": "recovered",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "d_0*symptomatic",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "symptomatic",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ido:0000573"
+      }
+     },
+     "outcome": {
+      "name": "deceased",
+      "identifiers": {
+       "ncit": "C28554"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "d_D*detected",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "detected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C16210"
+      }
+     },
+     "outcome": {
+      "name": "deceased",
+      "identifiers": {
+       "ncit": "C28554"
+      },
+      "context": {}
+     },
+     "provenance": []
+    }
+   ],
+   "parameters": {
+    "transmission_rate_effective": {
+     "name": "transmission_rate_effective",
+     "identifiers": {},
+     "context": {},
+     "value": 0.4236
+    },
+    "gamma_a": {
+     "name": "gamma_a",
+     "identifiers": {},
+     "context": {},
+     "value": 0.13978
+    },
+    "gamma_0": {
+     "name": "gamma_0",
+     "identifiers": {},
+     "context": {},
+     "value": 0.13978
+    },
+    "gamma_i": {
+     "name": "gamma_i",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0666666666666667
+    },
+    "psi": {
+     "name": "psi",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0135
+    },
+    "theta": {
+     "name": "theta",
+     "identifiers": {},
+     "context": {},
+     "value": 1.8999e-12
+    },
+    "d_0": {
+     "name": "d_0",
+     "identifiers": {},
+     "context": {},
+     "value": 0.015
+    },
+    "d_D": {
+     "name": "d_D",
+     "identifiers": {},
+     "context": {},
+     "value": 0.015
+    },
+    "sigma": {
+     "name": "sigma",
+     "identifiers": {},
+     "context": {},
+     "value": 0.192307692307692
+    },
+    "nu": {
+     "name": "nu",
+     "identifiers": {},
+     "context": {},
+     "value": 0.5
+    },
+    "alpha": {
+     "name": "alpha",
+     "identifiers": {},
+     "context": {},
+     "value": 0.5
+    },
+    "eps": {
+     "name": "eps",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "delta": {
+     "name": "delta",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "lam": {
+     "name": "lam",
+     "identifiers": {},
+     "context": {},
+     "value": 9.02103115891956e-06
+    },
+    "exposed_start": {
+     "name": "exposed_start",
+     "identifiers": {},
+     "context": {},
+     "value": 441.0
+    },
+    "asymptomatic_start": {
+     "name": "asymptomatic_start",
+     "identifiers": {},
+     "context": {},
+     "value": 188.0
+    },
+    "symptomatic_start": {
+     "name": "symptomatic_start",
+     "identifiers": {},
+     "context": {},
+     "value": 212.0
+    },
+    "Lagos": {
+     "name": "Lagos",
+     "identifiers": {},
+     "context": {},
+     "value": 1.0
+    }
+   },
+   "initials": {
+    "susceptible": {
+     "concept": {
+      "name": "susceptible",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "value": 14367982.0
+    },
+    "exposed": {
+     "concept": {
+      "name": "exposed",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     "value": 441.0
+    },
+    "asymptomatic": {
+     "concept": {
+      "name": "asymptomatic",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000569"
+      }
+     },
+     "value": 188.0
+    },
+    "symptomatic": {
+     "concept": {
+      "name": "symptomatic",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ido:0000573"
+      }
+     },
+     "value": 212.0
+    },
+    "detected": {
+     "concept": {
+      "name": "detected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C16210"
+      }
+     },
+     "value": 1.0
+    },
+    "recovered": {
+     "concept": {
+      "name": "recovered",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "value": 0.0
+    },
+    "deceased": {
+     "concept": {
+      "name": "deceased",
+      "identifiers": {
+       "ncit": "C28554"
+      },
+      "context": {}
+     },
+     "value": 0.0
+    },
+    "total_pop": {
+     "concept": {
+      "name": "total_pop",
+      "identifiers": {},
+      "context": {}
+     },
+     "value": 14368824.0
+    },
+    "detected_cumulative": {
+     "concept": {
+      "name": "detected_cumulative",
+      "identifiers": {},
+      "context": {}
+     },
+     "value": 1.0
+    }
+   }
+  },
+  "2": {
+   "templates": [
+    {
+     "rate_law": "Susceptible_confined*(-m_t_phase_1*(1 - exp(-a*(-tau_1 + time))) - m_t_phase_2*p - m_t_phase_3*(b*(-tau_3 + time) + p) + 1.0)",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Susceptible_confined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ncit:C25549"
+      }
+     },
+     "outcome": {
+      "name": "Susceptible_unconfined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Susceptible_unconfined*(m_t_phase_1*(1 - exp(-a*(-tau_1 + time))) + m_t_phase_2*p + m_t_phase_3*(b*(-tau_3 + time) + p))",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Susceptible_unconfined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "outcome": {
+      "name": "Susceptible_confined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ncit:C25549"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Susceptible_unconfined*beta*(1.0 - sigma)*(Infected_reported*n + Infected_unreported)",
+     "type": "GroupedControlledConversion",
+     "controllers": [
+      {
+       "name": "Infected_reported",
+       "identifiers": {
+        "ncit": "C171133",
+        "ido": "0000511"
+       },
+       "context": {}
+      },
+      {
+       "name": "Infected_unreported",
+       "identifiers": {
+        "ido": "0000511",
+        "ncit": "C171133"
+       },
+       "context": {
+        "property": "ncit:C43234"
+       }
+      }
+     ],
+     "subject": {
+      "name": "Susceptible_unconfined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "outcome": {
+      "name": "Exposed",
+      "identifiers": {
+       "ido": "0000514",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Susceptible_unconfined*beta*sigma*(Infected_reported*n + Infected_unreported)",
+     "type": "GroupedControlledConversion",
+     "controllers": [
+      {
+       "name": "Infected_reported",
+       "identifiers": {
+        "ncit": "C171133",
+        "ido": "0000511"
+       },
+       "context": {}
+      },
+      {
+       "name": "Infected_unreported",
+       "identifiers": {
+        "ido": "0000511",
+        "ncit": "C171133"
+       },
+       "context": {
+        "property": "ncit:C43234"
+       }
+      }
+     ],
+     "subject": {
+      "name": "Susceptible_unconfined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "outcome": {
+      "name": "Quarantined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ncit:C71902"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Quarantined*XXlambdaXX*theta",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Quarantined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ncit:C71902"
+      }
+     },
+     "outcome": {
+      "name": "Infected_reported",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Exposed*f*mu",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Exposed",
+      "identifiers": {
+       "ido": "0000514",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     "outcome": {
+      "name": "Infected_reported",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Exposed*mu*(1.0 - f)",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Exposed",
+      "identifiers": {
+       "ido": "0000514",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     "outcome": {
+      "name": "Infected_unreported",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ncit:C43234"
+      }
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Infected_reported*eta_r",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Infected_reported",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     "outcome": {
+      "name": "Recovered",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Infected_unreported*eta_u",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Infected_unreported",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ncit:C43234"
+      }
+     },
+     "outcome": {
+      "name": "Recovered",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "XXlambdaXX*theta*(1.0 - Quarantined)",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Quarantined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ncit:C71902"
+      }
+     },
+     "outcome": {
+      "name": "Susceptible_unconfined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "provenance": []
+    }
+   ],
+   "parameters": {
+    "p": {
+     "name": "p",
+     "identifiers": {},
+     "context": {},
+     "value": 0.93
+    },
+    "f": {
+     "name": "f",
+     "identifiers": {},
+     "context": {},
+     "value": 0.2
+    },
+    "n": {
+     "name": "n",
+     "identifiers": {},
+     "context": {},
+     "value": 0.5
+    },
+    "q": {
+     "name": "q",
+     "identifiers": {},
+     "context": {},
+     "value": 0.83
+    },
+    "sigma": {
+     "name": "sigma",
+     "identifiers": {},
+     "context": {},
+     "value": 0.2
+    },
+    "beta": {
+     "name": "beta",
+     "identifiers": {},
+     "context": {},
+     "value": 2.115e-08
+    },
+    "mu": {
+     "name": "mu",
+     "identifiers": {},
+     "context": {},
+     "value": 0.2
+    },
+    "eta_r": {
+     "name": "eta_r",
+     "identifiers": {},
+     "context": {},
+     "value": 0.1
+    },
+    "eta_u": {
+     "name": "eta_u",
+     "identifiers": {},
+     "context": {},
+     "value": 0.25
+    },
+    "theta": {
+     "name": "theta",
+     "identifiers": {},
+     "context": {},
+     "value": 0.07142857
+    },
+    "m_t": {
+     "name": "m_t",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "tau_1": {
+     "name": "tau_1",
+     "identifiers": {},
+     "context": {},
+     "value": 21.0
+    },
+    "tau_2": {
+     "name": "tau_2",
+     "identifiers": {},
+     "context": {},
+     "value": 47.0
+    },
+    "tau_3": {
+     "name": "tau_3",
+     "identifiers": {},
+     "context": {},
+     "value": 76.0
+    },
+    "tau_f": {
+     "name": "tau_f",
+     "identifiers": {},
+     "context": {},
+     "value": 189.0
+    },
+    "a": {
+     "name": "a",
+     "identifiers": {},
+     "context": {},
+     "value": 0.102279232189722
+    },
+    "b": {
+     "name": "b",
+     "identifiers": {},
+     "context": {},
+     "value": -0.00823008849557522
+    },
+    "m_t_phase_1": {
+     "name": "m_t_phase_1",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "m_t_phase_2": {
+     "name": "m_t_phase_2",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "m_t_phase_3": {
+     "name": "m_t_phase_3",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "_1": {
+     "name": "_1",
+     "identifiers": {},
+     "context": {},
+     "value": 1.0
+    },
+    "XXlambdaXX": {
+     "name": "XXlambdaXX",
+     "identifiers": {},
+     "context": {},
+     "value": 0.3
+    }
+   },
+   "initials": {
+    "Susceptible_confined": {
+     "concept": {
+      "name": "Susceptible_confined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ncit:C25549"
+      }
+     },
+     "value": 0.0
+    },
+    "Susceptible_unconfined": {
+     "concept": {
+      "name": "Susceptible_unconfined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "value": 66990000.0
+    },
+    "Exposed": {
+     "concept": {
+      "name": "Exposed",
+      "identifiers": {
+       "ido": "0000514",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     "value": 112.0
+    },
+    "Infected_reported": {
+     "concept": {
+      "name": "Infected_reported",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     "value": 12.0
+    },
+    "Infected_unreported": {
+     "concept": {
+      "name": "Infected_unreported",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ncit:C43234"
+      }
+     },
+     "value": 50.0
+    },
+    "Recovered": {
+     "concept": {
+      "name": "Recovered",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     "value": 0.0
+    },
+    "Quarantined": {
+     "concept": {
+      "name": "Quarantined",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ncit:C71902"
+      }
+     },
+     "value": 36.0
+    }
+   }
+  },
+  "3": {
+   "templates": [
+    {
+     "rate_law": "Infected*Susceptible*beta/(Recovered*alpha + 1.0)",
+     "type": "GroupedControlledConversion",
+     "controllers": [
+      {
+       "name": "Recovered",
+       "identifiers": {
+        "ncit": "C171133",
+        "ido": "0000621"
+       },
+       "context": {}
+      },
+      {
+       "name": "Infected",
+       "identifiers": {
+        "ncit": "C171133",
+        "ido": "0000511"
+       },
+       "context": {}
+      }
+     ],
+     "subject": {
+      "name": "Susceptible",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "outcome": {
+      "name": "Infected",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     "provenance": []
+    },
+    {
+     "rate_law": "Infected*k1",
+     "type": "NaturalConversion",
+     "subject": {
+      "name": "Infected",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     "outcome": {
+      "name": "Recovered",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000621"
+      },
+      "context": {}
+     },
+     "provenance": []
+    }
+   ],
+   "parameters": {
+    "alpha": {
+     "name": "alpha",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "beta": {
+     "name": "beta",
+     "identifiers": {},
+     "context": {},
+     "value": 0.25
+    },
+    "gamma": {
+     "name": "gamma",
+     "identifiers": {},
+     "context": {},
+     "value": 0.1
+    },
+    "Epidemic_size": {
+     "name": "Epidemic_size",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "Uninfected": {
+     "name": "Uninfected",
+     "identifiers": {},
+     "context": {},
+     "value": 0.0
+    },
+    "Country": {
+     "name": "Country",
+     "identifiers": {},
+     "context": {},
+     "value": 1.0
+    }
+   },
+   "initials": {
+    "Susceptible": {
+     "concept": {
+      "name": "Susceptible",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000514"
+      },
+      "context": {}
+     },
+     "value": 0.999
+    },
+    "Infected": {
+     "concept": {
+      "name": "Infected",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     "value": 0.001
+    },
+    "Recovered": {
+     "concept": {
+      "name": "Recovered",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000621"
+      },
+      "context": {}
+     },
+     "value": 0.0
+    }
+   }
+  }
+ },
+ "nodes": {
+  "0": {
+   "0": {
+    "rate_law": "Susceptible*(Ailing*gamma + Diagnosed*beta + Infected*alpha + Recognized*delta)",
+    "type": "GroupedControlledConversion",
+    "controllers": [
+     {
+      "name": "Diagnosed",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C15220"
+      }
+     },
+     {
+      "name": "Ailing",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     {
+      "name": "Recognized",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C25587",
+       "disease_status": "ncit:C25269"
+      }
+     },
+     {
+      "name": "Infected",
+      "identifiers": {
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ncit:C113725",
+       "disease_status": "ncit:C3833"
+      }
+     }
+    ],
+    "subject": {
+     "name": "Susceptible",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "outcome": {
+     "name": "Infected",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C113725",
+      "disease_status": "ncit:C3833"
+     }
+    },
+    "provenance": []
+   },
+   "1": {
+    "name": "Diagnosed",
+    "identifiers": {
+     "ido": "0000511"
+    },
+    "context": {
+     "property": "ncit:C15220"
+    }
+   },
+   "2": {
+    "name": "Ailing",
+    "identifiers": {
+     "ido": "0000511"
+    },
+    "context": {
+     "property": "ncit:C113725",
+     "disease_status": "ncit:C25269"
+    }
+   },
+   "3": {
+    "name": "Recognized",
+    "identifiers": {
+     "ido": "0000511"
+    },
+    "context": {
+     "property": "ncit:C25587",
+     "disease_status": "ncit:C25269"
+    }
+   },
+   "4": {
+    "name": "Infected",
+    "identifiers": {
+     "ido": "0000511"
+    },
+    "context": {
+     "property": "ncit:C113725",
+     "disease_status": "ncit:C3833"
+    }
+   },
+   "5": {
+    "name": "Susceptible",
+    "identifiers": {
+     "ido": "0000514"
+    },
+    "context": {}
+   },
+   "6": {
+    "rate_law": "Infected*epsilon",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Infected",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C113725",
+      "disease_status": "ncit:C3833"
+     }
+    },
+    "outcome": {
+     "name": "Diagnosed",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C15220"
+     }
+    },
+    "provenance": []
+   },
+   "7": {
+    "rate_law": "Infected*zeta",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Infected",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C113725",
+      "disease_status": "ncit:C3833"
+     }
+    },
+    "outcome": {
+     "name": "Ailing",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C113725",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "provenance": []
+   },
+   "8": {
+    "rate_law": "Infected*XXlambdaXX",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Infected",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C113725",
+      "disease_status": "ncit:C3833"
+     }
+    },
+    "outcome": {
+     "name": "Healed",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "9": {
+    "name": "Healed",
+    "identifiers": {
+     "ido": "0000592"
+    },
+    "context": {}
+   },
+   "10": {
+    "rate_law": "Diagnosed*eta",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Diagnosed",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C15220"
+     }
+    },
+    "outcome": {
+     "name": "Recognized",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C25587",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "provenance": []
+   },
+   "11": {
+    "rate_law": "Diagnosed*rho",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Diagnosed",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C15220"
+     }
+    },
+    "outcome": {
+     "name": "Healed",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "12": {
+    "rate_law": "Ailing*theta",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Ailing",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C113725",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "outcome": {
+     "name": "Recognized",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C25587",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "provenance": []
+   },
+   "13": {
+    "rate_law": "Ailing*kappa",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Ailing",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C113725",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "outcome": {
+     "name": "Healed",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "14": {
+    "rate_law": "Ailing*mu",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Ailing",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C113725",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "outcome": {
+     "name": "Threatened",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C15220",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "provenance": []
+   },
+   "15": {
+    "name": "Threatened",
+    "identifiers": {
+     "ido": "0000511"
+    },
+    "context": {
+     "property": "ncit:C15220",
+     "disease_status": "ncit:C25269"
+    }
+   },
+   "16": {
+    "rate_law": "Recognized*nu",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Recognized",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C25587",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "outcome": {
+     "name": "Threatened",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C15220",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "provenance": []
+   },
+   "17": {
+    "rate_law": "Recognized*xi",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Recognized",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C25587",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "outcome": {
+     "name": "Healed",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "18": {
+    "rate_law": "Threatened*tau",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Threatened",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C15220",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "outcome": {
+     "name": "Extinct",
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "19": {
+    "name": "Extinct",
+    "identifiers": {
+     "ncit": "C28554"
+    },
+    "context": {}
+   },
+   "20": {
+    "rate_law": "Threatened*sigma",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Threatened",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C15220",
+      "disease_status": "ncit:C25269"
+     }
+    },
+    "outcome": {
+     "name": "Healed",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   }
+  },
+  "1": {
+   "0": {
+    "rate_law": "susceptible*transmission_rate_effective*(1 - delta)*(1 - eps)*(alpha*asymptomatic + symptomatic)/(asymptomatic + exposed + recovered + susceptible + symptomatic)",
+    "type": "GroupedControlledConversion",
+    "controllers": [
+     {
+      "name": "asymptomatic",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ido:0000569"
+      }
+     },
+     {
+      "name": "exposed",
+      "identifiers": {
+       "ido": "0000514"
+      },
+      "context": {
+       "property": "ido:0000597"
+      }
+     },
+     {
+      "name": "recovered",
+      "identifiers": {
+       "ido": "0000592"
+      },
+      "context": {}
+     },
+     {
+      "name": "symptomatic",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {
+       "property": "ido:0000573"
+      }
+     }
+    ],
+    "subject": {
+     "name": "susceptible",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "outcome": {
+     "name": "exposed",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "property": "ido:0000597"
+     }
+    },
+    "provenance": []
+   },
+   "1": {
+    "name": "asymptomatic",
+    "identifiers": {
+     "ido": "0000511",
+     "ncit": "C171133"
+    },
+    "context": {
+     "property": "ido:0000569"
+    }
+   },
+   "2": {
+    "name": "exposed",
+    "identifiers": {
+     "ido": "0000514"
+    },
+    "context": {
+     "property": "ido:0000597"
+    }
+   },
+   "3": {
+    "name": "recovered",
+    "identifiers": {
+     "ido": "0000592"
+    },
+    "context": {}
+   },
+   "4": {
+    "name": "symptomatic",
+    "identifiers": {
+     "ncit": "C171133",
+     "ido": "0000511"
+    },
+    "context": {
+     "property": "ido:0000573"
+    }
+   },
+   "5": {
+    "name": "susceptible",
+    "identifiers": {
+     "ido": "0000514"
+    },
+    "context": {}
+   },
+   "6": {
+    "rate_law": "exposed*sigma*(1.0 - nu)",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "exposed",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "property": "ido:0000597"
+     }
+    },
+    "outcome": {
+     "name": "symptomatic",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ido:0000573"
+     }
+    },
+    "provenance": []
+   },
+   "7": {
+    "rate_law": "exposed*nu*sigma",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "exposed",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "property": "ido:0000597"
+     }
+    },
+    "outcome": {
+     "name": "asymptomatic",
+     "identifiers": {
+      "ido": "0000511",
+      "ncit": "C171133"
+     },
+     "context": {
+      "property": "ido:0000569"
+     }
+    },
+    "provenance": []
+   },
+   "8": {
+    "rate_law": "psi*symptomatic",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "symptomatic",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ido:0000573"
+     }
+    },
+    "outcome": {
+     "name": "detected",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C16210"
+     }
+    },
+    "provenance": []
+   },
+   "9": {
+    "name": "detected",
+    "identifiers": {
+     "ido": "0000511"
+    },
+    "context": {
+     "property": "ncit:C16210"
+    }
+   },
+   "10": {
+    "rate_law": "asymptomatic*theta",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "asymptomatic",
+     "identifiers": {
+      "ido": "0000511",
+      "ncit": "C171133"
+     },
+     "context": {
+      "property": "ido:0000569"
+     }
+    },
+    "outcome": {
+     "name": "detected",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C16210"
+     }
+    },
+    "provenance": []
+   },
+   "11": {
+    "rate_law": "gamma_0*symptomatic",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "symptomatic",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ido:0000573"
+     }
+    },
+    "outcome": {
+     "name": "recovered",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "12": {
+    "rate_law": "asymptomatic*gamma_a",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "asymptomatic",
+     "identifiers": {
+      "ido": "0000511",
+      "ncit": "C171133"
+     },
+     "context": {
+      "property": "ido:0000569"
+     }
+    },
+    "outcome": {
+     "name": "recovered",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "13": {
+    "rate_law": "detected*gamma_i",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "detected",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C16210"
+     }
+    },
+    "outcome": {
+     "name": "recovered",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "14": {
+    "rate_law": "d_0*symptomatic",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "symptomatic",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ido:0000573"
+     }
+    },
+    "outcome": {
+     "name": "deceased",
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "15": {
+    "name": "deceased",
+    "identifiers": {
+     "ncit": "C28554"
+    },
+    "context": {}
+   },
+   "16": {
+    "rate_law": "d_D*detected",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "detected",
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "property": "ncit:C16210"
+     }
+    },
+    "outcome": {
+     "name": "deceased",
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {}
+    },
+    "provenance": []
+   }
+  },
+  "2": {
+   "0": {
+    "rate_law": "Susceptible_confined*(-m_t_phase_1*(1 - exp(-a*(-tau_1 + time))) - m_t_phase_2*p - m_t_phase_3*(b*(-tau_3 + time) + p) + 1.0)",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Susceptible_confined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "property": "ncit:C25549"
+     }
+    },
+    "outcome": {
+     "name": "Susceptible_unconfined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "1": {
+    "name": "Susceptible_confined",
+    "identifiers": {
+     "ido": "0000514"
+    },
+    "context": {
+     "property": "ncit:C25549"
+    }
+   },
+   "2": {
+    "name": "Susceptible_unconfined",
+    "identifiers": {
+     "ido": "0000514"
+    },
+    "context": {}
+   },
+   "3": {
+    "rate_law": "Susceptible_unconfined*(m_t_phase_1*(1 - exp(-a*(-tau_1 + time))) + m_t_phase_2*p + m_t_phase_3*(b*(-tau_3 + time) + p))",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Susceptible_unconfined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "outcome": {
+     "name": "Susceptible_confined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "property": "ncit:C25549"
+     }
+    },
+    "provenance": []
+   },
+   "4": {
+    "rate_law": "Susceptible_unconfined*beta*(1.0 - sigma)*(Infected_reported*n + Infected_unreported)",
+    "type": "GroupedControlledConversion",
+    "controllers": [
+     {
+      "name": "Infected_reported",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     {
+      "name": "Infected_unreported",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ncit:C43234"
+      }
+     }
+    ],
+    "subject": {
+     "name": "Susceptible_unconfined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "outcome": {
+     "name": "Exposed",
+     "identifiers": {
+      "ido": "0000514",
+      "ncit": "C171133"
+     },
+     "context": {
+      "property": "ido:0000597"
+     }
+    },
+    "provenance": []
+   },
+   "5": {
+    "name": "Infected_reported",
+    "identifiers": {
+     "ncit": "C171133",
+     "ido": "0000511"
+    },
+    "context": {}
+   },
+   "6": {
+    "name": "Infected_unreported",
+    "identifiers": {
+     "ido": "0000511",
+     "ncit": "C171133"
+    },
+    "context": {
+     "property": "ncit:C43234"
+    }
+   },
+   "7": {
+    "name": "Exposed",
+    "identifiers": {
+     "ido": "0000514",
+     "ncit": "C171133"
+    },
+    "context": {
+     "property": "ido:0000597"
+    }
+   },
+   "8": {
+    "rate_law": "Susceptible_unconfined*beta*sigma*(Infected_reported*n + Infected_unreported)",
+    "type": "GroupedControlledConversion",
+    "controllers": [
+     {
+      "name": "Infected_reported",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     },
+     {
+      "name": "Infected_unreported",
+      "identifiers": {
+       "ido": "0000511",
+       "ncit": "C171133"
+      },
+      "context": {
+       "property": "ncit:C43234"
+      }
+     }
+    ],
+    "subject": {
+     "name": "Susceptible_unconfined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "outcome": {
+     "name": "Quarantined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "property": "ncit:C71902"
+     }
+    },
+    "provenance": []
+   },
+   "9": {
+    "name": "Quarantined",
+    "identifiers": {
+     "ido": "0000514"
+    },
+    "context": {
+     "property": "ncit:C71902"
+    }
+   },
+   "10": {
+    "rate_law": "Quarantined*XXlambdaXX*theta",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Quarantined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "property": "ncit:C71902"
+     }
+    },
+    "outcome": {
+     "name": "Infected_reported",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "11": {
+    "rate_law": "Exposed*f*mu",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Exposed",
+     "identifiers": {
+      "ido": "0000514",
+      "ncit": "C171133"
+     },
+     "context": {
+      "property": "ido:0000597"
+     }
+    },
+    "outcome": {
+     "name": "Infected_reported",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "12": {
+    "rate_law": "Exposed*mu*(1.0 - f)",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Exposed",
+     "identifiers": {
+      "ido": "0000514",
+      "ncit": "C171133"
+     },
+     "context": {
+      "property": "ido:0000597"
+     }
+    },
+    "outcome": {
+     "name": "Infected_unreported",
+     "identifiers": {
+      "ido": "0000511",
+      "ncit": "C171133"
+     },
+     "context": {
+      "property": "ncit:C43234"
+     }
+    },
+    "provenance": []
+   },
+   "13": {
+    "rate_law": "Infected_reported*eta_r",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Infected_reported",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {}
+    },
+    "outcome": {
+     "name": "Recovered",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "14": {
+    "name": "Recovered",
+    "identifiers": {
+     "ido": "0000592"
+    },
+    "context": {}
+   },
+   "15": {
+    "rate_law": "Infected_unreported*eta_u",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Infected_unreported",
+     "identifiers": {
+      "ido": "0000511",
+      "ncit": "C171133"
+     },
+     "context": {
+      "property": "ncit:C43234"
+     }
+    },
+    "outcome": {
+     "name": "Recovered",
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "16": {
+    "rate_law": "XXlambdaXX*theta*(1.0 - Quarantined)",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Quarantined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "property": "ncit:C71902"
+     }
+    },
+    "outcome": {
+     "name": "Susceptible_unconfined",
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "provenance": []
+   }
+  },
+  "3": {
+   "0": {
+    "rate_law": "Infected*Susceptible*beta/(Recovered*alpha + 1.0)",
+    "type": "GroupedControlledConversion",
+    "controllers": [
+     {
+      "name": "Recovered",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000621"
+      },
+      "context": {}
+     },
+     {
+      "name": "Infected",
+      "identifiers": {
+       "ncit": "C171133",
+       "ido": "0000511"
+      },
+      "context": {}
+     }
+    ],
+    "subject": {
+     "name": "Susceptible",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "outcome": {
+     "name": "Infected",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {}
+    },
+    "provenance": []
+   },
+   "1": {
+    "name": "Recovered",
+    "identifiers": {
+     "ncit": "C171133",
+     "ido": "0000621"
+    },
+    "context": {}
+   },
+   "2": {
+    "name": "Infected",
+    "identifiers": {
+     "ncit": "C171133",
+     "ido": "0000511"
+    },
+    "context": {}
+   },
+   "3": {
+    "name": "Susceptible",
+    "identifiers": {
+     "ncit": "C171133",
+     "ido": "0000514"
+    },
+    "context": {}
+   },
+   "4": {
+    "rate_law": "Infected*k1",
+    "type": "NaturalConversion",
+    "subject": {
+     "name": "Infected",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000511"
+     },
+     "context": {}
+    },
+    "outcome": {
+     "name": "Recovered",
+     "identifiers": {
+      "ncit": "C171133",
+      "ido": "0000621"
+     },
+     "context": {}
+    },
+    "provenance": []
+   }
+  }
+ },
+ "inter_model_edges": [
+  [
+   [
+    0,
+    15
+   ],
+   [
+    0,
+    1
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    2
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    2
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    3
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    3
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    4
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    4
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    0,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    5
+   ],
+   [
+    1,
+    5
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    2,
+    1
+   ],
+   [
+    0,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    5
+   ],
+   [
+    2,
+    2
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    2,
+    7
+   ],
+   [
+    0,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    9
+   ],
+   [
+    0,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    5
+   ],
+   [
+    3,
+    3
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    0,
+    8
+   ],
+   [
+    2,
+    13
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    9
+   ],
+   [
+    1,
+    3
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    0,
+    9
+   ],
+   [
+    2,
+    14
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    0,
+    11
+   ],
+   [
+    2,
+    13
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    13
+   ],
+   [
+    2,
+    13
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    15
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    15
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    17
+   ],
+   [
+    2,
+    13
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    0,
+    19
+   ],
+   [
+    1,
+    15
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    0,
+    20
+   ],
+   [
+    2,
+    13
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    7
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    14
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    1,
+    4
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    4
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    5
+   ],
+   [
+    2,
+    2
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    2,
+    7
+   ],
+   [
+    1,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    9
+   ],
+   [
+    1,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    5
+   ],
+   [
+    3,
+    3
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    1,
+    6
+   ],
+   [
+    2,
+    11
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    7
+   ],
+   [
+    2,
+    11
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    9
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    11
+   ],
+   [
+    2,
+    13
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    12
+   ],
+   [
+    2,
+    13
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    1,
+    13
+   ],
+   [
+    2,
+    13
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    3
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    7
+   ],
+   [
+    2,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    9
+   ],
+   [
+    2,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    2,
+    6
+   ],
+   [
+    2,
+    5
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    5
+   ],
+   [
+    3,
+    2
+   ],
+   "is_equal"
+  ],
+  [
+   [
+    2,
+    6
+   ],
+   [
+    3,
+    2
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    7
+   ],
+   [
+    3,
+    3
+   ],
+   "refinement_of"
+  ],
+  [
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    3
+   ],
+   "refinement_of"
+  ]
+ ],
+ "intra_model_edges": [
+  [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    0,
+    5
+   ],
+   [
+    0,
+    0
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    4
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    6
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    6
+   ],
+   [
+    0,
+    1
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    7
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    7
+   ],
+   [
+    0,
+    2
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    8
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    8
+   ],
+   [
+    0,
+    9
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    10
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    10
+   ],
+   [
+    0,
+    3
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    11
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    11
+   ],
+   [
+    0,
+    9
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    12
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    12
+   ],
+   [
+    0,
+    3
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    13
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    13
+   ],
+   [
+    0,
+    9
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    14
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    14
+   ],
+   [
+    0,
+    15
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    16
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    16
+   ],
+   [
+    0,
+    15
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    17
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    17
+   ],
+   [
+    0,
+    9
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    15
+   ],
+   [
+    0,
+    18
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    18
+   ],
+   [
+    0,
+    19
+   ],
+   "outcome"
+  ],
+  [
+   [
+    0,
+    15
+   ],
+   [
+    0,
+    20
+   ],
+   "subject"
+  ],
+  [
+   [
+    0,
+    20
+   ],
+   [
+    0,
+    9
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    0
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    2
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    6
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    4
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    7
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    1
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    8
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    9
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    10
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    10
+   ],
+   [
+    1,
+    9
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    11
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    11
+   ],
+   [
+    1,
+    3
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    12
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    12
+   ],
+   [
+    1,
+    3
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    9
+   ],
+   [
+    1,
+    13
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    13
+   ],
+   [
+    1,
+    3
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    14
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    14
+   ],
+   [
+    1,
+    15
+   ],
+   "outcome"
+  ],
+  [
+   [
+    1,
+    9
+   ],
+   [
+    1,
+    16
+   ],
+   "subject"
+  ],
+  [
+   [
+    1,
+    16
+   ],
+   [
+    1,
+    15
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    0
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    0
+   ],
+   [
+    2,
+    2
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    3
+   ],
+   [
+    2,
+    1
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    5
+   ],
+   [
+    2,
+    4
+   ],
+   "controllers"
+  ],
+  [
+   [
+    2,
+    6
+   ],
+   [
+    2,
+    4
+   ],
+   "controllers"
+  ],
+  [
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    4
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    4
+   ],
+   [
+    2,
+    7
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    5
+   ],
+   [
+    2,
+    8
+   ],
+   "controllers"
+  ],
+  [
+   [
+    2,
+    6
+   ],
+   [
+    2,
+    8
+   ],
+   "controllers"
+  ],
+  [
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    8
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    8
+   ],
+   [
+    2,
+    9
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    9
+   ],
+   [
+    2,
+    10
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    10
+   ],
+   [
+    2,
+    5
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    7
+   ],
+   [
+    2,
+    11
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    11
+   ],
+   [
+    2,
+    5
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    7
+   ],
+   [
+    2,
+    12
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    12
+   ],
+   [
+    2,
+    6
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    5
+   ],
+   [
+    2,
+    13
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    13
+   ],
+   [
+    2,
+    14
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    6
+   ],
+   [
+    2,
+    15
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    15
+   ],
+   [
+    2,
+    14
+   ],
+   "outcome"
+  ],
+  [
+   [
+    2,
+    9
+   ],
+   [
+    2,
+    16
+   ],
+   "subject"
+  ],
+  [
+   [
+    2,
+    16
+   ],
+   [
+    2,
+    2
+   ],
+   "outcome"
+  ],
+  [
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    0
+   ],
+   "controllers"
+  ],
+  [
+   [
+    3,
+    3
+   ],
+   [
+    3,
+    0
+   ],
+   "subject"
+  ],
+  [
+   [
+    3,
+    0
+   ],
+   [
+    3,
+    2
+   ],
+   "outcome"
+  ],
+  [
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    4
+   ],
+   "subject"
+  ],
+  [
+   [
+    3,
+    4
+   ],
+   [
+    3,
+    1
+   ],
+   "outcome"
+  ]
+ ]
+}

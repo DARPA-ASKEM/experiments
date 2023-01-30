@@ -103,7 +103,7 @@ for i, (doi, source, info) in tqdm(models.iterrows()):
     # Create artifact directory if not exist
     path = f'../../thin-thread-examples/{source}/{info}'
     if os.path.exists(path) == False:
-        os.mkdir(path)
+        os.makedirs(path)
 
     # Write artifact files
     for data, filename in zip([doi, xdd_gddid, model_sbml, model_mmt, model_mmt_templates, model_mmt_parameters, model_mmt_initials, model_petri], ['document_doi.txt', 'document_xdd_gddid.txt', main_filename, 'model_mmt.json', 'model_mmt_templates.json', 'model_mmt_parameters.json', 'model_mmt_initials.json', 'model_petri.json']):
@@ -192,5 +192,40 @@ for info in tqdm(('CHIME-SIR', 'CHIME-SVIIvR', 'Bucky')):
         else:
             print(f'Error: {info} {filename} data = None')
 
-
 # %%
+# Plot models
+
+NUM_MODELS = len(models_id)
+models = {}
+
+for i, (__, __, info) in model_list.iterrows():
+
+    if i < NUM_MODELS:
+
+        path = f'../../thin-thread-examples/biomodels/{info}'
+        models[info] = {}
+
+        # SBML XML as pretty string
+        root, dirs, files = next(os.walk(path + "/src/main"))
+        models[info]['SBML'] = etree.tostring(etree.parse(os.path.join(root, files[0])), pretty_print = True, encoding = str)
+
+        # MMT templates JSON
+        with open(path + '/model_mmt_templates.json', 'r') as f:
+            models[info]['MMT'] = json.load(f)['templates']
+
+        # Petri net JSON
+        with open(path + f'/model_petri.json', 'r') as f:
+            models[info]['Petri'] = json.load(f)
+
+        for rep in ('MMT', 'Petri'):
+
+            #  source-target DataFrame
+            models[info][f'{rep}_df'] = build_mira_df(models[info][rep], rep = rep)
+
+            # NetworkX graph
+            models[info][f'{rep}_G'] = build_graph(models[info][f'{rep}_df'])
+
+            # HyperNetX hypergraph
+            models[info][f'{rep}_H'] = build_hypergraph(models[info][rep], rep = rep)
+        
+

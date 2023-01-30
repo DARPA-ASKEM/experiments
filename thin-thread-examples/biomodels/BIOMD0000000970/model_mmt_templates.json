@@ -1,35 +1,17 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*(Exposed*Susceptible*beta_2*r_2 + Infected*Susceptible*beta_1*r_1)/Total_Population",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "Infected",
-                    "identifiers": {
-                        "ido": "0000511",
-                        "ncit": "C171133",
-                        "biomodels.species": "BIOMD0000000970:Infected"
-                    },
-                    "context": {}
+            "rate_law": "9.02445627650934e-8*Infected*Susceptible*beta_1*r_1",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000970:Infected"
                 },
-                {
-                    "name": "Total_Population",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000970:Total_Population"
-                    },
-                    "context": {}
-                },
-                {
-                    "name": "Exposed",
-                    "identifiers": {
-                        "ncit": "C171133",
-                        "ido": "0000597",
-                        "biomodels.species": "BIOMD0000000970:Exposed"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
             "subject": {
                 "name": "Susceptible",
                 "identifiers": {
@@ -51,7 +33,39 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*alpha",
+            "rate_law": "9.02445627650934e-8*Exposed*Susceptible*beta_2*r_2",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000597",
+                    "biomodels.species": "BIOMD0000000970:Exposed"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000970:Susceptible"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000597",
+                    "biomodels.species": "BIOMD0000000970:Exposed"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "Exposed*alpha",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
@@ -74,7 +88,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*gamma",
+            "rate_law": "Infected*gamma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",
@@ -88,12 +102,9 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "ncit": "C171133",
-                    "biomodels.species": "BIOMD0000000970:Recovered"
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "provenance": []
         }

@@ -44,8 +44,8 @@
         },
         {
             "sname": "recovered_tested",
-            "mira_ids": "[]",
-            "mira_context": "[('property', 'ido:0000621')]",
+            "mira_ids": "[('identity', 'ido:0000592')]",
+            "mira_context": "[]",
             "mira_initial_value": "0.0"
         },
         {
@@ -59,12 +59,6 @@
             "mira_ids": "[('identity', 'ido:0000514')]",
             "mira_context": "[]",
             "mira_initial_value": "1.0"
-        },
-        {
-            "sname": "total_population",
-            "mira_ids": "[]",
-            "mira_context": "[]",
-            "mira_initial_value": "630003.0"
         },
         {
             "sname": "dead_noncorona",
@@ -83,7 +77,7 @@
         {
             "tname": "t1",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('uninfected_nontested', ('identity', 'efo:0001460'), ('property', 'ncit:C101887')), ('infected_nontested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C101887')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
@@ -95,7 +89,7 @@
         {
             "tname": "t3",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('uninfected_tested', ('identity', 'efo:0001460'), ('property', 'ncit:C47891')), ('infected_nontested', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C101887')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_3",
             "parameter_value": null
         },
         {
@@ -142,7 +136,7 @@
         },
         {
             "tname": "t11",
-            "template_type": "ControlledConversion",
+            "template_type": "NaturalConversion",
             "parameter_name": "Birth_rate",
             "parameter_value": "3.29e-05"
         },
@@ -231,10 +225,6 @@
             "it": 10
         },
         {
-            "is": 11,
-            "it": 11
-        },
-        {
             "is": 10,
             "it": 11
         },
@@ -309,23 +299,19 @@
             "ot": 10
         },
         {
-            "os": 11,
-            "ot": 11
-        },
-        {
             "os": 1,
             "ot": 11
         },
         {
-            "os": 12,
+            "os": 11,
             "ot": 12
         },
         {
-            "os": 12,
+            "os": 11,
             "ot": 13
         },
         {
-            "os": 12,
+            "os": 11,
             "ot": 14
         },
         {
@@ -333,15 +319,15 @@
             "ot": 15
         },
         {
-            "os": 13,
+            "os": 12,
             "ot": 16
         },
         {
-            "os": 12,
+            "os": 11,
             "ot": 17
         },
         {
-            "os": 13,
+            "os": 12,
             "ot": 18
         }
     ]

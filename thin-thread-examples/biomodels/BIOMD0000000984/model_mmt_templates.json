@@ -1,26 +1,17 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Infected*Susceptible*beta_o*k/Total_population",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "Infected",
-                    "identifiers": {
-                        "ido": "0000511",
-                        "ncit": "C171133",
-                        "biomodels.species": "BIOMD0000000984:Infected"
-                    },
-                    "context": {}
+            "rate_law": "1.0e-7*Infected*Susceptible*beta_o*k",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000984:Infected"
                 },
-                {
-                    "name": "Total_population",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000984:Total_population"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
             "subject": {
                 "name": "Susceptible",
                 "identifiers": {
@@ -42,7 +33,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*omega",
+            "rate_law": "Exposed*omega",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
@@ -66,7 +57,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*gamma",
+            "rate_law": "Infected*gamma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",

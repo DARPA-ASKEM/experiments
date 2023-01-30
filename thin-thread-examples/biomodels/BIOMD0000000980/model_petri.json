@@ -34,8 +34,8 @@
     "T": [
         {
             "tname": "t1",
-            "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'ncit:C171133'), ('property', 'ncit:0000597')), ('Total_population', ('Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'))), 'GroupedControlledConversion', 'rate')",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
@@ -63,10 +63,6 @@
             "it": 1
         },
         {
-            "is": 4,
-            "it": 1
-        },
-        {
             "is": 1,
             "it": 1
         },
@@ -86,10 +82,6 @@
     "O": [
         {
             "os": 3,
-            "ot": 1
-        },
-        {
-            "os": 4,
             "ot": 1
         },
         {

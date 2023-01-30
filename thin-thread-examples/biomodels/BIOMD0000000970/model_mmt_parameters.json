@@ -41,6 +41,12 @@
             "identifiers": {},
             "context": {},
             "value": 1.0
+        },
+        "Total_Population": {
+            "name": "Total_Population",
+            "identifiers": {},
+            "context": {},
+            "value": 11081000.0
         }
     }
 }

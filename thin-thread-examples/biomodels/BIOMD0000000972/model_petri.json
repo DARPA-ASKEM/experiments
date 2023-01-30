@@ -38,8 +38,8 @@
         },
         {
             "sname": "Recovered",
-            "mira_ids": "[]",
-            "mira_context": "[('property', 'ido:0000621')]",
+            "mira_ids": "[('identity', 'ido:0000592')]",
+            "mira_context": "[]",
             "mira_initial_value": "1898.36"
         },
         {
@@ -53,13 +53,13 @@
         {
             "tname": "t1",
             "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'ido:0000514'), ('property', 'ido:0000597')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000569'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
             "tname": "t2",
             "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('identity', 'ncit:C71902')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000569'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_name": "p_petri_2",
             "parameter_value": null
         },
         {
@@ -71,19 +71,19 @@
         {
             "tname": "t4",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Exposed', ('identity', 'ido:0000514'), ('property', 'ido:0000597')), ('Infected', ('identity', 'ido:0000511')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_4",
             "parameter_value": null
         },
         {
             "tname": "t5",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Exposed', ('identity', 'ido:0000514'), ('property', 'ido:0000597')), ('Asymptomatic', ('identity', 'ido:0000569')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_5",
             "parameter_value": null
         },
         {
             "tname": "t6",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Infected', ('identity', 'ido:0000511')), ('Hospitalised', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'), ('property', 'ncit:C25179')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_6",
             "parameter_value": null
         },
         {
@@ -119,7 +119,7 @@
         {
             "tname": "t12",
             "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed_quarantined', ('identity', 'ido:0000514'), ('identity', 'ncit:C71902'), ('property', 'ido:0000597')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000569'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_name": "p_petri_12",
             "parameter_value": null
         },
         {

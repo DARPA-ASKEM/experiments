@@ -1,7 +1,7 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Infected*Susceptible*beta*(1.0 - epsilon)/N",
+            "rate_law": "Infected*Susceptible*beta*(1.0 - epsilon)/N",
             "type": "ControlledConversion",
             "controller": {
                 "name": "Infected",
@@ -32,7 +32,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*sigma",
+            "rate_law": "Exposed*sigma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
@@ -55,7 +55,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*gamma",
+            "rate_law": "Infected*gamma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",
@@ -69,11 +69,10 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "biomodels.species": "BIOMD0000000978:Recovered"
+                    "biomodels.species": "BIOMD0000000978:Recovered",
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "provenance": []
         }
@@ -129,9 +128,51 @@
         }
     },
     "initials": {
-        "Susceptible": 36196938.0,
-        "Exposed": 0.0,
-        "Infected": 2.0,
-        "Recovered": 0.0
+        "Susceptible": {
+            "concept": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000978:Susceptible"
+                },
+                "context": {}
+            },
+            "value": 36196938.0
+        },
+        "Exposed": {
+            "concept": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000597",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000978:Exposed"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        },
+        "Infected": {
+            "concept": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000978:Infected"
+                },
+                "context": {}
+            },
+            "value": 2.0
+        },
+        "Recovered": {
+            "concept": {
+                "name": "Recovered",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000978:Recovered",
+                    "ido": "0000592"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        }
     }
 }

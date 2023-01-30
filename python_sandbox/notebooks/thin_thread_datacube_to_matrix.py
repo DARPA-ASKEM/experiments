@@ -24,10 +24,6 @@ import xarray as xr
 # %%
 # Load data cubes
 
-# Example cubes
-# example_cube_Paul = xr.open_dataset('../data/Dedri Queries/cube.netcdf')
-# example_cube_CIEMSS = xr.open_dataset('../data/Dedri Queries/ciemss_datacube.nc')
-
 # Demo cube à la CIEMSS
 cube = xr.open_dataset('../../thin-thread-examples/demo/BIOMD0000000955/runs/output_CIEMSS.nc')
 
@@ -39,7 +35,8 @@ data = cube['__xarray_dataarray_variable__']
 # Specify what to do with each cube dimension
 map_cube_matrix = {
     'scenarios': 'rows',
-    'replicates': 'select 0',
+    # 'replicates': 'select 0',
+    'replicates': 'select all',
     'attributes': 'vars',
     'timesteps': 'cols'
 }
@@ -93,8 +90,13 @@ for i, s in enumerate(cube[map_matrix_cube['rows']]):
             # Select n-th element in `op` dimension
             if op.split(' ')[0] == 'select':
                 op_axis = map_dim_ax[dim]
-                n = int(op.split(' ')[1])
-                slc[op_axis] = slice(n, n + 1)
+
+                if op.split(' ')[1] == 'all':
+                    pass
+
+                else:
+                    n = int(op.split(' ')[1])
+                    slc[op_axis] = slice(n, n + 1)
 
         # Check for dim-wise `centroid` operation
         # Only one such operation allowed
@@ -119,11 +121,34 @@ for i, s in enumerate(cube[map_matrix_cube['rows']]):
 
         # Extract slice as variable values
         cube_slice = cube['__xarray_dataarray_variable__'][tuple(slc)].squeeze()
-        matrix[str(i)]['output'][str(k)]['value'] = list(cube_slice.data)
+        matrix[str(i)]['output'][str(k)]['value'] = cube_slice.data.tolist()
 
 # %%
 # Save as JSON
 with open('../../thin-thread-examples/demo/BIOMD0000000955/runs/output_CIEMSS_matrix.json', 'w') as f:
     f.write(json.dumps(matrix, indent = 4))
+
+# %%
+# Do similar with Paul's cube
+
+# Example cubes
+# example_cube_Paul = xr.open_dataset('../data/Dedri Queries/cube.netcdf')
+example_cube_CIEMSS = xr.open_dataset('../data/Dedri Queries/ciemss_datacube.nc')
+
+# %%
+cube = example_cube_CIEMSS.rename({'experimental conditions': 'scenarios'})
+
+# %%
+# Save as JSON
+with open('../data/Dedri Queries/ciemss_datacube.json', 'w') as f:
+    f.write(json.dumps(matrix, indent = 4))
+
+# %%
+with open('../data/Dedri Queries/ciemss_datacube.json', 'r') as f:
+    x = json.load(f)
+
+
+
+
 
 # %%

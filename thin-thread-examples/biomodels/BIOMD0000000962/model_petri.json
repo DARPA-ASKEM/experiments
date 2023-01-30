@@ -14,7 +14,7 @@
         },
         {
             "sname": "Quarantined_Infected",
-            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C25549')]",
+            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
             "mira_context": "[]",
             "mira_initial_value": "0.0"
         },
@@ -29,19 +29,19 @@
         {
             "tname": "t1",
             "template_type": "ControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Unquarantined_Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Unquarantined_Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), 'ControlledConversion', 'rate')",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
             "tname": "t2",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Unquarantined_Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Quarantined_Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C25549')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_2",
             "parameter_value": null
         },
         {
             "tname": "t3",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Quarantined_Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C25549')), ('Confirmed_Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_3",
             "parameter_value": null
         }
     ],

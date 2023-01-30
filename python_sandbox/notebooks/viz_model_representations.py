@@ -31,7 +31,7 @@ from typing import NoReturn, Optional, Any
 NUM_MODELS = 3
 
 # %%
-# Build a  source-target DataFrame from MIRA JSON objects
+# Build a source-target DataFrame from MIRA JSON objects
 def build_mira_df(model: dict, rep: str) -> pd.DataFrame:
 
     if rep == 'MMT':

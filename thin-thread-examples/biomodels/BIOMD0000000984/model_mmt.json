@@ -1,26 +1,17 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Infected*Susceptible*beta_o*k/Total_population",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "Infected",
-                    "identifiers": {
-                        "ido": "0000511",
-                        "ncit": "C171133",
-                        "biomodels.species": "BIOMD0000000984:Infected"
-                    },
-                    "context": {}
+            "rate_law": "1.0e-7*Infected*Susceptible*beta_o*k",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000984:Infected"
                 },
-                {
-                    "name": "Total_population",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000984:Total_population"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
             "subject": {
                 "name": "Susceptible",
                 "identifiers": {
@@ -42,7 +33,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*omega",
+            "rate_law": "Exposed*omega",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
@@ -66,7 +57,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*gamma",
+            "rate_law": "Infected*gamma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",
@@ -124,13 +115,71 @@
             "identifiers": {},
             "context": {},
             "value": 1.0
+        },
+        "Total_population": {
+            "name": "Total_population",
+            "identifiers": {},
+            "context": {},
+            "value": 10000000.0
         }
     },
     "initials": {
-        "Susceptible": 9999999.0,
-        "Exposed": 0.0,
-        "Infected": 1.0,
-        "Recovered": 0.0,
-        "Total_population": 10000000.0
+        "Susceptible": {
+            "concept": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000984:Susceptible"
+                },
+                "context": {}
+            },
+            "value": 9999999.0
+        },
+        "Exposed": {
+            "concept": {
+                "name": "Exposed",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000984:Exposed"
+                },
+                "context": {
+                    "property": "ido:0000597"
+                }
+            },
+            "value": 0.0
+        },
+        "Infected": {
+            "concept": {
+                "name": "Infected",
+                "identifiers": {
+                    "ido": "0000511",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000984:Infected"
+                },
+                "context": {}
+            },
+            "value": 1.0
+        },
+        "Recovered": {
+            "concept": {
+                "name": "Recovered",
+                "identifiers": {
+                    "ido": "0000621",
+                    "biomodels.species": "BIOMD0000000984:Recovered"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        },
+        "Total_population": {
+            "concept": {
+                "name": "Total_population",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000984:Total_population"
+                },
+                "context": {}
+            },
+            "value": 10000000.0
+        }
     }
 }

@@ -28,30 +28,42 @@
     "T": [
         {
             "tname": "t1",
-            "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Infected_strong_immune_system', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), (('Infected_weak_immune_system', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Infected_strong_immune_system', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'))), 'GroupedControlledConversion', 'rate')",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
             "tname": "t2",
-            "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Infected_weak_immune_system', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), (('Infected_strong_immune_system', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Infected_weak_immune_system', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133'))), 'GroupedControlledConversion', 'rate')",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_2",
             "parameter_value": null
         },
         {
             "tname": "t3",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_3",
+            "parameter_value": null
+        },
+        {
+            "tname": "t4",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_4",
+            "parameter_value": null
+        },
+        {
+            "tname": "t5",
             "template_type": "NaturalConversion",
             "parameter_name": "gamma_1",
             "parameter_value": "0.1"
         },
         {
-            "tname": "t4",
+            "tname": "t6",
             "template_type": "NaturalConversion",
             "parameter_name": "gamma_2",
             "parameter_value": "0.061"
         },
         {
-            "tname": "t5",
+            "tname": "t7",
             "template_type": "NaturalDegradation",
             "parameter_name": "mu",
             "parameter_value": "0.02"
@@ -63,19 +75,11 @@
             "it": 1
         },
         {
-            "is": 2,
-            "it": 1
-        },
-        {
             "is": 1,
             "it": 1
         },
         {
             "is": 2,
-            "it": 2
-        },
-        {
-            "is": 3,
             "it": 2
         },
         {
@@ -87,12 +91,28 @@
             "it": 3
         },
         {
+            "is": 1,
+            "it": 3
+        },
+        {
             "is": 3,
             "it": 4
         },
         {
-            "is": 3,
+            "is": 1,
+            "it": 4
+        },
+        {
+            "is": 2,
             "it": 5
+        },
+        {
+            "is": 3,
+            "it": 6
+        },
+        {
+            "is": 3,
+            "it": 7
         }
     ],
     "O": [
@@ -106,27 +126,35 @@
         },
         {
             "os": 2,
-            "ot": 1
+            "ot": 2
         },
         {
             "os": 2,
             "ot": 2
         },
         {
-            "os": 3,
-            "ot": 2
-        },
-        {
-            "os": 3,
-            "ot": 2
-        },
-        {
-            "os": 4,
+            "os": 2,
             "ot": 3
         },
         {
-            "os": 4,
+            "os": 3,
+            "ot": 3
+        },
+        {
+            "os": 3,
             "ot": 4
+        },
+        {
+            "os": 3,
+            "ot": 4
+        },
+        {
+            "os": 4,
+            "ot": 5
+        },
+        {
+            "os": 4,
+            "ot": 6
         }
     ]
 }

@@ -1,26 +1,15 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Infected*R_fixed*Susceptible*gamma/Total_population",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "Total_population",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000980:Total_population"
-                    },
-                    "context": {}
+            "rate_law": "3.02981679061445e-9*Infected*R_fixed*Susceptible*gamma",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Total_population",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000980:Total_population"
                 },
-                {
-                    "name": "Infected",
-                    "identifiers": {
-                        "ido": "0000511",
-                        "ncit": "C171133",
-                        "biomodels.species": "BIOMD0000000980:Infected"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
             "subject": {
                 "name": "Susceptible",
                 "identifiers": {
@@ -42,7 +31,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*sigma",
+            "rate_law": "Exposed*sigma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
@@ -66,7 +55,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*gamma",
+            "rate_law": "Infected*gamma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",
@@ -90,7 +79,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Recovered*omega",
+            "rate_law": "Recovered*omega",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Recovered",

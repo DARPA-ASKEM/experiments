@@ -8,7 +8,7 @@
         },
         {
             "sname": "Exposed",
-            "mira_ids": "[('identity', 'ido:0000597'), ('identity', 'ncit:C171133')]",
+            "mira_ids": "[('identity', 'ido:0000514'), ('identity', 'ncit:C171133')]",
             "mira_context": "[]",
             "mira_initial_value": "36600.0"
         },
@@ -20,13 +20,13 @@
         },
         {
             "sname": "Asymptomatic",
-            "mira_ids": "[('identity', 'ido:0000569'), ('identity', 'ncit:C171133')]",
-            "mira_context": "[]",
+            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C171133')]",
+            "mira_context": "[('disease_status', 'ncit:C3833')]",
             "mira_initial_value": "2196.0"
         },
         {
             "sname": "Hospitalized",
-            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C25179')]",
+            "mira_ids": "[('identity', 'ido:0000511'), ('identity', 'ncit:C168447')]",
             "mira_context": "[]",
             "mira_initial_value": "0.0"
         },
@@ -46,62 +46,74 @@
     "T": [
         {
             "tname": "t1",
-            "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Exposed', ('identity', 'ido:0000597'), ('identity', 'ncit:C171133')), (('Infectious', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Asymptomatic', ('identity', 'ido:0000569'), ('identity', 'ncit:C171133')), ('Hospitalized', ('identity', 'ido:0000511'), ('identity', 'ncit:C25179'))), 'GroupedControlledConversion', 'rate')",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
             "tname": "t2",
-            "template_type": "NaturalConversion",
-            "parameter_name": "(('Exposed', ('identity', 'ido:0000597'), ('identity', 'ncit:C171133')), ('Infectious', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_2",
             "parameter_value": null
         },
         {
             "tname": "t3",
-            "template_type": "NaturalConversion",
-            "parameter_name": "(('Exposed', ('identity', 'ido:0000597'), ('identity', 'ncit:C171133')), ('Asymptomatic', ('identity', 'ido:0000569'), ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "template_type": "ControlledConversion",
+            "parameter_name": "p_petri_3",
             "parameter_value": null
         },
         {
             "tname": "t4",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Infectious', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Hospitalized', ('identity', 'ido:0000511'), ('identity', 'ncit:C25179')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_4",
             "parameter_value": null
         },
         {
             "tname": "t5",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Infectious', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Recovered', ('identity', 'ido:0000621'), ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_5",
             "parameter_value": null
         },
         {
             "tname": "t6",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Infectious', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Deceased', ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_6",
             "parameter_value": null
         },
         {
             "tname": "t7",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Asymptomatic', ('identity', 'ido:0000569'), ('identity', 'ncit:C171133')), ('Recovered', ('identity', 'ido:0000621'), ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_7",
             "parameter_value": null
         },
         {
             "tname": "t8",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Asymptomatic', ('identity', 'ido:0000569'), ('identity', 'ncit:C171133')), ('Deceased', ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_8",
             "parameter_value": null
         },
         {
             "tname": "t9",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Hospitalized', ('identity', 'ido:0000511'), ('identity', 'ncit:C25179')), ('Deceased', ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_9",
             "parameter_value": null
         },
         {
             "tname": "t10",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Hospitalized', ('identity', 'ido:0000511'), ('identity', 'ncit:C25179')), ('Recovered', ('identity', 'ido:0000621'), ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_10",
+            "parameter_value": null
+        },
+        {
+            "tname": "t11",
+            "template_type": "NaturalConversion",
+            "parameter_name": "p_petri_11",
+            "parameter_value": null
+        },
+        {
+            "tname": "t12",
+            "template_type": "NaturalConversion",
+            "parameter_name": "p_petri_12",
             "parameter_value": null
         }
     ],
@@ -111,31 +123,31 @@
             "it": 1
         },
         {
-            "is": 4,
-            "it": 1
-        },
-        {
-            "is": 5,
-            "it": 1
-        },
-        {
             "is": 1,
             "it": 1
         },
         {
-            "is": 2,
+            "is": 4,
             "it": 2
         },
         {
-            "is": 2,
+            "is": 1,
+            "it": 2
+        },
+        {
+            "is": 5,
             "it": 3
         },
         {
-            "is": 3,
+            "is": 1,
+            "it": 3
+        },
+        {
+            "is": 2,
             "it": 4
         },
         {
-            "is": 3,
+            "is": 2,
             "it": 5
         },
         {
@@ -143,20 +155,28 @@
             "it": 6
         },
         {
-            "is": 4,
+            "is": 3,
             "it": 7
         },
         {
-            "is": 4,
+            "is": 3,
             "it": 8
         },
         {
-            "is": 5,
+            "is": 4,
             "it": 9
         },
         {
-            "is": 5,
+            "is": 4,
             "it": 10
+        },
+        {
+            "is": 5,
+            "it": 11
+        },
+        {
+            "is": 5,
+            "it": 12
         }
     ],
     "O": [
@@ -165,35 +185,35 @@
             "ot": 1
         },
         {
-            "os": 4,
-            "ot": 1
-        },
-        {
-            "os": 5,
-            "ot": 1
-        },
-        {
             "os": 2,
             "ot": 1
         },
         {
-            "os": 3,
+            "os": 4,
             "ot": 2
         },
         {
-            "os": 4,
-            "ot": 3
+            "os": 2,
+            "ot": 2
         },
         {
             "os": 5,
+            "ot": 3
+        },
+        {
+            "os": 2,
+            "ot": 3
+        },
+        {
+            "os": 3,
             "ot": 4
         },
         {
-            "os": 6,
+            "os": 4,
             "ot": 5
         },
         {
-            "os": 7,
+            "os": 5,
             "ot": 6
         },
         {
@@ -205,12 +225,20 @@
             "ot": 8
         },
         {
-            "os": 7,
+            "os": 6,
             "ot": 9
         },
         {
-            "os": 6,
+            "os": 7,
             "ot": 10
+        },
+        {
+            "os": 7,
+            "ot": 11
+        },
+        {
+            "os": 6,
+            "ot": 12
         }
     ]
 }

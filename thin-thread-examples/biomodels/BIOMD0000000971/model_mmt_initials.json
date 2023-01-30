@@ -7,7 +7,17 @@
                 "biomodels.species": "BIOMD0000000971:Susceptible"
             },
             "context": {},
-            "value": 11081000.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000971:Susceptible"
+                    },
+                    "context": {}
+                },
+                "value": 11081000.0
+            }
         },
         "Susceptible_quarantined": {
             "name": "Susceptible_quarantined",
@@ -17,7 +27,18 @@
                 "biomodels.species": "BIOMD0000000971:Susceptible_quarantined"
             },
             "context": {},
-            "value": 739.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible_quarantined",
+                    "identifiers": {
+                        "ncit": "C71902",
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000971:Susceptible_quarantined"
+                    },
+                    "context": {}
+                },
+                "value": 739.0
+            }
         },
         "Exposed": {
             "name": "Exposed",
@@ -28,7 +49,19 @@
             "context": {
                 "property": "ido:0000597"
             },
-            "value": 105.1
+            "value": {
+                "concept": {
+                    "name": "Exposed",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000971:Exposed"
+                    },
+                    "context": {
+                        "property": "ido:0000597"
+                    }
+                },
+                "value": 105.1
+            }
         },
         "Infected": {
             "name": "Infected",
@@ -37,7 +70,17 @@
                 "biomodels.species": "BIOMD0000000971:Infected"
             },
             "context": {},
-            "value": 27.679
+            "value": {
+                "concept": {
+                    "name": "Infected",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000971:Infected"
+                    },
+                    "context": {}
+                },
+                "value": 27.679
+            }
         },
         "Asymptomatic": {
             "name": "Asymptomatic",
@@ -46,19 +89,42 @@
                 "biomodels.species": "BIOMD0000000971:Asymptomatic"
             },
             "context": {},
-            "value": 53.539
+            "value": {
+                "concept": {
+                    "name": "Asymptomatic",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000971:Asymptomatic"
+                    },
+                    "context": {}
+                },
+                "value": 53.539
+            }
         },
         "Hospitalised": {
             "name": "Hospitalised",
             "identifiers": {
-                "ido": "0000511",
                 "ncit": "C171133",
+                "ido": "0000511",
                 "biomodels.species": "BIOMD0000000971:Hospitalised"
             },
             "context": {
                 "property": "ncit:C25179"
             },
-            "value": 1.0
+            "value": {
+                "concept": {
+                    "name": "Hospitalised",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000971:Hospitalised"
+                    },
+                    "context": {
+                        "property": "ncit:C25179"
+                    }
+                },
+                "value": 1.0
+            }
         },
         "Exposed_quarantined": {
             "name": "Exposed_quarantined",
@@ -70,17 +136,39 @@
             "context": {
                 "property": "ido:0000597"
             },
-            "value": 1.1642
+            "value": {
+                "concept": {
+                    "name": "Exposed_quarantined",
+                    "identifiers": {
+                        "ncit": "C71902",
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000971:Exposed_quarantined"
+                    },
+                    "context": {
+                        "property": "ido:0000597"
+                    }
+                },
+                "value": 1.1642
+            }
         },
         "Recovered": {
             "name": "Recovered",
             "identifiers": {
-                "biomodels.species": "BIOMD0000000971:Recovered"
+                "biomodels.species": "BIOMD0000000971:Recovered",
+                "ido": "0000592"
             },
-            "context": {
-                "property": "ido:0000621"
-            },
-            "value": 2.0
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Recovered",
+                    "identifiers": {
+                        "biomodels.species": "BIOMD0000000971:Recovered",
+                        "ido": "0000592"
+                    },
+                    "context": {}
+                },
+                "value": 2.0
+            }
         }
     }
 }

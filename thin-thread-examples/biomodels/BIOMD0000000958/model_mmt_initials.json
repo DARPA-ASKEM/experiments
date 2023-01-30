@@ -3,12 +3,23 @@
         "Susceptible": {
             "name": "Susceptible",
             "identifiers": {
-                "ido": "0000514",
                 "ncit": "C171133",
+                "ido": "0000514",
                 "biomodels.species": "BIOMD0000000958:Susceptible"
             },
             "context": {},
-            "value": 43994.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000958:Susceptible"
+                    },
+                    "context": {}
+                },
+                "value": 43994.0
+            }
         },
         "Exposed": {
             "name": "Exposed",
@@ -18,55 +29,123 @@
                 "biomodels.species": "BIOMD0000000958:Exposed"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Exposed",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000597",
+                        "biomodels.species": "BIOMD0000000958:Exposed"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Super_spreaders": {
             "name": "Super_spreaders",
             "identifiers": {
+                "ncit": "0000511",
                 "ido": "0000463",
-                "ncit": "C49508",
                 "biomodels.species": "BIOMD0000000958:Super_spreaders"
             },
             "context": {},
-            "value": 5.0
+            "value": {
+                "concept": {
+                    "name": "Super_spreaders",
+                    "identifiers": {
+                        "ncit": "0000511",
+                        "ido": "0000463",
+                        "biomodels.species": "BIOMD0000000958:Super_spreaders"
+                    },
+                    "context": {}
+                },
+                "value": 5.0
+            }
         },
         "Infectious": {
             "name": "Infectious",
             "identifiers": {
-                "ido": "0000511",
-                "ncit": "C171549",
+                "ncit": "C171133",
+                "ido": "0000463",
                 "biomodels.species": "BIOMD0000000958:Infectious"
             },
             "context": {},
-            "value": 1.0
+            "value": {
+                "concept": {
+                    "name": "Infectious",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000463",
+                        "biomodels.species": "BIOMD0000000958:Infectious"
+                    },
+                    "context": {}
+                },
+                "value": 1.0
+            }
         },
         "Hospitalised": {
             "name": "Hospitalised",
             "identifiers": {
-                "ncit": "C25179",
+                "ncit": "C171133",
                 "biomodels.species": "BIOMD0000000958:Hospitalised"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Hospitalised",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000958:Hospitalised"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Asymptomatic": {
             "name": "Asymptomatic",
             "identifiers": {
                 "ncit": "C171133",
-                "ido": "0000569",
+                "ido": "0000511",
                 "biomodels.species": "BIOMD0000000958:Asymptomatic"
             },
-            "context": {},
-            "value": 0.0
+            "context": {
+                "disease_status": "ncit:C3833"
+            },
+            "value": {
+                "concept": {
+                    "name": "Asymptomatic",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000958:Asymptomatic"
+                    },
+                    "context": {
+                        "disease_status": "ncit:C3833"
+                    }
+                },
+                "value": 0.0
+            }
         },
         "Fatalities": {
             "name": "Fatalities",
             "identifiers": {
-                "ncit": "C28554",
+                "ncit": "C171133",
                 "biomodels.species": "BIOMD0000000958:Fatalities"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Fatalities",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000958:Fatalities"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Recovered": {
             "name": "Recovered",
@@ -75,7 +154,17 @@
                 "biomodels.species": "BIOMD0000000958:Recovered"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Recovered",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000958:Recovered"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         }
     }
 }

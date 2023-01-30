@@ -83,6 +83,12 @@
             "identifiers": {},
             "context": {},
             "value": 1.0
+        },
+        "Total_population": {
+            "name": "Total_population",
+            "identifiers": {},
+            "context": {},
+            "value": 330052960.0
         }
     }
 }

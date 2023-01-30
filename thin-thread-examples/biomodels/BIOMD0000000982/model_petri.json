@@ -23,13 +23,13 @@
         {
             "tname": "t1",
             "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514'), ('identity', 'ncit:C171133')), ('Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), (('Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Removed', ('identity', 'ido:0000621'), ('identity', 'ncit:C171133'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
             "tname": "t2",
             "template_type": "NaturalConversion",
-            "parameter_name": "(('Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), ('Removed', ('identity', 'ido:0000621'), ('identity', 'ncit:C171133')), 'NaturalConversion', 'rate')",
+            "parameter_name": "p_petri_2",
             "parameter_value": null
         }
     ],

@@ -1,7 +1,7 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*ModelValue_6*ModelValue_7*Susceptible*Unquarantined_Infected/(ModelValue_13*ModelValue_3 + ModelValue_14*ModelValue_4 + ModelValue_15*ModelValue_5)",
+            "rate_law": "ModelValue_6*ModelValue_7*Susceptible*Unquarantined_Infected/(ModelValue_13*ModelValue_3 + ModelValue_14*ModelValue_4 + ModelValue_15*ModelValue_5)",
             "type": "ControlledConversion",
             "controller": {
                 "name": "Unquarantined_Infected",
@@ -15,8 +15,8 @@
             "subject": {
                 "name": "Susceptible",
                 "identifiers": {
-                    "ido": "0000514",
                     "ncit": "C171133",
+                    "ido": "0000514",
                     "biomodels.species": "BIOMD0000000962:Susceptible"
                 },
                 "context": {}
@@ -33,7 +33,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Unquarantined_Infected*(ModelValue_3*(ModelValue_0*ModelValue_17 + ModelValue_1*ModelValue_20 + ModelValue_2*ModelValue_23) + ModelValue_4*(ModelValue_0*ModelValue_26 + ModelValue_1*ModelValue_29) + ModelValue_5*(ModelValue_0*ModelValue_32 + ModelValue_1*ModelValue_35))",
+            "rate_law": "Unquarantined_Infected*(ModelValue_3*(ModelValue_0*ModelValue_17 + ModelValue_1*ModelValue_20 + ModelValue_2*ModelValue_23) + ModelValue_4*(ModelValue_0*ModelValue_26 + ModelValue_1*ModelValue_29) + ModelValue_5*(ModelValue_0*ModelValue_32 + ModelValue_1*ModelValue_35))",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Unquarantined_Infected",
@@ -47,8 +47,8 @@
             "outcome": {
                 "name": "Quarantined_Infected",
                 "identifiers": {
+                    "ncit": "C171133",
                     "ido": "0000511",
-                    "ncit": "C25549",
                     "biomodels.species": "BIOMD0000000962:Quarantined_Infected"
                 },
                 "context": {}
@@ -56,13 +56,13 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Quarantined_Infected*(ModelValue_8 + ModelValue_9*(1 - ModelValue_8))",
+            "rate_law": "Quarantined_Infected*(ModelValue_8 + ModelValue_9*(1 - ModelValue_8))",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Quarantined_Infected",
                 "identifiers": {
+                    "ncit": "C171133",
                     "ido": "0000511",
-                    "ncit": "C25549",
                     "biomodels.species": "BIOMD0000000962:Quarantined_Infected"
                 },
                 "context": {}
@@ -514,10 +514,65 @@
         }
     },
     "initials": {
-        "Susceptible": 9010000.0,
-        "Unquarantined_Infected": 258.0,
-        "Quarantined_Infected": 0.0,
-        "Confirmed_Infected": 0.0,
-        "Cumulative_Infected": 258.0
+        "Susceptible": {
+            "concept": {
+                "name": "Susceptible",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000962:Susceptible"
+                },
+                "context": {}
+            },
+            "value": 9010000.0
+        },
+        "Unquarantined_Infected": {
+            "concept": {
+                "name": "Unquarantined_Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000962:Unquarantined_Infected"
+                },
+                "context": {}
+            },
+            "value": 258.0
+        },
+        "Quarantined_Infected": {
+            "concept": {
+                "name": "Quarantined_Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000962:Quarantined_Infected"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        },
+        "Confirmed_Infected": {
+            "concept": {
+                "name": "Confirmed_Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000962:Confirmed_Infected"
+                },
+                "context": {}
+            },
+            "value": 0.0
+        },
+        "Cumulative_Infected": {
+            "concept": {
+                "name": "Cumulative_Infected",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000962:Cumulative_Infected"
+                },
+                "context": {}
+            },
+            "value": 258.0
+        }
     }
 }

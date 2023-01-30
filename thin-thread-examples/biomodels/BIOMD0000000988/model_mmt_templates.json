@@ -1,7 +1,7 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*uninfected_nontested*(1 - epidemic_extinguished_bool)*(Infection_from_non_tested_no_symptoms_0*infected_nontested + Infection_from_non_tested_symptoms*symptoms_nontested + Infection_from_tested_no_symptoms_0*infected_tested + Infection_from_tested_symptoms*symptoms_tested)/Social_Distance",
+            "rate_law": "uninfected_nontested*(1 - epidemic_extinguished_bool)*(Infection_from_non_tested_no_symptoms_0*infected_nontested + Infection_from_non_tested_symptoms*symptoms_nontested + Infection_from_tested_no_symptoms_0*infected_tested + Infection_from_tested_symptoms*symptoms_tested)/Social_Distance",
             "type": "NaturalConversion",
             "subject": {
                 "name": "uninfected_nontested",
@@ -27,7 +27,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Testing_Randome*uninfected_nontested",
+            "rate_law": "Testing_Randome*uninfected_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "uninfected_nontested",
@@ -52,7 +52,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*uninfected_tested*(1 - epidemic_extinguished_bool)*(Infection_from_non_tested_no_symptoms_0*infected_nontested + Infection_from_non_tested_symptoms*symptoms_nontested + Infection_from_tested_no_symptoms_0*infected_tested + Infection_from_tested_symptoms*symptoms_tested)/Social_Distance",
+            "rate_law": "uninfected_tested*(1 - epidemic_extinguished_bool)*(Infection_from_non_tested_no_symptoms_0*infected_nontested + Infection_from_non_tested_symptoms*symptoms_nontested + Infection_from_tested_no_symptoms_0*infected_tested + Infection_from_tested_symptoms*symptoms_tested)/Social_Distance",
             "type": "NaturalConversion",
             "subject": {
                 "name": "uninfected_tested",
@@ -78,7 +78,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Testing_Randome*infected_nontested",
+            "rate_law": "Testing_Randome*infected_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "infected_nontested",
@@ -105,7 +105,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Symptoms_appear*infected_nontested",
+            "rate_law": "Symptoms_appear*infected_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "infected_nontested",
@@ -132,7 +132,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Symptoms_appear*infected_tested",
+            "rate_law": "Symptoms_appear*infected_tested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "infected_tested",
@@ -159,7 +159,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Testing_for_Symptoms*symptoms_nontested",
+            "rate_law": "Testing_for_Symptoms*symptoms_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "symptoms_nontested",
@@ -186,7 +186,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Corona_death_rate_constant*symptoms_tested",
+            "rate_law": "Corona_death_rate_constant*symptoms_tested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "symptoms_tested",
@@ -212,7 +212,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Corona_recover*symptoms_tested",
+            "rate_law": "Corona_recover*symptoms_tested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "symptoms_tested",
@@ -228,16 +228,15 @@
             "outcome": {
                 "name": "recovered_tested",
                 "identifiers": {
-                    "biomodels.species": "BIOMD0000000988:recovered_tested_0"
+                    "biomodels.species": "BIOMD0000000988:recovered_tested_0",
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "provenance": []
         },
         {
-            "rate_law": "1.0*Corona_recover*symptoms_nontested",
+            "rate_law": "Corona_recover*symptoms_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "symptoms_nontested",
@@ -262,15 +261,8 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Birth_rate*susceptible*total_population",
-            "type": "ControlledConversion",
-            "controller": {
-                "name": "total_population",
-                "identifiers": {
-                    "biomodels.species": "BIOMD0000000988:total_population_0"
-                },
-                "context": {}
-            },
+            "rate_law": "630003.0*Birth_rate*susceptible",
+            "type": "NaturalConversion",
             "subject": {
                 "name": "susceptible",
                 "identifiers": {
@@ -292,7 +284,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Normal_death_rate_constant_0*uninfected_nontested",
+            "rate_law": "Normal_death_rate_constant_0*uninfected_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "uninfected_nontested",
@@ -315,16 +307,15 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Normal_death_rate_constant_0*recovered_tested",
+            "rate_law": "Normal_death_rate_constant_0*recovered_tested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "recovered_tested",
                 "identifiers": {
-                    "biomodels.species": "BIOMD0000000988:recovered_tested_0"
+                    "biomodels.species": "BIOMD0000000988:recovered_tested_0",
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "outcome": {
                 "name": "dead_noncorona",
@@ -337,7 +328,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Normal_death_rate_constant_0*recovered_nontested",
+            "rate_law": "Normal_death_rate_constant_0*recovered_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "recovered_nontested",
@@ -359,7 +350,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Corona_death_rate_constant*infected_tested",
+            "rate_law": "Corona_death_rate_constant*infected_tested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "infected_tested",
@@ -385,7 +376,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Corona_death_rate_constant*infected_nontested",
+            "rate_law": "Corona_death_rate_constant*infected_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "infected_nontested",
@@ -411,7 +402,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Normal_death_rate_constant_0*uninfected_tested",
+            "rate_law": "Normal_death_rate_constant_0*uninfected_tested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "uninfected_tested",
@@ -434,7 +425,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Corona_death_rate_constant*symptoms_nontested",
+            "rate_law": "Corona_death_rate_constant*symptoms_nontested",
             "type": "NaturalConversion",
             "subject": {
                 "name": "symptoms_nontested",

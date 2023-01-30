@@ -1,7 +1,7 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Infected_Counties_with_airports*Susceptible_Counties_with_airports*XXlambdaXX_Counties_with_airports*epsilon/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6)",
+            "rate_law": "Infected_Counties_with_airports*Susceptible_Counties_with_airports*XXlambdaXX_Counties_with_airports*epsilon/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6)",
             "type": "ControlledConversion",
             "controller": {
                 "name": "Infected_Counties_with_airports",
@@ -33,7 +33,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_with_airports*eta_Counties_with_airports",
+            "rate_law": "Infected_Counties_with_airports*eta_Counties_with_airports",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_with_airports",
@@ -55,7 +55,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_with_airports*psi",
+            "rate_law": "Infected_Counties_with_airports*psi",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_with_airports",
@@ -77,7 +77,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_with_airports*delta",
+            "rate_law": "Infected_Counties_with_airports*delta",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_with_airports",
@@ -99,7 +99,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised_Counties_with_airports*omega_Counties_with_airports",
+            "rate_law": "Hospitalised_Counties_with_airports*omega_Counties_with_airports",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised_Counties_with_airports",
@@ -120,7 +120,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised_Counties_with_airports*sigma",
+            "rate_law": "Hospitalised_Counties_with_airports*sigma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised_Counties_with_airports",
@@ -141,7 +141,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*ICU_Counties_with_airports*xi",
+            "rate_law": "ICU_Counties_with_airports*xi",
             "type": "NaturalConversion",
             "subject": {
                 "name": "ICU_Counties_with_airports",
@@ -162,7 +162,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*ICU_Counties_with_airports*mu_Counties_with_airports",
+            "rate_law": "ICU_Counties_with_airports*mu_Counties_with_airports",
             "type": "NaturalConversion",
             "subject": {
                 "name": "ICU_Counties_with_airports",
@@ -183,18 +183,41 @@
             "provenance": []
         },
         {
+            "rate_law": "Infected_Counties_with_airports*Susceptible_Counties_neighbouring_counties_with_airports*phi/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected_Counties_with_airports",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000969:Infected_Counties_with_airports"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible_Counties_neighbouring_counties_with_airports",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000969:Susceptible_Counties_neighbouring_counties_with_airports"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected_Counties_neighbouring_counties_with_airports",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000969:Infected_Counties_neighbouring_counties_with_airports"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
             "rate_law": "Susceptible_Counties_neighbouring_counties_with_airports*(Infected_Counties_neighbouring_counties_with_airports*XXlambdaXX_Counties_neighbouring_counties_with_airports*epsilon/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_airports*phi/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6))",
             "type": "GroupedControlledConversion",
             "controllers": [
-                {
-                    "name": "Infected_Counties_with_airports",
-                    "identifiers": {
-                        "ncit": "C171133",
-                        "ido": "0000511",
-                        "biomodels.species": "BIOMD0000000969:Infected_Counties_with_airports"
-                    },
-                    "context": {}
-                },
                 {
                     "name": "Infected_Counties_neighbouring_counties_with_airports",
                     "identifiers": {
@@ -226,7 +249,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_neighbouring_counties_with_airports*eta_Counties_neighbouring_counties_with_airports",
+            "rate_law": "Infected_Counties_neighbouring_counties_with_airports*eta_Counties_neighbouring_counties_with_airports",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_neighbouring_counties_with_airports",
@@ -248,7 +271,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_neighbouring_counties_with_airports*psi",
+            "rate_law": "Infected_Counties_neighbouring_counties_with_airports*psi",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_neighbouring_counties_with_airports",
@@ -270,7 +293,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_neighbouring_counties_with_airports*delta",
+            "rate_law": "Infected_Counties_neighbouring_counties_with_airports*delta",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_neighbouring_counties_with_airports",
@@ -292,7 +315,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised_Counties_neighbouring_counties_with_airports*omega_Counties_neighbouring_counties_with_airports",
+            "rate_law": "Hospitalised_Counties_neighbouring_counties_with_airports*omega_Counties_neighbouring_counties_with_airports",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised_Counties_neighbouring_counties_with_airports",
@@ -313,7 +336,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised_Counties_neighbouring_counties_with_airports*sigma",
+            "rate_law": "Hospitalised_Counties_neighbouring_counties_with_airports*sigma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised_Counties_neighbouring_counties_with_airports",
@@ -334,7 +357,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*ICU_Counties_neighbouring_counties_with_airports*xi",
+            "rate_law": "ICU_Counties_neighbouring_counties_with_airports*xi",
             "type": "NaturalConversion",
             "subject": {
                 "name": "ICU_Counties_neighbouring_counties_with_airports",
@@ -355,7 +378,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*ICU_Counties_neighbouring_counties_with_airports*mu_Counties_neighbouring_counties_with_airports",
+            "rate_law": "ICU_Counties_neighbouring_counties_with_airports*mu_Counties_neighbouring_counties_with_airports",
             "type": "NaturalConversion",
             "subject": {
                 "name": "ICU_Counties_neighbouring_counties_with_airports",
@@ -376,18 +399,40 @@
             "provenance": []
         },
         {
+            "rate_law": "Infected_Counties_neighbouring_counties_with_airports*Susceptible_Counties_with_highways*tau/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected_Counties_neighbouring_counties_with_airports",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000969:Infected_Counties_neighbouring_counties_with_airports"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible_Counties_with_highways",
+                "identifiers": {
+                    "ido": "0000514",
+                    "ncit": "C171133",
+                    "biomodels.species": "BIOMD0000000969:Susceptible_Counties_with_highways"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected_Counties_with_highways",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000969:Infected_Counties_with_highways"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
             "rate_law": "Susceptible_Counties_with_highways*(Infected_Counties_neighbouring_counties_with_airports*tau/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_highways*XXlambdaXX_Counties_with_highways*epsilon/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20))",
             "type": "GroupedControlledConversion",
             "controllers": [
-                {
-                    "name": "Infected_Counties_neighbouring_counties_with_airports",
-                    "identifiers": {
-                        "ncit": "C171133",
-                        "ido": "0000511",
-                        "biomodels.species": "BIOMD0000000969:Infected_Counties_neighbouring_counties_with_airports"
-                    },
-                    "context": {}
-                },
                 {
                     "name": "Infected_Counties_with_highways",
                     "identifiers": {
@@ -417,7 +462,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_with_highways*eta_Counties_with_highways",
+            "rate_law": "Infected_Counties_with_highways*eta_Counties_with_highways",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_with_highways",
@@ -438,7 +483,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_with_highways*psi",
+            "rate_law": "Infected_Counties_with_highways*psi",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_with_highways",
@@ -459,7 +504,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Counties_with_highways*delta",
+            "rate_law": "Infected_Counties_with_highways*delta",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Counties_with_highways",
@@ -480,7 +525,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised_Counties_with_highways*omega_Counties_with_highways",
+            "rate_law": "Hospitalised_Counties_with_highways*omega_Counties_with_highways",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised_Counties_with_highways",
@@ -501,7 +546,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised_Counties_with_highways*sigma",
+            "rate_law": "Hospitalised_Counties_with_highways*sigma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised_Counties_with_highways",
@@ -522,7 +567,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*ICU_Counties_with_highways*xi",
+            "rate_law": "ICU_Counties_with_highways*xi",
             "type": "NaturalConversion",
             "subject": {
                 "name": "ICU_Counties_with_highways",
@@ -543,7 +588,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*ICU_Counties_with_highways*mu_Counties_with_highways",
+            "rate_law": "ICU_Counties_with_highways*mu_Counties_with_highways",
             "type": "NaturalConversion",
             "subject": {
                 "name": "ICU_Counties_with_highways",
@@ -564,26 +609,70 @@
             "provenance": []
         },
         {
+            "rate_law": "Infected_Counties_neighbouring_counties_with_airports*Susceptible_Low_risk_counties*gamma/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected_Counties_neighbouring_counties_with_airports",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000969:Infected_Counties_neighbouring_counties_with_airports"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible_Low_risk_counties",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000969:Susceptible_Low_risk_counties"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected_Low_risk_counties",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000969:Infected_Low_risk_counties"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "Infected_Counties_with_highways*Susceptible_Low_risk_counties*alpha/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected_Counties_with_highways",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000969:Infected_Counties_with_highways"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible_Low_risk_counties",
+                "identifiers": {
+                    "ncit": "C171133",
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000969:Susceptible_Low_risk_counties"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected_Low_risk_counties",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000969:Infected_Low_risk_counties"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
             "rate_law": "Susceptible_Low_risk_counties*(Infected_Counties_neighbouring_counties_with_airports*gamma/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_highways*alpha/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20) + Infected_Low_risk_counties*XXlambdaXX_Low_risk_counties*epsilon/(Metabolite_21 + Metabolite_22 + Metabolite_23 + Metabolite_24 + Metabolite_25 + Metabolite_26 + Metabolite_27))",
             "type": "GroupedControlledConversion",
             "controllers": [
-                {
-                    "name": "Infected_Counties_neighbouring_counties_with_airports",
-                    "identifiers": {
-                        "ncit": "C171133",
-                        "ido": "0000511",
-                        "biomodels.species": "BIOMD0000000969:Infected_Counties_neighbouring_counties_with_airports"
-                    },
-                    "context": {}
-                },
-                {
-                    "name": "Infected_Counties_with_highways",
-                    "identifiers": {
-                        "ido": "0000511",
-                        "biomodels.species": "BIOMD0000000969:Infected_Counties_with_highways"
-                    },
-                    "context": {}
-                },
                 {
                     "name": "Infected_Low_risk_counties",
                     "identifiers": {
@@ -613,7 +702,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Low_risk_counties*eta_Low_risk_counties",
+            "rate_law": "Infected_Low_risk_counties*eta_Low_risk_counties",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Low_risk_counties",
@@ -634,7 +723,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Low_risk_counties*psi",
+            "rate_law": "Infected_Low_risk_counties*psi",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Low_risk_counties",
@@ -655,7 +744,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected_Low_risk_counties*delta",
+            "rate_law": "Infected_Low_risk_counties*delta",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected_Low_risk_counties",
@@ -676,7 +765,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised_Low_risk_counties*omega_Low_risk_counties",
+            "rate_law": "Hospitalised_Low_risk_counties*omega_Low_risk_counties",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised_Low_risk_counties",
@@ -697,7 +786,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Hospitalised_Low_risk_counties*sigma",
+            "rate_law": "Hospitalised_Low_risk_counties*sigma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Hospitalised_Low_risk_counties",
@@ -718,7 +807,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*ICU_Low_risk_counties*xi",
+            "rate_law": "ICU_Low_risk_counties*xi",
             "type": "NaturalConversion",
             "subject": {
                 "name": "ICU_Low_risk_counties",
@@ -739,7 +828,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*ICU_Low_risk_counties*mu_Low_risk_counties",
+            "rate_law": "ICU_Low_risk_counties*mu_Low_risk_counties",
             "type": "NaturalConversion",
             "subject": {
                 "name": "ICU_Low_risk_counties",

@@ -8,7 +8,18 @@
                 "biomodels.species": "BIOMD0000000969:Susceptible_Counties_with_airports"
             },
             "context": {},
-            "value": 4052876.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible_Counties_with_airports",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000969:Susceptible_Counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 4052876.0
+            }
         },
         "Infected_Counties_with_airports": {
             "name": "Infected_Counties_with_airports",
@@ -18,7 +29,18 @@
                 "biomodels.species": "BIOMD0000000969:Infected_Counties_with_airports"
             },
             "context": {},
-            "value": 30.0
+            "value": {
+                "concept": {
+                    "name": "Infected_Counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000969:Infected_Counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 30.0
+            }
         },
         "Hospitalised_Counties_with_airports": {
             "name": "Hospitalised_Counties_with_airports",
@@ -27,7 +49,17 @@
                 "biomodels.species": "BIOMD0000000969:Hospitalised_Counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Hospitalised_Counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C25179",
+                        "biomodels.species": "BIOMD0000000969:Hospitalised_Counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "ICU_Counties_with_airports": {
             "name": "ICU_Counties_with_airports",
@@ -36,7 +68,17 @@
                 "biomodels.species": "BIOMD0000000969:ICU_Counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "ICU_Counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C53511",
+                        "biomodels.species": "BIOMD0000000969:ICU_Counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Susceptible_Counties_neighbouring_counties_with_airports": {
             "name": "Susceptible_Counties_neighbouring_counties_with_airports",
@@ -46,7 +88,18 @@
                 "biomodels.species": "BIOMD0000000969:Susceptible_Counties_neighbouring_counties_with_airports"
             },
             "context": {},
-            "value": 4431673.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible_Counties_neighbouring_counties_with_airports",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000969:Susceptible_Counties_neighbouring_counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 4431673.0
+            }
         },
         "Infected_Counties_neighbouring_counties_with_airports": {
             "name": "Infected_Counties_neighbouring_counties_with_airports",
@@ -56,7 +109,18 @@
                 "biomodels.species": "BIOMD0000000969:Infected_Counties_neighbouring_counties_with_airports"
             },
             "context": {},
-            "value": 26.0
+            "value": {
+                "concept": {
+                    "name": "Infected_Counties_neighbouring_counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000969:Infected_Counties_neighbouring_counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 26.0
+            }
         },
         "Hospitalised_Counties_neighbouring_counties_with_airports": {
             "name": "Hospitalised_Counties_neighbouring_counties_with_airports",
@@ -65,7 +129,17 @@
                 "biomodels.species": "BIOMD0000000969:Hospitalised_Counties_neighbouring_counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Hospitalised_Counties_neighbouring_counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C25179",
+                        "biomodels.species": "BIOMD0000000969:Hospitalised_Counties_neighbouring_counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "ICU_Counties_neighbouring_counties_with_airports": {
             "name": "ICU_Counties_neighbouring_counties_with_airports",
@@ -74,7 +148,17 @@
                 "biomodels.species": "BIOMD0000000969:ICU_Counties_neighbouring_counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "ICU_Counties_neighbouring_counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C25179",
+                        "biomodels.species": "BIOMD0000000969:ICU_Counties_neighbouring_counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Susceptible_Counties_with_highways": {
             "name": "Susceptible_Counties_with_highways",
@@ -84,7 +168,18 @@
                 "biomodels.species": "BIOMD0000000969:Susceptible_Counties_with_highways"
             },
             "context": {},
-            "value": 1811059.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible_Counties_with_highways",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "ncit": "C171133",
+                        "biomodels.species": "BIOMD0000000969:Susceptible_Counties_with_highways"
+                    },
+                    "context": {}
+                },
+                "value": 1811059.0
+            }
         },
         "Infected_Counties_with_highways": {
             "name": "Infected_Counties_with_highways",
@@ -93,7 +188,17 @@
                 "biomodels.species": "BIOMD0000000969:Infected_Counties_with_highways"
             },
             "context": {},
-            "value": 10.0
+            "value": {
+                "concept": {
+                    "name": "Infected_Counties_with_highways",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000969:Infected_Counties_with_highways"
+                    },
+                    "context": {}
+                },
+                "value": 10.0
+            }
         },
         "Hospitalised_Counties_with_highways": {
             "name": "Hospitalised_Counties_with_highways",
@@ -102,7 +207,17 @@
                 "biomodels.species": "BIOMD0000000969:Hospitalised_Counties_with_highways"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Hospitalised_Counties_with_highways",
+                    "identifiers": {
+                        "ncit": "C25179",
+                        "biomodels.species": "BIOMD0000000969:Hospitalised_Counties_with_highways"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "ICU_Counties_with_highways": {
             "name": "ICU_Counties_with_highways",
@@ -111,7 +226,17 @@
                 "biomodels.species": "BIOMD0000000969:ICU_Counties_with_highways"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "ICU_Counties_with_highways",
+                    "identifiers": {
+                        "ncit": "C53511",
+                        "biomodels.species": "BIOMD0000000969:ICU_Counties_with_highways"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Susceptible_Low_risk_counties": {
             "name": "Susceptible_Low_risk_counties",
@@ -121,7 +246,18 @@
                 "biomodels.species": "BIOMD0000000969:Susceptible_Low_risk_counties"
             },
             "context": {},
-            "value": 1269942.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible_Low_risk_counties",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000969:Susceptible_Low_risk_counties"
+                    },
+                    "context": {}
+                },
+                "value": 1269942.0
+            }
         },
         "Infected_Low_risk_counties": {
             "name": "Infected_Low_risk_counties",
@@ -130,7 +266,17 @@
                 "biomodels.species": "BIOMD0000000969:Infected_Low_risk_counties"
             },
             "context": {},
-            "value": 6.0
+            "value": {
+                "concept": {
+                    "name": "Infected_Low_risk_counties",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000969:Infected_Low_risk_counties"
+                    },
+                    "context": {}
+                },
+                "value": 6.0
+            }
         },
         "Hospitalised_Low_risk_counties": {
             "name": "Hospitalised_Low_risk_counties",
@@ -139,7 +285,17 @@
                 "biomodels.species": "BIOMD0000000969:Hospitalised_Low_risk_counties"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Hospitalised_Low_risk_counties",
+                    "identifiers": {
+                        "ncit": "C25179",
+                        "biomodels.species": "BIOMD0000000969:Hospitalised_Low_risk_counties"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "ICU_Low_risk_counties": {
             "name": "ICU_Low_risk_counties",
@@ -148,7 +304,17 @@
                 "biomodels.species": "BIOMD0000000969:ICU_Low_risk_counties"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "ICU_Low_risk_counties",
+                    "identifiers": {
+                        "ncit": "C53511",
+                        "biomodels.species": "BIOMD0000000969:ICU_Low_risk_counties"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Deceased_Counties_with_airports": {
             "name": "Deceased_Counties_with_airports",
@@ -157,7 +323,17 @@
                 "biomodels.species": "BIOMD0000000969:Deceased_Counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Deceased_Counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C28554",
+                        "biomodels.species": "BIOMD0000000969:Deceased_Counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Recovered_Counties_with_airports": {
             "name": "Recovered_Counties_with_airports",
@@ -166,7 +342,17 @@
                 "biomodels.species": "BIOMD0000000969:Recovered_Counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Recovered_Counties_with_airports",
+                    "identifiers": {
+                        "ido": "0000621",
+                        "biomodels.species": "BIOMD0000000969:Recovered_Counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Discharged_Counties_with_airports": {
             "name": "Discharged_Counties_with_airports",
@@ -175,7 +361,17 @@
                 "biomodels.species": "BIOMD0000000969:Discharged_Counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Discharged_Counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C154475",
+                        "biomodels.species": "BIOMD0000000969:Discharged_Counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Deceased_Counties_neighbouring_counties_with_airports": {
             "name": "Deceased_Counties_neighbouring_counties_with_airports",
@@ -184,7 +380,17 @@
                 "biomodels.species": "BIOMD0000000969:Deceased_Counties_neighbouring_counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Deceased_Counties_neighbouring_counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C28554",
+                        "biomodels.species": "BIOMD0000000969:Deceased_Counties_neighbouring_counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Recovered_Counties_neighbouring_counties_with_airports": {
             "name": "Recovered_Counties_neighbouring_counties_with_airports",
@@ -193,7 +399,17 @@
                 "biomodels.species": "BIOMD0000000969:Recovered_Counties_neighbouring_counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Recovered_Counties_neighbouring_counties_with_airports",
+                    "identifiers": {
+                        "ido": "0000621",
+                        "biomodels.species": "BIOMD0000000969:Recovered_Counties_neighbouring_counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Discharged_Counties_neighbouring_counties_with_airports": {
             "name": "Discharged_Counties_neighbouring_counties_with_airports",
@@ -202,7 +418,17 @@
                 "biomodels.species": "BIOMD0000000969:Discharged_Counties_neighbouring_counties_with_airports"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Discharged_Counties_neighbouring_counties_with_airports",
+                    "identifiers": {
+                        "ncit": "C154475",
+                        "biomodels.species": "BIOMD0000000969:Discharged_Counties_neighbouring_counties_with_airports"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Deceased_Counties_with_highways": {
             "name": "Deceased_Counties_with_highways",
@@ -211,7 +437,17 @@
                 "biomodels.species": "BIOMD0000000969:Deceased_Counties_with_highways"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Deceased_Counties_with_highways",
+                    "identifiers": {
+                        "ncit": "C28554",
+                        "biomodels.species": "BIOMD0000000969:Deceased_Counties_with_highways"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Recovered_Counties_with_highways": {
             "name": "Recovered_Counties_with_highways",
@@ -220,7 +456,17 @@
                 "biomodels.species": "BIOMD0000000969:Recovered_Counties_with_highways"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Recovered_Counties_with_highways",
+                    "identifiers": {
+                        "ido": "0000621",
+                        "biomodels.species": "BIOMD0000000969:Recovered_Counties_with_highways"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Discharged_Counties_with_highways": {
             "name": "Discharged_Counties_with_highways",
@@ -229,7 +475,17 @@
                 "biomodels.species": "BIOMD0000000969:Discharged_Counties_with_highways"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Discharged_Counties_with_highways",
+                    "identifiers": {
+                        "ncit": "C154475",
+                        "biomodels.species": "BIOMD0000000969:Discharged_Counties_with_highways"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Deceased_Low_risk_counties": {
             "name": "Deceased_Low_risk_counties",
@@ -238,7 +494,17 @@
                 "biomodels.species": "BIOMD0000000969:Deceased_Low_risk_counties"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Deceased_Low_risk_counties",
+                    "identifiers": {
+                        "ncit": "C28554",
+                        "biomodels.species": "BIOMD0000000969:Deceased_Low_risk_counties"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Recovered_Low_risk_counties": {
             "name": "Recovered_Low_risk_counties",
@@ -247,7 +513,17 @@
                 "biomodels.species": "BIOMD0000000969:Recovered_Low_risk_counties"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Recovered_Low_risk_counties",
+                    "identifiers": {
+                        "ido": "0000621",
+                        "biomodels.species": "BIOMD0000000969:Recovered_Low_risk_counties"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Discharged_Low_risk_counties": {
             "name": "Discharged_Low_risk_counties",
@@ -256,7 +532,17 @@
                 "biomodels.species": "BIOMD0000000969:Discharged_Low_risk_counties"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Discharged_Low_risk_counties",
+                    "identifiers": {
+                        "ncit": "C154475",
+                        "biomodels.species": "BIOMD0000000969:Discharged_Low_risk_counties"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         }
     }
 }

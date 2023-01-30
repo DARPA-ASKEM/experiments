@@ -1,7 +1,7 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Infected*Susceptible*beta*(1.0 - epsilon)/N",
+            "rate_law": "Infected*Susceptible*beta*(1.0 - epsilon)/N",
             "type": "ControlledConversion",
             "controller": {
                 "name": "Infected",
@@ -32,7 +32,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Exposed*sigma",
+            "rate_law": "Exposed*sigma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Exposed",
@@ -55,7 +55,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*gamma",
+            "rate_law": "Infected*gamma",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",
@@ -69,11 +69,10 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "biomodels.species": "BIOMD0000000978:Recovered"
+                    "biomodels.species": "BIOMD0000000978:Recovered",
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "provenance": []
         }

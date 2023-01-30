@@ -3,12 +3,23 @@
         "Susceptible": {
             "name": "Susceptible",
             "identifiers": {
-                "ido": "0000514",
                 "ncit": "C171133",
+                "ido": "0000514",
                 "biomodels.species": "BIOMD0000000962:Susceptible"
             },
             "context": {},
-            "value": 9010000.0
+            "value": {
+                "concept": {
+                    "name": "Susceptible",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000962:Susceptible"
+                    },
+                    "context": {}
+                },
+                "value": 9010000.0
+            }
         },
         "Unquarantined_Infected": {
             "name": "Unquarantined_Infected",
@@ -18,17 +29,39 @@
                 "biomodels.species": "BIOMD0000000962:Unquarantined_Infected"
             },
             "context": {},
-            "value": 258.0
+            "value": {
+                "concept": {
+                    "name": "Unquarantined_Infected",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000962:Unquarantined_Infected"
+                    },
+                    "context": {}
+                },
+                "value": 258.0
+            }
         },
         "Quarantined_Infected": {
             "name": "Quarantined_Infected",
             "identifiers": {
+                "ncit": "C171133",
                 "ido": "0000511",
-                "ncit": "C25549",
                 "biomodels.species": "BIOMD0000000962:Quarantined_Infected"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Quarantined_Infected",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000962:Quarantined_Infected"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         },
         "Confirmed_Infected": {
             "name": "Confirmed_Infected",
@@ -38,7 +71,18 @@
                 "biomodels.species": "BIOMD0000000962:Confirmed_Infected"
             },
             "context": {},
-            "value": 0.0
+            "value": {
+                "concept": {
+                    "name": "Confirmed_Infected",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000962:Confirmed_Infected"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
         }
     }
 }

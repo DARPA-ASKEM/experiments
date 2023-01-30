@@ -20,8 +20,8 @@
         },
         {
             "sname": "Recovered",
-            "mira_ids": "[]",
-            "mira_context": "[('property', 'ido:0000621')]",
+            "mira_ids": "[('identity', 'ido:0000592')]",
+            "mira_context": "[]",
             "mira_initial_value": "0.0"
         }
     ],
@@ -29,7 +29,7 @@
         {
             "tname": "t1",
             "template_type": "ControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'ido:0000597'), ('identity', 'ncit:C171133')), ('Infected', ('identity', 'ido:0000511'), ('identity', 'ncit:C171133')), 'ControlledConversion', 'rate')",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {

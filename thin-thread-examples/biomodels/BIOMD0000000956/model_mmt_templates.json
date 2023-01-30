@@ -1,7 +1,7 @@
 {
     "templates": [
         {
-            "rate_law": "1.0*Infected*Susceptible*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)*(ModelValue_5*Ro_CA + ModelValue_6*Ro_NY)",
+            "rate_law": "Infected*Susceptible*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)*(ModelValue_5*Ro_CA + ModelValue_6*Ro_NY)",
             "type": "ControlledConversion",
             "controller": {
                 "name": "Infected",
@@ -15,8 +15,8 @@
             "subject": {
                 "name": "Susceptible",
                 "identifiers": {
-                    "ido": "0000514",
                     "ncit": "C171133",
+                    "ido": "0000514",
                     "biomodels.species": "BIOMD0000000956:Susceptible"
                 },
                 "context": {}
@@ -33,7 +33,7 @@
             "provenance": []
         },
         {
-            "rate_law": "1.0*Infected*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)",
+            "rate_law": "Infected*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)",
             "type": "NaturalConversion",
             "subject": {
                 "name": "Infected",
@@ -47,12 +47,9 @@
             "outcome": {
                 "name": "Recovered",
                 "identifiers": {
-                    "ncit": "C171133",
-                    "biomodels.species": "BIOMD0000000956:Recovered"
+                    "ido": "0000592"
                 },
-                "context": {
-                    "property": "ido:0000621"
-                }
+                "context": {}
             },
             "provenance": []
         }

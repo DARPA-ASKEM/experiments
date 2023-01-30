@@ -26,8 +26,8 @@
         },
         {
             "sname": "Recovered",
-            "mira_ids": "[]",
-            "mira_context": "[('property', 'ido:0000621')]",
+            "mira_ids": "[('identity', 'ido:0000592')]",
+            "mira_context": "[]",
             "mira_initial_value": "0.0"
         },
         {
@@ -41,7 +41,7 @@
         {
             "tname": "t1",
             "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('identity', 'ncit:C71902')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000511')), ('Recovered', ('property', 'ido:0000621')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('identity', 'ncit:C71902'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_name": "p_petri_1",
             "parameter_value": null
         },
         {
@@ -71,13 +71,13 @@
         {
             "tname": "t6",
             "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Asymptomatic', ('identity', 'ido:0000511')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000511')), ('Recovered', ('property', 'ido:0000621')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('identity', 'ncit:C71902'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_name": "p_petri_6",
             "parameter_value": null
         },
         {
             "tname": "t7",
             "template_type": "GroupedControlledConversion",
-            "parameter_name": "(('Susceptible', ('identity', 'ido:0000514')), ('Infected_quarantined', ('identity', 'ido:0000511'), ('identity', 'ncit:C71902')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000511')), ('Recovered', ('property', 'ido:0000621')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('identity', 'ncit:C71902'))), 'GroupedControlledConversion', 'rate')",
+            "parameter_name": "p_petri_7",
             "parameter_value": null
         },
         {
