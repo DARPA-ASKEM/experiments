@@ -1,0 +1,55 @@
+{
+    "initials": {
+        "susceptible_population": {
+            "name": "susceptible_population",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "susceptible_population",
+                    "identifiers": {
+                        "ido": "0000514"
+                    },
+                    "context": {}
+                },
+                "value": 1.0
+            }
+        },
+        "infected_population": {
+            "name": "infected_population",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "infected_population",
+                    "identifiers": {
+                        "ido": "0000511"
+                    },
+                    "context": {}
+                },
+                "value": 2.0
+            }
+        },
+        "immune_population": {
+            "name": "immune_population",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "immune_population",
+                    "identifiers": {
+                        "ido": "0000592"
+                    },
+                    "context": {}
+                },
+                "value": 3.0
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "initials": {
+        "susceptible_population_young": {
+            "name": "susceptible_population_young",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "young"
+            },
+            "value": null
+        },
+        "susceptible_population_middle": {
+            "name": "susceptible_population_middle",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "middle"
+            },
+            "value": null
+        },
+        "susceptible_population_old": {
+            "name": "susceptible_population_old",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "old"
+            },
+            "value": null
+        },
+        "infected_population_young": {
+            "name": "infected_population_young",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "young"
+            },
+            "value": null
+        },
+        "infected_population_middle": {
+            "name": "infected_population_middle",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "middle"
+            },
+            "value": null
+        },
+        "infected_population_old": {
+            "name": "infected_population_old",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "old"
+            },
+            "value": null
+        },
+        "immune_population_young": {
+            "name": "immune_population_young",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "young"
+            },
+            "value": null
+        },
+        "immune_population_middle": {
+            "name": "immune_population_middle",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "middle"
+            },
+            "value": null
+        },
+        "immune_population_old": {
+            "name": "immune_population_old",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "old"
+            },
+            "value": null
+        }
+    }
+}

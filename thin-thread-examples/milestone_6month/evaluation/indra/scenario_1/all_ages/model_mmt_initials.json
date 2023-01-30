@@ -1,0 +1,274 @@
+{
+    "initials": {
+        "susceptible_population_0_9": {
+            "name": "susceptible_population_0_9",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "0_9"
+            },
+            "value": null
+        },
+        "susceptible_population_10_19": {
+            "name": "susceptible_population_10_19",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "10_19"
+            },
+            "value": null
+        },
+        "susceptible_population_20_29": {
+            "name": "susceptible_population_20_29",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "20_29"
+            },
+            "value": null
+        },
+        "susceptible_population_30_39": {
+            "name": "susceptible_population_30_39",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "30_39"
+            },
+            "value": null
+        },
+        "susceptible_population_40_49": {
+            "name": "susceptible_population_40_49",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "40_49"
+            },
+            "value": null
+        },
+        "susceptible_population_50_59": {
+            "name": "susceptible_population_50_59",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "50_59"
+            },
+            "value": null
+        },
+        "susceptible_population_60_69": {
+            "name": "susceptible_population_60_69",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "60_69"
+            },
+            "value": null
+        },
+        "susceptible_population_70_79": {
+            "name": "susceptible_population_70_79",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "70_79"
+            },
+            "value": null
+        },
+        "susceptible_population_80": {
+            "name": "susceptible_population_80",
+            "identifiers": {
+                "ido": "0000514"
+            },
+            "context": {
+                "age": "80"
+            },
+            "value": null
+        },
+        "infected_population_0_9": {
+            "name": "infected_population_0_9",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "0_9"
+            },
+            "value": null
+        },
+        "infected_population_10_19": {
+            "name": "infected_population_10_19",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "10_19"
+            },
+            "value": null
+        },
+        "infected_population_20_29": {
+            "name": "infected_population_20_29",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "20_29"
+            },
+            "value": null
+        },
+        "infected_population_30_39": {
+            "name": "infected_population_30_39",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "30_39"
+            },
+            "value": null
+        },
+        "infected_population_40_49": {
+            "name": "infected_population_40_49",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "40_49"
+            },
+            "value": null
+        },
+        "infected_population_50_59": {
+            "name": "infected_population_50_59",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "50_59"
+            },
+            "value": null
+        },
+        "infected_population_60_69": {
+            "name": "infected_population_60_69",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "60_69"
+            },
+            "value": null
+        },
+        "infected_population_70_79": {
+            "name": "infected_population_70_79",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "70_79"
+            },
+            "value": null
+        },
+        "infected_population_80": {
+            "name": "infected_population_80",
+            "identifiers": {
+                "ido": "0000511"
+            },
+            "context": {
+                "age": "80"
+            },
+            "value": null
+        },
+        "immune_population_0_9": {
+            "name": "immune_population_0_9",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "0_9"
+            },
+            "value": null
+        },
+        "immune_population_10_19": {
+            "name": "immune_population_10_19",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "10_19"
+            },
+            "value": null
+        },
+        "immune_population_20_29": {
+            "name": "immune_population_20_29",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "20_29"
+            },
+            "value": null
+        },
+        "immune_population_30_39": {
+            "name": "immune_population_30_39",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "30_39"
+            },
+            "value": null
+        },
+        "immune_population_40_49": {
+            "name": "immune_population_40_49",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "40_49"
+            },
+            "value": null
+        },
+        "immune_population_50_59": {
+            "name": "immune_population_50_59",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "50_59"
+            },
+            "value": null
+        },
+        "immune_population_60_69": {
+            "name": "immune_population_60_69",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "60_69"
+            },
+            "value": null
+        },
+        "immune_population_70_79": {
+            "name": "immune_population_70_79",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "70_79"
+            },
+            "value": null
+        },
+        "immune_population_80": {
+            "name": "immune_population_80",
+            "identifiers": {
+                "ido": "0000592"
+            },
+            "context": {
+                "age": "80"
+            },
+            "value": null
+        }
+    }
+}

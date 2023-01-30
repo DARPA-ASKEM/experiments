@@ -1,0 +1,16 @@
+{
+    "parameters": {
+        "beta": {
+            "name": "beta",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "gamma": {
+            "name": "gamma",
+            "identifiers": {},
+            "context": {},
+            "value": 0.2
+        }
+    }
+}

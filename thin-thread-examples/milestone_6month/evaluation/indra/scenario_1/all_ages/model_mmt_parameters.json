@@ -1,0 +1,70 @@
+{
+    "parameters": {
+        "beta": {
+            "name": "beta",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "gamma": {
+            "name": "gamma",
+            "identifiers": {},
+            "context": {},
+            "value": 0.2
+        },
+        "mira_param_strat_0": {
+            "name": "mira_param_strat_0",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "mira_param_strat_1": {
+            "name": "mira_param_strat_1",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "mira_param_strat_2": {
+            "name": "mira_param_strat_2",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "mira_param_strat_3": {
+            "name": "mira_param_strat_3",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "mira_param_strat_4": {
+            "name": "mira_param_strat_4",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "mira_param_strat_5": {
+            "name": "mira_param_strat_5",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "mira_param_strat_6": {
+            "name": "mira_param_strat_6",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "mira_param_strat_7": {
+            "name": "mira_param_strat_7",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        },
+        "mira_param_strat_8": {
+            "name": "mira_param_strat_8",
+            "identifiers": {},
+            "context": {},
+            "value": 0.1
+        }
+    }
+}

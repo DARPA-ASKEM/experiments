@@ -1,0 +1,154 @@
+{
+    "initials": {
+        "Susceptible": {
+            "name": "Susceptible",
+            "identifiers": {
+                "ncit": "C171133",
+                "ido": "0000514"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Susceptible",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000514"
+                    },
+                    "context": {}
+                },
+                "value": 43994.0
+            }
+        },
+        "Exposed": {
+            "name": "Exposed",
+            "identifiers": {
+                "ncit": "C171133",
+                "ido": "0000597"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Exposed",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000597"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
+        },
+        "Super_spreaders": {
+            "name": "Super_spreaders",
+            "identifiers": {
+                "ncit": "0000511",
+                "ido": "0000463"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Super_spreaders",
+                    "identifiers": {
+                        "ncit": "0000511",
+                        "ido": "0000463"
+                    },
+                    "context": {}
+                },
+                "value": 5.0
+            }
+        },
+        "Infectious": {
+            "name": "Infectious",
+            "identifiers": {
+                "ncit": "C171133",
+                "ido": "0000463"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Infectious",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000463"
+                    },
+                    "context": {}
+                },
+                "value": 1.0
+            }
+        },
+        "Hospitalised": {
+            "name": "Hospitalised",
+            "identifiers": {
+                "ncit": "C171133"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Hospitalised",
+                    "identifiers": {
+                        "ncit": "C171133"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
+        },
+        "Asymptomatic": {
+            "name": "Asymptomatic",
+            "identifiers": {
+                "ncit": "C171133",
+                "ido": "0000511"
+            },
+            "context": {
+                "disease_status": "ncit:C3833"
+            },
+            "value": {
+                "concept": {
+                    "name": "Asymptomatic",
+                    "identifiers": {
+                        "ncit": "C171133",
+                        "ido": "0000511"
+                    },
+                    "context": {
+                        "disease_status": "ncit:C3833"
+                    }
+                },
+                "value": 0.0
+            }
+        },
+        "Fatalities": {
+            "name": "Fatalities",
+            "identifiers": {
+                "ncit": "C171133"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Fatalities",
+                    "identifiers": {
+                        "ncit": "C171133"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
+        },
+        "Recovered": {
+            "name": "Recovered",
+            "identifiers": {
+                "ncit": "C171133"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Recovered",
+                    "identifiers": {
+                        "ncit": "C171133"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
+        }
+    }
+}
