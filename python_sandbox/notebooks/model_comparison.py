@@ -76,7 +76,7 @@ else:
 # 12 models: 629 s
 # 24 models: 1921 s
 
-with open('../../thin-thread-examples/model_comparison/mira_comparison_thin_thread.json', 'w') as f:
+with open('../../thin-thread-examples/milestone_6month/model_comparison/mira_comparison_thin_thread.json', 'w') as f:
     f.write(json.dumps(model_comparison, indent = 4))
 
 # %%
