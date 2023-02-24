@@ -26,6 +26,8 @@ RUN pip3 install numpy \
     pylint \
     regex \
     requests
+    minisom \
+    tslearn
 
 # Add packages and precompile
 RUN julia -e 'import Pkg; Pkg.update()' && \
