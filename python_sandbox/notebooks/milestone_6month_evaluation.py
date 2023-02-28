@@ -180,6 +180,36 @@ df = pd.DataFrame(
 df.to_csv('../../thin-thread-examples/milestone_6month/evaluation/ta1/usa-IRDVHN_age.csv')
 
 # %%
+# Scenario 3 Question 2
+# Model comparison between SIR variants
 
+with open('../../thin-thread-examples/milestone_6month/evaluation/indra/scenario_3/model_comparison_SIRvariants_all.json', 'r') as f:
+    model_comparison_SIRvariants_all = json.load(f)
+
+with open('../../thin-thread-examples/milestone_6month/evaluation/indra/scenario_3/model_comparison_SIRvariants_filtered.json', 'r') as f:
+    model_comparison_SIRvariants_filtered = json.load(f)
+
+# %%
+fig, axes = plt.subplots(nrows = 1, ncols = 1, figsize = (8, 8))
+
+n = len(model_comparison_SIRvariants_filtered['model_names'])
+
+A = np.full((n, n), fill_value = None, dtype = np.float64)
+for x in model_comparison_SIRvariants_filtered['similarity_scores']:
+    i, j = x['models']
+    A[j, i] = x['score']
+    A[i, i] = 1.0
+
+# Similarity scores
+h = axes.matshow(A, vmin = 0, vmax = 1, cmap = 'cividis')
+
+__ = axes.set_xticks(np.arange(n), labels = model_comparison_SIRvariants_filtered['model_names'])
+__ = axes.set_yticks(np.arange(n), labels = model_comparison_SIRvariants_filtered['model_names'])
+
+__ = axes.tick_params(axis = 'x', labelrotation = 90)
+
+__ = plt.colorbar(h, ax = axes, use_gridspec = True, location = 'bottom')
+
+fig.savefig('../figures/model_comparison_SIRvariants_filtered.png', dpi = 150)
 
 # %%
