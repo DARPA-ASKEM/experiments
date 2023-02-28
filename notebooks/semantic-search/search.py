@@ -1,8 +1,11 @@
 """
-pip install pandas
+#needed for semantic search
 pip install torch
 pip install transformers
 pip install sentence-transformers
+
+#only used in this demo
+pip install pandas
 pip install easyrepl
 
 
