@@ -11,13 +11,12 @@ extract into data/ folder (mainly just want papers.csv)
 """
 from __future__ import annotations
 import torch
-from transformers import AutoTokenizer, AutoModel, logging
+from transformers import logging
 from sentence_transformers import SentenceTransformer
 import pandas as pd
 
 
-import pdb
-
+# silence transformers logging. by default, mpnet prints out some unnecessary warnings
 logging.set_verbosity_error()
 
 
@@ -43,63 +42,38 @@ def get_title_abstract_data(size=400) -> list[str]:
 
 
 
+# from transformers import AutoTokenizer, AutoModel
+# class SpecterEmbedder:
+#     def __init__(self, try_cuda=True):
+#         # load model and tokenizer
+#         self.tokenizer = AutoTokenizer.from_pretrained('allenai/specter')
+#         self.model = AutoModel.from_pretrained('allenai/specter')
 
-class SpecterEmbedder:
-    def __init__(self, try_cuda=True):
-        # load model and tokenizer
-        self.tokenizer = AutoTokenizer.from_pretrained('allenai/specter')
-        self.model = AutoModel.from_pretrained('allenai/specter')
+#         # move model to GPU if available
+#         if try_cuda and torch.cuda.is_available():
+#             self.model = self.model.cuda()
 
-        # move model to GPU if available
-        if try_cuda and torch.cuda.is_available():
-            self.model = self.model.cuda()
+#         # store whether on GPU or CPU
+#         self.device = next(self.model.parameters()).device
 
-        # store whether on GPU or CPU
-        self.device = next(self.model.parameters()).device
+#     def embed(self, texts:list[str]):
+#         # important to use no_grad otherwise it uses way too much memory
+#         with torch.no_grad():
+#             inputs = self.tokenizer(texts, padding=True, truncation=True, return_tensors="pt", max_length=512).to(self.device)
+#             result = self.model(**inputs)
 
-    def embed(self, texts:list[str]):
-        # important to use no_grad otherwise it uses way too much memory
-        with torch.no_grad():
-            inputs = self.tokenizer(texts, padding=True, truncation=True, return_tensors="pt", max_length=512).to(self.device)
-            result = self.model(**inputs)
+#             embeddings = result.last_hidden_state[:, 0, :]
 
-            embeddings = result.last_hidden_state[:, 0, :]
-
-            return embeddings
-
-
-class BertEmbedder:
-    def __init__(self, try_cuda=True):
-        # load model and tokenizer
-        self.tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-        self.model = AutoModel.from_pretrained('bert-base-uncased')
-
-        # move model to GPU if available
-        if try_cuda and torch.cuda.is_available():
-            self.model = self.model.cuda()
-
-        # store whether on GPU or CPU
-        self.device = next(self.model.parameters()).device
-
-    def embed(self, texts:list[str]):
-        # important to use no_grad otherwise it uses way too much memory
-        with torch.no_grad():
-            inputs = self.tokenizer(texts, padding=True, truncation=True, return_tensors="pt", max_length=512).to(self.device)
-            result = self.model(**inputs)
-
-            embeddings = result.last_hidden_state[:, 0, :]
-
-            return embeddings
+#             return embeddings
 
 
 class MPNetEmbedder:
     def __init__(self, try_cuda=True):
-        with torch.no_grad():
-            self.model = SentenceTransformer('all-mpnet-base-v2')
+        self.model = SentenceTransformer('all-mpnet-base-v2')
 
-            # move model to GPU
-            if try_cuda and torch.cuda.is_available():
-                self.model = self.model.cuda()
+        # move model to GPU
+        if try_cuda and torch.cuda.is_available():
+            self.model = self.model.cuda()
 
         # save the device
         self.device = next(self.model.parameters()).device
@@ -116,9 +90,8 @@ class MPNetEmbedder:
 def main():
     from easyrepl import REPL
 
-    # instantiate the embedding model
-    # embedder = SpecterEmbedder()
-    # embedder = BertEmbedder()
+    # instantiate the embedding model. 
+    # Note that Specter performs much worse than MPNet on this task, and probably shouldn't be used
     embedder = MPNetEmbedder()
 
     #embed the corpus of data. Elements are the title+abstract of each paper
@@ -141,6 +114,7 @@ def main():
 
         #print the results
         for idx in top_results:
+            print()
             print(f"Match Score: {scores[idx]}")
             print(f"Text: {corpus[idx]}")
             print()
