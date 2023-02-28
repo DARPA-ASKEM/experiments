@@ -2,6 +2,7 @@
 pip install pandas
 pip install torch
 pip install transformers
+pip install sentence-transformers
 pip install easyrepl
 
 
@@ -10,15 +11,17 @@ extract into data/ folder (mainly just want papers.csv)
 """
 from __future__ import annotations
 import torch
-from transformers import AutoTokenizer, AutoModel
+from transformers import AutoTokenizer, AutoModel, logging
+from sentence_transformers import SentenceTransformer
 import pandas as pd
 
 
 import pdb
 
+logging.set_verbosity_error()
 
 
-def get_data(rows=400):
+def get_data(size=400) -> pd.DataFrame:
     #read in data, and remove rows with missing abstracts
     df = pd.read_csv('data/papers.csv')
     df = df[['title', 'abstract', 'paper_text']]
@@ -26,19 +29,20 @@ def get_data(rows=400):
     df.reset_index(inplace=True, drop=True)
 
     #take a random subset of the data since it all probably won't fit in memory
-    df = df.sample(rows, random_state=42)
+    df = df.sample(size, random_state=42)
     df.reset_index(inplace=True, drop=True)
 
     return df
 
 
-def get_paragraph_data():
-    df = get_data()
-    df['paragraphs'] = df['paper_text'].apply(lambda x: x.split('\n'))
+def get_title_abstract_data(size=400) -> list[str]:
+    """Create a list of strings consisting of the title and abstract of each paper"""
+    df = get_data(size)
+    data = (df['title'] + '\n' + df['abstract']).tolist()
+    return data
 
-    pdb.set_trace()
 
-    return df
+
 
 class SpecterEmbedder:
     def __init__(self, try_cuda=True):
@@ -88,16 +92,38 @@ class BertEmbedder:
             return embeddings
 
 
+class MPNetEmbedder:
+    def __init__(self, try_cuda=True):
+        with torch.no_grad():
+            self.model = SentenceTransformer('all-mpnet-base-v2')
+
+            # move model to GPU
+            if try_cuda and torch.cuda.is_available():
+                self.model = self.model.cuda()
+
+        # save the device
+        self.device = next(self.model.parameters()).device
+
+
+    def embed(self, texts:list[str]):
+        with torch.no_grad():
+            embeddings = self.model.encode(texts, show_progress_bar=False, device=self.device, convert_to_tensor=True)
+            return embeddings
+
+
+
 
 def main():
     from easyrepl import REPL
 
-    embedder = BertEmbedder()#SpecterEmbedder()
+    # instantiate the embedding model
+    # embedder = SpecterEmbedder()
+    # embedder = BertEmbedder()
+    embedder = MPNetEmbedder()
 
-    #embed the corpus of data. Treat title+abstract as one document
-    df = get_data()
-    title_abs = (df['title'] + embedder.tokenizer.sep_token + df['abstract']).tolist()
-    corpus_embeddings = embedder.embed(title_abs)
+    #embed the corpus of data. Elements are the title+abstract of each paper
+    corpus = get_title_abstract_data()
+    corpus_embeddings = embedder.embed(corpus)
 
 
     #number of results to display
@@ -115,9 +141,8 @@ def main():
 
         #print the results
         for idx in top_results:
-            print(f"Title: {df.loc[idx, 'title']}")
-            print(f"Abstract: {df.loc[idx, 'abstract']}")
-            print(f"Score: {scores[idx]}")
+            print(f"Match Score: {scores[idx]}")
+            print(f"Text: {corpus[idx]}")
             print()
 
         print('-------------------------------------------------')
