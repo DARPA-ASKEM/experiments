@@ -85,8 +85,11 @@ A full example on embedding an input query and performing a search follows:
 
 ```python
 
+# pip install elasticsearch
+from elasticsearch import Elasticsearch
 from search import MPNetEmbedder
 
+es = Elasticsearch()
 model_engine = MPNetEmbedder()
 
 # Sample input query to be embedded, and compared to elasticsearch documents
