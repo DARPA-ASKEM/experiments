@@ -25,7 +25,7 @@ RUN pip3 install numpy \
     tqdm \
     pylint \
     regex \
-    requests
+    requests \
     minisom \
     tslearn
 
