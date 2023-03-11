@@ -18,3 +18,4 @@ xarray
 pyarrow
 lxml
 openai
+latex2mathml
