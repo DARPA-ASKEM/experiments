@@ -9,6 +9,8 @@
 # Source: [https://github.com/ml4ai/skema/pull/133](https://github.com/ml4ai/skema/pull/133)
 
 # %%
+import html
+import re
 import os
 import json
 import requests
@@ -30,18 +32,21 @@ REST_URL_SKEMA = "https://skema-rs.staging.terarium.ai"
 # Convert LaTeX equations to MathML equations
 def convert_latex2mathml(model_latex: Optional[list]) -> list:
 
-    for i, m in enumerate(model_latex):
-        m = latex2mathml.converter.convert(m)
+    model_mathml = []
+    for i in range(len(model_latex)):
+
+        m = latex2mathml.converter.convert(model_latex[i])
 
         # Replace some unicode characters
         # SKEMA throws error otherwise
-        m = m.replace('&#x0003D;', '=') 
-        m = m.replace('&#x02212;', '-')
-        m = m.replace('&#x0002B;', '+')
+        # m = m.replace('&#x0003D;', '=') 
+        # m = m.replace('&#x02212;', '-')
+        # m = m.replace('&#x0002B;', '+')
+        m = html.unescape(m)
 
-        model_latex[i] = m
-
-    return model_latex
+        model_mathml.append(m)
+        
+    return model_mathml
 
 # Convert MathML equations to Petri-net ACSet
 def convert_mathml2petri(model_mathml: Optional[list] = None) -> dict:
@@ -61,6 +66,11 @@ def convert_mathml2petri(model_mathml: Optional[list] = None) -> dict:
         print(f'{res.url}: Code {res.status_code}\n\t\"{res.text}\"')
         if res.status_code == 200:
             model_petri = res.json()
+
+        # Remove "uid" from "S" to avoid `read_json_acset` error
+        for i in range(len(model_petri['S'])):
+            if 'uid' in model_petri['S'][i].keys():
+                __ = model_petri['S'][i].pop('uid')
 
     return model_petri
 
@@ -209,6 +219,13 @@ models[model_name]['mathml'] = [
     "<math display=\"block\" style=\"display:inline-block;\"><mrow><mfrac><mrow><mi>d</mi><mi>R</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>γ</mi><mi>I</mi></mrow></math>"
 ]
 
+# in LaTeX
+models[model_name]['latex'] = [
+    r"\frac{d S}{d t} = -\beta S I",
+    r"\frac{d I}{d t} = \beta S I - \gamma I",
+    r"\frac{d R}{d t} = \gamma I"
+]
+
 # %%
 # SKEMA API health check
 __ = convert_mathml2petri()
@@ -220,12 +237,14 @@ models[model_name]['mathml_petri'] = convert_mathml2petri(models[model_name]['ma
 # %%
 # Plot both Petri net models
 fig, axes = plt.subplots(1, 2, figsize = (8, 4))
-fig.suptitle(model_name)
+fig.suptitle('Equation (MatML) -(SKEMA)→ Petri (ACSet)')
 __ = plt.setp(axes[0], title = 'Ground Truth')
 draw_graph(models[model_name]['petri'], ax = axes[0])
 
-__ = plt.setp(axes[1], title = 'SKEMA Inference')
+__ = plt.setp(axes[1], title = 'Output')
 draw_graph(models[model_name]['mathml_petri'], ax = axes[1])
+
+fig.savefig('../figures/model_conversion_equation-Petri_SIR.png', dpi = 150)
 
 # %%[markdown]
 # The two models - `model_petri` and `model_petri_math = skema_mathml2acset(model_mathml)` match up 
@@ -252,24 +271,25 @@ models[model_name]['latex'] = [
 
 # %%
 # Convert LaTeX equations to MathML equations
-models[model_name]['mathml'] = convert_latex2mathml(models[model_name]['latex'])
+models[model_name]['latex_mathml'] = convert_latex2mathml(models[model_name]['latex'])
 
 # %%
 # Convert MathML equations to Petri net (ACSset)
-models[model_name]['mathml_petri'] = convert_mathml2petri(models[model_name]['mathml']) 
+models[model_name]['latex_mathml_petri'] = convert_mathml2petri(models[model_name]['latex_mathml']) 
 
 # %%[markdown]
 # Note that one gets Code 502 error if the MathML string uses the unicode for `=, +, -`
 
 # %%
 fig, axes = plt.subplots(1, 2, figsize = (8, 4))
-fig.suptitle('MathML-to-ACSet Conversion by SKEMA')
+fig.suptitle('Equation (LaTeX) -(SKEMA)→ Petri (ACSet)')
 __ = plt.setp(axes[0], title = 'SIR')
 draw_graph(models['SIR']['mathml_petri'], ax = axes[0])
 
 __ = plt.setp(axes[1], title = 'SIDARTHE')
-draw_graph(models['SIDARTHE']['mathml_petri'], ax = axes[1])
+draw_graph(models['SIDARTHE']['latex_mathml_petri'], ax = axes[1])
 
+fig.savefig('../figures/model_conversion_equation-Petri_SIDARTHE.png', dpi = 150)
 
 # %%[markdown]
 # ## Test with an age-contact model
@@ -320,21 +340,22 @@ models[model_name]['petri'] = {
 
 # %%
 # Convert LaTeX equations to MathML equations
-models[model_name]['mathml'] = convert_latex2mathml(models[model_name]['latex'])
+models[model_name]['latex_mathml'] = convert_latex2mathml(models[model_name]['latex'])
 
 # Convert MathML equations to Petri net (ACSset)
-models[model_name]['mathml_petri'] = convert_mathml2petri(models[model_name]['mathml']) 
+models[model_name]['latex_mathml_petri'] = convert_mathml2petri(models[model_name]['latex_mathml']) 
 
-# %%
+
 fig, axes = plt.subplots(1, 2, figsize = (8, 4))
-fig.suptitle('MathML-to-ACSet Conversion by SKEMA')
-
-fig.suptitle('Age-Contact Model')
+fig.suptitle('Equation (LaTeX) -(SKEMA)→ Petri (ACSet)')
 __ = plt.setp(axes[0], title = 'Ground Truth')
 draw_graph(models[model_name]['petri'], ax = axes[0])
 
-__ = plt.setp(axes[1], title = 'SKEMA Inference')
-draw_graph(models[model_name]['mathml_petri'], ax = axes[1])
+__ = plt.setp(axes[1], title = 'Output')
+draw_graph(models[model_name]['latex_mathml_petri'], ax = axes[1])
+
+fig.savefig('../figures/model_conversion_equation-Petri_Contact.png', dpi = 150)
+
 
 # %%[markdown]
 # Note: Missing edges in age-contact model
@@ -342,3 +363,152 @@ draw_graph(models[model_name]['mathml_petri'], ax = axes[1])
 # Need to verify correctness of the age-contact model equations.
 # 
 # Let's try to generate the equations from the ground-truth Petri net.
+
+# %%
+# LaTeX generated from the ground-truth Petri net using SciML ModelingToolKit
+model_name = 'age_contact'
+# models[model_name]['petri_latex'] = [
+#     r"\frac{\mathrm{d} \mathrm{A1}\left( t \right)}{\mathrm{d}t} = 0",
+#     r"\frac{\mathrm{d} \mathrm{A2}\left( t \right)}{\mathrm{d}t} = 0"
+# ]
+models[model_name]['petri_latex'] = [
+    r"\frac{d A_1}{d t} = 0",
+    r"\frac{d A_2}{d t} = 0"
+]
+
+# Convert LaTeX equations to MathML equations
+models[model_name]['petri_latex_mathml'] = convert_latex2mathml(models[model_name]['petri_latex'])
+
+# Convert MathML equations to Petri net (ACSset)
+models[model_name]['petri_latex_mathml_petri'] = convert_mathml2petri(models[model_name]['petri_latex_mathml'])
+
+
+fig, axes = plt.subplots(1, 2, figsize = (8, 4))
+fig.suptitle('Petri (ACSet) -(SciML)→ Equation (LaTeX) -(SKEMA)→ Petri (ACSet)')
+__ = plt.setp(axes[0], title = 'Ground Truth')
+draw_graph(models[model_name]['petri'], ax = axes[0])
+
+__ = plt.setp(axes[1], title = 'Output')
+draw_graph(models[model_name]['petri_latex_mathml_petri'], ax = axes[1])
+
+fig.savefig('../figures/model_conversion_Petri-equation-Petri_Contact.png', dpi = 150)
+
+# %%[markdown]
+# Note: Petri-to-Equation conversion by SciML is lossy 
+# since it applies an algebraic simplification step 
+# that eliminates the dynamics of the age-contact model.
+
+# %%[markdown]
+# ## Full Test
+#
+# 1. Start with SIR Petri-net ACSet and ODE LaTeX
+# 2. Manual edit of ODE to SIDARTHE
+# 3. Convert LaTeX to MathML
+# 4. Convert MathML to Petri-net ACSet with SKEMA
+# 5. Manual edit of Petri net from SIR to SIDARTHE
+# 6. Convert Petri-net ACSet to LaTeX with SciML
+# 7. Convert LaTeX to MathML
+# 8. Convert MathML to Petri-net ACSet with SKEMA
+
+# %%
+models['test'] = {}
+
+# SIR ground truth
+models['test'][0] = models['SIR']['petri']
+models['test'][1] = models['SIR']['latex']
+
+# Manual edit of SIR LaTeX to SIDARTHE
+models['test'][2] = models['SIDARTHE']['latex']
+models['test'][3] = convert_mathml2petri(convert_latex2mathml(models['test'][2]))
+
+# Manual edit of SIR Petri to SIRD
+models['test'][4] = {
+    "S": [
+        {"sname": "I", "uid": 1},
+        {"sname": "R", "uid": 2},
+        {"sname": "S", "uid": 3},
+        {"sname": "D", "uid": 4},
+        {"sname": "H", "uid": 5},
+    ],
+    "T":[
+        {"tname": "β"},
+        {"tname": "γ"},
+        {"tname": "δ"},
+        {"tname": "θ"},
+    ],
+    "I":[
+        {"it": 1, "is": 1},
+        {"it": 1, "is": 3},
+        {"it": 2, "is": 1},
+        {"it": 3, "is": 2},
+        {"it": 4, "is": 2},
+    ],
+    "O":[
+        {"ot": 1, "os": 1},
+        {"ot": 1, "os": 1},
+        {"ot": 2, "os": 2},
+        {"ot": 3, "os": 5},
+        {"ot": 4, "os": 4},
+    ]
+}
+
+model_latex = r"\begin{align} \frac{\mathrm{d} I\left( t \right)}{\mathrm{d}t} =&  - \gamma I\left( t \right) + \beta I\left( t \right) S\left( t \right) \\ \frac{\mathrm{d} R\left( t \right)}{\mathrm{d}t} =& \gamma I\left( t \right) - \delta R\left( t \right) - \theta R\left( t \right) \\ \frac{\mathrm{d} S\left( t \right)}{\mathrm{d}t} =&  - \beta I\left( t \right) S\left( t \right) \\ \frac{\mathrm{d} D\left( t \right)}{\mathrm{d}t} =& \theta R\left( t \right) \\ \frac{\mathrm{d} H\left( t \right)}{\mathrm{d}t} =& \delta R\left( t \right) \end{align}"
+# model_latex = html.unescape(model_latex) # need to convert all HTML numeric character references (#&x.....;) to unicode characters to avoid LaTeX error
+model_latex = re.sub(r"(.begin[{]\S+[}])|(.end[{]\S+[}])", '', model_latex) # remove \begin{align} \end{align}
+model_latex = model_latex.replace(r"&", "") # remove &
+model_latex = model_latex.replace(r"\left( t \right)", "") # remove (t)
+model_latex = model_latex.replace(r"\mathrm{d}", "d") # substitute \mathrm{d} with d
+model_latex = re.sub(r"\s", " ", model_latex) # need to replace non-breaking space (and other whitespace characters)!
+model_latex = [l.strip() for l in model_latex.split(r"\\")]
+
+models['test'][6] = model_latex
+models['test'][7] = convert_mathml2petri(convert_latex2mathml(models['test'][6]))
+
+# Convert back to LaTeX
+model_latex = r"\begin{align} \frac{\mathrm{d} D\left( t \right)}{\mathrm{d}t} =& \theta R\left( t \right) \\ \frac{\mathrm{d} H\left( t \right)}{\mathrm{d}t} =& \delta R\left( t \right) \\ \frac{\mathrm{d} I\left( t \right)}{\mathrm{d}t} =&  - \gamma I\left( t \right) + \beta I\left( t \right) S\left( t \right) \\ \frac{\mathrm{d} R\left( t \right)}{\mathrm{d}t} =& \gamma I\left( t \right) - \delta R\left( t \right) - \theta R\left( t \right) \\ \frac{\mathrm{d} S\left( t \right)}{\mathrm{d}t} =&  - \beta I\left( t \right) S\left( t \right) \end{align}"
+# model_latex = html.unescape(model_latex) # need to convert all HTML numeric character references (#&x.....;) to unicode characters to avoid LaTeX error
+model_latex = re.sub(r"(.begin[{]\S+[}])|(.end[{]\S+[}])", '', model_latex) # remove \begin{align} \end{align}
+model_latex = model_latex.replace(r"&", "") # remove &
+model_latex = model_latex.replace(r"\left( t \right)", "") # remove (t)
+model_latex = model_latex.replace(r"\mathrm{d}", "d") # substitute \mathrm{d} with d
+model_latex = re.sub(r"\s", " ", model_latex) # need to replace non-breaking space (and other whitespace characters)!
+model_latex = [l.strip() for l in model_latex.split(r"\\")]
+models['test'][8] = model_latex
+
+titles = [
+    'Petri Net of SIR',
+    'LaTeX of SIR',
+    'SIR → SIDARTHE in LaTeX Repr.',
+    'LaTeX → MathML → Petri',
+    'SIR → SIRDH in Petri Repr.',
+    'Petri → LaTeX',
+    'LaTeX → MathML → Petri',
+    'Petri → LaTeX'
+]
+
+# %%
+plt.rcParams['text.usetex'] = False
+
+fig, axes = plt.subplots(2, 4, figsize = (16, 8))
+# fig.suptitle('Petri (ACSet) -(SciML)→ Equation (LaTeX) -(SKEMA)→ Petri (ACSet)')
+fig.subplots_adjust(wspace = 0.1, hspace = 0.2)
+
+for ax, (i, m), t in zip(fig.axes, models['test'].items(), titles):
+
+    __ = plt.setp(ax, title = f'{t}')
+    if isinstance(m, dict):
+        draw_graph(m, ax = ax, legend = False)
+    else:
+
+        ax.tick_params('both', left = False, bottom = False, labelleft = False, labelbottom = False)
+
+        # LaTeX
+        if 'frac{' in m[0]:
+            __ = [ax.text(0.05, j / len(m) + 0.5 / len(m), s = f'${k}$', va = 'center') for j, k in enumerate(m)]
+        else:
+            #__ = [ax.text(0.05, j / len(m) + 0.5 / len(m), s = f'{k}', va = 'center') for j, k in enumerate(m)]
+            __ = ax.text(0.5, 0.5, 'MathML Jibberish', va = 'center', ha = 'center')
+
+fig.savefig('../figures/model_conversion_bidirectional-test.png', dpi = 150)
+
+# %%
