@@ -1,7 +1,7 @@
 {
     "templates": [
         {
-            "rate_law": "/l_e",
+            "rate_law": "S/l_e",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "S",
@@ -14,7 +14,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/l_e",
+            "rate_law": "I_1/l_e",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "I_1",
@@ -26,7 +26,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/l_e",
+            "rate_law": "I_2/l_e",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "I_2",
@@ -38,7 +38,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/l_e",
+            "rate_law": "R_1/l_e",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "R_1",
@@ -51,7 +51,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/l_e",
+            "rate_law": "R_2/l_e",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "R_2",
@@ -64,7 +64,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/l_e",
+            "rate_law": "I_1p/l_e",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "I_1p",
@@ -76,7 +76,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/l_e",
+            "rate_law": "I_2p/l_e",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "I_2p",
@@ -88,7 +88,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/l_e",
+            "rate_law": "R_p/l_e",
             "type": "NaturalDegradation",
             "subject": {
                 "name": "R_p",
@@ -101,24 +101,15 @@
             "provenance": []
         },
         {
-            "rate_law": "730**R0_1/tInf_1",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "I_1",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000249:I_1"
-                    },
-                    "context": {}
+            "rate_law": "365.0*I_1*R0_1*S/tInf_1",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "I_1",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_1"
                 },
-                {
-                    "name": "I_1p",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000249:I_1p"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
             "subject": {
                 "name": "S",
                 "identifiers": {
@@ -137,24 +128,42 @@
             "provenance": []
         },
         {
-            "rate_law": "730**R0_2/tInf_2",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "I_2",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000249:I_2"
-                    },
-                    "context": {}
+            "rate_law": "365.0*I_1p*R0_1*S/tInf_1",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "I_1p",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_1p"
                 },
-                {
-                    "name": "I_2p",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000249:I_2p"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
+            "subject": {
+                "name": "S",
+                "identifiers": {
+                    "ncbitaxon": "9606",
+                    "biomodels.species": "BIOMD0000000249:S"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "I_1",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_1"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "365.0*I_2*R0_2*S/tInf_2",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "I_2",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_2"
+                },
+                "context": {}
+            },
             "subject": {
                 "name": "S",
                 "identifiers": {
@@ -173,24 +182,42 @@
             "provenance": []
         },
         {
-            "rate_law": "730**R0_1*(1 - psi)/tInf_1",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "I_1",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000249:I_1"
-                    },
-                    "context": {}
+            "rate_law": "365.0*I_2p*R0_2*S/tInf_2",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "I_2p",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_2p"
                 },
-                {
-                    "name": "I_1p",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000249:I_1p"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
+            "subject": {
+                "name": "S",
+                "identifiers": {
+                    "ncbitaxon": "9606",
+                    "biomodels.species": "BIOMD0000000249:S"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "I_2",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_2"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "365.0*I_1*R0_1*R_2*(1 - psi)/tInf_1",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "I_1",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_1"
+                },
+                "context": {}
+            },
             "subject": {
                 "name": "R_2",
                 "identifiers": {
@@ -209,24 +236,42 @@
             "provenance": []
         },
         {
-            "rate_law": "730**R0_2*(1 - psi)/tInf_2",
-            "type": "GroupedControlledConversion",
-            "controllers": [
-                {
-                    "name": "I_2",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000249:I_2"
-                    },
-                    "context": {}
+            "rate_law": "365.0*I_1p*R0_1*R_2*(1 - psi)/tInf_1",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "I_1p",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_1p"
                 },
-                {
-                    "name": "I_2p",
-                    "identifiers": {
-                        "biomodels.species": "BIOMD0000000249:I_2p"
-                    },
-                    "context": {}
-                }
-            ],
+                "context": {}
+            },
+            "subject": {
+                "name": "R_2",
+                "identifiers": {
+                    "ncbitaxon": "9606",
+                    "biomodels.species": "BIOMD0000000249:R_2"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "I_1p",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_1p"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "365.0*I_2*R0_2*R_1*(1 - psi)/tInf_2",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "I_2",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_2"
+                },
+                "context": {}
+            },
             "subject": {
                 "name": "R_1",
                 "identifiers": {
@@ -245,7 +290,34 @@
             "provenance": []
         },
         {
-            "rate_law": "365*/tInf_1",
+            "rate_law": "365.0*I_2p*R0_2*R_1*(1 - psi)/tInf_2",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "I_2p",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_2p"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "R_1",
+                "identifiers": {
+                    "ncbitaxon": "9606",
+                    "biomodels.species": "BIOMD0000000249:R_1"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "I_2p",
+                "identifiers": {
+                    "biomodels.species": "BIOMD0000000249:I_2p"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "365*I_1/tInf_1",
             "type": "NaturalConversion",
             "subject": {
                 "name": "I_1",
@@ -265,7 +337,7 @@
             "provenance": []
         },
         {
-            "rate_law": "365*/tInf_2",
+            "rate_law": "365*I_2/tInf_2",
             "type": "NaturalConversion",
             "subject": {
                 "name": "I_2",
@@ -285,7 +357,7 @@
             "provenance": []
         },
         {
-            "rate_law": "365*/tInf_1",
+            "rate_law": "365*I_1p/tInf_1",
             "type": "NaturalConversion",
             "subject": {
                 "name": "I_1p",
@@ -305,7 +377,7 @@
             "provenance": []
         },
         {
-            "rate_law": "365*/tInf_2",
+            "rate_law": "365*I_2p/tInf_2",
             "type": "NaturalConversion",
             "subject": {
                 "name": "I_2p",
@@ -325,7 +397,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/tImm",
+            "rate_law": "R_1/tImm",
             "type": "NaturalConversion",
             "subject": {
                 "name": "R_1",
@@ -346,7 +418,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/tImm",
+            "rate_law": "R_2/tImm",
             "type": "NaturalConversion",
             "subject": {
                 "name": "R_2",
@@ -367,7 +439,7 @@
             "provenance": []
         },
         {
-            "rate_law": "/tImm",
+            "rate_law": "R_p/tImm",
             "type": "NaturalConversion",
             "subject": {
                 "name": "R_p",

@@ -4,7 +4,7 @@
             "rate_law": "A",
             "type": "NaturalProduction",
             "outcome": {
-                "name": "Susceptible dogs (S_d)",
+                "name": "S_d",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_d"
@@ -14,10 +14,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Recovered dogs (R_d)*XXlambdaXX",
+            "rate_law": "R_d*XXlambdaXX",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Recovered dogs (R_d)",
+                "name": "R_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:R_d"
                 },
@@ -26,7 +26,7 @@
                 }
             },
             "outcome": {
-                "name": "Susceptible dogs (S_d)",
+                "name": "S_d",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_d"
@@ -36,10 +36,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed dogs (E_d)*sigma*(1.0 - gamma)",
+            "rate_law": "E_d*sigma*(1.0 - gamma)",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Exposed dogs (E_d)",
+                "name": "E_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_d"
                 },
@@ -48,7 +48,7 @@
                 }
             },
             "outcome": {
-                "name": "Susceptible dogs (S_d)",
+                "name": "S_d",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_d"
@@ -58,10 +58,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Infectious dogs (I_d)*Susceptible dogs (S_d)*beta",
+            "rate_law": "I_d*S_d*beta",
             "type": "ControlledConversion",
             "controller": {
-                "name": "Infectious dogs (I_d)",
+                "name": "I_d",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000726:I_d"
@@ -69,7 +69,7 @@
                 "context": {}
             },
             "subject": {
-                "name": "Susceptible dogs (S_d)",
+                "name": "S_d",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_d"
@@ -77,7 +77,7 @@
                 "context": {}
             },
             "outcome": {
-                "name": "Exposed dogs (E_d)",
+                "name": "E_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_d"
                 },
@@ -88,10 +88,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Susceptible dogs (S_d)*m",
+            "rate_law": "S_d*m",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Susceptible dogs (S_d)",
+                "name": "S_d",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_d"
@@ -101,10 +101,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed dogs (E_d)*gamma*sigma",
+            "rate_law": "E_d*gamma*sigma",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Exposed dogs (E_d)",
+                "name": "E_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_d"
                 },
@@ -113,7 +113,7 @@
                 }
             },
             "outcome": {
-                "name": "Infectious dogs (I_d)",
+                "name": "I_d",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000726:I_d"
@@ -123,10 +123,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed dogs (E_d)*m",
+            "rate_law": "E_d*m",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Exposed dogs (E_d)",
+                "name": "E_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_d"
                 },
@@ -137,10 +137,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Infectious dogs (I_d)*m",
+            "rate_law": "I_d*m",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Infectious dogs (I_d)",
+                "name": "I_d",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000726:I_d"
@@ -150,10 +150,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Susceptible dogs (S_d)*k",
+            "rate_law": "S_d*k",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Susceptible dogs (S_d)",
+                "name": "S_d",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_d"
@@ -161,7 +161,7 @@
                 "context": {}
             },
             "outcome": {
-                "name": "Recovered dogs (R_d)",
+                "name": "R_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:R_d"
                 },
@@ -172,10 +172,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed dogs (E_d)*k",
+            "rate_law": "E_d*k",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Exposed dogs (E_d)",
+                "name": "E_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_d"
                 },
@@ -184,7 +184,7 @@
                 }
             },
             "outcome": {
-                "name": "Recovered dogs (R_d)",
+                "name": "R_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:R_d"
                 },
@@ -195,10 +195,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Infectious dogs (I_d)*mu",
+            "rate_law": "I_d*mu",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Infectious dogs (I_d)",
+                "name": "I_d",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000726:I_d"
@@ -208,10 +208,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Recovered dogs (R_d)*m",
+            "rate_law": "R_d*m",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Recovered dogs (R_d)",
+                "name": "R_d",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:R_d"
                 },
@@ -225,7 +225,7 @@
             "rate_law": "B",
             "type": "NaturalProduction",
             "outcome": {
-                "name": "Susceptible humans (S_h)",
+                "name": "S_h",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_h"
@@ -235,10 +235,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Recovered humans (R_h)*XXlambdaXX_h",
+            "rate_law": "R_h*XXlambdaXX_h",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Recovered humans (R_h)",
+                "name": "R_h",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:R_h"
                 },
@@ -247,7 +247,7 @@
                 }
             },
             "outcome": {
-                "name": "Susceptible humans (S_h)",
+                "name": "S_h",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_h"
@@ -257,10 +257,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed humans (E_h)*sigma_h*(1.0 - gamma_h)",
+            "rate_law": "E_h*sigma_h*(1.0 - gamma_h)",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Exposed humans (E_h)",
+                "name": "E_h",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_h"
                 },
@@ -269,7 +269,7 @@
                 }
             },
             "outcome": {
-                "name": "Susceptible humans (S_h)",
+                "name": "S_h",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_h"
@@ -279,10 +279,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Susceptible humans (S_h)*m_h",
+            "rate_law": "S_h*m_h",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Susceptible humans (S_h)",
+                "name": "S_h",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_h"
@@ -292,10 +292,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Infectious dogs (I_d)*Susceptible humans (S_h)*beta_dh",
+            "rate_law": "I_d*S_h*beta_dh",
             "type": "ControlledConversion",
             "controller": {
-                "name": "Infectious dogs (I_d)",
+                "name": "I_d",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000726:I_d"
@@ -303,7 +303,7 @@
                 "context": {}
             },
             "subject": {
-                "name": "Susceptible humans (S_h)",
+                "name": "S_h",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000726:S_h"
@@ -311,7 +311,7 @@
                 "context": {}
             },
             "outcome": {
-                "name": "Exposed humans (E_h)",
+                "name": "E_h",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_h"
                 },
@@ -322,10 +322,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed humans (E_h)*gamma_h*sigma_h",
+            "rate_law": "E_h*gamma_h*sigma_h",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Exposed humans (E_h)",
+                "name": "E_h",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_h"
                 },
@@ -334,7 +334,7 @@
                 }
             },
             "outcome": {
-                "name": "Infectious humans (I_h)",
+                "name": "I_h",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000726:I_h"
@@ -344,10 +344,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed humans (E_h)*m_h",
+            "rate_law": "E_h*m_h",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Exposed humans (E_h)",
+                "name": "E_h",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_h"
                 },
@@ -358,10 +358,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed humans (E_h)*k_h",
+            "rate_law": "E_h*k_h",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Exposed humans (E_h)",
+                "name": "E_h",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:E_h"
                 },
@@ -370,7 +370,7 @@
                 }
             },
             "outcome": {
-                "name": "Recovered humans (R_h)",
+                "name": "R_h",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:R_h"
                 },
@@ -381,10 +381,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Infectious humans (I_h)*m_h",
+            "rate_law": "I_h*m_h",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Infectious humans (I_h)",
+                "name": "I_h",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000726:I_h"
@@ -394,10 +394,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Infectious humans (I_h)*mu_h",
+            "rate_law": "I_h*mu_h",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Infectious humans (I_h)",
+                "name": "I_h",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000726:I_h"
@@ -407,10 +407,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Recovered humans (R_h)*m_h",
+            "rate_law": "R_h*m_h",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Recovered humans (R_h)",
+                "name": "R_h",
                 "identifiers": {
                     "biomodels.species": "BIOMD0000000726:R_h"
                 },

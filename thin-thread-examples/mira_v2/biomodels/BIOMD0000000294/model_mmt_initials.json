@@ -85,15 +85,6 @@
             },
             "context": {},
             "value": null
-        },
-        "N": {
-            "name": "N",
-            "identifiers": {
-                "ncbitaxon": "9606",
-                "biomodels.species": "BIOMD0000000294:N"
-            },
-            "context": {},
-            "value": null
         }
     }
 }

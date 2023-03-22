@@ -615,17 +615,17 @@
             "context": {},
             "value": 1.0
         },
-        "Total_reported_cases": {
-            "name": "Total_reported_cases",
-            "identifiers": {},
-            "context": {},
-            "value": 21.0
-        },
         "Total_population": {
             "name": "Total_population",
             "identifiers": {},
             "context": {},
             "value": 1336211733.50839
+        },
+        "Total_reported_cases": {
+            "name": "Total_reported_cases",
+            "identifiers": {},
+            "context": {},
+            "value": 21.0
         }
     },
     "initials": {

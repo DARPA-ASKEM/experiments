@@ -4,7 +4,7 @@
             "rate_law": "A",
             "type": "NaturalProduction",
             "outcome": {
-                "name": "Susceptible Individuals (S)",
+                "name": "S",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000715:S"
@@ -14,10 +14,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Infected Individuals (I)*gamma",
+            "rate_law": "I*gamma",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Infected Individuals (I)",
+                "name": "I",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000715:I"
@@ -25,7 +25,7 @@
                 "context": {}
             },
             "outcome": {
-                "name": "Susceptible Individuals (S)",
+                "name": "S",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000715:S"
@@ -35,11 +35,11 @@
             "provenance": []
         },
         {
-            "rate_law": "Infected Individuals (I)*Susceptible Individuals (S)*beta*exp(-Message (M)*alpha)",
+            "rate_law": "I*S*beta*exp(-M*alpha)",
             "type": "GroupedControlledConversion",
             "controllers": [
                 {
-                    "name": "Infected Individuals (I)",
+                    "name": "I",
                     "identifiers": {
                         "ido": "0000511",
                         "biomodels.species": "BIOMD0000000715:I"
@@ -47,7 +47,7 @@
                     "context": {}
                 },
                 {
-                    "name": "Message (M)",
+                    "name": "M",
                     "identifiers": {
                         "ncit": "C62608",
                         "biomodels.species": "BIOMD0000000715:M"
@@ -56,7 +56,7 @@
                 }
             ],
             "subject": {
-                "name": "Susceptible Individuals (S)",
+                "name": "S",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000715:S"
@@ -64,7 +64,7 @@
                 "context": {}
             },
             "outcome": {
-                "name": "Exposed Individuals (E)",
+                "name": "E",
                 "identifiers": {
                     "ncit": "C71551",
                     "biomodels.species": "BIOMD0000000715:E"
@@ -74,10 +74,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Susceptible Individuals (S)*alpha1",
+            "rate_law": "S*alpha1",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Susceptible Individuals (S)",
+                "name": "S",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000715:S"
@@ -87,10 +87,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed Individuals (E)*rho",
+            "rate_law": "E*rho",
             "type": "NaturalConversion",
             "subject": {
-                "name": "Exposed Individuals (E)",
+                "name": "E",
                 "identifiers": {
                     "ncit": "C71551",
                     "biomodels.species": "BIOMD0000000715:E"
@@ -98,7 +98,7 @@
                 "context": {}
             },
             "outcome": {
-                "name": "Infected Individuals (I)",
+                "name": "I",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000715:I"
@@ -108,10 +108,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Exposed Individuals (E)*alpha1",
+            "rate_law": "E*alpha1",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Exposed Individuals (E)",
+                "name": "E",
                 "identifiers": {
                     "ncit": "C71551",
                     "biomodels.species": "BIOMD0000000715:E"
@@ -121,10 +121,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Infected Individuals (I)*(alpha1 + alpha2)",
+            "rate_law": "I*(alpha1 + alpha2)",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Infected Individuals (I)",
+                "name": "I",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000715:I"
@@ -134,10 +134,10 @@
             "provenance": []
         },
         {
-            "rate_law": "Message (M)*tau",
+            "rate_law": "M*tau",
             "type": "NaturalDegradation",
             "subject": {
-                "name": "Message (M)",
+                "name": "M",
                 "identifiers": {
                     "ncit": "C62608",
                     "biomodels.species": "BIOMD0000000715:M"
@@ -224,7 +224,7 @@
     "initials": {
         "Susceptible Individuals (S)": {
             "concept": {
-                "name": "Susceptible Individuals (S)",
+                "name": "S",
                 "identifiers": {
                     "ido": "0000514",
                     "biomodels.species": "BIOMD0000000715:S"
@@ -235,7 +235,7 @@
         },
         "Exposed Individuals (E)": {
             "concept": {
-                "name": "Exposed Individuals (E)",
+                "name": "E",
                 "identifiers": {
                     "ncit": "C71551",
                     "biomodels.species": "BIOMD0000000715:E"
@@ -246,7 +246,7 @@
         },
         "Infected Individuals (I)": {
             "concept": {
-                "name": "Infected Individuals (I)",
+                "name": "I",
                 "identifiers": {
                     "ido": "0000511",
                     "biomodels.species": "BIOMD0000000715:I"
@@ -257,7 +257,7 @@
         },
         "Message (M)": {
             "concept": {
-                "name": "Message (M)",
+                "name": "M",
                 "identifiers": {
                     "ncit": "C62608",
                     "biomodels.species": "BIOMD0000000715:M"
@@ -268,7 +268,7 @@
         },
         "Total population (N)": {
             "concept": {
-                "name": "Total population (N)",
+                "name": "N",
                 "identifiers": {
                     "ncit": "C25304",
                     "obi": "0000181",
