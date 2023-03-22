@@ -1,0 +1,80 @@
+{
+    "initials": {
+        "Infected Individuals (I)": {
+            "name": "Infected Individuals (I)",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000715:I"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Infected Individuals (I)",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000715:I"
+                    },
+                    "context": {}
+                },
+                "value": 3.0
+            }
+        },
+        "Susceptible Individuals (S)": {
+            "name": "Susceptible Individuals (S)",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000715:S"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Susceptible Individuals (S)",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000715:S"
+                    },
+                    "context": {}
+                },
+                "value": 3.5
+            }
+        },
+        "Exposed Individuals (E)": {
+            "name": "Exposed Individuals (E)",
+            "identifiers": {
+                "ncit": "C71551",
+                "biomodels.species": "BIOMD0000000715:E"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Exposed Individuals (E)",
+                    "identifiers": {
+                        "ncit": "C71551",
+                        "biomodels.species": "BIOMD0000000715:E"
+                    },
+                    "context": {}
+                },
+                "value": 2.5
+            }
+        },
+        "Message (M)": {
+            "name": "Message (M)",
+            "identifiers": {
+                "ncit": "C62608",
+                "biomodels.species": "BIOMD0000000715:M"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Message (M)",
+                    "identifiers": {
+                        "ncit": "C62608",
+                        "biomodels.species": "BIOMD0000000715:M"
+                    },
+                    "context": {}
+                },
+                "value": 6.0
+            }
+        }
+    }
+}

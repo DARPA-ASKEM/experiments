@@ -1,0 +1,164 @@
+{
+    "initials": {
+        "Recovered dogs (R_d)": {
+            "name": "Recovered dogs (R_d)",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000726:R_d"
+            },
+            "context": {
+                "property": "ncit:C49498"
+            },
+            "value": {
+                "concept": {
+                    "name": "Recovered dogs (R_d)",
+                    "identifiers": {
+                        "biomodels.species": "BIOMD0000000726:R_d"
+                    },
+                    "context": {
+                        "property": "ncit:C49498"
+                    }
+                },
+                "value": 200000.0
+            }
+        },
+        "Exposed dogs (E_d)": {
+            "name": "Exposed dogs (E_d)",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000726:E_d"
+            },
+            "context": {
+                "property": "efo:0000487"
+            },
+            "value": {
+                "concept": {
+                    "name": "Exposed dogs (E_d)",
+                    "identifiers": {
+                        "biomodels.species": "BIOMD0000000726:E_d"
+                    },
+                    "context": {
+                        "property": "efo:0000487"
+                    }
+                },
+                "value": 200000.0
+            }
+        },
+        "Susceptible dogs (S_d)": {
+            "name": "Susceptible dogs (S_d)",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000726:S_d"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Susceptible dogs (S_d)",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000726:S_d"
+                    },
+                    "context": {}
+                },
+                "value": 35000000.0
+            }
+        },
+        "Infectious dogs (I_d)": {
+            "name": "Infectious dogs (I_d)",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000726:I_d"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Infectious dogs (I_d)",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000726:I_d"
+                    },
+                    "context": {}
+                },
+                "value": 100000.0
+            }
+        },
+        "Recovered humans (R_h)": {
+            "name": "Recovered humans (R_h)",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000726:R_h"
+            },
+            "context": {
+                "property": "ncit:C49498"
+            },
+            "value": {
+                "concept": {
+                    "name": "Recovered humans (R_h)",
+                    "identifiers": {
+                        "biomodels.species": "BIOMD0000000726:R_h"
+                    },
+                    "context": {
+                        "property": "ncit:C49498"
+                    }
+                },
+                "value": 200000.0
+            }
+        },
+        "Exposed humans (E_h)": {
+            "name": "Exposed humans (E_h)",
+            "identifiers": {
+                "biomodels.species": "BIOMD0000000726:E_h"
+            },
+            "context": {
+                "property": "efo:0000487"
+            },
+            "value": {
+                "concept": {
+                    "name": "Exposed humans (E_h)",
+                    "identifiers": {
+                        "biomodels.species": "BIOMD0000000726:E_h"
+                    },
+                    "context": {
+                        "property": "efo:0000487"
+                    }
+                },
+                "value": 250.0
+            }
+        },
+        "Susceptible humans (S_h)": {
+            "name": "Susceptible humans (S_h)",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000726:S_h"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Susceptible humans (S_h)",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000726:S_h"
+                    },
+                    "context": {}
+                },
+                "value": 1290000000.0
+            }
+        },
+        "Infectious humans (I_h)": {
+            "name": "Infectious humans (I_h)",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000726:I_h"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Infectious humans (I_h)",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000726:I_h"
+                    },
+                    "context": {}
+                },
+                "value": 89.0
+            }
+        }
+    }
+}

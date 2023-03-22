@@ -1,0 +1,80 @@
+{
+    "initials": {
+        "Susceptible bird (S_b)": {
+            "name": "Susceptible bird (S_b)",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000716:S_b"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Susceptible bird (S_b)",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000716:S_b"
+                    },
+                    "context": {}
+                },
+                "value": 244956.0
+            }
+        },
+        "Infected bird (I_b)": {
+            "name": "Infected bird (I_b)",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000716:I_b"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Infected bird (I_b)",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000716:I_b"
+                    },
+                    "context": {}
+                },
+                "value": 36485.0
+            }
+        },
+        "Susceptible human (S_h)": {
+            "name": "Susceptible human (S_h)",
+            "identifiers": {
+                "ido": "0000514",
+                "biomodels.species": "BIOMD0000000716:S_h"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Susceptible human (S_h)",
+                    "identifiers": {
+                        "ido": "0000514",
+                        "biomodels.species": "BIOMD0000000716:S_h"
+                    },
+                    "context": {}
+                },
+                "value": 171977.0
+            }
+        },
+        "Infected Human (I_a)": {
+            "name": "Infected Human (I_a)",
+            "identifiers": {
+                "ido": "0000511",
+                "biomodels.species": "BIOMD0000000716:I_a"
+            },
+            "context": {},
+            "value": {
+                "concept": {
+                    "name": "Infected Human (I_a)",
+                    "identifiers": {
+                        "ido": "0000511",
+                        "biomodels.species": "BIOMD0000000716:I_a"
+                    },
+                    "context": {}
+                },
+                "value": 0.0
+            }
+        }
+    }
+}

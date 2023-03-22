@@ -1,0 +1,166 @@
+{
+    "templates": [
+        {
+            "rate_law": "412/73",
+            "type": "NaturalProduction",
+            "outcome": {
+                "name": "Susceptible bird (S_b)",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000716:S_b"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "Susceptible bird (S_b)/730",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Susceptible bird (S_b)",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000716:S_b"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "9137*Infected bird (I_b)*Susceptible bird (S_b)/2635182",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected bird (I_b)",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000716:I_b"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible bird (S_b)",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000716:S_b"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected bird (I_b)",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000716:I_b"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "22841*Infected bird (I_b)/6587955",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Infected bird (I_b)",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000716:I_b"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "Infected bird (I_b)/730",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Infected bird (I_b)",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000716:I_b"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "6.49315068493151e-5*ModelValue_1",
+            "type": "NaturalProduction",
+            "outcome": {
+                "name": "Susceptible human (S_h)",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000716:S_h"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "3.95914165808853e-5*Susceptible human (S_h)",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Susceptible human (S_h)",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000716:S_h"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "1.62354134956875e-10*Infected bird (I_b)*Susceptible human (S_h)",
+            "type": "ControlledConversion",
+            "controller": {
+                "name": "Infected bird (I_b)",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000716:I_b"
+                },
+                "context": {}
+            },
+            "subject": {
+                "name": "Susceptible human (S_h)",
+                "identifiers": {
+                    "ido": "0000514",
+                    "biomodels.species": "BIOMD0000000716:S_h"
+                },
+                "context": {}
+            },
+            "outcome": {
+                "name": "Infected Human (I_a)",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000716:I_a"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "6.0882800608828e-11*Infected Human (I_a)",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Infected Human (I_a)",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000716:I_a"
+                },
+                "context": {}
+            },
+            "provenance": []
+        },
+        {
+            "rate_law": "3.95914165808853e-5*Infected Human (I_a)",
+            "type": "NaturalDegradation",
+            "subject": {
+                "name": "Infected Human (I_a)",
+                "identifiers": {
+                    "ido": "0000511",
+                    "biomodels.species": "BIOMD0000000716:I_a"
+                },
+                "context": {}
+            },
+            "provenance": []
+        }
+    ]
+}
