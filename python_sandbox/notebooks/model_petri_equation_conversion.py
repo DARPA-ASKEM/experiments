@@ -260,7 +260,7 @@ models[model_name] = {}
 
 models[model_name]['latex'] = [
     r"\frac{d S}{d t} = - \alpha S I - \beta S D - \gamma S A - \delta S R",
-    r"\frac{d I}{d t} = \alpha S I + \beta S D + \gamma S A + \delta S R - \eta I - \zeta I - \lambda I",
+    r"\frac{d I}{d t} = \alpha S I + \beta S D + \gamma S A + \delta S R - \epsilon I - \zeta I - \lambda I",
     r"\frac{d D}{d t} = \epsilon I - \eta D - \rho D",
     r"\frac{d A}{d t} = \zeta I - \theta A - \mu A - \kappa A",
     r"\frac{d R}{d t} = \eta D + \theta A - \nu R - \xi R",
@@ -487,6 +487,53 @@ titles = [
 ]
 
 # %%
+# Workflow
+
+models['testflow'] = {}
+
+# SIR -> SIDARTHE via equations
+models['testflow'][0] = models['test'][1]
+models['testflow'][1] = models['test'][2]
+models['testflow'][2] = models['test'][3]
+
+# SIR -> SIRDH via Petri net
+models['testflow'][3] = models['test'][0]
+models['testflow'][4] = models['test'][4]
+models['testflow'][5] = models['test'][6]
+
+titles = [
+    'LaTeX of SIR',
+    'SIR → SIDARTHE in LaTeX Repr.',
+    'LaTeX → MathML → Petri',
+    'Petri Net of SIR',
+    'SIR → SIRDH in Petri Net Repr.',
+    'Petri → LaTeX',
+]
+
+plt.rcParams['text.usetex'] = False
+
+fig, axes = plt.subplots(2, 3, figsize = (12, 8))
+fig.subplots_adjust(wspace = 0.1, hspace = 0.3)
+
+for ax, (i, m), t in zip(fig.axes, models['testflow'].items(), titles):
+
+    __ = plt.setp(ax, title = f'{t}')
+    if isinstance(m, dict):
+        draw_graph(m, ax = ax, legend = False)
+    else:
+
+        ax.tick_params('both', left = False, bottom = False, labelleft = False, labelbottom = False)
+
+        # LaTeX
+        if 'frac{' in m[0]:
+            __ = [ax.text(0.05, j / len(m) + 0.5 / len(m), s = f'${k}$', va = 'center') for j, k in enumerate(m)]
+        else:
+            #__ = [ax.text(0.05, j / len(m) + 0.5 / len(m), s = f'{k}', va = 'center') for j, k in enumerate(m)]
+            __ = ax.text(0.5, 0.5, 'MathML Jibberish', va = 'center', ha = 'center')
+
+# fig.savefig('../figures/model_conversion_bidirectional-test.png', dpi = 150)
+
+# %%
 plt.rcParams['text.usetex'] = False
 
 fig, axes = plt.subplots(2, 4, figsize = (16, 8))
@@ -509,6 +556,4 @@ for ax, (i, m), t in zip(fig.axes, models['test'].items(), titles):
             #__ = [ax.text(0.05, j / len(m) + 0.5 / len(m), s = f'{k}', va = 'center') for j, k in enumerate(m)]
             __ = ax.text(0.5, 0.5, 'MathML Jibberish', va = 'center', ha = 'center')
 
-fig.savefig('../figures/model_conversion_bidirectional-test.png', dpi = 150)
-
-#%%
+fig.savefig('../figures/model_conversion_bidirectional-testflow.png', dpi = 150)
