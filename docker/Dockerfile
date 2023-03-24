@@ -2,7 +2,7 @@ FROM "jupyter/minimal-notebook"
 
 USER root
 
-ENV JULIA_VERSION=1.7.3
+ENV JULIA_VERSION=1.8.5
 
 RUN mkdir /opt/julia-${JULIA_VERSION} && \
     cd /tmp && \
@@ -36,13 +36,12 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia' && \
     julia -e 'import Pkg; Pkg.add("GraphViz"); using GraphViz' && \
     julia -e 'import Pkg; Pkg.add("AlgebraicPetri"); using AlgebraicPetri' && \
-    julia -e 'import Pkg; Pkg.add("DifferentialEquations"); using DifferentialEquations' && \
-    julia -e 'import Pkg; Pkg.add("Plots"); using Plots' && \
     julia -e 'import Pkg; Pkg.add("JSON"); using JSON' && \
     julia -e 'import Pkg; Pkg.add("LabelledArrays"); using LabelledArrays' && \
     julia -e 'import Pkg; Pkg.add("PrettyTables"); using PrettyTables' && \
     julia -e 'import Pkg; Pkg.add("OrdinaryDiffEq"); using OrdinaryDiffEq' && \
-    julia -e 'import Pkg; Pkg.add("ModelingToolkit"); using ModelingToolkit' && \
+    julia -e 'import Pkg; Pkg.add("EasyModelAnalysis"); using EasyModelAnalysis' && \
+    julia -e 'import Pkg; Pkg.add("Latexify"); using Latexify && \
     fix-permissions /home/$NB_USER
 
 CMD jupyter lab --ip='*' --NotebookApp.token='' --NotebookApp.password=''
