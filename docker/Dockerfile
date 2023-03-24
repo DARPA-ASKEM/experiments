@@ -41,7 +41,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     julia -e 'import Pkg; Pkg.add("PrettyTables"); using PrettyTables' && \
     julia -e 'import Pkg; Pkg.add("OrdinaryDiffEq"); using OrdinaryDiffEq' && \
     julia -e 'import Pkg; Pkg.add("EasyModelAnalysis"); using EasyModelAnalysis' && \
-    julia -e 'import Pkg; Pkg.add("Latexify"); using Latexify && \
+    julia -e 'import Pkg; Pkg.add("Latexify"); using Latexify' && \
     fix-permissions /home/$NB_USER
 
 CMD jupyter lab --ip='*' --NotebookApp.token='' --NotebookApp.password=''
