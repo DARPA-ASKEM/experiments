@@ -32,6 +32,7 @@ RUN pip3 install numpy \
 # Add packages and precompile
 RUN julia -e 'import Pkg; Pkg.update()' && \
     julia -e 'import Pkg; Pkg.add("Colors"); using Colors' && \
+    julia -e 'import Pkg; Pkg.add("Plots"); using Plots' && \    
     julia -e 'import Pkg; Pkg.add("Catlab"); using Catlab' && \
     julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia' && \
     julia -e 'import Pkg; Pkg.add("GraphViz"); using GraphViz' && \
