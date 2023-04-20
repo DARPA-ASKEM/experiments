@@ -53,6 +53,8 @@ e.g. assuming the SIR compartmental model and a training dataset with features `
 }
 ```
 
+* Note that "incident" refers to *new* occurrences, as opposed to "prevalent" which refers to *current* (new and pre-existing) occurrences.
+
 ## Fitting | Training | Calibration | Optimization
 
 * `Fitting`, `training`, and `calibration` are equivalent terms that describe, given a model and a set of observations of the underlying system, the process of determining for model parameter values 
