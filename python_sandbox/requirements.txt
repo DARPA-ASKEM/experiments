@@ -19,3 +19,5 @@ pyarrow
 lxml
 openai
 latex2mathml
+circlify
+squarify
