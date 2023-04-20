@@ -19,7 +19,7 @@ e.g. an epidemic can be approximated by a model built from a set of ordinary dif
 
 * A `run` is the output of a simulation.
 
-* Given a system and scenario, a (model, configuration) pair can be constructed and executed by a simulator within a simulation to generate runs.
+* Given a system and scenario, a (model, configuration) pair can be constructed and executed by a simulator to initiate simulations that generate each a run.
 
 ## State Variables | Parameters | Hyperparameters | Initial Conditions
 
