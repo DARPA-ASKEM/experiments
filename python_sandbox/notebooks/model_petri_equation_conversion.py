@@ -251,6 +251,58 @@ fig.savefig('../figures/model_conversion_equation-Petri_SIR.png', dpi = 150)
 # mathematically.
 
 # %%[markdown]
+# ## Test with SIR (Named)
+
+# %%
+model_name = 'SIR-Named'
+models[model_name] = {}
+
+# Petri net
+models[model_name]['petri'] = {
+    "S": [
+        {"sname": "Infected"},
+        {"sname": "Recovered"},
+        {"sname": "Susceptible"}
+    ],
+    "T":[
+        {"tname":"beta"},
+        {"tname":"gamma"}
+    ],
+    "I":[
+        {"it":1,"is":1},
+        {"it":1,"is":3},
+        {"it":2,"is":1}
+    ],
+    "O":[
+        {"ot":1,"os":1},
+        {"ot":1,"os":1},
+        {"ot":2,"os":2}
+    ]
+}
+
+# LaTeX
+models[model_name]['latex'] = [
+    r"\frac{d Susceptible}{d t} = - beta Susceptible Infected",
+    r"\frac{d Infected}{d t} = beta Susceptible Infected - gamma Infected",
+    r"\frac{d Recovery}{d t} = gamma Infected"
+]
+
+# MathML (corrected to combine characters of names, e.g. g a m m a -> gamma)
+models[model_name]['mathml'] = [
+    r'<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mfrac><mrow><mi>d</mi><mi>Susceptible</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mo>−</mo><mi>beta</mi><mi>Susceptible</mi><mi>Infected</mi></mrow></math>',
+    r'<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mfrac><mrow><mi>d</mi><mi>Infected</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>beta</mi><mi>Susceptible</mi><mi>Infected</mi><mo>−</mo><mi>gamma</mi><mi>Infected</mi></mrow></math>',
+    r'<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mfrac><mrow><mi>d</mi><mi>Recovery</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>gamma</mi><mi>Infected</mi></mrow></math>'
+]
+
+# %%
+models[model_name]['latex_mathml'] = convert_latex2mathml(models[model_name]['latex'])
+models[model_name]['latex_mathml_petri'] = convert_mathml2petri(models[model_name]['latex_mathml'])
+
+models[model_name]['mathml_petri'] = convert_mathml2petri(models[model_name]['mathml'])
+
+
+
+# %%[markdown]
 # ## Test with SIDARTHE model
 
 # %%
@@ -531,29 +583,6 @@ for ax, (i, m), t in zip(fig.axes, models['testflow'].items(), titles):
             #__ = [ax.text(0.05, j / len(m) + 0.5 / len(m), s = f'{k}', va = 'center') for j, k in enumerate(m)]
             __ = ax.text(0.5, 0.5, 'MathML Jibberish', va = 'center', ha = 'center')
 
-# fig.savefig('../figures/model_conversion_bidirectional-test.png', dpi = 150)
+fig.savefig('../figures/model_conversion_bidirectional-testflow.png', dpi = 150)
 
 # %%
-plt.rcParams['text.usetex'] = False
-
-fig, axes = plt.subplots(2, 4, figsize = (16, 8))
-# fig.suptitle('Petri (ACSet) -(SciML)→ Equation (LaTeX) -(SKEMA)→ Petri (ACSet)')
-fig.subplots_adjust(wspace = 0.1, hspace = 0.2)
-
-for ax, (i, m), t in zip(fig.axes, models['test'].items(), titles):
-
-    __ = plt.setp(ax, title = f'{t}')
-    if isinstance(m, dict):
-        draw_graph(m, ax = ax, legend = False)
-    else:
-
-        ax.tick_params('both', left = False, bottom = False, labelleft = False, labelbottom = False)
-
-        # LaTeX
-        if 'frac{' in m[0]:
-            __ = [ax.text(0.05, j / len(m) + 0.5 / len(m), s = f'${k}$', va = 'center') for j, k in enumerate(m)]
-        else:
-            #__ = [ax.text(0.05, j / len(m) + 0.5 / len(m), s = f'{k}', va = 'center') for j, k in enumerate(m)]
-            __ = ax.text(0.5, 0.5, 'MathML Jibberish', va = 'center', ha = 'center')
-
-fig.savefig('../figures/model_conversion_bidirectional-testflow.png', dpi = 150)
