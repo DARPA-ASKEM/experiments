@@ -88,6 +88,9 @@ a list of all the allowed relation types can be found [here](https://github.com/
 |  0 | COPIED_FROM     | Model              | Model              |
 |  1 | COPIED_FROM     | ModelRevision      | ModelRevision      |
 |  2 | GLUED_FROM      | Model              | Model              |
+|    | ...             | ...                | ...                |
+| 32 | IS_CONCEPT_OF   | Concept            | Dataset            |
+
 <!--
 |  3 | GLUED_FROM      | ModelRevision      | ModelRevision      |
 |  4 | STRATIFIED_FROM | Model              | Model              |
@@ -119,7 +122,5 @@ a list of all the allowed relation types can be found [here](https://github.com/
 | 30 | IS_CONCEPT_OF   | Concept            | Plan               |
 | 31 | IS_CONCEPT_OF   | Concept            | SimulationRun      |
 -->
-|    | ...             | ...                | ...                |
-| 32 | IS_CONCEPT_OF   | Concept            | Dataset            |
 
 * A `lineage graph` is a subgraph of the provenance graph, tracking the versioning of a given artifact by containing all the data processing steps that lead to its creation of a given artifact.
