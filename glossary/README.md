@@ -45,8 +45,16 @@ e.g. `I_obs = 0.50 * I`, `N = S + I + R`, `R_frac = R / N`, `ℜ₀ = β * S / �
 
 * An `alignment` is a one-to-one mapping between quantities of a given model and features of a given dataset that enables simulations such model calibration;
 e.g. assuming the SIR compartmental model and a training dataset with features `truth-incident_cases`, `truth-incident_deaths`, `truth-incident_hospitalization`, we can have the following model-data alignment:
+
 ```json
 {
+    "S": null,
+    "I": null,
+    "R": null,
+    "I_obs": null,
+    "N": null,
+    "R_frac": null,
+    "ℜ₀": null,
     "inc_I_obs": "truth-incident_cases",
     "inc_D": "truth-incident_deaths",
     "inc_H": "truth-incident_hospitalization"
@@ -69,4 +77,84 @@ fitting and calibration are particular cases where the constraint is the approxi
 
 ## Workflow Graphs | Provenance Graphs | Lineage Graphs
 
+* A `workflow graph` is a high-level "data-flow diagram" that only shows the major steps of requiring user input 
+such as "configure model", "calibrate model", and "simulate model". 
 
+* A `provenance graph` is a directed graph constructed from all the artefacts created by the workflow (as nodes) and the relations between them (as links);
+a list of all the allowed relation types can be found [here](https://github.com/DARPA-ASKEM/data-service/blob/main/graph_relations.json):
+
++----+-----------------+--------------------+--------------------+
+|    | Relation Type   | Source Node Type   | Target Node Type   |
++====+=================+====================+====================+
+|  0 | COPIED_FROM     | Model              | Model              |
++----+-----------------+--------------------+--------------------+
+|  1 | COPIED_FROM     | ModelRevision      | ModelRevision      |
++----+-----------------+--------------------+--------------------+
+|  2 | GLUED_FROM      | Model              | Model              |
++----+-----------------+--------------------+--------------------+
+<!--
+|  3 | GLUED_FROM      | ModelRevision      | ModelRevision      |
++----+-----------------+--------------------+--------------------+
+|  4 | STRATIFIED_FROM | Model              | Model              |
++----+-----------------+--------------------+--------------------+
+|  5 | STRATIFIED_FROM | ModelRevision      | ModelRevision      |
++----+-----------------+--------------------+--------------------+
+|  6 | EDITED_FROM     | Model              | Model              |
++----+-----------------+--------------------+--------------------+
+|  7 | EDITED_FROM     | ModelRevision      | ModelRevision      |
++----+-----------------+--------------------+--------------------+
+|  8 | DECOMPOSED_FROM | Model              | Model              |
++----+-----------------+--------------------+--------------------+
+|  9 | DECOMPOSED_FROM | ModelRevision      | ModelRevision      |
++----+-----------------+--------------------+--------------------+
+| 10 | BEGINS_AT       | Model              | ModelRevision      |
++----+-----------------+--------------------+--------------------+
+| 11 | PARAMETER_OF    | ModelParameter     | ModelRevision      |
++----+-----------------+--------------------+--------------------+
+| 12 | PARAMETER_OF    | PlanParameter      | SimulationRun      |
++----+-----------------+--------------------+--------------------+
+| 13 | REINTERPRETS    | Intermediate       | Intermediate       |
++----+-----------------+--------------------+--------------------+
+| 14 | REINTERPRETS    | Model              | Intermediate       |
++----+-----------------+--------------------+--------------------+
+| 15 | REINTERPRETS    | Dataset            | SimulationRun      |
++----+-----------------+--------------------+--------------------+
+| 16 | GENERATED_BY    | SimulationRun      | Plan               |
++----+-----------------+--------------------+--------------------+
+| 17 | USES            | Plan               | ModelRevision      |
++----+-----------------+--------------------+--------------------+
+| 18 | CITES           | Publication        | Publication        |
++----+-----------------+--------------------+--------------------+
+| 19 | EXTRACTED_FROM  | Intermediate       | Publication        |
++----+-----------------+--------------------+--------------------+
+| 20 | EXTRACTED_FROM  | Dataset            | Publication        |
++----+-----------------+--------------------+--------------------+
+| 21 | CONTAINS        | Project            | Publication        |
++----+-----------------+--------------------+--------------------+
+| 22 | CONTAINS        | Project            | Intermediate       |
++----+-----------------+--------------------+--------------------+
+| 23 | CONTAINS        | Project            | Model              |
++----+-----------------+--------------------+--------------------+
+| 24 | CONTAINS        | Project            | Plan               |
++----+-----------------+--------------------+--------------------+
+| 25 | CONTAINS        | Project            | SimulationRun      |
++----+-----------------+--------------------+--------------------+
+| 26 | CONTAINS        | Project            | Dataset            |
++----+-----------------+--------------------+--------------------+
+| 27 | IS_CONCEPT_OF   | Concept            | Publication        |
++----+-----------------+--------------------+--------------------+
+| 28 | IS_CONCEPT_OF   | Concept            | Intermediate       |
++----+-----------------+--------------------+--------------------+
+| 29 | IS_CONCEPT_OF   | Concept            | Model              |
++----+-----------------+--------------------+--------------------+
+| 30 | IS_CONCEPT_OF   | Concept            | Plan               |
++----+-----------------+--------------------+--------------------+
+| 31 | IS_CONCEPT_OF   | Concept            | SimulationRun      |
++----+-----------------+--------------------+--------------------+
+-->
+|    | ...             | ...                | ...                |
++----+-----------------+--------------------+--------------------+
+| 32 | IS_CONCEPT_OF   | Concept            | Dataset            |
++----+-----------------+--------------------+--------------------+
+
+* A `lineage graph` is a subgraph of the provenance graph, tracking the versioning of a given artifact by containing all the data processing steps that lead to its creation of a given artifact.

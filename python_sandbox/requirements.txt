@@ -8,6 +8,7 @@ nwhy
 scikit-learn
 scikit-image
 pandas
+tabulate
 tqdm
 pylint
 regex
