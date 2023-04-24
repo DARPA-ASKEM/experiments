@@ -27,7 +27,9 @@ RUN pip3 install numpy \
     regex \
     requests \
     minisom \
-    tslearn
+    tslearn \
+    langchaing \
+    huggingface_hub
 
 # Add packages and precompile
 RUN julia -e 'import Pkg; Pkg.update()' && \
