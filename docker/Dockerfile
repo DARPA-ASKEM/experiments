@@ -28,7 +28,7 @@ RUN pip3 install numpy \
     requests \
     minisom \
     tslearn \
-    langchaing \
+    langchain \
     huggingface_hub
 
 # Add packages and precompile
