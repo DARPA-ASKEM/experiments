@@ -1,0 +1,345 @@
+{
+ "name": "BIOMD0000000991",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000991 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "susceptible",
+    "name": "susceptible",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "14367982.0000000",
+     "expression_mathml": "<cn>14367982.0</cn>"
+    }
+   },
+   {
+    "id": "exposed",
+    "name": "exposed",
+    "grounding": {
+     "identifiers": {
+      "apollosv": "00000154"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "441.000000000000",
+     "expression_mathml": "<cn>441.0</cn>"
+    }
+   },
+   {
+    "id": "asymptomatic",
+    "name": "asymptomatic",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "disease_severity": "ncit:C3833"
+     }
+    },
+    "initial": {
+     "expression": "188.000000000000",
+     "expression_mathml": "<cn>188.0</cn>"
+    }
+   },
+   {
+    "id": "recovered",
+    "name": "recovered",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "symptomatic",
+    "name": "symptomatic",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "disease_severity": "ncit:C25269"
+     }
+    },
+    "initial": {
+     "expression": "212.000000000000",
+     "expression_mathml": "<cn>212.0</cn>"
+    }
+   },
+   {
+    "id": "detected",
+    "name": "detected",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "1.00000000000000",
+     "expression_mathml": "<cn>1.0</cn>"
+    }
+   },
+   {
+    "id": "deceased",
+    "name": "deceased",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "asymptomatic",
+     "exposed",
+     "recovered",
+     "symptomatic",
+     "susceptible"
+    ],
+    "output": [
+     "asymptomatic",
+     "exposed",
+     "recovered",
+     "symptomatic",
+     "exposed"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "susceptible*transmission_rate_effective*(1 - delta)*(1 - eps)*(alpha*asymptomatic + symptomatic)/(asymptomatic + exposed + recovered + susceptible + symptomatic)",
+      "expression_mathml": "<apply><divide/><apply><times/><ci>susceptible</ci><ci>transmission_rate_effective</ci><apply><minus/><cn>1</cn><ci>delta</ci></apply><apply><minus/><cn>1</cn><ci>eps</ci></apply><apply><plus/><apply><times/><ci>alpha</ci><ci>asymptomatic</ci></apply><ci>symptomatic</ci></apply></apply><apply><plus/><ci>asymptomatic</ci><ci>exposed</ci><ci>recovered</ci><ci>susceptible</ci><ci>symptomatic</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "exposed"
+    ],
+    "output": [
+     "symptomatic"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "exposed*sigma*(1.0 - nu)",
+      "expression_mathml": "<apply><times/><ci>exposed</ci><ci>sigma</ci><apply><minus/><cn>1.0</cn><ci>nu</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "exposed"
+    ],
+    "output": [
+     "asymptomatic"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "exposed*nu*sigma",
+      "expression_mathml": "<apply><times/><ci>exposed</ci><ci>nu</ci><ci>sigma</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "symptomatic"
+    ],
+    "output": [
+     "detected"
+    ],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "psi*symptomatic",
+      "expression_mathml": "<apply><times/><ci>psi</ci><ci>symptomatic</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "asymptomatic"
+    ],
+    "output": [
+     "detected"
+    ],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "asymptomatic*theta",
+      "expression_mathml": "<apply><times/><ci>asymptomatic</ci><ci>theta</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "symptomatic"
+    ],
+    "output": [
+     "recovered"
+    ],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "gamma_0*symptomatic",
+      "expression_mathml": "<apply><times/><ci>gamma_0</ci><ci>symptomatic</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "asymptomatic"
+    ],
+    "output": [
+     "recovered"
+    ],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "asymptomatic*gamma_a",
+      "expression_mathml": "<apply><times/><ci>asymptomatic</ci><ci>gamma_a</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "detected"
+    ],
+    "output": [
+     "recovered"
+    ],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "detected*gamma_i",
+      "expression_mathml": "<apply><times/><ci>detected</ci><ci>gamma_i</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "symptomatic"
+    ],
+    "output": [
+     "deceased"
+    ],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "d_0*symptomatic",
+      "expression_mathml": "<apply><times/><ci>d_0</ci><ci>symptomatic</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "detected"
+    ],
+    "output": [
+     "deceased"
+    ],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "d_D*detected",
+      "expression_mathml": "<apply><times/><ci>d_D</ci><ci>detected</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "delta"
+   },
+   {
+    "id": "alpha",
+    "value": 0.5
+   },
+   {
+    "id": "transmission_rate_effective",
+    "value": 0.4236
+   },
+   {
+    "id": "eps"
+   },
+   {
+    "id": "(('susceptible', ('identity', 'ido:0000514')), ('exposed', ('identity', 'apollosv:00000154')), (('asymptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C3833')), ('exposed', ('identity', 'apollosv:00000154')), ('recovered', ('identity', 'ido:0000592')), ('symptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C25269'))), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "sigma",
+    "value": 0.192307692307692
+   },
+   {
+    "id": "nu",
+    "value": 0.5
+   },
+   {
+    "id": "(('exposed', ('identity', 'apollosv:00000154')), ('symptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C25269')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "(('exposed', ('identity', 'apollosv:00000154')), ('asymptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C3833')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "psi",
+    "value": 0.0135
+   },
+   {
+    "id": "theta",
+    "value": 1.8999e-12
+   },
+   {
+    "id": "gamma_0",
+    "value": 0.13978
+   },
+   {
+    "id": "gamma_a",
+    "value": 0.13978
+   },
+   {
+    "id": "gamma_i",
+    "value": 0.0666666666666667
+   },
+   {
+    "id": "d_0",
+    "value": 0.015
+   },
+   {
+    "id": "d_D",
+    "value": 0.015
+   }
+  ]
+ }
+}

@@ -1,0 +1,430 @@
+{
+ "name": "BIOMD0000000249",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000249 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "S",
+    "name": "S",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "I_1",
+    "name": "I_1",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    }
+   },
+   {
+    "id": "I_2",
+    "name": "I_2",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    }
+   },
+   {
+    "id": "R_1",
+    "name": "R_1",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "R_2",
+    "name": "R_2",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "I_1p",
+    "name": "I_1p",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    }
+   },
+   {
+    "id": "I_2p",
+    "name": "I_2p",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    }
+   },
+   {
+    "id": "R_p",
+    "name": "R_p",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "S"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "S/l_e",
+      "expression_mathml": "<apply><divide/><ci>S</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "I_1"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "I_1/l_e",
+      "expression_mathml": "<apply><divide/><ci>I_1</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "I_2"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "I_2/l_e",
+      "expression_mathml": "<apply><divide/><ci>I_2</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "R_1"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "R_1/l_e",
+      "expression_mathml": "<apply><divide/><ci>R_1</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "R_2"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "R_2/l_e",
+      "expression_mathml": "<apply><divide/><ci>R_2</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "I_1p"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "I_1p/l_e",
+      "expression_mathml": "<apply><divide/><ci>I_1p</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "I_2p"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "I_2p/l_e",
+      "expression_mathml": "<apply><divide/><ci>I_2p</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "R_p"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "R_p/l_e",
+      "expression_mathml": "<apply><divide/><ci>R_p</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "I_1",
+     "I_1p",
+     "S"
+    ],
+    "output": [
+     "I_1",
+     "I_1p",
+     "I_1"
+    ],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "365.0*R0_1*S*(I_1 + I_1p)/tInf_1",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365.0</cn><ci>R0_1</ci><ci>S</ci><apply><plus/><ci>I_1p</ci><ci>I_1</ci></apply></apply><ci>tInf_1</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "I_2",
+     "I_2p",
+     "S"
+    ],
+    "output": [
+     "I_2",
+     "I_2p",
+     "I_2"
+    ],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "365.0*R0_2*S*(I_2 + I_2p)/tInf_2",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365.0</cn><ci>R0_2</ci><ci>S</ci><apply><plus/><ci>I_2p</ci><ci>I_2</ci></apply></apply><ci>tInf_2</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t11",
+    "input": [
+     "I_1",
+     "I_1p",
+     "R_2"
+    ],
+    "output": [
+     "I_1",
+     "I_1p",
+     "I_1p"
+    ],
+    "properties": {
+     "name": "t11",
+     "rate": {
+      "expression": "365.0*R0_1*R_2*(1 - psi)*(I_1 + I_1p)/tInf_1",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365.0</cn><ci>R0_1</ci><ci>R_2</ci><apply><minus/><cn>1</cn><ci>psi</ci></apply><apply><plus/><ci>I_1p</ci><ci>I_1</ci></apply></apply><ci>tInf_1</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t12",
+    "input": [
+     "I_2",
+     "I_2p",
+     "R_1"
+    ],
+    "output": [
+     "I_2",
+     "I_2p",
+     "I_2p"
+    ],
+    "properties": {
+     "name": "t12",
+     "rate": {
+      "expression": "365.0*R0_2*R_1*(1 - psi)*(I_2 + I_2p)/tInf_2",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365.0</cn><ci>R0_2</ci><ci>R_1</ci><apply><minus/><cn>1</cn><ci>psi</ci></apply><apply><plus/><ci>I_2p</ci><ci>I_2</ci></apply></apply><ci>tInf_2</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t13",
+    "input": [
+     "I_1"
+    ],
+    "output": [
+     "R_1"
+    ],
+    "properties": {
+     "name": "t13",
+     "rate": {
+      "expression": "365*I_1/tInf_1",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>I_1</ci></apply><ci>tInf_1</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t14",
+    "input": [
+     "I_2"
+    ],
+    "output": [
+     "R_2"
+    ],
+    "properties": {
+     "name": "t14",
+     "rate": {
+      "expression": "365*I_2/tInf_2",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>I_2</ci></apply><ci>tInf_2</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t15",
+    "input": [
+     "I_1p"
+    ],
+    "output": [
+     "R_p"
+    ],
+    "properties": {
+     "name": "t15",
+     "rate": {
+      "expression": "365*I_1p/tInf_1",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>I_1p</ci></apply><ci>tInf_1</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t16",
+    "input": [
+     "I_2p"
+    ],
+    "output": [
+     "R_p"
+    ],
+    "properties": {
+     "name": "t16",
+     "rate": {
+      "expression": "365*I_2p/tInf_2",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>I_2p</ci></apply><ci>tInf_2</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t17",
+    "input": [
+     "R_1"
+    ],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t17",
+     "rate": {
+      "expression": "R_1/tImm",
+      "expression_mathml": "<apply><divide/><ci>R_1</ci><ci>tImm</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t18",
+    "input": [
+     "R_2"
+    ],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t18",
+     "rate": {
+      "expression": "R_2/tImm",
+      "expression_mathml": "<apply><divide/><ci>R_2</ci><ci>tImm</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t19",
+    "input": [
+     "R_p"
+    ],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t19",
+     "rate": {
+      "expression": "R_p/tImm",
+      "expression_mathml": "<apply><divide/><ci>R_p</ci><ci>tImm</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "l_e",
+    "value": 50.0
+   },
+   {
+    "id": "R0_1",
+    "value": 17.0
+   },
+   {
+    "id": "tInf_1",
+    "value": 21.0
+   },
+   {
+    "id": "(('S', ('identity', 'ncbitaxon:9606')), 'I_1', ('I_1', 'I_1p'), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "R0_2",
+    "value": 17.0
+   },
+   {
+    "id": "tInf_2",
+    "value": 21.0
+   },
+   {
+    "id": "(('S', ('identity', 'ncbitaxon:9606')), 'I_2', ('I_2', 'I_2p'), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "psi",
+    "value": 0.2
+   },
+   {
+    "id": "(('R_2', ('identity', 'ncbitaxon:9606')), 'I_1p', ('I_1', 'I_1p'), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "(('R_1', ('identity', 'ncbitaxon:9606')), 'I_2p', ('I_2', 'I_2p'), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "tImm",
+    "value": 20.0
+   }
+  ]
+ }
+}

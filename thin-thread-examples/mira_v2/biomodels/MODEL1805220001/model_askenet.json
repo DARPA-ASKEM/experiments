@@ -1,0 +1,258 @@
+{
+ "name": "MODEL1805220001",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model MODEL1805220001 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "Susceptible",
+    "name": "Susceptible",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    },
+    "initial": {
+     "expression": "2500.00000000000",
+     "expression_mathml": "<cn>2500.0</cn>"
+    }
+   },
+   {
+    "id": "Recovered",
+    "name": "Recovered",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Exposed",
+    "name": "Exposed",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Infected",
+    "name": "Infected",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [],
+    "output": [
+     "Susceptible"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "Human_Capital_lambda",
+      "expression_mathml": "<ci>Human_Capital_lambda</ci>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "Recovered"
+    ],
+    "output": [
+     "Susceptible"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "Human_rho*Recovered",
+      "expression_mathml": "<apply><times/><ci>Human_rho</ci><ci>Recovered</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "Susceptible"
+    ],
+    "output": [
+     "Exposed"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "Human_lambda*Susceptible",
+      "expression_mathml": "<apply><times/><ci>Human_lambda</ci><ci>Susceptible</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "Susceptible"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "Susceptible*(Human_u1 + Human_u2*(Exposed + Infected + Recovered + Susceptible))",
+      "expression_mathml": "<apply><times/><ci>Susceptible</ci><apply><plus/><ci>Human_u1</ci><apply><times/><ci>Human_u2</ci><apply><plus/><ci>Exposed</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible</ci></apply></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Infected"
+    ],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "Exposed*Human_v_h",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>Human_v_h</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "Exposed"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "Exposed*(Human_u1 + Human_u2*(Exposed + Infected + Recovered + Susceptible))",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><apply><plus/><ci>Human_u1</ci><apply><times/><ci>Human_u2</ci><apply><plus/><ci>Exposed</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible</ci></apply></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "Infected"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "Human_gamma*Infected",
+      "expression_mathml": "<apply><times/><ci>Human_gamma</ci><ci>Infected</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "Infected"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "Infected*(Human_u1 + Human_u2*(Exposed + Infected + Recovered + Susceptible))",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><apply><plus/><ci>Human_u1</ci><apply><times/><ci>Human_u2</ci><apply><plus/><ci>Exposed</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible</ci></apply></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "Recovered"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "Recovered*(Human_u1 + Human_u2*(Exposed + Infected + Recovered + Susceptible))",
+      "expression_mathml": "<apply><times/><ci>Recovered</ci><apply><plus/><ci>Human_u1</ci><apply><times/><ci>Human_u2</ci><apply><plus/><ci>Exposed</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible</ci></apply></apply></apply></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "Human_Capital_lambda",
+    "value": 0.03285
+   },
+   {
+    "id": "Human_rho",
+    "value": 0.0146
+   },
+   {
+    "id": "Human_lambda"
+   },
+   {
+    "id": "Human_u1",
+    "value": 1.6e-05
+   },
+   {
+    "id": "Human_u2",
+    "value": 3e-07
+   },
+   {
+    "id": "('Susceptible', (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "Human_v_h",
+    "value": 0.08333
+   },
+   {
+    "id": "('Exposed', (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "Human_gamma",
+    "value": 0.003704
+   },
+   {
+    "id": "('Infected', (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "Human_delta",
+    "value": 0.0003454
+   },
+   {
+    "id": "('Recovered', (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "Vector_psi",
+    "value": 80.0
+   },
+   {
+    "id": "Vector_lambda"
+   },
+   {
+    "id": "Vector_u2",
+    "value": 2.279e-06
+   },
+   {
+    "id": "Vector_u1",
+    "value": 0.1429
+   },
+   {
+    "id": "Vector_v",
+    "value": 0.1
+   }
+  ]
+ }
+}

@@ -1,0 +1,490 @@
+{
+ "name": "BIOMD0000000726",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000726 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "S_d",
+    "name": "S_d",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "R_d",
+    "name": "R_d",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "ncit:C49498"
+     }
+    }
+   },
+   {
+    "id": "E_d",
+    "name": "E_d",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "efo:0000487"
+     }
+    }
+   },
+   {
+    "id": "I_d",
+    "name": "I_d",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "S_h",
+    "name": "S_h",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "R_h",
+    "name": "R_h",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "ncit:C49498"
+     }
+    }
+   },
+   {
+    "id": "E_h",
+    "name": "E_h",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "efo:0000487"
+     }
+    }
+   },
+   {
+    "id": "I_h",
+    "name": "I_h",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {}
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [],
+    "output": [
+     "S_d"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "A",
+      "expression_mathml": "<ci>A</ci>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "R_d"
+    ],
+    "output": [
+     "S_d"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "R_d*lambda",
+      "expression_mathml": "<apply><times/><ci>R_d</ci><ci>lambda</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "E_d"
+    ],
+    "output": [
+     "S_d"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "E_d*sigma*(1.0 - gamma)",
+      "expression_mathml": "<apply><times/><ci>E_d</ci><ci>sigma</ci><apply><minus/><cn>1.0</cn><ci>gamma</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "I_d",
+     "S_d"
+    ],
+    "output": [
+     "I_d",
+     "E_d"
+    ],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "I_d*S_d*beta",
+      "expression_mathml": "<apply><times/><ci>I_d</ci><ci>S_d</ci><ci>beta</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "S_d"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "S_d*m",
+      "expression_mathml": "<apply><times/><ci>S_d</ci><ci>m</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "E_d"
+    ],
+    "output": [
+     "I_d"
+    ],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "E_d*gamma*sigma",
+      "expression_mathml": "<apply><times/><ci>E_d</ci><ci>gamma</ci><ci>sigma</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "E_d"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "E_d*m",
+      "expression_mathml": "<apply><times/><ci>E_d</ci><ci>m</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "I_d"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "I_d*m",
+      "expression_mathml": "<apply><times/><ci>I_d</ci><ci>m</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "S_d"
+    ],
+    "output": [
+     "R_d"
+    ],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "S_d*k",
+      "expression_mathml": "<apply><times/><ci>S_d</ci><ci>k</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "E_d"
+    ],
+    "output": [
+     "R_d"
+    ],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "E_d*k",
+      "expression_mathml": "<apply><times/><ci>E_d</ci><ci>k</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t11",
+    "input": [
+     "R_d"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t11",
+     "rate": {
+      "expression": "R_d*m",
+      "expression_mathml": "<apply><times/><ci>R_d</ci><ci>m</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t12",
+    "input": [],
+    "output": [
+     "S_h"
+    ],
+    "properties": {
+     "name": "t12",
+     "rate": {
+      "expression": "B",
+      "expression_mathml": "<ci>B</ci>"
+     }
+    }
+   },
+   {
+    "id": "t13",
+    "input": [
+     "R_h"
+    ],
+    "output": [
+     "S_h"
+    ],
+    "properties": {
+     "name": "t13",
+     "rate": {
+      "expression": "R_h*lambda_h",
+      "expression_mathml": "<apply><times/><ci>R_h</ci><ci>lambda_h</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t14",
+    "input": [
+     "E_h"
+    ],
+    "output": [
+     "S_h"
+    ],
+    "properties": {
+     "name": "t14",
+     "rate": {
+      "expression": "E_h*sigma_h*(1.0 - gamma_h)",
+      "expression_mathml": "<apply><times/><ci>E_h</ci><ci>sigma_h</ci><apply><minus/><cn>1.0</cn><ci>gamma_h</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t15",
+    "input": [
+     "S_h"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t15",
+     "rate": {
+      "expression": "S_h*m_h",
+      "expression_mathml": "<apply><times/><ci>S_h</ci><ci>m_h</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t16",
+    "input": [
+     "I_d",
+     "S_h"
+    ],
+    "output": [
+     "I_d",
+     "E_h"
+    ],
+    "properties": {
+     "name": "t16",
+     "rate": {
+      "expression": "I_d*S_h*beta_dh",
+      "expression_mathml": "<apply><times/><ci>I_d</ci><ci>S_h</ci><ci>beta_dh</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t17",
+    "input": [
+     "E_h"
+    ],
+    "output": [
+     "I_h"
+    ],
+    "properties": {
+     "name": "t17",
+     "rate": {
+      "expression": "E_h*gamma_h*sigma_h",
+      "expression_mathml": "<apply><times/><ci>E_h</ci><ci>gamma_h</ci><ci>sigma_h</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t18",
+    "input": [
+     "E_h"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t18",
+     "rate": {
+      "expression": "E_h*m_h",
+      "expression_mathml": "<apply><times/><ci>E_h</ci><ci>m_h</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t19",
+    "input": [
+     "E_h"
+    ],
+    "output": [
+     "R_h"
+    ],
+    "properties": {
+     "name": "t19",
+     "rate": {
+      "expression": "E_h*k_h",
+      "expression_mathml": "<apply><times/><ci>E_h</ci><ci>k_h</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t20",
+    "input": [
+     "I_h"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t20",
+     "rate": {
+      "expression": "I_h*m_h",
+      "expression_mathml": "<apply><times/><ci>I_h</ci><ci>m_h</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t21",
+    "input": [
+     "R_h"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t21",
+     "rate": {
+      "expression": "R_h*m_h",
+      "expression_mathml": "<apply><times/><ci>R_h</ci><ci>m_h</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "A",
+    "value": 3000000.0
+   },
+   {
+    "id": "lambda",
+    "value": 1.0
+   },
+   {
+    "id": "sigma",
+    "value": 6.0
+   },
+   {
+    "id": "gamma",
+    "value": 0.4
+   },
+   {
+    "id": "(('E_d', ('property', 'efo:0000487')), ('S_d', ('identity', 'ido:0000514')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "beta",
+    "value": 1.58e-07
+   },
+   {
+    "id": "m",
+    "value": 0.08
+   },
+   {
+    "id": "(('E_d', ('property', 'efo:0000487')), ('I_d', ('identity', 'ido:0000511')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "k",
+    "value": 0.09
+   },
+   {
+    "id": "mu",
+    "value": 1.0
+   },
+   {
+    "id": "B",
+    "value": 15400000.0
+   },
+   {
+    "id": "lambda_h",
+    "value": 1.0
+   },
+   {
+    "id": "gamma_h",
+    "value": 0.4
+   },
+   {
+    "id": "sigma_h",
+    "value": 6.0
+   },
+   {
+    "id": "(('E_h', ('property', 'efo:0000487')), ('S_h', ('identity', 'ido:0000514')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "m_h",
+    "value": 0.003
+   },
+   {
+    "id": "beta_dh",
+    "value": 2.29e-12
+   },
+   {
+    "id": "(('E_h', ('property', 'efo:0000487')), ('I_h', ('identity', 'ido:0000511')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "k_h",
+    "value": 0.54
+   },
+   {
+    "id": "mu_h",
+    "value": 1.34
+   }
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "name": "MODEL1808280011",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model MODEL1808280011 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [],
+  "transitions": [],
+  "parameters": []
+ }
+}

@@ -1,0 +1,396 @@
+{
+ "name": "BIOMD0000000958",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000958 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "Susceptible",
+    "name": "Susceptible",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "43994.0000000000",
+     "expression_mathml": "<cn>43994.0</cn>"
+    }
+   },
+   {
+    "id": "Exposed",
+    "name": "Exposed",
+    "grounding": {
+     "identifiers": {
+      "apollosv": "00000154"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Infectious",
+    "name": "Infectious",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "transmissibility": "ncit:C25376"
+     }
+    },
+    "initial": {
+     "expression": "1.00000000000000",
+     "expression_mathml": "<cn>1.0</cn>"
+    }
+   },
+   {
+    "id": "Hospitalised",
+    "name": "Hospitalised",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "hospitalization": "ncit:C25179"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Super_spreaders",
+    "name": "Super_spreaders",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "transmissibility": "ncit:C49508"
+     }
+    },
+    "initial": {
+     "expression": "5.00000000000000",
+     "expression_mathml": "<cn>5.0</cn>"
+    }
+   },
+   {
+    "id": "Asymptomatic",
+    "name": "Asymptomatic",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "disease_severity": "ncit:C3833"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Fatalities",
+    "name": "Fatalities",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Recovered",
+    "name": "Recovered",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "Infectious",
+     "Hospitalised",
+     "Super_spreaders",
+     "Susceptible"
+    ],
+    "output": [
+     "Infectious",
+     "Hospitalised",
+     "Super_spreaders",
+     "Exposed"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "Hospitalised*Susceptible*beta*l/N + Infectious*Susceptible*beta/N + Super_spreaders*Susceptible*beta_prime/N",
+      "expression_mathml": "<apply><plus/><apply><divide/><apply><times/><ci>Hospitalised</ci><ci>Susceptible</ci><ci>beta</ci><ci>l</ci></apply><ci>N</ci></apply><apply><divide/><apply><times/><ci>Infectious</ci><ci>Susceptible</ci><ci>beta</ci></apply><ci>N</ci></apply><apply><divide/><apply><times/><ci>Super_spreaders</ci><ci>Susceptible</ci><ci>beta_prime</ci></apply><ci>N</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Asymptomatic"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "Exposed*kappa*(-rho1 - rho2 + 1.0)",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>kappa</ci><apply><plus/><apply><minus/><apply><minus/><ci>rho1</ci></apply><ci>rho2</ci></apply><cn>1.0</cn></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Super_spreaders"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "Exposed*kappa*rho2",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>kappa</ci><ci>rho2</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Infectious"
+    ],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "Exposed*kappa*rho1",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>kappa</ci><ci>rho1</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "Super_spreaders"
+    ],
+    "output": [
+     "Fatalities"
+    ],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "Super_spreaders*delta_p",
+      "expression_mathml": "<apply><times/><ci>Super_spreaders</ci><ci>delta_p</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "Super_spreaders"
+    ],
+    "output": [
+     "Hospitalised"
+    ],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "Super_spreaders*gamma_a",
+      "expression_mathml": "<apply><times/><ci>Super_spreaders</ci><ci>gamma_a</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "Super_spreaders"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "Super_spreaders*gamma_i",
+      "expression_mathml": "<apply><times/><ci>Super_spreaders</ci><ci>gamma_i</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "Infectious"
+    ],
+    "output": [
+     "Fatalities"
+    ],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "Infectious*delta_i",
+      "expression_mathml": "<apply><times/><ci>Infectious</ci><ci>delta_i</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "Infectious"
+    ],
+    "output": [
+     "Hospitalised"
+    ],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "Infectious*gamma_a",
+      "expression_mathml": "<apply><times/><ci>Infectious</ci><ci>gamma_a</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "Infectious"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "Infectious*gamma_i",
+      "expression_mathml": "<apply><times/><ci>Infectious</ci><ci>gamma_i</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t11",
+    "input": [
+     "Hospitalised"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t11",
+     "rate": {
+      "expression": "Hospitalised*gamma_r",
+      "expression_mathml": "<apply><times/><ci>Hospitalised</ci><ci>gamma_r</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t12",
+    "input": [
+     "Hospitalised"
+    ],
+    "output": [
+     "Fatalities"
+    ],
+    "properties": {
+     "name": "t12",
+     "rate": {
+      "expression": "Hospitalised*delta_h",
+      "expression_mathml": "<apply><times/><ci>Hospitalised</ci><ci>delta_h</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "l",
+    "value": 1.56
+   },
+   {
+    "id": "beta_prime",
+    "value": 7.65
+   },
+   {
+    "id": "beta",
+    "value": 2.8
+   },
+   {
+    "id": "N",
+    "value": 44000.0
+   },
+   {
+    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'apollosv:00000154')), (('Infectious', ('identity', 'ido:0000511'), ('transmissibility', 'ncit:C25376')), ('Hospitalised', ('identity', 'ido:0000511'), ('hospitalization', 'ncit:C25179')), ('Super_spreaders', ('identity', 'ido:0000511'), ('transmissibility', 'ncit:C49508'))), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "rho2",
+    "value": 0.001
+   },
+   {
+    "id": "kappa",
+    "value": 0.25
+   },
+   {
+    "id": "rho1",
+    "value": 0.58
+   },
+   {
+    "id": "(('Exposed', ('identity', 'apollosv:00000154')), ('Asymptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C3833')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "(('Exposed', ('identity', 'apollosv:00000154')), ('Super_spreaders', ('identity', 'ido:0000511'), ('transmissibility', 'ncit:C49508')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "(('Exposed', ('identity', 'apollosv:00000154')), ('Infectious', ('identity', 'ido:0000511'), ('transmissibility', 'ncit:C25376')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "delta_p",
+    "value": 1.0
+   },
+   {
+    "id": "gamma_a",
+    "value": 0.94
+   },
+   {
+    "id": "gamma_i",
+    "value": 0.27
+   },
+   {
+    "id": "delta_i",
+    "value": 0.035
+   },
+   {
+    "id": "gamma_r",
+    "value": 0.5
+   },
+   {
+    "id": "delta_h",
+    "value": 0.085
+   }
+  ]
+ }
+}

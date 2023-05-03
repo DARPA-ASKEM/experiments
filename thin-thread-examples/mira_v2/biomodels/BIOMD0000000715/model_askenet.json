@@ -1,0 +1,214 @@
+{
+ "name": "BIOMD0000000715",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000715 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "S",
+    "name": "S",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "I",
+    "name": "I",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "E",
+    "name": "E",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C71551"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "M",
+    "name": "M",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C62608"
+     },
+     "context": {}
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "A",
+      "expression_mathml": "<ci>A</ci>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "I"
+    ],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "I*gamma",
+      "expression_mathml": "<apply><times/><ci>I</ci><ci>gamma</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "I",
+     "M",
+     "S"
+    ],
+    "output": [
+     "I",
+     "M",
+     "E"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "I*S*beta*exp(-M*alpha)",
+      "expression_mathml": "<apply><divide/><apply><times/><ci>I</ci><ci>S</ci><ci>beta</ci></apply><apply><exp/><apply><times/><ci>M</ci><ci>alpha</ci></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "S"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "S*alpha1",
+      "expression_mathml": "<apply><times/><ci>S</ci><ci>alpha1</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "E"
+    ],
+    "output": [
+     "I"
+    ],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "E*rho",
+      "expression_mathml": "<apply><times/><ci>E</ci><ci>rho</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "E"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "E*alpha1",
+      "expression_mathml": "<apply><times/><ci>E</ci><ci>alpha1</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "I"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "I*(alpha1 + alpha2)",
+      "expression_mathml": "<apply><times/><ci>I</ci><apply><plus/><ci>alpha1</ci><ci>alpha2</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "M"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "M*tau",
+      "expression_mathml": "<apply><times/><ci>M</ci><ci>tau</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "A",
+    "value": 0.8
+   },
+   {
+    "id": "gamma",
+    "value": 0.7
+   },
+   {
+    "id": "alpha",
+    "value": 0.08
+   },
+   {
+    "id": "beta",
+    "value": 0.8
+   },
+   {
+    "id": "(('S', ('identity', 'ido:0000514')), ('E', ('identity', 'ncit:C71551')), (('I', ('identity', 'ido:0000511')), ('M', ('identity', 'ncit:C62608'))), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "alpha1",
+    "value": 0.6
+   },
+   {
+    "id": "rho",
+    "value": 0.09
+   },
+   {
+    "id": "alpha2",
+    "value": 0.02
+   },
+   {
+    "id": "(('I', ('identity', 'ido:0000511')), (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "tau",
+    "value": 0.6
+   }
+  ]
+ }
+}

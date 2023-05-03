@@ -1,0 +1,379 @@
+{
+ "name": "BIOMD0000000983",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000983 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "Susceptible_confined",
+    "name": "Susceptible_confined",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "quarantined": "ncit:C71902"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Susceptible_unconfined",
+    "name": "Susceptible_unconfined",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "quarantined": "ncit:C68851"
+     }
+    },
+    "initial": {
+     "expression": "66990000.0000000",
+     "expression_mathml": "<cn>66990000.0</cn>"
+    }
+   },
+   {
+    "id": "Exposed",
+    "name": "Exposed",
+    "grounding": {
+     "identifiers": {
+      "apollosv": "00000154"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "112.000000000000",
+     "expression_mathml": "<cn>112.0</cn>"
+    }
+   },
+   {
+    "id": "Infected_reported",
+    "name": "Infected_reported",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "12.0000000000000",
+     "expression_mathml": "<cn>12.0</cn>"
+    }
+   },
+   {
+    "id": "Infected_unreported",
+    "name": "Infected_unreported",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "diagnosed": "ncit:C113725"
+     }
+    },
+    "initial": {
+     "expression": "50.0000000000000",
+     "expression_mathml": "<cn>50.0</cn>"
+    }
+   },
+   {
+    "id": "Quarantined",
+    "name": "Quarantined",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "quarantined": "ncit:C71902"
+     }
+    },
+    "initial": {
+     "expression": "36.0000000000000",
+     "expression_mathml": "<cn>36.0</cn>"
+    }
+   },
+   {
+    "id": "Recovered",
+    "name": "Recovered",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "Susceptible_confined"
+    ],
+    "output": [
+     "Susceptible_unconfined"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "Susceptible_confined*(-m_t_phase_1*(1 - exp(-a*(-tau_1 + time))) - m_t_phase_2*p - m_t_phase_3*(b*(-tau_3 + time) + p) + 1.0)",
+      "expression_mathml": "<apply><times/><ci>Susceptible_confined</ci><apply><plus/><apply><minus/><apply><minus/><apply><minus/><apply><times/><ci>m_t_phase_1</ci><apply><minus/><cn>1</cn><apply><exp/><apply><minus/><apply><times/><ci>a</ci><apply><plus/><apply><minus/><ci>tau_1</ci></apply><ci>time</ci></apply></apply></apply></apply></apply></apply></apply><apply><times/><ci>m_t_phase_2</ci><ci>p</ci></apply></apply><apply><times/><ci>m_t_phase_3</ci><apply><plus/><apply><times/><ci>b</ci><apply><plus/><apply><minus/><ci>tau_3</ci></apply><ci>time</ci></apply></apply><ci>p</ci></apply></apply></apply><cn>1.0</cn></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "Susceptible_unconfined"
+    ],
+    "output": [
+     "Susceptible_confined"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "Susceptible_unconfined*(m_t_phase_1*(1 - exp(-a*(-tau_1 + time))) + m_t_phase_2*p + m_t_phase_3*(b*(-tau_3 + time) + p))",
+      "expression_mathml": "<apply><times/><ci>Susceptible_unconfined</ci><apply><plus/><apply><times/><ci>m_t_phase_1</ci><apply><minus/><cn>1</cn><apply><exp/><apply><minus/><apply><times/><ci>a</ci><apply><plus/><apply><minus/><ci>tau_1</ci></apply><ci>time</ci></apply></apply></apply></apply></apply></apply><apply><times/><ci>m_t_phase_2</ci><ci>p</ci></apply><apply><times/><ci>m_t_phase_3</ci><apply><plus/><apply><times/><ci>b</ci><apply><plus/><apply><minus/><ci>tau_3</ci></apply><ci>time</ci></apply></apply><ci>p</ci></apply></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "Infected_reported",
+     "Infected_unreported",
+     "Susceptible_unconfined"
+    ],
+    "output": [
+     "Infected_reported",
+     "Infected_unreported",
+     "Exposed"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "Susceptible_unconfined*beta*(1.0 - sigma)*(Infected_reported*n + Infected_unreported)",
+      "expression_mathml": "<apply><times/><ci>Susceptible_unconfined</ci><ci>beta</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply><apply><plus/><apply><times/><ci>Infected_reported</ci><ci>n</ci></apply><ci>Infected_unreported</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "Infected_reported",
+     "Infected_unreported",
+     "Susceptible_unconfined"
+    ],
+    "output": [
+     "Infected_reported",
+     "Infected_unreported",
+     "Quarantined"
+    ],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "Susceptible_unconfined*beta*sigma*(Infected_reported*n + Infected_unreported)",
+      "expression_mathml": "<apply><times/><ci>Susceptible_unconfined</ci><ci>beta</ci><ci>sigma</ci><apply><plus/><apply><times/><ci>Infected_reported</ci><ci>n</ci></apply><ci>Infected_unreported</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "Quarantined"
+    ],
+    "output": [
+     "Infected_reported"
+    ],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "Quarantined*lambda*theta",
+      "expression_mathml": "<apply><times/><ci>Quarantined</ci><ci>lambda</ci><ci>theta</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Infected_reported"
+    ],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "Exposed*f*mu",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>f</ci><ci>mu</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Infected_unreported"
+    ],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "Exposed*mu*(1.0 - f)",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>mu</ci><apply><minus/><cn>1.0</cn><ci>f</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "Infected_reported"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "Infected_reported*eta_r",
+      "expression_mathml": "<apply><times/><ci>Infected_reported</ci><ci>eta_r</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "Infected_unreported"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "Infected_unreported*eta_u",
+      "expression_mathml": "<apply><times/><ci>Infected_unreported</ci><ci>eta_u</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "Quarantined"
+    ],
+    "output": [
+     "Susceptible_unconfined"
+    ],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "Quarantined*theta*(1.0 - lambda)",
+      "expression_mathml": "<apply><times/><ci>Quarantined</ci><ci>theta</ci><apply><minus/><cn>1.0</cn><ci>lambda</ci></apply></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "tau_1",
+    "value": 21.0
+   },
+   {
+    "id": "b",
+    "value": -0.00823008849557522
+   },
+   {
+    "id": "a",
+    "value": 0.102279232189722
+   },
+   {
+    "id": "m_t_phase_3"
+   },
+   {
+    "id": "tau_3",
+    "value": 76.0
+   },
+   {
+    "id": "m_t_phase_2"
+   },
+   {
+    "id": "m_t_phase_1"
+   },
+   {
+    "id": "p",
+    "value": 0.93
+   },
+   {
+    "id": "(('Susceptible_confined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902')), ('Susceptible_unconfined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C68851')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "(('Susceptible_unconfined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C68851')), ('Susceptible_confined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "sigma",
+    "value": 0.2
+   },
+   {
+    "id": "n",
+    "value": 0.5
+   },
+   {
+    "id": "beta",
+    "value": 2.115e-08
+   },
+   {
+    "id": "(('Susceptible_unconfined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C68851')), ('Exposed', ('identity', 'apollosv:00000154')), (('Infected_reported', ('identity', 'ido:0000511'), ('diagnosis', 'ncit:C15220')), ('Infected_unreported', ('identity', 'ido:0000511'), ('diagnosed', 'ncit:C113725'))), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "(('Susceptible_unconfined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C68851')), ('Quarantined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902')), (('Infected_reported', ('identity', 'ido:0000511'), ('diagnosis', 'ncit:C15220')), ('Infected_unreported', ('identity', 'ido:0000511'), ('diagnosed', 'ncit:C113725'))), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "lambda",
+    "value": 0.3
+   },
+   {
+    "id": "theta",
+    "value": 0.07142857
+   },
+   {
+    "id": "(('Quarantined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902')), ('Infected_reported', ('identity', 'ido:0000511'), ('diagnosis', 'ncit:C15220')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "mu",
+    "value": 0.2
+   },
+   {
+    "id": "f",
+    "value": 0.2
+   },
+   {
+    "id": "(('Exposed', ('identity', 'apollosv:00000154')), ('Infected_reported', ('identity', 'ido:0000511'), ('diagnosis', 'ncit:C15220')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "(('Exposed', ('identity', 'apollosv:00000154')), ('Infected_unreported', ('identity', 'ido:0000511'), ('diagnosed', 'ncit:C113725')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "eta_r",
+    "value": 0.1
+   },
+   {
+    "id": "eta_u",
+    "value": 0.25
+   },
+   {
+    "id": "(('Quarantined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902')), ('Susceptible_unconfined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C68851')), 'NaturalConversion', 'rate')"
+   }
+  ]
+ }
+}
