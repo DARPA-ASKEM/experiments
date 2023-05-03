@@ -7,29 +7,35 @@ Here, we define and contrast common terms used to label different concepts withi
 * A `model` is an abstract representation of a system with the purpose of approximating its behaviours,
 e.g. an epidemic can be approximated by a model built from a set of ordinary differential equations.
 
-* A `simulation` is an instance of a model that is executed to accept inputs and generate outputs with the goal of approximating the behaviours of the underlying system under different conditions.
+* A `simulation` is an instance of a model can be executed with the goal of approximating the behaviours of the underlying system under different conditions.  What makes a model executable depends on the details of the model, the simulator and the goals of the people involved. 
 
-* "Modeling" is the process of building a model and a "simulator" is an agent that takes a corresponding model and some input values and generates output values.
+* A `simulator` is an program that takes a model and corresponding input values and generates output values.
 
-## Scenarios | Configurations | Runs
+* `Modeling` is the process of building a model or a simulation.
+
+## Scenarios | Configurations | Runs | Results
 
 * A `scenario` is a natural-language description of the context, problems, or questions that is the starting point of the modeling and simulation process.
 
-* A `configuration` is any set of values that can be used as input for a given model; it is a model-specific representation of a scenario.
+* A `configuration` is any set of values that can be used as input for a given simulator; it is a simulation-specific (and thus also a model-specific) representation of a scenario.
 
-* A `run` is the output of a simulation.
+* A `run` is an execution of a simulation.
 
-* Given a system and scenario, a (model, configuration) pair can be constructed and executed by a simulator to initiate simulations that generate each a run.
+* A `result` is the output of a simulation (partial or complete).
+
+* `Simulating` is the process of executing a simulation on a simulator.
+
+* Given a scenario, a (simulation, configuration) pair can be constructed through modeling to execute a run and generate a result. During a run, the simulator has states and values incidental to the simulation that not considered part of the result, but that may influence future model/simulation/model/etc selection (e.g., running time, memory usage, etc.)
 
 ## State Variables | Parameters | Hyperparameters | Initial Conditions
 
 * A `state variable` is a varying quantity of a given system (and corresponding model) that, in combination of others, can fully determine the "state" of the underlying system;
 e.g. `S`, `I`, `R` are the state variables of the SIR compartmental model.
 
-* A `parameter` is a fixed quantity of a given model and consists of the inputs and constants internal to the model; they can be inferred from data (observations of the underlying system);
+* A `parameter` is a fixed quantity of a given model and consists of the constants internal to the model; they can be inferred from data (observations of the underlying system);
 e.g. `β`, `γ` of the SIR compartmental model and weights of an artificial neural network model.
 
-* A `hyperparameter` is a fixed quantity that is an input of the simulator; 
+* A `hyperparameter` is a quantity that is an input of the simulator; 
 they cannot be inferred from data and can impact the precision and accuracy of the resulting simulation;
 e.g. `loss`, `penalty`, `tol`, etc. of the [stochastic gradient descent algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html#sklearn.linear_model.SGDRegressor).
 
@@ -40,10 +46,10 @@ e.g. `S₀`, `I₀`, `R₀` are the initial conditions of the SIR compartmental 
 
 * An `observable` is a quantity of a given system (and corresponding model) that can be measured as "observation" data points; e.g. `I_obs` (observed infected population), `N` (total population), `R_frac` (recovered population fraction), `ℜ₀` ([basic reproduction ratio](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3157160/)), and `inc_I_obs` (observed incident infection rate) can be observables of the SIR compartmental model. 
 
-* An `observation function` is a function that maps state variables (and observables) to a given observable, capturing knowledge such as the physics of the observation or measurement process and expert heuristics;
-e.g. `I_obs = 0.50 * I`, `N = S + I + R`, `R_frac = R / N`, `ℜ₀ = β * S / γ`, `inc_I_ob = diff(I_obs(t), t)) * Heaviside(diff(I_obs(t), t))`.
+* An `observation function` is a function that maps state variables to a given observable, capturing knowledge such as the physics of the observation or measurement process and expert heuristics;
+e.g. `I_obs = 0.50 * I`, `N = S + I + R`, `R_frac = R / N`, `ℜ₀ = β * S / γ`, `inc_I_ob = diff(I_obs(t), t)) * Heaviside(diff(I_obs(t), t))`. For convenience, an observation function may refer to observables in many cases.
 
-* An `alignment` is a one-to-one mapping between quantities of a given model and features of a given dataset that enables simulations such model calibration;
+* An `alignment` is a mapping from the features of a dataset to state variables, parameters and initial conditions of model.  The alignment supports constructing configurations of a simulation;
 e.g. assuming the SIR compartmental model and a training dataset with features `truth-incident_cases`, `truth-incident_deaths`, `truth-incident_hospitalization`, we can have the following model-data alignment:
 
 ```json
@@ -65,14 +71,13 @@ e.g. assuming the SIR compartmental model and a training dataset with features `
 
 ## Fitting | Training | Calibration | Optimization
 
-* `Fitting`, `training`, and `calibration` are equivalent terms that describe, given a model and a set of observations of the underlying system, the process of determining for model parameter values 
-that yields the least approximation errors when used as inputs into a simulation of the model.
+* `Fitting` takes a model and a set of observations and determines the model parameter values that yield the least approximation errors when used as inputs to a simulation run of the model.   `Training`, and `calibration` are synonyms with fitting.
 
-* `Optimization` is the process of determining the values of a function that best meet some constraints; 
-fitting and calibration are particular cases where the constraint is the approximation error between the model outputs and the system observations.
+* `Optimization` is the process of determining the parameters of a model that meet target constraints. 
+Fitting is a type of optimization where the target constraint is the approximation error between the model outputs (and/or observables) and a reference dataset.
+
 
 ## Interventions | Assumptions
-
 
 
 ## Workflow Graphs | Provenance Graphs | Lineage Graphs
@@ -123,4 +128,4 @@ a list of all the allowed relation types can be found [here](https://github.com/
 | 31 | IS_CONCEPT_OF   | Concept            | SimulationRun      |
 -->
 
-* A `lineage graph` is a subgraph of the provenance graph, tracking the versioning of a given artifact by containing all the data processing steps that lead to its creation of a given artifact.
+* A `lineage graph` is a subgraph of the provenance graph that tracks the versioning of a given artifact. It contains all the data processing steps that lead to its creation of the given artifact.
