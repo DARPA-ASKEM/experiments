@@ -1,0 +1,142 @@
+{
+ "name": "BIOMD0000000978",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000978 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "Susceptible",
+    "name": "Susceptible",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "36196938.0000000",
+     "expression_mathml": "<cn>36196938.0</cn>"
+    }
+   },
+   {
+    "id": "Exposed",
+    "name": "Exposed",
+    "grounding": {
+     "identifiers": {
+      "apollosv": "00000154"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Infected",
+    "name": "Infected",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "2.00000000000000",
+     "expression_mathml": "<cn>2.0</cn>"
+    }
+   },
+   {
+    "id": "Recovered",
+    "name": "Recovered",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "Infected",
+     "Susceptible"
+    ],
+    "output": [
+     "Infected",
+     "Exposed"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "Infected*Susceptible*beta*(1.0 - epsilon)/N",
+      "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta</ci><apply><minus/><cn>1.0</cn><ci>epsilon</ci></apply></apply><ci>N</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Infected"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "Exposed*sigma",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>sigma</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "Infected"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "Infected*gamma",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>gamma</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "N",
+    "value": 36196938.0
+   },
+   {
+    "id": "beta",
+    "value": 1.3
+   },
+   {
+    "id": "epsilon"
+   },
+   {
+    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'apollosv:00000154')), ('Infected', ('identity', 'ido:0000511')), 'ControlledConversion', 'rate')"
+   },
+   {
+    "id": "sigma",
+    "value": 0.311
+   },
+   {
+    "id": "gamma",
+    "value": 0.3389830508
+   }
+  ]
+ }
+}

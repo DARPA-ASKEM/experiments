@@ -1,0 +1,337 @@
+{
+ "name": "BIOMD0000000949",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000949 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "Susceptible",
+    "name": "Susceptible",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "omit:0005461"
+     }
+    },
+    "initial": {
+     "expression": "2400.00000000000",
+     "expression_mathml": "<cn>2400.0</cn>"
+    }
+   },
+   {
+    "id": "Recovered",
+    "name": "Recovered",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "ncit:C25746"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Exposed",
+    "name": "Exposed",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "ncbitaxon:9606",
+      "property1": "ncit:C156623"
+     }
+    },
+    "initial": {
+     "expression": "30.0000000000000",
+     "expression_mathml": "<cn>30.0</cn>"
+    }
+   },
+   {
+    "id": "Infected",
+    "name": "Infected",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "ncbitaxon:9606",
+      "property1": "ncit:C128320"
+     }
+    },
+    "initial": {
+     "expression": "5.00000000000000",
+     "expression_mathml": "<cn>5.0</cn>"
+    }
+   },
+   {
+    "id": "Exposed",
+    "name": "Exposed",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "ncim:C123547",
+      "property1": "ncit:C17214"
+     }
+    },
+    "initial": {
+     "expression": "30.0000000000000",
+     "expression_mathml": "<cn>30.0</cn>"
+    }
+   },
+   {
+    "id": "Infected",
+    "name": "Infected",
+    "grounding": {
+     "identifiers": {},
+     "context": {
+      "property": "ncit:C123547",
+      "property1": "ncit:C128320"
+     }
+    },
+    "initial": {
+     "expression": "5.00000000000000",
+     "expression_mathml": "<cn>5.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [],
+    "output": [
+     "Susceptible"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "Capital_lambda_h",
+      "expression_mathml": "<ci>Capital_lambda_h</ci>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "Recovered"
+    ],
+    "output": [
+     "Susceptible"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "Recovered*piecewise(0.0027, eq(Baseline_dummy_variable, 0), 0.00055)",
+      "expression_mathml": "<apply><times/><ci>Recovered</ci><apply><piecewise/><cn>0.0027000000000000001</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.00055000000000000003</cn></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "Susceptible"
+    ],
+    "output": [
+     "Exposed"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "Susceptible*lambda_h",
+      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>lambda_h</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "Susceptible"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "Susceptible*(N_h*piecewise(2.0e-7, eq(Baseline_dummy_variable, 0), 3.0e-7) + piecewise(8.8e-6, eq(Baseline_dummy_variable, 0), 1.6e-5))",
+      "expression_mathml": "<apply><times/><ci>Susceptible</ci><apply><plus/><apply><times/><ci>N_h</ci><apply><piecewise/><cn>1.9999999999999999e-7</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>2.9999999999999999e-7</cn></apply></apply><apply><piecewise/><cn>8.8000000000000004e-6</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>1.5999999999999999e-5</cn></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Infected"
+    ],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "Exposed*piecewise(0.1, eq(Baseline_dummy_variable, 0), 0.1)",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><apply><piecewise/><cn>0.10000000000000001</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.10000000000000001</cn></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "Exposed"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "Exposed*(N_h*piecewise(2.0e-7, eq(Baseline_dummy_variable, 0), 3.0e-7) + piecewise(8.8e-6, eq(Baseline_dummy_variable, 0), 1.6e-5))",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><apply><plus/><apply><times/><ci>N_h</ci><apply><piecewise/><cn>1.9999999999999999e-7</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>2.9999999999999999e-7</cn></apply></apply><apply><piecewise/><cn>8.8000000000000004e-6</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>1.5999999999999999e-5</cn></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "Infected"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "Infected*piecewise(0.0035, eq(Baseline_dummy_variable, 0), 0.0035)",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><apply><piecewise/><cn>0.0035000000000000001</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.0035000000000000001</cn></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "Infected"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "Infected*piecewise(1.8e-5, eq(Baseline_dummy_variable, 0), 9.0e-5)",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><apply><piecewise/><cn>1.8e-5</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>9.0000000000000006e-5</cn></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "Recovered"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "Recovered*(N_h*piecewise(2.0e-7, eq(Baseline_dummy_variable, 0), 3.0e-7) + piecewise(8.8e-6, eq(Baseline_dummy_variable, 0), 1.6e-5))",
+      "expression_mathml": "<apply><times/><ci>Recovered</ci><apply><plus/><apply><times/><ci>N_h</ci><apply><piecewise/><cn>1.9999999999999999e-7</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>2.9999999999999999e-7</cn></apply></apply><apply><piecewise/><cn>8.8000000000000004e-6</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>1.5999999999999999e-5</cn></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "Susceptible"
+    ],
+    "output": [
+     "Exposed"
+    ],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "Susceptible*lambda_v",
+      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>lambda_v</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t11",
+    "input": [
+     "Exposed"
+    ],
+    "output": [
+     "Infected"
+    ],
+    "properties": {
+     "name": "t11",
+     "rate": {
+      "expression": "Exposed*piecewise(0.083, eq(Baseline_dummy_variable, 0), 0.091)",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><apply><piecewise/><cn>0.083000000000000004</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.090999999999999998</cn></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t12",
+    "input": [
+     "Exposed"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t12",
+     "rate": {
+      "expression": "Exposed*(N_v*piecewise(4.0e-5, eq(Baseline_dummy_variable, 0), 2.0e-5) + piecewise(0.033, eq(Baseline_dummy_variable, 0), 0.033))",
+      "expression_mathml": "<apply><times/><ci>Exposed</ci><apply><plus/><apply><times/><ci>N_v</ci><apply><piecewise/><cn>4.0000000000000003e-5</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>2.0000000000000002e-5</cn></apply></apply><apply><piecewise/><cn>0.033000000000000002</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.033000000000000002</cn></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t13",
+    "input": [
+     "Infected"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t13",
+     "rate": {
+      "expression": "Infected*(N_v*piecewise(4.0e-5, eq(Baseline_dummy_variable, 0), 2.0e-5) + piecewise(0.033, eq(Baseline_dummy_variable, 0), 0.033))",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><apply><plus/><apply><times/><ci>N_v</ci><apply><piecewise/><cn>4.0000000000000003e-5</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>2.0000000000000002e-5</cn></apply></apply><apply><piecewise/><cn>0.033000000000000002</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.033000000000000002</cn></apply></apply></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "Capital_lambda_h",
+    "value": 0.041
+   },
+   {
+    "id": "Baseline_dummy_variable"
+   },
+   {
+    "id": "lambda_h",
+    "value": 4.48218926330601e-05
+   },
+   {
+    "id": "N_h",
+    "value": 623.0
+   },
+   {
+    "id": "(('Susceptible', ('property', 'omit:0005461')), (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "(('Exposed', ('property', 'ncbitaxon:9606'), ('property1', 'ncit:C156623')), (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "(('Infected', ('property', 'ncbitaxon:9606'), ('property1', 'ncit:C128320')), (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "(('Recovered', ('property', 'ncit:C25746')), (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "lambda_v",
+    "value": 0.000293379660870939
+   },
+   {
+    "id": "N_v",
+    "value": 2435.0
+   },
+   {
+    "id": "(('Exposed', ('property', 'ncim:C123547'), ('property1', 'ncit:C17214')), (), 'NaturalDegradation', 'rate')"
+   },
+   {
+    "id": "(('Infected', ('property', 'ncit:C123547'), ('property1', 'ncit:C128320')), (), 'NaturalDegradation', 'rate')"
+   }
+  ]
+ }
+}

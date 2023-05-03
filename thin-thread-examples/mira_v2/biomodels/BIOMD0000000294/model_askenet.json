@@ -1,0 +1,556 @@
+{
+ "name": "BIOMD0000000294",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000294 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "S",
+    "name": "S",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "V",
+    "name": "V",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "I1",
+    "name": "I1",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    }
+   },
+   {
+    "id": "I2",
+    "name": "I2",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    }
+   },
+   {
+    "id": "Iv2",
+    "name": "Iv2",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "520"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "R1",
+    "name": "R1",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "R2",
+    "name": "R2",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "J1",
+    "name": "J1",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    }
+   },
+   {
+    "id": "J2",
+    "name": "J2",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
+    }
+   },
+   {
+    "id": "R",
+    "name": "R",
+    "grounding": {
+     "identifiers": {
+      "ncbitaxon": "9606"
+     },
+     "context": {}
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "S"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "S/l_e",
+      "expression_mathml": "<apply><divide/><ci>S</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "V"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "V/l_e",
+      "expression_mathml": "<apply><divide/><ci>V</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "I1"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "I1/l_e",
+      "expression_mathml": "<apply><divide/><ci>I1</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "I2"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "I2/l_e",
+      "expression_mathml": "<apply><divide/><ci>I2</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "Iv2"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "Iv2/l_e",
+      "expression_mathml": "<apply><divide/><ci>Iv2</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "R1"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "R1/l_e",
+      "expression_mathml": "<apply><divide/><ci>R1</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "R2"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "R2/l_e",
+      "expression_mathml": "<apply><divide/><ci>R2</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "J1"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "J1/l_e",
+      "expression_mathml": "<apply><divide/><ci>J1</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "J2"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "J2/l_e",
+      "expression_mathml": "<apply><divide/><ci>J2</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "R"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "R/l_e",
+      "expression_mathml": "<apply><divide/><ci>R</ci><ci>l_e</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t11",
+    "input": [
+     "J1",
+     "I1",
+     "S"
+    ],
+    "output": [
+     "J1",
+     "I1",
+     "I1"
+    ],
+    "properties": {
+     "name": "t11",
+     "rate": {
+      "expression": "1.0*R0*S*(I1 + J1)*(365/tInf + 1/l_e)",
+      "expression_mathml": "<apply><times/><cn>1.0</cn><ci>R0</ci><ci>S</ci><apply><plus/><ci>I1</ci><ci>J1</ci></apply><apply><plus/><apply><divide/><cn>365</cn><ci>tInf</ci></apply><apply><power/><ci>l_e</ci><cn>-1</cn></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t12",
+    "input": [
+     "J2",
+     "Iv2",
+     "I2",
+     "S"
+    ],
+    "output": [
+     "J2",
+     "Iv2",
+     "I2",
+     "I2"
+    ],
+    "properties": {
+     "name": "t12",
+     "rate": {
+      "expression": "1.0*R0*S*(365/tInf + 1/l_e)*(I2 + Iv2 + J2)",
+      "expression_mathml": "<apply><times/><cn>1.0</cn><ci>R0</ci><ci>S</ci><apply><plus/><apply><divide/><cn>365</cn><ci>tInf</ci></apply><apply><power/><ci>l_e</ci><cn>-1</cn></apply></apply><apply><plus/><ci>I2</ci><ci>Iv2</ci><ci>J2</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t13",
+    "input": [
+     "J2",
+     "I2",
+     "Iv2",
+     "V"
+    ],
+    "output": [
+     "J2",
+     "I2",
+     "Iv2",
+     "Iv2"
+    ],
+    "properties": {
+     "name": "t13",
+     "rate": {
+      "expression": "1.0*R0*V*(1 - tau)*(365/tInf + 1/l_e)*(I2 + Iv2 + J2)",
+      "expression_mathml": "<apply><times/><cn>1.0</cn><ci>R0</ci><ci>V</ci><apply><minus/><cn>1</cn><ci>tau</ci></apply><apply><plus/><apply><divide/><cn>365</cn><ci>tInf</ci></apply><apply><power/><ci>l_e</ci><cn>-1</cn></apply></apply><apply><plus/><ci>I2</ci><ci>Iv2</ci><ci>J2</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t14",
+    "input": [
+     "I1"
+    ],
+    "output": [
+     "R1"
+    ],
+    "properties": {
+     "name": "t14",
+     "rate": {
+      "expression": "365*I1/tInf",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>I1</ci></apply><ci>tInf</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t15",
+    "input": [
+     "I2"
+    ],
+    "output": [
+     "R2"
+    ],
+    "properties": {
+     "name": "t15",
+     "rate": {
+      "expression": "365*I2/tInf",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>I2</ci></apply><ci>tInf</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t16",
+    "input": [
+     "I1",
+     "J1",
+     "R2"
+    ],
+    "output": [
+     "I1",
+     "J1",
+     "J1"
+    ],
+    "properties": {
+     "name": "t16",
+     "rate": {
+      "expression": "1.0*R0*R2*(1 - theta)*(I1 + J1)*(365/tInf + 1/l_e)",
+      "expression_mathml": "<apply><times/><cn>1.0</cn><ci>R0</ci><ci>R2</ci><apply><minus/><cn>1</cn><ci>theta</ci></apply><apply><plus/><ci>I1</ci><ci>J1</ci></apply><apply><plus/><apply><divide/><cn>365</cn><ci>tInf</ci></apply><apply><power/><ci>l_e</ci><cn>-1</cn></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t17",
+    "input": [
+     "I2",
+     "Iv2",
+     "J2",
+     "R1"
+    ],
+    "output": [
+     "I2",
+     "Iv2",
+     "J2",
+     "J2"
+    ],
+    "properties": {
+     "name": "t17",
+     "rate": {
+      "expression": "1.0*R0*R1*(1 - theta)*(365/tInf + 1/l_e)*(I2 + Iv2 + J2)",
+      "expression_mathml": "<apply><times/><cn>1.0</cn><ci>R0</ci><ci>R1</ci><apply><minus/><cn>1</cn><ci>theta</ci></apply><apply><plus/><apply><divide/><cn>365</cn><ci>tInf</ci></apply><apply><power/><ci>l_e</ci><cn>-1</cn></apply></apply><apply><plus/><ci>I2</ci><ci>Iv2</ci><ci>J2</ci></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t18",
+    "input": [
+     "J1"
+    ],
+    "output": [
+     "R"
+    ],
+    "properties": {
+     "name": "t18",
+     "rate": {
+      "expression": "365*J1/(tInf*(1 - nu))",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>J1</ci></apply><apply><times/><ci>tInf</ci><apply><minus/><cn>1</cn><ci>nu</ci></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t19",
+    "input": [
+     "J2"
+    ],
+    "output": [
+     "R"
+    ],
+    "properties": {
+     "name": "t19",
+     "rate": {
+      "expression": "365*J2/(tInf*(1 - nu))",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>J2</ci></apply><apply><times/><ci>tInf</ci><apply><minus/><cn>1</cn><ci>nu</ci></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t20",
+    "input": [
+     "Iv2"
+    ],
+    "output": [
+     "R"
+    ],
+    "properties": {
+     "name": "t20",
+     "rate": {
+      "expression": "365*Iv2/(tInf*(1 - eta))",
+      "expression_mathml": "<apply><divide/><apply><times/><cn>365</cn><ci>Iv2</ci></apply><apply><times/><ci>tInf</ci><apply><minus/><cn>1</cn><ci>eta</ci></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t21",
+    "input": [
+     "R1"
+    ],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t21",
+     "rate": {
+      "expression": "R1/tImm",
+      "expression_mathml": "<apply><divide/><ci>R1</ci><ci>tImm</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t22",
+    "input": [
+     "R2"
+    ],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t22",
+     "rate": {
+      "expression": "R2/tImm",
+      "expression_mathml": "<apply><divide/><ci>R2</ci><ci>tImm</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t23",
+    "input": [
+     "R"
+    ],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t23",
+     "rate": {
+      "expression": "R/tImm",
+      "expression_mathml": "<apply><divide/><ci>R</ci><ci>tImm</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t24",
+    "input": [
+     "V"
+    ],
+    "output": [
+     "S"
+    ],
+    "properties": {
+     "name": "t24",
+     "rate": {
+      "expression": "V/tImm_V",
+      "expression_mathml": "<apply><divide/><ci>V</ci><ci>tImm_V</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "l_e",
+    "value": 50.0
+   },
+   {
+    "id": "R0",
+    "value": 17.0
+   },
+   {
+    "id": "tInf",
+    "value": 21.0
+   },
+   {
+    "id": "(('S', ('identity', 'ncbitaxon:9606')), 'I1', ('J1', 'I1'), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "(('S', ('identity', 'ncbitaxon:9606')), 'I2', ('J2', ('Iv2', ('identity', 'ncbitaxon:520')), 'I2'), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "tau",
+    "value": 0.7
+   },
+   {
+    "id": "(('V', ('identity', 'ncbitaxon:9606')), ('Iv2', ('identity', 'ncbitaxon:520')), ('J2', 'I2', ('Iv2', ('identity', 'ncbitaxon:520'))), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "theta",
+    "value": 0.5
+   },
+   {
+    "id": "(('R2', ('identity', 'ncbitaxon:9606')), 'J1', ('I1', 'J1'), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "(('R1', ('identity', 'ncbitaxon:9606')), 'J2', ('I2', ('Iv2', ('identity', 'ncbitaxon:520')), 'J2'), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "nu",
+    "value": 0.5
+   },
+   {
+    "id": "('J1', ('R', ('identity', 'ncbitaxon:9606')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "('J2', ('R', ('identity', 'ncbitaxon:9606')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "eta",
+    "value": 0.5
+   },
+   {
+    "id": "(('Iv2', ('identity', 'ncbitaxon:520')), ('R', ('identity', 'ncbitaxon:9606')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "tImm",
+    "value": 20.0
+   },
+   {
+    "id": "tImm_V",
+    "value": 50.0
+   }
+  ]
+ }
+}

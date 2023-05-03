@@ -1,0 +1,418 @@
+{
+ "name": "BIOMD0000000955",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000955 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "Susceptible",
+    "name": "Susceptible",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.999996300000000",
+     "expression_mathml": "<cn>0.99999629999999995</cn>"
+    }
+   },
+   {
+    "id": "Infected",
+    "name": "Infected",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "3.33333333000000e-6",
+     "expression_mathml": "<cn>3.3333333299999999e-6</cn>"
+    }
+   },
+   {
+    "id": "Diagnosed",
+    "name": "Diagnosed",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "3.33333333000000e-7",
+     "expression_mathml": "<cn>3.33333333e-7</cn>"
+    }
+   },
+   {
+    "id": "Ailing",
+    "name": "Ailing",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "disease_severity": "ncit:C25269",
+      "diagnosis": "ncit:C113725"
+     }
+    },
+    "initial": {
+     "expression": "1.66666666000000e-8",
+     "expression_mathml": "<cn>1.6666666599999999e-8</cn>"
+    }
+   },
+   {
+    "id": "Recognized",
+    "name": "Recognized",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "3.33333333000000e-8",
+     "expression_mathml": "<cn>3.33333333e-8</cn>"
+    }
+   },
+   {
+    "id": "Healed",
+    "name": "Healed",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Threatened",
+    "name": "Threatened",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "disease_severity": "ncit:C25467"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Extinct",
+    "name": "Extinct",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "Diagnosed",
+     "Ailing",
+     "Recognized",
+     "Infected",
+     "Susceptible"
+    ],
+    "output": [
+     "Diagnosed",
+     "Ailing",
+     "Recognized",
+     "Infected",
+     "Infected"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "Susceptible*(Ailing*gamma + Diagnosed*beta + Infected*alpha + Recognized*delta)",
+      "expression_mathml": "<apply><times/><ci>Susceptible</ci><apply><plus/><apply><times/><ci>Ailing</ci><ci>gamma</ci></apply><apply><times/><ci>Diagnosed</ci><ci>beta</ci></apply><apply><times/><ci>Infected</ci><ci>alpha</ci></apply><apply><times/><ci>Recognized</ci><ci>delta</ci></apply></apply></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "Infected"
+    ],
+    "output": [
+     "Diagnosed"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "Infected*epsilon",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>epsilon</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "Infected"
+    ],
+    "output": [
+     "Ailing"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "Infected*zeta",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>zeta</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "Infected"
+    ],
+    "output": [
+     "Healed"
+    ],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "Infected*lambda",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>lambda</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "Diagnosed"
+    ],
+    "output": [
+     "Recognized"
+    ],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "Diagnosed*eta",
+      "expression_mathml": "<apply><times/><ci>Diagnosed</ci><ci>eta</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "Diagnosed"
+    ],
+    "output": [
+     "Healed"
+    ],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "Diagnosed*rho",
+      "expression_mathml": "<apply><times/><ci>Diagnosed</ci><ci>rho</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "Ailing"
+    ],
+    "output": [
+     "Recognized"
+    ],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "Ailing*theta",
+      "expression_mathml": "<apply><times/><ci>Ailing</ci><ci>theta</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "Ailing"
+    ],
+    "output": [
+     "Healed"
+    ],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "Ailing*kappa",
+      "expression_mathml": "<apply><times/><ci>Ailing</ci><ci>kappa</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "Ailing"
+    ],
+    "output": [
+     "Threatened"
+    ],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "Ailing*mu",
+      "expression_mathml": "<apply><times/><ci>Ailing</ci><ci>mu</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "Recognized"
+    ],
+    "output": [
+     "Threatened"
+    ],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "Recognized*nu",
+      "expression_mathml": "<apply><times/><ci>Recognized</ci><ci>nu</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t11",
+    "input": [
+     "Recognized"
+    ],
+    "output": [
+     "Healed"
+    ],
+    "properties": {
+     "name": "t11",
+     "rate": {
+      "expression": "Recognized*xi",
+      "expression_mathml": "<apply><times/><ci>Recognized</ci><ci>xi</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t12",
+    "input": [
+     "Threatened"
+    ],
+    "output": [
+     "Extinct"
+    ],
+    "properties": {
+     "name": "t12",
+     "rate": {
+      "expression": "Threatened*tau",
+      "expression_mathml": "<apply><times/><ci>Threatened</ci><ci>tau</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t13",
+    "input": [
+     "Threatened"
+    ],
+    "output": [
+     "Healed"
+    ],
+    "properties": {
+     "name": "t13",
+     "rate": {
+      "expression": "Threatened*sigma",
+      "expression_mathml": "<apply><times/><ci>Threatened</ci><ci>sigma</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "alpha",
+    "value": 0.57
+   },
+   {
+    "id": "gamma",
+    "value": 0.456
+   },
+   {
+    "id": "beta",
+    "value": 0.011
+   },
+   {
+    "id": "delta",
+    "value": 0.011
+   },
+   {
+    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Infected', ('identity', 'ido:0000511')), (('Diagnosed', ('identity', 'ido:0000511'), ('diagnosis', 'ncit:C15220')), ('Ailing', ('identity', 'ido:0000511'), ('diagnosis', 'ncit:C113725'), ('disease_severity', 'ncit:C25269')), ('Recognized', ('identity', 'ido:0000511'), ('diagnosis', 'ncit:C15220')), ('Infected', ('identity', 'ido:0000511'))), 'GroupedControlledConversion', 'rate')"
+   },
+   {
+    "id": "epsilon",
+    "value": 0.171
+   },
+   {
+    "id": "zeta",
+    "value": 0.125
+   },
+   {
+    "id": "lambda",
+    "value": 0.034
+   },
+   {
+    "id": "eta",
+    "value": 0.125
+   },
+   {
+    "id": "rho",
+    "value": 0.034
+   },
+   {
+    "id": "theta",
+    "value": 0.371
+   },
+   {
+    "id": "kappa",
+    "value": 0.017
+   },
+   {
+    "id": "mu",
+    "value": 0.017
+   },
+   {
+    "id": "nu",
+    "value": 0.027
+   },
+   {
+    "id": "xi",
+    "value": 0.017
+   },
+   {
+    "id": "tau",
+    "value": 0.01
+   },
+   {
+    "id": "sigma",
+    "value": 0.017
+   }
+  ]
+ }
+}

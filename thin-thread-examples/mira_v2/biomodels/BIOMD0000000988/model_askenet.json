@@ -1,0 +1,550 @@
+{
+ "name": "BIOMD0000000988",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000988 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "uninfected_nontested",
+    "name": "uninfected_nontested",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "diagnosis": "ncit:C113725"
+     }
+    },
+    "initial": {
+     "expression": "630000.000000000",
+     "expression_mathml": "<cn>630000.0</cn>"
+    }
+   },
+   {
+    "id": "infected_nontested",
+    "name": "infected_nontested",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "diagnosed": "ncit:C113725"
+     }
+    },
+    "initial": {
+     "expression": "2.00000000000000",
+     "expression_mathml": "<cn>2.0</cn>"
+    }
+   },
+   {
+    "id": "uninfected_tested",
+    "name": "uninfected_tested",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "infected_tested",
+    "name": "infected_tested",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "1.00000000000000",
+     "expression_mathml": "<cn>1.0</cn>"
+    }
+   },
+   {
+    "id": "symptoms_nontested",
+    "name": "symptoms_nontested",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "disease_severity": "ncit:C25269",
+      "diagnosed": "ncit:C113725"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "symptoms_tested",
+    "name": "symptoms_tested",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "disease_severity": "ncit:C25269",
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "dead_corona_tested",
+    "name": "dead_corona_tested",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220",
+      "cause_of_death": "ncit:C171133"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "recovered_tested",
+    "name": "recovered_tested",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "recovered_nontested",
+    "name": "recovered_nontested",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {
+      "diagnosis": "ncit:C113725"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "susceptible",
+    "name": "susceptible",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "1.00000000000000",
+     "expression_mathml": "<cn>1.0</cn>"
+    }
+   },
+   {
+    "id": "dead_noncorona",
+    "name": "dead_noncorona",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {
+      "cause_of_death": "ncit:C17649"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "dead_corona_nontested",
+    "name": "dead_corona_nontested",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C28554"
+     },
+     "context": {
+      "diagnosis": "ncit:C113725",
+      "cause_of_death": "ncit:C171133"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "uninfected_nontested"
+    ],
+    "output": [
+     "infected_nontested"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "uninfected_nontested*(1 - epidemic_extinguished_bool)*(Infection_from_non_tested_no_symptoms_0*infected_nontested + Infection_from_non_tested_symptoms*symptoms_nontested + Infection_from_tested_no_symptoms_0*infected_tested + Infection_from_tested_symptoms*symptoms_tested)/Social_Distance",
+      "expression_mathml": "<apply><divide/><apply><times/><ci>uninfected_nontested</ci><apply><minus/><cn>1</cn><ci>epidemic_extinguished_bool</ci></apply><apply><plus/><apply><times/><ci>Infection_from_non_tested_no_symptoms_0</ci><ci>infected_nontested</ci></apply><apply><times/><ci>Infection_from_non_tested_symptoms</ci><ci>symptoms_nontested</ci></apply><apply><times/><ci>Infection_from_tested_no_symptoms_0</ci><ci>infected_tested</ci></apply><apply><times/><ci>Infection_from_tested_symptoms</ci><ci>symptoms_tested</ci></apply></apply></apply><ci>Social_Distance</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "uninfected_nontested"
+    ],
+    "output": [
+     "uninfected_tested"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "Testing_Randome*uninfected_nontested",
+      "expression_mathml": "<apply><times/><ci>Testing_Randome</ci><ci>uninfected_nontested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "uninfected_tested"
+    ],
+    "output": [
+     "infected_nontested"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "uninfected_tested*(1 - epidemic_extinguished_bool)*(Infection_from_non_tested_no_symptoms_0*infected_nontested + Infection_from_non_tested_symptoms*symptoms_nontested + Infection_from_tested_no_symptoms_0*infected_tested + Infection_from_tested_symptoms*symptoms_tested)/Social_Distance",
+      "expression_mathml": "<apply><divide/><apply><times/><ci>uninfected_tested</ci><apply><minus/><cn>1</cn><ci>epidemic_extinguished_bool</ci></apply><apply><plus/><apply><times/><ci>Infection_from_non_tested_no_symptoms_0</ci><ci>infected_nontested</ci></apply><apply><times/><ci>Infection_from_non_tested_symptoms</ci><ci>symptoms_nontested</ci></apply><apply><times/><ci>Infection_from_tested_no_symptoms_0</ci><ci>infected_tested</ci></apply><apply><times/><ci>Infection_from_tested_symptoms</ci><ci>symptoms_tested</ci></apply></apply></apply><ci>Social_Distance</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t4",
+    "input": [
+     "infected_nontested"
+    ],
+    "output": [
+     "infected_tested"
+    ],
+    "properties": {
+     "name": "t4",
+     "rate": {
+      "expression": "Testing_Randome*infected_nontested",
+      "expression_mathml": "<apply><times/><ci>Testing_Randome</ci><ci>infected_nontested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t5",
+    "input": [
+     "infected_nontested"
+    ],
+    "output": [
+     "symptoms_nontested"
+    ],
+    "properties": {
+     "name": "t5",
+     "rate": {
+      "expression": "Symptoms_appear*infected_nontested",
+      "expression_mathml": "<apply><times/><ci>Symptoms_appear</ci><ci>infected_nontested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "infected_tested"
+    ],
+    "output": [
+     "symptoms_tested"
+    ],
+    "properties": {
+     "name": "t6",
+     "rate": {
+      "expression": "Symptoms_appear*infected_tested",
+      "expression_mathml": "<apply><times/><ci>Symptoms_appear</ci><ci>infected_tested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
+     "symptoms_nontested"
+    ],
+    "output": [
+     "symptoms_tested"
+    ],
+    "properties": {
+     "name": "t7",
+     "rate": {
+      "expression": "Testing_for_Symptoms*symptoms_nontested",
+      "expression_mathml": "<apply><times/><ci>Testing_for_Symptoms</ci><ci>symptoms_nontested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t8",
+    "input": [
+     "symptoms_tested"
+    ],
+    "output": [
+     "dead_corona_tested"
+    ],
+    "properties": {
+     "name": "t8",
+     "rate": {
+      "expression": "Corona_death_rate_constant*symptoms_tested",
+      "expression_mathml": "<apply><times/><ci>Corona_death_rate_constant</ci><ci>symptoms_tested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "symptoms_tested"
+    ],
+    "output": [
+     "recovered_tested"
+    ],
+    "properties": {
+     "name": "t9",
+     "rate": {
+      "expression": "Corona_recover*symptoms_tested",
+      "expression_mathml": "<apply><times/><ci>Corona_recover</ci><ci>symptoms_tested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "symptoms_nontested"
+    ],
+    "output": [
+     "recovered_nontested"
+    ],
+    "properties": {
+     "name": "t10",
+     "rate": {
+      "expression": "Corona_recover*symptoms_nontested",
+      "expression_mathml": "<apply><times/><ci>Corona_recover</ci><ci>symptoms_nontested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t11",
+    "input": [
+     "susceptible"
+    ],
+    "output": [
+     "uninfected_nontested"
+    ],
+    "properties": {
+     "name": "t11",
+     "rate": {
+      "expression": "630003.0*Birth_rate*susceptible",
+      "expression_mathml": "<apply><times/><cn>630003.0</cn><ci>Birth_rate</ci><ci>susceptible</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t12",
+    "input": [
+     "uninfected_nontested"
+    ],
+    "output": [
+     "dead_noncorona"
+    ],
+    "properties": {
+     "name": "t12",
+     "rate": {
+      "expression": "Normal_death_rate_constant_0*uninfected_nontested",
+      "expression_mathml": "<apply><times/><ci>Normal_death_rate_constant_0</ci><ci>uninfected_nontested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t13",
+    "input": [
+     "recovered_tested"
+    ],
+    "output": [
+     "dead_noncorona"
+    ],
+    "properties": {
+     "name": "t13",
+     "rate": {
+      "expression": "Normal_death_rate_constant_0*recovered_tested",
+      "expression_mathml": "<apply><times/><ci>Normal_death_rate_constant_0</ci><ci>recovered_tested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t14",
+    "input": [
+     "recovered_nontested"
+    ],
+    "output": [
+     "dead_noncorona"
+    ],
+    "properties": {
+     "name": "t14",
+     "rate": {
+      "expression": "Normal_death_rate_constant_0*recovered_nontested",
+      "expression_mathml": "<apply><times/><ci>Normal_death_rate_constant_0</ci><ci>recovered_nontested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t15",
+    "input": [
+     "infected_tested"
+    ],
+    "output": [
+     "dead_corona_tested"
+    ],
+    "properties": {
+     "name": "t15",
+     "rate": {
+      "expression": "Corona_death_rate_constant*infected_tested",
+      "expression_mathml": "<apply><times/><ci>Corona_death_rate_constant</ci><ci>infected_tested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t16",
+    "input": [
+     "infected_nontested"
+    ],
+    "output": [
+     "dead_corona_nontested"
+    ],
+    "properties": {
+     "name": "t16",
+     "rate": {
+      "expression": "Corona_death_rate_constant*infected_nontested",
+      "expression_mathml": "<apply><times/><ci>Corona_death_rate_constant</ci><ci>infected_nontested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t17",
+    "input": [
+     "uninfected_tested"
+    ],
+    "output": [
+     "dead_noncorona"
+    ],
+    "properties": {
+     "name": "t17",
+     "rate": {
+      "expression": "Normal_death_rate_constant_0*uninfected_tested",
+      "expression_mathml": "<apply><times/><ci>Normal_death_rate_constant_0</ci><ci>uninfected_tested</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t18",
+    "input": [
+     "symptoms_nontested"
+    ],
+    "output": [
+     "dead_corona_nontested"
+    ],
+    "properties": {
+     "name": "t18",
+     "rate": {
+      "expression": "Corona_death_rate_constant*symptoms_nontested",
+      "expression_mathml": "<apply><times/><ci>Corona_death_rate_constant</ci><ci>symptoms_nontested</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "Infection_from_tested_no_symptoms_0",
+    "value": 0.025
+   },
+   {
+    "id": "Infection_from_non_tested_no_symptoms_0",
+    "value": 0.508
+   },
+   {
+    "id": "Infection_from_tested_symptoms",
+    "value": 0.025
+   },
+   {
+    "id": "Social_Distance",
+    "value": 534700.0
+   },
+   {
+    "id": "Infection_from_non_tested_symptoms",
+    "value": 0.25
+   },
+   {
+    "id": "(('uninfected_nontested', ('identity', 'ido:0000514'), ('diagnosis', 'ncit:C113725')), ('infected_nontested', ('identity', 'ido:0000511'), ('diagnosed', 'ncit:C113725')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "Testing_Randome",
+    "value": 0.0008
+   },
+   {
+    "id": "(('uninfected_tested', ('identity', 'ido:0000514'), ('diagnosis', 'ncit:C15220')), ('infected_nontested', ('identity', 'ido:0000511'), ('diagnosed', 'ncit:C113725')), 'NaturalConversion', 'rate')"
+   },
+   {
+    "id": "Symptoms_appear",
+    "value": 0.30165
+   },
+   {
+    "id": "Testing_for_Symptoms",
+    "value": 500.0
+   },
+   {
+    "id": "Corona_death_rate_constant",
+    "value": 0.002
+   },
+   {
+    "id": "Corona_recover",
+    "value": 0.067
+   },
+   {
+    "id": "Birth_rate",
+    "value": 3.29e-05
+   },
+   {
+    "id": "Normal_death_rate_constant_0",
+    "value": 3.29e-05
+   }
+  ]
+ }
+}

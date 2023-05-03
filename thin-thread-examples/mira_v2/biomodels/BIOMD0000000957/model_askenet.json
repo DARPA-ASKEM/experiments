@@ -1,0 +1,134 @@
+{
+ "name": "BIOMD0000000957",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "description": "BioModels model BIOMD0000000957 processed using MIRA.",
+ "model_version": "1.0",
+ "model": {
+  "states": [
+   {
+    "id": "Susceptible",
+    "name": "Susceptible",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "5999755.00000000",
+     "expression_mathml": "<cn>5999755.0</cn>"
+    }
+   },
+   {
+    "id": "Infected",
+    "name": "Infected",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "60.0000000000000",
+     "expression_mathml": "<cn>60.0</cn>"
+    }
+   },
+   {
+    "id": "Recovered",
+    "name": "Recovered",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000592"
+     },
+     "context": {}
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Confirmed",
+    "name": "Confirmed",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "initial": {
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t1",
+    "input": [
+     "Infected",
+     "Susceptible"
+    ],
+    "output": [
+     "Infected",
+     "Infected"
+    ],
+    "properties": {
+     "name": "t1",
+     "rate": {
+      "expression": "Infected*Susceptible*beta",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "input": [
+     "Infected"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t2",
+     "rate": {
+      "expression": "Infected*mu",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>mu</ci></apply>"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "input": [
+     "Infected"
+    ],
+    "output": [
+     "Confirmed"
+    ],
+    "properties": {
+     "name": "t3",
+     "rate": {
+      "expression": "Infected*rho",
+      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>rho</ci></apply>"
+     }
+    }
+   }
+  ],
+  "parameters": [
+   {
+    "id": "beta",
+    "value": 2.09e-07
+   },
+   {
+    "id": "mu",
+    "value": 0.1
+   },
+   {
+    "id": "rho",
+    "value": 0.909
+   }
+  ]
+ }
+}
