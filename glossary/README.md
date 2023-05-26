@@ -7,7 +7,8 @@ Here, we define and contrast common terms used to label different concepts withi
 * A `model` is an abstract representation of a system with the purpose of approximating its behaviours,
 e.g. an epidemic can be approximated by a model built from a set of ordinary differential equations.
 
-* A `simulation` is an instance of a model can be executed with the goal of approximating the behaviours of the underlying system under different conditions.  What makes a model executable depends on the details of the model, the simulator and the goals of the people involved. 
+* A `simulation` is an instance of a model can be executed with the goal of approximating the behaviours of the underlying system under different conditions.  
+What makes a model executable depends on the details of the model, the simulator and the goals of the people involved. 
 
 * A `simulator` is an program that takes a model and corresponding input values and generates output values.
 
@@ -71,13 +72,18 @@ e.g. assuming the SIR compartmental model and a training dataset with features `
 
 ## Fitting | Training | Calibration | Optimization
 
-* `Fitting` takes a model and a set of observations and determines the model parameter values that yield the least approximation errors when used as inputs to a simulation run of the model.   `Training`, and `calibration` are synonyms with fitting.
+* Model `fitting` — synonymous with `inference`, `training`, and `calibration` — is the process for determining or updating the value (point estimate or posterior distribution) of model parameters 
+in light of a reference dataset of observations. 
+The result is typically selected to balance tradeoffs between consistency with the modeler's expert knowledge and the "fit" of model observables to the dataset.
+In advanced cases, other selection criteria can include robustness to model misspecification, interpretability, focus on one statistical quantity of interest, and data privacy and security.
 
-* `Optimization` is the process of determining the parameters of a model that meet target constraints. 
-Fitting is a type of optimization where the target constraint is the approximation error between the model outputs (and/or observables) and a reference dataset.
+* `Optimization` is the process of determining the values of some variable(s) that minimize or maximize some objective(s) subject to some constraints. In the ASKEM context, these variables typically represent possible `interventions` to achieve a desired outcome, e.g. duration of a masking policy with respect to minimizing the number of hospitalized individuals. In the case of "risk-based optmization under uncertainty" (RBOUU), the objectives and constraints may be functions of distributions of model parameters and outputs, e.g. the constraint that the probability of a superspreader event never exceeds some threshold value.
 
+* Note that `fitting` *can* involve optimization (e.g. "optimal fitting" and "constrained optimal fitting") but *not* necessarily (e.g. approximation with a "particle filter").
 
 ## Interventions | Assumptions
+
+
 
 
 ## Workflow Graphs | Provenance Graphs | Lineage Graphs
