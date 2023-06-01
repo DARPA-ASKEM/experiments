@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000963",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000963 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -13,24 +14,6 @@
       "ido": "0000514"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "0.999000000000000",
-     "expression_mathml": "<cn>0.999</cn>"
-    }
-   },
-   {
-    "id": "Infected",
-    "name": "Infected",
-    "grounding": {
-     "identifiers": {
-      "ido": "0000511"
-     },
-     "context": {}
-    },
-    "initial": {
-     "expression": "0.00100000000000000",
-     "expression_mathml": "<cn>0.001</cn>"
     }
    },
    {
@@ -41,10 +24,16 @@
       "ido": "0000592"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Infected",
+    "name": "Infected",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {}
     }
    }
   ],
@@ -62,11 +51,7 @@
      "Infected"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "Infected*Susceptible*beta/(Recovered*alpha + 1.0)",
-      "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta</ci></apply><apply><plus/><apply><times/><ci>Recovered</ci><ci>alpha</ci></apply><cn>1.0</cn></apply></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -78,28 +63,52 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Infected*k1",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>k1</ci></apply>"
-     }
+     "name": "t2"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "alpha"
-   },
-   {
-    "id": "beta",
-    "value": 0.25
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Infected', ('identity', 'ido:0000511')), (('Recovered', ('identity', 'ido:0000592')), ('Infected', ('identity', 'ido:0000511'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "(('Infected', ('identity', 'ido:0000511')), ('Recovered', ('identity', 'ido:0000592')), 'NaturalConversion', 'rate')"
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "Infected*Susceptible*beta/(Recovered*alpha + 1.0)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta</ci></apply><apply><plus/><apply><times/><ci>Recovered</ci><ci>alpha</ci></apply><cn>1.0</cn></apply></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Infected*k1",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>k1</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible",
+     "expression": "0.999000000000000",
+     "expression_mathml": "<cn>0.999</cn>"
+    },
+    {
+     "target": "Recovered",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Infected",
+     "expression": "0.00100000000000000",
+     "expression_mathml": "<cn>0.001</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "beta",
+     "value": 0.25
+    },
+    {
+     "id": "alpha"
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

@@ -1,8 +1,9 @@
 {
  "name": "MODEL1008060000",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model MODEL1008060000 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -11,10 +12,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -23,10 +20,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -35,10 +28,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    }
   ],
@@ -50,11 +39,7 @@
      "Susceptible"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "Susceptible*delta",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -66,11 +51,7 @@
      "Removed"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Susceptible*delta",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -82,11 +63,7 @@
      "Zombie"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "Susceptible*Zombie*beta",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Zombie</ci><ci>beta</ci></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -98,11 +75,7 @@
      "Zombie"
     ],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "Removed*zeta",
-      "expression_mathml": "<apply><times/><ci>Removed</ci><ci>zeta</ci></apply>"
-     }
+     "name": "t4"
     }
    },
    {
@@ -116,31 +89,76 @@
      "Removed"
     ],
     "properties": {
-     "name": "t5",
-     "rate": {
-      "expression": "Susceptible*Zombie*alpha",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Zombie</ci><ci>alpha</ci></apply>"
-     }
+     "name": "t5"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "delta",
-    "value": 0.0001
-   },
-   {
-    "id": "beta",
-    "value": 0.0055
-   },
-   {
-    "id": "zeta",
-    "value": 0.09
-   },
-   {
-    "id": "alpha",
-    "value": 0.0075
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "Susceptible*delta",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Susceptible*delta",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "Susceptible*Zombie*beta",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Zombie</ci><ci>beta</ci></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "Removed*zeta",
+     "expression_mathml": "<apply><times/><ci>Removed</ci><ci>zeta</ci></apply>"
+    },
+    {
+     "target": "t5",
+     "expression": "Susceptible*Zombie*alpha",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Zombie</ci><ci>alpha</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Removed",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Zombie",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "delta",
+     "value": 0.0001
+    },
+    {
+     "id": "beta",
+     "value": 0.0055
+    },
+    {
+     "id": "zeta",
+     "value": 0.09
+    },
+    {
+     "id": "alpha",
+     "value": 0.0075
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

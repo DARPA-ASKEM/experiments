@@ -1,8 +1,9 @@
 {
  "name": "MODEL1808280006",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model MODEL1808280006 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -11,10 +12,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0580000000000000",
-     "expression_mathml": "<cn>0.058000000000000003</cn>"
     }
    },
    {
@@ -23,10 +20,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.00100000000000000",
-     "expression_mathml": "<cn>0.001</cn>"
     }
    },
    {
@@ -35,10 +28,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.00100000000000000",
-     "expression_mathml": "<cn>0.001</cn>"
     }
    },
    {
@@ -47,10 +36,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.100000000000000",
-     "expression_mathml": "<cn>0.10000000000000001</cn>"
     }
    },
    {
@@ -59,10 +44,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.100000000000000",
-     "expression_mathml": "<cn>0.10000000000000001</cn>"
     }
    },
    {
@@ -71,10 +52,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -83,10 +60,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -95,10 +68,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.410000000000000",
-     "expression_mathml": "<cn>0.40999999999999998</cn>"
     }
    },
    {
@@ -107,10 +76,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -119,10 +84,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -131,10 +92,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -143,10 +100,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -155,10 +108,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.330000000000000",
-     "expression_mathml": "<cn>0.33000000000000002</cn>"
     }
    },
    {
@@ -167,10 +116,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -179,10 +124,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -191,10 +132,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    }
   ],
@@ -206,11 +143,7 @@
      "X_SS"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "1/80",
-      "expression_mathml": "<apply><divide/><cn>1</cn><cn>80</cn></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -220,11 +153,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "X_SS/80",
-      "expression_mathml": "<apply><divide/><ci>X_SS</ci><cn>80</cn></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -236,11 +165,7 @@
      "X_IS"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "lambda1*X_SS",
-      "expression_mathml": "<apply><times/><ci>X_SS</ci><ci>lambda1</ci></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -252,11 +177,7 @@
      "X_SI"
     ],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "lambda2*X_SS",
-      "expression_mathml": "<apply><times/><ci>X_SS</ci><ci>lambda2</ci></apply>"
-     }
+     "name": "t4"
     }
    },
    {
@@ -268,11 +189,7 @@
      "X_SS"
     ],
     "properties": {
-     "name": "t5",
-     "rate": {
-      "expression": "2.0*X_WS*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WS</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t5"
     }
    },
    {
@@ -284,11 +201,7 @@
      "X_SS"
     ],
     "properties": {
-     "name": "t6",
-     "rate": {
-      "expression": "2.0*X_SW*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_SW</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t6"
     }
    },
    {
@@ -300,11 +213,7 @@
      "X_IS"
     ],
     "properties": {
-     "name": "t7",
-     "rate": {
-      "expression": "2.0*X_IW*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_IW</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t7"
     }
    },
    {
@@ -316,11 +225,7 @@
      "X_II"
     ],
     "properties": {
-     "name": "t8",
-     "rate": {
-      "expression": "lambda2*X_IS*(1.0 - sigma)",
-      "expression_mathml": "<apply><times/><ci>X_IS</ci><ci>lambda2</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
-     }
+     "name": "t8"
     }
    },
    {
@@ -332,11 +237,7 @@
      "X_RS"
     ],
     "properties": {
-     "name": "t9",
-     "rate": {
-      "expression": "X_IS*gamma",
-      "expression_mathml": "<apply><times/><ci>X_IS</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t9"
     }
    },
    {
@@ -346,11 +247,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t10",
-     "rate": {
-      "expression": "X_IS/80",
-      "expression_mathml": "<apply><divide/><ci>X_IS</ci><cn>80</cn></apply>"
-     }
+     "name": "t10"
     }
    },
    {
@@ -362,11 +259,7 @@
      "X_RS"
     ],
     "properties": {
-     "name": "t11",
-     "rate": {
-      "expression": "2.0*X_RW*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RW</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t11"
     }
    },
    {
@@ -378,11 +271,7 @@
      "X_RS"
     ],
     "properties": {
-     "name": "t12",
-     "rate": {
-      "expression": "lambda1*X_WS*v",
-      "expression_mathml": "<apply><times/><ci>X_WS</ci><ci>lambda1</ci><ci>v</ci></apply>"
-     }
+     "name": "t12"
     }
    },
    {
@@ -394,11 +283,7 @@
      "X_RI"
     ],
     "properties": {
-     "name": "t13",
-     "rate": {
-      "expression": "lambda2*X_RS*(1.0 - sigma)",
-      "expression_mathml": "<apply><times/><ci>X_RS</ci><ci>lambda2</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
-     }
+     "name": "t13"
     }
    },
    {
@@ -410,11 +295,7 @@
      "X_WS"
     ],
     "properties": {
-     "name": "t14",
-     "rate": {
-      "expression": "2.0*X_RS*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RS</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t14"
     }
    },
    {
@@ -424,11 +305,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t15",
-     "rate": {
-      "expression": "X_RS/80",
-      "expression_mathml": "<apply><divide/><ci>X_RS</ci><cn>80</cn></apply>"
-     }
+     "name": "t15"
     }
    },
    {
@@ -440,11 +317,7 @@
      "X_WS"
     ],
     "properties": {
-     "name": "t16",
-     "rate": {
-      "expression": "2.0*X_WW*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WW</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t16"
     }
    },
    {
@@ -456,11 +329,7 @@
      "X_WI"
     ],
     "properties": {
-     "name": "t17",
-     "rate": {
-      "expression": "lambda2*X_WS*(1.0 - sigma)",
-      "expression_mathml": "<apply><times/><ci>X_WS</ci><ci>lambda2</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
-     }
+     "name": "t17"
     }
    },
    {
@@ -470,11 +339,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t18",
-     "rate": {
-      "expression": "X_WS/80",
-      "expression_mathml": "<apply><divide/><ci>X_WS</ci><cn>80</cn></apply>"
-     }
+     "name": "t18"
     }
    },
    {
@@ -486,11 +351,7 @@
      "X_SI"
     ],
     "properties": {
-     "name": "t19",
-     "rate": {
-      "expression": "2.0*X_WI*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WI</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t19"
     }
    },
    {
@@ -502,11 +363,7 @@
      "X_II"
     ],
     "properties": {
-     "name": "t20",
-     "rate": {
-      "expression": "lambda1*X_SI*(1.0 - sigma)",
-      "expression_mathml": "<apply><times/><ci>X_SI</ci><ci>lambda1</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
-     }
+     "name": "t20"
     }
    },
    {
@@ -518,11 +375,7 @@
      "X_SR"
     ],
     "properties": {
-     "name": "t21",
-     "rate": {
-      "expression": "X_SI*gamma",
-      "expression_mathml": "<apply><times/><ci>X_SI</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t21"
     }
    },
    {
@@ -532,11 +385,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t22",
-     "rate": {
-      "expression": "X_SI/80",
-      "expression_mathml": "<apply><divide/><ci>X_SI</ci><cn>80</cn></apply>"
-     }
+     "name": "t22"
     }
    },
    {
@@ -548,11 +397,7 @@
      "X_RI"
     ],
     "properties": {
-     "name": "t23",
-     "rate": {
-      "expression": "X_II*gamma",
-      "expression_mathml": "<apply><times/><ci>X_II</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t23"
     }
    },
    {
@@ -564,11 +409,7 @@
      "X_IR"
     ],
     "properties": {
-     "name": "t24",
-     "rate": {
-      "expression": "X_II*gamma",
-      "expression_mathml": "<apply><times/><ci>X_II</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t24"
     }
    },
    {
@@ -578,11 +419,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t25",
-     "rate": {
-      "expression": "X_II/80",
-      "expression_mathml": "<apply><divide/><ci>X_II</ci><cn>80</cn></apply>"
-     }
+     "name": "t25"
     }
    },
    {
@@ -594,11 +431,7 @@
      "X_RI"
     ],
     "properties": {
-     "name": "t26",
-     "rate": {
-      "expression": "lambda1*X_WI*v",
-      "expression_mathml": "<apply><times/><ci>X_WI</ci><ci>lambda1</ci><ci>v</ci></apply>"
-     }
+     "name": "t26"
     }
    },
    {
@@ -610,11 +443,7 @@
      "X_WI"
     ],
     "properties": {
-     "name": "t27",
-     "rate": {
-      "expression": "2.0*X_RI*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RI</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t27"
     }
    },
    {
@@ -626,11 +455,7 @@
      "X_RR"
     ],
     "properties": {
-     "name": "t28",
-     "rate": {
-      "expression": "X_RI*gamma",
-      "expression_mathml": "<apply><times/><ci>X_RI</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t28"
     }
    },
    {
@@ -640,11 +465,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t29",
-     "rate": {
-      "expression": "X_RI/80",
-      "expression_mathml": "<apply><divide/><ci>X_RI</ci><cn>80</cn></apply>"
-     }
+     "name": "t29"
     }
    },
    {
@@ -656,11 +477,7 @@
      "X_WR"
     ],
     "properties": {
-     "name": "t30",
-     "rate": {
-      "expression": "X_WI*gamma",
-      "expression_mathml": "<apply><times/><ci>X_WI</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t30"
     }
    },
    {
@@ -670,11 +487,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t31",
-     "rate": {
-      "expression": "X_WI/80",
-      "expression_mathml": "<apply><divide/><ci>X_WI</ci><cn>80</cn></apply>"
-     }
+     "name": "t31"
     }
    },
    {
@@ -686,11 +499,7 @@
      "X_SR"
     ],
     "properties": {
-     "name": "t32",
-     "rate": {
-      "expression": "2.0*X_WR*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WR</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t32"
     }
    },
    {
@@ -702,11 +511,7 @@
      "X_SR"
     ],
     "properties": {
-     "name": "t33",
-     "rate": {
-      "expression": "lambda2*X_SW*v",
-      "expression_mathml": "<apply><times/><ci>X_SW</ci><ci>lambda2</ci><ci>v</ci></apply>"
-     }
+     "name": "t33"
     }
    },
    {
@@ -718,11 +523,7 @@
      "X_IR"
     ],
     "properties": {
-     "name": "t34",
-     "rate": {
-      "expression": "lambda1*X_SR*(1.0 - sigma)",
-      "expression_mathml": "<apply><times/><ci>X_SR</ci><ci>lambda1</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
-     }
+     "name": "t34"
     }
    },
    {
@@ -734,11 +535,7 @@
      "X_SW"
     ],
     "properties": {
-     "name": "t35",
-     "rate": {
-      "expression": "2.0*X_SR*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_SR</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t35"
     }
    },
    {
@@ -748,11 +545,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t36",
-     "rate": {
-      "expression": "X_SR/80",
-      "expression_mathml": "<apply><divide/><ci>X_SR</ci><cn>80</cn></apply>"
-     }
+     "name": "t36"
     }
    },
    {
@@ -764,11 +557,7 @@
      "X_IR"
     ],
     "properties": {
-     "name": "t37",
-     "rate": {
-      "expression": "lambda2*X_IW*v",
-      "expression_mathml": "<apply><times/><ci>X_IW</ci><ci>lambda2</ci><ci>v</ci></apply>"
-     }
+     "name": "t37"
     }
    },
    {
@@ -780,11 +569,7 @@
      "X_IW"
     ],
     "properties": {
-     "name": "t38",
-     "rate": {
-      "expression": "2.0*X_IR*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_IR</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t38"
     }
    },
    {
@@ -796,11 +581,7 @@
      "X_RR"
     ],
     "properties": {
-     "name": "t39",
-     "rate": {
-      "expression": "X_IR*gamma",
-      "expression_mathml": "<apply><times/><ci>X_IR</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t39"
     }
    },
    {
@@ -810,11 +591,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t40",
-     "rate": {
-      "expression": "X_IR/80",
-      "expression_mathml": "<apply><divide/><ci>X_IR</ci><cn>80</cn></apply>"
-     }
+     "name": "t40"
     }
    },
    {
@@ -826,11 +603,7 @@
      "X_RR"
     ],
     "properties": {
-     "name": "t41",
-     "rate": {
-      "expression": "lambda1*X_WR*v",
-      "expression_mathml": "<apply><times/><ci>X_WR</ci><ci>lambda1</ci><ci>v</ci></apply>"
-     }
+     "name": "t41"
     }
    },
    {
@@ -842,11 +615,7 @@
      "X_RR"
     ],
     "properties": {
-     "name": "t42",
-     "rate": {
-      "expression": "lambda2*X_RW*v",
-      "expression_mathml": "<apply><times/><ci>X_RW</ci><ci>lambda2</ci><ci>v</ci></apply>"
-     }
+     "name": "t42"
     }
    },
    {
@@ -858,11 +627,7 @@
      "X_WR"
     ],
     "properties": {
-     "name": "t43",
-     "rate": {
-      "expression": "2.0*X_RR*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RR</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t43"
     }
    },
    {
@@ -874,11 +639,7 @@
      "X_RW"
     ],
     "properties": {
-     "name": "t44",
-     "rate": {
-      "expression": "2.0*X_RR*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RR</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t44"
     }
    },
    {
@@ -888,11 +649,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t45",
-     "rate": {
-      "expression": "X_RR/80",
-      "expression_mathml": "<apply><divide/><ci>X_RR</ci><cn>80</cn></apply>"
-     }
+     "name": "t45"
     }
    },
    {
@@ -904,11 +661,7 @@
      "X_WR"
     ],
     "properties": {
-     "name": "t46",
-     "rate": {
-      "expression": "lambda2*X_WW*v",
-      "expression_mathml": "<apply><times/><ci>X_WW</ci><ci>lambda2</ci><ci>v</ci></apply>"
-     }
+     "name": "t46"
     }
    },
    {
@@ -920,11 +673,7 @@
      "X_WW"
     ],
     "properties": {
-     "name": "t47",
-     "rate": {
-      "expression": "2.0*X_WR*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WR</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t47"
     }
    },
    {
@@ -934,11 +683,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t48",
-     "rate": {
-      "expression": "X_WR/80",
-      "expression_mathml": "<apply><divide/><ci>X_WR</ci><cn>80</cn></apply>"
-     }
+     "name": "t48"
     }
    },
    {
@@ -950,11 +695,7 @@
      "X_SW"
     ],
     "properties": {
-     "name": "t49",
-     "rate": {
-      "expression": "2.0*X_WW*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WW</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t49"
     }
    },
    {
@@ -966,11 +707,7 @@
      "X_IW"
     ],
     "properties": {
-     "name": "t50",
-     "rate": {
-      "expression": "lambda1*X_SW*(1.0 - sigma)",
-      "expression_mathml": "<apply><times/><ci>X_SW</ci><ci>lambda1</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
-     }
+     "name": "t50"
     }
    },
    {
@@ -980,11 +717,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t51",
-     "rate": {
-      "expression": "X_SW/80",
-      "expression_mathml": "<apply><divide/><ci>X_SW</ci><cn>80</cn></apply>"
-     }
+     "name": "t51"
     }
    },
    {
@@ -996,11 +729,7 @@
      "X_RW"
     ],
     "properties": {
-     "name": "t52",
-     "rate": {
-      "expression": "X_IW*gamma",
-      "expression_mathml": "<apply><times/><ci>X_IW</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t52"
     }
    },
    {
@@ -1010,11 +739,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t53",
-     "rate": {
-      "expression": "X_IW/80",
-      "expression_mathml": "<apply><divide/><ci>X_IW</ci><cn>80</cn></apply>"
-     }
+     "name": "t53"
     }
    },
    {
@@ -1026,11 +751,7 @@
      "X_RW"
     ],
     "properties": {
-     "name": "t54",
-     "rate": {
-      "expression": "lambda1*X_WW*v",
-      "expression_mathml": "<apply><times/><ci>X_WW</ci><ci>lambda1</ci><ci>v</ci></apply>"
-     }
+     "name": "t54"
     }
    },
    {
@@ -1042,11 +763,7 @@
      "X_WW"
     ],
     "properties": {
-     "name": "t55",
-     "rate": {
-      "expression": "2.0*X_RW*kappa",
-      "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RW</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t55"
     }
    },
    {
@@ -1056,11 +773,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t56",
-     "rate": {
-      "expression": "X_RW/80",
-      "expression_mathml": "<apply><divide/><ci>X_RW</ci><cn>80</cn></apply>"
-     }
+     "name": "t56"
     }
    },
    {
@@ -1070,132 +783,409 @@
     ],
     "output": [],
     "properties": {
-     "name": "t57",
-     "rate": {
-      "expression": "X_WW/80",
-      "expression_mathml": "<apply><divide/><ci>X_WW</ci><cn>80</cn></apply>"
-     }
+     "name": "t57"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "((), 'X_SS', 'NaturalProduction', 'rate')"
-   },
-   {
-    "id": "('X_SS', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "lambda1",
-    "value": 0.26
-   },
-   {
-    "id": "lambda2",
-    "value": 0.26
-   },
-   {
-    "id": "kappa",
-    "value": 0.1
-   },
-   {
-    "id": "sigma",
-    "value": 0.49
-   },
-   {
-    "id": "('X_IS', 'X_II', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "gamma",
-    "value": 17.0
-   },
-   {
-    "id": "('X_IS', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "v",
-    "value": 2.0
-   },
-   {
-    "id": "('X_WS', 'X_RS', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_RS', 'X_RI', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_RS', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_WS', 'X_WI', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_WS', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_SI', 'X_II', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_SI', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_II', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_WI', 'X_RI', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_RI', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_WI', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_SW', 'X_SR', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_SR', 'X_IR', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_SR', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_IW', 'X_IR', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_IR', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_WR', 'X_RR', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_RW', 'X_RR', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_RR', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_WW', 'X_WR', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_WR', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_SW', 'X_IW', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_SW', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_IW', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_WW', 'X_RW', 'NaturalConversion', 'rate')"
-   },
-   {
-    "id": "('X_RW', (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "('X_WW', (), 'NaturalDegradation', 'rate')"
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "1/80",
+     "expression_mathml": "<apply><divide/><cn>1</cn><cn>80</cn></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "X_SS/80",
+     "expression_mathml": "<apply><divide/><ci>X_SS</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "lambda1*X_SS",
+     "expression_mathml": "<apply><times/><ci>X_SS</ci><ci>lambda1</ci></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "lambda2*X_SS",
+     "expression_mathml": "<apply><times/><ci>X_SS</ci><ci>lambda2</ci></apply>"
+    },
+    {
+     "target": "t5",
+     "expression": "2.0*X_WS*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WS</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t6",
+     "expression": "2.0*X_SW*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_SW</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t7",
+     "expression": "2.0*X_IW*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_IW</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t8",
+     "expression": "lambda2*X_IS*(1.0 - sigma)",
+     "expression_mathml": "<apply><times/><ci>X_IS</ci><ci>lambda2</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
+    },
+    {
+     "target": "t9",
+     "expression": "X_IS*gamma",
+     "expression_mathml": "<apply><times/><ci>X_IS</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t10",
+     "expression": "X_IS/80",
+     "expression_mathml": "<apply><divide/><ci>X_IS</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t11",
+     "expression": "2.0*X_RW*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RW</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t12",
+     "expression": "lambda1*X_WS*v",
+     "expression_mathml": "<apply><times/><ci>X_WS</ci><ci>lambda1</ci><ci>v</ci></apply>"
+    },
+    {
+     "target": "t13",
+     "expression": "lambda2*X_RS*(1.0 - sigma)",
+     "expression_mathml": "<apply><times/><ci>X_RS</ci><ci>lambda2</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
+    },
+    {
+     "target": "t14",
+     "expression": "2.0*X_RS*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RS</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t15",
+     "expression": "X_RS/80",
+     "expression_mathml": "<apply><divide/><ci>X_RS</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t16",
+     "expression": "2.0*X_WW*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WW</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t17",
+     "expression": "lambda2*X_WS*(1.0 - sigma)",
+     "expression_mathml": "<apply><times/><ci>X_WS</ci><ci>lambda2</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
+    },
+    {
+     "target": "t18",
+     "expression": "X_WS/80",
+     "expression_mathml": "<apply><divide/><ci>X_WS</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t19",
+     "expression": "2.0*X_WI*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WI</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t20",
+     "expression": "lambda1*X_SI*(1.0 - sigma)",
+     "expression_mathml": "<apply><times/><ci>X_SI</ci><ci>lambda1</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
+    },
+    {
+     "target": "t21",
+     "expression": "X_SI*gamma",
+     "expression_mathml": "<apply><times/><ci>X_SI</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t22",
+     "expression": "X_SI/80",
+     "expression_mathml": "<apply><divide/><ci>X_SI</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t23",
+     "expression": "X_II*gamma",
+     "expression_mathml": "<apply><times/><ci>X_II</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t24",
+     "expression": "X_II*gamma",
+     "expression_mathml": "<apply><times/><ci>X_II</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t25",
+     "expression": "X_II/80",
+     "expression_mathml": "<apply><divide/><ci>X_II</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t26",
+     "expression": "lambda1*X_WI*v",
+     "expression_mathml": "<apply><times/><ci>X_WI</ci><ci>lambda1</ci><ci>v</ci></apply>"
+    },
+    {
+     "target": "t27",
+     "expression": "2.0*X_RI*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RI</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t28",
+     "expression": "X_RI*gamma",
+     "expression_mathml": "<apply><times/><ci>X_RI</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t29",
+     "expression": "X_RI/80",
+     "expression_mathml": "<apply><divide/><ci>X_RI</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t30",
+     "expression": "X_WI*gamma",
+     "expression_mathml": "<apply><times/><ci>X_WI</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t31",
+     "expression": "X_WI/80",
+     "expression_mathml": "<apply><divide/><ci>X_WI</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t32",
+     "expression": "2.0*X_WR*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WR</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t33",
+     "expression": "lambda2*X_SW*v",
+     "expression_mathml": "<apply><times/><ci>X_SW</ci><ci>lambda2</ci><ci>v</ci></apply>"
+    },
+    {
+     "target": "t34",
+     "expression": "lambda1*X_SR*(1.0 - sigma)",
+     "expression_mathml": "<apply><times/><ci>X_SR</ci><ci>lambda1</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
+    },
+    {
+     "target": "t35",
+     "expression": "2.0*X_SR*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_SR</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t36",
+     "expression": "X_SR/80",
+     "expression_mathml": "<apply><divide/><ci>X_SR</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t37",
+     "expression": "lambda2*X_IW*v",
+     "expression_mathml": "<apply><times/><ci>X_IW</ci><ci>lambda2</ci><ci>v</ci></apply>"
+    },
+    {
+     "target": "t38",
+     "expression": "2.0*X_IR*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_IR</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t39",
+     "expression": "X_IR*gamma",
+     "expression_mathml": "<apply><times/><ci>X_IR</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t40",
+     "expression": "X_IR/80",
+     "expression_mathml": "<apply><divide/><ci>X_IR</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t41",
+     "expression": "lambda1*X_WR*v",
+     "expression_mathml": "<apply><times/><ci>X_WR</ci><ci>lambda1</ci><ci>v</ci></apply>"
+    },
+    {
+     "target": "t42",
+     "expression": "lambda2*X_RW*v",
+     "expression_mathml": "<apply><times/><ci>X_RW</ci><ci>lambda2</ci><ci>v</ci></apply>"
+    },
+    {
+     "target": "t43",
+     "expression": "2.0*X_RR*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RR</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t44",
+     "expression": "2.0*X_RR*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RR</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t45",
+     "expression": "X_RR/80",
+     "expression_mathml": "<apply><divide/><ci>X_RR</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t46",
+     "expression": "lambda2*X_WW*v",
+     "expression_mathml": "<apply><times/><ci>X_WW</ci><ci>lambda2</ci><ci>v</ci></apply>"
+    },
+    {
+     "target": "t47",
+     "expression": "2.0*X_WR*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WR</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t48",
+     "expression": "X_WR/80",
+     "expression_mathml": "<apply><divide/><ci>X_WR</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t49",
+     "expression": "2.0*X_WW*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_WW</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t50",
+     "expression": "lambda1*X_SW*(1.0 - sigma)",
+     "expression_mathml": "<apply><times/><ci>X_SW</ci><ci>lambda1</ci><apply><minus/><cn>1.0</cn><ci>sigma</ci></apply></apply>"
+    },
+    {
+     "target": "t51",
+     "expression": "X_SW/80",
+     "expression_mathml": "<apply><divide/><ci>X_SW</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t52",
+     "expression": "X_IW*gamma",
+     "expression_mathml": "<apply><times/><ci>X_IW</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t53",
+     "expression": "X_IW/80",
+     "expression_mathml": "<apply><divide/><ci>X_IW</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t54",
+     "expression": "lambda1*X_WW*v",
+     "expression_mathml": "<apply><times/><ci>X_WW</ci><ci>lambda1</ci><ci>v</ci></apply>"
+    },
+    {
+     "target": "t55",
+     "expression": "2.0*X_RW*kappa",
+     "expression_mathml": "<apply><times/><cn>2.0</cn><ci>X_RW</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t56",
+     "expression": "X_RW/80",
+     "expression_mathml": "<apply><divide/><ci>X_RW</ci><cn>80</cn></apply>"
+    },
+    {
+     "target": "t57",
+     "expression": "X_WW/80",
+     "expression_mathml": "<apply><divide/><ci>X_WW</ci><cn>80</cn></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "X_SS",
+     "expression": "0.0580000000000000",
+     "expression_mathml": "<cn>0.058000000000000003</cn>"
+    },
+    {
+     "target": "X_IS",
+     "expression": "0.00100000000000000",
+     "expression_mathml": "<cn>0.001</cn>"
+    },
+    {
+     "target": "X_SI",
+     "expression": "0.00100000000000000",
+     "expression_mathml": "<cn>0.001</cn>"
+    },
+    {
+     "target": "X_WS",
+     "expression": "0.100000000000000",
+     "expression_mathml": "<cn>0.10000000000000001</cn>"
+    },
+    {
+     "target": "X_SW",
+     "expression": "0.100000000000000",
+     "expression_mathml": "<cn>0.10000000000000001</cn>"
+    },
+    {
+     "target": "X_IW",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "X_II",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "X_RS",
+     "expression": "0.410000000000000",
+     "expression_mathml": "<cn>0.40999999999999998</cn>"
+    },
+    {
+     "target": "X_RW",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "X_RI",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "X_WW",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "X_WI",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "X_SR",
+     "expression": "0.330000000000000",
+     "expression_mathml": "<cn>0.33000000000000002</cn>"
+    },
+    {
+     "target": "X_IR",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "X_RR",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "X_WR",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "lambda1",
+     "value": 0.26
+    },
+    {
+     "id": "lambda2",
+     "value": 0.26
+    },
+    {
+     "id": "kappa",
+     "value": 0.1
+    },
+    {
+     "id": "sigma",
+     "value": 0.49
+    },
+    {
+     "id": "gamma",
+     "value": 17.0
+    },
+    {
+     "id": "v",
+     "value": 2.0
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

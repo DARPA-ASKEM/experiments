@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000976",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000976 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -13,24 +14,6 @@
       "ido": "0000514"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "78841214.1324410",
-     "expression_mathml": "<cn>78841214.132440999</cn>"
-    }
-   },
-   {
-    "id": "Infected_strong_immune_system",
-    "name": "Infected_strong_immune_system",
-    "grounding": {
-     "identifiers": {
-      "ido": "0000511"
-     },
-     "context": {}
-    },
-    "initial": {
-     "expression": "5060.40000000000",
-     "expression_mathml": "<cn>5060.3999999999996</cn>"
     }
    },
    {
@@ -41,10 +24,16 @@
       "ido": "0000511"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "4487.60000000000",
-     "expression_mathml": "<cn>4487.6000000000004</cn>"
+    }
+   },
+   {
+    "id": "Infected_strong_immune_system",
+    "name": "Infected_strong_immune_system",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "context": {}
     }
    },
    {
@@ -55,10 +44,6 @@
       "ido": "0000621"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "4590.00000000000",
-     "expression_mathml": "<cn>4590.0</cn>"
     }
    }
   ],
@@ -76,11 +61,7 @@
      "Infected_strong_immune_system"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "Susceptible*alpha*tau*(Infected_strong_immune_system + Infected_weak_immune_system)",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>alpha</ci><ci>tau</ci><apply><plus/><ci>Infected_strong_immune_system</ci><ci>Infected_weak_immune_system</ci></apply></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -96,11 +77,7 @@
      "Infected_weak_immune_system"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Susceptible*tau*(1.0 - alpha)*(Infected_strong_immune_system + Infected_weak_immune_system)",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>tau</ci><apply><minus/><cn>1.0</cn><ci>alpha</ci></apply><apply><plus/><ci>Infected_strong_immune_system</ci><ci>Infected_weak_immune_system</ci></apply></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -112,11 +89,7 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "Infected_strong_immune_system*gamma_1",
-      "expression_mathml": "<apply><times/><ci>Infected_strong_immune_system</ci><ci>gamma_1</ci></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -128,11 +101,7 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "Infected_weak_immune_system*gamma_2",
-      "expression_mathml": "<apply><times/><ci>Infected_weak_immune_system</ci><ci>gamma_2</ci></apply>"
-     }
+     "name": "t4"
     }
    },
    {
@@ -142,41 +111,85 @@
     ],
     "output": [],
     "properties": {
-     "name": "t5",
-     "rate": {
-      "expression": "Infected_weak_immune_system*mu",
-      "expression_mathml": "<apply><times/><ci>Infected_weak_immune_system</ci><ci>mu</ci></apply>"
-     }
+     "name": "t5"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "tau",
-    "value": 2e-09
-   },
-   {
-    "id": "alpha",
-    "value": 0.55
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Infected_strong_immune_system', ('identity', 'ido:0000511')), (('Infected_weak_immune_system', ('identity', 'ido:0000511')), ('Infected_strong_immune_system', ('identity', 'ido:0000511'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Infected_weak_immune_system', ('identity', 'ido:0000511')), (('Infected_strong_immune_system', ('identity', 'ido:0000511')), ('Infected_weak_immune_system', ('identity', 'ido:0000511'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "gamma_1",
-    "value": 0.1
-   },
-   {
-    "id": "gamma_2",
-    "value": 0.061
-   },
-   {
-    "id": "mu",
-    "value": 0.02
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "Susceptible*alpha*tau*(Infected_strong_immune_system + Infected_weak_immune_system)",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>alpha</ci><ci>tau</ci><apply><plus/><ci>Infected_strong_immune_system</ci><ci>Infected_weak_immune_system</ci></apply></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Susceptible*tau*(1.0 - alpha)*(Infected_strong_immune_system + Infected_weak_immune_system)",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>tau</ci><apply><minus/><cn>1.0</cn><ci>alpha</ci></apply><apply><plus/><ci>Infected_strong_immune_system</ci><ci>Infected_weak_immune_system</ci></apply></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "Infected_strong_immune_system*gamma_1",
+     "expression_mathml": "<apply><times/><ci>Infected_strong_immune_system</ci><ci>gamma_1</ci></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "Infected_weak_immune_system*gamma_2",
+     "expression_mathml": "<apply><times/><ci>Infected_weak_immune_system</ci><ci>gamma_2</ci></apply>"
+    },
+    {
+     "target": "t5",
+     "expression": "Infected_weak_immune_system*mu",
+     "expression_mathml": "<apply><times/><ci>Infected_weak_immune_system</ci><ci>mu</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible",
+     "expression": "78841214.1324410",
+     "expression_mathml": "<cn>78841214.132440999</cn>"
+    },
+    {
+     "target": "Infected_weak_immune_system",
+     "expression": "4487.60000000000",
+     "expression_mathml": "<cn>4487.6000000000004</cn>"
+    },
+    {
+     "target": "Infected_strong_immune_system",
+     "expression": "5060.40000000000",
+     "expression_mathml": "<cn>5060.3999999999996</cn>"
+    },
+    {
+     "target": "Recovered",
+     "expression": "4590.00000000000",
+     "expression_mathml": "<cn>4590.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "tau",
+     "value": 2e-09
+    },
+    {
+     "id": "alpha",
+     "value": 0.55
+    },
+    {
+     "id": "gamma_1",
+     "value": 0.1
+    },
+    {
+     "id": "gamma_2",
+     "value": 0.061
+    },
+    {
+     "id": "mu",
+     "value": 0.02
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

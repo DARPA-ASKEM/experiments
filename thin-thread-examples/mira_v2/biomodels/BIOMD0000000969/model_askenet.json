@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000969",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000969 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -15,10 +16,6 @@
      "context": {
       "county_property": "with_airports"
      }
-    },
-    "initial": {
-     "expression": "4052876.00000000",
-     "expression_mathml": "<cn>4052876.0</cn>"
     }
    },
    {
@@ -31,10 +28,6 @@
      "context": {
       "county_property": "with_airports"
      }
-    },
-    "initial": {
-     "expression": "30.0000000000000",
-     "expression_mathml": "<cn>30.0</cn>"
     }
    },
    {
@@ -49,10 +42,6 @@
       "county_property": "with_airports",
       "icu": "ncit:C68851"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -65,10 +54,6 @@
      "context": {
       "county_property": "with_airports"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -81,10 +66,6 @@
      "context": {
       "county_property": "with_airports"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -99,10 +80,6 @@
       "icu": "ncit:C53511",
       "county_property": "with_airports"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -116,10 +93,6 @@
       "hospitalization": "ncit:C154475",
       "county_property": "with_airports"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -132,10 +105,6 @@
      "context": {
       "county_property": "neighbouring_counties_with_airports"
      }
-    },
-    "initial": {
-     "expression": "4431673.00000000",
-     "expression_mathml": "<cn>4431673.0</cn>"
     }
    },
    {
@@ -148,10 +117,6 @@
      "context": {
       "county_property": "neighbouring_counties_with_airports"
      }
-    },
-    "initial": {
-     "expression": "26.0000000000000",
-     "expression_mathml": "<cn>26.0</cn>"
     }
    },
    {
@@ -166,10 +131,6 @@
       "county_property": "neighbouring_counties_with_airports",
       "icu": "ncit:C68851"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -182,10 +143,6 @@
      "context": {
       "county_property": "neighbouring_counties_with_airports"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -198,10 +155,6 @@
      "context": {
       "county_property": "neighbouring_counties_with_airports"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -216,10 +169,6 @@
       "icu": "ncit:C53511",
       "county_property": "neighbouring_counties_with_airports"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -233,10 +182,6 @@
       "hospitalization": "ncit:C154475",
       "county_property": "neighbouring_counties_with_airports"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -249,10 +194,6 @@
      "context": {
       "county_property": "with_highways"
      }
-    },
-    "initial": {
-     "expression": "1811059.00000000",
-     "expression_mathml": "<cn>1811059.0</cn>"
     }
    },
    {
@@ -265,10 +206,6 @@
      "context": {
       "county_property": "with_highways"
      }
-    },
-    "initial": {
-     "expression": "10.0000000000000",
-     "expression_mathml": "<cn>10.0</cn>"
     }
    },
    {
@@ -283,10 +220,6 @@
       "county_property": "with_highways",
       "icu": "ncit:C68851"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -299,10 +232,6 @@
      "context": {
       "county_property": "with_highways"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -315,10 +244,6 @@
      "context": {
       "county_property": "with_highways"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -333,10 +258,6 @@
       "icu": "ncit:C53511",
       "county_property": "with_highways"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -350,10 +271,6 @@
       "hospitalization": "ncit:C154475",
       "county_property": "with_highways"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -366,10 +283,6 @@
      "context": {
       "county_property": "low_risk"
      }
-    },
-    "initial": {
-     "expression": "1269942.00000000",
-     "expression_mathml": "<cn>1269942.0</cn>"
     }
    },
    {
@@ -382,10 +295,6 @@
      "context": {
       "county_property": "low_risk"
      }
-    },
-    "initial": {
-     "expression": "6.00000000000000",
-     "expression_mathml": "<cn>6.0</cn>"
     }
    },
    {
@@ -400,10 +309,6 @@
       "county_property": "low_risk",
       "icu": "ncit:C68851"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -416,10 +321,6 @@
      "context": {
       "county_property": "low_risk"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -432,10 +333,6 @@
      "context": {
       "county_property": "low_risk"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -450,10 +347,6 @@
       "icu": "ncit:C53511",
       "county_property": "low_risk"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -467,10 +360,6 @@
       "hospitalization": "ncit:C154475",
       "county_property": "low_risk"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    }
   ],
@@ -486,11 +375,7 @@
      "Infected_Counties_with_airports"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "Infected_Counties_with_airports*Susceptible_Counties_with_airports*lambda_Counties_with_airports*epsilon/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6)",
-      "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Counties_with_airports</ci><ci>Susceptible_Counties_with_airports</ci><ci>lambda_Counties_with_airports</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_0</ci><ci>Metabolite_1</ci><ci>Metabolite_2</ci><ci>Metabolite_3</ci><ci>Metabolite_4</ci><ci>Metabolite_5</ci><ci>Metabolite_6</ci></apply></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -502,11 +387,7 @@
      "Hospitalised_Counties_with_airports"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Infected_Counties_with_airports*eta_Counties_with_airports",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_with_airports</ci><ci>eta_Counties_with_airports</ci></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -518,11 +399,7 @@
      "Deceased_Counties_with_airports"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "Infected_Counties_with_airports*psi",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_with_airports</ci><ci>psi</ci></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -534,11 +411,7 @@
      "Recovered_Counties_with_airports"
     ],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "Infected_Counties_with_airports*delta",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_with_airports</ci><ci>delta</ci></apply>"
-     }
+     "name": "t4"
     }
    },
    {
@@ -550,11 +423,7 @@
      "ICU_Counties_with_airports"
     ],
     "properties": {
-     "name": "t5",
-     "rate": {
-      "expression": "Hospitalised_Counties_with_airports*omega_Counties_with_airports",
-      "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_with_airports</ci><ci>omega_Counties_with_airports</ci></apply>"
-     }
+     "name": "t5"
     }
    },
    {
@@ -566,11 +435,7 @@
      "Discharged_Counties_with_airports"
     ],
     "properties": {
-     "name": "t6",
-     "rate": {
-      "expression": "Hospitalised_Counties_with_airports*sigma",
-      "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_with_airports</ci><ci>sigma</ci></apply>"
-     }
+     "name": "t6"
     }
    },
    {
@@ -582,11 +447,7 @@
      "Hospitalised_Counties_with_airports"
     ],
     "properties": {
-     "name": "t7",
-     "rate": {
-      "expression": "ICU_Counties_with_airports*xi",
-      "expression_mathml": "<apply><times/><ci>ICU_Counties_with_airports</ci><ci>xi</ci></apply>"
-     }
+     "name": "t7"
     }
    },
    {
@@ -598,11 +459,7 @@
      "Deceased_Counties_with_airports"
     ],
     "properties": {
-     "name": "t8",
-     "rate": {
-      "expression": "ICU_Counties_with_airports*mu_Counties_with_airports",
-      "expression_mathml": "<apply><times/><ci>ICU_Counties_with_airports</ci><ci>mu_Counties_with_airports</ci></apply>"
-     }
+     "name": "t8"
     }
    },
    {
@@ -618,11 +475,7 @@
      "Infected_Counties_neighbouring_counties_with_airports"
     ],
     "properties": {
-     "name": "t9",
-     "rate": {
-      "expression": "Susceptible_Counties_neighbouring_counties_with_airports*(Infected_Counties_neighbouring_counties_with_airports*lambda_Counties_neighbouring_counties_with_airports*epsilon/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_airports*phi/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6))",
-      "expression_mathml": "<apply><times/><ci>Susceptible_Counties_neighbouring_counties_with_airports</ci><apply><plus/><apply><divide/><apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>lambda_Counties_neighbouring_counties_with_airports</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_10</ci><ci>Metabolite_11</ci><ci>Metabolite_12</ci><ci>Metabolite_13</ci><ci>Metabolite_7</ci><ci>Metabolite_8</ci><ci>Metabolite_9</ci></apply></apply><apply><divide/><apply><times/><ci>Infected_Counties_with_airports</ci><ci>phi</ci></apply><apply><plus/><ci>Metabolite_0</ci><ci>Metabolite_1</ci><ci>Metabolite_2</ci><ci>Metabolite_3</ci><ci>Metabolite_4</ci><ci>Metabolite_5</ci><ci>Metabolite_6</ci></apply></apply></apply></apply>"
-     }
+     "name": "t9"
     }
    },
    {
@@ -634,11 +487,7 @@
      "Hospitalised_Counties_neighbouring_counties_with_airports"
     ],
     "properties": {
-     "name": "t10",
-     "rate": {
-      "expression": "Infected_Counties_neighbouring_counties_with_airports*eta_Counties_neighbouring_counties_with_airports",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>eta_Counties_neighbouring_counties_with_airports</ci></apply>"
-     }
+     "name": "t10"
     }
    },
    {
@@ -650,11 +499,7 @@
      "Deceased_Counties_neighbouring_counties_with_airports"
     ],
     "properties": {
-     "name": "t11",
-     "rate": {
-      "expression": "Infected_Counties_neighbouring_counties_with_airports*psi",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>psi</ci></apply>"
-     }
+     "name": "t11"
     }
    },
    {
@@ -666,11 +511,7 @@
      "Recovered_Counties_neighbouring_counties_with_airports"
     ],
     "properties": {
-     "name": "t12",
-     "rate": {
-      "expression": "Infected_Counties_neighbouring_counties_with_airports*delta",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>delta</ci></apply>"
-     }
+     "name": "t12"
     }
    },
    {
@@ -682,11 +523,7 @@
      "ICU_Counties_neighbouring_counties_with_airports"
     ],
     "properties": {
-     "name": "t13",
-     "rate": {
-      "expression": "Hospitalised_Counties_neighbouring_counties_with_airports*omega_Counties_neighbouring_counties_with_airports",
-      "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_neighbouring_counties_with_airports</ci><ci>omega_Counties_neighbouring_counties_with_airports</ci></apply>"
-     }
+     "name": "t13"
     }
    },
    {
@@ -698,11 +535,7 @@
      "Discharged_Counties_neighbouring_counties_with_airports"
     ],
     "properties": {
-     "name": "t14",
-     "rate": {
-      "expression": "Hospitalised_Counties_neighbouring_counties_with_airports*sigma",
-      "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_neighbouring_counties_with_airports</ci><ci>sigma</ci></apply>"
-     }
+     "name": "t14"
     }
    },
    {
@@ -714,11 +547,7 @@
      "Hospitalised_Counties_neighbouring_counties_with_airports"
     ],
     "properties": {
-     "name": "t15",
-     "rate": {
-      "expression": "ICU_Counties_neighbouring_counties_with_airports*xi",
-      "expression_mathml": "<apply><times/><ci>ICU_Counties_neighbouring_counties_with_airports</ci><ci>xi</ci></apply>"
-     }
+     "name": "t15"
     }
    },
    {
@@ -730,11 +559,7 @@
      "Deceased_Counties_neighbouring_counties_with_airports"
     ],
     "properties": {
-     "name": "t16",
-     "rate": {
-      "expression": "ICU_Counties_neighbouring_counties_with_airports*mu_Counties_neighbouring_counties_with_airports",
-      "expression_mathml": "<apply><times/><ci>ICU_Counties_neighbouring_counties_with_airports</ci><ci>mu_Counties_neighbouring_counties_with_airports</ci></apply>"
-     }
+     "name": "t16"
     }
    },
    {
@@ -750,11 +575,7 @@
      "Infected_Counties_with_highways"
     ],
     "properties": {
-     "name": "t17",
-     "rate": {
-      "expression": "Susceptible_Counties_with_highways*(Infected_Counties_neighbouring_counties_with_airports*tau/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_highways*lambda_Counties_with_highways*epsilon/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20))",
-      "expression_mathml": "<apply><times/><ci>Susceptible_Counties_with_highways</ci><apply><plus/><apply><divide/><apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>tau</ci></apply><apply><plus/><ci>Metabolite_10</ci><ci>Metabolite_11</ci><ci>Metabolite_12</ci><ci>Metabolite_13</ci><ci>Metabolite_7</ci><ci>Metabolite_8</ci><ci>Metabolite_9</ci></apply></apply><apply><divide/><apply><times/><ci>Infected_Counties_with_highways</ci><ci>lambda_Counties_with_highways</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_14</ci><ci>Metabolite_15</ci><ci>Metabolite_16</ci><ci>Metabolite_17</ci><ci>Metabolite_18</ci><ci>Metabolite_19</ci><ci>Metabolite_20</ci></apply></apply></apply></apply>"
-     }
+     "name": "t17"
     }
    },
    {
@@ -766,11 +587,7 @@
      "Hospitalised_Counties_with_highways"
     ],
     "properties": {
-     "name": "t18",
-     "rate": {
-      "expression": "Infected_Counties_with_highways*eta_Counties_with_highways",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_with_highways</ci><ci>eta_Counties_with_highways</ci></apply>"
-     }
+     "name": "t18"
     }
    },
    {
@@ -782,11 +599,7 @@
      "Deceased_Counties_with_highways"
     ],
     "properties": {
-     "name": "t19",
-     "rate": {
-      "expression": "Infected_Counties_with_highways*psi",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_with_highways</ci><ci>psi</ci></apply>"
-     }
+     "name": "t19"
     }
    },
    {
@@ -798,11 +611,7 @@
      "Recovered_Counties_with_highways"
     ],
     "properties": {
-     "name": "t20",
-     "rate": {
-      "expression": "Infected_Counties_with_highways*delta",
-      "expression_mathml": "<apply><times/><ci>Infected_Counties_with_highways</ci><ci>delta</ci></apply>"
-     }
+     "name": "t20"
     }
    },
    {
@@ -814,11 +623,7 @@
      "ICU_Counties_with_highways"
     ],
     "properties": {
-     "name": "t21",
-     "rate": {
-      "expression": "Hospitalised_Counties_with_highways*omega_Counties_with_highways",
-      "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_with_highways</ci><ci>omega_Counties_with_highways</ci></apply>"
-     }
+     "name": "t21"
     }
    },
    {
@@ -830,11 +635,7 @@
      "Discharged_Counties_with_highways"
     ],
     "properties": {
-     "name": "t22",
-     "rate": {
-      "expression": "Hospitalised_Counties_with_highways*sigma",
-      "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_with_highways</ci><ci>sigma</ci></apply>"
-     }
+     "name": "t22"
     }
    },
    {
@@ -846,11 +647,7 @@
      "Hospitalised_Counties_with_highways"
     ],
     "properties": {
-     "name": "t23",
-     "rate": {
-      "expression": "ICU_Counties_with_highways*xi",
-      "expression_mathml": "<apply><times/><ci>ICU_Counties_with_highways</ci><ci>xi</ci></apply>"
-     }
+     "name": "t23"
     }
    },
    {
@@ -862,11 +659,7 @@
      "Deceased_Counties_with_highways"
     ],
     "properties": {
-     "name": "t24",
-     "rate": {
-      "expression": "ICU_Counties_with_highways*mu_Counties_with_highways",
-      "expression_mathml": "<apply><times/><ci>ICU_Counties_with_highways</ci><ci>mu_Counties_with_highways</ci></apply>"
-     }
+     "name": "t24"
     }
    },
    {
@@ -884,11 +677,7 @@
      "Infected_Low_risk_counties"
     ],
     "properties": {
-     "name": "t25",
-     "rate": {
-      "expression": "Susceptible_Low_risk_counties*(Infected_Counties_neighbouring_counties_with_airports*gamma/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_highways*alpha/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20) + Infected_Low_risk_counties*lambda_Low_risk_counties*epsilon/(Metabolite_21 + Metabolite_22 + Metabolite_23 + Metabolite_24 + Metabolite_25 + Metabolite_26 + Metabolite_27))",
-      "expression_mathml": "<apply><times/><ci>Susceptible_Low_risk_counties</ci><apply><plus/><apply><divide/><apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>gamma</ci></apply><apply><plus/><ci>Metabolite_10</ci><ci>Metabolite_11</ci><ci>Metabolite_12</ci><ci>Metabolite_13</ci><ci>Metabolite_7</ci><ci>Metabolite_8</ci><ci>Metabolite_9</ci></apply></apply><apply><divide/><apply><times/><ci>Infected_Counties_with_highways</ci><ci>alpha</ci></apply><apply><plus/><ci>Metabolite_14</ci><ci>Metabolite_15</ci><ci>Metabolite_16</ci><ci>Metabolite_17</ci><ci>Metabolite_18</ci><ci>Metabolite_19</ci><ci>Metabolite_20</ci></apply></apply><apply><divide/><apply><times/><ci>Infected_Low_risk_counties</ci><ci>lambda_Low_risk_counties</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_21</ci><ci>Metabolite_22</ci><ci>Metabolite_23</ci><ci>Metabolite_24</ci><ci>Metabolite_25</ci><ci>Metabolite_26</ci><ci>Metabolite_27</ci></apply></apply></apply></apply>"
-     }
+     "name": "t25"
     }
    },
    {
@@ -900,11 +689,7 @@
      "Hospitalised_Low_risk_counties"
     ],
     "properties": {
-     "name": "t26",
-     "rate": {
-      "expression": "Infected_Low_risk_counties*eta_Low_risk_counties",
-      "expression_mathml": "<apply><times/><ci>Infected_Low_risk_counties</ci><ci>eta_Low_risk_counties</ci></apply>"
-     }
+     "name": "t26"
     }
    },
    {
@@ -916,11 +701,7 @@
      "Deceased_Low_risk_counties"
     ],
     "properties": {
-     "name": "t27",
-     "rate": {
-      "expression": "Infected_Low_risk_counties*psi",
-      "expression_mathml": "<apply><times/><ci>Infected_Low_risk_counties</ci><ci>psi</ci></apply>"
-     }
+     "name": "t27"
     }
    },
    {
@@ -932,11 +713,7 @@
      "Recovered_Low_risk_counties"
     ],
     "properties": {
-     "name": "t28",
-     "rate": {
-      "expression": "Infected_Low_risk_counties*delta",
-      "expression_mathml": "<apply><times/><ci>Infected_Low_risk_counties</ci><ci>delta</ci></apply>"
-     }
+     "name": "t28"
     }
    },
    {
@@ -948,11 +725,7 @@
      "ICU_Low_risk_counties"
     ],
     "properties": {
-     "name": "t29",
-     "rate": {
-      "expression": "Hospitalised_Low_risk_counties*omega_Low_risk_counties",
-      "expression_mathml": "<apply><times/><ci>Hospitalised_Low_risk_counties</ci><ci>omega_Low_risk_counties</ci></apply>"
-     }
+     "name": "t29"
     }
    },
    {
@@ -964,11 +737,7 @@
      "Discharged_Low_risk_counties"
     ],
     "properties": {
-     "name": "t30",
-     "rate": {
-      "expression": "Hospitalised_Low_risk_counties*sigma",
-      "expression_mathml": "<apply><times/><ci>Hospitalised_Low_risk_counties</ci><ci>sigma</ci></apply>"
-     }
+     "name": "t30"
     }
    },
    {
@@ -980,11 +749,7 @@
      "Hospitalised_Low_risk_counties"
     ],
     "properties": {
-     "name": "t31",
-     "rate": {
-      "expression": "ICU_Low_risk_counties*xi",
-      "expression_mathml": "<apply><times/><ci>ICU_Low_risk_counties</ci><ci>xi</ci></apply>"
-     }
+     "name": "t31"
     }
    },
    {
@@ -996,219 +761,512 @@
      "Deceased_Low_risk_counties"
     ],
     "properties": {
-     "name": "t32",
-     "rate": {
-      "expression": "ICU_Low_risk_counties*mu_Low_risk_counties",
-      "expression_mathml": "<apply><times/><ci>ICU_Low_risk_counties</ci><ci>mu_Low_risk_counties</ci></apply>"
-     }
+     "name": "t32"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "Metabolite_4"
-   },
-   {
-    "id": "Metabolite_5"
-   },
-   {
-    "id": "Metabolite_6"
-   },
-   {
-    "id": "Metabolite_3"
-   },
-   {
-    "id": "Metabolite_1",
-    "value": 30.0
-   },
-   {
-    "id": "lambda_Counties_with_airports",
-    "value": 0.41
-   },
-   {
-    "id": "Metabolite_2"
-   },
-   {
-    "id": "Metabolite_0",
-    "value": 4052876.0
-   },
-   {
-    "id": "epsilon",
-    "value": 1.0
-   },
-   {
-    "id": "(('Susceptible_Counties_with_airports', ('identity', 'ido:0000514'), ('county_property', 'with_airports')), ('Infected_Counties_with_airports', ('identity', 'ido:0000511'), ('county_property', 'with_airports')), ('Infected_Counties_with_airports', ('identity', 'ido:0000511'), ('county_property', 'with_airports')), 'ControlledConversion', 'rate')"
-   },
-   {
-    "id": "eta_Counties_with_airports",
-    "value": 0.05
-   },
-   {
-    "id": "psi",
-    "value": 0.01
-   },
-   {
-    "id": "delta",
-    "value": 0.229885
-   },
-   {
-    "id": "omega_Counties_with_airports",
-    "value": 0.04
-   },
-   {
-    "id": "sigma",
-    "value": 0.08
-   },
-   {
-    "id": "xi",
-    "value": 0.06
-   },
-   {
-    "id": "mu_Counties_with_airports",
-    "value": 0.22
-   },
-   {
-    "id": "phi",
-    "value": 0.04
-   },
-   {
-    "id": "Metabolite_7",
-    "value": 4431673.0
-   },
-   {
-    "id": "Metabolite_12"
-   },
-   {
-    "id": "Metabolite_10"
-   },
-   {
-    "id": "Metabolite_9"
-   },
-   {
-    "id": "lambda_Counties_neighbouring_counties_with_airports",
-    "value": 0.34
-   },
-   {
-    "id": "Metabolite_13"
-   },
-   {
-    "id": "Metabolite_11"
-   },
-   {
-    "id": "Metabolite_8",
-    "value": 26.0
-   },
-   {
-    "id": "(('Susceptible_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000514'), ('county_property', 'neighbouring_counties_with_airports')), ('Infected_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000511'), ('county_property', 'neighbouring_counties_with_airports')), (('Infected_Counties_with_airports', ('identity', 'ido:0000511'), ('county_property', 'with_airports')), ('Infected_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000511'), ('county_property', 'neighbouring_counties_with_airports'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "eta_Counties_neighbouring_counties_with_airports",
-    "value": 0.07
-   },
-   {
-    "id": "omega_Counties_neighbouring_counties_with_airports",
-    "value": 0.06
-   },
-   {
-    "id": "mu_Counties_neighbouring_counties_with_airports",
-    "value": 0.17
-   },
-   {
-    "id": "Metabolite_20"
-   },
-   {
-    "id": "Metabolite_14",
-    "value": 1811059.0
-   },
-   {
-    "id": "Metabolite_16"
-   },
-   {
-    "id": "Metabolite_17"
-   },
-   {
-    "id": "Metabolite_15",
-    "value": 10.0
-   },
-   {
-    "id": "tau",
-    "value": 0.08
-   },
-   {
-    "id": "lambda_Counties_with_highways",
-    "value": 0.23
-   },
-   {
-    "id": "Metabolite_18"
-   },
-   {
-    "id": "Metabolite_19"
-   },
-   {
-    "id": "(('Susceptible_Counties_with_highways', ('identity', 'ido:0000514'), ('county_property', 'with_highways')), ('Infected_Counties_with_highways', ('identity', 'ido:0000511'), ('county_property', 'with_highways')), (('Infected_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000511'), ('county_property', 'neighbouring_counties_with_airports')), ('Infected_Counties_with_highways', ('identity', 'ido:0000511'), ('county_property', 'with_highways'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "eta_Counties_with_highways",
-    "value": 0.07
-   },
-   {
-    "id": "omega_Counties_with_highways",
-    "value": 0.04
-   },
-   {
-    "id": "mu_Counties_with_highways",
-    "value": 0.05
-   },
-   {
-    "id": "Metabolite_26"
-   },
-   {
-    "id": "Metabolite_22",
-    "value": 6.0
-   },
-   {
-    "id": "Metabolite_23"
-   },
-   {
-    "id": "Metabolite_24"
-   },
-   {
-    "id": "Metabolite_21",
-    "value": 1269942.0
-   },
-   {
-    "id": "gamma",
-    "value": 0.02
-   },
-   {
-    "id": "alpha",
-    "value": 0.03
-   },
-   {
-    "id": "Metabolite_25"
-   },
-   {
-    "id": "Metabolite_27"
-   },
-   {
-    "id": "lambda_Low_risk_counties",
-    "value": 0.13
-   },
-   {
-    "id": "(('Susceptible_Low_risk_counties', ('identity', 'ido:0000514'), ('county_property', 'low_risk')), ('Infected_Low_risk_counties', ('identity', 'ido:0000511'), ('county_property', 'low_risk')), (('Infected_Counties_neighbouring_counties_with_airports', ('identity', 'ido:0000511'), ('county_property', 'neighbouring_counties_with_airports')), ('Infected_Counties_with_highways', ('identity', 'ido:0000511'), ('county_property', 'with_highways')), ('Infected_Low_risk_counties', ('identity', 'ido:0000511'), ('county_property', 'low_risk'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "eta_Low_risk_counties",
-    "value": 0.14
-   },
-   {
-    "id": "omega_Low_risk_counties",
-    "value": 0.07
-   },
-   {
-    "id": "mu_Low_risk_counties",
-    "value": 0.25
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "Infected_Counties_with_airports*Susceptible_Counties_with_airports*lambda_Counties_with_airports*epsilon/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Counties_with_airports</ci><ci>Susceptible_Counties_with_airports</ci><ci>lambda_Counties_with_airports</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_0</ci><ci>Metabolite_1</ci><ci>Metabolite_2</ci><ci>Metabolite_3</ci><ci>Metabolite_4</ci><ci>Metabolite_5</ci><ci>Metabolite_6</ci></apply></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Infected_Counties_with_airports*eta_Counties_with_airports",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_with_airports</ci><ci>eta_Counties_with_airports</ci></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "Infected_Counties_with_airports*psi",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_with_airports</ci><ci>psi</ci></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "Infected_Counties_with_airports*delta",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_with_airports</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t5",
+     "expression": "Hospitalised_Counties_with_airports*omega_Counties_with_airports",
+     "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_with_airports</ci><ci>omega_Counties_with_airports</ci></apply>"
+    },
+    {
+     "target": "t6",
+     "expression": "Hospitalised_Counties_with_airports*sigma",
+     "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_with_airports</ci><ci>sigma</ci></apply>"
+    },
+    {
+     "target": "t7",
+     "expression": "ICU_Counties_with_airports*xi",
+     "expression_mathml": "<apply><times/><ci>ICU_Counties_with_airports</ci><ci>xi</ci></apply>"
+    },
+    {
+     "target": "t8",
+     "expression": "ICU_Counties_with_airports*mu_Counties_with_airports",
+     "expression_mathml": "<apply><times/><ci>ICU_Counties_with_airports</ci><ci>mu_Counties_with_airports</ci></apply>"
+    },
+    {
+     "target": "t9",
+     "expression": "Susceptible_Counties_neighbouring_counties_with_airports*(Infected_Counties_neighbouring_counties_with_airports*lambda_Counties_neighbouring_counties_with_airports*epsilon/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_airports*phi/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6))",
+     "expression_mathml": "<apply><times/><ci>Susceptible_Counties_neighbouring_counties_with_airports</ci><apply><plus/><apply><divide/><apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>lambda_Counties_neighbouring_counties_with_airports</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_10</ci><ci>Metabolite_11</ci><ci>Metabolite_12</ci><ci>Metabolite_13</ci><ci>Metabolite_7</ci><ci>Metabolite_8</ci><ci>Metabolite_9</ci></apply></apply><apply><divide/><apply><times/><ci>Infected_Counties_with_airports</ci><ci>phi</ci></apply><apply><plus/><ci>Metabolite_0</ci><ci>Metabolite_1</ci><ci>Metabolite_2</ci><ci>Metabolite_3</ci><ci>Metabolite_4</ci><ci>Metabolite_5</ci><ci>Metabolite_6</ci></apply></apply></apply></apply>"
+    },
+    {
+     "target": "t10",
+     "expression": "Infected_Counties_neighbouring_counties_with_airports*eta_Counties_neighbouring_counties_with_airports",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>eta_Counties_neighbouring_counties_with_airports</ci></apply>"
+    },
+    {
+     "target": "t11",
+     "expression": "Infected_Counties_neighbouring_counties_with_airports*psi",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>psi</ci></apply>"
+    },
+    {
+     "target": "t12",
+     "expression": "Infected_Counties_neighbouring_counties_with_airports*delta",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t13",
+     "expression": "Hospitalised_Counties_neighbouring_counties_with_airports*omega_Counties_neighbouring_counties_with_airports",
+     "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_neighbouring_counties_with_airports</ci><ci>omega_Counties_neighbouring_counties_with_airports</ci></apply>"
+    },
+    {
+     "target": "t14",
+     "expression": "Hospitalised_Counties_neighbouring_counties_with_airports*sigma",
+     "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_neighbouring_counties_with_airports</ci><ci>sigma</ci></apply>"
+    },
+    {
+     "target": "t15",
+     "expression": "ICU_Counties_neighbouring_counties_with_airports*xi",
+     "expression_mathml": "<apply><times/><ci>ICU_Counties_neighbouring_counties_with_airports</ci><ci>xi</ci></apply>"
+    },
+    {
+     "target": "t16",
+     "expression": "ICU_Counties_neighbouring_counties_with_airports*mu_Counties_neighbouring_counties_with_airports",
+     "expression_mathml": "<apply><times/><ci>ICU_Counties_neighbouring_counties_with_airports</ci><ci>mu_Counties_neighbouring_counties_with_airports</ci></apply>"
+    },
+    {
+     "target": "t17",
+     "expression": "Susceptible_Counties_with_highways*(Infected_Counties_neighbouring_counties_with_airports*tau/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_highways*lambda_Counties_with_highways*epsilon/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20))",
+     "expression_mathml": "<apply><times/><ci>Susceptible_Counties_with_highways</ci><apply><plus/><apply><divide/><apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>tau</ci></apply><apply><plus/><ci>Metabolite_10</ci><ci>Metabolite_11</ci><ci>Metabolite_12</ci><ci>Metabolite_13</ci><ci>Metabolite_7</ci><ci>Metabolite_8</ci><ci>Metabolite_9</ci></apply></apply><apply><divide/><apply><times/><ci>Infected_Counties_with_highways</ci><ci>lambda_Counties_with_highways</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_14</ci><ci>Metabolite_15</ci><ci>Metabolite_16</ci><ci>Metabolite_17</ci><ci>Metabolite_18</ci><ci>Metabolite_19</ci><ci>Metabolite_20</ci></apply></apply></apply></apply>"
+    },
+    {
+     "target": "t18",
+     "expression": "Infected_Counties_with_highways*eta_Counties_with_highways",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_with_highways</ci><ci>eta_Counties_with_highways</ci></apply>"
+    },
+    {
+     "target": "t19",
+     "expression": "Infected_Counties_with_highways*psi",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_with_highways</ci><ci>psi</ci></apply>"
+    },
+    {
+     "target": "t20",
+     "expression": "Infected_Counties_with_highways*delta",
+     "expression_mathml": "<apply><times/><ci>Infected_Counties_with_highways</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t21",
+     "expression": "Hospitalised_Counties_with_highways*omega_Counties_with_highways",
+     "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_with_highways</ci><ci>omega_Counties_with_highways</ci></apply>"
+    },
+    {
+     "target": "t22",
+     "expression": "Hospitalised_Counties_with_highways*sigma",
+     "expression_mathml": "<apply><times/><ci>Hospitalised_Counties_with_highways</ci><ci>sigma</ci></apply>"
+    },
+    {
+     "target": "t23",
+     "expression": "ICU_Counties_with_highways*xi",
+     "expression_mathml": "<apply><times/><ci>ICU_Counties_with_highways</ci><ci>xi</ci></apply>"
+    },
+    {
+     "target": "t24",
+     "expression": "ICU_Counties_with_highways*mu_Counties_with_highways",
+     "expression_mathml": "<apply><times/><ci>ICU_Counties_with_highways</ci><ci>mu_Counties_with_highways</ci></apply>"
+    },
+    {
+     "target": "t25",
+     "expression": "Susceptible_Low_risk_counties*(Infected_Counties_neighbouring_counties_with_airports*gamma/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9) + Infected_Counties_with_highways*alpha/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20) + Infected_Low_risk_counties*lambda_Low_risk_counties*epsilon/(Metabolite_21 + Metabolite_22 + Metabolite_23 + Metabolite_24 + Metabolite_25 + Metabolite_26 + Metabolite_27))",
+     "expression_mathml": "<apply><times/><ci>Susceptible_Low_risk_counties</ci><apply><plus/><apply><divide/><apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>gamma</ci></apply><apply><plus/><ci>Metabolite_10</ci><ci>Metabolite_11</ci><ci>Metabolite_12</ci><ci>Metabolite_13</ci><ci>Metabolite_7</ci><ci>Metabolite_8</ci><ci>Metabolite_9</ci></apply></apply><apply><divide/><apply><times/><ci>Infected_Counties_with_highways</ci><ci>alpha</ci></apply><apply><plus/><ci>Metabolite_14</ci><ci>Metabolite_15</ci><ci>Metabolite_16</ci><ci>Metabolite_17</ci><ci>Metabolite_18</ci><ci>Metabolite_19</ci><ci>Metabolite_20</ci></apply></apply><apply><divide/><apply><times/><ci>Infected_Low_risk_counties</ci><ci>lambda_Low_risk_counties</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_21</ci><ci>Metabolite_22</ci><ci>Metabolite_23</ci><ci>Metabolite_24</ci><ci>Metabolite_25</ci><ci>Metabolite_26</ci><ci>Metabolite_27</ci></apply></apply></apply></apply>"
+    },
+    {
+     "target": "t26",
+     "expression": "Infected_Low_risk_counties*eta_Low_risk_counties",
+     "expression_mathml": "<apply><times/><ci>Infected_Low_risk_counties</ci><ci>eta_Low_risk_counties</ci></apply>"
+    },
+    {
+     "target": "t27",
+     "expression": "Infected_Low_risk_counties*psi",
+     "expression_mathml": "<apply><times/><ci>Infected_Low_risk_counties</ci><ci>psi</ci></apply>"
+    },
+    {
+     "target": "t28",
+     "expression": "Infected_Low_risk_counties*delta",
+     "expression_mathml": "<apply><times/><ci>Infected_Low_risk_counties</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t29",
+     "expression": "Hospitalised_Low_risk_counties*omega_Low_risk_counties",
+     "expression_mathml": "<apply><times/><ci>Hospitalised_Low_risk_counties</ci><ci>omega_Low_risk_counties</ci></apply>"
+    },
+    {
+     "target": "t30",
+     "expression": "Hospitalised_Low_risk_counties*sigma",
+     "expression_mathml": "<apply><times/><ci>Hospitalised_Low_risk_counties</ci><ci>sigma</ci></apply>"
+    },
+    {
+     "target": "t31",
+     "expression": "ICU_Low_risk_counties*xi",
+     "expression_mathml": "<apply><times/><ci>ICU_Low_risk_counties</ci><ci>xi</ci></apply>"
+    },
+    {
+     "target": "t32",
+     "expression": "ICU_Low_risk_counties*mu_Low_risk_counties",
+     "expression_mathml": "<apply><times/><ci>ICU_Low_risk_counties</ci><ci>mu_Low_risk_counties</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible_Counties_with_airports",
+     "expression": "4052876.00000000",
+     "expression_mathml": "<cn>4052876.0</cn>"
+    },
+    {
+     "target": "Infected_Counties_with_airports",
+     "expression": "30.0000000000000",
+     "expression_mathml": "<cn>30.0</cn>"
+    },
+    {
+     "target": "Hospitalised_Counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Deceased_Counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Recovered_Counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "ICU_Counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Discharged_Counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Susceptible_Counties_neighbouring_counties_with_airports",
+     "expression": "4431673.00000000",
+     "expression_mathml": "<cn>4431673.0</cn>"
+    },
+    {
+     "target": "Infected_Counties_neighbouring_counties_with_airports",
+     "expression": "26.0000000000000",
+     "expression_mathml": "<cn>26.0</cn>"
+    },
+    {
+     "target": "Hospitalised_Counties_neighbouring_counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Deceased_Counties_neighbouring_counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Recovered_Counties_neighbouring_counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "ICU_Counties_neighbouring_counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Discharged_Counties_neighbouring_counties_with_airports",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Susceptible_Counties_with_highways",
+     "expression": "1811059.00000000",
+     "expression_mathml": "<cn>1811059.0</cn>"
+    },
+    {
+     "target": "Infected_Counties_with_highways",
+     "expression": "10.0000000000000",
+     "expression_mathml": "<cn>10.0</cn>"
+    },
+    {
+     "target": "Hospitalised_Counties_with_highways",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Deceased_Counties_with_highways",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Recovered_Counties_with_highways",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "ICU_Counties_with_highways",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Discharged_Counties_with_highways",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Susceptible_Low_risk_counties",
+     "expression": "1269942.00000000",
+     "expression_mathml": "<cn>1269942.0</cn>"
+    },
+    {
+     "target": "Infected_Low_risk_counties",
+     "expression": "6.00000000000000",
+     "expression_mathml": "<cn>6.0</cn>"
+    },
+    {
+     "target": "Hospitalised_Low_risk_counties",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Deceased_Low_risk_counties",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Recovered_Low_risk_counties",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "ICU_Low_risk_counties",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Discharged_Low_risk_counties",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "Metabolite_2"
+    },
+    {
+     "id": "lambda_Counties_with_airports",
+     "value": 0.41
+    },
+    {
+     "id": "epsilon",
+     "value": 1.0
+    },
+    {
+     "id": "Metabolite_1",
+     "value": 30.0
+    },
+    {
+     "id": "Metabolite_6"
+    },
+    {
+     "id": "Metabolite_5"
+    },
+    {
+     "id": "Metabolite_0",
+     "value": 4052876.0
+    },
+    {
+     "id": "Metabolite_3"
+    },
+    {
+     "id": "Metabolite_4"
+    },
+    {
+     "id": "eta_Counties_with_airports",
+     "value": 0.05
+    },
+    {
+     "id": "psi",
+     "value": 0.01
+    },
+    {
+     "id": "delta",
+     "value": 0.229885
+    },
+    {
+     "id": "omega_Counties_with_airports",
+     "value": 0.04
+    },
+    {
+     "id": "sigma",
+     "value": 0.08
+    },
+    {
+     "id": "xi",
+     "value": 0.06
+    },
+    {
+     "id": "mu_Counties_with_airports",
+     "value": 0.22
+    },
+    {
+     "id": "Metabolite_11"
+    },
+    {
+     "id": "Metabolite_13"
+    },
+    {
+     "id": "lambda_Counties_neighbouring_counties_with_airports",
+     "value": 0.34
+    },
+    {
+     "id": "phi",
+     "value": 0.04
+    },
+    {
+     "id": "Metabolite_8",
+     "value": 26.0
+    },
+    {
+     "id": "Metabolite_12"
+    },
+    {
+     "id": "Metabolite_7",
+     "value": 4431673.0
+    },
+    {
+     "id": "Metabolite_9"
+    },
+    {
+     "id": "Metabolite_10"
+    },
+    {
+     "id": "eta_Counties_neighbouring_counties_with_airports",
+     "value": 0.07
+    },
+    {
+     "id": "omega_Counties_neighbouring_counties_with_airports",
+     "value": 0.06
+    },
+    {
+     "id": "mu_Counties_neighbouring_counties_with_airports",
+     "value": 0.17
+    },
+    {
+     "id": "Metabolite_20"
+    },
+    {
+     "id": "Metabolite_19"
+    },
+    {
+     "id": "tau",
+     "value": 0.08
+    },
+    {
+     "id": "Metabolite_17"
+    },
+    {
+     "id": "Metabolite_14",
+     "value": 1811059.0
+    },
+    {
+     "id": "Metabolite_18"
+    },
+    {
+     "id": "Metabolite_15",
+     "value": 10.0
+    },
+    {
+     "id": "Metabolite_16"
+    },
+    {
+     "id": "lambda_Counties_with_highways",
+     "value": 0.23
+    },
+    {
+     "id": "eta_Counties_with_highways",
+     "value": 0.07
+    },
+    {
+     "id": "omega_Counties_with_highways",
+     "value": 0.04
+    },
+    {
+     "id": "mu_Counties_with_highways",
+     "value": 0.05
+    },
+    {
+     "id": "lambda_Low_risk_counties",
+     "value": 0.13
+    },
+    {
+     "id": "Metabolite_24"
+    },
+    {
+     "id": "alpha",
+     "value": 0.03
+    },
+    {
+     "id": "Metabolite_27"
+    },
+    {
+     "id": "Metabolite_26"
+    },
+    {
+     "id": "Metabolite_25"
+    },
+    {
+     "id": "Metabolite_23"
+    },
+    {
+     "id": "gamma",
+     "value": 0.02
+    },
+    {
+     "id": "Metabolite_21",
+     "value": 1269942.0
+    },
+    {
+     "id": "Metabolite_22",
+     "value": 6.0
+    },
+    {
+     "id": "eta_Low_risk_counties",
+     "value": 0.14
+    },
+    {
+     "id": "omega_Low_risk_counties",
+     "value": 0.07
+    },
+    {
+     "id": "mu_Low_risk_counties",
+     "value": 0.25
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

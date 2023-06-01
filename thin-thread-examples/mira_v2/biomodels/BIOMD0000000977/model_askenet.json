@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000977",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000977 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -13,26 +14,6 @@
       "ido": "0000514"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "902654.000000000",
-     "expression_mathml": "<cn>902654.0</cn>"
-    }
-   },
-   {
-    "id": "Susceptible_quarantined",
-    "name": "Susceptible_quarantined",
-    "grounding": {
-     "identifiers": {
-      "ido": "0000514"
-     },
-     "context": {
-      "quarantined": "ncit:C71902"
-     }
-    },
-    "initial": {
-     "expression": "10785.0000000000",
-     "expression_mathml": "<cn>10785.0</cn>"
     }
    },
    {
@@ -43,10 +24,6 @@
       "ido": "0000511"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "1.00000000000000",
-     "expression_mathml": "<cn>1.0</cn>"
     }
    },
    {
@@ -59,10 +36,6 @@
      "context": {
       "disease_severity": "ncit:C3833"
      }
-    },
-    "initial": {
-     "expression": "114.000000000000",
-     "expression_mathml": "<cn>114.0</cn>"
     }
    },
    {
@@ -73,10 +46,18 @@
       "ido": "0000592"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Susceptible_quarantined",
+    "name": "Susceptible_quarantined",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000514"
+     },
+     "context": {
+      "quarantined": "ncit:C71902"
+     }
     }
    },
    {
@@ -89,10 +70,6 @@
      "context": {
       "quarantined": "ncit:C71902"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    }
   ],
@@ -114,11 +91,7 @@
      "Susceptible_quarantined"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "Infected*Susceptible*epsilon_s*rho_s*(1.0 - beta_s)/(Asymptomatic + Infected + Infected_quarantined + Recovered + Susceptible + Susceptible_quarantined)",
-      "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>epsilon_s</ci><ci>rho_s</ci><apply><minus/><cn>1.0</cn><ci>beta_s</ci></apply></apply><apply><plus/><ci>Asymptomatic</ci><ci>Infected_quarantined</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible_quarantined</ci><ci>Susceptible</ci></apply></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -130,11 +103,7 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Infected*xi_i",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>xi_i</ci></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -146,11 +115,7 @@
      "Susceptible"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "Susceptible_quarantined*m_s",
-      "expression_mathml": "<apply><times/><ci>Susceptible_quarantined</ci><ci>m_s</ci></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -160,11 +125,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "Susceptible*delta",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
-     }
+     "name": "t4"
     }
    },
    {
@@ -174,11 +135,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t5",
-     "rate": {
-      "expression": "Susceptible_quarantined*delta",
-      "expression_mathml": "<apply><times/><ci>Susceptible_quarantined</ci><ci>delta</ci></apply>"
-     }
+     "name": "t5"
     }
    },
    {
@@ -198,11 +155,7 @@
      "Asymptomatic"
     ],
     "properties": {
-     "name": "t6",
-     "rate": {
-      "expression": "Infected*Susceptible*beta_s*epsilon_s*(1.0 - rho_s)/(Asymptomatic + Infected + Infected_quarantined + Recovered + Susceptible + Susceptible_quarantined)",
-      "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta_s</ci><ci>epsilon_s</ci><apply><minus/><cn>1.0</cn><ci>rho_s</ci></apply></apply><apply><plus/><ci>Asymptomatic</ci><ci>Infected_quarantined</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible_quarantined</ci><ci>Susceptible</ci></apply></apply>"
-     }
+     "name": "t6"
     }
    },
    {
@@ -222,11 +175,7 @@
      "Infected_quarantined"
     ],
     "properties": {
-     "name": "t7",
-     "rate": {
-      "expression": "Infected*Susceptible*beta_s*epsilon_s*rho_s/(Asymptomatic + Infected + Infected_quarantined + Recovered + Susceptible + Susceptible_quarantined)",
-      "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta_s</ci><ci>epsilon_s</ci><ci>rho_s</ci></apply><apply><plus/><ci>Asymptomatic</ci><ci>Infected_quarantined</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible_quarantined</ci><ci>Susceptible</ci></apply></apply>"
-     }
+     "name": "t7"
     }
    },
    {
@@ -238,11 +187,7 @@
      "Infected"
     ],
     "properties": {
-     "name": "t8",
-     "rate": {
-      "expression": "Asymptomatic*gamma_a",
-      "expression_mathml": "<apply><times/><ci>Asymptomatic</ci><ci>gamma_a</ci></apply>"
-     }
+     "name": "t8"
     }
    },
    {
@@ -254,11 +199,7 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t9",
-     "rate": {
-      "expression": "Asymptomatic*xi_a",
-      "expression_mathml": "<apply><times/><ci>Asymptomatic</ci><ci>xi_a</ci></apply>"
-     }
+     "name": "t9"
     }
    },
    {
@@ -268,11 +209,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t10",
-     "rate": {
-      "expression": "Asymptomatic*delta",
-      "expression_mathml": "<apply><times/><ci>Asymptomatic</ci><ci>delta</ci></apply>"
-     }
+     "name": "t10"
     }
    },
    {
@@ -282,11 +219,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t11",
-     "rate": {
-      "expression": "Infected*delta",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>delta</ci></apply>"
-     }
+     "name": "t11"
     }
    },
    {
@@ -298,11 +231,7 @@
      "Infected_quarantined"
     ],
     "properties": {
-     "name": "t12",
-     "rate": {
-      "expression": "Infected*gamma_i",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>gamma_i</ci></apply>"
-     }
+     "name": "t12"
     }
    },
    {
@@ -314,11 +243,7 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t13",
-     "rate": {
-      "expression": "Infected_quarantined*xi_q",
-      "expression_mathml": "<apply><times/><ci>Infected_quarantined</ci><ci>xi_q</ci></apply>"
-     }
+     "name": "t13"
     }
    },
    {
@@ -328,11 +253,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t14",
-     "rate": {
-      "expression": "Infected_quarantined*delta",
-      "expression_mathml": "<apply><times/><ci>Infected_quarantined</ci><ci>delta</ci></apply>"
-     }
+     "name": "t14"
     }
    },
    {
@@ -342,63 +263,164 @@
     ],
     "output": [],
     "properties": {
-     "name": "t15",
-     "rate": {
-      "expression": "Recovered*delta",
-      "expression_mathml": "<apply><times/><ci>Recovered</ci><ci>delta</ci></apply>"
-     }
+     "name": "t15"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "rho_s",
-    "value": 0.3199
-   },
-   {
-    "id": "beta_s",
-    "value": 0.8799
-   },
-   {
-    "id": "epsilon_s",
-    "value": 14.83
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C3833')), ('Recovered', ('identity', 'ido:0000592')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "xi_i",
-    "value": 0.0286
-   },
-   {
-    "id": "m_s",
-    "value": 0.04167
-   },
-   {
-    "id": "delta"
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Asymptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C3833')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C3833')), ('Recovered', ('identity', 'ido:0000592')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Infected_quarantined', ('identity', 'ido:0000511'), ('quarantined', 'ncit:C71902')), (('Infected', ('identity', 'ido:0000511')), ('Asymptomatic', ('identity', 'ido:0000511'), ('disease_severity', 'ncit:C3833')), ('Recovered', ('identity', 'ido:0000592')), ('Susceptible_quarantined', ('identity', 'ido:0000514'), ('quarantined', 'ncit:C71902'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "gamma_a",
-    "value": 0.0168
-   },
-   {
-    "id": "xi_a",
-    "value": 0.71
-   },
-   {
-    "id": "gamma_i",
-    "value": 0.07151
-   },
-   {
-    "id": "xi_q",
-    "value": 0.13369
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "Infected*Susceptible*epsilon_s*rho_s*(1.0 - beta_s)/(Asymptomatic + Infected + Infected_quarantined + Recovered + Susceptible + Susceptible_quarantined)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>epsilon_s</ci><ci>rho_s</ci><apply><minus/><cn>1.0</cn><ci>beta_s</ci></apply></apply><apply><plus/><ci>Asymptomatic</ci><ci>Infected_quarantined</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible_quarantined</ci><ci>Susceptible</ci></apply></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Infected*xi_i",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>xi_i</ci></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "Susceptible_quarantined*m_s",
+     "expression_mathml": "<apply><times/><ci>Susceptible_quarantined</ci><ci>m_s</ci></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "Susceptible*delta",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t5",
+     "expression": "Susceptible_quarantined*delta",
+     "expression_mathml": "<apply><times/><ci>Susceptible_quarantined</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t6",
+     "expression": "Infected*Susceptible*beta_s*epsilon_s*(1.0 - rho_s)/(Asymptomatic + Infected + Infected_quarantined + Recovered + Susceptible + Susceptible_quarantined)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta_s</ci><ci>epsilon_s</ci><apply><minus/><cn>1.0</cn><ci>rho_s</ci></apply></apply><apply><plus/><ci>Asymptomatic</ci><ci>Infected_quarantined</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible_quarantined</ci><ci>Susceptible</ci></apply></apply>"
+    },
+    {
+     "target": "t7",
+     "expression": "Infected*Susceptible*beta_s*epsilon_s*rho_s/(Asymptomatic + Infected + Infected_quarantined + Recovered + Susceptible + Susceptible_quarantined)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta_s</ci><ci>epsilon_s</ci><ci>rho_s</ci></apply><apply><plus/><ci>Asymptomatic</ci><ci>Infected_quarantined</ci><ci>Infected</ci><ci>Recovered</ci><ci>Susceptible_quarantined</ci><ci>Susceptible</ci></apply></apply>"
+    },
+    {
+     "target": "t8",
+     "expression": "Asymptomatic*gamma_a",
+     "expression_mathml": "<apply><times/><ci>Asymptomatic</ci><ci>gamma_a</ci></apply>"
+    },
+    {
+     "target": "t9",
+     "expression": "Asymptomatic*xi_a",
+     "expression_mathml": "<apply><times/><ci>Asymptomatic</ci><ci>xi_a</ci></apply>"
+    },
+    {
+     "target": "t10",
+     "expression": "Asymptomatic*delta",
+     "expression_mathml": "<apply><times/><ci>Asymptomatic</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t11",
+     "expression": "Infected*delta",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t12",
+     "expression": "Infected*gamma_i",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>gamma_i</ci></apply>"
+    },
+    {
+     "target": "t13",
+     "expression": "Infected_quarantined*xi_q",
+     "expression_mathml": "<apply><times/><ci>Infected_quarantined</ci><ci>xi_q</ci></apply>"
+    },
+    {
+     "target": "t14",
+     "expression": "Infected_quarantined*delta",
+     "expression_mathml": "<apply><times/><ci>Infected_quarantined</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t15",
+     "expression": "Recovered*delta",
+     "expression_mathml": "<apply><times/><ci>Recovered</ci><ci>delta</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible",
+     "expression": "902654.000000000",
+     "expression_mathml": "<cn>902654.0</cn>"
+    },
+    {
+     "target": "Infected",
+     "expression": "1.00000000000000",
+     "expression_mathml": "<cn>1.0</cn>"
+    },
+    {
+     "target": "Asymptomatic",
+     "expression": "114.000000000000",
+     "expression_mathml": "<cn>114.0</cn>"
+    },
+    {
+     "target": "Recovered",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Susceptible_quarantined",
+     "expression": "10785.0000000000",
+     "expression_mathml": "<cn>10785.0</cn>"
+    },
+    {
+     "target": "Infected_quarantined",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "rho_s",
+     "value": 0.3199
+    },
+    {
+     "id": "epsilon_s",
+     "value": 14.83
+    },
+    {
+     "id": "beta_s",
+     "value": 0.8799
+    },
+    {
+     "id": "xi_i",
+     "value": 0.0286
+    },
+    {
+     "id": "m_s",
+     "value": 0.04167
+    },
+    {
+     "id": "delta"
+    },
+    {
+     "id": "gamma_a",
+     "value": 0.0168
+    },
+    {
+     "id": "xi_a",
+     "value": 0.71
+    },
+    {
+     "id": "gamma_i",
+     "value": 0.07151
+    },
+    {
+     "id": "xi_q",
+     "value": 0.13369
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }
