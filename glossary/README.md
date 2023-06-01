@@ -83,7 +83,22 @@ In advanced cases, other selection criteria can include robustness to model miss
 
 ## Interventions | Assumptions
 
+* `Interventions`
 
+* `Assumptions`
+
+## Stratification
+
+* `Stratification` is the process of dividing the populations of a model into subsets (i.e. subpopulations or strata), often according to demographic characteristics such as age and location. 
+The goal is to include more fine-grained interactions — those between the strata — into the model. 
+It is [herein](https://algebraicjulia.github.io/AlgebraicPetri.jl/dev/generated/covid/stratification/stratification/) implemented as 
+a kind of "typed" [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product_of_graphs) between the graph representation of a given model `P` and 
+that of one or many "strata model(s)" `Q`: 
+the stratified model `G` has a node for every pair of nodes in `P` and `Q` of the same type and 
+a link for every link in `P` or `Q` with the same pair of node types.
+
+* A "strata model" is a model that captures the fine-grained interactions between the different strata state variables. 
+Examples include (1) infectious contact between subpopulations of different age groups and (2) travel by individuals between different locations.
 
 
 ## Workflow Graphs | Provenance Graphs | Lineage Graphs
