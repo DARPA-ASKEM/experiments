@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000978",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000978 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -13,24 +14,6 @@
       "ido": "0000514"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "36196938.0000000",
-     "expression_mathml": "<cn>36196938.0</cn>"
-    }
-   },
-   {
-    "id": "Exposed",
-    "name": "Exposed",
-    "grounding": {
-     "identifiers": {
-      "apollosv": "00000154"
-     },
-     "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -41,10 +24,16 @@
       "ido": "0000511"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "2.00000000000000",
-     "expression_mathml": "<cn>2.0</cn>"
+    }
+   },
+   {
+    "id": "Exposed",
+    "name": "Exposed",
+    "grounding": {
+     "identifiers": {
+      "apollosv": "00000154"
+     },
+     "context": {}
     }
    },
    {
@@ -55,10 +44,6 @@
       "ido": "0000592"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    }
   ],
@@ -74,11 +59,7 @@
      "Exposed"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "Infected*Susceptible*beta*(1.0 - epsilon)/N",
-      "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta</ci><apply><minus/><cn>1.0</cn><ci>epsilon</ci></apply></apply><ci>N</ci></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -90,11 +71,7 @@
      "Infected"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Exposed*sigma",
-      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>sigma</ci></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -106,37 +83,74 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "Infected*gamma",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t3"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "N",
-    "value": 36196938.0
-   },
-   {
-    "id": "beta",
-    "value": 1.3
-   },
-   {
-    "id": "epsilon"
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'apollosv:00000154')), ('Infected', ('identity', 'ido:0000511')), 'ControlledConversion', 'rate')"
-   },
-   {
-    "id": "sigma",
-    "value": 0.311
-   },
-   {
-    "id": "gamma",
-    "value": 0.3389830508
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "Infected*Susceptible*beta*(1.0 - epsilon)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>beta</ci><apply><minus/><cn>1.0</cn><ci>epsilon</ci></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Exposed*sigma",
+     "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>sigma</ci></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "Infected*gamma",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>gamma</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible",
+     "expression": "36196938.0000000",
+     "expression_mathml": "<cn>36196938.0</cn>"
+    },
+    {
+     "target": "Infected",
+     "expression": "2.00000000000000",
+     "expression_mathml": "<cn>2.0</cn>"
+    },
+    {
+     "target": "Exposed",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Recovered",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "epsilon"
+    },
+    {
+     "id": "N",
+     "value": 36196938.0
+    },
+    {
+     "id": "beta",
+     "value": 1.3
+    },
+    {
+     "id": "sigma",
+     "value": 0.311
+    },
+    {
+     "id": "gamma",
+     "value": 0.3389830508
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

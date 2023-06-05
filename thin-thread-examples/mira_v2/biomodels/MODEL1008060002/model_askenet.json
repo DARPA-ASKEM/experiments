@@ -1,8 +1,9 @@
 {
  "name": "MODEL1008060002",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model MODEL1008060002 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -11,10 +12,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -23,22 +20,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
-    }
-   },
-   {
-    "id": "Infected",
-    "name": "Infected",
-    "grounding": {
-     "identifiers": {},
-     "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    },
    {
@@ -47,10 +28,14 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
+    }
+   },
+   {
+    "id": "Infected",
+    "name": "Infected",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
     }
    },
    {
@@ -59,10 +44,6 @@
     "grounding": {
      "identifiers": {},
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    }
   ],
@@ -74,11 +55,7 @@
      "Susceptible"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "Susceptible*delta",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -90,11 +67,7 @@
      "Removed"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Susceptible*delta",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -108,11 +81,7 @@
      "Infected"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "Susceptible*Zombie*beta",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Zombie</ci><ci>beta</ci></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -124,11 +93,7 @@
      "Quarantined"
     ],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "Infected*kappa",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>kappa</ci></apply>"
-     }
+     "name": "t4"
     }
    },
    {
@@ -140,11 +105,7 @@
      "Quarantined"
     ],
     "properties": {
-     "name": "t5",
-     "rate": {
-      "expression": "Zombie*sigma",
-      "expression_mathml": "<apply><times/><ci>Zombie</ci><ci>sigma</ci></apply>"
-     }
+     "name": "t5"
     }
    },
    {
@@ -156,11 +117,7 @@
      "Removed"
     ],
     "properties": {
-     "name": "t6",
-     "rate": {
-      "expression": "Quarantined*gamma",
-      "expression_mathml": "<apply><times/><ci>Quarantined</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t6"
     }
    },
    {
@@ -172,11 +129,7 @@
      "Removed"
     ],
     "properties": {
-     "name": "t7",
-     "rate": {
-      "expression": "Infected*delta",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>delta</ci></apply>"
-     }
+     "name": "t7"
     }
    },
    {
@@ -188,11 +141,7 @@
      "Zombie"
     ],
     "properties": {
-     "name": "t8",
-     "rate": {
-      "expression": "Infected*rho",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>rho</ci></apply>"
-     }
+     "name": "t8"
     }
    },
    {
@@ -204,11 +153,7 @@
      "Zombie"
     ],
     "properties": {
-     "name": "t9",
-     "rate": {
-      "expression": "Removed*zeta",
-      "expression_mathml": "<apply><times/><ci>Removed</ci><ci>zeta</ci></apply>"
-     }
+     "name": "t9"
     }
    },
    {
@@ -222,47 +167,127 @@
      "Removed"
     ],
     "properties": {
-     "name": "t10",
-     "rate": {
-      "expression": "Susceptible*Zombie*alpha",
-      "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Zombie</ci><ci>alpha</ci></apply>"
-     }
+     "name": "t10"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "delta",
-    "value": 0.0001
-   },
-   {
-    "id": "beta",
-    "value": 0.0095
-   },
-   {
-    "id": "kappa",
-    "value": 0.0001
-   },
-   {
-    "id": "sigma",
-    "value": 0.0001
-   },
-   {
-    "id": "gamma",
-    "value": 0.0001
-   },
-   {
-    "id": "rho",
-    "value": 0.05
-   },
-   {
-    "id": "zeta",
-    "value": 0.0001
-   },
-   {
-    "id": "alpha",
-    "value": 0.005
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "Susceptible*delta",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Susceptible*delta",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "Susceptible*Zombie*beta",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Zombie</ci><ci>beta</ci></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "Infected*kappa",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>kappa</ci></apply>"
+    },
+    {
+     "target": "t5",
+     "expression": "Zombie*sigma",
+     "expression_mathml": "<apply><times/><ci>Zombie</ci><ci>sigma</ci></apply>"
+    },
+    {
+     "target": "t6",
+     "expression": "Quarantined*gamma",
+     "expression_mathml": "<apply><times/><ci>Quarantined</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t7",
+     "expression": "Infected*delta",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t8",
+     "expression": "Infected*rho",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>rho</ci></apply>"
+    },
+    {
+     "target": "t9",
+     "expression": "Removed*zeta",
+     "expression_mathml": "<apply><times/><ci>Removed</ci><ci>zeta</ci></apply>"
+    },
+    {
+     "target": "t10",
+     "expression": "Susceptible*Zombie*alpha",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Zombie</ci><ci>alpha</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Removed",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Zombie",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Infected",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    },
+    {
+     "target": "Quarantined",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "delta",
+     "value": 0.0001
+    },
+    {
+     "id": "beta",
+     "value": 0.0095
+    },
+    {
+     "id": "kappa",
+     "value": 0.0001
+    },
+    {
+     "id": "sigma",
+     "value": 0.0001
+    },
+    {
+     "id": "gamma",
+     "value": 0.0001
+    },
+    {
+     "id": "rho",
+     "value": 0.05
+    },
+    {
+     "id": "zeta",
+     "value": 0.0001
+    },
+    {
+     "id": "alpha",
+     "value": 0.005
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

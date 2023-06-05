@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000715",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000715 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -26,21 +27,21 @@
     }
    },
    {
-    "id": "E",
-    "name": "E",
-    "grounding": {
-     "identifiers": {
-      "ncit": "C71551"
-     },
-     "context": {}
-    }
-   },
-   {
     "id": "M",
     "name": "M",
     "grounding": {
      "identifiers": {
       "ncit": "C62608"
+     },
+     "context": {}
+    }
+   },
+   {
+    "id": "E",
+    "name": "E",
+    "grounding": {
+     "identifiers": {
+      "ncit": "C71551"
      },
      "context": {}
     }
@@ -54,11 +55,7 @@
      "S"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "A",
-      "expression_mathml": "<ci>A</ci>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -70,11 +67,7 @@
      "S"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "I*gamma",
-      "expression_mathml": "<apply><times/><ci>I</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -90,11 +83,7 @@
      "E"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "I*S*beta*exp(-M*alpha)",
-      "expression_mathml": "<apply><divide/><apply><times/><ci>I</ci><ci>S</ci><ci>beta</ci></apply><apply><exp/><apply><times/><ci>M</ci><ci>alpha</ci></apply></apply></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -104,11 +93,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "S*alpha1",
-      "expression_mathml": "<apply><times/><ci>S</ci><ci>alpha1</ci></apply>"
-     }
+     "name": "t4"
     }
    },
    {
@@ -120,11 +105,7 @@
      "I"
     ],
     "properties": {
-     "name": "t5",
-     "rate": {
-      "expression": "E*rho",
-      "expression_mathml": "<apply><times/><ci>E</ci><ci>rho</ci></apply>"
-     }
+     "name": "t5"
     }
    },
    {
@@ -134,11 +115,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t6",
-     "rate": {
-      "expression": "E*alpha1",
-      "expression_mathml": "<apply><times/><ci>E</ci><ci>alpha1</ci></apply>"
-     }
+     "name": "t6"
     }
    },
    {
@@ -148,67 +125,167 @@
     ],
     "output": [],
     "properties": {
-     "name": "t7",
-     "rate": {
-      "expression": "I*(alpha1 + alpha2)",
-      "expression_mathml": "<apply><times/><ci>I</ci><apply><plus/><ci>alpha1</ci><ci>alpha2</ci></apply></apply>"
-     }
+     "name": "t7"
     }
    },
    {
     "id": "t8",
     "input": [
+     "S"
+    ],
+    "output": [
+     "S",
+     "M"
+    ],
+    "properties": {
+     "name": "t8"
+    }
+   },
+   {
+    "id": "t9",
+    "input": [
+     "E"
+    ],
+    "output": [
+     "E",
+     "M"
+    ],
+    "properties": {
+     "name": "t9"
+    }
+   },
+   {
+    "id": "t10",
+    "input": [
+     "I"
+    ],
+    "output": [
+     "I",
+     "M"
+    ],
+    "properties": {
+     "name": "t10"
+    }
+   },
+   {
+    "id": "t11",
+    "input": [
      "M"
     ],
     "output": [],
     "properties": {
-     "name": "t8",
-     "rate": {
-      "expression": "M*tau",
-      "expression_mathml": "<apply><times/><ci>M</ci><ci>tau</ci></apply>"
-     }
+     "name": "t11"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "A",
-    "value": 0.8
-   },
-   {
-    "id": "gamma",
-    "value": 0.7
-   },
-   {
-    "id": "alpha",
-    "value": 0.08
-   },
-   {
-    "id": "beta",
-    "value": 0.8
-   },
-   {
-    "id": "(('S', ('identity', 'ido:0000514')), ('E', ('identity', 'ncit:C71551')), (('I', ('identity', 'ido:0000511')), ('M', ('identity', 'ncit:C62608'))), 'GroupedControlledConversion', 'rate')"
-   },
-   {
-    "id": "alpha1",
-    "value": 0.6
-   },
-   {
-    "id": "rho",
-    "value": 0.09
-   },
-   {
-    "id": "alpha2",
-    "value": 0.02
-   },
-   {
-    "id": "(('I', ('identity', 'ido:0000511')), (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "tau",
-    "value": 0.6
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "A",
+     "expression_mathml": "<ci>A</ci>"
+    },
+    {
+     "target": "t2",
+     "expression": "I*gamma",
+     "expression_mathml": "<apply><times/><ci>I</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "I*S*beta*exp(-M*alpha)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I</ci><ci>S</ci><ci>beta</ci></apply><apply><exp/><apply><times/><ci>M</ci><ci>alpha</ci></apply></apply></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "S*alpha1",
+     "expression_mathml": "<apply><times/><ci>S</ci><ci>alpha1</ci></apply>"
+    },
+    {
+     "target": "t5",
+     "expression": "E*rho",
+     "expression_mathml": "<apply><times/><ci>E</ci><ci>rho</ci></apply>"
+    },
+    {
+     "target": "t6",
+     "expression": "E*alpha1",
+     "expression_mathml": "<apply><times/><ci>E</ci><ci>alpha1</ci></apply>"
+    },
+    {
+     "target": "t7",
+     "expression": "I*(alpha1 + alpha2)",
+     "expression_mathml": "<apply><times/><ci>I</ci><apply><plus/><ci>alpha1</ci><ci>alpha2</ci></apply></apply>"
+    },
+    {
+     "target": "t8",
+     "expression": "S*mu1",
+     "expression_mathml": "<apply><times/><ci>S</ci><ci>mu1</ci></apply>"
+    },
+    {
+     "target": "t9",
+     "expression": "E*mu2",
+     "expression_mathml": "<apply><times/><ci>E</ci><ci>mu2</ci></apply>"
+    },
+    {
+     "target": "t10",
+     "expression": "I*mu3",
+     "expression_mathml": "<apply><times/><ci>I</ci><ci>mu3</ci></apply>"
+    },
+    {
+     "target": "t11",
+     "expression": "M*tau",
+     "expression_mathml": "<apply><times/><ci>M</ci><ci>tau</ci></apply>"
+    }
+   ],
+   "initials": [],
+   "parameters": [
+    {
+     "id": "A",
+     "value": 0.8
+    },
+    {
+     "id": "gamma",
+     "value": 0.7
+    },
+    {
+     "id": "beta",
+     "value": 0.8
+    },
+    {
+     "id": "alpha",
+     "value": 0.08
+    },
+    {
+     "id": "alpha1",
+     "value": 0.6
+    },
+    {
+     "id": "rho",
+     "value": 0.09
+    },
+    {
+     "id": "alpha2",
+     "value": 0.02
+    },
+    {
+     "id": "mu1",
+     "value": 0.99
+    },
+    {
+     "id": "mu2",
+     "value": 0.4
+    },
+    {
+     "id": "mu3",
+     "value": 0.8
+    },
+    {
+     "id": "tau",
+     "value": 0.6
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

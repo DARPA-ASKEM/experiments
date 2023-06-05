@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000956",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000956 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -13,10 +14,6 @@
       "ido": "0000514"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "0.999999999999997",
-     "expression_mathml": "<cn>0.999999999999997</cn>"
     }
    },
    {
@@ -27,10 +24,6 @@
       "ido": "0000511"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "1.26390293225480e-7",
-     "expression_mathml": "<cn>1.2639029322548e-7</cn>"
     }
    },
    {
@@ -41,10 +34,6 @@
       "ido": "0000592"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    }
   ],
@@ -60,11 +49,7 @@
      "Infected"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "Infected*Susceptible*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)*(ModelValue_5*Ro_CA + ModelValue_6*Ro_NY)",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>Susceptible</ci><apply><plus/><apply><times/><ci>ModelValue_2</ci><ci>ModelValue_5</ci></apply><apply><times/><ci>ModelValue_6</ci><ci>ModelValue_9</ci></apply></apply><apply><plus/><apply><times/><ci>ModelValue_5</ci><ci>Ro_CA</ci></apply><apply><times/><ci>ModelValue_6</ci><ci>Ro_NY</ci></apply></apply></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -76,44 +61,68 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Infected*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><apply><plus/><apply><times/><ci>ModelValue_2</ci><ci>ModelValue_5</ci></apply><apply><times/><ci>ModelValue_6</ci><ci>ModelValue_9</ci></apply></apply></apply>"
-     }
+     "name": "t2"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "ModelValue_9",
-    "value": 0.1
-   },
-   {
-    "id": "ModelValue_2",
-    "value": 0.14
-   },
-   {
-    "id": "ModelValue_6"
-   },
-   {
-    "id": "Ro_NY",
-    "value": 4.1
-   },
-   {
-    "id": "ModelValue_5",
-    "value": 1.0
-   },
-   {
-    "id": "Ro_CA",
-    "value": 2.7
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Infected', ('identity', 'ido:0000511')), ('Infected', ('identity', 'ido:0000511')), 'ControlledConversion', 'rate')"
-   },
-   {
-    "id": "(('Infected', ('identity', 'ido:0000511')), ('Recovered', ('identity', 'ido:0000592')), 'NaturalConversion', 'rate')"
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "Infected*Susceptible*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)*(ModelValue_5*Ro_CA + ModelValue_6*Ro_NY)",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>Susceptible</ci><apply><plus/><apply><times/><ci>ModelValue_2</ci><ci>ModelValue_5</ci></apply><apply><times/><ci>ModelValue_6</ci><ci>ModelValue_9</ci></apply></apply><apply><plus/><apply><times/><ci>ModelValue_5</ci><ci>Ro_CA</ci></apply><apply><times/><ci>ModelValue_6</ci><ci>Ro_NY</ci></apply></apply></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Infected*(ModelValue_2*ModelValue_5 + ModelValue_6*ModelValue_9)",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><apply><plus/><apply><times/><ci>ModelValue_2</ci><ci>ModelValue_5</ci></apply><apply><times/><ci>ModelValue_6</ci><ci>ModelValue_9</ci></apply></apply></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible",
+     "expression": "0.999999999999997",
+     "expression_mathml": "<cn>0.999999999999997</cn>"
+    },
+    {
+     "target": "Infected",
+     "expression": "1.26390293225480e-7",
+     "expression_mathml": "<cn>1.2639029322548e-7</cn>"
+    },
+    {
+     "target": "Recovered",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "ModelValue_6"
+    },
+    {
+     "id": "Ro_CA",
+     "value": 2.7
+    },
+    {
+     "id": "ModelValue_5",
+     "value": 1.0
+    },
+    {
+     "id": "ModelValue_9",
+     "value": 0.1
+    },
+    {
+     "id": "ModelValue_2",
+     "value": 0.14
+    },
+    {
+     "id": "Ro_NY",
+     "value": 4.1
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

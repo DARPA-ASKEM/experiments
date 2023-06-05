@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000979",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000979 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -13,10 +14,14 @@
       "ido": "0000514"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "315283090.040000",
-     "expression_mathml": "<cn>315283090.04000002</cn>"
+    }
+   },
+   {
+    "id": "Total_population",
+    "name": "Total_population",
+    "grounding": {
+     "identifiers": {},
+     "context": {}
     }
    },
    {
@@ -29,22 +34,6 @@
      "context": {
       "property": "ido:0000597"
      }
-    },
-    "initial": {
-     "expression": "14439817.0000000",
-     "expression_mathml": "<cn>14439817.0</cn>"
-    }
-   },
-   {
-    "id": "Total_population",
-    "name": "Total_population",
-    "grounding": {
-     "identifiers": {},
-     "context": {}
-    },
-    "initial": {
-     "expression": "330052960.000000",
-     "expression_mathml": "<cn>330052960.0</cn>"
     }
    },
    {
@@ -55,10 +44,6 @@
       "ido": "0000511"
      },
      "context": {}
-    },
-    "initial": {
-     "expression": "330052.960000000",
-     "expression_mathml": "<cn>330052.96000000002</cn>"
     }
    },
    {
@@ -71,10 +56,6 @@
      "context": {
       "property": "ido:0000569"
      }
-    },
-    "initial": {
-     "expression": "0.0",
-     "expression_mathml": "<cn>0.0</cn>"
     }
    }
   ],
@@ -90,11 +71,7 @@
      "Exposed"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "3.02981679061445e-9*Infected*R_fixed*Susceptible*gamma",
-      "expression_mathml": "<apply><times/><cn>3.0298167906144518e-9</cn><ci>Infected</ci><ci>R_fixed</ci><ci>Susceptible</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -106,11 +83,7 @@
      "Infected"
     ],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "Exposed*sigma",
-      "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>sigma</ci></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -122,11 +95,7 @@
      "Recovered"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "Infected*gamma",
-      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>gamma</ci></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -138,34 +107,81 @@
      "Susceptible"
     ],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "Recovered*omega",
-      "expression_mathml": "<apply><times/><ci>Recovered</ci><ci>omega</ci></apply>"
-     }
+     "name": "t4"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "R_fixed",
-    "value": 3.0
-   },
-   {
-    "id": "gamma",
-    "value": 0.05556
-   },
-   {
-    "id": "(('Susceptible', ('identity', 'ido:0000514')), ('Exposed', ('identity', 'ido:0000514'), ('property', 'ido:0000597')), 'Total_population', 'ControlledConversion', 'rate')"
-   },
-   {
-    "id": "sigma",
-    "value": 0.19231
-   },
-   {
-    "id": "omega",
-    "value": 0.01667
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "3.02981679061445e-9*Infected*R_fixed*Susceptible*gamma",
+     "expression_mathml": "<apply><times/><cn>3.0298167906144518e-9</cn><ci>Infected</ci><ci>R_fixed</ci><ci>Susceptible</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "Exposed*sigma",
+     "expression_mathml": "<apply><times/><ci>Exposed</ci><ci>sigma</ci></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "Infected*gamma",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "Recovered*omega",
+     "expression_mathml": "<apply><times/><ci>Recovered</ci><ci>omega</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "Susceptible",
+     "expression": "315283090.040000",
+     "expression_mathml": "<cn>315283090.04000002</cn>"
+    },
+    {
+     "target": "Total_population",
+     "expression": "330052960.000000",
+     "expression_mathml": "<cn>330052960.0</cn>"
+    },
+    {
+     "target": "Exposed",
+     "expression": "14439817.0000000",
+     "expression_mathml": "<cn>14439817.0</cn>"
+    },
+    {
+     "target": "Infected",
+     "expression": "330052.960000000",
+     "expression_mathml": "<cn>330052.96000000002</cn>"
+    },
+    {
+     "target": "Recovered",
+     "expression": "0.0",
+     "expression_mathml": "<cn>0.0</cn>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "R_fixed",
+     "value": 3.0
+    },
+    {
+     "id": "gamma",
+     "value": 0.05556
+    },
+    {
+     "id": "sigma",
+     "value": 0.19231
+    },
+    {
+     "id": "omega",
+     "value": 0.01667
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }

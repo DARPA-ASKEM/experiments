@@ -1,11 +1,19 @@
 {
  "name": "MODEL1805230001",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model MODEL1805230001 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [],
-  "transitions": [],
-  "parameters": []
- }
+  "transitions": []
+ },
+ "semantics": {
+  "ode": {
+   "rates": [],
+   "initials": [],
+   "parameters": []
+  }
+ },
+ "metadata": {}
 }

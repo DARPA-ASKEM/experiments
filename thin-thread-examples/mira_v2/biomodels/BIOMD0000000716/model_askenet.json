@@ -1,8 +1,9 @@
 {
  "name": "BIOMD0000000716",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.2/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
  "description": "BioModels model BIOMD0000000716 processed using MIRA.",
  "model_version": "1.0",
+ "properties": {},
  "model": {
   "states": [
    {
@@ -54,11 +55,7 @@
      "S_b"
     ],
     "properties": {
-     "name": "t1",
-     "rate": {
-      "expression": "412/73",
-      "expression_mathml": "<apply><divide/><cn>412</cn><cn>73</cn></apply>"
-     }
+     "name": "t1"
     }
    },
    {
@@ -68,11 +65,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t2",
-     "rate": {
-      "expression": "S_b/730",
-      "expression_mathml": "<apply><divide/><ci>S_b</ci><cn>730</cn></apply>"
-     }
+     "name": "t2"
     }
    },
    {
@@ -86,11 +79,7 @@
      "I_b"
     ],
     "properties": {
-     "name": "t3",
-     "rate": {
-      "expression": "9137*I_b*S_b/2635182",
-      "expression_mathml": "<apply><divide/><apply><times/><cn>9137</cn><ci>I_b</ci><ci>S_b</ci></apply><cn>2635182</cn></apply>"
-     }
+     "name": "t3"
     }
    },
    {
@@ -100,11 +89,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t4",
-     "rate": {
-      "expression": "22841*I_b/6587955",
-      "expression_mathml": "<apply><divide/><apply><times/><cn>22841</cn><ci>I_b</ci></apply><cn>6587955</cn></apply>"
-     }
+     "name": "t4"
     }
    },
    {
@@ -114,11 +99,7 @@
      "S_h"
     ],
     "properties": {
-     "name": "t5",
-     "rate": {
-      "expression": "6.49315068493151e-5*ModelValue_1",
-      "expression_mathml": "<apply><times/><cn>6.4931506849315074e-5</cn><ci>ModelValue_1</ci></apply>"
-     }
+     "name": "t5"
     }
    },
    {
@@ -128,11 +109,7 @@
     ],
     "output": [],
     "properties": {
-     "name": "t6",
-     "rate": {
-      "expression": "3.95914165808853e-5*S_h",
-      "expression_mathml": "<apply><times/><cn>3.9591416580885267e-5</cn><ci>S_h</ci></apply>"
-     }
+     "name": "t6"
     }
    },
    {
@@ -146,11 +123,7 @@
      "I_a"
     ],
     "properties": {
-     "name": "t7",
-     "rate": {
-      "expression": "1.62354134956875e-10*I_b*S_h",
-      "expression_mathml": "<apply><times/><cn>1.6235413495687468e-10</cn><ci>I_b</ci><ci>S_h</ci></apply>"
-     }
+     "name": "t7"
     }
    },
    {
@@ -160,40 +133,63 @@
     ],
     "output": [],
     "properties": {
-     "name": "t8",
-     "rate": {
-      "expression": "6.0882800608828e-11*I_a",
-      "expression_mathml": "<apply><times/><cn>6.0882800608828003e-11</cn><ci>I_a</ci></apply>"
-     }
+     "name": "t8"
     }
    }
-  ],
-  "parameters": [
-   {
-    "id": "((), ('S_b', ('identity', 'ido:0000514')), 'NaturalProduction', 'rate')"
-   },
-   {
-    "id": "(('S_b', ('identity', 'ido:0000514')), (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "(('S_b', ('identity', 'ido:0000514')), ('I_b', ('identity', 'ido:0000511')), ('I_b', ('identity', 'ido:0000511')), 'ControlledConversion', 'rate')"
-   },
-   {
-    "id": "(('I_b', ('identity', 'ido:0000511')), (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "ModelValue_1",
-    "value": 171977.0
-   },
-   {
-    "id": "(('S_h', ('identity', 'ido:0000514')), (), 'NaturalDegradation', 'rate')"
-   },
-   {
-    "id": "(('S_h', ('identity', 'ido:0000514')), ('I_a', ('identity', 'ido:0000511')), ('I_b', ('identity', 'ido:0000511')), 'ControlledConversion', 'rate')"
-   },
-   {
-    "id": "(('I_a', ('identity', 'ido:0000511')), (), 'NaturalDegradation', 'rate')"
-   }
   ]
- }
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t1",
+     "expression": "412/73",
+     "expression_mathml": "<apply><divide/><cn>412</cn><cn>73</cn></apply>"
+    },
+    {
+     "target": "t2",
+     "expression": "S_b/730",
+     "expression_mathml": "<apply><divide/><ci>S_b</ci><cn>730</cn></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "9137*I_b*S_b/2635182",
+     "expression_mathml": "<apply><divide/><apply><times/><cn>9137</cn><ci>I_b</ci><ci>S_b</ci></apply><cn>2635182</cn></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "22841*I_b/6587955",
+     "expression_mathml": "<apply><divide/><apply><times/><cn>22841</cn><ci>I_b</ci></apply><cn>6587955</cn></apply>"
+    },
+    {
+     "target": "t5",
+     "expression": "6.49315068493151e-5*ModelValue_1",
+     "expression_mathml": "<apply><times/><cn>6.4931506849315074e-5</cn><ci>ModelValue_1</ci></apply>"
+    },
+    {
+     "target": "t6",
+     "expression": "3.95914165808853e-5*S_h",
+     "expression_mathml": "<apply><times/><cn>3.9591416580885267e-5</cn><ci>S_h</ci></apply>"
+    },
+    {
+     "target": "t7",
+     "expression": "1.62354134956875e-10*I_b*S_h",
+     "expression_mathml": "<apply><times/><cn>1.6235413495687468e-10</cn><ci>I_b</ci><ci>S_h</ci></apply>"
+    },
+    {
+     "target": "t8",
+     "expression": "6.0882800608828e-11*I_a",
+     "expression_mathml": "<apply><times/><cn>6.0882800608828003e-11</cn><ci>I_a</ci></apply>"
+    }
+   ],
+   "initials": [],
+   "parameters": [
+    {
+     "id": "ModelValue_1",
+     "value": 171977.0
+    }
+   ]
+  }
+ },
+ "metadata": {}
 }
