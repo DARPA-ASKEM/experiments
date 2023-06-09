@@ -77,14 +77,22 @@ with open(os.path.join(RESULT_PATH, 'rcm_input.json'), 'w') as f:
 # %%
 # Alternate: flat dataframe CSV
 
-df = pd.DataFrame()
+# Time points and sample points
+num_samples, num_timepoints = next(iter(pyciemss_results['states'].values())).shape
+d = {
+    'timepoint_id': np.tile(np.array(range(num_timepoints)), num_samples),
+    'sample_id': np.repeat(np.array(range(num_samples)), num_timepoints)
+}
 
+# Parameters
+d = {**d, **{f'{k}_param': np.repeat(v, num_timepoints) for k, v in pyciemss_results['parameters'].items()}}
 
+# Solution (state variables)
+d = {**d, **{f'{k}_sol': np.squeeze(v.reshape((num_timepoints * num_samples, 1))) for k, v in pyciemss_results['states'].items()}}
 
+df = pd.DataFrame(d)
 
-
-
-
-
+# Write to CSV
+df.to_csv(os.path.join(RESULT_PATH, 'pyciemss_results.csv'), index = False)
 
 # %%
