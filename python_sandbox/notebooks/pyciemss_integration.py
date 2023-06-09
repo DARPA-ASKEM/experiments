@@ -10,6 +10,7 @@
 import os
 import json
 import numpy as np
+import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
@@ -70,8 +71,20 @@ rcm_input = {
 
 # %%
 # Write RCM JSON
-
 with open(os.path.join(RESULT_PATH, 'rcm_input.json'), 'w') as f:
     f.write(json.dumps(rcm_input, indent = 4))
+
+# %%
+# Alternate: flat dataframe CSV
+
+df = pd.DataFrame()
+
+
+
+
+
+
+
+
 
 # %%
