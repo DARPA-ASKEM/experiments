@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000955",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000955 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -13,7 +14,11 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -23,34 +28,13 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C15220"
      }
-    }
-   },
-   {
-    "id": "Ailing",
-    "name": "Ailing",
-    "grounding": {
-     "identifiers": {
-      "ido": "0000511"
-     },
-     "context": {
-      "disease_severity": "ncit:C25269",
-      "diagnosis": "ncit:C113725"
-     }
-    }
-   },
-   {
-    "id": "Recognized",
-    "name": "Recognized",
-    "grounding": {
-     "identifiers": {
-      "ido": "0000511"
-     },
-     "context": {
-      "diagnosis": "ncit:C15220"
-     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -60,7 +44,44 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "Ailing",
+    "name": "Ailing",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "modifiers": {
+      "disease_severity": "ncit:C25269",
+      "diagnosis": "ncit:C113725"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "Recognized",
+    "name": "Recognized",
+    "grounding": {
+     "identifiers": {
+      "ido": "0000511"
+     },
+     "modifiers": {
+      "diagnosis": "ncit:C15220"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -70,7 +91,11 @@
      "identifiers": {
       "ido": "0000592"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -80,9 +105,13 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "disease_severity": "ncit:C25467"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -92,7 +121,11 @@
      "identifiers": {
       "ncit": "C28554"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    }
   ],
@@ -101,16 +134,10 @@
     "id": "t1",
     "input": [
      "Diagnosed",
-     "Ailing",
-     "Recognized",
-     "Infected",
      "Susceptible"
     ],
     "output": [
      "Diagnosed",
-     "Ailing",
-     "Recognized",
-     "Infected",
      "Infected"
     ],
     "properties": {
@@ -120,10 +147,12 @@
    {
     "id": "t2",
     "input": [
-     "Infected"
+     "Ailing",
+     "Susceptible"
     ],
     "output": [
-     "Diagnosed"
+     "Ailing",
+     "Infected"
     ],
     "properties": {
      "name": "t2"
@@ -132,10 +161,12 @@
    {
     "id": "t3",
     "input": [
-     "Infected"
+     "Recognized",
+     "Susceptible"
     ],
     "output": [
-     "Ailing"
+     "Recognized",
+     "Infected"
     ],
     "properties": {
      "name": "t3"
@@ -144,10 +175,12 @@
    {
     "id": "t4",
     "input": [
-     "Infected"
+     "Infected",
+     "Susceptible"
     ],
     "output": [
-     "Healed"
+     "Infected",
+     "Infected"
     ],
     "properties": {
      "name": "t4"
@@ -156,10 +189,10 @@
    {
     "id": "t5",
     "input": [
-     "Diagnosed"
+     "Infected"
     ],
     "output": [
-     "Recognized"
+     "Diagnosed"
     ],
     "properties": {
      "name": "t5"
@@ -168,10 +201,10 @@
    {
     "id": "t6",
     "input": [
-     "Diagnosed"
+     "Infected"
     ],
     "output": [
-     "Healed"
+     "Ailing"
     ],
     "properties": {
      "name": "t6"
@@ -180,10 +213,10 @@
    {
     "id": "t7",
     "input": [
-     "Ailing"
+     "Infected"
     ],
     "output": [
-     "Recognized"
+     "Healed"
     ],
     "properties": {
      "name": "t7"
@@ -192,10 +225,10 @@
    {
     "id": "t8",
     "input": [
-     "Ailing"
+     "Diagnosed"
     ],
     "output": [
-     "Healed"
+     "Recognized"
     ],
     "properties": {
      "name": "t8"
@@ -204,10 +237,10 @@
    {
     "id": "t9",
     "input": [
-     "Ailing"
+     "Diagnosed"
     ],
     "output": [
-     "Threatened"
+     "Healed"
     ],
     "properties": {
      "name": "t9"
@@ -216,10 +249,10 @@
    {
     "id": "t10",
     "input": [
-     "Recognized"
+     "Ailing"
     ],
     "output": [
-     "Threatened"
+     "Recognized"
     ],
     "properties": {
      "name": "t10"
@@ -228,7 +261,7 @@
    {
     "id": "t11",
     "input": [
-     "Recognized"
+     "Ailing"
     ],
     "output": [
      "Healed"
@@ -240,10 +273,10 @@
    {
     "id": "t12",
     "input": [
-     "Threatened"
+     "Ailing"
     ],
     "output": [
-     "Extinct"
+     "Threatened"
     ],
     "properties": {
      "name": "t12"
@@ -252,13 +285,49 @@
    {
     "id": "t13",
     "input": [
+     "Recognized"
+    ],
+    "output": [
+     "Threatened"
+    ],
+    "properties": {
+     "name": "t13"
+    }
+   },
+   {
+    "id": "t14",
+    "input": [
+     "Recognized"
+    ],
+    "output": [
+     "Healed"
+    ],
+    "properties": {
+     "name": "t14"
+    }
+   },
+   {
+    "id": "t15",
+    "input": [
+     "Threatened"
+    ],
+    "output": [
+     "Extinct"
+    ],
+    "properties": {
+     "name": "t15"
+    }
+   },
+   {
+    "id": "t16",
+    "input": [
      "Threatened"
     ],
     "output": [
      "Healed"
     ],
     "properties": {
-     "name": "t13"
+     "name": "t16"
     }
    }
   ]
@@ -268,66 +337,81 @@
    "rates": [
     {
      "target": "t1",
-     "expression": "Susceptible*(Ailing*gamma + Diagnosed*beta + Infected*alpha + Recognized*delta)",
-     "expression_mathml": "<apply><times/><ci>Susceptible</ci><apply><plus/><apply><times/><ci>Ailing</ci><ci>gamma</ci></apply><apply><times/><ci>Diagnosed</ci><ci>beta</ci></apply><apply><times/><ci>Infected</ci><ci>alpha</ci></apply><apply><times/><ci>Recognized</ci><ci>delta</ci></apply></apply></apply>"
+     "expression": "Diagnosed*Susceptible*beta",
+     "expression_mathml": "<apply><times/><ci>Diagnosed</ci><ci>Susceptible</ci><ci>beta</ci></apply>"
     },
     {
      "target": "t2",
+     "expression": "Ailing*Susceptible*gamma",
+     "expression_mathml": "<apply><times/><ci>Ailing</ci><ci>Susceptible</ci><ci>gamma</ci></apply>"
+    },
+    {
+     "target": "t3",
+     "expression": "Recognized*Susceptible*delta",
+     "expression_mathml": "<apply><times/><ci>Recognized</ci><ci>Susceptible</ci><ci>delta</ci></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "Infected*Susceptible*alpha",
+     "expression_mathml": "<apply><times/><ci>Infected</ci><ci>Susceptible</ci><ci>alpha</ci></apply>"
+    },
+    {
+     "target": "t5",
      "expression": "Infected*epsilon",
      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>epsilon</ci></apply>"
     },
     {
-     "target": "t3",
+     "target": "t6",
      "expression": "Infected*zeta",
      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>zeta</ci></apply>"
     },
     {
-     "target": "t4",
+     "target": "t7",
      "expression": "Infected*lambda",
      "expression_mathml": "<apply><times/><ci>Infected</ci><ci>lambda</ci></apply>"
     },
     {
-     "target": "t5",
+     "target": "t8",
      "expression": "Diagnosed*eta",
      "expression_mathml": "<apply><times/><ci>Diagnosed</ci><ci>eta</ci></apply>"
     },
     {
-     "target": "t6",
+     "target": "t9",
      "expression": "Diagnosed*rho",
      "expression_mathml": "<apply><times/><ci>Diagnosed</ci><ci>rho</ci></apply>"
     },
     {
-     "target": "t7",
+     "target": "t10",
      "expression": "Ailing*theta",
      "expression_mathml": "<apply><times/><ci>Ailing</ci><ci>theta</ci></apply>"
     },
     {
-     "target": "t8",
+     "target": "t11",
      "expression": "Ailing*kappa",
      "expression_mathml": "<apply><times/><ci>Ailing</ci><ci>kappa</ci></apply>"
     },
     {
-     "target": "t9",
+     "target": "t12",
      "expression": "Ailing*mu",
      "expression_mathml": "<apply><times/><ci>Ailing</ci><ci>mu</ci></apply>"
     },
     {
-     "target": "t10",
+     "target": "t13",
      "expression": "Recognized*nu",
      "expression_mathml": "<apply><times/><ci>Recognized</ci><ci>nu</ci></apply>"
     },
     {
-     "target": "t11",
+     "target": "t14",
      "expression": "Recognized*xi",
      "expression_mathml": "<apply><times/><ci>Recognized</ci><ci>xi</ci></apply>"
     },
     {
-     "target": "t12",
+     "target": "t15",
      "expression": "Threatened*tau",
      "expression_mathml": "<apply><times/><ci>Threatened</ci><ci>tau</ci></apply>"
     },
     {
-     "target": "t13",
+     "target": "t16",
      "expression": "Threatened*sigma",
      "expression_mathml": "<apply><times/><ci>Threatened</ci><ci>sigma</ci></apply>"
     }
@@ -344,6 +428,11 @@
      "expression_mathml": "<cn>3.33333333e-7</cn>"
     },
     {
+     "target": "Infected",
+     "expression": "3.33333333000000e-6",
+     "expression_mathml": "<cn>3.3333333299999999e-6</cn>"
+    },
+    {
      "target": "Ailing",
      "expression": "1.66666666000000e-8",
      "expression_mathml": "<cn>1.6666666599999999e-8</cn>"
@@ -352,11 +441,6 @@
      "target": "Recognized",
      "expression": "3.33333333000000e-8",
      "expression_mathml": "<cn>3.33333333e-8</cn>"
-    },
-    {
-     "target": "Infected",
-     "expression": "3.33333333000000e-6",
-     "expression_mathml": "<cn>3.3333333299999999e-6</cn>"
     },
     {
      "target": "Healed",
@@ -376,71 +460,163 @@
    ],
    "parameters": [
     {
-     "id": "delta",
-     "value": 0.011
+     "id": "beta",
+     "value": 0.011,
+     "units": {
+      "expression": "1/(day*person)",
+      "expression_mathml": "<apply><divide/><cn>1</cn><apply><times/><ci>day</ci><ci>person</ci></apply></apply>"
+     }
     },
     {
      "id": "gamma",
-     "value": 0.456
+     "value": 0.456,
+     "units": {
+      "expression": "1/(day*person)",
+      "expression_mathml": "<apply><divide/><cn>1</cn><apply><times/><ci>day</ci><ci>person</ci></apply></apply>"
+     }
     },
     {
-     "id": "beta",
-     "value": 0.011
+     "id": "delta",
+     "value": 0.011,
+     "units": {
+      "expression": "1/(day*person)",
+      "expression_mathml": "<apply><divide/><cn>1</cn><apply><times/><ci>day</ci><ci>person</ci></apply></apply>"
+     }
     },
     {
      "id": "alpha",
-     "value": 0.57
+     "value": 0.57,
+     "units": {
+      "expression": "1/(day*person)",
+      "expression_mathml": "<apply><divide/><cn>1</cn><apply><times/><ci>day</ci><ci>person</ci></apply></apply>"
+     }
     },
     {
      "id": "epsilon",
-     "value": 0.171
+     "value": 0.171,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "zeta",
-     "value": 0.125
+     "value": 0.125,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "lambda",
-     "value": 0.034
+     "value": 0.034,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "eta",
-     "value": 0.125
+     "value": 0.125,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "rho",
-     "value": 0.034
+     "value": 0.034,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "theta",
-     "value": 0.371
+     "value": 0.371,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "kappa",
-     "value": 0.017
+     "value": 0.017,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "mu",
-     "value": 0.017
+     "value": 0.017,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "nu",
-     "value": 0.027
+     "value": 0.027,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "xi",
-     "value": 0.017
+     "value": 0.017,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "tau",
-     "value": 0.01
+     "value": 0.01,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "sigma",
-     "value": 0.017
+     "value": 0.017,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": "CC0",
+   "authors": [],
+   "references": [
+    "pubmed:32322102"
+   ],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [
+    "ncbitaxon:2697049"
+   ],
+   "diseases": [
+    "doid:0080600"
+   ],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000028"
+   ]
+  }
+ }
 }

@@ -1,6 +1,7 @@
 {
  "name": "MODEL1008060000",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model MODEL1008060000 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -11,7 +12,7 @@
     "name": "Susceptible",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -19,7 +20,7 @@
     "name": "Removed",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -27,7 +28,7 @@
     "name": "Zombie",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    }
   ],
@@ -143,22 +144,60 @@
    "parameters": [
     {
      "id": "delta",
-     "value": 0.0001
+     "value": 0.0001,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "beta",
-     "value": 0.0055
+     "value": 0.0055,
+     "units": {
+      "expression": "0.0115740740740741/(person*second)",
+      "expression_mathml": "<apply><divide/><cn>0.011574074074074073</cn><apply><times/><ci>person</ci><ci>second</ci></apply></apply>"
+     }
     },
     {
      "id": "zeta",
-     "value": 0.09
+     "value": 0.09,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "alpha",
-     "value": 0.0075
+     "value": 0.0075,
+     "units": {
+      "expression": "0.0115740740740741/(person*second)",
+      "expression_mathml": "<apply><divide/><cn>0.011574074074074073</cn><apply><times/><ci>person</ci><ci>second</ci></apply></apply>"
+     }
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": null,
+   "authors": [],
+   "references": [
+    "isbn:ISBN:1607413477"
+   ],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": []
+  }
+ }
 }

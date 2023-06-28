@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000991",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000991 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -13,7 +14,7 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -23,7 +24,7 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "disease_severity": "ncit:C3833"
      }
     }
@@ -35,7 +36,7 @@
      "identifiers": {
       "apollosv": "00000154"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -45,7 +46,7 @@
      "identifiers": {
       "ido": "0000592"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -55,7 +56,7 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "disease_severity": "ncit:C25269"
      }
     }
@@ -67,7 +68,7 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C15220"
      }
     }
@@ -79,7 +80,7 @@
      "identifiers": {
       "ncit": "C28554"
      },
-     "context": {}
+     "modifiers": {}
     }
    }
   ],
@@ -313,51 +314,117 @@
      "id": "delta"
     },
     {
+     "id": "alpha",
+     "value": 0.5,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
      "id": "transmission_rate_effective",
      "value": 0.4236
     },
     {
-     "id": "alpha",
-     "value": 0.5
+     "id": "nu",
+     "value": 0.5,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "sigma",
-     "value": 0.192307692307692
-    },
-    {
-     "id": "nu",
-     "value": 0.5
+     "value": 0.192307692307692,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "psi",
-     "value": 0.0135
+     "value": 0.0135,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "theta",
-     "value": 1.8999e-12
+     "value": 1.8999e-12,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "gamma_0",
-     "value": 0.13978
+     "value": 0.13978,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "gamma_a",
-     "value": 0.13978
+     "value": 0.13978,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "gamma_i",
-     "value": 0.0666666666666667
+     "value": 0.0666666666666667,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "d_0",
-     "value": 0.015
+     "value": 0.015,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "d_D",
-     "value": 0.015
+     "value": 0.015,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": "CC0",
+   "authors": [],
+   "references": [
+    "pubmed:32834593"
+   ],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [
+    "ncbitaxon:2697049"
+   ],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000028"
+   ]
+  }
+ }
 }

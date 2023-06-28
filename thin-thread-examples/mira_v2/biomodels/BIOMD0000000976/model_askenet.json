@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000976",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000976 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -13,7 +14,11 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -23,7 +28,11 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -33,7 +42,11 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -43,7 +56,11 @@
      "identifiers": {
       "ido": "0000621"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    }
   ],
@@ -52,12 +69,10 @@
     "id": "t1",
     "input": [
      "Infected_weak_immune_system",
-     "Infected_strong_immune_system",
      "Susceptible"
     ],
     "output": [
      "Infected_weak_immune_system",
-     "Infected_strong_immune_system",
      "Infected_strong_immune_system"
     ],
     "properties": {
@@ -68,13 +83,11 @@
     "id": "t2",
     "input": [
      "Infected_strong_immune_system",
-     "Infected_weak_immune_system",
      "Susceptible"
     ],
     "output": [
      "Infected_strong_immune_system",
-     "Infected_weak_immune_system",
-     "Infected_weak_immune_system"
+     "Infected_strong_immune_system"
     ],
     "properties": {
      "name": "t2"
@@ -83,10 +96,12 @@
    {
     "id": "t3",
     "input": [
-     "Infected_strong_immune_system"
+     "Infected_strong_immune_system",
+     "Susceptible"
     ],
     "output": [
-     "Recovered"
+     "Infected_strong_immune_system",
+     "Infected_weak_immune_system"
     ],
     "properties": {
      "name": "t3"
@@ -95,10 +110,12 @@
    {
     "id": "t4",
     "input": [
-     "Infected_weak_immune_system"
+     "Infected_weak_immune_system",
+     "Susceptible"
     ],
     "output": [
-     "Recovered"
+     "Infected_weak_immune_system",
+     "Infected_weak_immune_system"
     ],
     "properties": {
      "name": "t4"
@@ -107,11 +124,35 @@
    {
     "id": "t5",
     "input": [
+     "Infected_strong_immune_system"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t5"
+    }
+   },
+   {
+    "id": "t6",
+    "input": [
+     "Infected_weak_immune_system"
+    ],
+    "output": [
+     "Recovered"
+    ],
+    "properties": {
+     "name": "t6"
+    }
+   },
+   {
+    "id": "t7",
+    "input": [
      "Infected_weak_immune_system"
     ],
     "output": [],
     "properties": {
-     "name": "t5"
+     "name": "t7"
     }
    }
   ]
@@ -121,26 +162,36 @@
    "rates": [
     {
      "target": "t1",
-     "expression": "Susceptible*alpha*tau*(Infected_strong_immune_system + Infected_weak_immune_system)",
-     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>alpha</ci><ci>tau</ci><apply><plus/><ci>Infected_strong_immune_system</ci><ci>Infected_weak_immune_system</ci></apply></apply>"
+     "expression": "Infected_weak_immune_system*Susceptible*alpha*tau",
+     "expression_mathml": "<apply><times/><ci>Infected_weak_immune_system</ci><ci>Susceptible</ci><ci>alpha</ci><ci>tau</ci></apply>"
     },
     {
      "target": "t2",
-     "expression": "Susceptible*tau*(1.0 - alpha)*(Infected_strong_immune_system + Infected_weak_immune_system)",
-     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>tau</ci><apply><minus/><cn>1.0</cn><ci>alpha</ci></apply><apply><plus/><ci>Infected_strong_immune_system</ci><ci>Infected_weak_immune_system</ci></apply></apply>"
+     "expression": "Infected_strong_immune_system*Susceptible*alpha*tau",
+     "expression_mathml": "<apply><times/><ci>Infected_strong_immune_system</ci><ci>Susceptible</ci><ci>alpha</ci><ci>tau</ci></apply>"
     },
     {
      "target": "t3",
+     "expression": "Infected_strong_immune_system*Susceptible*tau*(1.0 - alpha)",
+     "expression_mathml": "<apply><times/><ci>Infected_strong_immune_system</ci><ci>Susceptible</ci><ci>tau</ci><apply><minus/><cn>1.0</cn><ci>alpha</ci></apply></apply>"
+    },
+    {
+     "target": "t4",
+     "expression": "Infected_weak_immune_system*Susceptible*tau*(1.0 - alpha)",
+     "expression_mathml": "<apply><times/><ci>Infected_weak_immune_system</ci><ci>Susceptible</ci><ci>tau</ci><apply><minus/><cn>1.0</cn><ci>alpha</ci></apply></apply>"
+    },
+    {
+     "target": "t5",
      "expression": "Infected_strong_immune_system*gamma_1",
      "expression_mathml": "<apply><times/><ci>Infected_strong_immune_system</ci><ci>gamma_1</ci></apply>"
     },
     {
-     "target": "t4",
+     "target": "t6",
      "expression": "Infected_weak_immune_system*gamma_2",
      "expression_mathml": "<apply><times/><ci>Infected_weak_immune_system</ci><ci>gamma_2</ci></apply>"
     },
     {
-     "target": "t5",
+     "target": "t7",
      "expression": "Infected_weak_immune_system*mu",
      "expression_mathml": "<apply><times/><ci>Infected_weak_immune_system</ci><ci>mu</ci></apply>"
     }
@@ -188,8 +239,32 @@
      "id": "mu",
      "value": 0.02
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": null,
+   "authors": [],
+   "references": [],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [
+    "ncbitaxon:2697049"
+   ],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000028"
+   ]
+  }
+ }
 }
