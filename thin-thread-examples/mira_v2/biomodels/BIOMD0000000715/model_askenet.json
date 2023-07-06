@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000715",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000715 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -13,7 +14,7 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -23,7 +24,7 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -33,7 +34,7 @@
      "identifiers": {
       "ncit": "C62608"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -43,7 +44,7 @@
      "identifiers": {
       "ncit": "C71551"
      },
-     "context": {}
+     "modifiers": {}
     }
    }
   ],
@@ -249,12 +250,12 @@
      "value": 0.7
     },
     {
-     "id": "beta",
-     "value": 0.8
-    },
-    {
      "id": "alpha",
      "value": 0.08
+    },
+    {
+     "id": "beta",
+     "value": 0.8
     },
     {
      "id": "alpha1",
@@ -284,8 +285,32 @@
      "id": "tau",
      "value": 0.6
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": "CC0",
+   "authors": [],
+   "references": [],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [],
+   "diseases": [
+    "efo:0005741"
+   ],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000046"
+   ]
+  }
+ }
 }

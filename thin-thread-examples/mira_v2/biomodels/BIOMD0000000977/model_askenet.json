@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000977",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000977 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -13,7 +14,11 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -23,7 +28,11 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -33,9 +42,13 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "disease_severity": "ncit:C3833"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -45,7 +58,11 @@
      "identifiers": {
       "ido": "0000592"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -55,9 +72,13 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {
+     "modifiers": {
       "quarantined": "ncit:C71902"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -67,9 +88,13 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "quarantined": "ncit:C71902"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    }
   ],
@@ -381,16 +406,16 @@
    ],
    "parameters": [
     {
-     "id": "rho_s",
-     "value": 0.3199
+     "id": "beta_s",
+     "value": 0.8799
     },
     {
      "id": "epsilon_s",
      "value": 14.83
     },
     {
-     "id": "beta_s",
-     "value": 0.8799
+     "id": "rho_s",
+     "value": 0.3199
     },
     {
      "id": "xi_i",
@@ -419,8 +444,34 @@
      "id": "xi_q",
      "value": 0.13369
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": "CC0",
+   "authors": [],
+   "references": [
+    "pubmed:32834603"
+   ],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [
+    "ncbitaxon:2697049"
+   ],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000028"
+   ]
+  }
+ }
 }

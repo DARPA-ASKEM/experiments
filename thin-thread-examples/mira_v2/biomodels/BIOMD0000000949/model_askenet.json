@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000949",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000949 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -11,7 +12,7 @@
     "name": "Susceptible",
     "grounding": {
      "identifiers": {},
-     "context": {
+     "modifiers": {
       "property": "omit:0005461"
      }
     }
@@ -21,7 +22,7 @@
     "name": "Recovered",
     "grounding": {
      "identifiers": {},
-     "context": {
+     "modifiers": {
       "property": "ncit:C25746"
      }
     }
@@ -31,7 +32,7 @@
     "name": "Exposed",
     "grounding": {
      "identifiers": {},
-     "context": {
+     "modifiers": {
       "property": "ncbitaxon:9606",
       "property1": "ncit:C156623"
      }
@@ -42,7 +43,7 @@
     "name": "Infected",
     "grounding": {
      "identifiers": {},
-     "context": {
+     "modifiers": {
       "property": "ncbitaxon:9606",
       "property1": "ncit:C128320"
      }
@@ -53,7 +54,7 @@
     "name": "Exposed",
     "grounding": {
      "identifiers": {},
-     "context": {
+     "modifiers": {
       "property": "ncim:C123547",
       "property1": "ncit:C17214"
      }
@@ -64,7 +65,7 @@
     "name": "Infected",
     "grounding": {
      "identifiers": {},
-     "context": {
+     "modifiers": {
       "property": "ncit:C123547",
       "property1": "ncit:C128320"
      }
@@ -359,8 +360,32 @@
      "id": "N_v",
      "value": 2435.0
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": "CC0",
+   "authors": [],
+   "references": [
+    "pubmed:18293044"
+   ],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000046"
+   ]
+  }
+ }
 }

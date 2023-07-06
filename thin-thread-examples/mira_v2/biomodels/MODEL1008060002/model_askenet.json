@@ -1,6 +1,7 @@
 {
  "name": "MODEL1008060002",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model MODEL1008060002 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -11,7 +12,7 @@
     "name": "Susceptible",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -19,7 +20,7 @@
     "name": "Removed",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -27,7 +28,7 @@
     "name": "Zombie",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -35,7 +36,7 @@
     "name": "Infected",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -43,7 +44,7 @@
     "name": "Quarantined",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    }
   ],
@@ -256,38 +257,92 @@
    "parameters": [
     {
      "id": "delta",
-     "value": 0.0001
+     "value": 0.0001,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "beta",
-     "value": 0.0095
+     "value": 0.0095,
+     "units": {
+      "expression": "0.0115740740740741/(person*second)",
+      "expression_mathml": "<apply><divide/><cn>0.011574074074074073</cn><apply><times/><ci>person</ci><ci>second</ci></apply></apply>"
+     }
     },
     {
      "id": "kappa",
-     "value": 0.0001
+     "value": 0.0001,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "sigma",
-     "value": 0.0001
+     "value": 0.0001,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "gamma",
-     "value": 0.0001
+     "value": 0.0001,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "rho",
-     "value": 0.05
+     "value": 0.05,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "zeta",
-     "value": 0.0001
+     "value": 0.0001,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
     },
     {
      "id": "alpha",
-     "value": 0.005
+     "value": 0.005,
+     "units": {
+      "expression": "0.0115740740740741/(person*second)",
+      "expression_mathml": "<apply><divide/><cn>0.011574074074074073</cn><apply><times/><ci>person</ci><ci>second</ci></apply></apply>"
+     }
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": null,
+   "authors": [],
+   "references": [
+    "isbn:ISBN:1607413477"
+   ],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": []
+  }
+ }
 }

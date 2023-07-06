@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000001045",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000001045 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -14,7 +15,7 @@
       "ncit": "C77737",
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -25,7 +26,7 @@
       "ncit": "C77737",
       "ido": "0000511"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -36,7 +37,7 @@
       "ncit": "C77737",
       "ido": "0000592"
      },
-     "context": {}
+     "modifiers": {}
     }
    }
   ],
@@ -109,8 +110,32 @@
      "id": "k",
      "value": 0.33
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": "CC0",
+   "authors": [],
+   "references": [],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [
+    "ncbitaxon:506350"
+   ],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000028"
+   ]
+  }
+ }
 }

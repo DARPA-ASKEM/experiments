@@ -1,6 +1,7 @@
 {
  "name": "MODEL1808280006",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model MODEL1808280006 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -11,7 +12,7 @@
     "name": "X_SS",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -19,7 +20,7 @@
     "name": "X_IS",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -27,7 +28,7 @@
     "name": "X_SI",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -35,7 +36,7 @@
     "name": "X_WS",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -43,7 +44,7 @@
     "name": "X_SW",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -51,7 +52,7 @@
     "name": "X_IW",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -59,7 +60,7 @@
     "name": "X_II",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -67,7 +68,7 @@
     "name": "X_RS",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -75,7 +76,7 @@
     "name": "X_RW",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -83,7 +84,7 @@
     "name": "X_RI",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -91,7 +92,7 @@
     "name": "X_WW",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -99,7 +100,7 @@
     "name": "X_WI",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -107,7 +108,7 @@
     "name": "X_SR",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -115,7 +116,7 @@
     "name": "X_IR",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -123,7 +124,7 @@
     "name": "X_RR",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -131,7 +132,7 @@
     "name": "X_WR",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
     }
    }
   ],
@@ -1184,8 +1185,26 @@
      "id": "v",
      "value": 2.0
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": null,
+   "authors": [],
+   "references": [],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [],
+   "diseases": [],
+   "hosts": [],
+   "model_types": []
+  }
+ }
 }

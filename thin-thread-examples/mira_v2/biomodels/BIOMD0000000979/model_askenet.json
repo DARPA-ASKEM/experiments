@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000979",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000979 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -13,7 +14,11 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -21,7 +26,11 @@
     "name": "Total_population",
     "grounding": {
      "identifiers": {},
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -31,9 +40,13 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {
+     "modifiers": {
       "property": "ido:0000597"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -43,7 +56,11 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -53,9 +70,13 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {
+     "modifiers": {
       "property": "ido:0000569"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    }
   ],
@@ -180,8 +201,32 @@
      "id": "omega",
      "value": 0.01667
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": null,
+   "authors": [],
+   "references": [],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [
+    "ncbitaxon:2697049"
+   ],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000046"
+   ]
+  }
+ }
 }

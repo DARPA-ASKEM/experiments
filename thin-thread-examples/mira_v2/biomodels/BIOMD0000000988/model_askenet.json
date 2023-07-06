@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000988",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000988 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -13,7 +14,7 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C113725"
      }
     }
@@ -25,7 +26,7 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "diagnosed": "ncit:C113725"
      }
     }
@@ -37,7 +38,7 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C15220"
      }
     }
@@ -49,7 +50,7 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C15220"
      }
     }
@@ -61,7 +62,7 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "disease_severity": "ncit:C25269",
       "diagnosed": "ncit:C113725"
      }
@@ -74,7 +75,7 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "disease_severity": "ncit:C25269",
       "diagnosis": "ncit:C15220"
      }
@@ -87,7 +88,7 @@
      "identifiers": {
       "ncit": "C28554"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C15220",
       "cause_of_death": "ncit:C171133"
      }
@@ -100,7 +101,7 @@
      "identifiers": {
       "ido": "0000592"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C15220"
      }
     }
@@ -112,7 +113,7 @@
      "identifiers": {
       "ido": "0000592"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C113725"
      }
     }
@@ -124,7 +125,7 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
     }
    },
    {
@@ -134,7 +135,7 @@
      "identifiers": {
       "ncit": "C28554"
      },
-     "context": {
+     "modifiers": {
       "cause_of_death": "ncit:C17649"
      }
     }
@@ -146,7 +147,7 @@
      "identifiers": {
       "ncit": "C28554"
      },
-     "context": {
+     "modifiers": {
       "diagnosis": "ncit:C113725",
       "cause_of_death": "ncit:C171133"
      }
@@ -530,12 +531,16 @@
    ],
    "parameters": [
     {
+     "id": "Infection_from_non_tested_no_symptoms_0",
+     "value": 0.508
+    },
+    {
      "id": "Infection_from_non_tested_symptoms",
      "value": 0.25
     },
     {
-     "id": "Infection_from_non_tested_no_symptoms_0",
-     "value": 0.508
+     "id": "Infection_from_tested_no_symptoms_0",
+     "value": 0.025
     },
     {
      "id": "Infection_from_tested_symptoms",
@@ -544,10 +549,6 @@
     {
      "id": "Social_Distance",
      "value": 534700.0
-    },
-    {
-     "id": "Infection_from_tested_no_symptoms_0",
-     "value": 0.025
     },
     {
      "id": "Testing_Randome",
@@ -577,8 +578,32 @@
      "id": "Normal_death_rate_constant_0",
      "value": 3.29e-05
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": "CC0",
+   "authors": [],
+   "references": [],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [
+    "ncbitaxon:2697049"
+   ],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000028"
+   ]
+  }
+ }
 }

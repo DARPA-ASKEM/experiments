@@ -1,6 +1,7 @@
 {
  "name": "BIOMD0000000972",
- "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.4/petrinet/petrinet_schema.json",
+ "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+ "schema_name": "petrinet",
  "description": "BioModels model BIOMD0000000972 processed using MIRA.",
  "model_version": "1.0",
  "properties": {},
@@ -13,7 +14,11 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -23,7 +28,11 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -33,9 +42,13 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "disease_severity": "ncit:C3833"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -45,7 +58,11 @@
      "identifiers": {
       "apollosv": "00000154"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -55,9 +72,13 @@
      "identifiers": {
       "ido": "0000514"
      },
-     "context": {
+     "modifiers": {
       "quarantined": "ncit:C71902"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -67,9 +88,13 @@
      "identifiers": {
       "ido": "0000511"
      },
-     "context": {
+     "modifiers": {
       "hospitalization": "ncit:C25179"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -79,7 +104,11 @@
      "identifiers": {
       "ido": "0000592"
      },
-     "context": {}
+     "modifiers": {}
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    },
    {
@@ -89,9 +118,13 @@
      "identifiers": {
       "apollosv": "00000154"
      },
-     "context": {
+     "modifiers": {
       "quarantined": "ncit:C71902"
      }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
     }
    }
   ],
@@ -375,12 +408,8 @@
    ],
    "parameters": [
     {
-     "id": "theta",
-     "value": 1.0
-    },
-    {
-     "id": "r_1",
-     "value": 1.3768
+     "id": "beta",
+     "value": 2.1011e-08
     },
     {
      "id": "c_0",
@@ -395,28 +424,32 @@
      "value": 1.2858e-05
     },
     {
-     "id": "beta",
-     "value": 2.1011e-08
+     "id": "r_1",
+     "value": 1.3768
+    },
+    {
+     "id": "theta",
+     "value": 1.0
     },
     {
      "id": "lambda",
      "value": 0.0714285
     },
     {
-     "id": "sigma",
-     "value": 0.142857
-    },
-    {
      "id": "rho",
      "value": 0.86834
     },
     {
-     "id": "delta_I_f",
-     "value": 2.7367
+     "id": "sigma",
+     "value": 0.142857
     },
     {
      "id": "delta_I_0",
      "value": 0.13266
+    },
+    {
+     "id": "delta_I_f",
+     "value": 2.7367
     },
     {
      "id": "r_2",
@@ -442,8 +475,34 @@
      "id": "delta_q",
      "value": 0.1259
     }
-   ]
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
   }
  },
- "metadata": {}
+ "metadata": {
+  "annotations": {
+   "license": "CC0",
+   "authors": [],
+   "references": [
+    "pubmed:32099934"
+   ],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [
+    "ncbitaxon:2697049"
+   ],
+   "diseases": [],
+   "hosts": [
+    "ncbitaxon:9606"
+   ],
+   "model_types": [
+    "mamo:0000028"
+   ]
+  }
+ }
 }
