@@ -167,12 +167,12 @@
    ],
    "parameters": [
     {
-     "id": "r_1",
-     "value": 6.0
-    },
-    {
      "id": "beta_1",
      "value": 0.04
+    },
+    {
+     "id": "r_1",
+     "value": 6.0
     },
     {
      "id": "beta_2",

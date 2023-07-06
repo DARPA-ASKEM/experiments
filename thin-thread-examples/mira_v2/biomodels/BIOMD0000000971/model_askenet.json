@@ -459,16 +459,16 @@
    ],
    "parameters": [
     {
-     "id": "c",
-     "value": 14.781
-    },
-    {
      "id": "beta",
      "value": 2.1011e-08
     },
     {
      "id": "q",
      "value": 1.8887e-07
+    },
+    {
+     "id": "c",
+     "value": 14.781
     },
     {
      "id": "theta",

@@ -186,12 +186,12 @@
    ],
    "parameters": [
     {
-     "id": "R_fixed",
-     "value": 3.0
-    },
-    {
      "id": "gamma",
      "value": 0.05556
+    },
+    {
+     "id": "R_fixed",
+     "value": 3.0
     },
     {
      "id": "sigma",

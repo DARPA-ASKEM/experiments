@@ -308,12 +308,6 @@
    ],
    "parameters": [
     {
-     "id": "eps"
-    },
-    {
-     "id": "delta"
-    },
-    {
      "id": "alpha",
      "value": 0.5,
      "units": {
@@ -322,20 +316,26 @@
      }
     },
     {
+     "id": "delta"
+    },
+    {
+     "id": "eps"
+    },
+    {
      "id": "transmission_rate_effective",
      "value": 0.4236
     },
     {
-     "id": "nu",
-     "value": 0.5,
+     "id": "sigma",
+     "value": 0.192307692307692,
      "units": {
       "expression": "1/day",
       "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
      }
     },
     {
-     "id": "sigma",
-     "value": 0.192307692307692,
+     "id": "nu",
+     "value": 0.5,
      "units": {
       "expression": "1/day",
       "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"

@@ -714,16 +714,16 @@
      }
     },
     {
-     "id": "N",
-     "value": 1.0
-    },
-    {
      "id": "l_e",
      "value": 50.0,
      "units": {
       "expression": "year",
       "expression_mathml": "<ci>year</ci>"
      }
+    },
+    {
+     "id": "N",
+     "value": 1.0
     },
     {
      "id": "tInf",

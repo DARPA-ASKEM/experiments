@@ -220,12 +220,12 @@
    ],
    "parameters": [
     {
-     "id": "tau",
-     "value": 2e-09
-    },
-    {
      "id": "alpha",
      "value": 0.55
+    },
+    {
+     "id": "tau",
+     "value": 2e-09
     },
     {
      "id": "gamma_1",

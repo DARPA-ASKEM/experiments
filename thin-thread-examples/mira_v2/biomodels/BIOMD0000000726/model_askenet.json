@@ -479,12 +479,12 @@
      "value": 1.0
     },
     {
-     "id": "gamma_h",
-     "value": 0.4
-    },
-    {
      "id": "sigma_h",
      "value": 6.0
+    },
+    {
+     "id": "gamma_h",
+     "value": 0.4
     },
     {
      "id": "m_h",

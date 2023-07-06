@@ -108,6 +108,10 @@
      "value": 2.7
     },
     {
+     "id": "ModelValue_2",
+     "value": 0.14
+    },
+    {
      "id": "ModelValue_9",
      "value": 0.1
     },
@@ -117,10 +121,6 @@
     {
      "id": "ModelValue_5",
      "value": 1.0
-    },
-    {
-     "id": "ModelValue_2",
-     "value": 0.14
     }
    ],
    "observables": [],

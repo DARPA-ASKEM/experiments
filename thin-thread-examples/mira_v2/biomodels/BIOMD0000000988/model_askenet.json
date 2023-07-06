@@ -531,10 +531,6 @@
    ],
    "parameters": [
     {
-     "id": "Infection_from_tested_no_symptoms_0",
-     "value": 0.025
-    },
-    {
      "id": "Social_Distance",
      "value": 534700.0
     },
@@ -549,6 +545,10 @@
     {
      "id": "Infection_from_non_tested_no_symptoms_0",
      "value": 0.508
+    },
+    {
+     "id": "Infection_from_tested_no_symptoms_0",
+     "value": 0.025
     },
     {
      "id": "Testing_Randome",

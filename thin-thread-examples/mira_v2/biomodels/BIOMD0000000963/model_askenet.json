@@ -107,6 +107,10 @@
     },
     {
      "id": "alpha"
+    },
+    {
+     "id": "k1",
+     "value": 0.1
     }
    ],
    "observables": [],

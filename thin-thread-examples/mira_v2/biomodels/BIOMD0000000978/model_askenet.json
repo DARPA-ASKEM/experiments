@@ -148,11 +148,11 @@
    ],
    "parameters": [
     {
-     "id": "epsilon"
-    },
-    {
      "id": "beta",
      "value": 1.3
+    },
+    {
+     "id": "epsilon"
     },
     {
      "id": "N",

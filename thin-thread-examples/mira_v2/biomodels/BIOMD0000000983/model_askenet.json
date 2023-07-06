@@ -374,37 +374,33 @@
    ],
    "parameters": [
     {
-     "id": "p",
-     "value": 0.93
+     "id": "m_t_phase_1"
     },
     {
-     "id": "tau_1",
-     "value": 21.0
+     "id": "m_t_phase_3"
     },
     {
      "id": "b",
      "value": -0.00823008849557522
     },
     {
-     "id": "a",
-     "value": 0.102279232189722
-    },
-    {
      "id": "tau_3",
      "value": 76.0
     },
     {
-     "id": "m_t_phase_1"
+     "id": "tau_1",
+     "value": 21.0
+    },
+    {
+     "id": "a",
+     "value": 0.102279232189722
+    },
+    {
+     "id": "p",
+     "value": 0.93
     },
     {
      "id": "m_t_phase_2"
-    },
-    {
-     "id": "m_t_phase_3"
-    },
-    {
-     "id": "n",
-     "value": 0.5
     },
     {
      "id": "beta",
@@ -415,12 +411,16 @@
      "value": 0.2
     },
     {
-     "id": "theta",
-     "value": 0.07142857
+     "id": "n",
+     "value": 0.5
     },
     {
      "id": "lambda",
      "value": 0.3
+    },
+    {
+     "id": "theta",
+     "value": 0.07142857
     },
     {
      "id": "mu",

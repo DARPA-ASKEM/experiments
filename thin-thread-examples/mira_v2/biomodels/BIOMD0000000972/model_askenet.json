@@ -408,8 +408,8 @@
    ],
    "parameters": [
     {
-     "id": "q",
-     "value": 1.2858e-05
+     "id": "beta",
+     "value": 2.1011e-08
     },
     {
      "id": "c_0",
@@ -420,16 +420,16 @@
      "value": 2.9253
     },
     {
-     "id": "beta",
-     "value": 2.1011e-08
-    },
-    {
-     "id": "theta",
-     "value": 1.0
+     "id": "q",
+     "value": 1.2858e-05
     },
     {
      "id": "r_1",
      "value": 1.3768
+    },
+    {
+     "id": "theta",
+     "value": 1.0
     },
     {
      "id": "lambda",
@@ -444,16 +444,16 @@
      "value": 0.142857
     },
     {
-     "id": "delta_I_f",
-     "value": 2.7367
+     "id": "delta_I_0",
+     "value": 0.13266
     },
     {
      "id": "r_2",
      "value": 0.3283
     },
     {
-     "id": "delta_I_0",
-     "value": 0.13266
+     "id": "delta_I_f",
+     "value": 2.7367
     },
     {
      "id": "gamma_I",
