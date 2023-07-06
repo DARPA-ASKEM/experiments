@@ -326,16 +326,16 @@
      "value": 0.4236
     },
     {
-     "id": "sigma",
-     "value": 0.192307692307692,
+     "id": "nu",
+     "value": 0.5,
      "units": {
       "expression": "1/day",
       "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
      }
     },
     {
-     "id": "nu",
-     "value": 0.5,
+     "id": "sigma",
+     "value": 0.192307692307692,
      "units": {
       "expression": "1/day",
       "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"

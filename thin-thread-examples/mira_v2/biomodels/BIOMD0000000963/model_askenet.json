@@ -102,11 +102,11 @@
    ],
    "parameters": [
     {
-     "id": "beta",
-     "value": 0.25
+     "id": "alpha"
     },
     {
-     "id": "alpha"
+     "id": "beta",
+     "value": 0.25
     },
     {
      "id": "k1",

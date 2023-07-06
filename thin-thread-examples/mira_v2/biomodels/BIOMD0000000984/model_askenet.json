@@ -148,12 +148,12 @@
    ],
    "parameters": [
     {
-     "id": "k",
-     "value": 10.0
-    },
-    {
      "id": "beta_o",
      "value": 0.1
+    },
+    {
+     "id": "k",
+     "value": 10.0
     },
     {
      "id": "omega",

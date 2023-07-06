@@ -406,16 +406,16 @@
    ],
    "parameters": [
     {
-     "id": "rho_s",
-     "value": 0.3199
+     "id": "beta_s",
+     "value": 0.8799
     },
     {
      "id": "epsilon_s",
      "value": 14.83
     },
     {
-     "id": "beta_s",
-     "value": 0.8799
+     "id": "rho_s",
+     "value": 0.3199
     },
     {
      "id": "xi_i",

@@ -148,15 +148,15 @@
    ],
    "parameters": [
     {
+     "id": "N",
+     "value": 36196938.0
+    },
+    {
      "id": "beta",
      "value": 1.3
     },
     {
      "id": "epsilon"
-    },
-    {
-     "id": "N",
-     "value": 36196938.0
     },
     {
      "id": "sigma",

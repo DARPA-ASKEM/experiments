@@ -706,12 +706,8 @@
    "initials": [],
    "parameters": [
     {
-     "id": "p",
-     "value": 1.0,
-     "units": {
-      "expression": "1",
-      "expression_mathml": "<cn>1</cn>"
-     }
+     "id": "N",
+     "value": 1.0
     },
     {
      "id": "l_e",
@@ -722,15 +718,11 @@
      }
     },
     {
-     "id": "N",
-     "value": 1.0
-    },
-    {
-     "id": "tInf",
-     "value": 21.0,
+     "id": "p",
+     "value": 1.0,
      "units": {
-      "expression": "day",
-      "expression_mathml": "<ci>day</ci>"
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
      }
     },
     {
@@ -739,6 +731,14 @@
      "units": {
       "expression": "1",
       "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "tInf",
+     "value": 21.0,
+     "units": {
+      "expression": "day",
+      "expression_mathml": "<ci>day</ci>"
      }
     },
     {

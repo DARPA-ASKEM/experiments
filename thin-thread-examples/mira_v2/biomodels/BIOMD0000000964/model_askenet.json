@@ -402,27 +402,19 @@
      }
     },
     {
-     "id": "alpha_1",
-     "value": 0.1,
-     "units": {
-      "expression": "1/person",
-      "expression_mathml": "<apply><power/><ci>person</ci><cn>-1</cn></apply>"
-     }
-    },
-    {
-     "id": "beta_2",
-     "value": 0.0115,
-     "units": {
-      "expression": "1/(day*person)",
-      "expression_mathml": "<apply><divide/><cn>1</cn><apply><times/><ci>day</ci><ci>person</ci></apply></apply>"
-     }
-    },
-    {
      "id": "Pathogen",
      "value": 1.0,
      "units": {
       "expression": "0.001*liter",
       "expression_mathml": "<apply><times/><cn>0.001</cn><ci>liter</ci></apply>"
+     }
+    },
+    {
+     "id": "alpha_1",
+     "value": 0.1,
+     "units": {
+      "expression": "1/person",
+      "expression_mathml": "<apply><power/><ci>person</ci><cn>-1</cn></apply>"
      }
     },
     {
@@ -436,6 +428,14 @@
     {
      "id": "beta_1",
      "value": 0.00414,
+     "units": {
+      "expression": "1/(day*person)",
+      "expression_mathml": "<apply><divide/><cn>1</cn><apply><times/><ci>day</ci><ci>person</ci></apply></apply>"
+     }
+    },
+    {
+     "id": "beta_2",
+     "value": 0.0115,
      "units": {
       "expression": "1/(day*person)",
       "expression_mathml": "<apply><divide/><cn>1</cn><apply><times/><ci>day</ci><ci>person</ci></apply></apply>"

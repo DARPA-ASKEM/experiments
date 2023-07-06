@@ -250,12 +250,12 @@
      "value": 0.7
     },
     {
-     "id": "beta",
-     "value": 0.8
-    },
-    {
      "id": "alpha",
      "value": 0.08
+    },
+    {
+     "id": "beta",
+     "value": 0.8
     },
     {
      "id": "alpha1",

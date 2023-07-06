@@ -391,19 +391,19 @@
    ],
    "parameters": [
     {
-     "id": "beta",
-     "value": 2.8,
-     "units": {
-      "expression": "1/day",
-      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
-     }
-    },
-    {
      "id": "N",
      "value": 44000.0,
      "units": {
       "expression": "person",
       "expression_mathml": "<ci>person</ci>"
+     }
+    },
+    {
+     "id": "beta",
+     "value": 2.8,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
      }
     },
     {
@@ -423,6 +423,14 @@
      }
     },
     {
+     "id": "kappa",
+     "value": 0.25,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
      "id": "rho1",
      "value": 0.58,
      "units": {
@@ -436,14 +444,6 @@
      "units": {
       "expression": "1",
       "expression_mathml": "<cn>1</cn>"
-     }
-    },
-    {
-     "id": "kappa",
-     "value": 0.25,
-     "units": {
-      "expression": "1/day",
-      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
      }
     },
     {

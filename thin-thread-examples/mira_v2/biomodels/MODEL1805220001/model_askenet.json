@@ -301,12 +301,12 @@
      "id": "Human_lambda"
     },
     {
-     "id": "Human_u2",
-     "value": 3e-07
-    },
-    {
      "id": "Human_u1",
      "value": 1.6e-05
+    },
+    {
+     "id": "Human_u2",
+     "value": 3e-07
     },
     {
      "id": "Human_v_h",
