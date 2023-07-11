@@ -340,7 +340,8 @@
    ],
    "parameters": [
     {
-     "id": "Baseline_dummy_variable"
+     "id": "Baseline_dummy_variable",
+     "value": 0.0
     },
     {
      "id": "Beta_hv",

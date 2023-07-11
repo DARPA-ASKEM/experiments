@@ -1263,19 +1263,24 @@
      "value": 30.0
     },
     {
-     "id": "Metabolite_2"
+     "id": "Metabolite_2",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_3"
+     "id": "Metabolite_3",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_4"
+     "id": "Metabolite_4",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_5"
+     "id": "Metabolite_5",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_6"
+     "id": "Metabolite_6",
+     "value": 0.0
     },
     {
      "id": "epsilon",
@@ -1318,16 +1323,20 @@
      "value": 0.04
     },
     {
-     "id": "Metabolite_10"
+     "id": "Metabolite_10",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_11"
+     "id": "Metabolite_11",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_12"
+     "id": "Metabolite_12",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_13"
+     "id": "Metabolite_13",
+     "value": 0.0
     },
     {
      "id": "Metabolite_7",
@@ -1338,7 +1347,8 @@
      "value": 26.0
     },
     {
-     "id": "Metabolite_9"
+     "id": "Metabolite_9",
+     "value": 0.0
     },
     {
      "id": "lambda_Counties_neighbouring_counties_with_airports",
@@ -1369,19 +1379,24 @@
      "value": 10.0
     },
     {
-     "id": "Metabolite_16"
+     "id": "Metabolite_16",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_17"
+     "id": "Metabolite_17",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_18"
+     "id": "Metabolite_18",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_19"
+     "id": "Metabolite_19",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_20"
+     "id": "Metabolite_20",
+     "value": 0.0
     },
     {
      "id": "lambda_Counties_with_highways",
@@ -1416,19 +1431,24 @@
      "value": 6.0
     },
     {
-     "id": "Metabolite_23"
+     "id": "Metabolite_23",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_24"
+     "id": "Metabolite_24",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_25"
+     "id": "Metabolite_25",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_26"
+     "id": "Metabolite_26",
+     "value": 0.0
     },
     {
-     "id": "Metabolite_27"
+     "id": "Metabolite_27",
+     "value": 0.0
     },
     {
      "id": "lambda_Low_risk_counties",

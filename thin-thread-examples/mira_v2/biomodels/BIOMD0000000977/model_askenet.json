@@ -426,7 +426,8 @@
      "value": 0.04167
     },
     {
-     "id": "delta"
+     "id": "delta",
+     "value": 0.0
     },
     {
      "id": "gamma_a",

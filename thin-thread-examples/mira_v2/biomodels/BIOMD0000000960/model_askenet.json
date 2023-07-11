@@ -380,7 +380,8 @@
      "value": 1.0
     },
     {
-     "id": "ModelValue_1"
+     "id": "ModelValue_1",
+     "value": 0.0
     },
     {
      "id": "ModelValue_130",
@@ -407,16 +408,20 @@
      "value": 328200000.0
     },
     {
-     "id": "ModelValue_2"
+     "id": "ModelValue_2",
+     "value": 0.0
     },
     {
-     "id": "ModelValue_3"
+     "id": "ModelValue_3",
+     "value": 0.0
     },
     {
-     "id": "ModelValue_4"
+     "id": "ModelValue_4",
+     "value": 0.0
     },
     {
-     "id": "ModelValue_5"
+     "id": "ModelValue_5",
+     "value": 0.0
     },
     {
      "id": "beta_1_China",
@@ -575,7 +580,8 @@
      "value": 1.64
     },
     {
-     "id": "ModelValue_18"
+     "id": "ModelValue_18",
+     "value": 0.0
     },
     {
      "id": "ModelValue_107",

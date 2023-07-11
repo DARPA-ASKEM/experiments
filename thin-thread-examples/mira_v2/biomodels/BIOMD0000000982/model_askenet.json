@@ -114,10 +114,12 @@
    ],
    "parameters": [
     {
-     "id": "Trigger_Stage_1"
+     "id": "Trigger_Stage_1",
+     "value": 0.0
     },
     {
-     "id": "Trigger_Stage_2"
+     "id": "Trigger_Stage_2",
+     "value": 0.0
     },
     {
      "id": "Trigger_Stage_3",

@@ -2106,14 +2106,16 @@
    ],
    "parameters": [
     {
-     "id": "alpha1"
+     "id": "alpha1",
+     "value": 0.0
     },
     {
      "id": "beta1",
      "value": 260.0
     },
     {
-     "id": "alpha2"
+     "id": "alpha2",
+     "value": 0.0
     },
     {
      "id": "beta2",

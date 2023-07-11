@@ -316,10 +316,12 @@
      }
     },
     {
-     "id": "delta"
+     "id": "delta",
+     "value": 0.0
     },
     {
-     "id": "eps"
+     "id": "eps",
+     "value": 0.0
     },
     {
      "id": "transmission_rate_effective",
