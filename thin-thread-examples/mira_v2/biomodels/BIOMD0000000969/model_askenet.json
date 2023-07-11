@@ -932,8 +932,8 @@
    "rates": [
     {
      "target": "t1",
-     "expression": "Infected_Counties_with_airports*Susceptible_Counties_with_airports*lambda_Counties_with_airports*epsilon/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6)",
-     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Counties_with_airports</ci><ci>Susceptible_Counties_with_airports</ci><ci>lambda_Counties_with_airports</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_0</ci><ci>Metabolite_1</ci><ci>Metabolite_2</ci><ci>Metabolite_3</ci><ci>Metabolite_4</ci><ci>Metabolite_5</ci><ci>Metabolite_6</ci></apply></apply>"
+     "expression": "Infected_Counties_with_airports*Susceptible_Counties_with_airports*epsilon*lambda_Counties_with_airports/(Metabolite_0 + Metabolite_1 + Metabolite_2 + Metabolite_3 + Metabolite_4 + Metabolite_5 + Metabolite_6)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Counties_with_airports</ci><ci>Susceptible_Counties_with_airports</ci><ci>epsilon</ci><ci>lambda_Counties_with_airports</ci></apply><apply><plus/><ci>Metabolite_0</ci><ci>Metabolite_1</ci><ci>Metabolite_2</ci><ci>Metabolite_3</ci><ci>Metabolite_4</ci><ci>Metabolite_5</ci><ci>Metabolite_6</ci></apply></apply>"
     },
     {
      "target": "t2",
@@ -977,8 +977,8 @@
     },
     {
      "target": "t10",
-     "expression": "Infected_Counties_neighbouring_counties_with_airports*Susceptible_Counties_neighbouring_counties_with_airports*lambda_Counties_neighbouring_counties_with_airports*epsilon/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9)",
-     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>Susceptible_Counties_neighbouring_counties_with_airports</ci><ci>lambda_Counties_neighbouring_counties_with_airports</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_10</ci><ci>Metabolite_11</ci><ci>Metabolite_12</ci><ci>Metabolite_13</ci><ci>Metabolite_7</ci><ci>Metabolite_8</ci><ci>Metabolite_9</ci></apply></apply>"
+     "expression": "Infected_Counties_neighbouring_counties_with_airports*Susceptible_Counties_neighbouring_counties_with_airports*epsilon*lambda_Counties_neighbouring_counties_with_airports/(Metabolite_10 + Metabolite_11 + Metabolite_12 + Metabolite_13 + Metabolite_7 + Metabolite_8 + Metabolite_9)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Counties_neighbouring_counties_with_airports</ci><ci>Susceptible_Counties_neighbouring_counties_with_airports</ci><ci>epsilon</ci><ci>lambda_Counties_neighbouring_counties_with_airports</ci></apply><apply><plus/><ci>Metabolite_10</ci><ci>Metabolite_11</ci><ci>Metabolite_12</ci><ci>Metabolite_13</ci><ci>Metabolite_7</ci><ci>Metabolite_8</ci><ci>Metabolite_9</ci></apply></apply>"
     },
     {
      "target": "t11",
@@ -1022,8 +1022,8 @@
     },
     {
      "target": "t19",
-     "expression": "Infected_Counties_with_highways*Susceptible_Counties_with_highways*lambda_Counties_with_highways*epsilon/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20)",
-     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Counties_with_highways</ci><ci>Susceptible_Counties_with_highways</ci><ci>lambda_Counties_with_highways</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_14</ci><ci>Metabolite_15</ci><ci>Metabolite_16</ci><ci>Metabolite_17</ci><ci>Metabolite_18</ci><ci>Metabolite_19</ci><ci>Metabolite_20</ci></apply></apply>"
+     "expression": "Infected_Counties_with_highways*Susceptible_Counties_with_highways*epsilon*lambda_Counties_with_highways/(Metabolite_14 + Metabolite_15 + Metabolite_16 + Metabolite_17 + Metabolite_18 + Metabolite_19 + Metabolite_20)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Counties_with_highways</ci><ci>Susceptible_Counties_with_highways</ci><ci>epsilon</ci><ci>lambda_Counties_with_highways</ci></apply><apply><plus/><ci>Metabolite_14</ci><ci>Metabolite_15</ci><ci>Metabolite_16</ci><ci>Metabolite_17</ci><ci>Metabolite_18</ci><ci>Metabolite_19</ci><ci>Metabolite_20</ci></apply></apply>"
     },
     {
      "target": "t20",
@@ -1072,8 +1072,8 @@
     },
     {
      "target": "t29",
-     "expression": "Infected_Low_risk_counties*Susceptible_Low_risk_counties*lambda_Low_risk_counties*epsilon/(Metabolite_21 + Metabolite_22 + Metabolite_23 + Metabolite_24 + Metabolite_25 + Metabolite_26 + Metabolite_27)",
-     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Low_risk_counties</ci><ci>Susceptible_Low_risk_counties</ci><ci>lambda_Low_risk_counties</ci><ci>epsilon</ci></apply><apply><plus/><ci>Metabolite_21</ci><ci>Metabolite_22</ci><ci>Metabolite_23</ci><ci>Metabolite_24</ci><ci>Metabolite_25</ci><ci>Metabolite_26</ci><ci>Metabolite_27</ci></apply></apply>"
+     "expression": "Infected_Low_risk_counties*Susceptible_Low_risk_counties*epsilon*lambda_Low_risk_counties/(Metabolite_21 + Metabolite_22 + Metabolite_23 + Metabolite_24 + Metabolite_25 + Metabolite_26 + Metabolite_27)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Infected_Low_risk_counties</ci><ci>Susceptible_Low_risk_counties</ci><ci>epsilon</ci><ci>lambda_Low_risk_counties</ci></apply><apply><plus/><ci>Metabolite_21</ci><ci>Metabolite_22</ci><ci>Metabolite_23</ci><ci>Metabolite_24</ci><ci>Metabolite_25</ci><ci>Metabolite_26</ci><ci>Metabolite_27</ci></apply></apply>"
     },
     {
      "target": "t30",
@@ -1278,12 +1278,12 @@
      "id": "Metabolite_6"
     },
     {
-     "id": "lambda_Counties_with_airports",
-     "value": 0.41
-    },
-    {
      "id": "epsilon",
      "value": 1.0
+    },
+    {
+     "id": "lambda_Counties_with_airports",
+     "value": 0.41
     },
     {
      "id": "eta_Counties_with_airports",

@@ -174,9 +174,13 @@
    {
     "id": "t12",
     "input": [
+     "Recovered",
      "Susceptible"
     ],
-    "output": [],
+    "output": [
+     "Recovered",
+     "Exposed"
+    ],
     "properties": {
      "name": "t12"
     }
@@ -184,11 +188,21 @@
    {
     "id": "t13",
     "input": [
-     "Exposed"
+     "Susceptible"
     ],
     "output": [],
     "properties": {
      "name": "t13"
+    }
+   },
+   {
+    "id": "t14",
+    "input": [
+     "Exposed"
+    ],
+    "output": [],
+    "properties": {
+     "name": "t14"
     }
    }
   ]
@@ -213,8 +227,8 @@
     },
     {
      "target": "t4",
-     "expression": "Human_lambda*Susceptible",
-     "expression_mathml": "<apply><times/><ci>Human_lambda</ci><ci>Susceptible</ci></apply>"
+     "expression": "Human_B_hv*Human_b_N_h_N_v*Infected*Susceptible/(Exposed + Infected + Susceptible)",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Human_B_hv</ci><ci>Human_b_N_h_N_v</ci><ci>Infected</ci><ci>Susceptible</ci></apply><apply><plus/><ci>Exposed</ci><ci>Infected</ci><ci>Susceptible</ci></apply></apply>"
     },
     {
      "target": "t5",
@@ -253,11 +267,16 @@
     },
     {
      "target": "t12",
+     "expression": "Susceptible*Vector_b_N_h_N_v*(Infected*Vector_B_vh/Human_total_Pop_N_h + Recovered*Vector_B_tilde_vh/Human_total_Pop_N_h)",
+     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>Vector_b_N_h_N_v</ci><apply><plus/><apply><divide/><apply><times/><ci>Infected</ci><ci>Vector_B_vh</ci></apply><ci>Human_total_Pop_N_h</ci></apply><apply><divide/><apply><times/><ci>Recovered</ci><ci>Vector_B_tilde_vh</ci></apply><ci>Human_total_Pop_N_h</ci></apply></apply></apply>"
+    },
+    {
+     "target": "t13",
      "expression": "Susceptible*(Vector_u1 + Vector_u2*(Exposed + Infected + Susceptible))",
      "expression_mathml": "<apply><times/><ci>Susceptible</ci><apply><plus/><ci>Vector_u1</ci><apply><times/><ci>Vector_u2</ci><apply><plus/><ci>Exposed</ci><ci>Infected</ci><ci>Susceptible</ci></apply></apply></apply></apply>"
     },
     {
-     "target": "t13",
+     "target": "t14",
      "expression": "Exposed*(Vector_u1 + Vector_u2*(Exposed + Infected + Susceptible))",
      "expression_mathml": "<apply><times/><ci>Exposed</ci><apply><plus/><ci>Vector_u1</ci><apply><times/><ci>Vector_u2</ci><apply><plus/><ci>Exposed</ci><ci>Infected</ci><ci>Susceptible</ci></apply></apply></apply></apply>"
     }
@@ -298,7 +317,12 @@
      "value": 0.0146
     },
     {
-     "id": "Human_lambda"
+     "id": "Human_B_hv",
+     "value": 0.02
+    },
+    {
+     "id": "Human_b_N_h_N_v",
+     "value": 2.57142857142857
     },
     {
      "id": "Human_u1",
@@ -325,7 +349,20 @@
      "value": 80.0
     },
     {
-     "id": "Vector_lambda"
+     "id": "Human_total_Pop_N_h",
+     "value": 500.0
+    },
+    {
+     "id": "Vector_B_tilde_vh",
+     "value": 0.833
+    },
+    {
+     "id": "Vector_B_vh",
+     "value": 0.02
+    },
+    {
+     "id": "Vector_b_N_h_N_v",
+     "value": 0.514285714285714
     },
     {
      "id": "Vector_u1",

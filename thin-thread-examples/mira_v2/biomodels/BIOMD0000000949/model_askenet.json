@@ -187,9 +187,11 @@
    {
     "id": "t11",
     "input": [
+     "Recovered",
      "Susceptible"
     ],
     "output": [
+     "Recovered",
      "Exposed"
     ],
     "properties": {
@@ -235,8 +237,8 @@
    "rates": [
     {
      "target": "t1",
-     "expression": "Capital_lambda_h",
-     "expression_mathml": "<ci>Capital_lambda_h</ci>"
+     "expression": "piecewise(0.041, eq(Baseline_dummy_variable, 0), 0.033)",
+     "expression_mathml": "<apply><piecewise/><cn>0.041000000000000002</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.033000000000000002</cn></apply>"
     },
     {
      "target": "t2",
@@ -250,8 +252,8 @@
     },
     {
      "target": "t4",
-     "expression": "Susceptible*lambda_h",
-     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>lambda_h</ci></apply>"
+     "expression": "Beta_hv*Infected*Susceptible*piecewise(0.33, eq(Baseline_dummy_variable, 0), 0.5)*piecewise(4.3, eq(Baseline_dummy_variable, 0), 19)/(N_h*piecewise(4.3, eq(Baseline_dummy_variable, 0), 19) + N_v*piecewise(0.33, eq(Baseline_dummy_variable, 0), 0.5))",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>Beta_hv</ci><ci>Infected</ci><ci>Susceptible</ci><apply><piecewise/><cn>0.33000000000000002</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.5</cn></apply><apply><piecewise/><cn>4.2999999999999998</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>19</cn></apply></apply><apply><plus/><apply><times/><ci>N_h</ci><apply><piecewise/><cn>4.2999999999999998</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>19</cn></apply></apply><apply><times/><ci>N_v</ci><apply><piecewise/><cn>0.33000000000000002</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.5</cn></apply></apply></apply></apply>"
     },
     {
      "target": "t5",
@@ -285,8 +287,8 @@
     },
     {
      "target": "t11",
-     "expression": "Susceptible*lambda_v",
-     "expression_mathml": "<apply><times/><ci>Susceptible</ci><ci>lambda_v</ci></apply>"
+     "expression": "N_h*Susceptible*(Beta_tilde_vh*Recovered/N_h + Beta_vh*Infected/N_h)*piecewise(0.33, eq(Baseline_dummy_variable, 0), 0.5)*piecewise(4.3, eq(Baseline_dummy_variable, 0), 19)/(N_h*piecewise(4.3, eq(Baseline_dummy_variable, 0), 19) + N_v*piecewise(0.33, eq(Baseline_dummy_variable, 0), 0.5))",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>N_h</ci><ci>Susceptible</ci><apply><plus/><apply><divide/><apply><times/><ci>Beta_tilde_vh</ci><ci>Recovered</ci></apply><ci>N_h</ci></apply><apply><divide/><apply><times/><ci>Beta_vh</ci><ci>Infected</ci></apply><ci>N_h</ci></apply></apply><apply><piecewise/><cn>0.33000000000000002</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.5</cn></apply><apply><piecewise/><cn>4.2999999999999998</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>19</cn></apply></apply><apply><plus/><apply><times/><ci>N_h</ci><apply><piecewise/><cn>4.2999999999999998</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>19</cn></apply></apply><apply><times/><ci>N_v</ci><apply><piecewise/><cn>0.33000000000000002</cn><apply><eq/><ci>Baseline_dummy_variable</ci><cn>0</cn></apply><cn>0.5</cn></apply></apply></apply></apply>"
     },
     {
      "target": "t12",
@@ -338,27 +340,27 @@
    ],
    "parameters": [
     {
-     "id": "Capital_lambda_h",
-     "value": 0.041
-    },
-    {
      "id": "Baseline_dummy_variable"
     },
     {
-     "id": "lambda_h",
-     "value": 4.48218926330601e-05
+     "id": "Beta_hv",
+     "value": 0.022
     },
     {
      "id": "N_h",
      "value": 623.0
     },
     {
-     "id": "lambda_v",
-     "value": 0.000293379660870939
-    },
-    {
      "id": "N_v",
      "value": 2435.0
+    },
+    {
+     "id": "Beta_tilde_vh",
+     "value": 0.024
+    },
+    {
+     "id": "Beta_vh",
+     "value": 0.24
     }
    ],
    "observables": [],
