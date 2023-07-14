@@ -7,12 +7,12 @@
         [327.0, "beta_scale", 0.55],
         [370.0, "beta_scale", 0.3],
         [429.0, "beta_scale", 0.4],
-        [468, "beta_scale", 0.15],
-        [527, "beta_scale", 0.2],
-        [548, "beta_scale", 0.3],
-        [562, "beta_scale", 0.35],
-        [609, "beta_scale", 0.4],
-        [670, "beta_scale", 0.5],
-        [731, "beta_scale", 0.4]
+        [468.0, "beta_scale", 0.15],
+        [527.0, "beta_scale", 0.2],
+        [548.0, "beta_scale", 0.3],
+        [562.0, "beta_scale", 0.35],
+        [609.0, "beta_scale", 0.4],
+        [670.0, "beta_scale", 0.5],
+        [731.0, "beta_scale", 0.4]
     ]
 }
