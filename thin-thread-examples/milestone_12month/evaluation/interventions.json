@@ -1,0 +1,18 @@
+{
+    "interventions": [
+        [0.0, "beta_scale", 1.0],
+        [82.0, "beta_scale", 0.4],
+        [198.0, "beta_scale", 0.55],
+        [282.0, "beta_scale", 0.6],
+        [327.0, "beta_scale", 0.55],
+        [370.0, "beta_scale", 0.3],
+        [429.0, "beta_scale", 0.4],
+        [468, "beta_scale", 0.15],
+        [527, "beta_scale", 0.2],
+        [548, "beta_scale", 0.3],
+        [562, "beta_scale", 0.35],
+        [609, "beta_scale", 0.4],
+        [670, "beta_scale", 0.5],
+        [731, "beta_scale", 0.4]
+    ]
+}
