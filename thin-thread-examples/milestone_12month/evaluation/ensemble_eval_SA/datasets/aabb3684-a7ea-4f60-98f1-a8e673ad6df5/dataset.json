@@ -1,0 +1,16 @@
+{
+  "id": "aabb3684-a7ea-4f60-98f1-a8e673ad6df5",
+  "timestamp": "2023-07-18T20:17:28",
+  "username": "Nelson Liu",
+  "name": "NY_time_case_hosp_death_data",
+  "description": "NY_case_hospital_death.csv\nTransformed from dataset 'NY_case_hospital_death' (431f195e-9b7b-4450-9372-f3cdefb508b5) at Tue Jul 18 19:21:19 2023 \nTransformed from dataset 'NY_case_hosp_death_timestep' (1ca2bed3-c542-41da-a9f0-4d890a0a07c2) at Tue Jul 18 19:29:37 2023 \nTransformed from dataset 'NY_IHD_time_R2G' (b16a75a6-6bfa-46ca-a0c0-25ca8c76db78) at Tue Jul 18 20:17:28 2023 ",
+  "data_source_date": null,
+  "file_names": [
+    "dataset.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

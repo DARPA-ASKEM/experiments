@@ -1,0 +1,16 @@
+{
+  "id": "12f0ecf1-28c7-4cbb-87d6-a146ca2c3859",
+  "timestamp": "2023-07-19T14:20:39",
+  "username": "Nelson Liu",
+  "name": "NYS_timept2_data",
+  "description": "NY_case_hospital_death.csv\nTransformed from dataset 'NY_case_hospital_death' (431f195e-9b7b-4450-9372-f3cdefb508b5) at Wed Jul 19 14:20:39 2023 ",
+  "data_source_date": null,
+  "file_names": [
+    "dataset.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

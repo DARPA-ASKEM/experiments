@@ -1,0 +1,57 @@
+{
+  "id": 46,
+  "name": "Ensemble Eval - SA",
+  "description": "Project bootstrapped with various models to support ensemble eval challenge",
+  "timestamp": "2023-07-18T16:27:43.224973",
+  "active": true,
+  "username": "Brandon Rose",
+  "concept": null,
+  "assets": {
+    "datasets": [
+      "12f0ecf1-28c7-4cbb-87d6-a146ca2c3859",
+      "816b14d2-950a-4a07-92eb-f391c5be6e31",
+      "2fe8ce94-e23b-42d3-b2e1-11103119bcd7",
+      "aabb3684-a7ea-4f60-98f1-a8e673ad6df5",
+      "b60364c2-f743-4f09-acc4-8325807e8ac7",
+      "6e993467-f673-4e45-adeb-b27c17f541d4",
+      "431f195e-9b7b-4450-9372-f3cdefb508b5",
+      "4f93bb09-1faf-4760-be3e-f865ab0cc946"
+    ],
+    "model_configurations": [],
+    "models": [
+      "0757194f-df96-42a4-a3e1-0ee89403948b",
+      "afc65f9c-9bb3-49b2-a235-0a531bb3a07c",
+      "8e7cbcf5-5230-4424-b8b0-896507f025af",
+      "298b6e25-52c2-4f5c-af0c-71e0a3c857b9",
+      "bdbfe267-a7d4-4cea-bc76-2a3809df026b",
+      "0843d4b7-cde6-4d27-ad4e-46336467a183",
+      "5ebfee94-ab41-4ba0-b6a6-045d04d457bd",
+      "05ad5f58-22b5-4216-a4be-d0e4b2769cc5",
+      "1146b2bf-c459-47a4-8353-e1d1ed828382",
+      "2842c70b-9e98-4f55-b989-e8997c1558a3",
+      "0e9ec17a-5b55-4109-a79c-2d59674c2183",
+      "078607a5-77dd-48d2-8d39-b051c9b88c8f",
+      "34cc6cc5-7b48-4bcd-85e7-dce61794b555",
+      "5b444b71-eb95-4768-8e54-4cc2338e4406",
+      "ee118cde-903e-4826-ad19-d2d9346c372e",
+      "8480feed-f7ae-47fd-9b51-1a9720e6dffb",
+      "721489de-99c5-4ed4-a719-e23a6b0306ac",
+      "6b99f47a-ae2b-47e0-89c8-b5023081fe04",
+      "4a88e930-ad5a-4a87-b50c-fe6da9fea4ce",
+      "b60364c2-f743-4f09-acc4-8325807e8ac7",
+      "1c38e68d-0886-4a13-8c03-0d763078dae8",
+      "d9acc94c-c47b-448b-93f4-492bf7775097"
+    ],
+    "publications": [],
+    "simulations": [],
+    "workflows": [
+      "a7af3969-e545-4a31-8d17-b8d2f86af90c",
+      "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "e766cc0b-2c72-4d22-bf10-2b6641a773ad",
+      "0498ebc2-10ab-485c-8548-7697d7232853",
+      "9e056a25-0d75-442f-8d21-2af8b413e77d",
+      "57189acc-1ef6-4c82-87b4-4bddef6d319f"
+    ],
+    "artifacts": []
+  }
+}

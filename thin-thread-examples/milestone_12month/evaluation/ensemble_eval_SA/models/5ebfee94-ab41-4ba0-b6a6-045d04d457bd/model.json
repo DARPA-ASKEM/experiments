@@ -1,0 +1,10 @@
+{
+  "id": "5ebfee94-ab41-4ba0-b6a6-045d04d457bd",
+  "timestamp": "2023-07-17T20:23:44",
+  "name": "Scenario 3 base model",
+  "description": "Scenario 3 base model",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

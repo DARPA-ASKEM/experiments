@@ -1,0 +1,10 @@
+{
+  "id": "34cc6cc5-7b48-4bcd-85e7-dce61794b555",
+  "timestamp": "2023-07-19T12:22:10",
+  "name": "SEIRHDS basic",
+  "description": "Evaluation Scenario 1 Base model",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}
