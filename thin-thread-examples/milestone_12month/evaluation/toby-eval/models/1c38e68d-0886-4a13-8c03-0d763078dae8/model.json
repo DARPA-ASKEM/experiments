@@ -1,0 +1,10 @@
+{
+  "id": "1c38e68d-0886-4a13-8c03-0d763078dae8",
+  "timestamp": "2023-07-19T18:00:30",
+  "name": "Toby's Great Adventure SEIRHD 07-19 10:55",
+  "description": "        This model has been stratified by age (4 ways),\n        variant (3 ways), and vaccine status (2 ways).\n\n        The naming convention is to have the base\n        population type (e.g., S, E, I) followed by underscores\n        in the order of age, variant, disase status. All compartments\n        are stratified by all three except for the S compartment, which\n        is only stratified by age and status.\n\n        Because death is stratified, it might be useful to create observables\n        which e.g. take the sum over all statuses/ages/variants.\n\n        We used numerical indexes (encoded as strings) for each of the age,\n        variants, and statuses.\n\n        - Status: (0) unvaccinated and (1) vaccinated\n        - Ages: (0) for 0-19, (1) for 20-49, (2) for 50-64, and (3) for 65+\n        - Variants: (0) wild, (1) delta, and (2) omicron\n        \n        This model also includes the conversion from unvaccinated susceptible\n        individuals to vaccinated susceptibe individuals (with conserved age).\n        The parameter alpha ideally is a time dependent function.\n        \n        TODO we can model the reverse process of vaccinated susceptible individuals\n        becoming unvaccinated as a decay of vaccine efficacy, which would also be time\n        dependant.\n        ",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

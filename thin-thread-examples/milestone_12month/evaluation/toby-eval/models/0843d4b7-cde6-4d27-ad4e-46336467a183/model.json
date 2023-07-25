@@ -1,0 +1,10 @@
+{
+  "id": "0843d4b7-cde6-4d27-ad4e-46336467a183",
+  "timestamp": "2023-07-17T20:26:24",
+  "name": "Scenario 3 model with cases and detection",
+  "description": "Scenario 3 model with cases and detection",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

@@ -1,0 +1,488 @@
+{
+  "id": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+  "timestamp": "2023-07-25 01:12:21",
+  "name": "workflow 1",
+  "description": "",
+  "nodes": [
+    {
+      "id": "afa2cd8f-b5c4-41fb-8fea-d25820be116a",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": -337.4152563525393,
+      "y": 160.65297434882945,
+      "state": {
+        "modelId": "c4f911a5-da8c-4261-ad68-9fc88c71068b",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "4bb1ede0-6fc2-485f-8908-c9e4eb86c1b6",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "044fc12f-6356-426c-b54f-5e30def9491b"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "c8548f63-2f94-4c27-9817-a8a1d153cb9c",
+          "type": "modelConfigId",
+          "label": "Copy of Copy of Default config",
+          "value": [
+            "1fa2431e-f7e8-45df-976d-c6a4178c8ea0"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "63621803-6727-4d20-9512-06d423a2ec5f",
+          "type": "modelConfigId",
+          "label": "Copy of Default config",
+          "value": [
+            "9ef2318e-645b-4f0e-86a7-9d6c165df1ae"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "3e8cf3cf-30ea-43b6-b1b5-18a6dc63fd3e",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (probabilistic)",
+      "x": -167.55652121601014,
+      "y": -946.3072834961301,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "S_0_0"
+            ],
+            "selectedRun": "ciemss-2c417521-e7a5-4853-b961-99420c10bfad"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        },
+        "numSamples": 1,
+        "method": "euler"
+      },
+      "inputs": [
+        {
+          "id": "c8e65c03-3a13-4ab3-a319-f42ed0a3e4c8",
+          "type": "modelConfigId",
+          "label": "Copy of Copy of Default config",
+          "status": "connected",
+          "value": [
+            "1fa2431e-f7e8-45df-976d-c6a4178c8ea0"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "51358edb-9c40-4189-a3aa-c92e6d558681",
+          "type": "simOutput",
+          "label": "Copy of Copy of Default config Results",
+          "value": [
+            "ciemss-2c417521-e7a5-4853-b961-99420c10bfad"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "a7725608-8bf2-47a6-842d-e41bbf606507",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "operationType": "SimulateJuliaOperation",
+      "displayName": "Simulate (deterministic)",
+      "x": -470.85188710742614,
+      "y": -608.7727080026968,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "S_0_0"
+            ],
+            "selectedRun": "sciml-fe76fb9f-7016-40b5-b479-3a7dc51fed1c"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        }
+      },
+      "inputs": [
+        {
+          "id": "7d247c1e-8601-432c-a40f-45cb79679a39",
+          "type": "modelConfigId",
+          "label": "Copy of Copy of Default config",
+          "status": "connected",
+          "value": [
+            "1fa2431e-f7e8-45df-976d-c6a4178c8ea0"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "e5837fd3-411c-47c8-8853-24fceb1125ed",
+          "type": "simOutput",
+          "label": "Copy of Copy of Default config Results",
+          "value": [
+            "sciml-fe76fb9f-7016-40b5-b479-3a7dc51fed1c"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "e4026c7e-ce5b-401f-b920-3783331131f5",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (probabilistic)",
+      "x": -1203.9135780972917,
+      "y": -335.9990488197534,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "S_0_0"
+            ],
+            "selectedRun": "ciemss-de510a7b-58ce-4637-9946-269f78677674"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        },
+        "numSamples": 1,
+        "method": "dopri5"
+      },
+      "inputs": [
+        {
+          "id": "20569150-c1b8-4c9a-b152-9f6ec5e10f68",
+          "type": "modelConfigId",
+          "label": "Copy of Copy of Default config",
+          "status": "connected",
+          "value": [
+            "1fa2431e-f7e8-45df-976d-c6a4178c8ea0"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "052626b2-6aa1-462b-bd6f-eec018f0fd12",
+          "type": "simOutput",
+          "label": "Copy of Copy of Default config Results",
+          "value": [
+            "ciemss-de510a7b-58ce-4637-9946-269f78677674"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "dd84d3b3-74c3-46c7-8aa5-1e3db2208d9f",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 421.36991321479275,
+      "y": -2.4216661679011082,
+      "state": {
+        "modelId": "c4f911a5-da8c-4261-ad68-9fc88c71068b",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "b5a8ea6c-7224-4de2-b33e-65b791e0ec61",
+          "type": "modelConfigId",
+          "label": "Parameteric uncertainty test",
+          "value": [
+            "422c7a28-86f6-4ded-b34b-62d0b903b10e"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "f2a2745d-8b0f-4814-b445-bd580bc720f3",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "044fc12f-6356-426c-b54f-5e30def9491b"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "dca5563e-d3a4-442a-b47e-29a3f2947f56",
+          "type": "modelConfigId",
+          "label": "New default",
+          "value": [
+            "1fa2431e-f7e8-45df-976d-c6a4178c8ea0"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "50f3fc99-43b3-4e3e-b9b3-d759480526dc",
+          "type": "modelConfigId",
+          "label": "Copy of Default config",
+          "value": [
+            "9ef2318e-645b-4f0e-86a7-9d6c165df1ae"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "6ebf99a5-0dd9-4e27-8903-d3b108af26d0",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (probabilistic)",
+      "x": 887.7669604896893,
+      "y": -176.93242642366738,
+      "state": {
+        "chartConfigs": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        },
+        "numSamples": 2,
+        "method": "dopri5"
+      },
+      "inputs": [
+        {
+          "id": "f883454f-8d2e-4e59-b5af-5caa2eae9b45",
+          "type": "modelConfigId",
+          "label": "Parameteric uncertainty test",
+          "status": "connected",
+          "value": [
+            "422c7a28-86f6-4ded-b34b-62d0b903b10e"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "32f00fe5-cf9d-4d78-b062-3f43e92cafe0",
+          "type": "simOutput",
+          "label": "Parameteric uncertainty test Results",
+          "value": [
+            "ciemss-f6e6057f-7b8d-49d0-bd18-3a9df7e86ef5"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "6986911b-ab2d-4595-9b18-e56f26ffdb48",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "operationType": "SimulateJuliaOperation",
+      "displayName": "Simulate (deterministic)",
+      "x": 887.7773173638569,
+      "y": 245.95413805594998,
+      "state": {
+        "chartConfigs": [],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        }
+      },
+      "inputs": [
+        {
+          "id": "fc4070c5-3cc5-48b7-803c-83ecfc6bfa60",
+          "type": "modelConfigId",
+          "label": "Parameteric uncertainty test",
+          "status": "connected",
+          "value": [
+            "422c7a28-86f6-4ded-b34b-62d0b903b10e"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "3bba70fd-5702-4bb4-b9de-f440408457ce",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "source": "afa2cd8f-b5c4-41fb-8fea-d25820be116a",
+      "sourcePortId": "c8548f63-2f94-4c27-9817-a8a1d153cb9c",
+      "target": "3e8cf3cf-30ea-43b6-b1b5-18a6dc63fd3e",
+      "targetPortId": "c8e65c03-3a13-4ab3-a319-f42ed0a3e4c8",
+      "points": [
+        {
+          "x": -57.4152563525391,
+          "y": 418.65297434882956
+        },
+        {
+          "x": -167.55652121601014,
+          "y": -892.3072834961299
+        }
+      ]
+    },
+    {
+      "id": "d0b8defa-04ca-4abf-b5c1-43d082c17c45",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "source": "afa2cd8f-b5c4-41fb-8fea-d25820be116a",
+      "sourcePortId": "c8548f63-2f94-4c27-9817-a8a1d153cb9c",
+      "target": "a7725608-8bf2-47a6-842d-e41bbf606507",
+      "targetPortId": "7d247c1e-8601-432c-a40f-45cb79679a39",
+      "points": [
+        {
+          "x": -57.4152563525391,
+          "y": 418.65297434882956
+        },
+        {
+          "x": -470.85188710742614,
+          "y": -554.772708002697
+        }
+      ]
+    },
+    {
+      "id": "f5701f02-db84-4127-9813-140d05ce7b8d",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "source": "afa2cd8f-b5c4-41fb-8fea-d25820be116a",
+      "sourcePortId": "c8548f63-2f94-4c27-9817-a8a1d153cb9c",
+      "target": "e4026c7e-ce5b-401f-b920-3783331131f5",
+      "targetPortId": "20569150-c1b8-4c9a-b152-9f6ec5e10f68",
+      "points": [
+        {
+          "x": -57.415256352539174,
+          "y": 418.6529743488295
+        },
+        {
+          "x": -1203.9135780972917,
+          "y": -281.99904881975317
+        }
+      ]
+    },
+    {
+      "id": "4e05db98-075c-4f4f-8135-511ddef6689d",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "source": "dd84d3b3-74c3-46c7-8aa5-1e3db2208d9f",
+      "sourcePortId": "b5a8ea6c-7224-4de2-b33e-65b791e0ec61",
+      "target": "6ebf99a5-0dd9-4e27-8903-d3b108af26d0",
+      "targetPortId": "f883454f-8d2e-4e59-b5af-5caa2eae9b45",
+      "points": [
+        {
+          "x": 701.3699132147927,
+          "y": 225.5783338320989
+        },
+        {
+          "x": 887.7669604896893,
+          "y": -122.93242642366735
+        }
+      ]
+    },
+    {
+      "id": "357cd9ed-0862-4e46-a6de-55501b3cf40c",
+      "workflowId": "69b15116-9c25-4ccf-88ab-b1d7addf49a9",
+      "source": "dd84d3b3-74c3-46c7-8aa5-1e3db2208d9f",
+      "sourcePortId": "b5a8ea6c-7224-4de2-b33e-65b791e0ec61",
+      "target": "6986911b-ab2d-4595-9b18-e56f26ffdb48",
+      "targetPortId": "fc4070c5-3cc5-48b7-803c-83ecfc6bfa60",
+      "points": [
+        {
+          "x": 701.3699132147927,
+          "y": 225.5783338320989
+        },
+        {
+          "x": 887.7773173638569,
+          "y": 299.95413805594967
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": -356.0,
+    "y": 274.0,
+    "k": 1.0
+  }
+}

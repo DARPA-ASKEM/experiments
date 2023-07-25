@@ -1,0 +1,41 @@
+{
+  "id": 52,
+  "name": "toby-eval",
+  "description": "project for toby",
+  "timestamp": "2023-07-19T12:55:28.866533",
+  "active": true,
+  "username": "Brandon Rose",
+  "concept": null,
+  "assets": {
+    "datasets": [],
+    "model_configurations": [],
+    "models": [
+      "8e7cbcf5-5230-4424-b8b0-896507f025af",
+      "bdbfe267-a7d4-4cea-bc76-2a3809df026b",
+      "0843d4b7-cde6-4d27-ad4e-46336467a183",
+      "c4f911a5-da8c-4261-ad68-9fc88c71068b",
+      "5ebfee94-ab41-4ba0-b6a6-045d04d457bd",
+      "05ad5f58-22b5-4216-a4be-d0e4b2769cc5",
+      "1146b2bf-c459-47a4-8353-e1d1ed828382",
+      "ac3cd063-448a-4e7c-b02e-c3e886c28f5f",
+      "2842c70b-9e98-4f55-b989-e8997c1558a3",
+      "0e9ec17a-5b55-4109-a79c-2d59674c2183",
+      "078607a5-77dd-48d2-8d39-b051c9b88c8f",
+      "5b444b71-eb95-4768-8e54-4cc2338e4406",
+      "ee118cde-903e-4826-ad19-d2d9346c372e",
+      "8480feed-f7ae-47fd-9b51-1a9720e6dffb",
+      "721489de-99c5-4ed4-a719-e23a6b0306ac",
+      "6b99f47a-ae2b-47e0-89c8-b5023081fe04",
+      "4a88e930-ad5a-4a87-b50c-fe6da9fea4ce",
+      "b60364c2-f743-4f09-acc4-8325807e8ac7",
+      "1c38e68d-0886-4a13-8c03-0d763078dae8",
+      "d9acc94c-c47b-448b-93f4-492bf7775097"
+    ],
+    "publications": [],
+    "simulations": [],
+    "workflows": [
+      "69b15116-9c25-4ccf-88ab-b1d7addf49a9"
+    ],
+    "artifacts": []
+  }
+}

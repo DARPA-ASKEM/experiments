@@ -1,0 +1,10 @@
+{
+  "id": "ac3cd063-448a-4e7c-b02e-c3e886c28f5f",
+  "timestamp": "2023-07-17T18:35:47",
+  "name": "Evaluation Scenario 1 Base model",
+  "description": "Evaluation Scenario 1 Base model",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}
