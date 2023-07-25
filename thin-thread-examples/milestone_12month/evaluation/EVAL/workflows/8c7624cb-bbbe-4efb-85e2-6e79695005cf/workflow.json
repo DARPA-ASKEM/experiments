@@ -1,0 +1,290 @@
+{
+  "id": "8c7624cb-bbbe-4efb-85e2-6e79695005cf",
+  "timestamp": "2023-07-19 17:33:42",
+  "name": "1ciii",
+  "description": "",
+  "nodes": [
+    {
+      "id": "e5edc9b1-c9af-43e2-b3b3-da2a3d6fbd45",
+      "workflowId": "8c7624cb-bbbe-4efb-85e2-6e79695005cf",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 64,
+      "y": 216,
+      "state": {
+        "modelId": "f2c54b70-baa8-4e81-a94b-1a193d0a83aa",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "549762ba-0595-46cc-8cb8-010ea99cf989",
+          "type": "modelConfigId",
+          "label": "cmCloth",
+          "value": [
+            "bae12e61-c0ca-462e-a553-553e428004c9"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "6b2b45da-293b-4bad-9710-124621206513",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "d5b2ca0e-0d0f-4821-a7f9-1e62b6373dca"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "51529153-c6d1-4a58-b475-dab07c6db8e8",
+      "workflowId": "8c7624cb-bbbe-4efb-85e2-6e79695005cf",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 427,
+      "y": 211,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I_cloth"
+            ],
+            "selectedRun": "ciemss-ebdcb00a-e3ee-4b9b-8a9f-bf4bee534527"
+          },
+          {
+            "selectedVariable": [
+              "I_surgical"
+            ],
+            "selectedRun": "ciemss-ebdcb00a-e3ee-4b9b-8a9f-bf4bee534527"
+          },
+          {
+            "selectedVariable": [
+              "H_cloth"
+            ],
+            "selectedRun": "ciemss-ebdcb00a-e3ee-4b9b-8a9f-bf4bee534527"
+          },
+          {
+            "selectedVariable": [
+              "H_surgical"
+            ],
+            "selectedRun": "ciemss-ebdcb00a-e3ee-4b9b-8a9f-bf4bee534527"
+          },
+          {
+            "selectedVariable": [
+              "D_cloth"
+            ],
+            "selectedRun": "ciemss-ebdcb00a-e3ee-4b9b-8a9f-bf4bee534527"
+          },
+          {
+            "selectedVariable": [
+              "D_surgical"
+            ],
+            "selectedRun": "ciemss-ebdcb00a-e3ee-4b9b-8a9f-bf4bee534527"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 28
+        },
+        "numSamples": 100
+      },
+      "inputs": [
+        {
+          "id": "542b0e4b-51a6-4b7c-93fd-024dce1f01cd",
+          "type": "modelConfigId",
+          "label": "cmCloth",
+          "status": "connected",
+          "value": [
+            "bae12e61-c0ca-462e-a553-553e428004c9"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "8949e430-e937-4d62-b9c3-923669614404",
+          "type": "simOutput",
+          "label": "cmCloth Results",
+          "value": [
+            "ciemss-ebdcb00a-e3ee-4b9b-8a9f-bf4bee534527"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "7c04965d-385c-4579-b705-40b55d18c68a",
+      "workflowId": "8c7624cb-bbbe-4efb-85e2-6e79695005cf",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 8.527662410847636,
+      "y": 678.6204321132122,
+      "state": {
+        "modelId": "f2c54b70-baa8-4e81-a94b-1a193d0a83aa",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "d067a0fe-f15a-40da-be54-2e49b0adf9e2",
+          "type": "modelConfigId",
+          "label": "cmClothbetter",
+          "value": [
+            "f5d0bc90-ae00-4240-a347-0c03103e8036"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "4e4d5289-afdb-407a-a59e-647b97f67247",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "d5b2ca0e-0d0f-4821-a7f9-1e62b6373dca"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "71d697bc-01cd-4865-8726-b49696c7385b",
+          "type": "modelConfigId",
+          "label": "cmCloth",
+          "value": [
+            "bae12e61-c0ca-462e-a553-553e428004c9"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "b0ca4e1f-161e-40c4-a2a7-6be9de4e610c",
+      "workflowId": "8c7624cb-bbbe-4efb-85e2-6e79695005cf",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 900,
+      "y": 209,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I_cloth"
+            ],
+            "selectedRun": "ciemss-ecb7dd9b-8fb2-4811-a30a-c25ae8bca2dc"
+          },
+          {
+            "selectedVariable": [
+              "I_surgical"
+            ],
+            "selectedRun": "ciemss-ecb7dd9b-8fb2-4811-a30a-c25ae8bca2dc"
+          },
+          {
+            "selectedVariable": [
+              "H_cloth"
+            ],
+            "selectedRun": "ciemss-ecb7dd9b-8fb2-4811-a30a-c25ae8bca2dc"
+          },
+          {
+            "selectedVariable": [
+              "H_surgical"
+            ],
+            "selectedRun": "ciemss-ecb7dd9b-8fb2-4811-a30a-c25ae8bca2dc"
+          },
+          {
+            "selectedVariable": [
+              "D_cloth"
+            ],
+            "selectedRun": "ciemss-ecb7dd9b-8fb2-4811-a30a-c25ae8bca2dc"
+          },
+          {
+            "selectedVariable": [
+              "D_surgical"
+            ],
+            "selectedRun": "ciemss-ecb7dd9b-8fb2-4811-a30a-c25ae8bca2dc"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 28
+        },
+        "numSamples": 100
+      },
+      "inputs": [
+        {
+          "id": "ebc157d2-b9f4-40dd-9bf5-5d3c960e5a36",
+          "type": "modelConfigId",
+          "label": "cmClothbetter",
+          "status": "connected",
+          "value": [
+            "f5d0bc90-ae00-4240-a347-0c03103e8036"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "20c1d5ac-a2b4-4ad9-95c9-79aed297bd0e",
+          "type": "simOutput",
+          "label": "cmClothbetter Results",
+          "value": [
+            "ciemss-ecb7dd9b-8fb2-4811-a30a-c25ae8bca2dc"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "ebc866ca-c3f8-4b10-8e21-45796f8a9e34",
+      "workflowId": "8c7624cb-bbbe-4efb-85e2-6e79695005cf",
+      "source": "e5edc9b1-c9af-43e2-b3b3-da2a3d6fbd45",
+      "sourcePortId": "549762ba-0595-46cc-8cb8-010ea99cf989",
+      "target": "51529153-c6d1-4a58-b475-dab07c6db8e8",
+      "targetPortId": "542b0e4b-51a6-4b7c-93fd-024dce1f01cd",
+      "points": [
+        {
+          "x": 344,
+          "y": 424
+        },
+        {
+          "x": 427,
+          "y": 265
+        }
+      ]
+    },
+    {
+      "id": "5440758f-5f77-45d8-8af6-e6bbcc7b72e8",
+      "workflowId": "8c7624cb-bbbe-4efb-85e2-6e79695005cf",
+      "source": "7c04965d-385c-4579-b705-40b55d18c68a",
+      "sourcePortId": "d067a0fe-f15a-40da-be54-2e49b0adf9e2",
+      "target": "b0ca4e1f-161e-40c4-a2a7-6be9de4e610c",
+      "targetPortId": "ebc157d2-b9f4-40dd-9bf5-5d3c960e5a36",
+      "points": [
+        {
+          "x": 288.52766241084765,
+          "y": 886.6204321132122
+        },
+        {
+          "x": 900,
+          "y": 263
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": 201.65131452199583,
+    "y": -10.44218405265832,
+    "k": 0.6579272625145038
+  }
+}

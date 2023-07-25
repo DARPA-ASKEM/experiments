@@ -21,9 +21,6 @@ from tqdm import tqdm
 # %%
 URL_DATA = 'http://data-service.staging.terarium.ai'
 URL_SIM = 'http://simulation-service.staging.terarium.ai'
-PATH = '../../thin-thread-examples/milestone_12month/evaluation/ensemble_eval_SA'
-
-project_id = '46'
 
 # %%
 def mkdir_write(path: str, filename: str, data: Any) -> NoReturn:
@@ -49,51 +46,87 @@ def get_terarium_project(project_id: str) -> NoReturn:
 
     # Get project metadata
     re = requests.get(url = URL_DATA + f'/projects/{project_id}')
-    project = re.json()
-    mkdir_write(PATH, 'project.json', project)
+    if re.status_code == 200:
+        project = re.json()
+        mkdir_write(PATH, 'project.json', project)
 
     # Get datasets
     re = requests.get(url = URL_DATA + f'/projects/{project_id}/assets')
-    assets = re.json()
-    print(f'{len(assets["datasets"])} datasets \n{len(assets["models"])} models')
+    if re.status_code == 200:
+        assets = re.json()
 
-    for asset_type in ['datasets', 'models']:
+        for asset_type in assets.keys():
+            print(f"{len(assets[asset_type])} {asset_type}")
 
-        for asset in tqdm(assets[asset_type]):
+    for asset_type in assets.keys():
 
-            # Save metadata
-            asset_id = asset['id']
-            mkdir_write(PATH + f'/{asset_type}/{asset_id}', f'{asset_type[:-1]}.json', asset)
+        if asset_type in ('datasets', 'models', 'workflows', 'artifacts', 'publications'):
 
-            # Datasets (CSV)
-            if asset_type == 'datasets':
-                for filename in asset['file_names']:
+            for asset in tqdm(assets[asset_type]):
 
-                    # Get download URL 
-                    re = requests.get(url = URL_DATA + f'/{asset_type}/{asset_id}/download-url', params = {'filename': filename})
-                    download_url = re.json()['url']
+                # Save metadata
+                asset_id = asset['id']
+                mkdir_write(PATH + f'/{asset_type}/{asset_id}', f'{asset_type[:-1]}.json', asset)
 
-                    # Get file
-                    re = requests.get(url = download_url)
-                    data = [row.split(',') for row in re.content.decode('utf-8').split('\n')]
-                    mkdir_write(PATH + f'/{asset_type}/{asset_id}', filename, data)
-            
+                # Datasets (CSV)
+                if asset_type in ('datasets', 'artifacts'):
+                    for filename in asset['file_names']:
+                        
+                        # Get download URL 
+                        re = requests.get(url = URL_DATA + f'/{asset_type}/{asset_id}/download-url', params = {'filename': filename})
+                        if re.status_code == 200:
+                            download_url = re.json()['url']
 
-            # Models
-            if asset_type == 'models':
+                        # Get file
+                        re = requests.get(url = download_url)
+                        if re.status_code == 200:
+                            data = [row.split(',') for row in re.content.decode('utf-8').split('\n')]
+                            mkdir_write(PATH + f'/{asset_type}/{asset_id}', filename, data)
 
-                # Get model AMR
-                filename = 'model_amr.json'
-                re = requests.get(url = URL_DATA + f'/{asset_type}/{asset_id}')
-                data = re.json()
-                mkdir_write(PATH + f'/{asset_type}/{asset_id}', filename, data)
+                # Models
+                if asset_type == 'models':
 
-                # Get model configurations
-                re = requests.get(url = URL_DATA + f'/{asset_type}/{asset_id}/model_configurations')
-                filename = 'model_configuration.json'
-                for model_configuration in re.json():
-                    config_id = model_configuration['id']
-                    mkdir_write(PATH + f'/{asset_type}/{asset_id}/model_configurations/{config_id}', filename, model_configuration)
+                    # Get model AMR
+                    filename = 'model_amr.json'
+                    re = requests.get(url = URL_DATA + f'/{asset_type}/{asset_id}')
+                    if re.status_code == 200:
+                        data = re.json()
+                        mkdir_write(PATH + f'/{asset_type}/{asset_id}', filename, data)
 
+                    # Get model configurations
+                    filename = 'model_configuration.json'
+                    re = requests.get(url = URL_DATA + f'/{asset_type}/{asset_id}/model_configurations')
+                    if re.status_code == 200:
+                        for model_configuration in re.json():
+                            config_id = model_configuration['id']
+                            mkdir_write(PATH + f'/{asset_type}/{asset_id}/model_configurations/{config_id}', filename, model_configuration)
+
+                # Workflows
+                if asset_type == 'workflows':
+
+                    filename = 'workflow.json'
+                    re = requests.get(url = URL_DATA + f'/{asset_type}/{asset_id}')
+                    if re.status_code == 200:
+                        data = re.json()
+                        mkdir_write(PATH + f'/{asset_type}/{asset_id}', filename, data)
+
+                # Publications
+                if asset_type == 'publications':
+
+                    filename = 'publication.json'
+                    re = requests.get(url = URL_DATA + f'/external/{asset_type}/{asset_id}')
+                    if re.status_code == 200:
+                        data = re.json()
+                        mkdir_write(PATH + f'/{asset_type}/{asset_id}', filename, data)
 
 # %%
+# Pascale evaluation project
+PATH = '../../thin-thread-examples/milestone_12month/evaluation/EVAL'
+project_id = '37'
+get_terarium_project(project_id)
+
+# %%
+# Sabina ensemble challenge project
+PATH = '../../thin-thread-examples/milestone_12month/evaluation/ensemble_eval_SA'
+project_id = '46' 
+get_terarium_project(project_id)

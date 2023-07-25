@@ -1,0 +1,552 @@
+{
+  "id": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+  "timestamp": "2023-07-18 15:21:09",
+  "name": "masktype2",
+  "description": "",
+  "nodes": [
+    {
+      "id": "0110ed4f-3e7b-4ebd-8cbe-26a3bb262404",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 25,
+      "y": 162,
+      "state": {
+        "modelId": "1146b2bf-c459-47a4-8353-e1d1ed828382",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "93019d78-0988-4e8b-a6f7-0247ed321a6b",
+          "type": "modelConfigId",
+          "label": "cm80",
+          "value": [
+            "5cdb8458-2bd1-4ab4-993e-551931719c44"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "74effdfb-aa0b-448a-9c90-2ed6e5e46469",
+          "type": "modelConfigId",
+          "label": "cm60",
+          "value": [
+            "58a67339-da0c-4a2b-8819-267af05659ed"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "af2fa2d1-0b23-405d-a353-4854f255ba53",
+          "type": "modelConfigId",
+          "label": "cm40",
+          "value": [
+            "acba9a9b-0d5d-4a91-9804-fc1e9026275a"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "0914b32e-e150-426e-bf38-d0b3cb327764",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "b2f27892-f55b-421d-9cb4-9ad23e2fa41a"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "0f71c47a-67dc-4049-acb1-d9dd61f993f8",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 377,
+      "y": 161,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I"
+            ],
+            "selectedRun": "ciemss-b233f667-9d32-4fa4-83f7-f9444ae3e07d"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 28
+        },
+        "numSamples": 100
+      },
+      "inputs": [
+        {
+          "id": "e8250e5c-a95b-4265-ab5f-f92b05e9ce90",
+          "type": "modelConfigId",
+          "label": "cm40",
+          "status": "connected",
+          "value": [
+            "acba9a9b-0d5d-4a91-9804-fc1e9026275a"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "662717a6-e237-42cb-a456-6fdfcc72b964",
+          "type": "simOutput",
+          "label": "cm40 Results",
+          "value": [
+            "ciemss-b233f667-9d32-4fa4-83f7-f9444ae3e07d"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "f525f502-b049-4044-ae59-ebec468e1a9c",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 826,
+      "y": 160,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I"
+            ],
+            "selectedRun": "ciemss-10f09f6a-7a79-426d-b3d6-9ac77f41522d"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 28
+        },
+        "numSamples": 100
+      },
+      "inputs": [
+        {
+          "id": "bb741c28-c2bc-4ac4-9252-ae976a73f0c5",
+          "type": "modelConfigId",
+          "label": "cm60",
+          "status": "connected",
+          "value": [
+            "58a67339-da0c-4a2b-8819-267af05659ed"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "956db319-ae77-4257-8542-959aa29b9739",
+          "type": "simOutput",
+          "label": "cm60 Results",
+          "value": [
+            "ciemss-10f09f6a-7a79-426d-b3d6-9ac77f41522d"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "e575c886-816c-4fc5-92b6-ccd556b8a9e3",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 1278,
+      "y": 159,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I"
+            ],
+            "selectedRun": "ciemss-56fc0c0b-058a-472a-82a7-08ae806dcfe2"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 28
+        },
+        "numSamples": 100
+      },
+      "inputs": [
+        {
+          "id": "b30494e2-97af-469a-850c-a3b6fda2d747",
+          "type": "modelConfigId",
+          "label": "cm80",
+          "status": "connected",
+          "value": [
+            "5cdb8458-2bd1-4ab4-993e-551931719c44"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "a5ffb0ce-294b-4483-8b03-514a9111806c",
+          "type": "simOutput",
+          "label": "cm80 Results",
+          "value": [
+            "ciemss-56fc0c0b-058a-472a-82a7-08ae806dcfe2"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "62cd02c5-9a7f-422c-b998-4c9ff72ad4f6",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 18.386803697268654,
+      "y": 729.8380746774156,
+      "state": {
+        "modelId": "1146b2bf-c459-47a4-8353-e1d1ed828382",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "7c8564ba-d7e7-4f13-978b-114a69f99bb5",
+          "type": "modelConfigId",
+          "label": "baseline",
+          "value": [
+            "e0f07cec-d3ac-45c7-8105-718c87b4a562"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "c17a5632-53cb-47a2-9575-e094a0dbacb2",
+          "type": "modelConfigId",
+          "label": "SocialDistancingHalfPre",
+          "value": [
+            "b912927b-03b5-4287-8804-fb8abd65ef45"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "614c8061-4a43-412b-b45f-983498331c83",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "b2f27892-f55b-421d-9cb4-9ad23e2fa41a"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "fd69a3f6-a01a-4650-a67b-056c48dfd1d6",
+          "type": "modelConfigId",
+          "label": "SocialDistancingPrePost",
+          "value": [
+            "06ed143a-cc8d-45bf-87ff-4432e747aa96"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "b48c49f0-ccf8-4d74-ba89-1374d860286f",
+          "type": "modelConfigId",
+          "label": "cm80",
+          "value": [
+            "5cdb8458-2bd1-4ab4-993e-551931719c44"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "ac43679e-f5b2-41ef-9de2-2c479f8d5b6d",
+          "type": "modelConfigId",
+          "label": "cm60",
+          "value": [
+            "58a67339-da0c-4a2b-8819-267af05659ed"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "dc190eca-0890-4ec4-9c71-67f63db502dc",
+          "type": "modelConfigId",
+          "label": "cm40",
+          "value": [
+            "acba9a9b-0d5d-4a91-9804-fc1e9026275a"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "a7b61249-e959-422c-aa0c-e1665db90e72",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 374,
+      "y": 718,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I"
+            ],
+            "selectedRun": "ciemss-b828a353-b03c-411c-88db-be1001edadcd"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 28
+        },
+        "numSamples": 100
+      },
+      "inputs": [
+        {
+          "id": "0251b65f-dbeb-4c92-a38b-7df067298468",
+          "type": "modelConfigId",
+          "label": "baseline",
+          "status": "connected",
+          "value": [
+            "e0f07cec-d3ac-45c7-8105-718c87b4a562"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "55319ccb-50bb-464c-95e3-5d110d663f55",
+          "type": "simOutput",
+          "label": "baseline Results",
+          "value": [
+            "ciemss-b828a353-b03c-411c-88db-be1001edadcd"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "536a936c-2de5-4031-a9b2-a4ac2fae40b7",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 887,
+      "y": 723,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I"
+            ],
+            "selectedRun": "ciemss-14c13e00-7553-47af-a343-87fc1109809a"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 28
+        },
+        "numSamples": 100
+      },
+      "inputs": [
+        {
+          "id": "5d446d25-db39-4f50-8e88-e64c3ef42ab3",
+          "type": "modelConfigId",
+          "label": "SocialDistancingHalfPre",
+          "status": "connected",
+          "value": [
+            "b912927b-03b5-4287-8804-fb8abd65ef45"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "4a0e5567-64fa-4c8f-900d-1995169d4be4",
+          "type": "simOutput",
+          "label": "SocialDistancingHalfPre Results",
+          "value": [
+            "ciemss-14c13e00-7553-47af-a343-87fc1109809a"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "ff413070-fd35-4cd9-b69c-a48bc5e8bc01",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 1357,
+      "y": 715.7238662125233,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I"
+            ],
+            "selectedRun": "ciemss-b2513760-1e46-4423-af2c-b67095610452"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 28
+        },
+        "numSamples": 100
+      },
+      "inputs": [
+        {
+          "id": "103cda19-0d09-4e48-9a3a-112c0ae8758f",
+          "type": "modelConfigId",
+          "label": "SocialDistancingPrePost",
+          "status": "connected",
+          "value": [
+            "06ed143a-cc8d-45bf-87ff-4432e747aa96"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "6aef7028-9180-4426-8e3c-2614f07f33e3",
+          "type": "simOutput",
+          "label": "SocialDistancingPrePost Results",
+          "value": [
+            "ciemss-b2513760-1e46-4423-af2c-b67095610452"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "c14cc176-ee4e-4fe9-b386-e4f8de86c478",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "source": "0110ed4f-3e7b-4ebd-8cbe-26a3bb262404",
+      "sourcePortId": "af2fa2d1-0b23-405d-a353-4854f255ba53",
+      "target": "0f71c47a-67dc-4049-acb1-d9dd61f993f8",
+      "targetPortId": "e8250e5c-a95b-4265-ab5f-f92b05e9ce90",
+      "points": [
+        {
+          "x": 305,
+          "y": 449
+        },
+        {
+          "x": 377,
+          "y": 215
+        }
+      ]
+    },
+    {
+      "id": "68368807-10e8-4538-b5f5-0349a3a2b98c",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "source": "0110ed4f-3e7b-4ebd-8cbe-26a3bb262404",
+      "sourcePortId": "74effdfb-aa0b-448a-9c90-2ed6e5e46469",
+      "target": "f525f502-b049-4044-ae59-ebec468e1a9c",
+      "targetPortId": "bb741c28-c2bc-4ac4-9252-ae976a73f0c5",
+      "points": [
+        {
+          "x": 305,
+          "y": 419
+        },
+        {
+          "x": 826,
+          "y": 214
+        }
+      ]
+    },
+    {
+      "id": "b77638c9-1f61-46b3-b122-132b7ace0bda",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "source": "0110ed4f-3e7b-4ebd-8cbe-26a3bb262404",
+      "sourcePortId": "93019d78-0988-4e8b-a6f7-0247ed321a6b",
+      "target": "e575c886-816c-4fc5-92b6-ccd556b8a9e3",
+      "targetPortId": "b30494e2-97af-469a-850c-a3b6fda2d747",
+      "points": [
+        {
+          "x": 305,
+          "y": 389
+        },
+        {
+          "x": 1278,
+          "y": 213
+        }
+      ]
+    },
+    {
+      "id": "156b46d5-00d1-4757-ad52-4a683318be9b",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "source": "62cd02c5-9a7f-422c-b998-4c9ff72ad4f6",
+      "sourcePortId": "7c8564ba-d7e7-4f13-978b-114a69f99bb5",
+      "target": "a7b61249-e959-422c-aa0c-e1665db90e72",
+      "targetPortId": "0251b65f-dbeb-4c92-a38b-7df067298468",
+      "points": [
+        {
+          "x": 298.38680369726876,
+          "y": 956.8380746774156
+        },
+        {
+          "x": 374,
+          "y": 772
+        }
+      ]
+    },
+    {
+      "id": "0a923d90-6bda-4e94-8316-f39d9b94d4ce",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "source": "62cd02c5-9a7f-422c-b998-4c9ff72ad4f6",
+      "sourcePortId": "c17a5632-53cb-47a2-9575-e094a0dbacb2",
+      "target": "536a936c-2de5-4031-a9b2-a4ac2fae40b7",
+      "targetPortId": "5d446d25-db39-4f50-8e88-e64c3ef42ab3",
+      "points": [
+        {
+          "x": 298.38680369726876,
+          "y": 986.8380746774156
+        },
+        {
+          "x": 887,
+          "y": 777
+        }
+      ]
+    },
+    {
+      "id": "cbd7a0f0-b6af-4658-bc10-ab098c837f25",
+      "workflowId": "6ee4000c-3c8b-47c7-889c-bf54fb12a3e5",
+      "source": "62cd02c5-9a7f-422c-b998-4c9ff72ad4f6",
+      "sourcePortId": "fd69a3f6-a01a-4650-a67b-056c48dfd1d6",
+      "target": "ff413070-fd35-4cd9-b69c-a48bc5e8bc01",
+      "targetPortId": "103cda19-0d09-4e48-9a3a-112c0ae8758f",
+      "points": [
+        {
+          "x": 298.38680369726876,
+          "y": 1046.8380746774149
+        },
+        {
+          "x": 1357,
+          "y": 769.7238662125233
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": 120.08850308186629,
+    "y": 88.75798765867921,
+    "k": 0.5280791520144866
+  }
+}

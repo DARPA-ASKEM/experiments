@@ -1,0 +1,16 @@
+{
+  "id": "db851501-09e4-42ab-8cdb-3748d8449639",
+  "timestamp": "2023-07-18T14:41:08",
+  "username": "Pascale Proulx",
+  "name": "2021-07-15-vaccine_rates",
+  "description": "2021-07-15-vaccine_rates.csv",
+  "data_source_date": null,
+  "file_names": [
+    "2021-07-15-vaccine_rates.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

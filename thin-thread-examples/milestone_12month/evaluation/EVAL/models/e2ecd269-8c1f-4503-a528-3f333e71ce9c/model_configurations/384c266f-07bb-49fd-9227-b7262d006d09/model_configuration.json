@@ -1,0 +1,682 @@
+{
+  "id": "384c266f-07bb-49fd-9227-b7262d006d09",
+  "name": "cm40",
+  "description": "Default config",
+  "timestamp": "2023-07-17T21:04:14",
+  "model_id": "e2ecd269-8c1f-4503-a528-3f333e71ce9c",
+  "configuration": {
+    "id": "e2ecd269-8c1f-4503-a528-3f333e71ce9c",
+    "name": "StratSc1aii3",
+    "description": "Evaluation Scenario 1 Base model\nTransformed from model 'Evaluation Scenario 1 Base model 1aii3' at Mon Jul 17 20:29:37 2023 ",
+    "model_version": "0.1",
+    "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+    "schema_name": "petrinet",
+    "model": {
+      "states": [
+        {
+          "id": "S_masked",
+          "name": "S",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000514"
+            },
+            "modifiers": {
+              "mask_status": "masked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "I_masked",
+          "name": "I",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000511"
+            },
+            "modifiers": {
+              "mask_status": "masked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "E_masked",
+          "name": "E",
+          "grounding": {
+            "identifiers": {
+              "apollosv": "0000154"
+            },
+            "modifiers": {
+              "mask_status": "masked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "I_unmasked",
+          "name": "I",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000511"
+            },
+            "modifiers": {
+              "mask_status": "unmasked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "S_unmasked",
+          "name": "S",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000514"
+            },
+            "modifiers": {
+              "mask_status": "unmasked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "E_unmasked",
+          "name": "E",
+          "grounding": {
+            "identifiers": {
+              "apollosv": "0000154"
+            },
+            "modifiers": {
+              "mask_status": "unmasked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "R_masked",
+          "name": "R",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000592"
+            },
+            "modifiers": {
+              "mask_status": "masked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "R_unmasked",
+          "name": "R",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000592"
+            },
+            "modifiers": {
+              "mask_status": "unmasked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "H_masked",
+          "name": "H",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000511"
+            },
+            "modifiers": {
+              "property": "ncit:C25179",
+              "mask_status": "masked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "H_unmasked",
+          "name": "H",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000511"
+            },
+            "modifiers": {
+              "property": "ncit:C25179",
+              "mask_status": "unmasked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "D_masked",
+          "name": "D",
+          "grounding": {
+            "identifiers": {
+              "ncit": "C28554"
+            },
+            "modifiers": {
+              "mask_status": "masked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "D_unmasked",
+          "name": "D",
+          "grounding": {
+            "identifiers": {
+              "ncit": "C28554"
+            },
+            "modifiers": {
+              "mask_status": "unmasked"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        }
+      ],
+      "transitions": [
+        {
+          "id": "t1",
+          "input": [
+            "I_masked",
+            "S_masked"
+          ],
+          "output": [
+            "E_masked",
+            "I_masked"
+          ],
+          "properties": {
+            "name": "t1"
+          }
+        },
+        {
+          "id": "t2",
+          "input": [
+            "I_unmasked",
+            "S_masked"
+          ],
+          "output": [
+            "E_masked",
+            "I_unmasked"
+          ],
+          "properties": {
+            "name": "t2"
+          }
+        },
+        {
+          "id": "t3",
+          "input": [
+            "I_unmasked",
+            "S_unmasked"
+          ],
+          "output": [
+            "E_unmasked",
+            "I_unmasked"
+          ],
+          "properties": {
+            "name": "t3"
+          }
+        },
+        {
+          "id": "t4",
+          "input": [
+            "I_masked",
+            "S_unmasked"
+          ],
+          "output": [
+            "E_unmasked",
+            "I_masked"
+          ],
+          "properties": {
+            "name": "t4"
+          }
+        },
+        {
+          "id": "t5",
+          "input": [
+            "E_masked"
+          ],
+          "output": [
+            "I_masked"
+          ],
+          "properties": {
+            "name": "t5"
+          }
+        },
+        {
+          "id": "t6",
+          "input": [
+            "E_unmasked"
+          ],
+          "output": [
+            "I_unmasked"
+          ],
+          "properties": {
+            "name": "t6"
+          }
+        },
+        {
+          "id": "t7",
+          "input": [
+            "I_masked"
+          ],
+          "output": [
+            "R_masked"
+          ],
+          "properties": {
+            "name": "t7"
+          }
+        },
+        {
+          "id": "t8",
+          "input": [
+            "I_unmasked"
+          ],
+          "output": [
+            "R_unmasked"
+          ],
+          "properties": {
+            "name": "t8"
+          }
+        },
+        {
+          "id": "t9",
+          "input": [
+            "I_masked"
+          ],
+          "output": [
+            "H_masked"
+          ],
+          "properties": {
+            "name": "t9"
+          }
+        },
+        {
+          "id": "t10",
+          "input": [
+            "I_unmasked"
+          ],
+          "output": [
+            "H_unmasked"
+          ],
+          "properties": {
+            "name": "t10"
+          }
+        },
+        {
+          "id": "t11",
+          "input": [
+            "H_masked"
+          ],
+          "output": [
+            "R_masked"
+          ],
+          "properties": {
+            "name": "t11"
+          }
+        },
+        {
+          "id": "t12",
+          "input": [
+            "H_unmasked"
+          ],
+          "output": [
+            "R_unmasked"
+          ],
+          "properties": {
+            "name": "t12"
+          }
+        },
+        {
+          "id": "t13",
+          "input": [
+            "H_masked"
+          ],
+          "output": [
+            "D_masked"
+          ],
+          "properties": {
+            "name": "t13"
+          }
+        },
+        {
+          "id": "t14",
+          "input": [
+            "H_unmasked"
+          ],
+          "output": [
+            "D_unmasked"
+          ],
+          "properties": {
+            "name": "t14"
+          }
+        }
+      ]
+    },
+    "semantics": {
+      "ode": {
+        "rates": [
+          {
+            "target": "t1",
+            "expression": "I_masked*S_masked*beta_0/N_0",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_masked</ci><ci>S_masked</ci><ci>beta_0</ci></apply><ci>N_0</ci></apply>"
+          },
+          {
+            "target": "t2",
+            "expression": "I_unmasked*S_masked*beta_1/N_1",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_unmasked</ci><ci>S_masked</ci><ci>beta_1</ci></apply><ci>N_1</ci></apply>"
+          },
+          {
+            "target": "t3",
+            "expression": "I_unmasked*S_unmasked*beta_2/N_2",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_unmasked</ci><ci>S_unmasked</ci><ci>beta_2</ci></apply><ci>N_2</ci></apply>"
+          },
+          {
+            "target": "t4",
+            "expression": "I_masked*S_unmasked*beta_3/N_3",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_masked</ci><ci>S_unmasked</ci><ci>beta_3</ci></apply><ci>N_3</ci></apply>"
+          },
+          {
+            "target": "t5",
+            "expression": "E_masked*r_E_to_I_0",
+            "expression_mathml": "<apply><times/><ci>E_masked</ci><ci>r_E_to_I_0</ci></apply>"
+          },
+          {
+            "target": "t6",
+            "expression": "E_unmasked*r_E_to_I_1",
+            "expression_mathml": "<apply><times/><ci>E_unmasked</ci><ci>r_E_to_I_1</ci></apply>"
+          },
+          {
+            "target": "t7",
+            "expression": "I_masked*p_I_to_R_0*r_I_to_R_0",
+            "expression_mathml": "<apply><times/><ci>I_masked</ci><ci>p_I_to_R_0</ci><ci>r_I_to_R_0</ci></apply>"
+          },
+          {
+            "target": "t8",
+            "expression": "I_unmasked*p_I_to_R_1*r_I_to_R_1",
+            "expression_mathml": "<apply><times/><ci>I_unmasked</ci><ci>p_I_to_R_1</ci><ci>r_I_to_R_1</ci></apply>"
+          },
+          {
+            "target": "t9",
+            "expression": "I_masked*p_I_to_H_0*r_I_to_H_0",
+            "expression_mathml": "<apply><times/><ci>I_masked</ci><ci>p_I_to_H_0</ci><ci>r_I_to_H_0</ci></apply>"
+          },
+          {
+            "target": "t10",
+            "expression": "I_unmasked*p_I_to_H_1*r_I_to_H_1",
+            "expression_mathml": "<apply><times/><ci>I_unmasked</ci><ci>p_I_to_H_1</ci><ci>r_I_to_H_1</ci></apply>"
+          },
+          {
+            "target": "t11",
+            "expression": "H_masked*p_H_to_R_0*r_H_to_R_0",
+            "expression_mathml": "<apply><times/><ci>H_masked</ci><ci>p_H_to_R_0</ci><ci>r_H_to_R_0</ci></apply>"
+          },
+          {
+            "target": "t12",
+            "expression": "H_unmasked*p_H_to_R_1*r_H_to_R_1",
+            "expression_mathml": "<apply><times/><ci>H_unmasked</ci><ci>p_H_to_R_1</ci><ci>r_H_to_R_1</ci></apply>"
+          },
+          {
+            "target": "t13",
+            "expression": "H_masked*p_H_to_D_0*r_H_to_D_0",
+            "expression_mathml": "<apply><times/><ci>H_masked</ci><ci>p_H_to_D_0</ci><ci>r_H_to_D_0</ci></apply>"
+          },
+          {
+            "target": "t14",
+            "expression": "H_unmasked*p_H_to_D_1*r_H_to_D_1",
+            "expression_mathml": "<apply><times/><ci>H_unmasked</ci><ci>p_H_to_D_1</ci><ci>r_H_to_D_1</ci></apply>"
+          }
+        ],
+        "initials": [
+          {
+            "target": "S_masked",
+            "expression": "7681025.6",
+            "expression_mathml": "<cn>19339995.0</cn>"
+          },
+          {
+            "target": "I_masked",
+            "expression": "4270",
+            "expression_mathml": "<cn>4.0</cn>"
+          },
+          {
+            "target": "E_masked",
+            "expression": "1067.6",
+            "expression_mathml": "<cn>1.0</cn>"
+          },
+          {
+            "target": "I_unmasked",
+            "expression": "6405",
+            "expression_mathml": "<cn>4.0</cn>"
+          },
+          {
+            "target": "S_unmasked",
+            "expression": "11521538.4",
+            "expression_mathml": "<cn>19339995.0</cn>"
+          },
+          {
+            "target": "E_unmasked",
+            "expression": "1601.4",
+            "expression_mathml": "<cn>1.0</cn>"
+          },
+          {
+            "target": "R_masked",
+            "expression": "42639.2",
+            "expression_mathml": "<cn>0.0</cn>"
+          },
+          {
+            "target": "R_unmasked",
+            "expression": "63958.8",
+            "expression_mathml": "<cn>0.0</cn>"
+          },
+          {
+            "target": "H_masked",
+            "expression": "5054.8",
+            "expression_mathml": "<cn>0.0</cn>"
+          },
+          {
+            "target": "H_unmasked",
+            "expression": "7582.2",
+            "expression_mathml": "<cn>0.0</cn>"
+          },
+          {
+            "target": "D_masked",
+            "expression": "1942.8",
+            "expression_mathml": "<cn>0.0</cn>"
+          },
+          {
+            "target": "D_unmasked",
+            "expression": "2914.2",
+            "expression_mathml": "<cn>0.0</cn>"
+          }
+        ],
+        "parameters": [
+          {
+            "id": "N_0",
+            "value": 19340000
+          },
+          {
+            "id": "beta_0",
+            "value": 0.06,
+            "name": "Default",
+            "distribution": {
+              "type": "Uniform1",
+              "parameters": {
+                "minimum": "0.004",
+                "maximum": "0.06"
+              }
+            }
+          },
+          {
+            "id": "N_1",
+            "value": 19340000
+          },
+          {
+            "id": "beta_1",
+            "value": 0.12,
+            "name": "Default",
+            "distribution": {
+              "type": "Uniform1",
+              "parameters": {
+                "minimum": "0.04",
+                "maximum": "0.12"
+              }
+            }
+          },
+          {
+            "id": "N_2",
+            "value": 19340000
+          },
+          {
+            "id": "beta_2",
+            "value": 0.4
+          },
+          {
+            "id": "N_3",
+            "value": 19340000
+          },
+          {
+            "id": "beta_3",
+            "value": 0.2,
+            "name": "Default",
+            "distribution": {
+              "type": "Uniform1",
+              "parameters": {
+                "minimum": "0.04",
+                "maximum": "0.2"
+              }
+            }
+          },
+          {
+            "id": "r_E_to_I_0",
+            "value": 0.2
+          },
+          {
+            "id": "r_E_to_I_1",
+            "value": 0.2
+          },
+          {
+            "id": "p_I_to_R_0",
+            "value": 0.8
+          },
+          {
+            "id": "r_I_to_R_0",
+            "value": 0.07
+          },
+          {
+            "id": "p_I_to_R_1",
+            "value": 0.8
+          },
+          {
+            "id": "r_I_to_R_1",
+            "value": 0.07
+          },
+          {
+            "id": "p_I_to_H_0",
+            "value": 0.2
+          },
+          {
+            "id": "r_I_to_H_0",
+            "value": 0.1
+          },
+          {
+            "id": "p_I_to_H_1",
+            "value": 0.2
+          },
+          {
+            "id": "r_I_to_H_1",
+            "value": 0.1
+          },
+          {
+            "id": "p_H_to_R_0",
+            "value": 0.88
+          },
+          {
+            "id": "r_H_to_R_0",
+            "value": 0.1
+          },
+          {
+            "id": "p_H_to_R_1",
+            "value": 0.88
+          },
+          {
+            "id": "r_H_to_R_1",
+            "value": 0.1
+          },
+          {
+            "id": "p_H_to_D_0",
+            "value": 0.12
+          },
+          {
+            "id": "r_H_to_D_0",
+            "value": 0.1
+          },
+          {
+            "id": "p_H_to_D_1",
+            "value": 0.12
+          },
+          {
+            "id": "r_H_to_D_1",
+            "value": 0.1
+          }
+        ],
+        "observables": [],
+        "time": {
+          "id": "t",
+          "units": {
+            "expression": "day",
+            "expression_mathml": "<ci>day</ci>"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "annotations": {
+        "authors": [],
+        "references": [],
+        "locations": [],
+        "pathogens": [],
+        "diseases": [],
+        "hosts": [],
+        "model_types": []
+      }
+    }
+  },
+  "amr_configuration": null,
+  "calibrated": false,
+  "calibration": null,
+  "calibration_score": null
+}

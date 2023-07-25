@@ -1,0 +1,584 @@
+{
+  "id": "b90c7e38-f835-485f-81ca-3995d9320bbd",
+  "timestamp": "2023-07-18 19:42:04",
+  "name": "Evaluation 1 Scenario 1 b stratified for vaccination status",
+  "description": "Evaluation Scenario 1. Part 1 (ii) Masking type 1\nTransformed from model 'Evaluation Scenario 1. Part 1 (ii) Masking type 1' (2842c70b-9e98-4f55-b989-e8997c1558a3) at Tue Jul 18 19:42:04 2023 ",
+  "username": null,
+  "model": {
+    "states": [
+      {
+        "id": "S_unvaccinated",
+        "name": "S",
+        "grounding": {
+          "identifiers": {
+            "ido": "0000514"
+          },
+          "modifiers": {
+            "vaccination_status": "unvaccinated"
+          }
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      },
+      {
+        "id": "I_unvaccinated",
+        "name": "I",
+        "grounding": {
+          "identifiers": {
+            "ido": "0000511"
+          },
+          "modifiers": {
+            "vaccination_status": "unvaccinated"
+          }
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      },
+      {
+        "id": "E_unvaccinated",
+        "name": "E",
+        "grounding": {
+          "identifiers": {
+            "apollosv": "0000154"
+          },
+          "modifiers": {
+            "vaccination_status": "unvaccinated"
+          }
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      },
+      {
+        "id": "I_vaccinated",
+        "name": "I",
+        "grounding": {
+          "identifiers": {
+            "ido": "0000511"
+          },
+          "modifiers": {
+            "vaccination_status": "vaccinated"
+          }
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      },
+      {
+        "id": "S_vaccinated",
+        "name": "S",
+        "grounding": {
+          "identifiers": {
+            "ido": "0000514"
+          },
+          "modifiers": {
+            "vaccination_status": "vaccinated"
+          }
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      },
+      {
+        "id": "E_vaccinated",
+        "name": "E",
+        "grounding": {
+          "identifiers": {
+            "apollosv": "0000154"
+          },
+          "modifiers": {
+            "vaccination_status": "vaccinated"
+          }
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      },
+      {
+        "id": "R",
+        "name": "R",
+        "grounding": {
+          "identifiers": {
+            "ido": "0000592"
+          },
+          "modifiers": {}
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      },
+      {
+        "id": "H",
+        "name": "H",
+        "grounding": {
+          "identifiers": {
+            "ido": "0000511"
+          },
+          "modifiers": {
+            "property": "ncit:C25179"
+          }
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      },
+      {
+        "id": "D",
+        "name": "D",
+        "grounding": {
+          "identifiers": {
+            "ncit": "C28554"
+          },
+          "modifiers": {}
+        },
+        "units": {
+          "expression": "person",
+          "expression_mathml": "<ci>person</ci>"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "id": "t1",
+        "input": [
+          "I_unvaccinated",
+          "S_unvaccinated"
+        ],
+        "output": [
+          "I_unvaccinated",
+          "E_unvaccinated"
+        ],
+        "properties": {
+          "name": "t1"
+        }
+      },
+      {
+        "id": "t2",
+        "input": [
+          "I_vaccinated",
+          "S_unvaccinated"
+        ],
+        "output": [
+          "I_vaccinated",
+          "E_unvaccinated"
+        ],
+        "properties": {
+          "name": "t2"
+        }
+      },
+      {
+        "id": "t3",
+        "input": [
+          "I_vaccinated",
+          "S_vaccinated"
+        ],
+        "output": [
+          "I_vaccinated",
+          "E_vaccinated"
+        ],
+        "properties": {
+          "name": "t3"
+        }
+      },
+      {
+        "id": "t4",
+        "input": [
+          "I_unvaccinated",
+          "S_vaccinated"
+        ],
+        "output": [
+          "I_unvaccinated",
+          "E_vaccinated"
+        ],
+        "properties": {
+          "name": "t4"
+        }
+      },
+      {
+        "id": "t5",
+        "input": [
+          "E_unvaccinated"
+        ],
+        "output": [
+          "I_unvaccinated"
+        ],
+        "properties": {
+          "name": "t5"
+        }
+      },
+      {
+        "id": "t6",
+        "input": [
+          "E_vaccinated"
+        ],
+        "output": [
+          "I_vaccinated"
+        ],
+        "properties": {
+          "name": "t6"
+        }
+      },
+      {
+        "id": "t7",
+        "input": [
+          "I_unvaccinated"
+        ],
+        "output": [
+          "R"
+        ],
+        "properties": {
+          "name": "t7"
+        }
+      },
+      {
+        "id": "t8",
+        "input": [
+          "I_vaccinated"
+        ],
+        "output": [
+          "R"
+        ],
+        "properties": {
+          "name": "t8"
+        }
+      },
+      {
+        "id": "t9",
+        "input": [
+          "I_unvaccinated"
+        ],
+        "output": [
+          "H"
+        ],
+        "properties": {
+          "name": "t9"
+        }
+      },
+      {
+        "id": "t10",
+        "input": [
+          "I_vaccinated"
+        ],
+        "output": [
+          "H"
+        ],
+        "properties": {
+          "name": "t10"
+        }
+      },
+      {
+        "id": "t5",
+        "input": [
+          "H"
+        ],
+        "output": [
+          "R"
+        ],
+        "properties": {
+          "name": "t5"
+        }
+      },
+      {
+        "id": "t6",
+        "input": [
+          "H"
+        ],
+        "output": [
+          "D"
+        ],
+        "properties": {
+          "name": "t6"
+        }
+      },
+      {
+        "id": "t13",
+        "input": [
+          "S_unvaccinated"
+        ],
+        "output": [
+          "S_vaccinated"
+        ],
+        "properties": {
+          "name": "t13"
+        }
+      },
+      {
+        "id": "t14",
+        "input": [
+          "E_unvaccinated"
+        ],
+        "output": [
+          "E_vaccinated"
+        ],
+        "properties": {
+          "name": "t14"
+        }
+      },
+      {
+        "id": "t15",
+        "input": [
+          "I_unvaccinated"
+        ],
+        "output": [
+          "I_vaccinated"
+        ],
+        "properties": {
+          "name": "t15"
+        }
+      }
+    ]
+  },
+  "schema_name": "petrinet",
+  "model_version": "0.1",
+  "semantics": {
+    "ode": {
+      "rates": [
+        {
+          "target": "t1",
+          "expression": "I_unvaccinated*S_unvaccinated*beta_0*(-c_m_0*eps_m + 1)/N",
+          "expression_mathml": "<apply><divide/><apply><times/><ci>I_unvaccinated</ci><ci>S_unvaccinated</ci><ci>beta_0</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_0</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+        },
+        {
+          "target": "t2",
+          "expression": "I_vaccinated*S_unvaccinated*beta_1*(-c_m_1*eps_m + 1)/N",
+          "expression_mathml": "<apply><divide/><apply><times/><ci>I_vaccinated</ci><ci>S_unvaccinated</ci><ci>beta_1</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_1</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+        },
+        {
+          "target": "t3",
+          "expression": "I_vaccinated*S_vaccinated*beta_2*(-c_m_2*eps_m + 1)/N",
+          "expression_mathml": "<apply><divide/><apply><times/><ci>I_vaccinated</ci><ci>S_vaccinated</ci><ci>beta_2</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_2</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+        },
+        {
+          "target": "t4",
+          "expression": "I_unvaccinated*S_vaccinated*beta_3*(-c_m_3*eps_m + 1)/N",
+          "expression_mathml": "<apply><divide/><apply><times/><ci>I_unvaccinated</ci><ci>S_vaccinated</ci><ci>beta_3</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_3</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+        },
+        {
+          "target": "t5",
+          "expression": "E_unvaccinated*r_E_to_I",
+          "expression_mathml": "<apply><times/><ci>E_unvaccinated</ci><ci>r_E_to_I</ci></apply>"
+        },
+        {
+          "target": "t6",
+          "expression": "E_vaccinated*r_E_to_I",
+          "expression_mathml": "<apply><times/><ci>E_vaccinated</ci><ci>r_E_to_I</ci></apply>"
+        },
+        {
+          "target": "t7",
+          "expression": "I_unvaccinated*p_I_to_R*r_I_to_R",
+          "expression_mathml": "<apply><times/><ci>I_unvaccinated</ci><ci>p_I_to_R</ci><ci>r_I_to_R</ci></apply>"
+        },
+        {
+          "target": "t8",
+          "expression": "I_vaccinated*p_I_to_R*r_I_to_R",
+          "expression_mathml": "<apply><times/><ci>I_vaccinated</ci><ci>p_I_to_R</ci><ci>r_I_to_R</ci></apply>"
+        },
+        {
+          "target": "t9",
+          "expression": "I_unvaccinated*p_I_to_H*r_I_to_H",
+          "expression_mathml": "<apply><times/><ci>I_unvaccinated</ci><ci>p_I_to_H</ci><ci>r_I_to_H</ci></apply>"
+        },
+        {
+          "target": "t10",
+          "expression": "I_vaccinated*p_I_to_H*r_I_to_H",
+          "expression_mathml": "<apply><times/><ci>I_vaccinated</ci><ci>p_I_to_H</ci><ci>r_I_to_H</ci></apply>"
+        },
+        {
+          "target": "t5",
+          "expression": "H*p_H_to_R*r_H_to_R",
+          "expression_mathml": "<apply><times/><ci>H</ci><ci>p_H_to_R</ci><ci>r_H_to_R</ci></apply>"
+        },
+        {
+          "target": "t6",
+          "expression": "H*p_H_to_D*r_H_to_D",
+          "expression_mathml": "<apply><times/><ci>H</ci><ci>p_H_to_D</ci><ci>r_H_to_D</ci></apply>"
+        },
+        {
+          "target": "t13",
+          "expression": "S_unvaccinated*p_unvaccinated_vaccinated",
+          "expression_mathml": "<apply><times/><ci>S_unvaccinated</ci><ci>p_unvaccinated_vaccinated</ci></apply>"
+        },
+        {
+          "target": "t14",
+          "expression": "E_unvaccinated*p_unvaccinated_vaccinated",
+          "expression_mathml": "<apply><times/><ci>E_unvaccinated</ci><ci>p_unvaccinated_vaccinated</ci></apply>"
+        },
+        {
+          "target": "t15",
+          "expression": "I_unvaccinated*p_unvaccinated_vaccinated",
+          "expression_mathml": "<apply><times/><ci>I_unvaccinated</ci><ci>p_unvaccinated_vaccinated</ci></apply>"
+        }
+      ],
+      "initials": [
+        {
+          "target": "S_unvaccinated",
+          "expression": "9669997.50000000",
+          "expression_mathml": "<cn>9669997.5</cn>"
+        },
+        {
+          "target": "I_unvaccinated",
+          "expression": "2.00000000000000",
+          "expression_mathml": "<cn>2.0</cn>"
+        },
+        {
+          "target": "E_unvaccinated",
+          "expression": "0.500000000000000",
+          "expression_mathml": "<cn>0.5</cn>"
+        },
+        {
+          "target": "I_vaccinated",
+          "expression": "2.00000000000000",
+          "expression_mathml": "<cn>2.0</cn>"
+        },
+        {
+          "target": "S_vaccinated",
+          "expression": "9669997.50000000",
+          "expression_mathml": "<cn>9669997.5</cn>"
+        },
+        {
+          "target": "E_vaccinated",
+          "expression": "0.500000000000000",
+          "expression_mathml": "<cn>0.5</cn>"
+        },
+        {
+          "target": "R",
+          "expression": "0.0",
+          "expression_mathml": "<cn>0.0</cn>"
+        },
+        {
+          "target": "H",
+          "expression": "0.0",
+          "expression_mathml": "<cn>0.0</cn>"
+        },
+        {
+          "target": "D",
+          "expression": "0.0",
+          "expression_mathml": "<cn>0.0</cn>"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "N",
+          "value": 19340000.0
+        },
+        {
+          "id": "beta_0",
+          "value": 0.4
+        },
+        {
+          "id": "c_m_0",
+          "value": 0.5
+        },
+        {
+          "id": "eps_m",
+          "value": 0.5
+        },
+        {
+          "id": "beta_1",
+          "value": 0.4
+        },
+        {
+          "id": "c_m_1",
+          "value": 0.5
+        },
+        {
+          "id": "beta_2",
+          "value": 0.4
+        },
+        {
+          "id": "c_m_2",
+          "value": 0.5
+        },
+        {
+          "id": "beta_3",
+          "value": 0.4
+        },
+        {
+          "id": "c_m_3",
+          "value": 0.5
+        },
+        {
+          "id": "r_E_to_I",
+          "value": 0.2
+        },
+        {
+          "id": "p_I_to_R",
+          "value": 0.8
+        },
+        {
+          "id": "r_I_to_R",
+          "value": 0.07
+        },
+        {
+          "id": "p_I_to_H",
+          "value": 0.2
+        },
+        {
+          "id": "r_I_to_H",
+          "value": 0.1
+        },
+        {
+          "id": "p_H_to_R",
+          "value": 0.88
+        },
+        {
+          "id": "r_H_to_R",
+          "value": 0.1
+        },
+        {
+          "id": "p_H_to_D",
+          "value": 0.12
+        },
+        {
+          "id": "r_H_to_D",
+          "value": 0.1
+        },
+        {
+          "id": "p_unvaccinated_vaccinated",
+          "value": 0.1
+        }
+      ],
+      "observables": [
+        {
+          "id": "",
+          "name": "",
+          "expression": "D",
+          "expression_mathml": "<ci>D</ci>"
+        }
+      ],
+      "time": {
+        "id": "t",
+        "units": {
+          "expression": "day",
+          "expression_mathml": "<ci>day</ci>"
+        }
+      }
+    }
+  },
+  "metadata": {
+    "annotations": {
+      "license": null,
+      "authors": [],
+      "references": [],
+      "time_scale": null,
+      "time_start": null,
+      "time_end": null,
+      "locations": [],
+      "pathogens": [],
+      "diseases": [],
+      "hosts": [],
+      "model_types": []
+    }
+  },
+  "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json"
+}

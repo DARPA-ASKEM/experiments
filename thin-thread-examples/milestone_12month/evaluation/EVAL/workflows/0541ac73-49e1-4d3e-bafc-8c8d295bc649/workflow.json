@@ -1,0 +1,157 @@
+{
+  "id": "0541ac73-49e1-4d3e-bafc-8c8d295bc649",
+  "timestamp": "2023-07-19 18:14:21",
+  "name": "Sc1_2ci_SIMULATION",
+  "description": "",
+  "nodes": [
+    {
+      "id": "9e5b24f5-365b-4beb-8dc4-a1d67fd3b5f9",
+      "workflowId": "0541ac73-49e1-4d3e-bafc-8c8d295bc649",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 571.8930801292938,
+      "y": 63.948193830107215,
+      "state": {
+        "modelId": "0bddd38c-a9da-40f7-8385-d514c47ab57d",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "c467759e-8e05-4468-a79d-442ce66dab96",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "cf74d64c-041f-4aea-9c80-a6bc7ddb7e80"
+          ],
+          "status": "connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "854e71a7-3a57-4847-9334-02822efbe2f0",
+      "workflowId": "0541ac73-49e1-4d3e-bafc-8c8d295bc649",
+      "operationType": "SimulateJuliaOperation",
+      "displayName": "Simulate (deterministic)",
+      "x": 919,
+      "y": 71,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "H_0_4",
+              "H_10_14",
+              "H_15_19",
+              "H_20_24",
+              "H_25_29",
+              "H_30_34",
+              "H_35_39",
+              "H_40_44",
+              "H_45_49",
+              "H_50_54",
+              "H_55_59",
+              "H_5_9",
+              "H_60_64",
+              "H_65_69",
+              "H_70_74",
+              "H_75_79",
+              "H_80_84",
+              "H_85_101"
+            ],
+            "selectedRun": "sciml-f87ea5d2-3876-49c6-a21d-c4e682d4d46e"
+          },
+          {
+            "selectedVariable": [
+              "D_85_101",
+              "D_80_84",
+              "D_75_79",
+              "D_70_74",
+              "D_65_69",
+              "D_60_64",
+              "D_5_9",
+              "D_55_59",
+              "D_50_54",
+              "D_45_49",
+              "D_40_44",
+              "D_35_39",
+              "D_30_34",
+              "D_25_29",
+              "D_20_24",
+              "D_15_19",
+              "D_10_14",
+              "D_0_4"
+            ],
+            "selectedRun": "sciml-f87ea5d2-3876-49c6-a21d-c4e682d4d46e"
+          },
+          {
+            "selectedVariable": [
+              "I_15_19",
+              "E_15_19",
+              "H_15_19",
+              "D_15_19"
+            ],
+            "selectedRun": "sciml-f87ea5d2-3876-49c6-a21d-c4e682d4d46e"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 30
+        }
+      },
+      "inputs": [
+        {
+          "id": "78092787-7969-43fd-95bc-55eeacde020e",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "status": "connected",
+          "value": [
+            "cf74d64c-041f-4aea-9c80-a6bc7ddb7e80"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "a9983ca7-5e51-46e0-92b5-c28c1fa29a79",
+          "type": "simOutput",
+          "label": "Default config Results",
+          "value": [
+            "sciml-f87ea5d2-3876-49c6-a21d-c4e682d4d46e"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "4b77a878-94ab-42ca-8b28-6d4895f8ed35",
+      "workflowId": "0541ac73-49e1-4d3e-bafc-8c8d295bc649",
+      "source": "9e5b24f5-365b-4beb-8dc4-a1d67fd3b5f9",
+      "sourcePortId": "c467759e-8e05-4468-a79d-442ce66dab96",
+      "target": "854e71a7-3a57-4847-9334-02822efbe2f0",
+      "targetPortId": "78092787-7969-43fd-95bc-55eeacde020e",
+      "points": [
+        {
+          "x": 851.8930801292938,
+          "y": 272.94819383010713
+        },
+        {
+          "x": 919,
+          "y": 125
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": 291.091552365791,
+    "y": 23.252206061343713,
+    "k": 0.7012496253212007
+  }
+}

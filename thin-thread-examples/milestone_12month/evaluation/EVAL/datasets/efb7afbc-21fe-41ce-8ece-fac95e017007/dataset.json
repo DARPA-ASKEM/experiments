@@ -1,0 +1,16 @@
+{
+  "id": "efb7afbc-21fe-41ce-8ece-fac95e017007",
+  "timestamp": "2023-07-19T19:23:55",
+  "username": "Pascale Proulx",
+  "name": "log_viral_load_logv",
+  "description": "cRNA2_F2.csv\nTransformed from dataset 'cRNA2_F2' (f7c72a0d-4fea-49ac-99fe-2bb1d43fcddb) at Wed Jul 19 15:23:14 2023 \nTransformed from dataset 'log_viral_load_clean' (1ae45953-c8dd-4c4a-a5c7-9f2a4bf0fbd4) at Wed Jul 19 19:23:55 2023 ",
+  "data_source_date": null,
+  "file_names": [
+    "dataset.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

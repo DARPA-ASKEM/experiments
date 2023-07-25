@@ -1,0 +1,10 @@
+{
+  "id": "a5581e05-d03a-4cdf-8179-fdf810ed7eb4",
+  "timestamp": "2023-07-19T19:43:43",
+  "name": "ES3_detection_log10V2",
+  "description": "Scenario 3 base model\nTransformed from model 'Scenario 3 base model' (ada3d20a-cbc8-4bbd-b6b3-76446fb3cfdb) at Wed Jul 19 18:50:57 2023 \nTransformed from model 'ES3_detection' (f5a23011-ec01-4851-93bf-24baa4404fad) at Wed Jul 19 19:04:15 2023 \nTransformed from model 'ES3_detection_obs' (665605d7-9af9-4f82-af5a-1593ae1e7620) at Wed Jul 19 19:37:01 2023 \nTransformed from model 'ES3_detection_log10V' (aadda83d-11eb-4ddf-8f5a-bb8e8a13d98d) at Wed Jul 19 19:43:03 2023 ",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

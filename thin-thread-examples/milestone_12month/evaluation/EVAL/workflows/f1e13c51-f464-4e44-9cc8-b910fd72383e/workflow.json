@@ -1,0 +1,168 @@
+{
+  "id": "f1e13c51-f464-4e44-9cc8-b910fd72383e",
+  "timestamp": "2023-07-19 17:19:09",
+  "name": "Sc2q2b",
+  "description": "",
+  "nodes": [
+    {
+      "id": "f7762a0c-0dce-42aa-9882-59242e14a60a",
+      "workflowId": "f1e13c51-f464-4e44-9cc8-b910fd72383e",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 225,
+      "y": 224,
+      "state": {
+        "modelId": "6a3d8a2a-1dfe-4458-9e5f-eb825dccbcc9",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "20ba981d-a801-4b43-b5e5-f3bc42b9c33e",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "3a055a3d-9ba9-4d2a-8867-ab32a1e33c7c"
+          ],
+          "status": "connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "305fbdbe-ff06-48f5-9995-7ec13a05ab59",
+      "workflowId": "f1e13c51-f464-4e44-9cc8-b910fd72383e",
+      "operationType": "SimulateJuliaOperation",
+      "displayName": "Simulate (deterministic)",
+      "x": 625.1287574551291,
+      "y": 227.39711788122028,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I_unvax_0_9",
+              "H_0_9"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          },
+          {
+            "selectedVariable": [
+              "D_0_9"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          },
+          {
+            "selectedVariable": [
+              "I_unvax_10_19",
+              "I_unvax_0_9",
+              "I_unvax_20_plus"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          },
+          {
+            "selectedVariable": [
+              "I_vax1_10_19",
+              "I_vax1_20_plus",
+              "I_vax1_0_9"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          },
+          {
+            "selectedVariable": [
+              "I_vax2_0_9",
+              "I_vax2_10_19",
+              "I_vax2_20_plus"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          },
+          {
+            "selectedVariable": [
+              "I_vax2_0_9",
+              "I_vax2_10_19",
+              "I_vax2_20_plus"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          },
+          {
+            "selectedVariable": [
+              "H_20_plus",
+              "H_10_19",
+              "H_0_9"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          },
+          {
+            "selectedVariable": [
+              "D_0_9",
+              "D_10_19"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          },
+          {
+            "selectedVariable": [
+              "D_20_plus"
+            ],
+            "selectedRun": "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          }
+        ],
+        "currentTimespan": {
+          "start": 1,
+          "end": 30
+        }
+      },
+      "inputs": [
+        {
+          "id": "8539335d-ada5-4c1d-a751-3d11ec10cad8",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "status": "connected",
+          "value": [
+            "3a055a3d-9ba9-4d2a-8867-ab32a1e33c7c"
+          ],
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "8b20925b-7dd9-4034-8b72-d1b52503b546",
+          "type": "simOutput",
+          "label": "Default config Results",
+          "value": [
+            "sciml-8e6dd2b3-4afc-474b-8b64-fc6d44b76c95"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "98d16b7c-5ac7-4a19-87f9-61d3230e3ad6",
+      "workflowId": "f1e13c51-f464-4e44-9cc8-b910fd72383e",
+      "source": "f7762a0c-0dce-42aa-9882-59242e14a60a",
+      "sourcePortId": "20ba981d-a801-4b43-b5e5-f3bc42b9c33e",
+      "target": "305fbdbe-ff06-48f5-9995-7ec13a05ab59",
+      "targetPortId": "8539335d-ada5-4c1d-a751-3d11ec10cad8",
+      "points": [
+        {
+          "x": 505,
+          "y": 433
+        },
+        {
+          "x": 625.1287574551291,
+          "y": 281.39711788122014
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": 213.86229767393831,
+    "y": -1450.5737628402849,
+    "k": 0.7432914922155074
+  }
+}

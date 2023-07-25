@@ -1,0 +1,203 @@
+{
+  "id": "c569469d-f0b0-4628-9263-4dd654853d75",
+  "timestamp": "2023-07-19 19:47:03",
+  "name": "Sc3Q1",
+  "description": "",
+  "nodes": [
+    {
+      "id": "2ad8770c-0972-4d55-b2a8-e802a0f30e35",
+      "workflowId": "c569469d-f0b0-4628-9263-4dd654853d75",
+      "operationType": "Dataset",
+      "displayName": "Dataset",
+      "x": 349,
+      "y": 202,
+      "state": {
+        "datasetId": "efb7afbc-21fe-41ce-8ece-fac95e017007"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "b864d73d-8fd2-4456-8dcb-e92cdddeace5",
+          "type": "datasetId",
+          "label": "log_viral_load_logv",
+          "value": [
+            "efb7afbc-21fe-41ce-8ece-fac95e017007"
+          ],
+          "status": "connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "979c9fea-3e46-4edd-ba9f-5b5048b1e1ec",
+      "workflowId": "c569469d-f0b0-4628-9263-4dd654853d75",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 382,
+      "y": -187,
+      "state": {
+        "modelId": "aadda83d-11eb-4ddf-8f5a-bb8e8a13d98d",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "adf5c854-32c6-4ea9-a8bb-4b8d6b6db7f3",
+          "type": "modelConfigId",
+          "label": "Est",
+          "value": [
+            "1b63c84b-98d5-4554-a2e7-3e9f2bb364fa"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "b060a6c3-6c24-4339-bda5-7008a73fb657",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "2970b37f-d72e-4941-a021-8ce9052686f0"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "339df588-d9e5-403b-8622-423051099efe",
+      "workflowId": "c569469d-f0b0-4628-9263-4dd654853d75",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 521,
+      "y": 480,
+      "state": {
+        "modelId": "a5581e05-d03a-4cdf-8179-fdf810ed7eb4",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "903f6268-e2e2-4f98-924c-489c9543f357",
+          "type": "modelConfigId",
+          "label": "Est",
+          "value": [
+            "a28ec5c1-1bf5-4308-bcc2-ad7e2ddb5a14"
+          ],
+          "status": "connected"
+        },
+        {
+          "id": "265877f9-b8dc-40d9-b46a-8844921729b6",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "46d9bb98-fd5e-4771-ba63-d8a2ac8513c1"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "3be06fe8-702e-4db5-8c89-cc3bf79f04d8",
+          "type": "modelConfigId",
+          "label": "Copy of Default config",
+          "value": [
+            "583ca8b7-ac9e-49cb-a5c3-8cd0353fa20c"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "5bb809e5-4355-4b60-b4eb-1fdc4fb07c21",
+      "workflowId": "c569469d-f0b0-4628-9263-4dd654853d75",
+      "operationType": "CalibrationOperationCiemss",
+      "displayName": "Calibrate & Simulate (probabilistic)",
+      "x": 1040,
+      "y": 254,
+      "state": {
+        "chartConfigs": [],
+        "mapping": [
+          {
+            "modelVariable": "logV",
+            "datasetVariable": "logV"
+          }
+        ],
+        "timeSpan": {
+          "start": 0,
+          "end": 90
+        }
+      },
+      "inputs": [
+        {
+          "id": "bbb3aa1f-72eb-47a3-bce6-befa60244347",
+          "type": "modelConfigId",
+          "label": "Est",
+          "status": "connected",
+          "value": [
+            "a28ec5c1-1bf5-4308-bcc2-ad7e2ddb5a14"
+          ]
+        },
+        {
+          "id": "a88c2fe0-a043-4d1b-9fc1-ad402cc56b86",
+          "type": "datasetId",
+          "label": "log_viral_load_logv",
+          "status": "connected",
+          "value": [
+            "efb7afbc-21fe-41ce-8ece-fac95e017007"
+          ]
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "960cba27-3dad-4036-bb4e-c6c6717132dc",
+      "workflowId": "c569469d-f0b0-4628-9263-4dd654853d75",
+      "source": "2ad8770c-0972-4d55-b2a8-e802a0f30e35",
+      "sourcePortId": "b864d73d-8fd2-4456-8dcb-e92cdddeace5",
+      "target": "5bb809e5-4355-4b60-b4eb-1fdc4fb07c21",
+      "targetPortId": "a88c2fe0-a043-4d1b-9fc1-ad402cc56b86",
+      "points": [
+        {
+          "x": 629,
+          "y": 414
+        },
+        {
+          "x": 1040,
+          "y": 338
+        }
+      ]
+    },
+    {
+      "id": "3a57f3ea-8bb8-4f35-bbfa-1bf3a1dce416",
+      "workflowId": "c569469d-f0b0-4628-9263-4dd654853d75",
+      "source": "339df588-d9e5-403b-8622-423051099efe",
+      "sourcePortId": "903f6268-e2e2-4f98-924c-489c9543f357",
+      "target": "5bb809e5-4355-4b60-b4eb-1fdc4fb07c21",
+      "targetPortId": "bbb3aa1f-72eb-47a3-bce6-befa60244347",
+      "points": [
+        {
+          "x": 801,
+          "y": 689
+        },
+        {
+          "x": 1040,
+          "y": 308
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": -488.0,
+    "y": -327.0,
+    "k": 1.0
+  }
+}

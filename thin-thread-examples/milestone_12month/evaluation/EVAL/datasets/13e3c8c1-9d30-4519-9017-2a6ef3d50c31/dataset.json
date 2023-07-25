@@ -1,0 +1,16 @@
+{
+  "id": "13e3c8c1-9d30-4519-9017-2a6ef3d50c31",
+  "timestamp": "2023-07-17T17:32:11",
+  "username": "Pascale Proulx",
+  "name": "dynamic_Beta_28ints",
+  "description": "reviews_03-29-2023_18_18_31.csv\nTransformed from dataset 'reviews_03-29-2023_18_18_31' (abc02372-972a-428f-9e2b-4ef368480903) at Mon Jul 17 17:32:11 2023 ",
+  "data_source_date": null,
+  "file_names": [
+    "dataset.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

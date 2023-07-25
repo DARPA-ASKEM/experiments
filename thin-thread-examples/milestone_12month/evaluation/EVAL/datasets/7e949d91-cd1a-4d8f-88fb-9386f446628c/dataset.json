@@ -1,0 +1,16 @@
+{
+  "id": "7e949d91-cd1a-4d8f-88fb-9386f446628c",
+  "timestamp": "2023-07-19T15:44:29",
+  "username": "Pascale Proulx",
+  "name": "NY_AGE_POP_USE",
+  "description": "ny_age_pop.csv\nTransformed from dataset 'ny_age_pop' (63f72d72-73d5-4e9e-aa0f-320d61c80ef4) at Tue Jul 18 17:37:25 2023 \nTransformed from dataset 'ny_age_pop_clean2' (7d24a843-cf2f-4507-8194-0c22c6690595) at Tue Jul 18 17:39:10 2023 \nTransformed from dataset 'ny_age_pop_clean3' (2055f1bd-e077-4fee-8cd7-c243df51a909) at Tue Jul 18 17:40:07 2023 \nTransformed from dataset 'ny_age_pop_final' (61a1ce57-eb4b-46a4-80c1-884f54d2817b) at Wed Jul 19 15:44:29 2023 ",
+  "data_source_date": null,
+  "file_names": [
+    "dataset.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

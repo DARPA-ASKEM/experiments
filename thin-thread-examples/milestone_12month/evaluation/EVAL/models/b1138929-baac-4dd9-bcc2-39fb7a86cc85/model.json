@@ -1,0 +1,10 @@
+{
+  "id": "b1138929-baac-4dd9-bcc2-39fb7a86cc85",
+  "timestamp": "2023-07-18T17:50:26",
+  "name": "ES1_2ci_SEIHRD_b(t)_strat_initial",
+  "description": "Evaluation Scenario 1. Part 1 (ii) Masking type 2",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

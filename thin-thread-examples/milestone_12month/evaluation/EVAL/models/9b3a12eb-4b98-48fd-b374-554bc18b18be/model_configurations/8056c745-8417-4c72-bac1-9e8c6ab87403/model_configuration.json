@@ -1,0 +1,893 @@
+{
+  "id": "8056c745-8417-4c72-bac1-9e8c6ab87403",
+  "name": "base",
+  "description": "Default config",
+  "timestamp": "2023-07-18T20:22:49",
+  "model_id": "9b3a12eb-4b98-48fd-b374-554bc18b18be",
+  "configuration": {
+    "id": "9b3a12eb-4b98-48fd-b374-554bc18b18be",
+    "name": "ES2_1b_beta_set",
+    "description": "Evaluation Scenario 1. Part 1 (ii) Masking type 1\nTransformed from model 'Evaluation Scenario 1. Part 1 (ii) Masking type 1' (2842c70b-9e98-4f55-b989-e8997c1558a3) at Tue Jul 18 20:20:44 2023 ",
+    "model_version": "0.1",
+    "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.5/petrinet/petrinet_schema.json",
+    "schema_name": "petrinet",
+    "model": {
+      "states": [
+        {
+          "id": "S_unvax",
+          "name": "S",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000514"
+            },
+            "modifiers": {
+              "vaccination_status": "unvax"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "I_unvax",
+          "name": "I",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000511"
+            },
+            "modifiers": {
+              "vaccination_status": "unvax"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "E_unvax",
+          "name": "E",
+          "grounding": {
+            "identifiers": {
+              "apollosv": "0000154"
+            },
+            "modifiers": {
+              "vaccination_status": "unvax"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "I_vax1",
+          "name": "I",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000511"
+            },
+            "modifiers": {
+              "vaccination_status": "vax1"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "I_vax2",
+          "name": "I",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000511"
+            },
+            "modifiers": {
+              "vaccination_status": "vax2"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "S_vax1",
+          "name": "S",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000514"
+            },
+            "modifiers": {
+              "vaccination_status": "vax1"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "E_vax1",
+          "name": "E",
+          "grounding": {
+            "identifiers": {
+              "apollosv": "0000154"
+            },
+            "modifiers": {
+              "vaccination_status": "vax1"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "S_vax2",
+          "name": "S",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000514"
+            },
+            "modifiers": {
+              "vaccination_status": "vax2"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "E_vax2",
+          "name": "E",
+          "grounding": {
+            "identifiers": {
+              "apollosv": "0000154"
+            },
+            "modifiers": {
+              "vaccination_status": "vax2"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "R",
+          "name": "R",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000592"
+            },
+            "modifiers": {}
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "H",
+          "name": "H",
+          "grounding": {
+            "identifiers": {
+              "ido": "0000511"
+            },
+            "modifiers": {
+              "property": "ncit:C25179"
+            }
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        },
+        {
+          "id": "D",
+          "name": "D",
+          "grounding": {
+            "identifiers": {
+              "ncit": "C28554"
+            },
+            "modifiers": {}
+          },
+          "units": {
+            "expression": "person",
+            "expression_mathml": "<ci>person</ci>"
+          }
+        }
+      ],
+      "transitions": [
+        {
+          "id": "t1",
+          "input": [
+            "I_unvax",
+            "S_unvax"
+          ],
+          "output": [
+            "E_unvax",
+            "I_unvax"
+          ],
+          "properties": {
+            "name": "t1"
+          }
+        },
+        {
+          "id": "t2",
+          "input": [
+            "I_vax1",
+            "S_unvax"
+          ],
+          "output": [
+            "E_unvax",
+            "I_vax1"
+          ],
+          "properties": {
+            "name": "t2"
+          }
+        },
+        {
+          "id": "t3",
+          "input": [
+            "I_vax2",
+            "S_unvax"
+          ],
+          "output": [
+            "E_unvax",
+            "I_vax2"
+          ],
+          "properties": {
+            "name": "t3"
+          }
+        },
+        {
+          "id": "t4",
+          "input": [
+            "I_vax1",
+            "S_vax1"
+          ],
+          "output": [
+            "E_vax1",
+            "I_vax1"
+          ],
+          "properties": {
+            "name": "t4"
+          }
+        },
+        {
+          "id": "t5",
+          "input": [
+            "I_unvax",
+            "S_vax1"
+          ],
+          "output": [
+            "E_vax1",
+            "I_unvax"
+          ],
+          "properties": {
+            "name": "t5"
+          }
+        },
+        {
+          "id": "t6",
+          "input": [
+            "I_vax2",
+            "S_vax1"
+          ],
+          "output": [
+            "E_vax1",
+            "I_vax2"
+          ],
+          "properties": {
+            "name": "t6"
+          }
+        },
+        {
+          "id": "t7",
+          "input": [
+            "I_vax2",
+            "S_vax2"
+          ],
+          "output": [
+            "E_vax2",
+            "I_vax2"
+          ],
+          "properties": {
+            "name": "t7"
+          }
+        },
+        {
+          "id": "t8",
+          "input": [
+            "I_unvax",
+            "S_vax2"
+          ],
+          "output": [
+            "E_vax2",
+            "I_unvax"
+          ],
+          "properties": {
+            "name": "t8"
+          }
+        },
+        {
+          "id": "t9",
+          "input": [
+            "I_vax1",
+            "S_vax2"
+          ],
+          "output": [
+            "E_vax2",
+            "I_vax1"
+          ],
+          "properties": {
+            "name": "t9"
+          }
+        },
+        {
+          "id": "t10",
+          "input": [
+            "E_unvax"
+          ],
+          "output": [
+            "I_unvax"
+          ],
+          "properties": {
+            "name": "t10"
+          }
+        },
+        {
+          "id": "t11",
+          "input": [
+            "E_vax1"
+          ],
+          "output": [
+            "I_vax1"
+          ],
+          "properties": {
+            "name": "t11"
+          }
+        },
+        {
+          "id": "t12",
+          "input": [
+            "E_vax2"
+          ],
+          "output": [
+            "I_vax2"
+          ],
+          "properties": {
+            "name": "t12"
+          }
+        },
+        {
+          "id": "t13",
+          "input": [
+            "I_unvax"
+          ],
+          "output": [
+            "R"
+          ],
+          "properties": {
+            "name": "t13"
+          }
+        },
+        {
+          "id": "t14",
+          "input": [
+            "I_vax1"
+          ],
+          "output": [
+            "R"
+          ],
+          "properties": {
+            "name": "t14"
+          }
+        },
+        {
+          "id": "t15",
+          "input": [
+            "I_vax2"
+          ],
+          "output": [
+            "R"
+          ],
+          "properties": {
+            "name": "t15"
+          }
+        },
+        {
+          "id": "t16",
+          "input": [
+            "I_unvax"
+          ],
+          "output": [
+            "H"
+          ],
+          "properties": {
+            "name": "t16"
+          }
+        },
+        {
+          "id": "t17",
+          "input": [
+            "I_vax1"
+          ],
+          "output": [
+            "H"
+          ],
+          "properties": {
+            "name": "t17"
+          }
+        },
+        {
+          "id": "t18",
+          "input": [
+            "I_vax2"
+          ],
+          "output": [
+            "H"
+          ],
+          "properties": {
+            "name": "t18"
+          }
+        },
+        {
+          "id": "t5",
+          "input": [
+            "H"
+          ],
+          "output": [
+            "R"
+          ],
+          "properties": {
+            "name": "t5"
+          }
+        },
+        {
+          "id": "t6",
+          "input": [
+            "H"
+          ],
+          "output": [
+            "D"
+          ],
+          "properties": {
+            "name": "t6"
+          }
+        },
+        {
+          "id": "t21",
+          "input": [
+            "S_unvax"
+          ],
+          "output": [
+            "S_vax1"
+          ],
+          "properties": {
+            "name": "t21"
+          }
+        },
+        {
+          "id": "t22",
+          "input": [
+            "E_unvax"
+          ],
+          "output": [
+            "E_vax1"
+          ],
+          "properties": {
+            "name": "t22"
+          }
+        },
+        {
+          "id": "t23",
+          "input": [
+            "I_unvax"
+          ],
+          "output": [
+            "I_vax1"
+          ],
+          "properties": {
+            "name": "t23"
+          }
+        },
+        {
+          "id": "t24",
+          "input": [
+            "S_vax1"
+          ],
+          "output": [
+            "S_vax2"
+          ],
+          "properties": {
+            "name": "t24"
+          }
+        },
+        {
+          "id": "t25",
+          "input": [
+            "E_vax1"
+          ],
+          "output": [
+            "E_vax2"
+          ],
+          "properties": {
+            "name": "t25"
+          }
+        },
+        {
+          "id": "t26",
+          "input": [
+            "I_vax1"
+          ],
+          "output": [
+            "I_vax2"
+          ],
+          "properties": {
+            "name": "t26"
+          }
+        }
+      ]
+    },
+    "semantics": {
+      "ode": {
+        "rates": [
+          {
+            "target": "t1",
+            "expression": "I_unvax*S_unvax*beta_0*(-c_m_0*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_unvax</ci><ci>S_unvax</ci><ci>beta_0</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_0</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t2",
+            "expression": "I_vax1*S_unvax*beta_1*(-c_m_1*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_vax1</ci><ci>S_unvax</ci><ci>beta_1</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_1</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t3",
+            "expression": "I_vax2*S_unvax*beta_2*(-c_m_2*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_vax2</ci><ci>S_unvax</ci><ci>beta_2</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_2</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t4",
+            "expression": "I_vax1*S_vax1*beta_3*(-c_m_3*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_vax1</ci><ci>S_vax1</ci><ci>beta_3</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_3</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t5",
+            "expression": "I_unvax*S_vax1*beta_4*(-c_m_4*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_unvax</ci><ci>S_vax1</ci><ci>beta_4</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_4</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t6",
+            "expression": "I_vax2*S_vax1*beta_5*(-c_m_5*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_vax2</ci><ci>S_vax1</ci><ci>beta_5</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_5</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t7",
+            "expression": "I_vax2*S_vax2*beta_6*(-c_m_6*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_vax2</ci><ci>S_vax2</ci><ci>beta_6</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_6</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t8",
+            "expression": "I_unvax*S_vax2*beta_7*(-c_m_7*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_unvax</ci><ci>S_vax2</ci><ci>beta_7</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_7</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t9",
+            "expression": "I_vax1*S_vax2*beta_8*(-c_m_8*eps_m + 1)/N",
+            "expression_mathml": "<apply><divide/><apply><times/><ci>I_vax1</ci><ci>S_vax2</ci><ci>beta_8</ci><apply><plus/><apply><minus/><apply><times/><ci>c_m_8</ci><ci>eps_m</ci></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+          },
+          {
+            "target": "t10",
+            "expression": "E_unvax*r_E_to_I",
+            "expression_mathml": "<apply><times/><ci>E_unvax</ci><ci>r_E_to_I</ci></apply>"
+          },
+          {
+            "target": "t11",
+            "expression": "E_vax1*r_E_to_I",
+            "expression_mathml": "<apply><times/><ci>E_vax1</ci><ci>r_E_to_I</ci></apply>"
+          },
+          {
+            "target": "t12",
+            "expression": "E_vax2*r_E_to_I",
+            "expression_mathml": "<apply><times/><ci>E_vax2</ci><ci>r_E_to_I</ci></apply>"
+          },
+          {
+            "target": "t13",
+            "expression": "I_unvax*p_I_to_R*r_I_to_R",
+            "expression_mathml": "<apply><times/><ci>I_unvax</ci><ci>p_I_to_R</ci><ci>r_I_to_R</ci></apply>"
+          },
+          {
+            "target": "t14",
+            "expression": "I_vax1*p_I_to_R*r_I_to_R",
+            "expression_mathml": "<apply><times/><ci>I_vax1</ci><ci>p_I_to_R</ci><ci>r_I_to_R</ci></apply>"
+          },
+          {
+            "target": "t15",
+            "expression": "I_vax2*p_I_to_R*r_I_to_R",
+            "expression_mathml": "<apply><times/><ci>I_vax2</ci><ci>p_I_to_R</ci><ci>r_I_to_R</ci></apply>"
+          },
+          {
+            "target": "t16",
+            "expression": "I_unvax*p_I_to_H*r_I_to_H",
+            "expression_mathml": "<apply><times/><ci>I_unvax</ci><ci>p_I_to_H</ci><ci>r_I_to_H</ci></apply>"
+          },
+          {
+            "target": "t17",
+            "expression": "I_vax1*p_I_to_H*r_I_to_H",
+            "expression_mathml": "<apply><times/><ci>I_vax1</ci><ci>p_I_to_H</ci><ci>r_I_to_H</ci></apply>"
+          },
+          {
+            "target": "t18",
+            "expression": "I_vax2*p_I_to_H*r_I_to_H",
+            "expression_mathml": "<apply><times/><ci>I_vax2</ci><ci>p_I_to_H</ci><ci>r_I_to_H</ci></apply>"
+          },
+          {
+            "target": "t5",
+            "expression": "H*p_H_to_R*r_H_to_R",
+            "expression_mathml": "<apply><times/><ci>H</ci><ci>p_H_to_R</ci><ci>r_H_to_R</ci></apply>"
+          },
+          {
+            "target": "t6",
+            "expression": "H*p_H_to_D*r_H_to_D",
+            "expression_mathml": "<apply><times/><ci>H</ci><ci>p_H_to_D</ci><ci>r_H_to_D</ci></apply>"
+          },
+          {
+            "target": "t21",
+            "expression": "S_unvax*p_unvax_vax1",
+            "expression_mathml": "<apply><times/><ci>S_unvax</ci><ci>p_unvax_vax1</ci></apply>"
+          },
+          {
+            "target": "t22",
+            "expression": "E_unvax*p_unvax_vax1",
+            "expression_mathml": "<apply><times/><ci>E_unvax</ci><ci>p_unvax_vax1</ci></apply>"
+          },
+          {
+            "target": "t23",
+            "expression": "I_unvax*p_unvax_vax1",
+            "expression_mathml": "<apply><times/><ci>I_unvax</ci><ci>p_unvax_vax1</ci></apply>"
+          },
+          {
+            "target": "t24",
+            "expression": "S_vax1*p_vax1_vax2",
+            "expression_mathml": "<apply><times/><ci>S_vax1</ci><ci>p_vax1_vax2</ci></apply>"
+          },
+          {
+            "target": "t25",
+            "expression": "E_vax1*p_vax1_vax2",
+            "expression_mathml": "<apply><times/><ci>E_vax1</ci><ci>p_vax1_vax2</ci></apply>"
+          },
+          {
+            "target": "t26",
+            "expression": "I_vax1*p_vax1_vax2",
+            "expression_mathml": "<apply><times/><ci>I_vax1</ci><ci>p_vax1_vax2</ci></apply>"
+          }
+        ],
+        "initials": [
+          {
+            "target": "S_unvax",
+            "expression": "6446665.00000000",
+            "expression_mathml": "<cn>6446665.0</cn>"
+          },
+          {
+            "target": "I_unvax",
+            "expression": "1.3333333333333333",
+            "expression_mathml": "<cn>1.3333333333333332992</cn>"
+          },
+          {
+            "target": "E_unvax",
+            "expression": "0.3333333333333333",
+            "expression_mathml": "<cn>0.333333333333333301</cn>"
+          },
+          {
+            "target": "I_vax1",
+            "expression": "1.3333333333333333",
+            "expression_mathml": "<cn>1.3333333333333332992</cn>"
+          },
+          {
+            "target": "I_vax2",
+            "expression": "1.3333333333333333",
+            "expression_mathml": "<cn>1.3333333333333332992</cn>"
+          },
+          {
+            "target": "S_vax1",
+            "expression": "6446665.00000000",
+            "expression_mathml": "<cn>6446665.0</cn>"
+          },
+          {
+            "target": "E_vax1",
+            "expression": "0.3333333333333333",
+            "expression_mathml": "<cn>0.333333333333333301</cn>"
+          },
+          {
+            "target": "S_vax2",
+            "expression": "6446665.00000000",
+            "expression_mathml": "<cn>6446665.0</cn>"
+          },
+          {
+            "target": "E_vax2",
+            "expression": "0.3333333333333333",
+            "expression_mathml": "<cn>0.333333333333333301</cn>"
+          },
+          {
+            "target": "R",
+            "expression": "0.0",
+            "expression_mathml": "<cn>0.0</cn>"
+          },
+          {
+            "target": "H",
+            "expression": "0.0",
+            "expression_mathml": "<cn>0.0</cn>"
+          },
+          {
+            "target": "D",
+            "expression": "0.0",
+            "expression_mathml": "<cn>0.0</cn>"
+          }
+        ],
+        "parameters": [
+          {
+            "id": "N",
+            "value": 19340000
+          },
+          {
+            "id": "beta_0",
+            "value": 0.4
+          },
+          {
+            "id": "c_m_0",
+            "value": 0.5
+          },
+          {
+            "id": "eps_m",
+            "value": 0.5
+          },
+          {
+            "id": "beta_1",
+            "value": 0.22000000000000003
+          },
+          {
+            "id": "c_m_1",
+            "value": 0.25
+          },
+          {
+            "id": "beta_2",
+            "value": 0.1
+          },
+          {
+            "id": "c_m_2",
+            "value": 0.25
+          },
+          {
+            "id": "beta_3",
+            "value": 0.12100000000000002
+          },
+          {
+            "id": "c_m_3",
+            "value": 0
+          },
+          {
+            "id": "beta_4",
+            "value": 0.22000000000000003
+          },
+          {
+            "id": "c_m_4",
+            "value": 0.25
+          },
+          {
+            "id": "beta_5",
+            "value": 0.05500000000000001
+          },
+          {
+            "id": "c_m_5",
+            "value": 0
+          },
+          {
+            "id": "beta_6",
+            "value": 0.025
+          },
+          {
+            "id": "c_m_6",
+            "value": 0
+          },
+          {
+            "id": "beta_7",
+            "value": 0.1
+          },
+          {
+            "id": "c_m_7",
+            "value": 0.25
+          },
+          {
+            "id": "beta_8",
+            "value": 0.05500000000000001
+          },
+          {
+            "id": "c_m_8",
+            "value": 0
+          },
+          {
+            "id": "r_E_to_I",
+            "value": 0.2
+          },
+          {
+            "id": "p_I_to_R",
+            "value": 0.8
+          },
+          {
+            "id": "r_I_to_R",
+            "value": 0.07
+          },
+          {
+            "id": "p_I_to_H",
+            "value": 0.2
+          },
+          {
+            "id": "r_I_to_H",
+            "value": 0.1
+          },
+          {
+            "id": "p_H_to_R",
+            "value": 0.88
+          },
+          {
+            "id": "r_H_to_R",
+            "value": 0.1
+          },
+          {
+            "id": "p_H_to_D",
+            "value": 0.12
+          },
+          {
+            "id": "r_H_to_D",
+            "value": 0.1
+          },
+          {
+            "id": "p_unvax_vax1",
+            "value": 0.1
+          },
+          {
+            "id": "p_vax1_vax2",
+            "value": 0.1
+          }
+        ],
+        "observables": [
+          {
+            "id": "",
+            "name": "",
+            "expression": "D",
+            "expression_mathml": "<ci>D</ci>"
+          }
+        ],
+        "time": {
+          "id": "t",
+          "units": {
+            "expression": "day",
+            "expression_mathml": "<ci>day</ci>"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "annotations": {
+        "authors": [],
+        "references": [],
+        "locations": [],
+        "pathogens": [],
+        "diseases": [],
+        "hosts": [],
+        "model_types": []
+      }
+    }
+  },
+  "amr_configuration": null,
+  "calibrated": false,
+  "calibration": null,
+  "calibration_score": null
+}

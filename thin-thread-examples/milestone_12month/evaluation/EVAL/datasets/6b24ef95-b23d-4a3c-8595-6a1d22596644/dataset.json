@@ -1,0 +1,16 @@
+{
+  "id": "6b24ef95-b23d-4a3c-8595-6a1d22596644",
+  "timestamp": "2023-07-18T15:56:32",
+  "username": "Pascale Proulx",
+  "name": "Mii_normalized",
+  "description": "United_States_subnational_New_York_M_overall_contact_matrix_18.csv\nTransformed from dataset 'United_States_subnational_New_York_M_overall_contact_matrix_18' (c27ab0b2-9bb9-43e3-a1cc-444d238b9af2) at Tue Jul 18 15:56:32 2023 ",
+  "data_source_date": null,
+  "file_names": [
+    "dataset.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

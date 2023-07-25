@@ -1,0 +1,10 @@
+{
+  "id": "b90c7e38-f835-485f-81ca-3995d9320bbd",
+  "timestamp": "2023-07-18T19:42:04",
+  "name": "Evaluation 1 Scenario 1 b stratified for vaccination status",
+  "description": "Evaluation Scenario 1. Part 1 (ii) Masking type 1\nTransformed from model 'Evaluation Scenario 1. Part 1 (ii) Masking type 1' (2842c70b-9e98-4f55-b989-e8997c1558a3) at Tue Jul 18 19:42:04 2023 ",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

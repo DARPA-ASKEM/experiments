@@ -1,0 +1,16 @@
+{
+  "id": "f5438fc6-d7b7-4af3-94a7-7611de210c8c",
+  "timestamp": "2023-07-19T15:49:34",
+  "username": "Pascale Proulx",
+  "name": "2.2.b_new_cases_clean",
+  "description": "clinical_cases_mass_gov_three_county.csv\nTransformed from dataset 'clinical_cases_mass_gov_three_county' (442fccdf-9152-4589-95fe-8716ae42fc34) at Wed Jul 19 15:49:34 2023 ",
+  "data_source_date": null,
+  "file_names": [
+    "dataset.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

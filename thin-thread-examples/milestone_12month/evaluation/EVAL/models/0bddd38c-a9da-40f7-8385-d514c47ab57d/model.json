@@ -1,0 +1,10 @@
+{
+  "id": "0bddd38c-a9da-40f7-8385-d514c47ab57d",
+  "timestamp": "2023-07-19T18:03:35",
+  "name": "ES1_2ci_PICKED_UP_INITIALS_SET",
+  "description": "Evaluation Scenario 1. Part 1 (ii) Masking type 2\nTransformed from model 'ES1_2ci_SEIHRD_b(t)_strat_initial' (b1138929-baac-4dd9-bcc2-39fb7a86cc85) at Tue Jul 18 17:57:24 2023 \nTransformed from model 'ES1_2ci_SEIHRD_b(t)_strat_mid' (656b8740-dbbf-4f98-9683-e111584621a7) at Tue Jul 18 19:31:20 2023 \nTransformed from model 'ES1_2ci_SEIHRD_b(t)_strat_leftoff' (ba7b081b-d58f-4c22-bb41-c50ef0767db4) at Wed Jul 19 18:03:35 2023 ",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

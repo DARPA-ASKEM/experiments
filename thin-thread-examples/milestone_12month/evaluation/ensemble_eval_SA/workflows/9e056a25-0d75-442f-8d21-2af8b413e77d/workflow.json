@@ -1,0 +1,110 @@
+{
+  "id": "9e056a25-0d75-442f-8d21-2af8b413e77d",
+  "timestamp": "2023-07-24 22:07:15",
+  "name": "NYS Timepoint 1 Workflow",
+  "description": "",
+  "nodes": [
+    {
+      "id": "61e96222-1ee0-4776-975a-ba778d30df3e",
+      "workflowId": "9e056a25-0d75-442f-8d21-2af8b413e77d",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 200,
+      "y": 83,
+      "state": {
+        "modelId": "721489de-99c5-4ed4-a719-e23a6b0306ac"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "c98f13ce-74ac-4322-bbd3-013fe570e9af",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "17acf749-b54b-4e01-a605-b717eb5d2f7f"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "34e0feea-d58a-4cf2-b7bc-350f34715666",
+          "type": "modelConfigId",
+          "label": "SA config 1",
+          "value": [
+            "5acc2e25-bdd6-4b00-81a8-d7025fff6b0b"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "769c0297-ed62-4364-b0f6-c834588ab2a3",
+      "workflowId": "9e056a25-0d75-442f-8d21-2af8b413e77d",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 134,
+      "y": 370,
+      "state": {
+        "modelId": "34cc6cc5-7b48-4bcd-85e7-dce61794b555"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "e86af563-0c38-4c00-941f-389c242bdb1e",
+          "type": "modelConfigId",
+          "label": "SA Config 1",
+          "value": [
+            "e43bc57b-e244-46aa-acfd-7a3e598c14fa"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "71e4c3ed-db83-45f4-bf69-7c9682a7c464",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "f809a0ed-3eb1-4ad6-92aa-8068cc99ff34"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "e519efb3-e07e-4363-9e54-33e9a2831db8",
+      "workflowId": "9e056a25-0d75-442f-8d21-2af8b413e77d",
+      "operationType": "Dataset",
+      "displayName": "Dataset",
+      "x": 649,
+      "y": 174,
+      "state": {
+        "datasetId": "2fe8ce94-e23b-42d3-b2e1-11103119bcd7"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "fc122a57-e782-4a70-a060-4baec9f773f0",
+          "type": "datasetId",
+          "label": "NYS_timept1_data",
+          "value": [
+            "2fe8ce94-e23b-42d3-b2e1-11103119bcd7"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    }
+  ],
+  "edges": [],
+  "transform": {
+    "x": 0.0,
+    "y": 1.0,
+    "k": 1.0
+  }
+}

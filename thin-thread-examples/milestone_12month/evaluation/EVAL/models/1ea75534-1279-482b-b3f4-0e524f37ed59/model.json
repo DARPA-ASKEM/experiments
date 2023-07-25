@@ -1,0 +1,10 @@
+{
+  "id": "1ea75534-1279-482b-b3f4-0e524f37ed59",
+  "timestamp": "2023-07-18T15:52:06",
+  "name": "ES1_2ci_SEIHRD_strat_int",
+  "description": "Evaluation Scenario 2 Base model\nTransformed from model 'ES1_2ci_SEIRHD' at Tue Jul 18 15:52:06 2023 ",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

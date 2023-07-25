@@ -1,0 +1,153 @@
+{
+  "id": "525fb259-6ae4-4ba6-8e8c-dfc1924a35b7",
+  "timestamp": "2023-07-19 15:24:46",
+  "name": "workflow 9",
+  "description": "",
+  "nodes": [
+    {
+      "id": "660c7fa4-5093-48fc-9cb0-7bc8003893fc",
+      "workflowId": "525fb259-6ae4-4ba6-8e8c-dfc1924a35b7",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 144,
+      "y": 111,
+      "state": {
+        "modelId": "ada3d20a-cbc8-4bbd-b6b3-76446fb3cfdb"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "12c3c2fd-f4e5-4dc9-92ae-23d42ceea282",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "a2cbeb8d-a5a5-453c-939c-6b6e6d31bab7"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "f3c1391d-456d-4615-9217-24b026719840",
+          "type": "modelConfigId",
+          "label": "initialEst",
+          "value": [
+            "8ffae0be-4b6e-4d3c-b1fc-02d7df69a265"
+          ],
+          "status": "connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "fa1e1488-222f-4898-9391-6cc1dc239d43",
+      "workflowId": "525fb259-6ae4-4ba6-8e8c-dfc1924a35b7",
+      "operationType": "CalibrationOperationCiemss",
+      "displayName": "Calibrate & Simulate (probabilistic)",
+      "x": 625,
+      "y": 201,
+      "state": {
+        "chartConfigs": [],
+        "mapping": [
+          {
+            "modelVariable": "V",
+            "datasetVariable": "cRNA2"
+          }
+        ]
+      },
+      "inputs": [
+        {
+          "id": "6fcc9390-9a3a-4eee-a1e9-3a3fce1c7997",
+          "type": "modelConfigId",
+          "label": "initialEst",
+          "status": "connected",
+          "value": [
+            "8ffae0be-4b6e-4d3c-b1fc-02d7df69a265"
+          ]
+        },
+        {
+          "id": "1b03fd0a-66f1-4f0e-931c-89cb35888778",
+          "type": "datasetId",
+          "label": "cRNA2_F2",
+          "status": "connected",
+          "value": [
+            "f7c72a0d-4fea-49ac-99fe-2bb1d43fcddb"
+          ]
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "40ed6603-42cc-4569-b865-896ee7c5a7bd",
+      "workflowId": "525fb259-6ae4-4ba6-8e8c-dfc1924a35b7",
+      "operationType": "Dataset",
+      "displayName": "Dataset",
+      "x": 144,
+      "y": 422,
+      "state": {
+        "datasetId": "f7c72a0d-4fea-49ac-99fe-2bb1d43fcddb"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "fbd1bf88-2727-436c-91f7-6ccf78f6e401",
+          "type": "datasetId",
+          "label": "cRNA2_F2",
+          "value": [
+            "f7c72a0d-4fea-49ac-99fe-2bb1d43fcddb"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "453589a6-7bb9-470b-b3d8-796ea3f14d2b",
+      "workflowId": "525fb259-6ae4-4ba6-8e8c-dfc1924a35b7",
+      "source": "660c7fa4-5093-48fc-9cb0-7bc8003893fc",
+      "sourcePortId": "f3c1391d-456d-4615-9217-24b026719840",
+      "target": "fa1e1488-222f-4898-9391-6cc1dc239d43",
+      "targetPortId": "6fcc9390-9a3a-4eee-a1e9-3a3fce1c7997",
+      "points": [
+        {
+          "x": 424,
+          "y": 350
+        },
+        {
+          "x": 625,
+          "y": 255
+        }
+      ]
+    },
+    {
+      "id": "a84b8a37-7918-43e1-8b0c-d14fe5898273",
+      "workflowId": "525fb259-6ae4-4ba6-8e8c-dfc1924a35b7",
+      "source": "40ed6603-42cc-4569-b865-896ee7c5a7bd",
+      "sourcePortId": "afe5f4a0-3646-460d-b4ba-3f2642ae2830",
+      "target": "fa1e1488-222f-4898-9391-6cc1dc239d43",
+      "targetPortId": "1b03fd0a-66f1-4f0e-931c-89cb35888778",
+      "points": [
+        {
+          "x": 424,
+          "y": 634
+        },
+        {
+          "x": 625,
+          "y": 285
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": 0.0,
+    "y": 0.0,
+    "k": 1.0
+  }
+}

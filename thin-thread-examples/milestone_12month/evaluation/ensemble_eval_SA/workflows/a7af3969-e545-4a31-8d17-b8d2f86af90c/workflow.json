@@ -1,0 +1,196 @@
+{
+  "id": "a7af3969-e545-4a31-8d17-b8d2f86af90c",
+  "timestamp": "2023-07-19 12:34:59",
+  "name": "workflow 2",
+  "description": "",
+  "nodes": [
+    {
+      "id": "c288419c-130b-45e5-adf9-61275a28b16f",
+      "workflowId": "a7af3969-e545-4a31-8d17-b8d2f86af90c",
+      "operationType": "Dataset",
+      "displayName": "Dataset",
+      "x": 290,
+      "y": -787,
+      "state": {
+        "datasetId": "23bb03a8-21a6-4a9a-a804-16d844f0db35"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "365c49d9-0a8a-44b1-8ae5-d4f48aa9b0b0",
+          "type": "datasetId",
+          "label": "longer_by_blank_NY_data",
+          "value": [
+            "23bb03a8-21a6-4a9a-a804-16d844f0db35"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "f7e55358-6096-47c6-9002-1ef513ce0cc9",
+      "workflowId": "a7af3969-e545-4a31-8d17-b8d2f86af90c",
+      "operationType": "Dataset",
+      "displayName": "Dataset",
+      "x": 87,
+      "y": -8,
+      "state": {
+        "datasetId": "aabb3684-a7ea-4f60-98f1-a8e673ad6df5"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "de1de40b-d71e-4bf5-9890-438558672ac7",
+          "type": "datasetId",
+          "label": "NY_time_case_hosp_death_data",
+          "value": [
+            "aabb3684-a7ea-4f60-98f1-a8e673ad6df5"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "f5a3cc52-ee71-4365-81a4-f348e5fe5b10",
+      "workflowId": "a7af3969-e545-4a31-8d17-b8d2f86af90c",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 71.95557702558278,
+      "y": 274.9500241537805,
+      "state": {
+        "modelId": "721489de-99c5-4ed4-a719-e23a6b0306ac",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "d5eadba4-edf5-4904-9f24-b6bb34f11209",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "17acf749-b54b-4e01-a605-b717eb5d2f7f"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "be870e8a-b34d-4506-961b-6afd319e73d8",
+          "type": "modelConfigId",
+          "label": "SA config 1",
+          "value": [
+            "5acc2e25-bdd6-4b00-81a8-d7025fff6b0b"
+          ],
+          "status": "connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "27b241c2-f0f1-46f1-a573-5594d08dbef6",
+      "workflowId": "a7af3969-e545-4a31-8d17-b8d2f86af90c",
+      "operationType": "CalibrationOperationCiemss",
+      "displayName": "Calibrate & Simulate (Probabilistic)",
+      "x": 575.9972235640989,
+      "y": 23,
+      "state": {
+        "chartConfigs": [
+          null,
+          null,
+          null
+        ],
+        "mapping": [
+          {
+            "modelVariable": "I",
+            "datasetVariable": "I"
+          },
+          {
+            "modelVariable": "H",
+            "datasetVariable": "H"
+          },
+          {
+            "modelVariable": "D",
+            "datasetVariable": "D"
+          },
+          {
+            "modelVariable": "timestep",
+            "datasetVariable": "timestep"
+          }
+        ]
+      },
+      "inputs": [
+        {
+          "id": "b358f039-7334-41a4-937f-5bff5192b782",
+          "type": "modelConfigId",
+          "label": "SA config 1",
+          "status": "connected",
+          "value": [
+            "5acc2e25-bdd6-4b00-81a8-d7025fff6b0b"
+          ]
+        },
+        {
+          "id": "25bda1c3-3ea8-4b31-82ea-51bdb2e88380",
+          "type": "datasetId",
+          "label": "NY_time_case_hosp_death_data",
+          "status": "connected",
+          "value": [
+            "aabb3684-a7ea-4f60-98f1-a8e673ad6df5"
+          ]
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "3bfdd99b-f4e9-4208-9402-2fdb4c9308f2",
+      "workflowId": "a7af3969-e545-4a31-8d17-b8d2f86af90c",
+      "source": "f7e55358-6096-47c6-9002-1ef513ce0cc9",
+      "sourcePortId": "84fc6fc3-489e-40ad-a063-0cf74ebe56ac",
+      "target": "27b241c2-f0f1-46f1-a573-5594d08dbef6",
+      "targetPortId": "25bda1c3-3ea8-4b31-82ea-51bdb2e88380",
+      "points": [
+        {
+          "x": 367,
+          "y": 204
+        },
+        {
+          "x": 575.9972235640989,
+          "y": 107
+        }
+      ]
+    },
+    {
+      "id": "679351ad-74e6-45d9-9fdd-5bc5760a1ade",
+      "workflowId": "a7af3969-e545-4a31-8d17-b8d2f86af90c",
+      "source": "f5a3cc52-ee71-4365-81a4-f348e5fe5b10",
+      "sourcePortId": "be870e8a-b34d-4506-961b-6afd319e73d8",
+      "target": "27b241c2-f0f1-46f1-a573-5594d08dbef6",
+      "targetPortId": "b358f039-7334-41a4-937f-5bff5192b782",
+      "points": [
+        {
+          "x": 351.9555770255829,
+          "y": 513.9500241537806
+        },
+        {
+          "x": 575.9972235640989,
+          "y": 77
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": 0.0,
+    "y": 0.0,
+    "k": 1.0
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "id": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+  "timestamp": "2023-07-19 12:39:08",
+  "name": "workflow 1",
+  "description": "",
+  "nodes": [
+    {
+      "id": "4d69a52e-2840-4f17-9ede-de153086b3f4",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 72,
+      "y": 357,
+      "state": {
+        "modelId": "1146b2bf-c459-47a4-8353-e1d1ed828382",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "93f7dd26-02c1-4cbb-be1b-0cac666a2e6c",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "b2f27892-f55b-421d-9cb4-9ad23e2fa41a"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "3056d2ab-c462-4a20-acb9-cd91e6f15b7f",
+          "type": "modelConfigId",
+          "label": "baseline",
+          "value": [
+            "e0f07cec-d3ac-45c7-8105-718c87b4a562"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "7e94b3cd-4e5f-485e-a907-f17b9b760dec",
+          "type": "modelConfigId",
+          "label": "SocialDistancingHalfPre",
+          "value": [
+            "b912927b-03b5-4287-8804-fb8abd65ef45"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "4bdeccee-42b4-4305-b568-c30f93771c3a",
+          "type": "modelConfigId",
+          "label": "SocialDistancingPrePost",
+          "value": [
+            "06ed143a-cc8d-45bf-87ff-4432e747aa96"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "42dcbc0e-9e70-43b7-a642-392a650ac87e",
+          "type": "modelConfigId",
+          "label": "cm80",
+          "value": [
+            "5cdb8458-2bd1-4ab4-993e-551931719c44"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "8a819de0-936d-4dc1-a7a6-47408d40e97f",
+          "type": "modelConfigId",
+          "label": "cm60",
+          "value": [
+            "58a67339-da0c-4a2b-8819-267af05659ed"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "57d816f2-a396-47f2-95aa-976ff2216312",
+          "type": "modelConfigId",
+          "label": "cm40",
+          "value": [
+            "acba9a9b-0d5d-4a91-9804-fc1e9026275a"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "6158131a-4460-4411-b763-88052f53d809",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 69,
+      "y": 808,
+      "state": {
+        "modelId": "afc65f9c-9bb3-49b2-a235-0a531bb3a07c",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "5af5fdef-9d02-47d7-a536-77ced3127370",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "e853c114-1ae0-4e31-9249-89405c8f29bb"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "f937267c-c9e9-4479-818d-2dfd57ffaccf",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 81,
+      "y": 50,
+      "state": {
+        "modelId": "721489de-99c5-4ed4-a719-e23a6b0306ac",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "c63c45c4-6dc8-4695-945b-e870509d53db",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "17acf749-b54b-4e01-a605-b717eb5d2f7f"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "fbe2f824-e37c-4e8f-9368-efc5f505a637",
+          "type": "modelConfigId",
+          "label": "SA config 1",
+          "value": [
+            "5acc2e25-bdd6-4b00-81a8-d7025fff6b0b"
+          ],
+          "status": "connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "62135b1f-4748-48af-a442-209613ffdde5",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "Dataset",
+      "displayName": "Dataset",
+      "x": 274.6982149275862,
+      "y": -283.1369929828062,
+      "state": {
+        "datasetId": "aabb3684-a7ea-4f60-98f1-a8e673ad6df5"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "e3200308-2af8-49b3-b4f3-b7e6080c37a1",
+          "type": "datasetId",
+          "label": "NY_time_case_hosp_death_data",
+          "value": [
+            "aabb3684-a7ea-4f60-98f1-a8e673ad6df5"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "a1647496-5f1c-4399-a143-2bbe521bdbda",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "CalibrationOperationCiemss",
+      "displayName": "Calibrate & Simulate (Probabilistic)",
+      "x": 730.9963855163728,
+      "y": 591.9351087102746,
+      "state": {
+        "chartConfigs": [
+          {
+            "selectedVariable": [
+              "I"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "modelVariable": "I",
+            "datasetVariable": "I"
+          },
+          {
+            "modelVariable": "H",
+            "datasetVariable": "H"
+          },
+          {
+            "modelVariable": "D",
+            "datasetVariable": "D"
+          },
+          {
+            "modelVariable": "timestep",
+            "datasetVariable": "timestep"
+          }
+        ]
+      },
+      "inputs": [
+        {
+          "id": "c96280ca-4d06-4c52-8212-4f52e89d3b42",
+          "type": "modelConfigId",
+          "label": "SA config 1",
+          "status": "connected",
+          "value": [
+            "5acc2e25-bdd6-4b00-81a8-d7025fff6b0b"
+          ]
+        },
+        {
+          "id": "13e79e49-a3c8-4255-9a2f-2a6114aa9616",
+          "type": "datasetId",
+          "label": "NY_time_case_hosp_death_data",
+          "status": "connected",
+          "value": [
+            "aabb3684-a7ea-4f60-98f1-a8e673ad6df5"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "d3ac5066-1d5e-4983-aba2-8292d1c7da64",
+          "type": "number",
+          "label": "SA config 1 Result",
+          "value": [
+            {
+              "runId": "ciemss-8fbfcb3c-20bd-4317-b949-72e21d5d48dc"
+            }
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "f6721a23-05be-4473-99f6-f08e30239e67",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "ModelOperation",
+      "displayName": "Model",
+      "x": 294.50870623174757,
+      "y": -851.045323626979,
+      "state": {
+        "modelId": "721489de-99c5-4ed4-a719-e23a6b0306ac",
+        "modelConfigurationIds": []
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "dd882cd5-1d31-4fa6-b71c-329e94769cfe",
+          "type": "modelConfigId",
+          "label": "SA config 1",
+          "value": [
+            "5acc2e25-bdd6-4b00-81a8-d7025fff6b0b"
+          ],
+          "status": "not connected"
+        },
+        {
+          "id": "30009e0c-cb85-4565-a003-8a88fbfa43ac",
+          "type": "modelConfigId",
+          "label": "Default config",
+          "value": [
+            "17acf749-b54b-4e01-a605-b717eb5d2f7f"
+          ],
+          "status": "not connected"
+        }
+      ],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "269ea4f1-39ea-4c0a-ae1b-e133039a8703",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 0,
+      "y": 0,
+      "state": {
+        "chartConfigs": [],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        },
+        "numSamples": 100,
+        "method": "dopri5"
+      },
+      "inputs": [
+        {
+          "id": "b46ca8b9-b564-448f-a1c5-8d32a3b70598",
+          "type": "modelConfigId",
+          "label": "Model configuration",
+          "status": "not connected",
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "16b89e64-d41b-4637-9a83-a295dce43e48",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 0,
+      "y": 0,
+      "state": {
+        "chartConfigs": [],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        },
+        "numSamples": 100,
+        "method": "dopri5"
+      },
+      "inputs": [
+        {
+          "id": "bdc620ab-199b-496a-ae2b-2c3d9044517a",
+          "type": "modelConfigId",
+          "label": "Model configuration",
+          "status": "not connected",
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "8ec4f931-7d58-4561-aff5-4e2c4eb0b3ad",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 1078.6218511609393,
+      "y": 670.8439779316399,
+      "state": {
+        "chartConfigs": [],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        },
+        "numSamples": 100,
+        "method": "dopri5"
+      },
+      "inputs": [
+        {
+          "id": "88738782-1f0f-475f-889e-b5d207004b05",
+          "type": "modelConfigId",
+          "label": "Model configuration",
+          "status": "not connected",
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "7c13e5bd-1aee-49c1-b2c3-4914a751cbb2",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "TestOperation",
+      "displayName": "Test Operation",
+      "x": 1339.2845615234467,
+      "y": 142.24387324233854,
+      "state": {},
+      "inputs": [
+        {
+          "id": "6c009702-27de-4643-aae1-45e8ed2dff16",
+          "type": "number",
+          "label": "Number input",
+          "status": "not connected",
+          "acceptMultiple": false
+        },
+        {
+          "id": "c89b3983-074c-4ad4-8e36-e0b2bb6f9d98",
+          "type": "number",
+          "label": "Multi number input",
+          "status": "not connected",
+          "acceptMultiple": true
+        },
+        {
+          "id": "62283b84-73da-4569-8f2c-2a909f24a568",
+          "type": "string",
+          "label": "String input",
+          "status": "not connected"
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 180,
+      "height": 220
+    },
+    {
+      "id": "81cd4f12-63bb-4c1a-98b9-3fead6c24f9a",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "operationType": "SimulateCiemssOperation",
+      "displayName": "Simulate (Probibilistic)",
+      "x": 900.0488041353813,
+      "y": -652.1784693403474,
+      "state": {
+        "chartConfigs": [],
+        "currentTimespan": {
+          "start": 1,
+          "end": 100
+        },
+        "numSamples": 100,
+        "method": "dopri5"
+      },
+      "inputs": [
+        {
+          "id": "1d909a44-eaed-4bd2-8a95-0e57331e1f3b",
+          "type": "modelConfigId",
+          "label": "Model configuration",
+          "status": "not connected",
+          "acceptMultiple": true
+        }
+      ],
+      "outputs": [],
+      "statusCode": "invalid",
+      "width": 420,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "540b4311-dca3-48d5-9eee-f85e1f995b0a",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "source": "62135b1f-4748-48af-a442-209613ffdde5",
+      "sourcePortId": "358e427e-0da8-4e91-8ff0-45299c4d64b6",
+      "target": "a1647496-5f1c-4399-a143-2bbe521bdbda",
+      "targetPortId": "13e79e49-a3c8-4255-9a2f-2a6114aa9616",
+      "points": [
+        {
+          "x": 554.6982149275862,
+          "y": -71.13699298280619
+        },
+        {
+          "x": 730.9963855163728,
+          "y": 675.9351087102746
+        }
+      ]
+    },
+    {
+      "id": "a8bdb0d5-dfd9-4139-87d7-e715e99113f2",
+      "workflowId": "1ecf6d0f-0f49-4c03-9877-62b711fb0a0b",
+      "source": "f937267c-c9e9-4479-818d-2dfd57ffaccf",
+      "sourcePortId": "fbe2f824-e37c-4e8f-9368-efc5f505a637",
+      "target": "a1647496-5f1c-4399-a143-2bbe521bdbda",
+      "targetPortId": "c96280ca-4d06-4c52-8212-4f52e89d3b42",
+      "points": [
+        {
+          "x": 361,
+          "y": 289
+        },
+        {
+          "x": 730.9963855163728,
+          "y": 645.9351087102746
+        }
+      ]
+    }
+  ],
+  "transform": {
+    "x": 0.0,
+    "y": 0.0,
+    "k": 1.0
+  }
+}

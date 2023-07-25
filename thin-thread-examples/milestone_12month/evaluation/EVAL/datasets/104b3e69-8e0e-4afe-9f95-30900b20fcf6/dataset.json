@@ -1,0 +1,18 @@
+{
+  "id": "104b3e69-8e0e-4afe-9f95-30900b20fcf6",
+  "timestamp": "2023-07-19T18:08:55",
+  "username": null,
+  "name": "None Result Dataset",
+  "description": null,
+  "data_source_date": "2023-07-19T18:07:35",
+  "file_names": [
+    "https://askem-staging-data-service.s3.amazonaws.com/simulations/sciml-f87ea5d2-3876-49c6-a21d-c4e682d4d46e/result.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIATRPQDKCO7LUTEDVN%2F20230719%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230719T180735Z&X-Amz-Expires=1500&X-Amz-SignedHeaders=host&X-Amz-Signature=2d1c430185520fcff828496bdf46fdff488a9fd541d3a48f8557adc8d2f61625"
+  ],
+  "dataset_url": null,
+  "columns": [],
+  "metadata": {
+    "simulation_id": "sciml-f87ea5d2-3876-49c6-a21d-c4e682d4d46e"
+  },
+  "source": null,
+  "grounding": null
+}

@@ -1,0 +1,10 @@
+{
+  "id": "7563732f-99d0-4af8-a2f0-c0391ffd1e1f",
+  "timestamp": "2023-07-19T14:04:05",
+  "name": "ES2_2a_arrayed_age",
+  "description": "Evaluation Scenario 1. Part 1 (ii) Masking type 1\nTransformed from model 'Evaluation Scenario 1. Part 1 (ii) Masking type 1' (2842c70b-9e98-4f55-b989-e8997c1558a3) at Tue Jul 18 20:20:44 2023 \nTransformed from model 'ES2_1b_beta_set' (9b3a12eb-4b98-48fd-b374-554bc18b18be) at Tue Jul 18 21:03:37 2023 \nTransformed from model 'ES2_1b_all_set' (2dbc9543-f12d-4833-aa98-06f861274fd2) at Tue Jul 18 21:13:19 2023 \nTransformed from model 'ES2_2a_start' (6e58ef0d-b422-4dc8-8b40-e8436c17b048) at Wed Jul 19 14:04:05 2023 ",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}

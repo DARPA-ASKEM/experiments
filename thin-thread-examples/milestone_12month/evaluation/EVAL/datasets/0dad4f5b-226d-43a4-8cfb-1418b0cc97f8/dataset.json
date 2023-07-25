@@ -1,0 +1,16 @@
+{
+  "id": "0dad4f5b-226d-43a4-8cfb-1418b0cc97f8",
+  "timestamp": "2023-07-17T17:52:53",
+  "username": "Pascale Proulx",
+  "name": "truth-Incident Hospitalizations",
+  "description": "data-truth/truth-Incident Hospitalizations.csv",
+  "data_source_date": null,
+  "file_names": [
+    "truth-Incident Hospitalizations.csv"
+  ],
+  "dataset_url": null,
+  "columns": null,
+  "metadata": null,
+  "source": null,
+  "grounding": null
+}

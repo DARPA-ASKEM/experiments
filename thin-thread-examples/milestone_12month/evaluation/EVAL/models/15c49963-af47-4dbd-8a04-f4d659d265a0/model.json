@@ -1,0 +1,10 @@
+{
+  "id": "15c49963-af47-4dbd-8a04-f4d659d265a0",
+  "timestamp": "2023-07-18T21:25:25",
+  "name": "ES2_1c_observables",
+  "description": "Evaluation Scenario 1. Part 1 (ii) Masking type 1\nTransformed from model 'Evaluation Scenario 1. Part 1 (ii) Masking type 1' (2842c70b-9e98-4f55-b989-e8997c1558a3) at Tue Jul 18 20:20:44 2023 \nTransformed from model 'ES2_1b_beta_set' (9b3a12eb-4b98-48fd-b374-554bc18b18be) at Tue Jul 18 21:03:37 2023 \nTransformed from model 'ES2_1b_all_set' (2dbc9543-f12d-4833-aa98-06f861274fd2) at Tue Jul 18 21:13:19 2023 \nTransformed from model 'ES2_1b_reset' (b22cd3e4-4ee2-43cd-8a38-b339ba52554e) at Tue Jul 18 21:25:25 2023 ",
+  "username": null,
+  "schema": null,
+  "schema_name": "petrinet",
+  "model_version": "0.1"
+}
