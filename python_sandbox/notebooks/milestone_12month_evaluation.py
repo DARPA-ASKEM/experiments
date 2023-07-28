@@ -130,3 +130,10 @@ get_terarium_project(project_id)
 PATH = '../../thin-thread-examples/milestone_12month/evaluation/ensemble_eval_SA'
 project_id = '46' 
 get_terarium_project(project_id)
+
+# %%
+PATH = '../../thin-thread-examples/milestone_12month/evaluation/toby-eval'
+project_id = '52' 
+get_terarium_project(project_id)
+
+# %%

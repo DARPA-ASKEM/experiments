@@ -23,10 +23,6 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from typing import NoReturn, Optional, Any
 
-# %%
-# Load the example AMR JSON of the SIDARTHE model
-with open('../data/amr_example/BIOMD0000000955/model_petrinet.json', 'r') as f:
-    amr = json.load(f)
 
 # %%
 # Print structure of dict
@@ -173,17 +169,46 @@ def draw_petri(amr: Optional[dict] = None, G: Optional[nx.MultiDiGraph] = None, 
     __ = plt.setp(ax, xlim = (-m, m), ylim = (-m, m))
 
 # %%
-print_dict(amr)
+# Load the AMR of a stratified model using MIRA and Catlab
+with open('../data/catlab_vs_mira/sir_loc_model.json', 'r') as f:
+    amr_mira = json.load(f)
+
+with open('../data/catlab_vs_mira/cat123123123.json', 'r') as f:
+    amr_catlab = json.load(f)
 
 # %%
-G = convert_amr_to_nxgraph(amr)
+G_mira = convert_amr_to_nxgraph(amr_mira)
+G_catlab = convert_amr_to_nxgraph(amr_catlab)
 
 # %%
-# Add observables
+# Rename transition nodes with expressions
 
+rates = {r['target']: r for r in amr_mira['semantics']['ode']['rates']}
+for t in amr_mira['model']['transitions']:
+    expression = rates[t['id']]['expression']
+    for input in t['input']:
+        expression = expression.replace(input + '*', '')
+        expression = expression.replace('*' + input, '')
+        expression = expression.replace('*' + input + '*', '')
+    nx.set_node_attributes(G_mira, {t['id']: expression}, name = 'name')
+
+
+rates = {r['target']: r for r in amr_catlab['semantics']['ode']['rates']}
+for t in amr_catlab['model']['transitions']:
+    expression = rates[t['id']]['expression']
+    for input in t['input']:
+        expression = expression.replace(input + '*', '')
+        expression = expression.replace('*' + input, '')
+        expression = expression.replace('*' + input + '*', '')
+    nx.set_node_attributes(G_catlab, {t['id']: expression}, name = 'name')
 
 
 # %%
-draw_petri(G = G, legend = True)
+fig, axes = plt.subplots(nrows = 2, ncols = 1, figsize = (6, 12))
+draw_petri(G = G_mira, legend = True, ax = axes[0])
+draw_petri(G = G_catlab, legend = True, ax = axes[1])
+
+__ = plt.setp(axes[0], title = 'MIRA')
+__ = plt.setp(axes[1], title = 'Catlab stratification & MIRA Reconstruction')
 
 # %%
