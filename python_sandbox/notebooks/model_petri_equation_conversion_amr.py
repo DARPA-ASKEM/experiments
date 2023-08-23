@@ -39,10 +39,16 @@ def convert_latex2mathml(model_latex: Optional[list]) -> list:
 
         # Replace some unicode characters
         # SKEMA throws error otherwise
-        # m = m.replace('&#x0003D;', '=') 
-        # m = m.replace('&#x02212;', '-')
-        # m = m.replace('&#x0002B;', '+')
+        m = m.replace("&#x0003D;", r"=") 
+        m = m.replace("&#x02212;", r"-")
+        m = m.replace("&#x0002B;", r"+")
         m = html.unescape(m)
+
+        m = m.replace(r'<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">', r'<math>')
+
+        # SKEMA requires the removal of the outer `<mrow></mrow>`
+        m = m.replace(r"<math><mrow>", r"<math>")
+        m = m.replace(r"</mrow></math>", r"</math>")
 
         model_mathml.append(m)
         
@@ -68,6 +74,42 @@ def convert_mathml2petrinet(model_mathml: Optional[list] = None) -> dict:
             model_petrinet_amr = res.json()
 
     return model_petrinet_amr
+
+# Convert MathML equations to Petri-net AMR
+def convert_mathml2amr(model_mathml: Optional[list] = None) -> dict:
+
+    model_amr = {}
+
+    # Test MathML
+    if model_mathml == 'test':
+        model_mathml = [
+            "<math><mfrac><mrow><mi>d</mi><mi>S</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mo>-</mo><mi>b</mi><mi>S</mi><mi>I</mi></math>",
+            "<math><mfrac><mrow><mi>d</mi><mi>I</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>b</mi><mi>S</mi><mi>I</mi><mo>-</mo><mi>g</mi><mi>I</mi></math>",
+            "<math><mfrac><mrow><mi>d</mi><mi>R</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>g</mi><mi>I</mi></math>"
+        ]
+
+    # SKEMA API health check
+    if model_mathml == None:
+        url = f'{REST_URL_SKEMA}/ping'
+        res = requests.get(url)
+        print(f'{res.url}: Code {res.status_code}\n\t\"{res.text}\"')
+
+    elif model_mathml == 'test':
+        url = f'{REST_URL_SKEMA}/mathml/amr'
+        res = requests.put(url, json = {"mathml": model_mathml, "model": "petrinet"})
+        print(f'{res.url}: Code {res.status_code}\n\t\"{res.text}\"')
+        if res.status_code == 200:
+            model_amr = res.json()
+
+    # SKEMA API for MathML-to-ACSet conversion
+    else:
+        url = f'{REST_URL_SKEMA}/mathml/amr'
+        res = requests.put(url, json = {"mathml": model_mathml, "model": "petrinet"})
+        print(f'{res.url}: Code {res.status_code}\n\t\"{res.text}\"')
+        if res.status_code == 200:
+            model_amr = res.json()
+
+    return model_amr
 
 # Draw Petri net using NX
 def draw_graph(model: dict, ax: Optional[Any] = None, node_type: Optional[list] = None, edge_type: Optional[list] = None, save_path: Optional[str] = None, legend: bool = True, model_format: Optional[str] = 'AMR') -> NoReturn:
@@ -212,12 +254,14 @@ models[model_name]['latex'] = [
     r"\frac{d R}{d t} = \gamma I"
 ]
 
+# %%
 # MathML
 models[model_name]['latex_mathml'] = convert_latex2mathml(models[model_name]['latex'])
 
 # %%
 # AMR Petri net
-models[model_name]['latex_mathml_AMR'] = convert_mathml2petrinet(models[model_name]['latex_mathml'])
+# models[model_name]['latex_mathml_AMR'] = convert_mathml2petrinet(models[model_name]['latex_mathml'])
+models[model_name]['latex_mathml_AMR'] = convert_mathml2amr(models[model_name]['latex_mathml'])
 
 # %%
 draw_graph(model = models[model_name]['latex_mathml_AMR'], legend = True, model_format = 'AMR')
