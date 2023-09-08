@@ -2,7 +2,7 @@ FROM "jupyter/minimal-notebook"
 
 USER root
 
-ENV JULIA_VERSION=1.8.5
+ENV JULIA_VERSION=1.9.3
 
 RUN mkdir /opt/julia-${JULIA_VERSION} && \
     cd /tmp && \
@@ -34,8 +34,14 @@ RUN pip3 install numpy \
 # Add packages and precompile
 RUN julia -e 'import Pkg; Pkg.update()' && \
     julia -e 'import Pkg; Pkg.add("Colors"); using Colors' && \
-    julia -e 'import Pkg; Pkg.add("Plots"); using Plots' && \    
+    julia -e 'import Pkg; Pkg.add("Plots"); using Plots' && \
     julia -e 'import Pkg; Pkg.add("Catlab"); using Catlab' && \
+    julia -e 'import Pkg; Pkg.add("Decapodes"); using Decapodes' && \
+    julia -e 'import Pkg; Pkg.add("CombinatorialSpaces"); using CombinatorialSpaces' && \
+    julia -e 'import Pkg; Pkg.add("CairoMakie"); using CairoMakie' && \
+    julia -e 'import Pkg; Pkg.add("MLStyle"); using MLStyle' && \
+    julia -e 'import Pkg; Pkg.add("Distributions"); using Distributions' && \
+    julia -e 'import Pkg; Pkg.add("MultiScaleArrays"); using MultiScaleArrays' && \
     julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia' && \
     julia -e 'import Pkg; Pkg.add("GraphViz"); using GraphViz' && \
     julia -e 'import Pkg; Pkg.add("AlgebraicPetri"); using AlgebraicPetri' && \
