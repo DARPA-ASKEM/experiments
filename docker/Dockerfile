@@ -29,7 +29,8 @@ RUN pip3 install numpy \
     minisom \
     tslearn \
     langchain \
-    huggingface_hub
+    huggingface_hub \
+    git+https://github.com/indralab/mira.git
 
 # Add packages and precompile
 RUN julia -e 'import Pkg; Pkg.update()' && \
