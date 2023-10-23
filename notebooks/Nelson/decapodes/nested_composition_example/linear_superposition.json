@@ -1,0 +1,65 @@
+{
+  "header": {
+    "description": "Additive property of heat",
+    "name": "LinearSuperpositon",
+    "_type": "Header",
+    "model_version": "v1.0",
+    "schema": "modelreps.io/SummationDecapode",
+    "schema_name": "SummationDecapode"
+  },
+  "_type": "ASKEMDecaExpr",
+  "model": {
+    "context": [
+      {
+        "dim": "Form0",
+        "var": {
+          "name": "X",
+          "_type": "Var"
+        },
+        "space": "Point",
+        "_type": "Judgement"
+      },
+      {
+        "dim": "Form0",
+        "var": {
+          "name": "Y",
+          "_type": "Var"
+        },
+        "space": "Point",
+        "_type": "Judgement"
+      },
+      {
+        "dim": "Form0",
+        "var": {
+          "name": "T",
+          "_type": "Var"
+        },
+        "space": "Point",
+        "_type": "Judgement"
+      }
+    ],
+    "_type": "DecaExpr",
+    "equations": [
+      {
+        "rhs": {
+          "args": [
+            {
+              "name": "X",
+              "_type": "Var"
+            },
+            {
+              "name": "Y",
+              "_type": "Var"
+            }
+          ],
+          "_type": "Plus"
+        },
+        "lhs": {
+          "name": "T",
+          "_type": "Var"
+        },
+        "_type": "Eq"
+      }
+    ]
+  }
+}
