@@ -1,0 +1,1 @@
+{"Box":[{"_id":1,"name":"dynamics"},{"_id":2,"name":"stress"}],"Port":[{"_id":1,"box":1,"junction":1},{"_id":2,"box":1,"junction":2},{"_id":3,"box":2,"junction":1},{"_id":4,"box":2,"junction":2}],"OuterPort":[],"Junction":[{"_id":1,"variable":"Γ"},{"_id":2,"variable":"n"}],"Name":[],"VarName":[]}
