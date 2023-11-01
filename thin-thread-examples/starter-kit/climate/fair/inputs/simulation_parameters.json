@@ -1,0 +1,85 @@
+{
+  "time": {
+    "start": 2000,
+    "end": 2050,
+    "step": 1
+  },
+  "scenarios": [
+    "abrupt"
+  ],
+  "configs": [
+    "high",
+    "central",
+    "low"
+  ],
+  "species": {
+    "labels": [
+      "CO2 fossil emissions",
+      "CO2 AFOLU emissions",
+      "Sulfur",
+      "CH4",
+      "N2O",
+      "CO2",
+      "ERFari",
+      "ERFaci"
+    ],
+    "properties": {
+      "CO2 fossil emissions": {
+        "type": "co2 ffi",
+        "input_mode": "emissions",
+        "greenhouse_gas": false,
+        "aerosol_chemistry_from_emissions": false,
+        "aerosol_chemistry_from_concentration": false
+      },
+      "CO2 AFOLU emissions": {
+        "type": "co2 afolu",
+        "input_mode": "emissions",
+        "greenhouse_gas": false,
+        "aerosol_chemistry_from_emissions": false,
+        "aerosol_chemistry_from_concentration": false
+      },
+      "CO2": {
+        "type": "co2",
+        "input_mode": "calculated",
+        "greenhouse_gas": true,
+        "aerosol_chemistry_from_emissions": false,
+        "aerosol_chemistry_from_concentration": false
+      },
+      "CH4": {
+        "type": "ch4",
+        "input_mode": "concentration",
+        "greenhouse_gas": true,
+        "aerosol_chemistry_from_emissions": false,
+        "aerosol_chemistry_from_concentration": true
+      },
+      "N2O": {
+        "type": "n2o",
+        "input_mode": "concentration",
+        "greenhouse_gas": true,
+        "aerosol_chemistry_from_emissions": false,
+        "aerosol_chemistry_from_concentration": true
+      },
+      "Sulfur": {
+        "type": "sulfur",
+        "input_mode": "emissions",
+        "greenhouse_gas": false,
+        "aerosol_chemistry_from_emissions": true,
+        "aerosol_chemistry_from_concentration": false
+      },
+      "ERFari": {
+        "type": "ari",
+        "input_mode": "calculated",
+        "greenhouse_gas": false,
+        "aerosol_chemistry_from_emissions": false,
+        "aerosol_chemistry_from_concentration": false
+      },
+      "ERFaci": {
+        "type": "aci",
+        "input_mode": "calculated",
+        "greenhouse_gas": false,
+        "aerosol_chemistry_from_emissions": false,
+        "aerosol_chemistry_from_concentration": false
+      }
+    }
+  }
+}
