@@ -8,6 +8,7 @@
 
 # %%
 import h5py
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -16,8 +17,13 @@ import matplotlib as mpl
 PATH = "../../notebooks/Nelson/decapodes/dome_model/"
 
 # %%
-with h5py.File(PATH + "2D_rect", "r") as f:
-    data = f["data"][:]
+data = {}
+for p in os.listdir(PATH):
+    if p.endswith(".jld2"):
+        with h5py.File(os.path.join(PATH, p), "r") as f:
+            # print(type(f["soln"]))
+            print(f["soln"][()])
+            data[p.split(".")[0]] = np.asarray(f["soln"])
 
 # %%
 
