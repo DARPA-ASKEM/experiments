@@ -1,0 +1,152 @@
+{
+  "header": {
+    "description": "Halfar Model",
+    "name": "halfar_model",
+    "_type": "Header",
+    "model_version": "v1.0",
+    "schema": "modelreps.io/DecaExpr",
+    "schema_name": "DecaExpr"
+  },
+  "_type": "ASKEMDecaExpr",
+  "model": {
+    "context": [
+      {
+        "dim": "Form0",
+        "var": {
+          "name": "h",
+          "_type": "Var"
+        },
+        "space": "I",
+        "_type": "Judgement"
+      },
+      {
+        "dim": "Form1",
+        "var": {
+          "name": "Γ",
+          "_type": "Var"
+        },
+        "space": "I",
+        "_type": "Judgement"
+      },
+      {
+        "dim": "Constant",
+        "var": {
+          "name": "n",
+          "_type": "Var"
+        },
+        "space": "I",
+        "_type": "Judgement"
+      }
+    ],
+    "_type": "DecaExpr",
+    "equations": [
+      {
+        "rhs": {
+          "var": {
+            "name": "h",
+            "_type": "Var"
+          },
+          "_type": "Tan"
+        },
+        "lhs": {
+          "name": "ḣ",
+          "_type": "Var"
+        },
+        "_type": "Eq"
+      },
+      {
+        "rhs": {
+          "arg": {
+            "args": [
+              {
+                "name": "Γ",
+                "_type": "Var"
+              },
+              {
+                "f": "d",
+                "arg": {
+                  "name": "h",
+                  "_type": "Var"
+                },
+                "_type": "App1"
+              },
+              {
+                "f": "avg₀₁",
+                "arg": {
+                  "f": "^",
+                  "arg1": {
+                    "f": "mag",
+                    "arg": {
+                      "f": "♯",
+                      "arg": {
+                        "f": "d",
+                        "arg": {
+                          "name": "h",
+                          "_type": "Var"
+                        },
+                        "_type": "App1"
+                      },
+                      "_type": "App1"
+                    },
+                    "_type": "App1"
+                  },
+                  "_type": "App2",
+                  "arg2": {
+                    "f": "-",
+                    "arg1": {
+                      "name": "n",
+                      "_type": "Var"
+                    },
+                    "_type": "App2",
+                    "arg2": {
+                      "name": "1",
+                      "_type": "Lit"
+                    }
+                  }
+                },
+                "_type": "App1"
+              },
+              {
+                "f": "avg₀₁",
+                "arg": {
+                  "f": "^",
+                  "arg1": {
+                    "name": "h",
+                    "_type": "Var"
+                  },
+                  "_type": "App2",
+                  "arg2": {
+                    "args": [
+                      {
+                        "name": "n",
+                        "_type": "Var"
+                      },
+                      {
+                        "name": "2",
+                        "_type": "Lit"
+                      }
+                    ],
+                    "_type": "Plus"
+                  }
+                },
+                "_type": "App1"
+              }
+            ],
+            "_type": "Mult"
+          },
+          "_type": "AppCirc1",
+          "fs": [
+            "⋆",
+            "d",
+            "⋆"
+          ]
+        },
+        "lhs": {
+          "name": "ḣ",
+          "_type": "Var"
+        },
+        "_type": "Eq"
+      }
+    ]
+  }
+}

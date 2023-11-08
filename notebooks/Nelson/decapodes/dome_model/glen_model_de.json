@@ -1,0 +1,120 @@
+{
+  "header": {
+    "description": "Glen Model",
+    "name": "glen_model",
+    "_type": "Header",
+    "model_version": "v1.0",
+    "schema": "modelreps.io/DecaExpr",
+    "schema_name": "DecaExpr"
+  },
+  "_type": "ASKEMDecaExpr",
+  "model": {
+    "context": [
+      {
+        "dim": "Form1",
+        "var": {
+          "name": "Γ",
+          "_type": "Var"
+        },
+        "space": "I",
+        "_type": "Judgement"
+      },
+      {
+        "dim": "Constant",
+        "var": {
+          "name": "A",
+          "_type": "Var"
+        },
+        "space": "I",
+        "_type": "Judgement"
+      },
+      {
+        "dim": "Constant",
+        "var": {
+          "name": "ρ",
+          "_type": "Var"
+        },
+        "space": "I",
+        "_type": "Judgement"
+      },
+      {
+        "dim": "Constant",
+        "var": {
+          "name": "g",
+          "_type": "Var"
+        },
+        "space": "I",
+        "_type": "Judgement"
+      },
+      {
+        "dim": "Constant",
+        "var": {
+          "name": "n",
+          "_type": "Var"
+        },
+        "space": "I",
+        "_type": "Judgement"
+      }
+    ],
+    "_type": "DecaExpr",
+    "equations": [
+      {
+        "rhs": {
+          "args": [
+            {
+              "f": "/",
+              "arg1": {
+                "name": "2",
+                "_type": "Lit"
+              },
+              "_type": "App2",
+              "arg2": {
+                "args": [
+                  {
+                    "name": "n",
+                    "_type": "Var"
+                  },
+                  {
+                    "name": "2",
+                    "_type": "Lit"
+                  }
+                ],
+                "_type": "Plus"
+              }
+            },
+            {
+              "name": "A",
+              "_type": "Var"
+            },
+            {
+              "f": "^",
+              "arg1": {
+                "f": "*",
+                "arg1": {
+                  "name": "ρ",
+                  "_type": "Var"
+                },
+                "_type": "App2",
+                "arg2": {
+                  "name": "g",
+                  "_type": "Var"
+                }
+              },
+              "_type": "App2",
+              "arg2": {
+                "name": "n",
+                "_type": "Var"
+              }
+            }
+          ],
+          "_type": "Mult"
+        },
+        "lhs": {
+          "name": "Γ",
+          "_type": "Var"
+        },
+        "_type": "Eq"
+      }
+    ]
+  }
+}

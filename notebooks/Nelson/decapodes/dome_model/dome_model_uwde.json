@@ -1,0 +1,49 @@
+{
+  "statements": [
+    {
+      "variables": [
+        {
+          "var": "Γ",
+          "type": "Form1",
+          "_type": "Typed"
+        },
+        {
+          "var": "n",
+          "type": "Constant",
+          "_type": "Typed"
+        }
+      ],
+      "_type": "Statement",
+      "relation": "dynamics"
+    },
+    {
+      "variables": [
+        {
+          "var": "Γ",
+          "type": "Form1",
+          "_type": "Typed"
+        },
+        {
+          "var": "n",
+          "type": "Constant",
+          "_type": "Typed"
+        }
+      ],
+      "_type": "Statement",
+      "relation": "stress"
+    }
+  ],
+  "context": [
+    {
+      "var": "Γ",
+      "type": "Form1",
+      "_type": "Typed"
+    },
+    {
+      "var": "n",
+      "type": "Constant",
+      "_type": "Typed"
+    }
+  ],
+  "_type": "UWDExpr"
+}

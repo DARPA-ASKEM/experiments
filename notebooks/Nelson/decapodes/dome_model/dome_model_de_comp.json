@@ -1,0 +1,348 @@
+{
+  "components": [
+    {
+      "interface": [
+        "Γ",
+        "n"
+      ],
+      "_type": "OpenModel",
+      "model": {
+        "header": {
+          "description": "Halfar Model",
+          "name": "halfar_model",
+          "_type": "Header",
+          "model_version": "v1.0",
+          "schema": "modelreps.io/DecaExpr",
+          "schema_name": "DecaExpr"
+        },
+        "_type": "ASKEMDecaExpr",
+        "model": {
+          "context": [
+            {
+              "dim": "Form0",
+              "var": {
+                "name": "h",
+                "_type": "Var"
+              },
+              "space": "I",
+              "_type": "Judgement"
+            },
+            {
+              "dim": "Form1",
+              "var": {
+                "name": "Γ",
+                "_type": "Var"
+              },
+              "space": "I",
+              "_type": "Judgement"
+            },
+            {
+              "dim": "Constant",
+              "var": {
+                "name": "n",
+                "_type": "Var"
+              },
+              "space": "I",
+              "_type": "Judgement"
+            }
+          ],
+          "_type": "DecaExpr",
+          "equations": [
+            {
+              "rhs": {
+                "var": {
+                  "name": "h",
+                  "_type": "Var"
+                },
+                "_type": "Tan"
+              },
+              "lhs": {
+                "name": "ḣ",
+                "_type": "Var"
+              },
+              "_type": "Eq"
+            },
+            {
+              "rhs": {
+                "arg": {
+                  "args": [
+                    {
+                      "name": "Γ",
+                      "_type": "Var"
+                    },
+                    {
+                      "f": "d",
+                      "arg": {
+                        "name": "h",
+                        "_type": "Var"
+                      },
+                      "_type": "App1"
+                    },
+                    {
+                      "f": "avg₀₁",
+                      "arg": {
+                        "f": "^",
+                        "arg1": {
+                          "f": "mag",
+                          "arg": {
+                            "f": "♯",
+                            "arg": {
+                              "f": "d",
+                              "arg": {
+                                "name": "h",
+                                "_type": "Var"
+                              },
+                              "_type": "App1"
+                            },
+                            "_type": "App1"
+                          },
+                          "_type": "App1"
+                        },
+                        "_type": "App2",
+                        "arg2": {
+                          "f": "-",
+                          "arg1": {
+                            "name": "n",
+                            "_type": "Var"
+                          },
+                          "_type": "App2",
+                          "arg2": {
+                            "name": "1",
+                            "_type": "Lit"
+                          }
+                        }
+                      },
+                      "_type": "App1"
+                    },
+                    {
+                      "f": "avg₀₁",
+                      "arg": {
+                        "f": "^",
+                        "arg1": {
+                          "name": "h",
+                          "_type": "Var"
+                        },
+                        "_type": "App2",
+                        "arg2": {
+                          "args": [
+                            {
+                              "name": "n",
+                              "_type": "Var"
+                            },
+                            {
+                              "name": "2",
+                              "_type": "Lit"
+                            }
+                          ],
+                          "_type": "Plus"
+                        }
+                      },
+                      "_type": "App1"
+                    }
+                  ],
+                  "_type": "Mult"
+                },
+                "_type": "AppCirc1",
+                "fs": [
+                  "⋆",
+                  "d",
+                  "⋆"
+                ]
+              },
+              "lhs": {
+                "name": "ḣ",
+                "_type": "Var"
+              },
+              "_type": "Eq"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "interface": [
+        "Γ",
+        "n"
+      ],
+      "_type": "OpenModel",
+      "model": {
+        "header": {
+          "description": "Glen Model",
+          "name": "glen_model",
+          "_type": "Header",
+          "model_version": "v1.0",
+          "schema": "modelreps.io/DecaExpr",
+          "schema_name": "DecaExpr"
+        },
+        "_type": "ASKEMDecaExpr",
+        "model": {
+          "context": [
+            {
+              "dim": "Form1",
+              "var": {
+                "name": "Γ",
+                "_type": "Var"
+              },
+              "space": "I",
+              "_type": "Judgement"
+            },
+            {
+              "dim": "Constant",
+              "var": {
+                "name": "A",
+                "_type": "Var"
+              },
+              "space": "I",
+              "_type": "Judgement"
+            },
+            {
+              "dim": "Constant",
+              "var": {
+                "name": "ρ",
+                "_type": "Var"
+              },
+              "space": "I",
+              "_type": "Judgement"
+            },
+            {
+              "dim": "Constant",
+              "var": {
+                "name": "g",
+                "_type": "Var"
+              },
+              "space": "I",
+              "_type": "Judgement"
+            },
+            {
+              "dim": "Constant",
+              "var": {
+                "name": "n",
+                "_type": "Var"
+              },
+              "space": "I",
+              "_type": "Judgement"
+            }
+          ],
+          "_type": "DecaExpr",
+          "equations": [
+            {
+              "rhs": {
+                "args": [
+                  {
+                    "f": "/",
+                    "arg1": {
+                      "name": "2",
+                      "_type": "Lit"
+                    },
+                    "_type": "App2",
+                    "arg2": {
+                      "args": [
+                        {
+                          "name": "n",
+                          "_type": "Var"
+                        },
+                        {
+                          "name": "2",
+                          "_type": "Lit"
+                        }
+                      ],
+                      "_type": "Plus"
+                    }
+                  },
+                  {
+                    "name": "A",
+                    "_type": "Var"
+                  },
+                  {
+                    "f": "^",
+                    "arg1": {
+                      "f": "*",
+                      "arg1": {
+                        "name": "ρ",
+                        "_type": "Var"
+                      },
+                      "_type": "App2",
+                      "arg2": {
+                        "name": "g",
+                        "_type": "Var"
+                      }
+                    },
+                    "_type": "App2",
+                    "arg2": {
+                      "name": "n",
+                      "_type": "Var"
+                    }
+                  }
+                ],
+                "_type": "Mult"
+              },
+              "lhs": {
+                "name": "Γ",
+                "_type": "Var"
+              },
+              "_type": "Eq"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "composition_pattern": {
+    "statements": [
+      {
+        "variables": [
+          {
+            "var": "Γ",
+            "type": "Form1",
+            "_type": "Typed"
+          },
+          {
+            "var": "n",
+            "type": "Constant",
+            "_type": "Typed"
+          }
+        ],
+        "_type": "Statement",
+        "relation": "dynamics"
+      },
+      {
+        "variables": [
+          {
+            "var": "Γ",
+            "type": "Form1",
+            "_type": "Typed"
+          },
+          {
+            "var": "n",
+            "type": "Constant",
+            "_type": "Typed"
+          }
+        ],
+        "_type": "Statement",
+        "relation": "stress"
+      }
+    ],
+    "context": [
+      {
+        "var": "Γ",
+        "type": "Form1",
+        "_type": "Typed"
+      },
+      {
+        "var": "n",
+        "type": "Constant",
+        "_type": "Typed"
+      }
+    ],
+    "_type": "UWDExpr"
+  },
+  "header": {
+    "description": "Dome model as composite of Halfar and Glen's law",
+    "name": "dome_model",
+    "_type": "Header",
+    "model_version": "v0.0",
+    "schema": "modelreps.io/Composite",
+    "schema_name": "CompositeModelExpr"
+  },
+  "_type": "CompositeModelExpr"
+}
