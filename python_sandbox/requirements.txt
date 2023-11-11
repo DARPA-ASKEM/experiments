@@ -22,4 +22,4 @@ openai
 latex2mathml
 circlify
 squarify
-h5py
+openpyxl
