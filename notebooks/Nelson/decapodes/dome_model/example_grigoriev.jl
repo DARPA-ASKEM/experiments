@@ -160,9 +160,9 @@ end
 
 # 1.8 Simulation
 
-# # Generate simulation
-# sim = eval(de.gensim(dome_model, dimension = 2))
-# fm = sim(s_dual, generate)
+# Generate simulation
+sim = eval(de.gensim(dome_model, dimension = 2))
+fm = sim(s_dual, generate)
 
 # # Run
 # @info("Solving Grigoriev Ice Cap")
