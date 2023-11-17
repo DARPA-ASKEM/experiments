@@ -26,17 +26,11 @@ h_init_tif = fio.load("./grigoriev/inputs/LanderVT-Icethickness-Grigoriev-ice-ca
 
 # 1.2 Compute Cartesian coordinates associated with the dataset
 
-# Taken from the bounding box of `Outline_2021.shp`
-const MIN_X = 243273.3897215238
-const MAX_X = 246108.60926909166
-const MIN_Y = 4648615.52319998
-const MAX_Y = 4652916.48416978
-
-# ???
-# const MIN_X = 243504.5
-# const MAX_X = 245599.8
-# const MIN_Y = 4648894.5
-# const MAX_Y = 4652179.7
+# Taken from the bounding box UTM coordinates
+const MIN_X = 243504.5
+const MAX_X = 245599.8
+const MIN_Y = 4648894.5
+const MAX_Y = 4652179.7
 
 # Note: 
 # shape of h_init_tif is Y by X (not X by Y)
@@ -166,33 +160,33 @@ end
 
 # 1.8 Simulation
 
-# Generate simulation
-sim = eval(de.gensim(dome_model, dimension = 2))
-fm = sim(s_dual, generate)
+# # Generate simulation
+# sim = eval(de.gensim(dome_model, dimension = 2))
+# fm = sim(s_dual, generate)
 
-# Run
-@info("Solving Grigoriev Ice Cap")
-prob = ODEProblem(fm, u_init, (t_init, t_end), constants_and_parameters)
-soln = solve(prob, Tsit5())
-@show soln.retcode
-@info("Done")
-# @save "grigoriev.jld2" soln
+# # Run
+# @info("Solving Grigoriev Ice Cap")
+# prob = ODEProblem(fm, u_init, (t_init, t_end), constants_and_parameters)
+# soln = solve(prob, Tsit5())
+# @show soln.retcode
+# @info("Done")
+# # @save "grigoriev.jld2" soln
 
-# Extract variable from solution object
-u = Array{Float64, 2}(undef, length(soln.t), length(soln.u[1]))
-for i in eachindex(soln.t)
-    for j in eachindex(soln.u[1])
-        u[i, j] = soln.u[i][j]
-    end
-end
+# # Extract variable from solution object
+# u = Array{Float64, 2}(undef, length(soln.t), length(soln.u[1]))
+# for i in eachindex(soln.t)
+#     for j in eachindex(soln.u[1])
+#         u[i, j] = soln.u[i][j]
+#     end
+# end
 
-# Save output
-f = joinpath("grigoriev/outputs/outputs.nc")
-isfile(f) && rm(f)
-netcdf.nccreate(
-    f, "h", 
-    "vertex_index", [i for i in eachindex(s_dual[:point])], Dict("name" => "mesh-vertex index", "units" => "None"),
-    atts = Dict("name" => "ice height, Grigoriev ice cap", "units" => "m")
-)
-netcdf.ncwrite(u, f, "h")
-netcdf.ncinfo(f)
+# # Save output
+# f = joinpath("grigoriev/outputs/outputs.nc")
+# isfile(f) && rm(f)
+# netcdf.nccreate(
+#     f, "h", 
+#     "vertex_index", [i for i in eachindex(s_dual[:point])], Dict("name" => "mesh-vertex index", "units" => "None"),
+#     atts = Dict("name" => "ice height, Grigoriev ice cap", "units" => "m")
+# )
+# netcdf.ncwrite(u, f, "h")
+# netcdf.ncinfo(f)
