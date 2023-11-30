@@ -24,9 +24,9 @@ See Hirani §5.8.
 """ Find a vector orthogonal to e pointing into the triangle shared with v.
 """
 function get_orthogonal_vector(s::cs.AbstractDeltaDualComplex2D, v::Int, e::Int)
-  e_vec = point(s, tgt(s, e)) - point(s, src(s, e))
-  e_vec /= norm(e_vec)
-  e2_vec = point(s, v) - point(s, src(s, e))
+  e_vec = cs.point(s, cs.tgt(s, e)) - cs.point(s, cs.src(s, e))
+  e_vec /= cs.norm(e_vec)
+  e2_vec = cs.point(s, v) - cs.point(s, cs.src(s, e))
   e2_vec - dot(e2_vec, e_vec)*e_vec
 end
 
@@ -34,7 +34,7 @@ function ♯_assign!(♯_mat::AbstractSparseMatrix, s::cs.AbstractDeltaDualCompl
   v₀::Int, _::Int, t::Int, i::Int, tri_edges::SVector{3, Int}, tri_center::Int,
   out_vec)
   for e in deleteat(tri_edges, i)
-    v, sgn = src(s,e) == v₀ ? (tgt(s,e), -1) : (src(s,e), +1)
+    v, sgn = cs.src(s,e) == v₀ ? (cs.tgt(s,e), -1) : (cs.src(s,e), +1)
     # | ⋆vₓ ∩ σⁿ |
     dual_area = sum(dual_volume(2,s,d) for d in elementary_duals(0,s,v)
                     if s[s[d, :D_∂e0], :D_∂v0] == tri_center)
@@ -44,13 +44,13 @@ function ♯_assign!(♯_mat::AbstractSparseMatrix, s::cs.AbstractDeltaDualCompl
 end
 
 function ♯_mat(s::cs.AbstractDeltaDualComplex2D)
-  #♯_mat = spzeros(attrtype_type(s, :Point), (nv(s), ne(s)))
-  ♯_mat = spzeros(Point3D, (nv(s), ne(s)))
-  for t in triangles(s)
-    tri_center, tri_edges = triangle_center(s,t), triangle_edges(s,t)
-    for (i, (v₀, e₀)) in enumerate(zip(triangle_vertices(s,t), tri_edges))
+  #♯_mat = spzeros(attrtype_type(s, :Point), (cs.nv(s), cs.ne(s)))
+  ♯_mat = spzeros(Point3D, (cs.nv(s), cs.ne(s)))
+  for t in cs.triangles(s)
+    tri_center, tri_edges = cs.triangle_center(s,t), cs.triangle_edges(s,t)
+    for (i, (v₀, e₀)) in enumerate(zip(cs.triangle_vertices(s,t), tri_edges))
       out_vec = get_orthogonal_vector(s, v₀, e₀)
-      h = norm(out_vec)
+      h = cs.norm(out_vec)
       #out_vec /= DS == DesbrunSharp() ? h : h^2
       out_vec /= h^2
       ♯_assign!(♯_mat, s, v₀, e₀, t, i, tri_edges, tri_center, out_vec)

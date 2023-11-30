@@ -161,7 +161,21 @@ end
 # 1.8 Simulation
 
 # Generate simulation
-sim = eval(de.gensim(dome_model, dimension = 2))
+
+sim_expr = de.gensim(dome_model, dimension = 2)
+
+# Prepending namespaces...
+sim_expr_ = Meta.parse(
+  replace(
+    replace(
+      string(sim_expr), 
+      "GeometricHodge()" => "cs.GeometricHodge()"
+    ), 
+    "default_dec_matrix_generate(" => "de.default_dec_matrix_generate("
+  )
+)
+
+sim = eval(sim_expr_)
 fm = sim(s_dual, generate)
 
 # # Run
