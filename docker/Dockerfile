@@ -30,6 +30,8 @@ RUN pip3 install numpy \
     tslearn \
     langchain \
     huggingface_hub \
+    xarray \
+    netCDF4 \
     git+https://github.com/indralab/mira.git
 
 # Add packages and precompile
@@ -52,6 +54,18 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     julia -e 'import Pkg; Pkg.add("OrdinaryDiffEq"); using OrdinaryDiffEq' && \
     julia -e 'import Pkg; Pkg.add("EasyModelAnalysis"); using EasyModelAnalysis' && \
     julia -e 'import Pkg; Pkg.add("Latexify"); using Latexify' && \
+    julia -e 'import Pkg; Pkg.add("JLD2"); using JLD2' && \
+    julia -e 'import Pkg; Pkg.add("CairoMakie"); using CairoMakie' && \
+    julia -e 'import Pkg; Pkg.add("GeometryBasics"); using GeometryBasics' && \
+    julia -e 'import Pkg; Pkg.add("FileIO"); using FileIO' && \
+    julia -e 'import Pkg; Pkg.add("MeshIO"); using MeshIO' && \
+    julia -e 'import Pkg; Pkg.add("DataFrames"); using DataFrames' && \
+    julia -e 'import Pkg; Pkg.add("CSV"); using CSV' && \
+    julia -e 'import Pkg; Pkg.add("SyntacticModels"); using SyntacticModels' && \
+    julia -e 'import Pkg; Pkg.add("NetCDF"); using NetCDF' && \
+    julia -e 'import Pkg; Pkg.add("Interpolations"); using Interpolations' && \
+    julia -e 'import Pkg; Pkg.add("ComponentArrays"); using ComponentArrays' && \
+    julia -e 'import Pkg; Pkg.add("StaticArrays"); using StaticArrays' && \
     fix-permissions /home/$NB_USER
 
 CMD jupyter lab --ip='*' --NotebookApp.token='' --NotebookApp.password=''
