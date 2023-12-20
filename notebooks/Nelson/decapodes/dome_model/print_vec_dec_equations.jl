@@ -4,6 +4,8 @@ using MLStyle
 using Catlab
 using Decapodes
 using Decapodes.decapodes
+using Latexify
+
 
 # Define the Halfar-Glen ice dynamics model
 # as a SummationDecapode
@@ -36,8 +38,6 @@ model_vec = @decapode begin
     Γ == (2/(n+2)) * A * (ρ * g)^n
 
 end
-
-
 
 
 # Convert model to DecaExpr and then pretty-print
@@ -97,6 +97,21 @@ println(sprint((io, x) -> Decapodes.pprint(io, x), Term(model)))
 # sum_1   = n + 2
 # sum_2   = n + 2
 
+# Save to text file
+s = sprint((io, x) -> Decapodes.pprint(io, x), Term(model))
+open("dome_model_de_flat_sm.txt", "w") do io
+    println(io, s)
+end    
+
+# Substitute SSA equations
+# ...
+s_ = readlines("dome_model_de_flat_sm_.txt")
+
+# Convert equations from Julia DSL to LaTeX
+latexify(s_)
+
+
+# Print same model in VEC notation
 println(sprint((io, x) -> Decapodes.pprint(io, x), Term(model_vec)))
 # Context:
 #   h::Form0 over I
@@ -142,6 +157,17 @@ println(sprint((io, x) -> Decapodes.pprint(io, x), Term(model_vec)))
 # Γ   = mult_1 * •9
 # sum_1   = n + 2
 # sum_2   = n + 2
+
+# Save to text file
+s_vec = sprint((io, x) -> Decapodes.pprint(io, x), Term(model_vec))
+open("dome_model_de_flat_sm_vec.txt", "w") do io
+    println(io, s_vec)
+end
+
+s_vec_ = readlines("dome_model_de_flat_sm_vec_.txt")
+
+# Convert equations from Julia DSL to LaTeX
+latexify(s_vec_)
 
 # Conversion from vector calculus operators to discrete calculus ones
 vec_to_dec!(model_vec)
