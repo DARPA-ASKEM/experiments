@@ -45,7 +45,7 @@ def run_validate(model: PetrinetModel, request):
         config=config,
         # haltEvent=self._halt_event,
     )
-    print("Done solver portion")
+    print("Done solver portion", file = sys.stderr)
     current_results.finalize_result(scenario, result)
     print(current_results.model_dump_json(by_alias=False))
     return current_results.model_dump_json(by_alias=False)
