@@ -1,0 +1,523 @@
+{
+  "id": "38c55f59-1bc2-4282-b6f2-f6fdc171a15e",
+  "created_on": "2024-05-09T18:00:28.156Z",
+  "updated_on": "2024-06-19T20:39:18.983Z",
+  "deleted_on": null,
+  "description": "data.csv",
+  "name": "data again",
+  "public_asset": false,
+  "temporary": false,
+  "data_source_date": null,
+  "dataset_url": null,
+  "dataset_urls": [],
+  "esgf_id": null,
+  "file_names": [
+    "data.csv",
+    "data.csv"
+  ],
+  "metadata": {
+    "dataCard": {
+      "DESCRIPTION": "UNKNOWN",
+      "AUTHOR_NAME": "UNKNOWN",
+      "AUTHOR_EMAIL": "UNKNOWN",
+      "DATE": "UNKNOWN",
+      "PROVENANCE": "UNKNOWN",
+      "SENSITIVITY": "UNKNOWN",
+      "LICENSE": "UNKNOWN",
+      "DATASET_TYPE": "tabular",
+      "SCHEMA": [
+        "date",
+        "I",
+        "R",
+        "D",
+        "V",
+        "H",
+        "I_0-9",
+        "I_10-19",
+        "I_20-29",
+        "I_30-39",
+        "I_40-49",
+        "I_50-59",
+        "I_60-69",
+        "I_70-79",
+        "N_0-9",
+        "N_10-19",
+        "N_20-29",
+        "N_30-39",
+        "N_40-49",
+        "N_50-59",
+        "N_60-69",
+        "N_70-79",
+        "N_80-89",
+        "N_90-99",
+        "N_100+"
+      ],
+      "DATA_PROFILING_RESULT": {
+        "date": {
+          "col_name": "date",
+          "concept": "Date",
+          "unit": "YYYY-MM-DD",
+          "description": "The date when the data was recorded",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "date",
+            "num_unique_entries": 629,
+            "most_common_entries": {
+              "2022-09-02T00:00:00": 1,
+              "2020-12-13T00:00:00": 1,
+              "2020-12-14T00:00:00": 1,
+              "2020-12-15T00:00:00": 1,
+              "2020-12-16T00:00:00": 1,
+              "2020-12-17T00:00:00": 1,
+              "2020-12-18T00:00:00": 1,
+              "2020-12-19T00:00:00": 1,
+              "2020-12-20T00:00:00": 1,
+              "2020-12-21T00:00:00": 1
+            },
+            "earliest": "2020-12-13T00:00:00",
+            "latest": "2022-09-02T00:00:00"
+          }
+        },
+        "I": {
+          "col_name": "I",
+          "concept": "Total Infections",
+          "unit": "Count",
+          "description": "The total number of infections recorded",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 179392,
+            "max": 11294067,
+            "mean": 1824147.9554848967,
+            "std": 1978525.3231355771,
+            "quantile_25": 797312,
+            "quantile_50": 1397172,
+            "quantile_75": 1940458
+          }
+        },
+        "R": {
+          "col_name": "R",
+          "concept": "Total Recoveries",
+          "unit": "Count",
+          "description": "The total number of recoveries recorded",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 13294197,
+            "max": 90583545,
+            "mean": 50287257.50874404,
+            "std": 23442036.666719466,
+            "quantile_25": 31468000,
+            "quantile_50": 43204421,
+            "quantile_75": 77269699
+          }
+        },
+        "D": {
+          "col_name": "D",
+          "concept": "Total Deaths",
+          "unit": "Count",
+          "description": "The total number of deaths recorded",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 253207,
+            "max": 995401,
+            "mean": 698484.7376788553,
+            "std": 209485.9743574343,
+            "quantile_25": 548324,
+            "quantile_50": 684485,
+            "quantile_75": 930841
+          }
+        },
+        "V": {
+          "col_name": "V",
+          "concept": "Total Vaccinations",
+          "unit": "Count",
+          "description": "The total number of vaccinations administered",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 30817,
+            "max": 263149382,
+            "mean": 192629410.19872814,
+            "std": 79406211.38052957,
+            "quantile_25": 166591640,
+            "quantile_50": 219965512,
+            "quantile_75": 255777370
+          }
+        },
+        "H": {
+          "col_name": "H",
+          "concept": "Total Hospitalizations",
+          "unit": "Count",
+          "description": "The total number of hospitalizations recorded",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 0,
+            "max": 133263,
+            "mean": 45946.52146263911,
+            "std": 33017.88051291638,
+            "quantile_25": 26372,
+            "quantile_50": 37921,
+            "quantile_75": 61421
+          }
+        },
+        "I_0-9": {
+          "col_name": "I_0-9",
+          "concept": "Infections Age 0-9",
+          "unit": "Count",
+          "description": "The number of infections recorded for the age group 0-9",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 16245,
+            "max": 892161,
+            "mean": 134016.49920508743,
+            "std": 144782.8388013173,
+            "quantile_25": 57118,
+            "quantile_50": 97126,
+            "quantile_75": 147339
+          }
+        },
+        "I_10-19": {
+          "col_name": "I_10-19",
+          "concept": "Infections Age 10-19",
+          "unit": "Count",
+          "description": "The number of infections recorded for the age group 10-19",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 34660,
+            "max": 1338296,
+            "mean": 204412.8187599364,
+            "std": 212750.68581526406,
+            "quantile_25": 98493,
+            "quantile_50": 142968,
+            "quantile_75": 218018
+          }
+        },
+        "I_20-29": {
+          "col_name": "I_20-29",
+          "concept": "Infections Age 20-29",
+          "unit": "Count",
+          "description": "The number of infections recorded for the age group 20-29",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 50422,
+            "max": 1784822,
+            "mean": 281231.626391097,
+            "std": 291973.3905196338,
+            "quantile_25": 138447,
+            "quantile_50": 200648,
+            "quantile_75": 293782
+          }
+        },
+        "I_30-39": {
+          "col_name": "I_30-39",
+          "concept": "Infections Age 30-39",
+          "unit": "Count",
+          "description": "The number of infections recorded for the age group 30-39",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 45137,
+            "max": 1613565,
+            "mean": 272181.6089030207,
+            "std": 272089.4840540674,
+            "quantile_25": 133875,
+            "quantile_50": 197842,
+            "quantile_75": 289669
+          }
+        },
+        "I_40-49": {
+          "col_name": "I_40-49",
+          "concept": "Infections Age 40-49",
+          "unit": "Count",
+          "description": "The number of infections recorded for the age group 40-49",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 38098,
+            "max": 1354664,
+            "mean": 229999.4546899841,
+            "std": 226577.5004791634,
+            "quantile_25": 113717,
+            "quantile_50": 166199,
+            "quantile_75": 252230
+          }
+        },
+        "I_50-59": {
+          "col_name": "I_50-59",
+          "concept": "Infections Age 50-59",
+          "unit": "Count",
+          "description": "The number of infections recorded for the age group 50-59",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 34446,
+            "max": 1159532,
+            "mean": 210402.55961844197,
+            "std": 195834.25306008226,
+            "quantile_25": 102090,
+            "quantile_50": 152728,
+            "quantile_75": 243442
+          }
+        },
+        "I_60-69": {
+          "col_name": "I_60-69",
+          "concept": "Infections Age 60-69",
+          "unit": "Count",
+          "description": "The number of infections recorded for the age group 60-69",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 22987,
+            "max": 785542,
+            "mean": 152906.00953895072,
+            "std": 131782.66321058967,
+            "quantile_25": 71691,
+            "quantile_50": 111362,
+            "quantile_75": 188755
+          }
+        },
+        "I_70-79": {
+          "col_name": "I_70-79",
+          "concept": "Infections Age 70-79",
+          "unit": "Count",
+          "description": "The number of infections recorded for the age group 70-79",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 11536,
+            "max": 396854,
+            "mean": 84900.80604133545,
+            "std": 67341.91688464169,
+            "quantile_25": 40879,
+            "quantile_50": 63157,
+            "quantile_75": 114605
+          }
+        },
+        "N_0-9": {
+          "col_name": "N_0-9",
+          "concept": "Population Age 0-9",
+          "unit": "Count",
+          "description": "The total population for the age group 0-9",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 40795692,
+            "max": 40795692,
+            "mean": 40795692,
+            "std": 0,
+            "quantile_25": 40795692,
+            "quantile_50": 40795692,
+            "quantile_75": 40795692
+          }
+        },
+        "N_10-19": {
+          "col_name": "N_10-19",
+          "concept": "Population Age 10-19",
+          "unit": "Count",
+          "description": "The total population for the age group 10-19",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 41765338,
+            "max": 41765338,
+            "mean": 41765338,
+            "std": 0,
+            "quantile_25": 41765338,
+            "quantile_50": 41765338,
+            "quantile_75": 41765338
+          }
+        },
+        "N_20-29": {
+          "col_name": "N_20-29",
+          "concept": "Population Age 20-29",
+          "unit": "Count",
+          "description": "The total population for the age group 20-29",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 45180252,
+            "max": 45180252,
+            "mean": 45180252,
+            "std": 0,
+            "quantile_25": 45180252,
+            "quantile_50": 45180252,
+            "quantile_75": 45180252
+          }
+        },
+        "N_30-39": {
+          "col_name": "N_30-39",
+          "concept": "Population Age 30-39",
+          "unit": "Count",
+          "description": "The total population for the age group 30-39",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 45598625,
+            "max": 45598625,
+            "mean": 45598625,
+            "std": 0,
+            "quantile_25": 45598625,
+            "quantile_50": 45598625,
+            "quantile_75": 45598625
+          }
+        },
+        "N_40-49": {
+          "col_name": "N_40-49",
+          "concept": "Population Age 40-49",
+          "unit": "Count",
+          "description": "The total population for the age group 40-49",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 40561654,
+            "max": 40561654,
+            "mean": 40561654,
+            "std": 0,
+            "quantile_25": 40561654,
+            "quantile_50": 40561654,
+            "quantile_75": 40561654
+          }
+        },
+        "N_50-59": {
+          "col_name": "N_50-59",
+          "concept": "Population Age 50-59",
+          "unit": "Count",
+          "description": "The total population for the age group 50-59",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 42008241,
+            "max": 42008241,
+            "mean": 42008241,
+            "std": 0,
+            "quantile_25": 42008241,
+            "quantile_50": 42008241,
+            "quantile_75": 42008241
+          }
+        },
+        "N_60-69": {
+          "col_name": "N_60-69",
+          "concept": "Population Age 60-69",
+          "unit": "Count",
+          "description": "The total population for the age group 60-69",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 39723180,
+            "max": 39723180,
+            "mean": 39723180,
+            "std": 0,
+            "quantile_25": 39723180,
+            "quantile_50": 39723180,
+            "quantile_75": 39723180
+          }
+        },
+        "N_70-79": {
+          "col_name": "N_70-79",
+          "concept": "Population Age 70-79",
+          "unit": "Count",
+          "description": "The total population for the age group 70-79",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 25830576,
+            "max": 25830576,
+            "mean": 25830576,
+            "std": 0,
+            "quantile_25": 25830576,
+            "quantile_50": 25830576,
+            "quantile_75": 25830576
+          }
+        },
+        "N_80-89": {
+          "col_name": "N_80-89",
+          "concept": "Population Age 80-89",
+          "unit": "Count",
+          "description": "The total population for the age group 80-89",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 10732464,
+            "max": 10732464,
+            "mean": 10732464,
+            "std": 0,
+            "quantile_25": 10732464,
+            "quantile_50": 10732464,
+            "quantile_75": 10732464
+          }
+        },
+        "N_90-99": {
+          "col_name": "N_90-99",
+          "concept": "Population Age 90-99",
+          "unit": "Count",
+          "description": "The total population for the age group 90-99",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 2704216,
+            "max": 2704216,
+            "mean": 2704216,
+            "std": 0,
+            "quantile_25": 2704216,
+            "quantile_50": 2704216,
+            "quantile_75": 2704216
+          }
+        },
+        "N_100+": {
+          "col_name": "N_100+",
+          "concept": "Population Age 100+",
+          "unit": "Count",
+          "description": "The total population for the age group 100 and older",
+          "column_stats": {
+            "num_null_entries": 0,
+            "type": "numeric",
+            "min": 98160,
+            "max": 98160,
+            "mean": 98160,
+            "std": 0,
+            "quantile_25": 98160,
+            "quantile_50": 98160,
+            "quantile_75": 98160
+          }
+        }
+      },
+      "EXAMPLES": {
+        "date": "2022-08-28",
+        "I": 1258547,
+        "R": 89995729,
+        "D": 992503,
+        "V": 262988826,
+        "H": 73886,
+        "I_0-9": 84499,
+        "I_10-19": 80675,
+        "I_20-29": 122302,
+        "I_30-39": 130595,
+        "I_40-49": 111947,
+        "I_50-59": 118628,
+        "I_60-69": 106650,
+        "I_70-79": 76478,
+        "N_0-9": 40795692,
+        "N_10-19": 41765338,
+        "N_20-29": 45180252,
+        "N_30-39": 45598625,
+        "N_40-49": 40561654,
+        "N_50-59": 42008241,
+        "N_60-69": 39723180,
+        "N_70-79": 25830576,
+        "N_80-89": 10732464,
+        "N_90-99": 2704216,
+        "N_100+": 98160
+      }
+    }
+  },
+  "source": null,
+  "user_id": "e7c3e776-744c-4b01-b956-30858063793a",
+  "grounding_id": null,
+  "project_id": null
+}
