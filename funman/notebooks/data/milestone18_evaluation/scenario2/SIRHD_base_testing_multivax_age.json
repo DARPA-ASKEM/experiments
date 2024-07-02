@@ -1,0 +1,2507 @@
+{
+ "header": {
+  "name": "M18EvalS2Q1 Model",
+  "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.6/petrinet/petrinet_schema.json",
+  "schema_name": "petrinet",
+  "description": "SIRDH model for Milestone 18, Epi Eval, Scenario 2, Question 1",
+  "model_version": "0.1"
+ },
+ "properties": {},
+ "model": {
+  "states": [
+   {
+    "id": "S_u_y",
+    "name": "S_u_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "u",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "I_u_y",
+    "name": "I_u_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "u",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "I_u_o",
+    "name": "I_u_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "u",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "S_u_o",
+    "name": "S_u_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "u",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "I_v1_y",
+    "name": "I_v1_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v1",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "I_v1_o",
+    "name": "I_v1_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v1",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "I_v2_y",
+    "name": "I_v2_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v2",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "I_v2_o",
+    "name": "I_v2_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v2",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "S_v1_y",
+    "name": "S_v1_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v1",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "S_v1_o",
+    "name": "S_v1_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v1",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "S_v2_y",
+    "name": "S_v2_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v2",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "S_v2_o",
+    "name": "S_v2_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v2",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "R_u_y",
+    "name": "R_u_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "u",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "R_u_o",
+    "name": "R_u_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "u",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "R_v1_y",
+    "name": "R_v1_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v1",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "R_v1_o",
+    "name": "R_v1_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v1",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "R_v2_y",
+    "name": "R_v2_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v2",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "R_v2_o",
+    "name": "R_v2_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v2",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "H_u_y",
+    "name": "H_u_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "u",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "H_u_o",
+    "name": "H_u_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "u",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "H_v1_y",
+    "name": "H_v1_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v1",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "H_v1_o",
+    "name": "H_v1_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v1",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "H_v2_y",
+    "name": "H_v2_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v2",
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "H_v2_o",
+    "name": "H_v2_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "vax": "v2",
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "D_y",
+    "name": "D_y",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "age": "y"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   },
+   {
+    "id": "D_o",
+    "name": "D_o",
+    "grounding": {
+     "identifiers": {},
+     "modifiers": {
+      "age": "o"
+     }
+    },
+    "units": {
+     "expression": "person",
+     "expression_mathml": "<ci>person</ci>"
+    }
+   }
+  ],
+  "transitions": [
+   {
+    "id": "t_u_u_y_y",
+    "input": [
+     "I_u_y",
+     "S_u_y"
+    ],
+    "output": [
+     "I_u_y",
+     "I_u_y"
+    ],
+    "properties": {
+     "name": "t_u_u_y_y"
+    }
+   },
+   {
+    "id": "t_u_u_y_o",
+    "input": [
+     "I_u_o",
+     "S_u_y"
+    ],
+    "output": [
+     "I_u_o",
+     "I_u_y"
+    ],
+    "properties": {
+     "name": "t_u_u_y_o"
+    }
+   },
+   {
+    "id": "t_u_u_o_y",
+    "input": [
+     "I_u_y",
+     "S_u_o"
+    ],
+    "output": [
+     "I_u_y",
+     "I_u_o"
+    ],
+    "properties": {
+     "name": "t_u_u_o_y"
+    }
+   },
+   {
+    "id": "t_u_u_o_o",
+    "input": [
+     "I_u_o",
+     "S_u_o"
+    ],
+    "output": [
+     "I_u_o",
+     "I_u_o"
+    ],
+    "properties": {
+     "name": "t_u_u_o_o"
+    }
+   },
+   {
+    "id": "t_u_v1_y_y",
+    "input": [
+     "I_v1_y",
+     "S_u_y"
+    ],
+    "output": [
+     "I_v1_y",
+     "I_u_y"
+    ],
+    "properties": {
+     "name": "t_u_v1_y_y"
+    }
+   },
+   {
+    "id": "t_u_v1_y_o",
+    "input": [
+     "I_v1_o",
+     "S_u_y"
+    ],
+    "output": [
+     "I_v1_o",
+     "I_u_y"
+    ],
+    "properties": {
+     "name": "t_u_v1_y_o"
+    }
+   },
+   {
+    "id": "t_u_v1_o_y",
+    "input": [
+     "I_v1_y",
+     "S_u_o"
+    ],
+    "output": [
+     "I_v1_y",
+     "I_u_o"
+    ],
+    "properties": {
+     "name": "t_u_v1_o_y"
+    }
+   },
+   {
+    "id": "t_u_v1_o_o",
+    "input": [
+     "I_v1_o",
+     "S_u_o"
+    ],
+    "output": [
+     "I_v1_o",
+     "I_u_o"
+    ],
+    "properties": {
+     "name": "t_u_v1_o_o"
+    }
+   },
+   {
+    "id": "t_u_v2_y_y",
+    "input": [
+     "I_v2_y",
+     "S_u_y"
+    ],
+    "output": [
+     "I_v2_y",
+     "I_u_y"
+    ],
+    "properties": {
+     "name": "t_u_v2_y_y"
+    }
+   },
+   {
+    "id": "t_u_v2_y_o",
+    "input": [
+     "I_v2_o",
+     "S_u_y"
+    ],
+    "output": [
+     "I_v2_o",
+     "I_u_y"
+    ],
+    "properties": {
+     "name": "t_u_v2_y_o"
+    }
+   },
+   {
+    "id": "t_u_v2_o_y",
+    "input": [
+     "I_v2_y",
+     "S_u_o"
+    ],
+    "output": [
+     "I_v2_y",
+     "I_u_o"
+    ],
+    "properties": {
+     "name": "t_u_v2_o_y"
+    }
+   },
+   {
+    "id": "t_u_v2_o_o",
+    "input": [
+     "I_v2_o",
+     "S_u_o"
+    ],
+    "output": [
+     "I_v2_o",
+     "I_u_o"
+    ],
+    "properties": {
+     "name": "t_u_v2_o_o"
+    }
+   },
+   {
+    "id": "t_v1_u_y_y",
+    "input": [
+     "I_u_y",
+     "S_v1_y"
+    ],
+    "output": [
+     "I_u_y",
+     "I_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_u_y_y"
+    }
+   },
+   {
+    "id": "t_v1_u_y_o",
+    "input": [
+     "I_u_o",
+     "S_v1_y"
+    ],
+    "output": [
+     "I_u_o",
+     "I_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_u_y_o"
+    }
+   },
+   {
+    "id": "t_v1_u_o_y",
+    "input": [
+     "I_u_y",
+     "S_v1_o"
+    ],
+    "output": [
+     "I_u_y",
+     "I_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_u_o_y"
+    }
+   },
+   {
+    "id": "t_v1_u_o_o",
+    "input": [
+     "I_u_o",
+     "S_v1_o"
+    ],
+    "output": [
+     "I_u_o",
+     "I_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_u_o_o"
+    }
+   },
+   {
+    "id": "t_v1_v1_y_y",
+    "input": [
+     "I_v1_y",
+     "S_v1_y"
+    ],
+    "output": [
+     "I_v1_y",
+     "I_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_v1_y_y"
+    }
+   },
+   {
+    "id": "t_v1_v1_y_o",
+    "input": [
+     "I_v1_o",
+     "S_v1_y"
+    ],
+    "output": [
+     "I_v1_o",
+     "I_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_v1_y_o"
+    }
+   },
+   {
+    "id": "t_v1_v1_o_y",
+    "input": [
+     "I_v1_y",
+     "S_v1_o"
+    ],
+    "output": [
+     "I_v1_y",
+     "I_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_v1_o_y"
+    }
+   },
+   {
+    "id": "t_v1_v1_o_o",
+    "input": [
+     "I_v1_o",
+     "S_v1_o"
+    ],
+    "output": [
+     "I_v1_o",
+     "I_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_v1_o_o"
+    }
+   },
+   {
+    "id": "t_v1_v2_y_y",
+    "input": [
+     "I_v2_y",
+     "S_v1_y"
+    ],
+    "output": [
+     "I_v2_y",
+     "I_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_v2_y_y"
+    }
+   },
+   {
+    "id": "t_v1_v2_y_o",
+    "input": [
+     "I_v2_o",
+     "S_v1_y"
+    ],
+    "output": [
+     "I_v2_o",
+     "I_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_v2_y_o"
+    }
+   },
+   {
+    "id": "t_v1_v2_o_y",
+    "input": [
+     "I_v2_y",
+     "S_v1_o"
+    ],
+    "output": [
+     "I_v2_y",
+     "I_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_v2_o_y"
+    }
+   },
+   {
+    "id": "t_v1_v2_o_o",
+    "input": [
+     "I_v2_o",
+     "S_v1_o"
+    ],
+    "output": [
+     "I_v2_o",
+     "I_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_v2_o_o"
+    }
+   },
+   {
+    "id": "t_v2_u_y_y",
+    "input": [
+     "I_u_y",
+     "S_v2_y"
+    ],
+    "output": [
+     "I_u_y",
+     "I_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_u_y_y"
+    }
+   },
+   {
+    "id": "t_v2_u_y_o",
+    "input": [
+     "I_u_o",
+     "S_v2_y"
+    ],
+    "output": [
+     "I_u_o",
+     "I_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_u_y_o"
+    }
+   },
+   {
+    "id": "t_v2_u_o_y",
+    "input": [
+     "I_u_y",
+     "S_v2_o"
+    ],
+    "output": [
+     "I_u_y",
+     "I_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_u_o_y"
+    }
+   },
+   {
+    "id": "t_v2_u_o_o",
+    "input": [
+     "I_u_o",
+     "S_v2_o"
+    ],
+    "output": [
+     "I_u_o",
+     "I_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_u_o_o"
+    }
+   },
+   {
+    "id": "t_v2_v1_y_y",
+    "input": [
+     "I_v1_y",
+     "S_v2_y"
+    ],
+    "output": [
+     "I_v1_y",
+     "I_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_v1_y_y"
+    }
+   },
+   {
+    "id": "t_v2_v1_y_o",
+    "input": [
+     "I_v1_o",
+     "S_v2_y"
+    ],
+    "output": [
+     "I_v1_o",
+     "I_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_v1_y_o"
+    }
+   },
+   {
+    "id": "t_v2_v1_o_y",
+    "input": [
+     "I_v1_y",
+     "S_v2_o"
+    ],
+    "output": [
+     "I_v1_y",
+     "I_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_v1_o_y"
+    }
+   },
+   {
+    "id": "t_v2_v1_o_o",
+    "input": [
+     "I_v1_o",
+     "S_v2_o"
+    ],
+    "output": [
+     "I_v1_o",
+     "I_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_v1_o_o"
+    }
+   },
+   {
+    "id": "t_v2_v2_y_y",
+    "input": [
+     "I_v2_y",
+     "S_v2_y"
+    ],
+    "output": [
+     "I_v2_y",
+     "I_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_v2_y_y"
+    }
+   },
+   {
+    "id": "t_v2_v2_y_o",
+    "input": [
+     "I_v2_o",
+     "S_v2_y"
+    ],
+    "output": [
+     "I_v2_o",
+     "I_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_v2_y_o"
+    }
+   },
+   {
+    "id": "t_v2_v2_o_y",
+    "input": [
+     "I_v2_y",
+     "S_v2_o"
+    ],
+    "output": [
+     "I_v2_y",
+     "I_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_v2_o_y"
+    }
+   },
+   {
+    "id": "t_v2_v2_o_o",
+    "input": [
+     "I_v2_o",
+     "S_v2_o"
+    ],
+    "output": [
+     "I_v2_o",
+     "I_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_v2_o_o"
+    }
+   },
+   {
+    "id": "t_u_y",
+    "input": [
+     "I_u_y"
+    ],
+    "output": [
+     "R_u_y"
+    ],
+    "properties": {
+     "name": "t_u_y"
+    }
+   },
+   {
+    "id": "t_u_o",
+    "input": [
+     "I_u_o"
+    ],
+    "output": [
+     "R_u_o"
+    ],
+    "properties": {
+     "name": "t_u_o"
+    }
+   },
+   {
+    "id": "t_v1_y",
+    "input": [
+     "I_v1_y"
+    ],
+    "output": [
+     "R_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_y"
+    }
+   },
+   {
+    "id": "t_v1_o",
+    "input": [
+     "I_v1_o"
+    ],
+    "output": [
+     "R_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_o"
+    }
+   },
+   {
+    "id": "t_v2_y",
+    "input": [
+     "I_v2_y"
+    ],
+    "output": [
+     "R_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_y"
+    }
+   },
+   {
+    "id": "t_v2_o",
+    "input": [
+     "I_v2_o"
+    ],
+    "output": [
+     "R_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_o"
+    }
+   },
+   {
+    "id": "t_u_y",
+    "input": [
+     "I_u_y"
+    ],
+    "output": [
+     "H_u_y"
+    ],
+    "properties": {
+     "name": "t_u_y"
+    }
+   },
+   {
+    "id": "t_u_o",
+    "input": [
+     "I_u_o"
+    ],
+    "output": [
+     "H_u_o"
+    ],
+    "properties": {
+     "name": "t_u_o"
+    }
+   },
+   {
+    "id": "t_v1_y",
+    "input": [
+     "I_v1_y"
+    ],
+    "output": [
+     "H_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_y"
+    }
+   },
+   {
+    "id": "t_v1_o",
+    "input": [
+     "I_v1_o"
+    ],
+    "output": [
+     "H_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_o"
+    }
+   },
+   {
+    "id": "t_v2_y",
+    "input": [
+     "I_v2_y"
+    ],
+    "output": [
+     "H_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_y"
+    }
+   },
+   {
+    "id": "t_v2_o",
+    "input": [
+     "I_v2_o"
+    ],
+    "output": [
+     "H_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_o"
+    }
+   },
+   {
+    "id": "t_u_y",
+    "input": [
+     "H_u_y"
+    ],
+    "output": [
+     "D_y"
+    ],
+    "properties": {
+     "name": "t_u_y"
+    }
+   },
+   {
+    "id": "t_u_o",
+    "input": [
+     "H_u_o"
+    ],
+    "output": [
+     "D_o"
+    ],
+    "properties": {
+     "name": "t_u_o"
+    }
+   },
+   {
+    "id": "t_v1_y",
+    "input": [
+     "H_v1_y"
+    ],
+    "output": [
+     "D_y"
+    ],
+    "properties": {
+     "name": "t_v1_y"
+    }
+   },
+   {
+    "id": "t_v1_o",
+    "input": [
+     "H_v1_o"
+    ],
+    "output": [
+     "D_o"
+    ],
+    "properties": {
+     "name": "t_v1_o"
+    }
+   },
+   {
+    "id": "t_v2_y",
+    "input": [
+     "H_v2_y"
+    ],
+    "output": [
+     "D_y"
+    ],
+    "properties": {
+     "name": "t_v2_y"
+    }
+   },
+   {
+    "id": "t_v2_o",
+    "input": [
+     "H_v2_o"
+    ],
+    "output": [
+     "D_o"
+    ],
+    "properties": {
+     "name": "t_v2_o"
+    }
+   },
+   {
+    "id": "t_u_y",
+    "input": [
+     "H_u_y"
+    ],
+    "output": [
+     "R_u_y"
+    ],
+    "properties": {
+     "name": "t_u_y"
+    }
+   },
+   {
+    "id": "t_u_o",
+    "input": [
+     "H_u_o"
+    ],
+    "output": [
+     "R_u_o"
+    ],
+    "properties": {
+     "name": "t_u_o"
+    }
+   },
+   {
+    "id": "t_v1_y",
+    "input": [
+     "H_v1_y"
+    ],
+    "output": [
+     "R_v1_y"
+    ],
+    "properties": {
+     "name": "t_v1_y"
+    }
+   },
+   {
+    "id": "t_v1_o",
+    "input": [
+     "H_v1_o"
+    ],
+    "output": [
+     "R_v1_o"
+    ],
+    "properties": {
+     "name": "t_v1_o"
+    }
+   },
+   {
+    "id": "t_v2_y",
+    "input": [
+     "H_v2_y"
+    ],
+    "output": [
+     "R_v2_y"
+    ],
+    "properties": {
+     "name": "t_v2_y"
+    }
+   },
+   {
+    "id": "t_v2_o",
+    "input": [
+     "H_v2_o"
+    ],
+    "output": [
+     "R_v2_o"
+    ],
+    "properties": {
+     "name": "t_v2_o"
+    }
+   },
+   {
+    "id": "t_y",
+    "input": [
+     "S_u_y"
+    ],
+    "output": [
+     "S_v1_y"
+    ],
+    "properties": {
+     "name": "t_y"
+    }
+   },
+   {
+    "id": "t_o",
+    "input": [
+     "S_u_o"
+    ],
+    "output": [
+     "S_v1_o"
+    ],
+    "properties": {
+     "name": "t_o"
+    }
+   },
+   {
+    "id": "t_y",
+    "input": [
+     "S_v1_y"
+    ],
+    "output": [
+     "S_v2_y"
+    ],
+    "properties": {
+     "name": "t_y"
+    }
+   },
+   {
+    "id": "t_o",
+    "input": [
+     "S_v1_o"
+    ],
+    "output": [
+     "S_v2_o"
+    ],
+    "properties": {
+     "name": "t_o"
+    }
+   }
+  ]
+ },
+ "semantics": {
+  "ode": {
+   "rates": [
+    {
+     "target": "t_u_u_y_y",
+     "expression": "I_u_y*S_u_y*beta_u_u_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_y</ci><ci>S_u_y</ci><ci>beta_u_u_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_u_y_o",
+     "expression": "I_u_o*S_u_y*beta_u_u_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_o</ci><ci>S_u_y</ci><ci>beta_u_u_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_u_o_y",
+     "expression": "I_u_y*S_u_o*beta_u_u_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_y</ci><ci>S_u_o</ci><ci>beta_u_u_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_u_o_o",
+     "expression": "I_u_o*S_u_o*beta_u_u_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_o</ci><ci>S_u_o</ci><ci>beta_u_u_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_v1_y_y",
+     "expression": "I_v1_y*S_u_y*beta_u_v1_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_y</ci><ci>S_u_y</ci><ci>beta_u_v1_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_v1_y_o",
+     "expression": "I_v1_o*S_u_y*beta_u_v1_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_o</ci><ci>S_u_y</ci><ci>beta_u_v1_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_v1_o_y",
+     "expression": "I_v1_y*S_u_o*beta_u_v1_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_y</ci><ci>S_u_o</ci><ci>beta_u_v1_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_v1_o_o",
+     "expression": "I_v1_o*S_u_o*beta_u_v1_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_o</ci><ci>S_u_o</ci><ci>beta_u_v1_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_v2_y_y",
+     "expression": "I_v2_y*S_u_y*beta_u_v2_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_y</ci><ci>S_u_y</ci><ci>beta_u_v2_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_v2_y_o",
+     "expression": "I_v2_o*S_u_y*beta_u_v2_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_o</ci><ci>S_u_y</ci><ci>beta_u_v2_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_v2_o_y",
+     "expression": "I_v2_y*S_u_o*beta_u_v2_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_y</ci><ci>S_u_o</ci><ci>beta_u_v2_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_v2_o_o",
+     "expression": "I_v2_o*S_u_o*beta_u_v2_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_o</ci><ci>S_u_o</ci><ci>beta_u_v2_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_u_y_y",
+     "expression": "I_u_y*S_v1_y*beta_v1_u_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_y</ci><ci>S_v1_y</ci><ci>beta_v1_u_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_u_y_o",
+     "expression": "I_u_o*S_v1_y*beta_v1_u_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_o</ci><ci>S_v1_y</ci><ci>beta_v1_u_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_u_o_y",
+     "expression": "I_u_y*S_v1_o*beta_v1_u_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_y</ci><ci>S_v1_o</ci><ci>beta_v1_u_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_u_o_o",
+     "expression": "I_u_o*S_v1_o*beta_v1_u_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_o</ci><ci>S_v1_o</ci><ci>beta_v1_u_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_v1_y_y",
+     "expression": "I_v1_y*S_v1_y*beta_v1_v1_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_y</ci><ci>S_v1_y</ci><ci>beta_v1_v1_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_v1_y_o",
+     "expression": "I_v1_o*S_v1_y*beta_v1_v1_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_o</ci><ci>S_v1_y</ci><ci>beta_v1_v1_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_v1_o_y",
+     "expression": "I_v1_y*S_v1_o*beta_v1_v1_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_y</ci><ci>S_v1_o</ci><ci>beta_v1_v1_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_v1_o_o",
+     "expression": "I_v1_o*S_v1_o*beta_v1_v1_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_o</ci><ci>S_v1_o</ci><ci>beta_v1_v1_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_v2_y_y",
+     "expression": "I_v2_y*S_v1_y*beta_v1_v2_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_y</ci><ci>S_v1_y</ci><ci>beta_v1_v2_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_v2_y_o",
+     "expression": "I_v2_o*S_v1_y*beta_v1_v2_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_o</ci><ci>S_v1_y</ci><ci>beta_v1_v2_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_v2_o_y",
+     "expression": "I_v2_y*S_v1_o*beta_v1_v2_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_y</ci><ci>S_v1_o</ci><ci>beta_v1_v2_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v1_v2_o_o",
+     "expression": "I_v2_o*S_v1_o*beta_v1_v2_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_o</ci><ci>S_v1_o</ci><ci>beta_v1_v2_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_u_y_y",
+     "expression": "I_u_y*S_v2_y*beta_v2_u_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_y</ci><ci>S_v2_y</ci><ci>beta_v2_u_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_u_y_o",
+     "expression": "I_u_o*S_v2_y*beta_v2_u_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_o</ci><ci>S_v2_y</ci><ci>beta_v2_u_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_u_o_y",
+     "expression": "I_u_y*S_v2_o*beta_v2_u_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_y</ci><ci>S_v2_o</ci><ci>beta_v2_u_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_u_o_o",
+     "expression": "I_u_o*S_v2_o*beta_v2_u_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_u_o</ci><ci>S_v2_o</ci><ci>beta_v2_u_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_v1_y_y",
+     "expression": "I_v1_y*S_v2_y*beta_v2_v1_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_y</ci><ci>S_v2_y</ci><ci>beta_v2_v1_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_v1_y_o",
+     "expression": "I_v1_o*S_v2_y*beta_v2_v1_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_o</ci><ci>S_v2_y</ci><ci>beta_v2_v1_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_v1_o_y",
+     "expression": "I_v1_y*S_v2_o*beta_v2_v1_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_y</ci><ci>S_v2_o</ci><ci>beta_v2_v1_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_v1_o_o",
+     "expression": "I_v1_o*S_v2_o*beta_v2_v1_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v1_o</ci><ci>S_v2_o</ci><ci>beta_v2_v1_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_v2_y_y",
+     "expression": "I_v2_y*S_v2_y*beta_v2_v2_y_y*(1 - p_test_acc_y_y)*(-p_dec_transm_min_y_y - t*(p_dec_transm_max_y_y - p_dec_transm_min_y_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_y</ci><ci>S_v2_y</ci><ci>beta_v2_v2_y_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_y</ci><ci>p_dec_transm_min_y_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_v2_y_o",
+     "expression": "I_v2_o*S_v2_y*beta_v2_v2_y_o*(1 - p_test_acc_y_o)*(-p_dec_transm_min_y_o - t*(p_dec_transm_max_y_o - p_dec_transm_min_y_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_o</ci><ci>S_v2_y</ci><ci>beta_v2_v2_y_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_y_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_y_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_y_o</ci><ci>p_dec_transm_min_y_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_v2_o_y",
+     "expression": "I_v2_y*S_v2_o*beta_v2_v2_o_y*(1 - p_test_acc_o_y)*(-p_dec_transm_min_o_y - t*(p_dec_transm_max_o_y - p_dec_transm_min_o_y)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_y</ci><ci>S_v2_o</ci><ci>beta_v2_v2_o_y</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_y</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_y</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_y</ci><ci>p_dec_transm_min_o_y</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_v2_v2_o_o",
+     "expression": "I_v2_o*S_v2_o*beta_v2_v2_o_o*(1 - p_test_acc_o_o)*(-p_dec_transm_min_o_o - t*(p_dec_transm_max_o_o - p_dec_transm_min_o_o)/60 + 1)/N",
+     "expression_mathml": "<apply><divide/><apply><times/><ci>I_v2_o</ci><ci>S_v2_o</ci><ci>beta_v2_v2_o_o</ci><apply><minus/><cn>1</cn><ci>p_test_acc_o_o</ci></apply><apply><plus/><apply><minus/><apply><minus/><ci>p_dec_transm_min_o_o</ci></apply><apply><divide/><apply><times/><ci>t</ci><apply><minus/><ci>p_dec_transm_max_o_o</ci><ci>p_dec_transm_min_o_o</ci></apply></apply><cn>60</cn></apply></apply><cn>1</cn></apply></apply><ci>N</ci></apply>"
+    },
+    {
+     "target": "t_u_y",
+     "expression": "I_u_y*pir_u_y*rir",
+     "expression_mathml": "<apply><times/><ci>I_u_y</ci><ci>pir_u_y</ci><ci>rir</ci></apply>"
+    },
+    {
+     "target": "t_u_o",
+     "expression": "I_u_o*pir_u_o*rir",
+     "expression_mathml": "<apply><times/><ci>I_u_o</ci><ci>pir_u_o</ci><ci>rir</ci></apply>"
+    },
+    {
+     "target": "t_v1_y",
+     "expression": "I_v1_y*pir_v1_y*rir",
+     "expression_mathml": "<apply><times/><ci>I_v1_y</ci><ci>pir_v1_y</ci><ci>rir</ci></apply>"
+    },
+    {
+     "target": "t_v1_o",
+     "expression": "I_v1_o*pir_v1_o*rir",
+     "expression_mathml": "<apply><times/><ci>I_v1_o</ci><ci>pir_v1_o</ci><ci>rir</ci></apply>"
+    },
+    {
+     "target": "t_v2_y",
+     "expression": "I_v2_y*pir_v2_y*rir",
+     "expression_mathml": "<apply><times/><ci>I_v2_y</ci><ci>pir_v2_y</ci><ci>rir</ci></apply>"
+    },
+    {
+     "target": "t_v2_o",
+     "expression": "I_v2_o*pir_v2_o*rir",
+     "expression_mathml": "<apply><times/><ci>I_v2_o</ci><ci>pir_v2_o</ci><ci>rir</ci></apply>"
+    },
+    {
+     "target": "t_u_y",
+     "expression": "I_u_y*pih_u_y*rih_u_y",
+     "expression_mathml": "<apply><times/><ci>I_u_y</ci><ci>pih_u_y</ci><ci>rih_u_y</ci></apply>"
+    },
+    {
+     "target": "t_u_o",
+     "expression": "I_u_o*pih_u_o*rih_u_o",
+     "expression_mathml": "<apply><times/><ci>I_u_o</ci><ci>pih_u_o</ci><ci>rih_u_o</ci></apply>"
+    },
+    {
+     "target": "t_v1_y",
+     "expression": "I_v1_y*pih_v1_y*rih_v1_y",
+     "expression_mathml": "<apply><times/><ci>I_v1_y</ci><ci>pih_v1_y</ci><ci>rih_v1_y</ci></apply>"
+    },
+    {
+     "target": "t_v1_o",
+     "expression": "I_v1_o*pih_v1_o*rih_v1_o",
+     "expression_mathml": "<apply><times/><ci>I_v1_o</ci><ci>pih_v1_o</ci><ci>rih_v1_o</ci></apply>"
+    },
+    {
+     "target": "t_v2_y",
+     "expression": "I_v2_y*pih_v2_y*rih_v2_y",
+     "expression_mathml": "<apply><times/><ci>I_v2_y</ci><ci>pih_v2_y</ci><ci>rih_v2_y</ci></apply>"
+    },
+    {
+     "target": "t_v2_o",
+     "expression": "I_v2_o*pih_v2_o*rih_v2_o",
+     "expression_mathml": "<apply><times/><ci>I_v2_o</ci><ci>pih_v2_o</ci><ci>rih_v2_o</ci></apply>"
+    },
+    {
+     "target": "t_u_y",
+     "expression": "H_u_y*phd_u_y*rhd_u_y",
+     "expression_mathml": "<apply><times/><ci>H_u_y</ci><ci>phd_u_y</ci><ci>rhd_u_y</ci></apply>"
+    },
+    {
+     "target": "t_u_o",
+     "expression": "H_u_o*phd_u_o*rhd_u_o",
+     "expression_mathml": "<apply><times/><ci>H_u_o</ci><ci>phd_u_o</ci><ci>rhd_u_o</ci></apply>"
+    },
+    {
+     "target": "t_v1_y",
+     "expression": "H_v1_y*phd_v1_y*rhd_v1_y",
+     "expression_mathml": "<apply><times/><ci>H_v1_y</ci><ci>phd_v1_y</ci><ci>rhd_v1_y</ci></apply>"
+    },
+    {
+     "target": "t_v1_o",
+     "expression": "H_v1_o*phd_v1_o*rhd_v1_o",
+     "expression_mathml": "<apply><times/><ci>H_v1_o</ci><ci>phd_v1_o</ci><ci>rhd_v1_o</ci></apply>"
+    },
+    {
+     "target": "t_v2_y",
+     "expression": "H_v2_y*phd_v2_y*rhd_v2_y",
+     "expression_mathml": "<apply><times/><ci>H_v2_y</ci><ci>phd_v2_y</ci><ci>rhd_v2_y</ci></apply>"
+    },
+    {
+     "target": "t_v2_o",
+     "expression": "H_v2_o*phd_v2_o*rhd_v2_o",
+     "expression_mathml": "<apply><times/><ci>H_v2_o</ci><ci>phd_v2_o</ci><ci>rhd_v2_o</ci></apply>"
+    },
+    {
+     "target": "t_u_y",
+     "expression": "H_u_y*phr_u_y*rhr_u_y",
+     "expression_mathml": "<apply><times/><ci>H_u_y</ci><ci>phr_u_y</ci><ci>rhr_u_y</ci></apply>"
+    },
+    {
+     "target": "t_u_o",
+     "expression": "H_u_o*phr_u_o*rhr_u_o",
+     "expression_mathml": "<apply><times/><ci>H_u_o</ci><ci>phr_u_o</ci><ci>rhr_u_o</ci></apply>"
+    },
+    {
+     "target": "t_v1_y",
+     "expression": "H_v1_y*phr_v1_y*rhr_v1_y",
+     "expression_mathml": "<apply><times/><ci>H_v1_y</ci><ci>phr_v1_y</ci><ci>rhr_v1_y</ci></apply>"
+    },
+    {
+     "target": "t_v1_o",
+     "expression": "H_v1_o*phr_v1_o*rhr_v1_o",
+     "expression_mathml": "<apply><times/><ci>H_v1_o</ci><ci>phr_v1_o</ci><ci>rhr_v1_o</ci></apply>"
+    },
+    {
+     "target": "t_v2_y",
+     "expression": "H_v2_y*phr_v2_y*rhr_v2_y",
+     "expression_mathml": "<apply><times/><ci>H_v2_y</ci><ci>phr_v2_y</ci><ci>rhr_v2_y</ci></apply>"
+    },
+    {
+     "target": "t_v2_o",
+     "expression": "H_v2_o*phr_v2_o*rhr_v2_o",
+     "expression_mathml": "<apply><times/><ci>H_v2_o</ci><ci>phr_v2_o</ci><ci>rhr_v2_o</ci></apply>"
+    },
+    {
+     "target": "t_y",
+     "expression": "S_u_y*v1_a_y*v1_b_y",
+     "expression_mathml": "<apply><times/><ci>S_u_y</ci><ci>v1_a_y</ci><ci>v1_b_y</ci></apply>"
+    },
+    {
+     "target": "t_o",
+     "expression": "S_u_o*v1_a_o*v1_b_o",
+     "expression_mathml": "<apply><times/><ci>S_u_o</ci><ci>v1_a_o</ci><ci>v1_b_o</ci></apply>"
+    },
+    {
+     "target": "t_y",
+     "expression": "S_v1_y*v2_a_y*v2_b_y",
+     "expression_mathml": "<apply><times/><ci>S_v1_y</ci><ci>v2_a_y</ci><ci>v2_b_y</ci></apply>"
+    },
+    {
+     "target": "t_o",
+     "expression": "S_v1_o*v2_a_o*v2_b_o",
+     "expression_mathml": "<apply><times/><ci>S_v1_o</ci><ci>v2_a_o</ci><ci>v2_b_o</ci></apply>"
+    }
+   ],
+   "initials": [
+    {
+     "target": "S_u_y",
+     "expression": "-D0/6 - H0/6 - I0/6 + N/6 - R0/6",
+     "expression_mathml": "<apply><plus/><apply><minus/><apply><minus/><apply><minus/><apply><divide/><ci>D0</ci><cn>6</cn></apply></apply><apply><divide/><ci>H0</ci><cn>6</cn></apply></apply><apply><divide/><ci>I0</ci><cn>6</cn></apply></apply><apply><minus/><apply><divide/><ci>N</ci><cn>6</cn></apply><apply><divide/><ci>R0</ci><cn>6</cn></apply></apply></apply>"
+    },
+    {
+     "target": "I_u_y",
+     "expression": "I0/6",
+     "expression_mathml": "<apply><divide/><ci>I0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "I_u_o",
+     "expression": "I0/6",
+     "expression_mathml": "<apply><divide/><ci>I0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "S_u_o",
+     "expression": "-D0/6 - H0/6 - I0/6 + N/6 - R0/6",
+     "expression_mathml": "<apply><plus/><apply><minus/><apply><minus/><apply><minus/><apply><divide/><ci>D0</ci><cn>6</cn></apply></apply><apply><divide/><ci>H0</ci><cn>6</cn></apply></apply><apply><divide/><ci>I0</ci><cn>6</cn></apply></apply><apply><minus/><apply><divide/><ci>N</ci><cn>6</cn></apply><apply><divide/><ci>R0</ci><cn>6</cn></apply></apply></apply>"
+    },
+    {
+     "target": "I_v1_y",
+     "expression": "I0/6",
+     "expression_mathml": "<apply><divide/><ci>I0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "I_v1_o",
+     "expression": "I0/6",
+     "expression_mathml": "<apply><divide/><ci>I0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "I_v2_y",
+     "expression": "I0/6",
+     "expression_mathml": "<apply><divide/><ci>I0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "I_v2_o",
+     "expression": "I0/6",
+     "expression_mathml": "<apply><divide/><ci>I0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "S_v1_y",
+     "expression": "-D0/6 - H0/6 - I0/6 + N/6 - R0/6",
+     "expression_mathml": "<apply><plus/><apply><minus/><apply><minus/><apply><minus/><apply><divide/><ci>D0</ci><cn>6</cn></apply></apply><apply><divide/><ci>H0</ci><cn>6</cn></apply></apply><apply><divide/><ci>I0</ci><cn>6</cn></apply></apply><apply><minus/><apply><divide/><ci>N</ci><cn>6</cn></apply><apply><divide/><ci>R0</ci><cn>6</cn></apply></apply></apply>"
+    },
+    {
+     "target": "S_v1_o",
+     "expression": "-D0/6 - H0/6 - I0/6 + N/6 - R0/6",
+     "expression_mathml": "<apply><plus/><apply><minus/><apply><minus/><apply><minus/><apply><divide/><ci>D0</ci><cn>6</cn></apply></apply><apply><divide/><ci>H0</ci><cn>6</cn></apply></apply><apply><divide/><ci>I0</ci><cn>6</cn></apply></apply><apply><minus/><apply><divide/><ci>N</ci><cn>6</cn></apply><apply><divide/><ci>R0</ci><cn>6</cn></apply></apply></apply>"
+    },
+    {
+     "target": "S_v2_y",
+     "expression": "-D0/6 - H0/6 - I0/6 + N/6 - R0/6",
+     "expression_mathml": "<apply><plus/><apply><minus/><apply><minus/><apply><minus/><apply><divide/><ci>D0</ci><cn>6</cn></apply></apply><apply><divide/><ci>H0</ci><cn>6</cn></apply></apply><apply><divide/><ci>I0</ci><cn>6</cn></apply></apply><apply><minus/><apply><divide/><ci>N</ci><cn>6</cn></apply><apply><divide/><ci>R0</ci><cn>6</cn></apply></apply></apply>"
+    },
+    {
+     "target": "S_v2_o",
+     "expression": "-D0/6 - H0/6 - I0/6 + N/6 - R0/6",
+     "expression_mathml": "<apply><plus/><apply><minus/><apply><minus/><apply><minus/><apply><divide/><ci>D0</ci><cn>6</cn></apply></apply><apply><divide/><ci>H0</ci><cn>6</cn></apply></apply><apply><divide/><ci>I0</ci><cn>6</cn></apply></apply><apply><minus/><apply><divide/><ci>N</ci><cn>6</cn></apply><apply><divide/><ci>R0</ci><cn>6</cn></apply></apply></apply>"
+    },
+    {
+     "target": "R_u_y",
+     "expression": "R0/6",
+     "expression_mathml": "<apply><divide/><ci>R0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "R_u_o",
+     "expression": "R0/6",
+     "expression_mathml": "<apply><divide/><ci>R0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "R_v1_y",
+     "expression": "R0/6",
+     "expression_mathml": "<apply><divide/><ci>R0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "R_v1_o",
+     "expression": "R0/6",
+     "expression_mathml": "<apply><divide/><ci>R0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "R_v2_y",
+     "expression": "R0/6",
+     "expression_mathml": "<apply><divide/><ci>R0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "R_v2_o",
+     "expression": "R0/6",
+     "expression_mathml": "<apply><divide/><ci>R0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "H_u_y",
+     "expression": "H0/6",
+     "expression_mathml": "<apply><divide/><ci>H0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "H_u_o",
+     "expression": "H0/6",
+     "expression_mathml": "<apply><divide/><ci>H0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "H_v1_y",
+     "expression": "H0/6",
+     "expression_mathml": "<apply><divide/><ci>H0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "H_v1_o",
+     "expression": "H0/6",
+     "expression_mathml": "<apply><divide/><ci>H0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "H_v2_y",
+     "expression": "H0/6",
+     "expression_mathml": "<apply><divide/><ci>H0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "H_v2_o",
+     "expression": "H0/6",
+     "expression_mathml": "<apply><divide/><ci>H0</ci><cn>6</cn></apply>"
+    },
+    {
+     "target": "D_y",
+     "expression": "D0/2",
+     "expression_mathml": "<apply><divide/><ci>D0</ci><cn>2</cn></apply>"
+    },
+    {
+     "target": "D_o",
+     "expression": "D0/2",
+     "expression_mathml": "<apply><divide/><ci>D0</ci><cn>2</cn></apply>"
+    }
+   ],
+   "parameters": [
+    {
+     "id": "N",
+     "value": 150000000.0,
+     "units": {
+      "expression": "person",
+      "expression_mathml": "<ci>person</ci>"
+     }
+    },
+    {
+     "id": "beta_u_u_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "p_dec_transm_max_y_y",
+     "value": 0.5
+    },
+    {
+     "id": "p_dec_transm_min_y_y",
+     "value": 0.25
+    },
+    {
+     "id": "p_test_acc_y_y",
+     "value": 0.75
+    },
+    {
+     "id": "beta_u_u_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "p_dec_transm_max_y_o",
+     "value": 0.5
+    },
+    {
+     "id": "p_dec_transm_min_y_o",
+     "value": 0.25
+    },
+    {
+     "id": "p_test_acc_y_o",
+     "value": 0.75
+    },
+    {
+     "id": "beta_u_u_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "p_dec_transm_max_o_y",
+     "value": 0.5
+    },
+    {
+     "id": "p_dec_transm_min_o_y",
+     "value": 0.25
+    },
+    {
+     "id": "p_test_acc_o_y",
+     "value": 0.75
+    },
+    {
+     "id": "beta_u_u_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "p_dec_transm_max_o_o",
+     "value": 0.5
+    },
+    {
+     "id": "p_dec_transm_min_o_o",
+     "value": 0.25
+    },
+    {
+     "id": "p_test_acc_o_o",
+     "value": 0.75
+    },
+    {
+     "id": "beta_u_v1_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_u_v1_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_u_v1_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_u_v1_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_u_v2_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_u_v2_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_u_v2_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_u_v2_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_u_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_u_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_u_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_u_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_v1_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_v1_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_v1_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_v1_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_v2_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_v2_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_v2_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v1_v2_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_u_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_u_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_u_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_u_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_v1_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_v1_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_v1_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_v1_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_v2_y_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_v2_y_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_v2_o_y",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "beta_v2_v2_o_o",
+     "value": 0.18,
+     "units": {
+      "expression": "person/day",
+      "expression_mathml": "<apply><divide/><ci>person</ci><ci>day</ci></apply>"
+     }
+    },
+    {
+     "id": "pir_u_y",
+     "value": 0.9,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "pir_u_o",
+     "value": 0.9,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "pir_v1_y",
+     "value": 0.9,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "pir_v1_o",
+     "value": 0.9,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "pir_v2_y",
+     "value": 0.9,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "pir_v2_o",
+     "value": 0.9,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "pih_u_y",
+     "value": 0.1,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rih_u_y",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "pih_u_o",
+     "value": 0.1,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rih_u_o",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "pih_v1_y",
+     "value": 0.1,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rih_v1_y",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "pih_v1_o",
+     "value": 0.1,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rih_v1_o",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "pih_v2_y",
+     "value": 0.1,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rih_v2_y",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "pih_v2_o",
+     "value": 0.1,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rih_v2_o",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phd_u_y",
+     "value": 0.13,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhd_u_y",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phd_u_o",
+     "value": 0.13,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhd_u_o",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phd_v1_y",
+     "value": 0.13,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhd_v1_y",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phd_v1_o",
+     "value": 0.13,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhd_v1_o",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phd_v2_y",
+     "value": 0.13,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhd_v2_y",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phd_v2_o",
+     "value": 0.13,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhd_v2_o",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phr_u_y",
+     "value": 0.87,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhr_u_y",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phr_u_o",
+     "value": 0.87,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhr_u_o",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phr_v1_y",
+     "value": 0.87,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhr_v1_y",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phr_v1_o",
+     "value": 0.87,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhr_v1_o",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phr_v2_y",
+     "value": 0.87,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhr_v2_y",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "phr_v2_o",
+     "value": 0.87,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhr_v2_o",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "v1_a_y",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "v1_b_y",
+     "value": 1.0,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "v1_a_o",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "v1_b_o",
+     "value": 1.0,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "v2_a_y",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "v2_b_y",
+     "value": 1.0,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "v2_a_o",
+     "value": 0.3,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "v2_b_o",
+     "value": 1.0,
+     "units": {
+      "expression": "1",
+      "expression_mathml": "<cn>1</cn>"
+     }
+    },
+    {
+     "id": "rhi",
+     "value": 0.07,
+     "units": {
+      "expression": "1/day",
+      "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+     }
+    },
+    {
+     "id": "I0",
+     "value": 1000.0,
+     "units": {
+      "expression": "person",
+      "expression_mathml": "<ci>person</ci>"
+     }
+    },
+    {
+     "id": "R0",
+     "value": 0.0,
+     "units": {
+      "expression": "person",
+      "expression_mathml": "<ci>person</ci>"
+     }
+    },
+    {
+     "id": "H0",
+     "value": 0.0,
+     "units": {
+      "expression": "person",
+      "expression_mathml": "<ci>person</ci>"
+     }
+    },
+    {
+     "id": "D0",
+     "value": 781454.0,
+     "units": {
+      "expression": "person",
+      "expression_mathml": "<ci>person</ci>"
+     }
+    }
+   ],
+   "observables": [],
+   "time": {
+    "id": "t"
+   }
+  }
+ },
+ "metadata": {
+  "annotations": {
+   "license": null,
+   "authors": [],
+   "references": [],
+   "time_scale": null,
+   "time_start": null,
+   "time_end": null,
+   "locations": [],
+   "pathogens": [],
+   "diseases": [],
+   "hosts": [],
+   "model_types": []
+  }
+ }
+}

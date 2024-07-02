@@ -1,0 +1,718 @@
+{
+    "header": {
+        "name": "SEFR model stratified by 3 age groups",
+        "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.6/petrinet/petrinet_schema.json",
+        "schema_name": "petrinet",
+        "description": [
+            "COVID-19 compartmental model with Susceptible, Exposed, inFected (avoid confusion with imaginary I), and Recovered states; stratified by three age groups"
+        ],
+        "model_version": "0.1"
+    },
+    "properties": {},
+    "model": {
+        "states": [
+            {
+                "id": "S_1",
+                "name": "S",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000514"
+                    },
+                    "modifiers": {
+                        "age": "1"
+                    }
+                }
+            },
+            {
+                "id": "F_1",
+                "name": "F",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000511"
+                    },
+                    "modifiers": {
+                        "age": "1"
+                    }
+                }
+            },
+            {
+                "id": "E_1",
+                "name": "E",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000154"
+                    },
+                    "modifiers": {
+                        "age": "1"
+                    }
+                }
+            },
+            {
+                "id": "F_2",
+                "name": "F",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000511"
+                    },
+                    "modifiers": {
+                        "age": "2"
+                    }
+                }
+            },
+            {
+                "id": "F_3",
+                "name": "F",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000511"
+                    },
+                    "modifiers": {
+                        "age": "3"
+                    }
+                }
+            },
+            {
+                "id": "S_2",
+                "name": "S",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000514"
+                    },
+                    "modifiers": {
+                        "age": "2"
+                    }
+                }
+            },
+            {
+                "id": "E_2",
+                "name": "E",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000154"
+                    },
+                    "modifiers": {
+                        "age": "2"
+                    }
+                }
+            },
+            {
+                "id": "S_3",
+                "name": "S",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000514"
+                    },
+                    "modifiers": {
+                        "age": "3"
+                    }
+                }
+            },
+            {
+                "id": "E_3",
+                "name": "E",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000154"
+                    },
+                    "modifiers": {
+                        "age": "3"
+                    }
+                }
+            },
+            {
+                "id": "R_1",
+                "name": "R",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000592"
+                    },
+                    "modifiers": {
+                        "age": "1"
+                    }
+                }
+            },
+            {
+                "id": "R_2",
+                "name": "R",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000592"
+                    },
+                    "modifiers": {
+                        "age": "2"
+                    }
+                }
+            },
+            {
+                "id": "R_3",
+                "name": "R",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000592"
+                    },
+                    "modifiers": {
+                        "age": "3"
+                    }
+                }
+            }
+        ],
+        "transitions": [
+            {
+                "id": "ExposureProcess_1_1",
+                "input": [
+                    "F_1",
+                    "S_1"
+                ],
+                "output": [
+                    "F_1",
+                    "E_1"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_1_1"
+                }
+            },
+            {
+                "id": "ExposureProcess_1_2",
+                "input": [
+                    "F_2",
+                    "S_1"
+                ],
+                "output": [
+                    "F_2",
+                    "E_1"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_1_2"
+                }
+            },
+            {
+                "id": "ExposureProcess_1_3",
+                "input": [
+                    "F_3",
+                    "S_1"
+                ],
+                "output": [
+                    "F_3",
+                    "E_1"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_1_3"
+                }
+            },
+            {
+                "id": "ExposureProcess_2_1",
+                "input": [
+                    "F_1",
+                    "S_2"
+                ],
+                "output": [
+                    "F_1",
+                    "E_2"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_2_1"
+                }
+            },
+            {
+                "id": "ExposureProcess_2_2",
+                "input": [
+                    "F_2",
+                    "S_2"
+                ],
+                "output": [
+                    "F_2",
+                    "E_2"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_2_2"
+                }
+            },
+            {
+                "id": "ExposureProcess_2_3",
+                "input": [
+                    "F_3",
+                    "S_2"
+                ],
+                "output": [
+                    "F_3",
+                    "E_2"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_2_3"
+                }
+            },
+            {
+                "id": "ExposureProcess_3_1",
+                "input": [
+                    "F_1",
+                    "S_3"
+                ],
+                "output": [
+                    "F_1",
+                    "E_3"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_3_1"
+                }
+            },
+            {
+                "id": "ExposureProcess_3_2",
+                "input": [
+                    "F_2",
+                    "S_3"
+                ],
+                "output": [
+                    "F_2",
+                    "E_3"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_3_2"
+                }
+            },
+            {
+                "id": "ExposureProcess_3_3",
+                "input": [
+                    "F_3",
+                    "S_3"
+                ],
+                "output": [
+                    "F_3",
+                    "E_3"
+                ],
+                "properties": {
+                    "name": "ExposureProcess_3_3"
+                }
+            },
+            {
+                "id": "InfectionProcess_1",
+                "input": [
+                    "E_1"
+                ],
+                "output": [
+                    "F_1"
+                ],
+                "properties": {
+                    "name": "InfectionProcess_1"
+                }
+            },
+            {
+                "id": "InfectionProcess_2",
+                "input": [
+                    "E_2"
+                ],
+                "output": [
+                    "F_2"
+                ],
+                "properties": {
+                    "name": "InfectionProcess_2"
+                }
+            },
+            {
+                "id": "InfectionProcess_3",
+                "input": [
+                    "E_3"
+                ],
+                "output": [
+                    "F_3"
+                ],
+                "properties": {
+                    "name": "InfectionProcess_3"
+                }
+            },
+            {
+                "id": "RecoveryProcess_1",
+                "input": [
+                    "F_1"
+                ],
+                "output": [
+                    "R_1"
+                ],
+                "properties": {
+                    "name": "RecoveryProcess_1"
+                }
+            },
+            {
+                "id": "RecoveryProcess_2",
+                "input": [
+                    "F_2"
+                ],
+                "output": [
+                    "R_2"
+                ],
+                "properties": {
+                    "name": "RecoveryProcess_2"
+                }
+            },
+            {
+                "id": "RecoveryProcess_3",
+                "input": [
+                    "F_3"
+                ],
+                "output": [
+                    "R_3"
+                ],
+                "properties": {
+                    "name": "RecoveryProcess_3"
+                }
+            }
+        ]
+    },
+    "semantics": {
+        "ode": {
+            "rates": [
+                {
+                    "target": "ExposureProcess_1_1",
+                    "expression": "F_1*S_1*b*m_1_1*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_1</ci><ci>S_1</ci><ci>b</ci><ci>m_1_1</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "ExposureProcess_1_2",
+                    "expression": "F_2*S_1*b*m_1_2*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_2</ci><ci>S_1</ci><ci>b</ci><ci>m_1_2</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "ExposureProcess_1_3",
+                    "expression": "F_3*S_1*b*m_1_3*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_3</ci><ci>S_1</ci><ci>b</ci><ci>m_1_3</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "ExposureProcess_2_1",
+                    "expression": "F_1*S_2*b*m_2_1*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_1</ci><ci>S_2</ci><ci>b</ci><ci>m_2_1</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "ExposureProcess_2_2",
+                    "expression": "F_2*S_2*b*m_2_2*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_2</ci><ci>S_2</ci><ci>b</ci><ci>m_2_2</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "ExposureProcess_2_3",
+                    "expression": "F_3*S_2*b*m_2_3*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_3</ci><ci>S_2</ci><ci>b</ci><ci>m_2_3</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "ExposureProcess_3_1",
+                    "expression": "F_1*S_3*b*m_3_1*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_1</ci><ci>S_3</ci><ci>b</ci><ci>m_3_1</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "ExposureProcess_3_2",
+                    "expression": "F_2*S_3*b*m_3_2*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_2</ci><ci>S_3</ci><ci>b</ci><ci>m_3_2</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "ExposureProcess_3_3",
+                    "expression": "F_3*S_3*b*m_3_3*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F_3</ci><ci>S_3</ci><ci>b</ci><ci>m_3_3</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "InfectionProcess_1",
+                    "expression": "E_1*g",
+                    "expression_mathml": "<apply><times/><ci>E_1</ci><ci>g</ci></apply>"
+                },
+                {
+                    "target": "InfectionProcess_2",
+                    "expression": "E_2*g",
+                    "expression_mathml": "<apply><times/><ci>E_2</ci><ci>g</ci></apply>"
+                },
+                {
+                    "target": "InfectionProcess_3",
+                    "expression": "E_3*g",
+                    "expression_mathml": "<apply><times/><ci>E_3</ci><ci>g</ci></apply>"
+                },
+                {
+                    "target": "RecoveryProcess_1",
+                    "expression": "F_1*h",
+                    "expression_mathml": "<apply><times/><ci>F_1</ci><ci>h</ci></apply>"
+                },
+                {
+                    "target": "RecoveryProcess_2",
+                    "expression": "F_2*h",
+                    "expression_mathml": "<apply><times/><ci>F_2</ci><ci>h</ci></apply>"
+                },
+                {
+                    "target": "RecoveryProcess_3",
+                    "expression": "F_3*h",
+                    "expression_mathml": "<apply><times/><ci>F_3</ci><ci>h</ci></apply>"
+                }
+            ],
+            "initials": [
+                {
+                    "target": "S_1",
+                    "expression": "10305660.0000000",
+                    "expression_mathml": "<cn>10305660.0</cn>"
+                },
+                {
+                    "target": "F_1",
+                    "expression": "50.0000000000000",
+                    "expression_mathml": "<cn>50.0</cn>"
+                },
+                {
+                    "target": "E_1",
+                    "expression": "50.0000000000000",
+                    "expression_mathml": "<cn>50.0</cn>"
+                },
+                {
+                    "target": "F_2",
+                    "expression": "50.0000000000000",
+                    "expression_mathml": "<cn>50.0</cn>"
+                },
+                {
+                    "target": "F_3",
+                    "expression": "50.0000000000000",
+                    "expression_mathml": "<cn>50.0</cn>"
+                },
+                {
+                    "target": "S_2",
+                    "expression": "15281905.0000000",
+                    "expression_mathml": "<cn>15281905.0</cn>"
+                },
+                {
+                    "target": "E_2",
+                    "expression": "50.0000000000000",
+                    "expression_mathml": "<cn>50.0</cn>"
+                },
+                {
+                    "target": "S_3",
+                    "expression": "12154442.0000000",
+                    "expression_mathml": "<cn>12154442.0</cn>"
+                },
+                {
+                    "target": "E_3",
+                    "expression": "50.0000000000000",
+                    "expression_mathml": "<cn>50.0</cn>"
+                },
+                {
+                    "target": "R_1",
+                    "expression": "0.0",
+                    "expression_mathml": "<cn>0.0</cn>"
+                },
+                {
+                    "target": "R_2",
+                    "expression": "0.0",
+                    "expression_mathml": "<cn>0.0</cn>"
+                },
+                {
+                    "target": "R_3",
+                    "expression": "0.0",
+                    "expression_mathml": "<cn>0.0</cn>"
+                }
+            ],
+            "parameters": [
+                {
+                    "id": "b",
+                    "description": "Exposure factor",
+                    "value": 0.2,
+                    "distribution": {
+                        "type": "StandardUniform1",
+                        "parameters": {
+                            "minimum": 0.01,
+                            "maximum": 0.99
+                        }
+                    },
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "c",
+                    "description": "Mask compliance coefficient (time-dependent)",
+                    "value": 0.0,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "f",
+                    "description": "Mask efficacy coefficient (time-dependent)",
+                    "value": 0.0,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m_1_1",
+                    "description": "Contact rate (between Age Group 1 and 1)",
+                    "value": 38.620784763504,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "n",
+                    "description": "Total population",
+                    "value": 37742307.0,
+                    "units": {
+                        "expression": "person",
+                        "expression_mathml": "<ci>person</ci>"
+                    }
+                },
+                {
+                    "id": "m_1_2",
+                    "description": "Contact rate (between Age Group 1 and 2)",
+                    "value": 20.5607763176635,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m_1_3",
+                    "description": "Contact rate (between Age Group 1 and 3)",
+                    "value": 6.11741392364261,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m_2_1",
+                    "description": "Contact rate (between Age Group 2 and 1)",
+                    "value": 20.5607763176635,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m_2_2",
+                    "description": "Contact rate (between Age Group 2 and 2)",
+                    "value": 28.2162969616496,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m_2_3",
+                    "description": "Contact rate (between Age Group 2 and 3)",
+                    "value": 11.5991952643675,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m_3_1",
+                    "description": "Contact rate (between Age Group 3 and 1)",
+                    "value": 6.11741392364261,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m_3_2",
+                    "description": "Contact rate (between Age Group 3 and 2)",
+                    "value": 11.5991952643675,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m_3_3",
+                    "description": "Contact rate (between Age Group 3 and 3)",
+                    "value": 20.013468013468,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "g",
+                    "description": "Infection rate (from Exposed to Infected)",
+                    "value": 0.08,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "h",
+                    "description": "Recovery rate (from Infected to Recovered)",
+                    "value": 0.06,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                }
+            ],
+            "observables": [
+                {
+                    "id": "Stotal",
+                    "name": "Stotal",
+                    "expression": "S_1 + S_2 + S_3",
+                    "expression_mathml": "<apply><plus/><ci>S_1</ci><ci>S_2</ci><ci>S_3</ci></apply>"
+                },
+                {
+                    "id": "Etotal",
+                    "name": "Etotal",
+                    "expression": "E_1 + E_2 + E_3",
+                    "expression_mathml": "<apply><plus/><ci>E_1</ci><ci>E_2</ci><ci>E_3</ci></apply>"
+                },
+                {
+                    "id": "Ftotal",
+                    "name": "Ftotal",
+                    "expression": "F_1 + F_2 + F_3",
+                    "expression_mathml": "<apply><plus/><ci>F_1</ci><ci>F_2</ci><ci>F_3</ci></apply>"
+                },
+                {
+                    "id": "Rtotal",
+                    "name": "Rtotal",
+                    "expression": "R_1 + R_2 + R_3",
+                    "expression_mathml": "<apply><plus/><ci>R_1</ci><ci>R_2</ci><ci>R_3</ci></apply>"
+                }
+            ],
+            "time": {
+                "id": "t",
+                "units": {
+                    "expression": "day",
+                    "expression_mathml": "<ci>day</ci>"
+                }
+            }
+        }
+    },
+    "metadata": {
+        "annotations": {
+            "license": "CC0",
+            "authors": [
+                {
+                    "name": "Nelson Liu"
+                },
+                {
+                    "name": "Ben Gyori"
+                },
+                {
+                    "name": "MITRE Team"
+                }
+            ],
+            "references": [
+                "pubmed:32616574"
+            ],
+            "time_scale": null,
+            "time_start": null,
+            "time_end": null,
+            "locations": [
+                "geonames:5128581"
+            ],
+            "pathogens": [
+                "ncbitaxon:2697049"
+            ],
+            "diseases": [
+                "doid:0080600"
+            ],
+            "hosts": [
+                "ncbitaxon:9606"
+            ],
+            "model_types": [
+                "mamo:0000028",
+                "mamo:0000046"
+            ]
+        }
+    }
+}

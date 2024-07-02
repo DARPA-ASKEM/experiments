@@ -1,0 +1,255 @@
+{
+    "header": {
+        "name": "SEFR model",
+        "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.6/petrinet/petrinet_schema.json",
+        "schema_name": "petrinet",
+        "description": "COVID-19 compartmental model with Susceptible, Exposed, inFected (avoid confusion with imaginary I), and Recovered states",
+        "model_version": "0.1"
+    },
+    "properties": {},
+    "model": {
+        "states": [
+            {
+                "id": "S",
+                "name": "S",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000514"
+                    },
+                    "modifiers": {}
+                }
+            },
+            {
+                "id": "F",
+                "name": "F",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000511"
+                    },
+                    "modifiers": {}
+                }
+            },
+            {
+                "id": "E",
+                "name": "E",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000154"
+                    },
+                    "modifiers": {}
+                }
+            },
+            {
+                "id": "R",
+                "name": "R",
+                "grounding": {
+                    "identifiers": {
+                        "ido": "0000592"
+                    },
+                    "modifiers": {}
+                }
+            }
+        ],
+        "transitions": [
+            {
+                "id": "ExposureProcess",
+                "input": [
+                    "F",
+                    "S"
+                ],
+                "output": [
+                    "F",
+                    "E"
+                ],
+                "properties": {
+                    "name": "ExposureProcess"
+                }
+            },
+            {
+                "id": "InfectionProcess",
+                "input": [
+                    "E"
+                ],
+                "output": [
+                    "F"
+                ],
+                "properties": {
+                    "name": "InfectionProcess"
+                }
+            },
+            {
+                "id": "RecoveryProcess",
+                "input": [
+                    "F"
+                ],
+                "output": [
+                    "R"
+                ],
+                "properties": {
+                    "name": "RecoveryProcess"
+                }
+            }
+        ]
+    },
+    "semantics": {
+        "ode": {
+            "rates": [
+                {
+                    "target": "ExposureProcess",
+                    "expression": "F*S*b*m*(-c*f + 1)/n",
+                    "expression_mathml": "<apply><divide/><apply><times/><ci>F</ci><ci>S</ci><ci>b</ci><ci>m</ci><apply><plus/><apply><minus/><apply><times/><ci>c</ci><ci>f</ci></apply></apply><cn>1</cn></apply></apply><ci>n</ci></apply>"
+                },
+                {
+                    "target": "InfectionProcess",
+                    "expression": "E*g",
+                    "expression_mathml": "<apply><times/><ci>E</ci><ci>g</ci></apply>"
+                },
+                {
+                    "target": "RecoveryProcess",
+                    "expression": "F*h",
+                    "expression_mathml": "<apply><times/><ci>F</ci><ci>h</ci></apply>"
+                }
+            ],
+            "initials": [
+                {
+                    "target": "S",
+                    "expression": "0.0",
+                    "expression_mathml": "<cn>0.0</cn>"
+                },
+                {
+                    "target": "F",
+                    "expression": "0.0",
+                    "expression_mathml": "<cn>0.0</cn>"
+                },
+                {
+                    "target": "E",
+                    "expression": "0.0",
+                    "expression_mathml": "<cn>0.0</cn>"
+                },
+                {
+                    "target": "R",
+                    "expression": "0.0",
+                    "expression_mathml": "<cn>0.0</cn>"
+                }
+            ],
+            "parameters": [
+                {
+                    "id": "b",
+                    "description": "Exposure factor",
+                    "value": 0.2,
+                    "distribution": {
+                        "type": "StandardUniform1",
+                        "parameters": {
+                            "minimum": 0.01,
+                            "maximum": 0.99
+                        }
+                    },
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "c",
+                    "description": "Mask compliance coefficient (time-dependent)",
+                    "value": 0.0,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "f",
+                    "description": "Mask efficacy coefficient (time-dependent)",
+                    "value": 0.0,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "m",
+                    "description": "Contact rate",
+                    "value": 10.0,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "n",
+                    "description": "Total population",
+                    "value": 37742307.0,
+                    "units": {
+                        "expression": "person",
+                        "expression_mathml": "<ci>person</ci>"
+                    }
+                },
+                {
+                    "id": "g",
+                    "description": "Infection rate (from Exposed to Infected)",
+                    "value": 0.08,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                },
+                {
+                    "id": "h",
+                    "description": "Recovery rate (from Infected to Recovered)",
+                    "value": 0.06,
+                    "units": {
+                        "expression": "1/day",
+                        "expression_mathml": "<apply><power/><ci>day</ci><cn>-1</cn></apply>"
+                    }
+                }
+            ],
+            "observables": [],
+            "time": {
+                "id": "t",
+                "units": {
+                    "expression": "day",
+                    "expression_mathml": "<ci>day</ci>"
+                }
+            }
+        }
+    },
+    "metadata": {
+        "annotations": {
+            "license": "CC0",
+            "authors": [
+                {
+                    "name": "Nelson Liu"
+                },
+                {
+                    "name": "Ben Gyori"
+                },
+                {
+                    "name": "MITRE Team"
+                }
+            ],
+            "references": [
+                "pubmed:32616574"
+            ],
+            "time_scale": null,
+            "time_start": null,
+            "time_end": null,
+            "locations": [
+                "geonames:5128581"
+            ],
+            "pathogens": [
+                "ncbitaxon:2697049"
+            ],
+            "diseases": [
+                "doid:0080600"
+            ],
+            "hosts": [
+                "ncbitaxon:9606"
+            ],
+            "model_types": [
+                "mamo:0000028",
+                "mamo:0000046"
+            ]
+        }
+    }
+}
