@@ -657,16 +657,16 @@
       {
           "name": "beta",
           "interval": {
-              "lb": 0.01,
-              "ub": 0.5
+              "lb": 0.08,
+              "ub": 0.1
           },
           "label": "all"
       },
       {
           "name": "gamma",
           "interval": {
-              "lb": 0.01,
-              "ub": 0.5
+              "lb": 0.02,
+              "ub": 0.03
           },
           "label": "all"
       },
