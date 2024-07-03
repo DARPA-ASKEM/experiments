@@ -128,7 +128,9 @@ from mira.sources.amr.petrinet import template_model_from_amr_json
 
 # %%
 # Load Funman output
-with open("../result.json", "r") as f:
+# p = "../data/example0/result.json"
+p = "../result.json"
+with open(p, "r") as f:
     result = json.load(f)
 
 # %%

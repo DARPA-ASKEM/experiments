@@ -694,33 +694,33 @@
           },
           "label": "all"
       }
-  ],
-  "structure_parameters": [
-    {
-        "name": "schedules",
-        "schedules": [
-            {
-                "timepoints": [
-                    0,
-                    10,
-                    20,
-                    30,
-                    40,
-                    50,
-                    60,
-                    70,
-                    80,
-                    90,
-                    100
-                ]
-            }
-        ]
+    ],
+    "structure_parameters": [
+        {
+            "name": "schedules",
+            "schedules": [
+                {
+                    "timepoints": [
+                        0,
+                        10,
+                        20,
+                        30,
+                        40,
+                        50,
+                        60,
+                        70,
+                        80,
+                        90,
+                        100
+                    ]
+                }
+            ]
+        }
+    ],
+    "config": {
+        "use_compartmental_constraints": true,
+        "normalization_constant": 1,
+        "tolerance": 0.02
+        }
     }
-  ],
-  "config": {
-      "use_compartmental_constraints": true,
-      "normalization_constant": 1,
-      "tolerance": 0.02
-    }
-  }
 }
