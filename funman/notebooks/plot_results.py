@@ -295,8 +295,9 @@ for __, point in df_unknown_points.iterrows():
         __ = ax.plot(data_unknown_traj[id]["timepoints"], data_unknown_traj[id][state], marker = ".", color = colors["tab:red"], alpha = 0.5)
 
 
-# Plot checks
+# Plot constraints
 pc = []
+y = []
 for constraint in result["request"]["constraints"]:
 
     if constraint["variable"] == state:
@@ -304,7 +305,7 @@ for constraint in result["request"]["constraints"]:
         x2 = constraint["timepoints"]["ub"]
         y1 = constraint["interval"]["lb"]
         y2 = constraint["interval"]["ub"]
-
+        y.extend([y1, y2])
         r = mpl.patches.Rectangle((x1, y1), x2 - x1, y2 - y1, alpha = 0.1)
 
         pc.append(r)
@@ -317,7 +318,8 @@ ax.add_collection(
     )
 )
 
-__ = plt.setp(ax, xlim = (min(timepoints), max(timepoints)))
+
+__ = plt.setp(ax, xlim = (min(timepoints), max(timepoints)), ylim = (min(y), max(y)))
 
 
 # Plot boxes

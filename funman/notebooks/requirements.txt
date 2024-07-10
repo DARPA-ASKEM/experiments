@@ -1,11 +1,11 @@
 numpy
 scipy
+sympy
 pandas
 matplotlib
 jupyterlab
-scikit-learn
 tqdm
 xarray
-pyvis
 dill
 pygraphviz
+mira @ git+https://github.com/indralab/mira.git
