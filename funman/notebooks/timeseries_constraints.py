@@ -254,7 +254,7 @@ constraints = generate_constraints_from_timeseries(
     model, 
     df, 
     mapping_df_model = mapping_df_model, 
-    num_constraints = 2,
+    num_constraints = 12,
     plot = True
 )
 
@@ -263,11 +263,12 @@ constraints = generate_constraints_from_timeseries(
 
 r = generate_request(
     model,
-    timepoints = list(range(0, 101, 10)),
-    constraints = constraints,
+    timepoints = list(range(0, 21, 1)),
+    # constraints = constraints,
+    constraints = [],
     use_compartmental_constraints = True,
     normalization_constant = 1000,
-    tolerance = 0.01, 
+    tolerance = 0.1, 
     parameters_of_interest = ["beta", "gamma"]
 )
 

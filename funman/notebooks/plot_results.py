@@ -318,7 +318,7 @@ ax.add_collection(
     )
 )
 
-
+y = [v for traj in data_traj.values() for v in traj[state]]
 __ = plt.setp(ax, xlim = (min(timepoints), max(timepoints)), ylim = (min(y), max(y)))
 
 
