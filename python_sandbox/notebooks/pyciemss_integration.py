@@ -28,7 +28,7 @@ pyciemss_results = {
 __, __, filenames = next(os.walk(RESULT_PATH))
 for filename in filenames:
     path = os.path.join(RESULT_PATH, filename)
-    name, k = filename.split('.')[0].split('_')
+    name, k = filename.split('.')[0].rsplit('_', 1)
     if k == 'param':
         pyciemss_results['parameters'][name] = np.genfromtxt(path)
     elif k == 'sol':
