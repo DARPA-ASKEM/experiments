@@ -1,6 +1,6 @@
 .ipynb_checkpoints
 .venv
 .vscode
-/python_sandbox/data/*
+/python_sandbox/_data/*
 notebooks/Daniel/data
 .DS_Store
