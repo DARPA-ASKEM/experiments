@@ -2,16 +2,15 @@ import logging
 import time
 from pathlib import Path
 import json
+import sys
 
 from docling.backend.docling_parse_backend import DoclingParseDocumentBackend
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import (
     EasyOcrOptions,
-    OcrMacOptions,
     PdfPipelineOptions,
     RapidOcrOptions,
     TesseractCliOcrOptions,
-    TesseractOcrOptions,
 )
 from docling.document_converter import DocumentConverter, PdfFormatOption
 
@@ -20,10 +19,17 @@ _log = logging.getLogger(__name__)
 def main():
     logging.basicConfig(level=logging.INFO)
 
+    if len(sys.argv) != 2:
+        print("Usage: python3 run-ocr-tesseract.py {option}")
+        print("Options: easyocr, tesseract_cli, rapidocr")
+        sys.exit(1)
+
+    option = sys.argv[1]
+
     # input_doc_path = Path("../pdfs/SIDARTHE paper.pdf")
     input_doc_path = Path("../pdfs/SIR paper 1.pdf")
     # input_doc_path = Path("../pdfs/SIR paper 2.pdf")
-    output_dir = Path("output-ocr-tesseract")
+    output_dir = Path(f"output-ocr-{option}")
 
     pipeline_options = PdfPipelineOptions()
     pipeline_options.do_ocr = True
@@ -31,12 +37,16 @@ def main():
     pipeline_options.table_structure_options.do_cell_matching = True
     pipeline_options.generate_table_images = True
 
-    # Any of the OCR options can be used:EasyOcrOptions, TesseractOcrOptions, TesseractCliOcrOptions, OcrMacOptions(Mac only), RapidOcrOptions
-    # ocr_options = EasyOcrOptions(force_full_page_ocr=True)
-    # ocr_options = TesseractOcrOptions(force_full_page_ocr=True)
-    # ocr_options = OcrMacOptions(force_full_page_ocr=True)
-    # ocr_options = RapidOcrOptions(force_full_page_ocr=True)
-    ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True)
+    if option == "easyocr":
+        ocr_options = EasyOcrOptions(force_full_page_ocr=True)
+    elif option == "tesseract_cli":
+        ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True)
+    elif option == "rapidocr":
+        ocr_options = RapidOcrOptions(force_full_page_ocr=True)
+    else:
+        print("Invalid option. Choose from: easyocr, tesseract_cli, rapidocr")
+        sys.exit(1)
+
     pipeline_options.ocr_options = ocr_options
 
     doc_converter = DocumentConverter(

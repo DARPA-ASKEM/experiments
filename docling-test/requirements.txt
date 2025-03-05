@@ -1,2 +1,3 @@
 docling==2.25.1
 openai==1.65.3
+easyocr==1.7.2
