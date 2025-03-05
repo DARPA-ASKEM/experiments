@@ -4,7 +4,6 @@ from pathlib import Path
 import json
 import sys
 
-from docling.backend.docling_parse_backend import DoclingParseDocumentBackend
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import (
     EasyOcrOptions,
@@ -20,7 +19,7 @@ def main():
     logging.basicConfig(level=logging.INFO)
 
     if len(sys.argv) != 2:
-        print("Usage: python3 run-ocr-tesseract.py {option}")
+        print("Usage: python3 run_ocr.py {option}")
         print("Options: easyocr, tesseract_cli, rapidocr")
         sys.exit(1)
 
