@@ -2,7 +2,19 @@ import logging
 import time
 from pathlib import Path
 import json
-from docling.document_converter import DocumentConverter
+
+from docling.backend.docling_parse_backend import DoclingParseDocumentBackend
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import (
+    EasyOcrOptions,
+    OcrMacOptions,
+    PdfPipelineOptions,
+    RapidOcrOptions,
+    TesseractCliOcrOptions,
+    TesseractOcrOptions,
+)
+from docling.document_converter import DocumentConverter, PdfFormatOption
+
 _log = logging.getLogger(__name__)
 
 def main():
@@ -11,9 +23,29 @@ def main():
     # input_doc_path = Path("../pdfs/SIDARTHE paper.pdf")
     input_doc_path = Path("../pdfs/SIR paper 1.pdf")
     # input_doc_path = Path("../pdfs/SIR paper 2.pdf")
-    output_dir = Path("output")
+    output_dir = Path("output-ocr-tesseract")
 
-    doc_converter = DocumentConverter()
+    pipeline_options = PdfPipelineOptions()
+    pipeline_options.do_ocr = True
+    pipeline_options.do_table_structure = True
+    pipeline_options.table_structure_options.do_cell_matching = True
+    pipeline_options.generate_table_images = True
+
+    # Any of the OCR options can be used:EasyOcrOptions, TesseractOcrOptions, TesseractCliOcrOptions, OcrMacOptions(Mac only), RapidOcrOptions
+    # ocr_options = EasyOcrOptions(force_full_page_ocr=True)
+    # ocr_options = TesseractOcrOptions(force_full_page_ocr=True)
+    # ocr_options = OcrMacOptions(force_full_page_ocr=True)
+    # ocr_options = RapidOcrOptions(force_full_page_ocr=True)
+    ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True)
+    pipeline_options.ocr_options = ocr_options
+
+    doc_converter = DocumentConverter(
+        format_options={
+            InputFormat.PDF: PdfFormatOption(
+                pipeline_options=pipeline_options,
+            )
+        }
+    )
 
     start_time = time.time()
 
@@ -42,7 +74,7 @@ def main():
     _log.info(f"Saving table extracts to {output_filename}")
     with output_filename.open("w", encoding="utf-8") as fp:
         json.dump(table_extracts, fp, indent=2, ensure_ascii=False)
-
+    
     html_filename = output_dir / f"{doc_filename}-tables.html"
     _log.info(f"Saving table extracts to {html_filename}")
     with html_filename.open("w", encoding="utf-8") as fp:
