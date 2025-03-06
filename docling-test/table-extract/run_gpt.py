@@ -30,6 +30,8 @@ You will structure your response as a JSON object with the following schema:
 Begin:
 """
 
+IMAGE_RESOLUTION_SCALE = 2.0
+
 def image_to_base64_string(img: Image.Image) -> str:
     format = 'PNG'
     buffered = io.BytesIO()
@@ -68,15 +70,16 @@ def process_table_image(image_uri):
 def main():
     logging.basicConfig(level=logging.INFO)
 
-    # input_doc_path = Path("../pdfs/SIR paper 1.pdf")
-    # output_dir = Path("output-gpt")
+    input_doc_path = Path("../pdfs/SIR paper 1.pdf")
+    output_dir = Path("output-gpt")
 
-    input_doc_path = Path("../pdfs/Measles.pdf")
-    output_dir = Path("output-gpt-measles")
+    # input_doc_path = Path("../pdfs/Measles.pdf")
+    # output_dir = Path("output-gpt-measles")
 
     pipeline_options = PdfPipelineOptions()
     # Needed to extract the table images
     pipeline_options.generate_page_images = True
+    pipeline_options.images_scale = IMAGE_RESOLUTION_SCALE
 
     doc_converter = DocumentConverter(
         format_options={
