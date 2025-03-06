@@ -15,16 +15,16 @@ from PIL import Image
 
 _log = logging.getLogger(__name__)
 
-TABLE_EXTRACTION_PROMPT = """Please extract tables from the images and provide the table data formatted as an XHTML Table.
+TABLE_EXTRACTION_PROMPT = """Please extract a table from the images and provide the table data formatted as an XHTML Table.
 
 Some images may not contain tables and may only contain a mix of text, figures, graphs and equations. Please ignore these images and give them a score of 0.
 Some images may contain a single table, while others may contain multiple tables. Please extract all tables present in the image.
 
-Tables may not not be well-defined or are not easily extractable. Please do your best to use html tags and column and row spans to format the extracted table to align with the structure of the table in the image. Use visual cues to separate the columns and rows and to determine cells that span multiple columns. Ensure that symbols, subscripts, superscripts, and greek characters are preserved, do not swap "α" to "a" for example.
+Table may not be well-defined or are not easily extractable. Please do your best to use html tags and column and row spans to format the extracted table to align with the structure of the table in the image. Use visual cues to separate the columns and rows and to determine cells that span multiple columns. Ensure that symbols, subscripts, superscripts, and greek characters are preserved, do not swap "α" to "a" for example.
 
 You will structure your response as a JSON object with the following schema:
 
-'table_text': an array of XHTML formatted tables.
+'table_text': a XHTML formatted table string.
 'score': A score from 0 to 10 indicating the quality of the extracted table. 0 indicates that the image does not contain a table, 10 indicates a high-quality extraction.
 
 Begin:
@@ -40,14 +40,13 @@ def image_to_base64_string(img: Image.Image) -> str:
 def process_table_image(image_uri):
     _log.info(f"Processing table image through gpt...")
     openai_api_key = os.getenv("OPEN_AI_API_KEY")
-    if openai_api_key is None:
+    if (openai_api_key is None):
         raise ValueError("OPEN_AI_API_KEY not found in environment variables. Please set 'OPEN_AI_API_KEY'.")
 
     client = OpenAI(api_key=openai_api_key)
 
     response = client.chat.completions.create(
         model="gpt-4o-2024-08-06",
-        # model="gpt-4-turbo",
         messages=[
             {
                 "role": "user",
@@ -62,16 +61,18 @@ def process_table_image(image_uri):
         ],
         response_format={"type": "json_object"},
     )
+    print(response.choices[0].message.content)
     message_content = json.loads(response.choices[0].message.content)
     return message_content
 
 def main():
     logging.basicConfig(level=logging.INFO)
 
-    # input_doc_path = Path("../pdfs/SIDARTHE paper.pdf")
-    input_doc_path = Path("../pdfs/SIR paper 1.pdf")
-    # input_doc_path = Path("../pdfs/SIR paper 2.pdf")
-    output_dir = Path("output-gpt")
+    # input_doc_path = Path("../pdfs/SIR paper 1.pdf")
+    # output_dir = Path("output-gpt")
+
+    input_doc_path = Path("../pdfs/Measles.pdf")
+    output_dir = Path("output-gpt-measles")
 
     pipeline_options = PdfPipelineOptions()
     # Needed to extract the table images
@@ -98,7 +99,7 @@ def main():
     # Export tables
     for table_ix, table in enumerate(conv_res.document.tables):
         # Get the table image
-        table_img = table.get_image(conv_res.document)
+        table_img = table.get_image(conv_res.document).resize((1024, 1024)) # image with larger size seem to have better extraction results from GPT
         page_size = conv_res.document.pages[table.prov[0].page_no].size
         table_image_extract = process_table_image(image_to_base64_string(table_img))
         table_extract = {
@@ -106,11 +107,16 @@ def main():
             "page_dimensions": { "width": page_size.width, "height": page_size.height },
             "bbox": table.prov[0].bbox.as_tuple(),
             "coord_origin": table.prov[0].bbox.coord_origin,
-            "text": table_image_extract["table_text"][0],
+            "text": table_image_extract["table_text"],
             "score": table_image_extract["score"]
         }
         table_extracts.append(table_extract)
         table_html += table_extract["text"]
+
+        # Save the table image
+        table_img_filename = output_dir / f"{doc_filename}-table-{table_ix + 1}.png"
+        table_img.save(table_img_filename)
+        _log.info(f"Saved table image to {table_img_filename}")
 
     output_filename = output_dir / f"{doc_filename}-tables.json"
     _log.info(f"Saving table extracts to {output_filename}")

@@ -1,0 +1,50 @@
+[
+  {
+    "page_no": 4,
+    "page_dimensions": {
+      "width": 576.0,
+      "height": 864.0
+    },
+    "bbox": [
+      109.41778564453125,
+      262.60137939453125,
+      423.27362060546875,
+      355.21075439453125
+    ],
+    "coord_origin": "BOTTOMLEFT",
+    "text": "<table border='1'>\n<tr>\n<th>Variable</th>\n<th>Meaning</th>\n</tr>\n<tr>\n<td>S(t)</td>\n<td>The number of susceptible individuals at a given time, t</td>\n</tr>\n<tr>\n<td>E(t)</td>\n<td>The number of exposed individuals at a given time, t</td>\n</tr>\n<tr>\n<td>I(t)</td>\n<td>The number of infective individuals at a given time, t</td>\n</tr>\n<tr>\n<td>R(t)</td>\n<td>The number of recovered individuals at a given time, t</td>\n</tr>\n</table>",
+    "score": 10
+  },
+  {
+    "page_no": 5,
+    "page_dimensions": {
+      "width": 576.0,
+      "height": 864.0
+    },
+    "bbox": [
+      53.64606857299805,
+      620.9152526855469,
+      478.71270751953125,
+      749.7115325927734
+    ],
+    "coord_origin": "BOTTOMLEFT",
+    "text": "<table border=\"1\">\n  <tr>\n    <th>Parameter Used</th>\n    <th>It’s Meaning</th>\n  </tr>\n  <tr>\n    <td>b</td>\n    <td>Recruitment rate (Birth and Immigrants rate)</td>\n  </tr>\n  <tr>\n    <td>μ</td>\n    <td>Leaving rate (Death and Emigrants rate)</td>\n  </tr>\n  <tr>\n    <td>β</td>\n    <td>The contact rate</td>\n  </tr>\n  <tr>\n    <td>γ</td>\n    <td>The rate at which an infective individuals recovered per unit time</td>\n  </tr>\n  <tr>\n    <td>σ</td>\n    <td>The rate of exposed individuals who have undergone testing and therapy</td>\n  </tr>\n  <tr>\n    <td>α</td>\n    <td>The rate at which an exposed become infective</td>\n  </tr>\n</table>",
+    "score": 10
+  },
+  {
+    "page_no": 19,
+    "page_dimensions": {
+      "width": 576.0,
+      "height": 864.0
+    },
+    "bbox": [
+      42.66278076171875,
+      620.5084533691406,
+      446.38818359375,
+      749.5128479003906
+    ],
+    "coord_origin": "BOTTOMLEFT",
+    "text": "<table border='1'>\n  <tr>\n    <th>Model Parameter symbol</th>\n    <th>Model Parameter value</th>\n    <th>Parameter Source</th>\n  </tr>\n  <tr>\n    <td>b</td>\n    <td>0.0784</td>\n    <td>[17] and [20]</td>\n  </tr>\n  <tr>\n    <td>μ</td>\n    <td>0.0545</td>\n    <td>[18] and [20]</td>\n  </tr>\n  <tr>\n    <td>β</td>\n    <td>0.09091 per day</td>\n    <td>Immunization Action Coalition</td>\n  </tr>\n  <tr>\n    <td>γ</td>\n    <td>0.125 per day</td>\n    <td>[21]</td>\n  </tr>\n  <tr>\n    <td>σ</td>\n    <td>0.00, 0.30, 0.60 & 0.90</td>\n    <td>Assumed Values</td>\n  </tr>\n  <tr>\n    <td>α</td>\n    <td>0.14286 per day</td>\n    <td>[21]</td>\n  </tr>\n</table>",
+    "score": 10
+  }
+]
