@@ -5,27 +5,31 @@ import json
 import os
 import io
 import base64
+import pandas as pd
 from openai import OpenAI
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import (
     PdfPipelineOptions,
+    TableFormerMode,
+    EasyOcrOptions,
+    RapidOcrOptions,
 )
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from PIL import Image
 
 _log = logging.getLogger(__name__)
 
-TABLE_EXTRACTION_PROMPT = """Please extract a table from the images and provide the table data formatted as an XHTML Table.
+TABLE_EXTRACTION_PROMPT = """Here is the extracted table in html from the provided image.
 
-Some images may not contain tables and may only contain a mix of text, figures, graphs and equations. Please ignore these images and give them a score of 0.
-Some images may contain a single table, while others may contain multiple tables. Please extract all tables present in the image.
+The extracted result isn't perfect, but it's a good start. You know that the structure of the table is correct, but the extracted content of the each cells may not be accurate or be missing.
 
-Table may not be well-defined or are not easily extractable. Please do your best to use html tags and column and row spans to format the extracted table to align with the structure of the table in the image. Use visual cues to separate the columns and rows and to determine cells that span multiple columns. Ensure that symbols, subscripts, superscripts, and greek characters are preserved, do not swap "α" to "a" for example.
+Your job is to verify the extracted table content with the provided image and correct any inaccuracies or missing data. Do not alter the structure of the table, only replace the cell text value with the correct data. Some cells may span multiple columns or rows which is normal and should be preserved. Also it's normal to have multiple header rows or columns. Do not remove any rows or columns from the table, just correct the cell text values. 
+Ensure that symbols, subscripts, superscripts, and greek characters are preserved, "α" should not be swapped to "a". Make sure symbols, greek characters, and mathematical expressions are preserved and represented correctly.
 
 You will structure your response as a JSON object with the following schema:
 
 'table_text': a XHTML formatted table string.
-'score': A score from 0 to 10 indicating the quality of the extracted table. 0 indicates that the image does not contain a table, 10 indicates a high-quality extraction.
+'score': A score from 0 to 10 indicating the quality of the corrected table. 0 indicates that the image does not contain a table, 10 indicates a high-quality extraction.
 
 Begin:
 """
@@ -39,7 +43,7 @@ def image_to_base64_string(img: Image.Image) -> str:
     img_base64 = base64.b64encode(buffered.getvalue()).decode("utf-8")
     return f"data:image/{format.lower()};base64,{img_base64}"  # Return Data URI
 
-def process_table_image(image_uri):
+def process_table_image(image_uri, table_html):
     _log.info(f"Processing table image through gpt...")
     openai_api_key = os.getenv("OPEN_AI_API_KEY")
     if (openai_api_key is None):
@@ -53,11 +57,15 @@ def process_table_image(image_uri):
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": TABLE_EXTRACTION_PROMPT},
                     {
                         "type": "image_url",
                         "image_url": {"url": image_uri},
                     },
+                    {
+                        "type": "text",
+                        "text": table_html,
+                    },
+                    {"type": "text", "text": TABLE_EXTRACTION_PROMPT},
                 ],
             }
         ],
@@ -70,6 +78,9 @@ def process_table_image(image_uri):
 def main():
     logging.basicConfig(level=logging.INFO)
 
+    # input_doc_path = Path("../pdfs/Rosenblatt_2024.pdf")
+    # output_dir = Path("output-gpt-rosenblatt")
+
     input_doc_path = Path("../pdfs/SIR paper 1.pdf")
     output_dir = Path("output-gpt")
 
@@ -80,6 +91,11 @@ def main():
     # Needed to extract the table images
     pipeline_options.generate_page_images = True
     pipeline_options.images_scale = IMAGE_RESOLUTION_SCALE
+    pipeline_options.do_table_structure = True
+    pipeline_options.table_structure_options.do_cell_matching = True
+    pipeline_options.table_structure_options.mode = TableFormerMode.FAST
+    pipeline_options.do_ocr = True
+    pipeline_options.ocr_options = RapidOcrOptions(force_full_page_ocr=True)
 
     doc_converter = DocumentConverter(
         format_options={
@@ -102,14 +118,37 @@ def main():
     # Export tables
     for table_ix, table in enumerate(conv_res.document.tables):
         # Get the table image
-        table_img = table.get_image(conv_res.document).resize((1024, 1024)) # image with larger size seem to have better extraction results from GPT
+        table_img = table.get_image(conv_res.document)
+        table_img = table_img.resize((table_img.width * IMAGE_RESOLUTION_SCALE, table_img.height * IMAGE_RESOLUTION_SCALE))
         page_size = conv_res.document.pages[table.prov[0].page_no].size
-        table_image_extract = process_table_image(image_to_base64_string(table_img))
+        table_image_extract = process_table_image(image_to_base64_string(table_img), table.export_to_html())
+        html_table = table_image_extract["table_text"]
+        table_df = pd.read_html(html_table)[0]
+        print('GPT Extracted Table: ')
+        print(html_table)
+        print('Table DataFrame Dimensions:')
+        print(table_df.shape)
+        print(table_df.to_html())
+
+        # update table cell text values with the extracted table data
+        num_rows = table.data.num_rows
+        num_cols = table.data.num_cols
+        print('Table dimensions:')
+        print(num_rows, num_cols)
+        print(table.export_to_html())
+        # for ix, table_cell in enumerate(table.data.table_cells):
+        #     row_idx = table_cell.start_row_offset_idx
+        #     col_idx = table_cell.start_col_offset_idx
+        #     table_cell.text = table_df.iloc[row_idx, col_idx]
+        #     print('is column header:', table_cell.column_header, ' is row header:', table_cell.row_header, ' text:', table_cell.text)
+
+
         table_extract = {
             "page_no": table.prov[0].page_no,
             "page_dimensions": { "width": page_size.width, "height": page_size.height },
             "bbox": table.prov[0].bbox.as_tuple(),
             "coord_origin": table.prov[0].bbox.coord_origin,
+            # "text": table.export_to_html(),
             "text": table_image_extract["table_text"],
             "score": table_image_extract["score"]
         }

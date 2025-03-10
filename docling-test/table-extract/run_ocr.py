@@ -15,6 +15,8 @@ from docling.document_converter import DocumentConverter, PdfFormatOption
 
 _log = logging.getLogger(__name__)
 
+IMAGE_RESOLUTION_SCALE = 2.0
+
 def main():
     logging.basicConfig(level=logging.INFO)
 
@@ -31,6 +33,7 @@ def main():
     output_dir = Path(f"output-ocr-{option}")
 
     pipeline_options = PdfPipelineOptions()
+    pipeline_options.images_scale = IMAGE_RESOLUTION_SCALE
     pipeline_options.do_ocr = True
     pipeline_options.do_table_structure = True
     pipeline_options.table_structure_options.do_cell_matching = True
@@ -68,6 +71,7 @@ def main():
     table_html = ''
     # Export tables
     for table_ix, table in enumerate(conv_res.document.tables):
+        table_img = table.get_image(conv_res.document)
         page_size = conv_res.document.pages[table.prov[0].page_no].size
         table_extract = {
             "page_no": table.prov[0].page_no,
@@ -78,6 +82,10 @@ def main():
         }
         table_extracts.append(table_extract)
         table_html += table_extract["text"]
+        # Save the table image
+        table_img_filename = output_dir / f"{doc_filename}-table-{table_ix + 1}.png"
+        table_img.save(table_img_filename)
+        _log.info(f"Saved table image to {table_img_filename}")
 
     output_filename = output_dir / f"{doc_filename}-tables.json"
     _log.info(f"Saving table extracts to {output_filename}")
