@@ -5,13 +5,12 @@ import json
 import os
 import io
 import base64
-import pandas as pd
 from openai import OpenAI
 from docling.datamodel.base_models import InputFormat
+from bs4 import BeautifulSoup
 from docling.datamodel.pipeline_options import (
     PdfPipelineOptions,
     TableFormerMode,
-    EasyOcrOptions,
     RapidOcrOptions,
 )
 from docling.document_converter import DocumentConverter, PdfFormatOption
@@ -23,7 +22,7 @@ TABLE_EXTRACTION_PROMPT = """Here is the extracted table in html from the provid
 
 The extracted result isn't perfect, but it's a good start. You know that the structure of the table is correct, but the extracted content of the each cells may not be accurate or be missing.
 
-Your job is to verify the extracted table content with the provided image and correct any inaccuracies or missing data. Do not alter the structure of the table, only replace the cell text value with the correct data. Some cells may span multiple columns or rows which is normal and should be preserved. Also it's normal to have multiple header rows or columns. Do not remove any rows or columns from the table, just correct the cell text values. 
+Your job is to verify the extracted table content with the provided image and correct any inaccuracies or missing data. Do not alter the structure, colspan, or rowspan of the table, only replace the cell text value with the correct data. Some cells may span multiple columns or rows which is normal and should be preserved. Also it's normal to have multiple header rows or columns. Do not remove any rows or columns from the table, just correct the cell text values. Number of rows and columns should be preserved. 
 Ensure that symbols, subscripts, superscripts, and greek characters are preserved, "α" should not be swapped to "a". Make sure symbols, greek characters, and mathematical expressions are preserved and represented correctly.
 
 You will structure your response as a JSON object with the following schema:
@@ -35,6 +34,35 @@ Begin:
 """
 
 IMAGE_RESOLUTION_SCALE = 2.0
+
+def extract_table_grid(html_table):
+    soup = BeautifulSoup(html_table, 'html.parser')
+    table = soup.find('table')
+    
+    # Determine the size of the table
+    num_rows = len(table.find_all('tr'))
+    num_cols = max(len(row.find_all(['td', 'th'])) for row in table.find_all('tr'))
+    
+    # Initialize the grid with empty strings
+    grid = [['' for _ in range(num_cols)] for _ in range(num_rows)]
+    
+    for row_idx, row in enumerate(table.find_all('tr')):
+        col_idx = 0
+        for cell in row.find_all(['td', 'th']):
+            while grid[row_idx][col_idx]:
+                col_idx += 1
+            
+            rowspan = int(cell.get('rowspan', 1))
+            colspan = int(cell.get('colspan', 1))
+            cell_text = cell.get_text(strip=True)
+            
+            for i in range(rowspan):
+                for j in range(colspan):
+                    grid[row_idx + i][col_idx + j] = cell_text
+            
+            col_idx += colspan
+    
+    return grid
 
 def image_to_base64_string(img: Image.Image) -> str:
     format = 'PNG'
@@ -81,11 +109,11 @@ def main():
     # input_doc_path = Path("../pdfs/Rosenblatt_2024.pdf")
     # output_dir = Path("output-gpt-rosenblatt")
 
-    input_doc_path = Path("../pdfs/SIR paper 1.pdf")
-    output_dir = Path("output-gpt")
+    # input_doc_path = Path("../pdfs/SIR paper 1.pdf")
+    # output_dir = Path("output-gpt")
 
-    # input_doc_path = Path("../pdfs/Measles.pdf")
-    # output_dir = Path("output-gpt-measles")
+    input_doc_path = Path("../pdfs/Measles.pdf")
+    output_dir = Path("output-gpt-measles")
 
     pipeline_options = PdfPipelineOptions()
     # Needed to extract the table images
@@ -93,7 +121,7 @@ def main():
     pipeline_options.images_scale = IMAGE_RESOLUTION_SCALE
     pipeline_options.do_table_structure = True
     pipeline_options.table_structure_options.do_cell_matching = True
-    pipeline_options.table_structure_options.mode = TableFormerMode.FAST
+    pipeline_options.table_structure_options.mode = TableFormerMode.ACCURATE
     pipeline_options.do_ocr = True
     pipeline_options.ocr_options = RapidOcrOptions(force_full_page_ocr=True)
 
@@ -119,38 +147,34 @@ def main():
     for table_ix, table in enumerate(conv_res.document.tables):
         # Get the table image
         table_img = table.get_image(conv_res.document)
-        table_img = table_img.resize((table_img.width * IMAGE_RESOLUTION_SCALE, table_img.height * IMAGE_RESOLUTION_SCALE))
+        table_img = table_img.resize((table_img.width * 2, table_img.height * 2))
         page_size = conv_res.document.pages[table.prov[0].page_no].size
         table_image_extract = process_table_image(image_to_base64_string(table_img), table.export_to_html())
         html_table = table_image_extract["table_text"]
-        table_df = pd.read_html(html_table)[0]
-        print('GPT Extracted Table: ')
-        print(html_table)
-        print('Table DataFrame Dimensions:')
-        print(table_df.shape)
-        print(table_df.to_html())
 
-        # update table cell text values with the extracted table data
         num_rows = table.data.num_rows
         num_cols = table.data.num_cols
-        print('Table dimensions:')
-        print(num_rows, num_cols)
-        print(table.export_to_html())
-        # for ix, table_cell in enumerate(table.data.table_cells):
-        #     row_idx = table_cell.start_row_offset_idx
-        #     col_idx = table_cell.start_col_offset_idx
-        #     table_cell.text = table_df.iloc[row_idx, col_idx]
-        #     print('is column header:', table_cell.column_header, ' is row header:', table_cell.row_header, ' text:', table_cell.text)
-
+        table_grid = extract_table_grid(html_table)
+        table_cells = []
+        # If original table and gpt extracted table has same dimension, update each cell value with the extracted table data
+        if (num_rows == len(table_grid) and num_cols == len(table_grid[0])):
+            # update table cell values
+            for table_cell in table.data.table_cells:
+                row_idx = table_cell.start_row_offset_idx
+                col_idx = table_cell.start_col_offset_idx
+                cell_val = table_grid[row_idx][col_idx]
+                table_cell.text = str(cell_val)
+                cell_dict = vars(table_cell)
+                cell_dict["bbox"] = table_cell.bbox.as_tuple()
+                table_cells.append(cell_dict)
 
         table_extract = {
             "page_no": table.prov[0].page_no,
             "page_dimensions": { "width": page_size.width, "height": page_size.height },
             "bbox": table.prov[0].bbox.as_tuple(),
             "coord_origin": table.prov[0].bbox.coord_origin,
-            # "text": table.export_to_html(),
-            "text": table_image_extract["table_text"],
-            "score": table_image_extract["score"]
+            "text": html_table,
+            "table_cells": table_cells
         }
         table_extracts.append(table_extract)
         table_html += table_extract["text"]

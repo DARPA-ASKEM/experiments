@@ -12,8 +12,189 @@
       355.21075439453125
     ],
     "coord_origin": "BOTTOMLEFT",
-    "text": "<table border='1'>\n  <tr>\n    <th>Variable</th>\n    <th>Meaning</th>\n  </tr>\n  <tr>\n    <td><i>S(t)</i></td>\n    <td>The number of susceptible individuals at a given time, <i>t</i></td>\n  </tr>\n  <tr>\n    <td><i>E(t)</i></td>\n    <td>The number of exposed individuals at a given time, <i>t</i></td>\n  </tr>\n  <tr>\n    <td><i>I(t)</i></td>\n    <td>The number of infective individuals at a given time, <i>t</i></td>\n  </tr>\n  <tr>\n    <td><i>R(t)</i></td>\n    <td>The number of recovered individuals at a given time, <i>t</i></td>\n  </tr>\n</table>",
-    "score": 10
+    "text": "<table><tbody><tr><th>Variable</th><th>Meaning</th></tr><tr><td>S(t)</td><td>The number of susceptible individuals at a given time, t</td></tr><tr><td>E(t)</td><td>The number of exposed individuals at a given time, t</td></tr><tr><td>I(t)</td><td>The number of infective individuals at a given time, t</td></tr><tr><td>R(t)</td><td>The number of recovered individuals at a given time, t</td></tr></tbody></table>",
+    "table_cells": [
+      {
+        "bbox": [
+          116.57143147786458,
+          512.9999593098959,
+          156.4285685221354,
+          525.1935221354166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Variable",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          270.42856852213544,
+          512.5644938151041,
+          315.0,
+          526.9354654947916
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Meaning",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          126.42856852213542,
+          531.290283203125,
+          146.5714314778646,
+          545.2257893880209
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "S(t)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          169.71428426106772,
+          531.7257893880209,
+          416.5714111328125,
+          544.3548177083334
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "The number of susceptible individuals at a given time, t",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          125.57143147786458,
+          549.1451416015625,
+          147.0,
+          563.9515787760416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "E(t)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          175.28570556640625,
+          549.5806070963541,
+          411.4285481770833,
+          563.0806070963541
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "The number of exposed individuals at a given time, t",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          126.42856852213542,
+          567.4354654947916,
+          146.5714314778646,
+          582.6774088541666
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "I(t)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          174.4285685221354,
+          567.8709309895834,
+          412.2857259114583,
+          581.3709309895834
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "The number of infective individuals at a given time, t",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          125.57143147786458,
+          585.7257893880209,
+          147.4285685221354,
+          600.5322265625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "R(t)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          172.28570556640625,
+          586.1612548828125,
+          414.4285481770833,
+          598.790283203125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "The number of recovered individuals at a given time, t",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      }
+    ]
   },
   {
     "page_no": 5,
@@ -28,8 +209,225 @@
       749.7115325927734
     ],
     "coord_origin": "BOTTOMLEFT",
-    "text": "<table border='1'>\n  <tr>\n    <th>Parameter Used</th>\n    <th>It's Meaning</th>\n  </tr>\n  <tr>\n    <td>b</td>\n    <td>Recruitment rate (Birth and Immigrants rate)</td>\n  </tr>\n  <tr>\n    <td>μ</td>\n    <td>Leaving rate (Death and Emigrants rate)</td>\n  </tr>\n  <tr>\n    <td>β</td>\n    <td>The contact rate</td>\n  </tr>\n  <tr>\n    <td>γ</td>\n    <td>The rate at which an infective individuals recovered per unit time</td>\n  </tr>\n  <tr>\n    <td>σ</td>\n    <td>The rate of exposed individuals who have undergone testing and therapy</td>\n  </tr>\n  <tr>\n    <td>α</td>\n    <td>The rate at which an exposed become infective</td>\n  </tr>\n</table>",
-    "score": 10
+    "text": "<table><tbody><tr><th>Parameter Used</th><th>It's Meaning</th></tr><tr><td>b</td><td>Recruitment rate (Birth and Immigrants rate)</td></tr><tr><td>μ</td><td>Leaving rate (Death and Emigrants rate)</td></tr><tr><td>β</td><td>The contact rate</td></tr><tr><td>γ</td><td>The rate at which an infective individuals recovered per unit time</td></tr><tr><td>σ</td><td>The rate of exposed individuals who have undergone testing and therapy</td></tr><tr><td>α</td><td>The rate at which an exposed become infective</td></tr></tbody></table>",
+    "table_cells": [
+      {
+        "bbox": [
+          61.28571573893229,
+          119.32257080078125,
+          132.85713704427084,
+          130.64515177408853
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Parameter Used",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          279.0,
+          118.4516092936198,
+          338.57143147786456,
+          131.51612345377603
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "It's Meaning",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          92.57143147786458,
+          136.74193318684897,
+          101.57143147786458,
+          148.49998982747397
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "b",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          210.0,
+          137.6128946940104,
+          407.5714111328125,
+          149.80644734700522
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Recruitment rate (Birth and Immigrants rate)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          92.57143147786458,
+          157.20966593424478,
+          101.57143147786458,
+          169.4032185872396
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "μ",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          218.14286295572916,
+          155.0322469075521,
+          400.2857259114583,
+          168.96773274739584
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Leaving rate (Death and Emigrants rate)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          91.7142842610677,
+          174.19354248046875,
+          102.85713704427083,
+          187.69354248046875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "β",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          273.42856852213544,
+          173.32257080078125,
+          345.0,
+          186.3870849609375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "The contact rate",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          164.5714314778646,
+          191.6128946940104,
+          453.8571370442708,
+          205.1128946940104
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "The rate at which an infective individuals recovered per unit time",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          147.0,
+          209.9032185872396,
+          471.0,
+          224.2741902669271
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "The rate of exposed individuals who have undergone testing and therapy",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          93.0,
+          230.80643717447916,
+          101.57143147786458,
+          242.1290283203125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "α",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          206.5714314778646,
+          229.5,
+          412.2857259114583,
+          240.82257080078125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "The rate at which an exposed become infective",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      }
+    ]
   },
   {
     "page_no": 19,
@@ -44,7 +442,350 @@
       749.5128479003906
     ],
     "coord_origin": "BOTTOMLEFT",
-    "text": "<table>\n<thead>\n<tr>\n<th>Model Parameter symbol</th>\n<th>Model Parameter value</th>\n<th>Parameter Source</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>b</td>\n<td>0.0784</td>\n<td>[17] and [20]</td>\n</tr>\n<tr>\n<td>μ</td>\n<td>0.0545</td>\n<td>[18] and [20]</td>\n</tr>\n<tr>\n<td>β</td>\n<td>0.09091 per day</td>\n<td>Immunization Action Coalition</td>\n</tr>\n<tr>\n<td>γ</td>\n<td>0.125 per day</td>\n<td>[21]</td>\n</tr>\n<tr>\n<td>σ</td>\n<td>0.00, 0.30, 0.60 & 0.90</td>\n<td>Assumed Values</td>\n</tr>\n<tr>\n<td>α</td>\n<td>0.14286 per day</td>\n<td>[21]</td>\n</tr>\n</tbody>\n</table>",
-    "score": 10
+    "text": "<table><tbody><tr><th>Model Parameter symbol</th><th>Model Parameter value</th><th>Parameter Source</th></tr><tr><td>b</td><td>0.0784</td><td>[17] and [20]</td></tr><tr><td>μ</td><td>0.0545</td><td>[18] and [20]</td></tr><tr><td>β</td><td>0.09091 per day</td><td>Immunization Action Coalition</td></tr><tr><td>γ</td><td>0.125 per day</td><td>[21]</td></tr><tr><td>σ</td><td>0.00, 0.30, 0.60 & 0.90</td><td>Assumed Values</td></tr><tr><td>α</td><td>0.14286 per day</td><td>[21]</td></tr></tbody></table>",
+    "table_cells": [
+      {
+        "bbox": [
+          51.0,
+          118.4516092936198,
+          165.4285685221354,
+          130.20967610677084
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Model Parameter symbol",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          179.5714314778646,
+          118.88709513346355,
+          286.7142740885417,
+          129.7741902669271
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Model Parameter value",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          330.42856852213544,
+          118.01612345377605,
+          411.4285481770833,
+          130.64515177408853
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Parameter Source",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          104.14285278320312,
+          136.74193318684897,
+          112.7142842610677,
+          148.49998982747397
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "b",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          217.71427408854166,
+          136.30644734700522,
+          248.5714314778646,
+          148.49998982747397
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.0784",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          341.5714111328125,
+          136.30644734700522,
+          398.5714111328125,
+          149.37096150716147
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "[17] and [20]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          104.14285278320312,
+          157.20966593424478,
+          112.7142842610677,
+          168.96773274739584
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "μ",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          217.71427408854166,
+          155.0322469075521,
+          248.5714314778646,
+          167.22579956054688
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.0545",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          341.14284261067706,
+          154.59677124023438,
+          398.5714111328125,
+          167.66128540039062
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "[18] and [20]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          103.2857157389323,
+          173.32257080078125,
+          113.14285278320312,
+          187.258056640625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "β",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          197.5714314778646,
+          173.32257080078125,
+          267.42856852213544,
+          186.3870849609375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.09091 per day",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          300.8571370442708,
+          174.6290283203125,
+          438.8571370442708,
+          184.6451619466146
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Immunization Action Coalition",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          201.85713704427084,
+          190.30643717447916,
+          262.7142740885417,
+          206.41935221354166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.125 per day",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          360.0,
+          191.17740885416666,
+          380.5714111328125,
+          204.67740885416666
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "[21]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          186.0,
+          210.7741902669271,
+          280.28570556640625,
+          222.09676106770834
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.00, 0.30, 0.60 & 0.90",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          333.42856852213544,
+          210.33870442708334,
+          406.7142740885417,
+          222.09676106770834
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Assumed Values",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          104.57143147786458,
+          230.80643717447916,
+          112.2857157389323,
+          241.258056640625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "α",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          197.14286295572916,
+          227.758056640625,
+          267.8571370442708,
+          241.69354248046875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.14286 per day",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          360.0,
+          227.758056640625,
+          380.5714111328125,
+          241.258056640625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "[21]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      }
+    ]
   }
 ]

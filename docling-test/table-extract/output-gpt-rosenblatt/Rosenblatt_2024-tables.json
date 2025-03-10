@@ -12,8 +12,2979 @@
       703.8828353881836
     ],
     "coord_origin": "BOTTOMLEFT",
-    "text": "<table><tbody><tr><th>Equations</th><th>Variable</th><th>Definition (units)</th><th colspan=\"2\">Captive</th><th colspan=\"2\">Wild</th><th>Source</th></tr><tr><td></td><td></td><td></td><th>Outdoor ranch</th><th>Intensive facility</th><th>Rural</th><th>Suburban</th><td></td></tr><tr><td>1, 3, 4, 6</td><td>α</td><td>Immune loss rate (day<sup>-1</sup>; log-normal)</td><td colspan=\"4\">μ = 4.72, σ = 0.63</td><td>This study, expert elicited</td></tr><tr><td>2, 3, 5, 6</td><td>γ</td><td>Recovery rate (day<sup>-1</sup>)</td><td colspan=\"4\">1/6 days</td><td>[21]</td></tr><tr><td></td><td>I<sub>H</sub></td><td>Human Prevalence (%)</td><td></td><td></td><td>5%</td><td></td><td>Assumed and fixed</td></tr><tr><td>1, 2, 4, 5</td><td>κ</td><td>Proximity rate scaling adjustment (unitless)</td><td>11.35</td><td>NA</td><td>11.35</td><td>11.35</td><td>[32]</td></tr><tr><td>8</td><td>β</td><td>Proximity rate concavity scaling constant (unitless)</td><td>0.34</td><td>NA</td><td>0.34</td><td>0.34</td><td>[32]</td></tr><tr><td>8</td><td>N<sub>w</sub></td><td>Number of deer per unit area (A<sub>w</sub>)</td><td>1000</td><td>NA</td><td>1000</td><td>1000</td><td>[32]</td></tr><tr><td>8</td><td>A<sub>w</sub></td><td>Area for intermediate density-dependence (km²)</td><td>100 km²</td><td>NA</td><td>100 km²</td><td>100 km²</td><td>[32]</td></tr><tr><td>8</td><td>P<sub>attractant</sub></td><td>Adjustment for the presence of an attractant (bait, feed, etc.; log-normal)</td><td>μ = 3.47, σ = 0.23</td><td>NA</td><td>NA</td><td>NA</td><td>This study, expert elicited</td></tr><tr><td></td><td>ω<sub>HW</sub></td><td>Human-deer proximity rate (events/120 days; log-normal)</td><td>μ = 0.57, σ = 0.95</td><td>μ = 2.52, σ = 1.13</td><td>μ = -1.59, σ = 1.70</td><td>μ = 0.572, σ = 0.951</td><td>This study, expert elicited</td></tr><tr><td></td><td>ω<sub>CC</sub></td><td>Deer proximity rate in captivity (events/day; log-normal)</td><td>NA</td><td>μ = 3.47, σ = 0.91</td><td>NA</td><td>NA</td><td>This study, expert elicited</td></tr><tr><td></td><td>ω<sub>WC</sub></td><td>Wild-captive deer proximity rate along fences (events/day, only included for Objective 4)</td><td colspan=\"4\">0.00072 direct contacts/day / d<sub>DC</sub></td><td>[40,41]</td></tr><tr><td>9</td><td>θ</td><td>Quanta SARS-CoV-2 dose-response in deer (1/quanta required for ID<sub>63</sub>; log-normal)</td><td colspan=\"4\">μ = 0.28, σ = 0.27</td><td>This study, expert elicited</td></tr><tr><td>10</td><td>C<sub>i</sub></td><td>Conversion from SARS-CoV-2 RNA copies to quanta</td><td colspan=\"4\">0.0014 quantum/RNA copy</td><td>[36]</td></tr><tr><td>10</td><td>C<sub>V—human</sub></td><td>Concentration of SARS-CoV-2 in human sputum (RNA copies/ml)</td><td colspan=\"4\">μ = 5.6 log<sub>10</sub> RNA copies/ml, σ = 1.2 log<sub>10</sub></td><td>[33]</td></tr><tr><td>10, 14</td><td>C<sub>V—deer</sub></td><td>Concentration of SARS-CoV-2 in deer sputum (RNA copies/ml; log-normal)</td><td>μ = 0.22, σ = 0.34; proportional to C<sub>V—human</sub></td><td>NA</td><td>NA</td><td>NA</td><td>This study, expert elicited</td></tr><tr><td>10, 12</td><td>IR—human</td><td>Inhalation rate for humans, standing (m³/hr)</td><td>0.53 m³/hr</td><td>NA</td><td>NA</td><td>NA</td><td>[36]</td></tr><tr><td>10, 12</td><td>IR—deer</td><td>Inhalation rate for deer, breathing (m³/hr)</td><td></td><td colspan=\"3\">0.85 m³/hr</td><td>[42]</td></tr><tr><td>10</td><td>V<sub>drop</sub></td><td>Droplet volume concentration (speaking; ml/m<sup>3</sup>)</td><td></td><td colspan=\"3\">0.01 ml/m<sup>3</sup></td><td>[36]</td></tr><tr><td>11</td><td>V<sub>air</sub></td><td>Volume of shared airspace with 1.5m radius (m³)</td><td>7.07 m³</td><td>NA</td><td>NA</td><td>NA</td><td>This study, calculated</td></tr><tr><td>11</td><td>AER</td><td>Air exchange rate (hr<sup>-1</sup>)</td><td>4 hr<sup>-1</sup></td><td>1 hr<sup>-1</sup></td><td>4 hr<sup>-1</sup></td><td>4 hr<sup>-1</sup></td><td>[43,44]</td></tr><tr><td>11</td><td>s</td><td>SARS-CoV-2 settling rate (hr<sup>-1</sup>)</td><td colspan=\"4\">0.24 hr<sup>-1</sup></td><td>[33]</td></tr><tr><td>11</td><td>λ</td><td>SARS-CoV-2 inactivation rate (hr<sup>-1</sup>)</td><td colspan=\"4\">0.63 hr<sup>-1</sup></td><td>[33]</td></tr><tr><td>12</td><td>t<sub>contact</sub></td><td>Duration of proximity event between human and deer (minutes; log-normal)</td><td>μ = 1.79, σ = 1.15</td><td>NA</td><td>μ = -0.36, σ = 0.98</td><td>μ = 0.432, σ = 0.929</td><td>This study, expert elicited</td></tr><tr><td>12</td><td>t<sub>contact</sub></td><td>Duration of proximity event between deer (all proximity types; minutes; log-normal)</td><td colspan=\"4\">μ = 1.55, σ = 1.27</td><td>This study, expert elicited</td></tr><tr><td>13</td><td>g<sub>DC</sub></td><td>Probability of deer making direct contact (logit-normal)</td><td colspan=\"4\">μ = -1.46, σ = 0.71</td><td>This study, expert elicited</td></tr><tr><td>14</td><td>k</td><td>Dose-response function for plaque-forming units (PFU required for ID<sub>63</sub>)</td><td colspan=\"4\">410</td><td>[37]</td></tr><tr><td>14</td><td>V<sub>sputum</sub></td><td>Volume of sputum transferred between individuals on contact (μl)</td><td colspan=\"4\">100 μl</td><td>Fixed</td></tr></tbody></table>",
-    "score": 9
+    "text": "<table><tbody><tr><th>Equations</th><th>Variable</th><th>Definition (units)</th><th colspan=\"2\">Captive</th><th colspan=\"2\">Wild</th><th>Source</th></tr><tr><td></td><td></td><td></td><th>Outdoor ranch</th><th>Intensive facility</th><th>Rural</th><th>Suburban</th><td></td></tr><tr><td>1, 3, 4, 6</td><td>α</td><td>Immune loss rate (day<sup>-1</sup>; log-normal)</td><td colspan=\"4\">μ = 4.72, σ = 0.63</td><td>This study, expert elicited</td></tr><tr><td>2, 3, 5, 6</td><td>γ</td><td>Recovery rate (day<sup>-1</sup>)</td><td colspan=\"4\">1/6 days</td><td>[21]</td></tr><tr><td>1, 2, 4, 5</td><td>I<sub>H</sub></td><td>Human Prevalence (%)</td><td colspan=\"4\">5%</td><td>Assumed and fixed</td></tr><tr><td>8</td><td>κ</td><td>Proximity rate scaling adjustment (unitless)</td><td>11.35</td><td>NA</td><td>11.35</td><td>11.35</td><td>[32]</td></tr><tr><td>8</td><td>q</td><td>Proximity rate concavity scaling constant (unitless)</td><td>0.34</td><td>NA</td><td>0.34</td><td>0.34</td><td>[32]</td></tr><tr><td>8</td><td>N<sub>w</sub></td><td>Number of deer per unit area (A<sub>w</sub>)</td><td>1000</td><td>NA</td><td>1000</td><td>1000</td><td>[32]</td></tr><tr><td>8</td><td>A<sub>w</sub></td><td>Area for intermediate density-dependence (km²)</td><td>100 km²</td><td>NA</td><td>100 km²</td><td>100 km²</td><td>[32]</td></tr><tr><td>8</td><td>P<sub>attractant</sub></td><td>Adjustment for the presence of an attractant (bait, feed, etc.; log-normal)</td><td>μ = 3.47, σ = 0.23</td><td>NA</td><td>NA</td><td>NA</td><td>This study, expert elicited</td></tr><tr><td></td><td>ω<sub>HW</sub></td><td>Human-deer proximity rate (events/120 days; log-normal)</td><td>μ = 0.57, σ = 0.95</td><td>μ = 2.52, σ = 1.13</td><td>μ = -1.59, σ = 1.70</td><td>μ = 0.572, σ = 0.951</td><td>This study, expert elicited</td></tr><tr><td></td><td>ω<sub>CC</sub></td><td>Deer proximity rate in captivity (events/day; log-normal)</td><td>NA</td><td>μ = 3.47, σ = 0.91</td><td>NA</td><td>NA</td><td>This study, expert elicited</td></tr><tr><td></td><td>ω<sub>WC</sub></td><td>Wild-captive deer proximity rate along fences (events/day, only included for Objective 4)</td><td></td><td>0.00072 direct contacts/day / D<sup>DC</sup></td><td></td><td></td><td>[40,41]</td></tr><tr><td>9</td><td>θ</td><td>Quanta SARS-CoV-2 dose-response in deer (1/quanta required for ID63; log-normal)</td><td colspan=\"4\">μ = 0.28, σ = 0.27</td><td>This study, expert elicited</td></tr><tr><td>10</td><td>C<sub>i</sub></td><td>Conversion from SARS-CoV-2 RNA copies to quanta</td><td colspan=\"4\">0.0014 quantum/RNA copy</td><td>[36]</td></tr><tr><td>10</td><td>C<sub>v—human</sub></td><td>Concentration of SARS-CoV-2 in human sputum (RNA copies/ml)</td><td colspan=\"4\">μ = 5.6 log<sub>10</sub> RNA copies/ml, σ = 1.2 log<sub>10</sub></td><td>[33]</td></tr><tr><td>10,14</td><td>C<sub>v—deer</sub></td><td>Concentration of SARS-CoV-2 in deer sputum (RNA copies/ml; log-normal)</td><td colspan=\"4\">μ = 0.22, σ = 0.34; proportional to C<sub>v—human</sub></td><td>This study, expert elicited</td></tr><tr><td>10</td><td>IR—human</td><td>Inhalation rate for humans, standing (m³/hr)</td><td colspan=\"4\">0.53 m³/hr</td><td>[36]</td></tr><tr><td>10, 12</td><td>IR—deer</td><td>Inhalation rate for deer, breathing (m³/hr)</td><td colspan=\"4\">0.85 m³/hr</td><td>[42]</td></tr><tr><td>10</td><td>V<sub>drop</sub></td><td>Droplet volume concentration (speaking; ml/m³)</td><td colspan=\"4\">0.01 ml/m³</td><td>[36]</td></tr><tr><td>11</td><td>V<sub>air</sub></td><td>Volume of shared airspace with 1.5m radius (m³)</td><td></td><td>7.07 m³</td><td></td><td></td><td>This study, calculated</td></tr><tr><td>11</td><td>AER</td><td>Air exchange rate (hr<sup>-1</sup>)</td><td>4 hr<sup>-1</sup></td><td>1 hr<sup>-1</sup></td><td>4 hr<sup>-1</sup></td><td>4 hr<sup>-1</sup></td><td>[43,44]</td></tr><tr><td>11</td><td>s</td><td>SARS-CoV-2 settling rate (hr<sup>-1</sup>)</td><td colspan=\"4\">0.24 hr<sup>-1</sup></td><td>[33]</td></tr><tr><td>11</td><td>λ</td><td>SARS-CoV-2 inactivation rate (hr<sup>-1</sup>)</td><td colspan=\"4\">0.63 hr<sup>-1</sup></td><td>[33]</td></tr><tr><td>12</td><td>t<sub>contact</sub></td><td>Duration of proximity event between human and deer (minutes; log-normal)</td><td>μ = 1.79, σ = 1.15</td><td></td><td></td><td>μ = 0.432, σ = 0.929</td><td>This study, expert elicited</td></tr><tr><td>12</td><td>t<sub>contact</sub></td><td>Duration of proximity event between deer (all proximity types; minutes; log-normal)</td><td colspan=\"4\">μ = 1.55, σ = 1.27</td><td>This study, expert elicited</td></tr><tr><td>13</td><td>g<sup>DC</sup></td><td>Probability of deer making direct contact (logit-normal)</td><td colspan=\"4\">μ = -1.46, σ = 0.71</td><td>This study, expert elicited</td></tr><tr><td>14</td><td>k</td><td>Dose-response function for plaque-forming units (PFU required for ID63)</td><td colspan=\"4\">410</td><td>[37]</td></tr><tr><td>14</td><td>V<sub>sputum</sub></td><td>Volume of sputum transferred between individuals on contact (μl)</td><td colspan=\"4\">100 μl</td><td>Fixed</td></tr></tbody></table>",
+    "table_cells": [
+      {
+        "bbox": [
+          35.0625,
+          90.616943359375,
+          72.515625,
+          101.39516194661458
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Equations",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          77.296875,
+          90.616943359375,
+          109.96875,
+          100.59678141276042
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Variable",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          177.3046875,
+          91.01613362630208,
+          238.265625,
+          100.59678141276042
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Definition (units)",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          339.8671875,
+          91.01613362630208,
+          368.5546875,
+          100.9959716796875
+        ],
+        "row_span": 1,
+        "col_span": 2,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 5,
+        "text": "Captive",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          447.4453125,
+          90.21774291992188,
+          467.765625,
+          100.59678141276042
+        ],
+        "row_span": 1,
+        "col_span": 2,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 7,
+        "text": "Wild",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          529.921875,
+          91.01613362630208,
+          556.21875,
+          100.59678141276042
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "Source",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          311.9765625,
+          103.39113362630208,
+          344.25,
+          122.15322875976562
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "Outdoor ranch",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          362.578125,
+          103.39113362630208,
+          397.640625,
+          122.95161946614583
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "Intensive facility",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          418.7578125,
+          103.39113362630208,
+          440.671875,
+          112.1733907063802
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "Rural",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          463.78125,
+          102.991943359375,
+          499.640625,
+          112.5725809733073
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "Suburban",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          125.34678141276042,
+          64.546875,
+          134.92742919921875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "1, 3, 4, 6",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          74.90625,
+          126.9435526529948,
+          83.2734375,
+          135.7258097330729
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "α",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          124.9475809733073,
+          237.0703125,
+          135.32661946614584
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Immune loss rate (day-1; log-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          376.921875,
+          125.34678141276042,
+          434.6953125,
+          134.92742919921875
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "μ = 4.72, σ = 0.63",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          510.796875,
+          124.14920043945312,
+          572.15625,
+          144.50806681315103
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          34.6640625,
+          147.30242919921875,
+          64.546875,
+          157.28226725260416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "2, 3, 5, 6",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          74.5078125,
+          148.89920043945312,
+          82.4765625,
+          158.08064778645834
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "γ",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          146.90322875976562,
+          185.671875,
+          157.68145751953125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Recovery rate (day-1)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          391.6640625,
+          146.10484822591147,
+          420.75,
+          157.68145751953125
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "1/6 days",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.9921875,
+          147.30242919921875,
+          526.734375,
+          156.88306681315103
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[21]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          160.07661946614584,
+          64.546875,
+          169.65726725260416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "1, 2, 4, 5",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          74.90625,
+          159.67742919921875,
+          85.6640625,
+          170.8548380533854
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "IH",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.9453125,
+          160.07661946614584,
+          192.046875,
+          169.25806681315103
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Human Prevalence (%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          399.6328125,
+          160.07661946614584,
+          412.3828125,
+          169.25806681315103
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "5%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          159.67742919921875,
+          557.8125,
+          178.43951416015625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "Assumed and fixed",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          182.43145751953125,
+          41.4375,
+          191.2137247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "8",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          183.6290486653646,
+          82.078125,
+          191.6129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "κ",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.9453125,
+          181.6330769856771,
+          257.7890625,
+          192.0121053059896
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Proximity rate scaling adjustment (unitless)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          317.5546875,
+          181.6330769856771,
+          338.2734375,
+          190.81451416015625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "11.35",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          371.34375,
+          180.83467610677084,
+          386.8828125,
+          191.6129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          419.5546875,
+          181.23388671875,
+          440.2734375,
+          191.2137247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "11.35",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          471.3515625,
+          181.23388671875,
+          492.0703125,
+          191.2137247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "11.35",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.9921875,
+          181.23388671875,
+          527.1328125,
+          192.0121053059896
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[32]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          194.80645751953125,
+          41.4375,
+          203.5887247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "8",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          196.40323893229166,
+          81.6796875,
+          204.3871053059896
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "q",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.9453125,
+          194.0080769856771,
+          281.6953125,
+          204.3871053059896
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Proximity rate concavity scaling constant (unitless)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          319.1484375,
+          193.60888671875,
+          337.078125,
+          203.9879150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "0.34",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          371.7421875,
+          194.0080769856771,
+          386.484375,
+          203.5887247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          421.1484375,
+          194.40726725260416,
+          437.8828125,
+          203.5887247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "0.34",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          472.9453125,
+          194.40726725260416,
+          490.078125,
+          203.5887247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "0.34",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          193.60888671875,
+          527.1328125,
+          204.3871053059896
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[32]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          207.58064778645834,
+          41.4375,
+          216.3629150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "8",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          74.5078125,
+          206.3830769856771,
+          88.0546875,
+          217.56048583984375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Nw",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.9453125,
+          206.3830769856771,
+          228.703125,
+          216.7621053059896
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Number of deer per unit area (Aw)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          318.75,
+          206.3830769856771,
+          337.4765625,
+          216.3629150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "1000",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          371.7421875,
+          206.78226725260416,
+          386.484375,
+          216.3629150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          420.3515625,
+          206.3830769856771,
+          439.4765625,
+          216.3629150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "1000",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          472.546875,
+          206.3830769856771,
+          491.2734375,
+          216.3629150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "1000",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.9921875,
+          206.3830769856771,
+          527.1328125,
+          217.16129557291666
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[32]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          219.95564778645834,
+          41.4375,
+          228.7379150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "8",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          217.9596964518229,
+          87.2578125,
+          230.73388671875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Aw",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          218.7580769856771,
+          273.7265625,
+          229.1371053059896
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Area for intermediate density-dependence (km²)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          312.375,
+          218.35888671875,
+          343.453125,
+          228.3387247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "100 km²",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          372.140625,
+          219.55645751953125,
+          386.484375,
+          228.7379150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          413.578125,
+          218.35888671875,
+          444.65625,
+          228.3387247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "100 km²",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          466.171875,
+          218.35888671875,
+          496.8515625,
+          228.3387247721354
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "100 km²",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.9921875,
+          218.7580769856771,
+          527.1328125,
+          229.53629557291666
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[32]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          34.6640625,
+          232.7298583984375,
+          41.4375,
+          241.1129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 9,
+        "end_row_offset_idx": 10,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "8",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.703125,
+          233.52823893229166,
+          104.7890625,
+          243.90726725260416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 9,
+        "end_row_offset_idx": 10,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Pattractant",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.9453125,
+          231.53226725260416,
+          295.2421875,
+          251.0927530924479
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 9,
+        "end_row_offset_idx": 10,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Adjustment for the presence of an attractant (bait, feed, etc.; log-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          306.0,
+          232.33064778645834,
+          349.4296875,
+          250.29437255859375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 9,
+        "end_row_offset_idx": 10,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "μ = 3.47, σ = 0.23",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          372.140625,
+          231.93145751953125,
+          386.484375,
+          241.1129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 9,
+        "end_row_offset_idx": 10,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          421.9453125,
+          231.93145751953125,
+          436.6875,
+          241.1129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 9,
+        "end_row_offset_idx": 10,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          474.140625,
+          231.93145751953125,
+          488.484375,
+          241.1129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 9,
+        "end_row_offset_idx": 10,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.1953125,
+          231.1330769856771,
+          571.7578125,
+          251.0927530924479
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 9,
+        "end_row_offset_idx": 10,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          254.68548583984375,
+          93.234375,
+          265.46372477213544
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 10,
+        "end_row_offset_idx": 11,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "ωHW",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          253.0887247721354,
+          277.7109375,
+          272.6492106119792
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 10,
+        "end_row_offset_idx": 11,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Human-deer proximity rate (events/120 days; log-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          305.6015625,
+          253.8871053059896,
+          349.828125,
+          272.6492106119792
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 10,
+        "end_row_offset_idx": 11,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "μ = 0.57, σ = 0.95",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          357.3984375,
+          254.28629557291666,
+          401.2265625,
+          272.6492106119792
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 10,
+        "end_row_offset_idx": 11,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "μ = 2.52, σ = 1.13",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          409.1953125,
+          254.28629557291666,
+          449.4375,
+          271.85080973307294
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 10,
+        "end_row_offset_idx": 11,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "μ = -1.59, σ = 1.70",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          457.40625,
+          254.28629557291666,
+          504.8203125,
+          272.6492106119792
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 10,
+        "end_row_offset_idx": 11,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "μ = 0.572, σ = 0.951",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          510.3984375,
+          253.0887247721354,
+          572.15625,
+          273.4475911458333
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 10,
+        "end_row_offset_idx": 11,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          276.64113362630206,
+          91.2421875,
+          287.41937255859375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 11,
+        "end_row_offset_idx": 12,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "ωCC",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          275.4435628255208,
+          273.328125,
+          294.6048583984375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 11,
+        "end_row_offset_idx": 12,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Deer proximity rate in captivity (events/day; log-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          320.7421875,
+          275.84275309244794,
+          334.6875,
+          285.42340087890625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 11,
+        "end_row_offset_idx": 12,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          357.3984375,
+          276.64113362630206,
+          401.2265625,
+          294.6048583984375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 11,
+        "end_row_offset_idx": 12,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "μ = 3.47, σ = 0.91",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          422.34375,
+          275.84275309244794,
+          436.6875,
+          285.42340087890625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 11,
+        "end_row_offset_idx": 12,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          474.140625,
+          275.84275309244794,
+          488.484375,
+          285.42340087890625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 11,
+        "end_row_offset_idx": 12,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "NA",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          510.796875,
+          275.04437255859375,
+          571.7578125,
+          295.4032389322917
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 11,
+        "end_row_offset_idx": 12,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.703125,
+          298.59678141276044,
+          92.4375,
+          309.7742106119792
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 12,
+        "end_row_offset_idx": 13,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "ωWC",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          297.00002034505206,
+          291.65625,
+          317.75807698567706
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 12,
+        "end_row_offset_idx": 13,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Wild-captive deer proximity rate along fences (events/day, only included for Objective 4)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          350.2265625,
+          296.60080973307294,
+          461.390625,
+          307.7782389322917
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 12,
+        "end_row_offset_idx": 13,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "0.00072 direct contacts/day / DDC",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          297.00002034505206,
+          537.09375,
+          308.17742919921875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 12,
+        "end_row_offset_idx": 13,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[40,41]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          320.9516194661458,
+          41.4375,
+          329.33469645182294
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 13,
+        "end_row_offset_idx": 14,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "9",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          320.1532389322917,
+          82.078125,
+          328.5362955729167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 13,
+        "end_row_offset_idx": 14,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "θ",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          318.95566813151044,
+          291.65625,
+          339.71372477213544
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 13,
+        "end_row_offset_idx": 14,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Quanta SARS-CoV-2 dose-response in deer (1/quanta required for ID63; log-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          376.5234375,
+          320.55242919921875,
+          434.296875,
+          328.5362955729167
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 13,
+        "end_row_offset_idx": 14,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "μ = 0.28, σ = 0.27",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.1953125,
+          318.95566813151044,
+          571.359375,
+          339.3145345052083
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 13,
+        "end_row_offset_idx": 14,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          342.10888671875,
+          45.0234375,
+          351.2903238932292
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 14,
+        "end_row_offset_idx": 15,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "10",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.703125,
+          342.10888671875,
+          84.46875,
+          352.0887044270833
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 14,
+        "end_row_offset_idx": 15,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Ci",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          340.9112955729167,
+          290.4609375,
+          352.0887044270833
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 14,
+        "end_row_offset_idx": 15,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Conversion from SARS-CoV-2 RNA copies to quanta",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          360.1875,
+          340.51210530598956,
+          451.4296875,
+          352.4879150390625
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 14,
+        "end_row_offset_idx": 15,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "0.0014 quantum/RNA copy",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          341.3105061848958,
+          527.1328125,
+          352.0887044270833
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 14,
+        "end_row_offset_idx": 15,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[36]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          354.8830973307292,
+          45.0234375,
+          363.6653238932292
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 15,
+        "end_row_offset_idx": 16,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "10",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          353.6855061848958,
+          100.40625,
+          373.6451822916667
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 15,
+        "end_row_offset_idx": 16,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Cv—human",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          354.0846761067708,
+          297.6328125,
+          372.8468017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 15,
+        "end_row_offset_idx": 16,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Concentration of SARS-CoV-2 in human sputum (RNA copies/ml)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          335.0859375,
+          354.0846761067708,
+          476.1328125,
+          364.4637451171875
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 15,
+        "end_row_offset_idx": 16,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "μ = 5.6 log10RNA copies/ml, σ = 1.2 log10",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          353.6855061848958,
+          527.53125,
+          364.8629150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 15,
+        "end_row_offset_idx": 16,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[33]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          376.0403238932292,
+          55.3828125,
+          386.0201822916667
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 16,
+        "end_row_offset_idx": 17,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "10,14",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          76.1015625,
+          376.0403238932292,
+          107.578125,
+          385.6209716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 16,
+        "end_row_offset_idx": 17,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Cv—deer",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          375.241943359375,
+          288.8671875,
+          395.600830078125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 16,
+        "end_row_offset_idx": 17,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Concentration of SARS-CoV-2 in deer sputum (RNA copies/ml; log-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          329.90625,
+          377.2379150390625,
+          481.3125,
+          385.6209716796875
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 16,
+        "end_row_offset_idx": 17,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "μ = 0.22, σ = 0.34; proportional to Cv—human",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.1953125,
+          375.241943359375,
+          571.7578125,
+          395.2016194661458
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 16,
+        "end_row_offset_idx": 17,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          398.3951822916667,
+          45.8203125,
+          408.375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 17,
+        "end_row_offset_idx": 18,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "10",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          398.3951822916667,
+          100.8046875,
+          416.7580973307292
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 17,
+        "end_row_offset_idx": 18,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "IR—human",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          397.9959716796875,
+          262.171875,
+          408.375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 17,
+        "end_row_offset_idx": 18,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Inhalation rate for humans, standing (m³/hr)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          386.8828125,
+          396.7984212239583,
+          424.3359375,
+          407.975830078125
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 17,
+        "end_row_offset_idx": 18,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "0.53 m³/hr",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          397.9959716796875,
+          527.1328125,
+          408.7742106119792
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 17,
+        "end_row_offset_idx": 18,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[36]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          420.75,
+          56.578125,
+          429.5322672526042
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 18,
+        "end_row_offset_idx": 19,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "10, 12",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          76.1015625,
+          419.1532389322917,
+          107.1796875,
+          429.9314778645833
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 18,
+        "end_row_offset_idx": 19,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "IR—deer",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          419.9516194661458,
+          253.40625,
+          430.3306477864583
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 18,
+        "end_row_offset_idx": 19,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Inhalation rate for deer, breathing (m³/hr)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          386.484375,
+          419.1532389322917,
+          424.3359375,
+          429.9314778645833
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 18,
+        "end_row_offset_idx": 19,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "0.85 m³/hr",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          512.390625,
+          420.350830078125,
+          526.734375,
+          429.9314778645833
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 18,
+        "end_row_offset_idx": 19,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[42]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          433.125,
+          45.421875,
+          441.9072672526042
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 19,
+        "end_row_offset_idx": 20,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "10",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          76.1015625,
+          431.1290690104167,
+          94.03125,
+          446.6975911458333
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 19,
+        "end_row_offset_idx": 20,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Vdrop",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          431.9274495442708,
+          275.3203125,
+          443.5040690104167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 19,
+        "end_row_offset_idx": 20,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Droplet volume concentration (speaking; ml/m³)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          385.2890625,
+          431.9274495442708,
+          425.9296875,
+          442.7056477864583
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 19,
+        "end_row_offset_idx": 20,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "0.01 ml/m³",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          512.390625,
+          432.725830078125,
+          526.734375,
+          442.3064778645833
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 19,
+        "end_row_offset_idx": 20,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[36]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          445.8992106119792,
+          45.0234375,
+          454.2822672526042
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 20,
+        "end_row_offset_idx": 21,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "11",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          76.1015625,
+          443.1048583984375,
+          89.25,
+          458.6734212239583
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 20,
+        "end_row_offset_idx": 21,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Vair",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          444.3024495442708,
+          275.71875,
+          455.8790690104167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 20,
+        "end_row_offset_idx": 21,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Volume of shared airspace with 1.5m radius (m³)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          390.0703125,
+          444.7016194661458,
+          420.75,
+          455.0806477864583
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 20,
+        "end_row_offset_idx": 21,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "7.07 m³",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.1953125,
+          444.3024495442708,
+          549.4453125,
+          463.4637451171875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 20,
+        "end_row_offset_idx": 21,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, calculated",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          467.8548583984375,
+          45.0234375,
+          476.6371256510417
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 21,
+        "end_row_offset_idx": 22,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "11",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          467.0564778645833,
+          93.6328125,
+          477.0362955729167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 21,
+        "end_row_offset_idx": 22,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "AER",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          467.0564778645833,
+          189.2578125,
+          477.0362955729167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 21,
+        "end_row_offset_idx": 22,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Air exchange rate (hr-1)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          318.3515625,
+          465.459716796875,
+          337.078125,
+          475.8387451171875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 21,
+        "end_row_offset_idx": 22,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "4 hr-1",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          370.546875,
+          465.85888671875,
+          388.4765625,
+          475.0403238932292
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 21,
+        "end_row_offset_idx": 22,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "1 hr-1",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          420.75,
+          465.85888671875,
+          437.8828125,
+          475.0403238932292
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 21,
+        "end_row_offset_idx": 22,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "4 hr-1",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          472.546875,
+          465.85888671875,
+          490.078125,
+          475.0403238932292
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 21,
+        "end_row_offset_idx": 22,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "4 hr-1",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.9921875,
+          467.0564778645833,
+          536.296875,
+          477.0362955729167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 21,
+        "end_row_offset_idx": 22,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[43,44]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          480.2298583984375,
+          45.0234375,
+          489.4112955729167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 22,
+        "end_row_offset_idx": 23,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "11",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          482.625,
+          80.8828125,
+          488.6129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 22,
+        "end_row_offset_idx": 23,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "s",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          479.0322672526042,
+          214.359375,
+          489.8105061848958
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 22,
+        "end_row_offset_idx": 23,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "SARS-CoV-2 settling rate (hr-1)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          392.0625,
+          479.4314778645833,
+          419.15625,
+          487.4153238932292
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 22,
+        "end_row_offset_idx": 23,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "0.24 hr-1",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          479.4314778645833,
+          527.1328125,
+          490.209716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 22,
+        "end_row_offset_idx": 23,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[33]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          493.0040690104167,
+          45.0234375,
+          501.7862955729167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 23,
+        "end_row_offset_idx": 24,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "11",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          493.0040690104167,
+          81.6796875,
+          501.3871256510417
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 23,
+        "end_row_offset_idx": 24,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "λ",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          491.8064778645833,
+          228.703125,
+          501.3871256510417
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 23,
+        "end_row_offset_idx": 24,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "SARS-CoV-2 inactivation rate (hr-1)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          392.4609375,
+          491.0080973307292,
+          418.7578125,
+          500.5887451171875
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 23,
+        "end_row_offset_idx": 24,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "0.63 hr-1",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.9921875,
+          492.2056477864583,
+          526.734375,
+          501.7862955729167
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 23,
+        "end_row_offset_idx": 24,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[33]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          505.3790690104167,
+          45.0234375,
+          514.1612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 24,
+        "end_row_offset_idx": 25,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "12",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.3046875,
+          504.9798583984375,
+          98.015625,
+          518.1532389322916
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 24,
+        "end_row_offset_idx": 25,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "tcontact",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.9453125,
+          504.9798583984375,
+          292.453125,
+          514.1612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 24,
+        "end_row_offset_idx": 25,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Duration of proximity event between human and deer (minutes; log-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          324.7265625,
+          504.9798583984375,
+          382.5,
+          513.7621256510416
+        ],
+        "row_span": 1,
+        "col_span": 2,
+        "start_row_offset_idx": 24,
+        "end_row_offset_idx": 25,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 5,
+        "text": "μ = 1.79, σ = 1.15",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          376.5234375,
+          504.5806477864583,
+          491.671875,
+          535.7177734375
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 25,
+        "end_row_offset_idx": 26,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "μ = 1.55, σ = 1.27",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          457.0078125,
+          504.5806477864583,
+          505.21875,
+          514.1612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 24,
+        "end_row_offset_idx": 25,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "μ = 0.432, σ = 0.929",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          510.3984375,
+          503.7822672526042,
+          571.359375,
+          523.741943359375
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 24,
+        "end_row_offset_idx": 25,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.9453125,
+          514.1612955729166,
+          298.03125,
+          546.0968017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 25,
+        "end_row_offset_idx": 26,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Duration of proximity event between deer (all proximity types; minutes; log-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          526.5362955729166,
+          45.8203125,
+          536.9153645833334
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 25,
+        "end_row_offset_idx": 26,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "12",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          75.703125,
+          528.1330973307291,
+          98.015625,
+          538.9112955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 25,
+        "end_row_offset_idx": 26,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "tcontact",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.1953125,
+          525.7379150390625,
+          571.7578125,
+          546.0968017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 25,
+        "end_row_offset_idx": 26,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          548.491943359375,
+          45.8203125,
+          558.4718017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 26,
+        "end_row_offset_idx": 27,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "13",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          548.0927734375,
+          297.234375,
+          559.2701822916666
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 26,
+        "end_row_offset_idx": 27,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Probability of deer making direct contact (logit-normal)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          375.328125,
+          549.2903645833334,
+          435.09375,
+          557.6734212239584
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 26,
+        "end_row_offset_idx": 27,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "μ = -1.46, σ = 0.71",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.1953125,
+          547.6935628255209,
+          571.7578125,
+          567.6532389322916
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 26,
+        "end_row_offset_idx": 27,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "This study, expert elicited",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          34.6640625,
+          570.8468017578125,
+          45.8203125,
+          580.8266194661459
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 27,
+        "end_row_offset_idx": 28,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "14",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          74.5078125,
+          570.8468017578125,
+          82.4765625,
+          581.225830078125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 27,
+        "end_row_offset_idx": 28,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "k",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.1484375,
+          570.8468017578125,
+          295.2421875,
+          589.209716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 27,
+        "end_row_offset_idx": 28,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Dose-response function for plaque-forming units (PFU required for ID63)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          398.8359375,
+          570.8468017578125,
+          413.1796875,
+          580.0282389322916
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 27,
+        "end_row_offset_idx": 28,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "410",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          570.4475911458334,
+          527.53125,
+          581.225830078125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 27,
+        "end_row_offset_idx": 28,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "[37]",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          593.2016194661459,
+          45.421875,
+          601.98388671875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 28,
+        "end_row_offset_idx": 29,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "14",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          115.546875,
+          592.4032389322916,
+          292.453125,
+          612.3629150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 28,
+        "end_row_offset_idx": 29,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Volume of sputum transferred between individuals on contact (μl)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          394.8515625,
+          592.0040690104166,
+          417.5625,
+          603.5806884765625
+        ],
+        "row_span": 1,
+        "col_span": 4,
+        "start_row_offset_idx": 28,
+        "end_row_offset_idx": 29,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 7,
+        "text": "100 μl",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          511.59375,
+          592.4032389322916,
+          532.3125,
+          602.3830973307291
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 28,
+        "end_row_offset_idx": 29,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "Fixed",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      }
+    ]
   },
   {
     "page_no": 13,
@@ -28,8 +2999,1035 @@
       265.401123046875
     ],
     "coord_origin": "BOTTOMLEFT",
-    "text": "<table><tbody><tr><th>Scenario</th><th>FOI<sub>HD</sub></th><th>p(HtD, 1:1000)</th><th>R<sub>0</sub></th><th>Average prevalence</th><th>Persistence</th><th>Incidence proportion</th></tr><tr><td>Intensive facility</td><td>0.0112%</td><td>100.0%</td><td>6.91</td><td>7.2%</td><td>95%</td><td>150%</td></tr><tr><td></td><td>(0.0017–0.0915%)</td><td>(86.4–100.0%)</td><td>(0.84–43.15)</td><td>(0.39–11.7%)</td><td>(94.0–96.0%)</td><td>(8.0–245%)</td></tr><tr><td>Outdoor ranch</td><td>0.0007%</td><td>56.1%</td><td>1.83</td><td>4.2%</td><td>69%</td><td>85%</td></tr><tr><td></td><td>(1e-4–0.005%)</td><td>(9.7–99.7%)</td><td>(0.31–8.83)</td><td>(0.003–8.8%)</td><td>(65.9–71.5%)</td><td>(0.06–183%)</td></tr><tr><td>Wild, rural</td><td>&lt;0.0001%</td><td>1.1%</td><td>0.97</td><td>0.001%</td><td>47%</td><td>0.03%</td></tr><tr><td></td><td>(0–0.0001%)</td><td>(0.1–11.2%)</td><td></td><td>(0–6.6%)</td><td>(43.9–50.2%)</td><td>(0–138%)</td></tr><tr><td>Wild, suburban</td><td>0.0002%</td><td>17.7%</td><td>0.97</td><td>0.01%</td><td>49%</td><td>0.30%</td></tr><tr><td></td><td>(0–0.001%)</td><td>(3.5–66.3%)</td><td>(0.17–4.36)</td><td>(4e-4–6.9%)</td><td>(45.6–51.9%)</td><td>(0.01–142%)</td></tr></tbody></table>",
-    "score": 10
+    "text": "<table><tbody><tr><th>Scenario</th><th>FOI<sub>HD</sub></th><th>p(HtD, 1:1000)</th><th>R<sub>0</sub></th><th>Average prevalence</th><th>Persistence</th><th>Incidence proportion</th></tr><tr><td>Intensive facility</td><td>0.0112%</td><td>100.0%</td><td>6.91</td><td>7.2%</td><td>95%</td><td>150%</td></tr><tr><td></td><td>(0.0017–0.0915%)</td><td>(86.4–100.0%)</td><td>(0.84–43.15)</td><td>(0.39–11.7%)</td><td>(94.0–96.0%)</td><td>(8.0–245%)</td></tr><tr><td>Outdoor ranch</td><td>0.0007%</td><td>56.1%</td><td>1.83</td><td>4.2%</td><td>69%</td><td>85%</td></tr><tr><td></td><td>(1e-4–0.005%)</td><td>(9.7–99.7%)</td><td>(0.31–8.83)</td><td>(0.003–8.8%)</td><td>(65.9–71.5%)</td><td>(0.06–183%)</td></tr><tr><td>Wild, rural</td><td>&lt;0.0001%</td><td>1.1%</td><td>0.97</td><td>0.001%</td><td>47%</td><td>0.03%</td></tr><tr><td></td><td>(0–0.0001%)</td><td>(0.1–11.2%)</td><td></td><td>(0–6.6%)</td><td>(43.9–50.2%)</td><td>(0–138%)</td></tr><tr><td>Wild, suburban</td><td>0.0002%</td><td>17.7%</td><td></td><td>0.01%</td><td>49%</td><td>0.30%</td></tr><tr><td></td><td>(0–0.001%)</td><td>(3.5–66.3%)</td><td>(0.17–4.36)</td><td>(4e-4–6.9%)</td><td>(45.6–51.9%)</td><td>(0.01–142%)</td></tr></tbody></table>",
+    "table_cells": [
+      {
+        "bbox": [
+          34.6640625,
+          528.5322672526041,
+          65.7421875,
+          538.1129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Scenario",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          137.0625,
+          527.73388671875,
+          162.1640625,
+          540.10888671875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "FOIHD",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          200.8125,
+          529.3306477864584,
+          253.0078125,
+          538.1129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "p(HtD, 1:1000)",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          290.4609375,
+          528.9314778645834,
+          301.6171875,
+          539.3105061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "R0",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          338.671875,
+          528.9314778645834,
+          405.609375,
+          539.3105061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "Average prevalence",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          428.71875,
+          528.9314778645834,
+          468.5625,
+          538.5121256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "Persistence",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          491.671875,
+          528.1330973307291,
+          566.1796875,
+          540.10888671875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "Incidence proportion",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          541.7056477864584,
+          89.25,
+          551.2862955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Intensive facility",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          135.0703125,
+          542.1048583984375,
+          164.15625,
+          550.4879150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.0112%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          215.15625,
+          542.1048583984375,
+          239.4609375,
+          550.4879150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "100.0%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          287.671875,
+          541.7056477864584,
+          303.2109375,
+          550.8871256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "6.91",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          362.1796875,
+          541.3064778645834,
+          380.90625,
+          551.2862955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "7.2%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          440.671875,
+          541.7056477864584,
+          456.609375,
+          550.8871256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "95%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          519.5625,
+          541.7056477864584,
+          538.6875,
+          550.4879150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "150%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          120.328125,
+          554.4798583984375,
+          179.296875,
+          563.6612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "(0.0017–0.0915%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          203.203125,
+          554.4798583984375,
+          251.4140625,
+          563.6612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "(86.4–100.0%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          274.921875,
+          554.4798583984375,
+          316.7578125,
+          563.6612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "(0.84–43.15)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          349.828125,
+          554.0806884765625,
+          393.65625,
+          563.6612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "(0.39–11.7%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          426.7265625,
+          554.4798583984375,
+          470.5546875,
+          563.6612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "(94.0–96.0%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          510.3984375,
+          554.8790690104166,
+          547.8515625,
+          563.2621256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "(8.0–245%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.4609375,
+          566.4556884765625,
+          85.6640625,
+          576.0362955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Outdoor ranch",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          135.46875,
+          567.2540690104166,
+          164.15625,
+          575.6371256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.0007%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          216.3515625,
+          566.4556884765625,
+          238.265625,
+          576.4355061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "56.1%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          288.0703125,
+          566.8548583984375,
+          304.0078125,
+          576.0362955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "1.83",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          362.1796875,
+          566.4556884765625,
+          380.90625,
+          576.4355061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "4.2%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          440.671875,
+          566.8548583984375,
+          456.609375,
+          576.0362955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "69%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          520.7578125,
+          566.8548583984375,
+          537.09375,
+          576.0362955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "85%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          125.90625,
+          579.2298583984375,
+          174.1171875,
+          588.4112955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "(1e-4–0.005%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          207.1875,
+          579.2298583984375,
+          247.4296875,
+          588.4112955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "(9.7–99.7%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          277.7109375,
+          579.6290690104166,
+          314.765625,
+          588.0121256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "(0.31–8.83)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          349.828125,
+          579.2298583984375,
+          393.65625,
+          588.4112955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "(0.003–8.8%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          426.7265625,
+          579.2298583984375,
+          470.5546875,
+          588.4112955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "(65.9–71.5%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          508.0078125,
+          579.2298583984375,
+          550.2421875,
+          588.4112955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "(0.06–183%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          590.8064778645834,
+          72.515625,
+          600.3871256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Wild, rural",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          133.078125,
+          592.0040690104166,
+          167.34375,
+          600.3871256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "<0.0001%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          218.7421875,
+          591.6048583984375,
+          235.875,
+          600.7862955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "1.1%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          288.0703125,
+          591.6048583984375,
+          303.609375,
+          600.7862955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "0.97",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          358.59375,
+          591.6048583984375,
+          384.890625,
+          601.1855061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "0.001%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          440.671875,
+          591.6048583984375,
+          456.609375,
+          600.7862955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "47%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          517.96875,
+          592.0040690104166,
+          539.484375,
+          600.7862955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "0.03%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          128.6953125,
+          604.3790690104166,
+          170.53125,
+          613.5605061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "(0–0.0001%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          207.5859375,
+          603.9798583984375,
+          247.4296875,
+          613.5605061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "(0.1–11.2%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          356.203125,
+          603.9798583984375,
+          386.8828125,
+          613.1612955729166
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "(0–6.6%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          426.7265625,
+          604.3790690104166,
+          470.5546875,
+          613.5605061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "(43.9–50.2%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          512.7890625,
+          604.3790690104166,
+          545.4609375,
+          613.959716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 6,
+        "end_row_offset_idx": 7,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "(0–138%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          615.9556884765625,
+          87.2578125,
+          626.334716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Wild, suburban",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          135.0703125,
+          617.1532389322916,
+          164.15625,
+          625.5363362630209
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.0002%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          217.1484375,
+          617.1532389322916,
+          237.8671875,
+          625.9355061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "17.7%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          277.3125,
+          617.1532389322916,
+          314.3671875,
+          625.5363362630209
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          360.984375,
+          616.7540690104166,
+          382.5,
+          625.5363362630209
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "0.01%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          440.671875,
+          616.7540690104166,
+          456.609375,
+          625.9355061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "49%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          517.96875,
+          617.1532389322916,
+          539.8828125,
+          625.9355061848959
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 7,
+        "end_row_offset_idx": 8,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "0.30%",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          130.2890625,
+          629.1290690104166,
+          168.9375,
+          638.709716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "(0–0.001%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          206.7890625,
+          629.1290690104166,
+          247.4296875,
+          638.709716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "(3.5–66.3%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          351.421875,
+          629.1290690104166,
+          392.4609375,
+          638.709716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "(4e-4–6.9%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          426.7265625,
+          629.1290690104166,
+          470.5546875,
+          638.709716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "(45.6–51.9%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          508.0078125,
+          629.1290690104166,
+          549.84375,
+          638.709716796875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 8,
+        "end_row_offset_idx": 9,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "(0.01–142%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      }
+    ]
   },
   {
     "page_no": 17,
@@ -44,7 +4042,890 @@
       248.19140625
     ],
     "coord_origin": "BOTTOMLEFT",
-    "text": "<table><tbody><tr><th>System</th><th colspan=\"2\">Median increase in prevalence (80% CI)</th><th colspan=\"2\">Median proportional increase in prevalence (80% CI)</th><th colspan=\"2\">Mean increase in probability of persistence (80% CI)</th><th colspan=\"2\">Median increase in incidence proportion (80% CI)</th></tr><tr><td></td><th>Wild</th><th>Captive</th><th>Wild</th><th>Captive</th><th>Wild</th><th>Captive</th><th>Wild</th><th>Captive</th></tr><tr><td>Outdoor ranch and wild, suburban</td><td>0.002 (0–0.143)</td><td>0 (0–8e-4)</td><td>0.46% (0.01–104%)</td><td>0.0028% (3e-4–0.0294)</td><td>0.001 (1e-4–0.004)</td><td>0</td><td>0.044 (0–3.21)</td><td>5e-4 (0–0.016)</td></tr><tr><td>Intensive facility and wild, suburban</td><td>0.013 (0–0.554)</td><td>0 (0–1e-4)</td><td>15.37% (0.38–562%)</td><td>&lt;1e-04% (0–0.0013)</td><td>0.006 (0.003–0.011)</td><td>0</td><td>0.231 (7e-4–11.62)</td><td>0 (0–0.002)</td></tr><tr><td>Outdoor ranch and wild, rural</td><td>0.004 (0–0.557)</td><td>0 (0–8e-4)</td><td>4.47% (0.08–3094%)</td><td>9e-04% (0–0.019)</td><td>0.015 (0.010–0.021)</td><td>0</td><td>0.081 (0–10.95)</td><td>1e-4 (0–0.016)</td></tr><tr><td>Intensive facility and wild, rural</td><td>0.016 (0–1.105)</td><td>0 (0–1e-4)</td><td>184.35% (1.17–20655%)</td><td>0% (0–0.001)</td><td>0.019 (0.014–0.026)</td><td>0</td><td>0.301 (7e-4–21.72)</td><td>0 (0–0.001)</td></tr></tbody></table>",
-    "score": 10
+    "text": "<table><tbody><tr><th>System</th><th colspan=\"2\">Median increase in prevalence (80% CI)</th><th colspan=\"2\">Median proportional increase in prevalence (80% CI)</th><th colspan=\"2\">Mean increase in probability of persistence (80% CI)</th><th colspan=\"2\">Median increase in incidence proportion (80% CI)</th></tr><tr><td></td><th>Wild</th><th>Captive</th><th>Wild</th><th>Captive</th><th>Wild</th><th>Captive</th><th>Wild</th><th>Captive</th></tr><tr><td>Outdoor ranch and wild, suburban</td><td>0.002 (0–0.143)</td><td>0 (0–8e-4)</td><td>0.46% (0.01–1.04%)</td><td>0.0028% (3e-4–0.0294%)</td><td>0.001 (1e-4–0.004)</td><td>0</td><td>0.044 (0–3.21)</td><td>5e-4 (0–0.016)</td></tr><tr><td>Intensive facility and wild, suburban</td><td>0.013 (0–0.554)</td><td>0 (0–1e-4)</td><td>15.37% (0.38–5.62%)</td><td>&lt;1e-4% (0–0.0013)</td><td>0.006 (0.003–0.011)</td><td>0</td><td>0.231 (7e-4–11.62)</td><td>0 (0–0.002)</td></tr><tr><td>Outdoor ranch and wild, rural</td><td>0.004 (0–0.557)</td><td>0 (0–8e-4)</td><td>4.47% (0.08–30.94%)</td><td>9e-04% (0–0.019)</td><td>0.015 (0.010–0.021)</td><td>0</td><td>0.081 (0–10.95)</td><td>1e-4 (0–0.016)</td></tr><tr><td>Intensive facility and wild, rural</td><td>0.016 (0–1.105)</td><td>0 (0–1e-4)</td><td>184.35% (1.17–2065.5%)</td><td>0% (0–0.001)</td><td>0.019 (0.014–0.026)</td><td>0</td><td>0.301 (7e-4–21.72)</td><td>0 (0–0.001)</td></tr></tbody></table>",
+    "table_cells": [
+      {
+        "bbox": [
+          35.4609375,
+          545.6975911458334,
+          60.9609375,
+          555.6774495442709
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "System",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          131.484375,
+          544.8992106119791,
+          200.4140625,
+          564.0605061848959
+        ],
+        "row_span": 1,
+        "col_span": 2,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 3,
+        "text": "Median increase in prevalence (80% CI)",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          227.90625,
+          545.2984212239584,
+          339.46875,
+          574.0403645833334
+        ],
+        "row_span": 1,
+        "col_span": 2,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 5,
+        "text": "Median proportional increase in prevalence (80% CI)",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          353.4140625,
+          545.2984212239584,
+          460.1953125,
+          574.4395345052084
+        ],
+        "row_span": 1,
+        "col_span": 2,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 7,
+        "text": "Mean increase in probability of persistence (80% CI)",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          470.15625,
+          545.2984212239584,
+          569.765625,
+          564.0605061848959
+        ],
+        "row_span": 1,
+        "col_span": 2,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 9,
+        "text": "Median increase in incidence proportion (80% CI)",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          132.6796875,
+          576.4355061848959,
+          152.6015625,
+          586.4153645833334
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "Wild",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          178.5,
+          576.834716796875,
+          206.7890625,
+          586.8145345052084
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "Captive",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          241.453125,
+          577.23388671875,
+          260.9765625,
+          586.0161539713541
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "Wild",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          303.2109375,
+          576.834716796875,
+          333.4921875,
+          587.2137451171875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "Captive",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          373.734375,
+          577.23388671875,
+          392.859375,
+          586.0161539713541
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "Wild",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          425.53125,
+          576.4355061848959,
+          454.6171875,
+          587.6129150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "Captive",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          484.1015625,
+          576.4355061848959,
+          504.0234375,
+          586.4153645833334
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "Wild",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          535.8984375,
+          576.0362955729166,
+          564.5859375,
+          588.0121256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 8,
+        "end_col_offset_idx": 9,
+        "text": "Captive",
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          589.209716796875,
+          98.8125,
+          607.9718017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Outdoor ranch and wild, suburban",
+        "column_header": false,
+        "row_header": true,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          126.703125,
+          589.60888671875,
+          158.9765625,
+          607.9718017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.002 (0–0.143)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          178.8984375,
+          590.4072672526041,
+          206.7890625,
+          607.9718017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "0 (0–8e-4)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          229.8984375,
+          589.60888671875,
+          272.53125,
+          608.3710123697916
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "0.46% (0.01–1.04%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          295.640625,
+          589.60888671875,
+          341.0625,
+          608.3710123697916
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "0.0028% (3e-4–0.0294%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          364.5703125,
+          589.60888671875,
+          402.421875,
+          607.9718017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "0.001 (1e-4–0.004)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          436.6875,
+          590.0080973307291,
+          443.0625,
+          598.3911539713541
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "0",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          479.71875,
+          589.60888671875,
+          508.40625,
+          607.9718017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "0.044 (0–3.21)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          534.3046875,
+          589.60888671875,
+          566.1796875,
+          607.9718017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 8,
+        "end_col_offset_idx": 9,
+        "text": "5e-4 (0–0.016)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          35.0625,
+          610.7661539713541,
+          99.2109375,
+          630.725830078125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Intensive facility and wild, suburban",
+        "column_header": false,
+        "row_header": true,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          126.703125,
+          611.5645345052084,
+          158.578125,
+          629.9274495442709
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.013 (0–0.554)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          178.5,
+          612.3629150390625,
+          206.390625,
+          630.725830078125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "0 (0–1e-4)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          229.8984375,
+          611.9637451171875,
+          272.53125,
+          630.3266194661459
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "15.37% (0.38–5.62%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          300.421875,
+          611.5645345052084,
+          336.28125,
+          629.9274495442709
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "<1e-4% (0–0.0013)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          360.5859375,
+          611.5645345052084,
+          406.8046875,
+          630.3266194661459
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "0.006 (0.003–0.011)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          436.2890625,
+          611.9637451171875,
+          443.0625,
+          620.3468017578125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "0",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          473.34375,
+          611.5645345052084,
+          514.78125,
+          630.3266194661459
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "0.231 (7e-4–11.62)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          534.3046875,
+          612.7621256510416,
+          566.1796875,
+          630.725830078125
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 3,
+        "end_row_offset_idx": 4,
+        "start_col_offset_idx": 8,
+        "end_col_offset_idx": 9,
+        "text": "0 (0–0.002)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          34.6640625,
+          633.5201822916666,
+          85.265625,
+          652.2822672526041
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Outdoor ranch and wild, rural",
+        "column_header": false,
+        "row_header": true,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          126.3046875,
+          633.9193929036459,
+          158.9765625,
+          652.6814778645834
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.004 (0–0.557)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          178.8984375,
+          633.9193929036459,
+          206.390625,
+          652.2822672526041
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "0 (0–8e-4)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          227.90625,
+          633.9193929036459,
+          274.125,
+          652.6814778645834
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "4.47% (0.08–30.94%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          302.015625,
+          633.9193929036459,
+          334.6875,
+          652.6814778645834
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "9e-04% (0–0.019)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          360.984375,
+          633.9193929036459,
+          406.40625,
+          651.8830973307291
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "0.015 (0.010–0.021)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          436.2890625,
+          633.9193929036459,
+          443.0625,
+          642.3024495442709
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "0",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          477.7265625,
+          633.9193929036459,
+          510.3984375,
+          652.6814778645834
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "0.081 (0–10.95)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          534.703125,
+          633.9193929036459,
+          566.1796875,
+          652.2822672526041
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 4,
+        "end_row_offset_idx": 5,
+        "start_col_offset_idx": 8,
+        "end_col_offset_idx": 9,
+        "text": "1e-4 (0–0.016)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          34.6640625,
+          654.6774495442709,
+          89.6484375,
+          673.8387451171875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "text": "Intensive facility and wild, rural",
+        "column_header": false,
+        "row_header": true,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          127.1015625,
+          655.8750406901041,
+          158.578125,
+          673.8387451171875
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "text": "0.016 (0–1.105)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          178.5,
+          656.2742106119791,
+          206.390625,
+          674.6371256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "text": "0 (0–1e-4)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          225.9140625,
+          655.8750406901041,
+          275.71875,
+          674.2379150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 3,
+        "end_col_offset_idx": 4,
+        "text": "184.35% (1.17–2065.5%)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          302.015625,
+          655.475830078125,
+          335.0859375,
+          674.6371256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 4,
+        "end_col_offset_idx": 5,
+        "text": "0% (0–0.001)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          360.5859375,
+          655.475830078125,
+          406.40625,
+          674.2379150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 5,
+        "end_col_offset_idx": 6,
+        "text": "0.019 (0.014–0.026)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          436.2890625,
+          656.2742106119791,
+          443.0625,
+          664.6572672526041
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 6,
+        "end_col_offset_idx": 7,
+        "text": "0",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          472.9453125,
+          655.07666015625,
+          514.78125,
+          674.2379150390625
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 7,
+        "end_col_offset_idx": 8,
+        "text": "0.301 (7e-4–21.72)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "bbox": [
+          534.3046875,
+          656.2742106119791,
+          566.578125,
+          674.6371256510416
+        ],
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 5,
+        "end_row_offset_idx": 6,
+        "start_col_offset_idx": 8,
+        "end_col_offset_idx": 9,
+        "text": "0 (0–0.001)",
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      }
+    ]
   }
 ]
