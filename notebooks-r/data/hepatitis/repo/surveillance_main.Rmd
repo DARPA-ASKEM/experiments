@@ -1,0 +1,112 @@
+---
+title: "Hepatitis A outbreak in Louisville (2017-2019) - Surveillance"
+author: "Emmanuelle Dankwa (dankwa@stats.ox.ac.uk)"
+date: "08/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Load package
+library(dplyr)
+
+# Load functions 
+source("surveillance_functions.R")     # All plot functions are written in this file
+
+# Load data 
+# Data on general population
+dat2 <- readRDS(file = "./surveillance_data/dat2.RDS")                # Full
+dat2_yrwk <- readRDS(file = "./surveillance_data/dat2_yrwk.RDS")  #  Summarized (Weekly case counts in the general population)
+
+# Weekly case count among PEH/PWUD (=risk group)
+target <- readRDS(file = "./surveillance_data/target.RDS")                 # Full 
+target_yrwk <- readRDS(file = "./surveillance_data/target_yrwk.RDS") # Summarized (Vaccination counts by week among PEH/PWUD)
+
+# Vaccination data
+vacc_counts_target <-  readRDS(file = "./surveillance_data/vacc_counts_target.RDS") # Summarized (Vaccination counts by week among PEH/PWUD)
+
+
+```
+
+
+# Summaries (Table 2)
+
+<!-- The code below reproduces Table 2.  -->
+
+
+```{r table-2}
+## Define PEH/PWUD and recategorize housing status variable
+
+dat2 <- dat2 %>%
+mutate(PEHPWUD =  Homelessness == 'Homeless - Shelter/Streets' | Homelessness== 'Unstable Housing'| IVDU=='Yes' | Non.IV.DU=='Yes')%>%
+mutate(Homelessness  =  if_else(Homelessness == "Homeless - Shelter/Streets" | Homelessness== 'Unstable Housing', 'Homeless',
+          if_else(Homelessness == 'Unknown' | Homelessness == '', 'Unknown', 'Not homeless'))) %>% 
+  mutate(Sex = factor(Sex, levels = c('Male', 'Female'))) %>% 
+  mutate(Non.IV.DU = factor(Non.IV.DU, levels = c('Yes', 'No', 'Unknown'))) %>% 
+  mutate(IVDU = factor(IVDU, levels = c('Yes', 'No', 'Unknown'))) %>% 
+  mutate(PEHPWUD = factor(PEHPWUD, levels = c('TRUE', 'FALSE')))
+
+
+
+# Generate summaries 
+s <- apply(dat2, 2 , generate.summaries)
+
+```
+
+
+
+**Table 2:** Summary of detected cases by year, sex, age group, housing status and illicit drug use.
+
+
+| Variable                          | Number of cases (\%)                                                 | Number of hospitalizations (\%)                                     | Number of deaths (\%)                                               |
+|-----------------------------------|----------------------------------------------------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------|
+| **Year**                              |                                                                      |                                                                    |                                                                    |
+| 2017                              | `r s$MMWRYear$cases[[1]]` (`r   s$MMWRYear$cases_perc[[1]]`)         | `r s$MMWRYear$hosp[[1]]` (`r   s$MMWRYear$hosp_perc[[1]]`)         | `r s$MMWRYear$mort[[1]]` (`r   s$MMWRYear$mort_perc[[1]]`)         |
+| 2018                              | `r s$MMWRYear$cases[[2]]` (`r   s$MMWRYear$cases_perc[[2]]`)         | `r s$MMWRYear$hosp[[2]]` (`r   s$MMWRYear$hosp_perc[[2]]`)         | `r s$MMWRYear$mort[[2]]` (`r   s$MMWRYear$mort_perc[[2]]`)         |
+| 2019                              | `r s$MMWRYear$cases[[3]]` (`r   s$MMWRYear$cases_perc[[3]]`)         | `r s$MMWRYear$hosp[[3]]` (`r   s$MMWRYear$hosp_perc[[3]]`)         | `r s$MMWRYear$mort[[3]]` (`r   s$MMWRYear$mort_perc[[3]]`)         |
+| **Sex**                               |                                                                      |                                                                    |                                                                    |
+| Male                              | `r s$Sex$cases[[2]]` (`r   s$Sex$cases_perc[[2]]`)                   | `r s$Sex$hosp[[2]]` (`r   s$Sex$hosp_perc[[2]]`)                   | `r s$Sex$mort[[2]]` (`r   s$Sex$mort_perc[[2]]`)                   |
+| Female                            | `r s$Sex$cases[[1]]` (`r   s$Sex$cases_perc[[1]]`)                   | `r s$Sex$hosp[[1]]` (`r   s$Sex$hosp_perc[[1]]`)                   | `r s$Sex$mort[[1]]` (`r   s$Sex$mort_perc[[1]]`)                   |
+| **Age (in years)**                    |                                                                      |                                                                    |                                                                    |
+| 10-19                             | `r s$Age_group$cases[[1]]` (`r   s$Age_group$cases_perc[[1]]`)       | `r s$Age_group$hosp[[1]]` (`r   s$Age_group$hosp_perc[[1]]`)       | `r s$Age_group$mort[[1]]` (`r   s$Age_group$mort_perc[[1]]`)       |
+| 20-29                             | `r s$Age_group$cases[[2]]` (`r   s$Age_group$cases_perc[[2]]`)       | `r s$Age_group$hosp[[2]]` (`r   s$Age_group$hosp_perc[[2]]`)       | `r s$Age_group$mort[[2]]` (`r   s$Age_group$mort_perc[[2]]`)       |
+| 30-39                             | `r s$Age_group$cases[[3]]` (`r   s$Age_group$cases_perc[[3]]`)       | `r s$Age_group$hosp[[3]]` (`r   s$Age_group$hosp_perc[[3]]`)       | `r s$Age_group$mort[[3]]` (`r   s$Age_group$mort_perc[[3]]`)       |
+| 40-49                             | `r s$Age_group$cases[[4]]` (`r   s$Age_group$cases_perc[[4]]`)       | `r s$Age_group$hosp[[4]]` (`r   s$Age_group$hosp_perc[[4]]`)       | `r s$Age_group$mort[[4]]` (`r   s$Age_group$mort_perc[[4]]`)       |
+| 50-59                             | `r s$Age_group$cases[[5]]` (`r   s$Age_group$cases_perc[[5]]`)       | `r s$Age_group$hosp[[5]]` (`r   s$Age_group$hosp_perc[[5]]`)       | `r s$Age_group$mort[[5]]` (`r   s$Age_group$mort_perc[[5]]`)       |
+| 60-69                             | `r s$Age_group$cases[[6]]` (`r   s$Age_group$cases_perc[[6]]`)       | `r s$Age_group$hosp[[6]]` (`r   s$Age_group$hosp_perc[[6]]`)       | `r s$Age_group$mort[[6]]` (`r   s$Age_group$mort_perc[[6]]`)       |
+| 70+                               | `r s$Age_group$cases[[7]]` (`r   s$Age_group$cases_perc[[7]]`)       | `r s$Age_group$hosp[[7]]` (`r   s$Age_group$hosp_perc[[7]]`)       | `r s$Age_group$mort[[7]]` (`r   s$Age_group$mort_perc[[7]]`)       |
+| **Housing   status**                  |                                                                      |                                                                    |                                                                    |
+| Homeless                          | `r s$Homelessness$cases[[1]]`   (`r s$Homelessness$cases_perc[[1]]`) | `r s$Homelessness$hosp[[1]]` (`r   s$Homelessness$hosp_perc[[1]]`) | `r s$Homelessness$mort[[1]]` (`r   s$Homelessness$mort_perc[[1]]`) |
+| Not   homeless                    | `r s$Homelessness$cases[[2]]`   (`r s$Homelessness$cases_perc[[2]]`) | `r s$Homelessness$hosp[[2]]` (`r   s$Homelessness$hosp_perc[[2]]`) | `r s$Homelessness$mort[[2]]` (`r   s$Homelessness$mort_perc[[2]]`) |
+| Unknown                           | `r s$Homelessness$cases[[3]]`   (`r s$Homelessness$cases_perc[[3]]`) | `r s$Homelessness$hosp[[3]]` (`r   s$Homelessness$hosp_perc[[3]]`) | `r s$Homelessness$mort[[3]]` (`r   s$Homelessness$mort_perc[[3]]`) |
+| **Illicit drug use, intravenous**     |                                                                      |                                                                    |                                                                    |
+| Yes                               | `r s$IVDU$cases[[3]]` (`r   s$IVDU$cases_perc[[3]]`)                 | `r s$IVDU$hosp[[3]]` (`r   s$IVDU$hosp_perc[[3]]`)                 | `r s$IVDU$mort[[3]]` (`r   s$IVDU$mort_perc[[3]]`)                 |
+| No                                | `r s$IVDU$cases[[1]]` (`r   s$IVDU$cases_perc[[1]]`)                 | `r s$IVDU$hosp[[1]]` (`r   s$IVDU$hosp_perc[[1]]`)                 | `r s$IVDU$mort[[1]]` (`r   s$IVDU$mort_perc[[1]]`)                 |
+| Unknown                           | `r s$IVDU$cases[[2]]` (`r   s$IVDU$cases_perc[[2]]`)                 | `r s$IVDU$hosp[[2]]` (`r   s$IVDU$hosp_perc[[2]]`)                 | `r s$IVDU$mort[[2]]` (`r   s$IVDU$mort_perc[[2]]`)                 |
+| **Illicit drug use, non-intravenous** |                                                                      |                                                                    |                                                                    |
+| Yes                               | `r s$Non.IV.DU$cases[[3]]` (`r   s$Non.IV.DU$cases_perc[[3]]`)       | `r s$Non.IV.DU$hosp[[3]]` (`r   s$Non.IV.DU$hosp_perc[[3]]`)       | `r s$Non.IV.DU$mort[[3]]` (`r   s$Non.IV.DU$mort_perc[[3]]`)       |
+| No                                | `r s$Non.IV.DU$cases[[1]]` (`r   s$Non.IV.DU$cases_perc[[1]]`)       | `r s$Non.IV.DU$hosp[[1]]` (`r   s$Non.IV.DU$hosp_perc[[1]]`)       | `r s$Non.IV.DU$mort[[1]]` (`r   s$Non.IV.DU$mort_perc[[1]]`)       |
+| Unknown                           | `r s$Non.IV.DU$cases[[2]]` (`r   s$Non.IV.DU$cases_perc[[2]]`)       | `r s$Non.IV.DU$hosp[[2]]` (`r   s$Non.IV.DU$hosp_perc[[2]]`)       | `r s$Non.IV.DU$mort[[2]]` (`r   s$Non.IV.DU$mort_perc[[2]]`)       |
+| **PEH/PWUD^***                        |                                                                      |                                                                    |                                                                    |
+| Yes                               | `r s$PEHPWUD$cases[[2]]` (`r   s$PEHPWUD$cases_perc[[2]]`)       | `r s$PEHPWUD$hosp[[2]]` (`r   s$PEHPWUD$hosp_perc[[2]]`)       | `r s$PEHPWUD$mort[[2]]` (`r   s$PEHPWUD$mort_perc[[2]]`)       |
+| No                                | `r s$PEHPWUD$cases[[1]]` (`r   s$PEHPWUD$cases_perc[[1]]`)       | `r s$PEHPWUD$hosp[[1]]` (`r   s$PEHPWUD$hosp_perc[[1]]`)       | `r s$PEHPWUD$mort[[1]]` (`r   s$PEHPWUD$mort_perc[[1]]`)       |
+| **Total**                             | `r nrow(dat2)` (100\%)                                               | `r sum(dat2$Hospitalization==   'Yes')` (100\%)                    | `r sum(dat2$Mortality== 'Yes')`   (100\%)                          |
+
+
+
+
+
+# Vaccination and case count plots (Figure 2)
+
+The code in this chunk reproduces Figure 2.
+
+```{r fig.align ="center", fig.cap = "Weekly case and vaccination counts (Figure 2)", fig.height= 15}
+# Plot (uncomment the commented lines below and modify directory (argument of "file") to save plot locally)
+#png(file = "./figs/for_paper/casecounts_vaccinations_final.png", res = 800, width = 10, height = 14, units = "in")
+layout(matrix(c(1,2),2, 1, byrow = FALSE))
+plot.by.risk(dat2_yrwk)                                   # Detected cases
+plot.vaccinations.comparable.axis(vacc_counts_target)     # Vaccinations
+# dev.off()
+```
+

@@ -1,0 +1,471 @@
+{
+    "header": {
+      "name": "Model (beta) configured",
+      "schema": "https://raw.githubusercontent.com/DARPA-ASKEM/Model-Representations/petrinet_v0.6/petrinet/petrinet_schema.json",
+      "schema_name": "petrinet",
+      "description": "Model",
+      "model_version": "0.1"
+    },
+    "properties": {},
+    "model": {
+      "states": [
+        {
+          "id": "S",
+          "name": "S(t)",
+          "grounding": {
+            "identifiers": {},
+            "modifiers": {}
+          },
+          "units": {
+            "expression": "1",
+            "expression_mathml": "1"
+          }
+        },
+        {
+          "id": "I",
+          "name": "I(t)",
+          "grounding": {
+            "identifiers": {},
+            "modifiers": {}
+          },
+          "units": {
+            "expression": "1",
+            "expression_mathml": "1"
+          }
+        },
+        {
+          "id": "L",
+          "name": "L(t)",
+          "grounding": {
+            "identifiers": {},
+            "modifiers": {}
+          },
+          "units": {
+            "expression": "1",
+            "expression_mathml": "1"
+          }
+        },
+        {
+          "id": "Z",
+          "name": "Z(t)",
+          "grounding": {
+            "identifiers": {},
+            "modifiers": {}
+          },
+          "units": {
+            "expression": "1",
+            "expression_mathml": "1"
+          }
+        },
+        {
+          "id": "R",
+          "name": "R(t)",
+          "grounding": {
+            "identifiers": {},
+            "modifiers": {}
+          },
+          "units": {
+            "expression": "1",
+            "expression_mathml": "1"
+          }
+        }
+      ],
+      "transitions": [
+        {
+          "id": "t0:S->L",
+          "input": [
+            "I",
+            "S"
+          ],
+          "output": [
+            "I",
+            "L"
+          ],
+          "properties": {
+            "name": "t0:S->L"
+          }
+        },
+        {
+          "id": "t1:S->Z",
+          "input": [
+            "S"
+          ],
+          "output": [
+            "Z"
+          ],
+          "properties": {
+            "name": "t1:S->Z"
+          }
+        },
+        {
+          "id": "t2:L->I",
+          "input": [
+            "L"
+          ],
+          "output": [
+            "I"
+          ],
+          "properties": {
+            "name": "t2:L->I"
+          }
+        },
+        {
+          "id": "t3:R->I",
+          "input": [
+            "R"
+          ],
+          "output": [
+            "I"
+          ],
+          "properties": {
+            "name": "t3:R->I"
+          }
+        },
+        {
+          "id": "t4:I->Z",
+          "input": [
+            "I"
+          ],
+          "output": [
+            "Z"
+          ],
+          "properties": {
+            "name": "t4:I->Z"
+          }
+        },
+        {
+          "id": "t5:I->R",
+          "input": [
+            "I"
+          ],
+          "output": [
+            "R"
+          ],
+          "properties": {
+            "name": "t5:I->R"
+          }
+        }
+      ]
+    },
+    "semantics": {
+      "ode": {
+        "rates": [
+          {
+            "target": "t0:S->L",
+            "expression": "I*S*(beta_s + (beta_l - beta_s)/(1 + 2.71828 ** (-c * (t - t_s))))/N",
+            "expression_mathml": "ISbetaN"
+          },
+          {
+            "target": "t1:S->Z",
+            "expression": "S*omega*tau*theta/N",
+            "expression_mathml": "SomegathetaN"
+          },
+          {
+            "target": "t2:L->I",
+            "expression": "L*alpha",
+            "expression_mathml": "Lalpha"
+          },
+          {
+            "target": "t3:R->I",
+            "expression": "R*sigma",
+            "expression_mathml": "Rsigma"
+          },
+          {
+            "target": "t4:I->Z",
+            "expression": "I*eta*gamma",
+            "expression_mathml": "Ietagamma"
+          },
+          {
+            "target": "t5:I->R",
+            "expression": "I*gamma*(1 - eta)",
+            "expression_mathml": "Igamma1eta"
+          }
+        ],
+        "initials": [
+          {
+            "target": "S",
+            "expression": "N - I_0",
+            "expression_mathml": "0.0"
+          },
+          {
+            "target": "I",
+            "expression": "0.92",
+            "expression_mathml": "0.92"
+          },
+          {
+            "target": "L",
+            "expression": "0.0",
+            "expression_mathml": "0.0"
+          },
+          {
+            "target": "Z",
+            "expression": "0.0",
+            "expression_mathml": "0.0"
+          },
+          {
+            "target": "R",
+            "expression": "0.0",
+            "expression_mathml": "0.0"
+          }
+        ],
+        "parameters": [
+          {
+            "id": "N",
+            "name": "N",
+            "value": 69862,
+            "units": {
+              "expression": "person",
+              "expression_mathml": "person"
+            }
+          },
+          {
+            "id": "I_0",
+            "name": "I_0",
+            "value": 0.92,
+            "units": {
+              "expression": "person",
+              "expression_mathml": "person"
+            },
+            "distribution": {
+              "type": "StandardUniform1",
+              "parameters": {
+                "minimum": 0.63,
+                "maximum": 2.01
+              }
+            }
+          },
+          {
+            "id": "beta_s",
+            "name": "beta_s",
+            "value": 0.61,
+            "units": {
+              "expression": "1",
+              "expression_mathml": "1"
+            },
+            "distribution": {
+                "type": "StandardUniform1",
+                "parameters": {
+                  "minimum": 0.57,
+                  "maximum": 0.67
+                }
+            }
+          },
+          {
+            "id": "beta_l",
+            "name": "beta_l",
+            "value": 0.12,
+            "units": {
+              "expression": "1",
+              "expression_mathml": "1"
+            },
+            "distribution": {
+              "type": "StandardUniform1",
+              "parameters": {
+                "minimum": 0.05,
+                "maximum": 0.18
+              }
+          }
+          },
+          {
+            "id": "c",
+            "name": "c",
+            "value": 0.75,
+            "units": {
+              "expression": "1",
+              "expression_mathml": "1"
+            },
+            "distribution": {
+              "type": "StandardUniform1",
+              "parameters": {
+                "minimum": 0.24,
+                "maximum": 100.0
+              }
+          }
+          },
+          {
+            "id": "t_s",
+            "name": "t_s",
+            "value": 33.0,
+            "units": {
+              "expression": "1",
+              "expression_mathml": "1"
+            },
+            "distribution": {
+              "type": "StandardUniform1",
+              "parameters": {
+                "minimum": 33.0,
+                "maximum": 39.0
+              }
+          }
+          },
+          {
+            "id": "omega",
+            "name": "omega",
+            "value": 1,
+            "units": {
+              "expression": "1",
+              "expression_mathml": "1"
+            }
+          },
+          {
+            "id": "theta",
+            "name": "theta",
+            "value": 1.0,
+            "units": {
+              "expression": "1",
+              "expression_mathml": "1"
+            }
+          },
+          {
+            "id": "alpha",
+            "name": "alpha",
+            "value": 0.6369,
+            "units": {
+              "expression": "1/week",
+              "expression_mathml": "1"
+            }
+          },
+          {
+            "id": "sigma",
+            "name": "sigma",
+            "value": 0.2326,
+            "units": {
+              "expression": "1/week",
+              "expression_mathml": "1"
+            }
+          },
+          {
+            "id": "eta",
+            "name": "eta",
+            "value": 0.43,
+            "units": {
+              "expression": "1",
+              "expression_mathml": "1"
+            }
+          },
+          {
+            "id": "gamma",
+            "name": "gamma",
+            "value": 0.2155,
+            "units": {
+              "expression": "1/week",
+              "expression_mathml": "1"
+            }
+          },
+          {
+            "id": "tau",
+            "name": "tau",
+            "value": 0.90,
+            "units": {
+              "expression": "1",
+              "expression_mathml": "1"
+            }
+          }
+        ],
+        "observables": [],
+        "time": {
+          "id": "t",
+          "units": {
+            "expression": "week",
+            "expression_mathml": "week"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "annotations": {
+        "authors": [],
+        "references": [],
+        "locations": [],
+        "pathogens": [],
+        "diseases": [],
+        "hosts": [],
+        "model_types": []
+      },
+      "source": null,
+      "description": "PGgyPlN1bW1hcnk8L2gyPgo8cD5UaGUgbW9kZWwgcmVwcmVzZW50cyB0aGUgZHluYW1pY3Mgb2YgSGVwYXRpdGlzIEEgVmlydXMgKEhBVikgdHJhbnNtaXNzaW9uIGFtb25nIHBlcnNvbnMgZXhwZXJpZW5jaW5nIGhvbWVsZXNzbmVzcyBvciB3aG8gdXNlIGRydWdzIChQRUgvUFdVRCkgaW4gTG91aXN2aWxsZSwgS2VudHVja3ksIGR1cmluZyB0aGUgMjAxN+KAkzIwMTkgb3V0YnJlYWsuIEl0IGlzIGEgZGV0ZXJtaW5pc3RpYyBjb21wYXJ0bWVudGFsIG1vZGVsIHdpdGggc3RhdGVzIHJlcHJlc2VudGluZyBkaWZmZXJlbnQgc3RhZ2VzIG9mIGluZmVjdGlvbiBhbmQgaW1tdW5pdHksIHRyYW5zaXRpb25zIGdvdmVybmVkIGJ5IHBhcmFtZXRlcnMgc3VjaCBhcyBjb250YWN0IHJhdGVzIGFuZCB2YWNjaW5hdGlvbiBlZmZpY2FjeSwgYW5kIG9ic2VydmFibGVzIHJlbGF0ZWQgdG8gY2FzZSBjb3VudHMgYW5kIGhvc3BpdGFsaXphdGlvbnMuPC9wPjxicj4KPGgyPlNwZWNzPC9oMj4KPGg0PkRvbWFpbjwvaDQ+Cjx1bD4KPGxpPkVwaWRlbWlvbG9neTwvbGk+CjxsaT5QdWJsaWMgSGVhbHRoPC9saT4KPC91bD48YnI+CjxoND5UeXBlPC9oND4KPHA+TWF0aGVtYXRpY2FsIE1vZGVsPC9wPjxicj4KPGg0PlNwZWNpZmljYXRpb248L2g0Pgo8cD5UaGUgbW9kZWwgaW5jbHVkZXMgZml2ZSBzdGF0ZXMgKFMsIEwsIEksIFIsIFopIGFuZCB0cmFuc2l0aW9ucyBiZXR3ZWVuIHRoZW0gZ292ZXJuZWQgYnkgcGFyYW1ldGVycyBzdWNoIGFzIGNvbnRhY3QgcmF0ZXMgYW5kIHZhY2NpbmF0aW9uIHJhdGVzLiBJdCBpbmNvcnBvcmF0ZXMgdGltZS12YXJ5aW5nIGNvbnRhY3QgcmF0ZXMgYW5kIHZhY2NpbmF0aW9uIGludGVydmVudGlvbnMuPC9wPjxicj4KPGg0PlN0YXRlczwvaDQ+Cjx1bD4KPGxpPjogU3VzY2VwdGlibGUgaW5kaXZpZHVhbHMgKFMpOiBJbmRpdmlkdWFscyB3aG8gY2FuIGNvbnRyYWN0IEhBVi4gVW5pdHM6IHBlcnNvbnMuPC9saT4KPGxpPkxhdGVudCBpbmRpdmlkdWFscyAoTCk6IEluZGl2aWR1YWxzIGV4cG9zZWQgdG8gSEFWIGJ1dCBub3QgeWV0IGluZmVjdGlvdXMuIFVuaXRzOiBwZXJzb25zLjwvbGk+CjxsaT5JbmZlY3Rpb3VzIGluZGl2aWR1YWxzIChJKTogSW5kaXZpZHVhbHMgY2FwYWJsZSBvZiB0cmFuc21pdHRpbmcgSEFWLiBVbml0czogcGVyc29ucy48L2xpPgo8bGk+UmVjb3ZlcmVkIGluZGl2aWR1YWxzIChSKTogSW5kaXZpZHVhbHMgd2hvIGhhdmUgcmVjb3ZlcmVkIGZyb20gSEFWIGJ1dCBtYXkgcmVsYXBzZS4gVW5pdHM6IHBlcnNvbnMuPC9saT4KPGxpPkltbXVuZSBpbmRpdmlkdWFscyAoWik6IEluZGl2aWR1YWxzIHdobyBhcmUgaW1tdW5lIHRvIEhBVi4gVW5pdHM6IHBlcnNvbnMuPC9saT4KPC91bD48YnI+CjxoND5QYXJhbWV0ZXJzPC9oND4KPHVsPgo8bGk+OiBFZmZlY3RpdmUgY29udGFjdCByYXRlICjOsik6IFJhdGUgYXQgd2hpY2ggc3VzY2VwdGlibGUgaW5kaXZpZHVhbHMgY29udGFjdCBpbmZlY3Rpb3VzIGluZGl2aWR1YWxzLiBVbml0czogMS8ocGVyc29uKmRheSkuPC9saT4KPGxpPlZhY2NpbmF0aW9uIHJhdGUgKGgpOiBSYXRlIG9mIHZhY2NpbmF0aW9uIGFtb25nIHN1c2NlcHRpYmxlIGluZGl2aWR1YWxzLiBVbml0czogMS9kYXkuPC9saT4KPGxpPkxhdGVudCBwZXJpb2QgZHVyYXRpb24gKDEvYSk6IEF2ZXJhZ2UgZHVyYXRpb24gaW5kaXZpZHVhbHMgcmVtYWluIGluIHRoZSBsYXRlbnQgc3RhdGUuIFVuaXRzOiBkYXlzLjwvbGk+CjxsaT5JbmZlY3Rpb3VzIHBlcmlvZCBkdXJhdGlvbiAoMS9jKTogQXZlcmFnZSBkdXJhdGlvbiBpbmRpdmlkdWFscyByZW1haW4gaW5mZWN0aW91cy4gVW5pdHM6IGRheXMuPC9saT4KPGxpPlJlbWlzc2lvbiBwZXJpb2QgZHVyYXRpb24gKDEvcik6IEF2ZXJhZ2UgZHVyYXRpb24gaW5kaXZpZHVhbHMgcmVtYWluIGluIHJlbWlzc2lvbi4gVW5pdHM6IGRheXMuPC9saT4KPGxpPlJlbGFwc2UgcHJvYmFiaWxpdHkgKDEtZyk6IFByb2JhYmlsaXR5IG9mIHJlbGFwc2UgYWZ0ZXIgcmVtaXNzaW9uLiBVbml0czogZGltZW5zaW9ubGVzcy48L2xpPgo8bGk+SW5pdGlhbCBpbW11bml0eSBwcm9wb3J0aW9uIChlKTogUHJvcG9ydGlvbiBvZiBpbmRpdmlkdWFscyBpbml0aWFsbHkgaW1tdW5lLiBVbml0czogZGltZW5zaW9ubGVzcy48L2xpPgo8bGk+VmFjY2luZSBlZmZpY2FjeSAocyk6IEVmZmljYWN5IG9mIHRoZSB2YWNjaW5lLiBVbml0czogZGltZW5zaW9ubGVzcy48L2xpPgo8bGk+UG9wdWxhdGlvbiBzaXplIChOKTogVG90YWwgcG9wdWxhdGlvbiBzaXplLiBVbml0czogcGVyc29ucy48L2xpPgo8L3VsPjxicj4KPGgyPlVzZXM8L2gyPgo8aDQ+RGlyZWN0IFVzZTwvaDQ+CjxwPlRoZSBtb2RlbCBjYW4gYmUgdXNlZCB0byBzaW11bGF0ZSBIQVYgdHJhbnNtaXNzaW9uIGR5bmFtaWNzIGFuZCBldmFsdWF0ZSB0aGUgaW1wYWN0IG9mIHZhY2NpbmF0aW9uIHN0cmF0ZWdpZXMuPC9wPjxicj4KPGg0Pk91dCBPZiBTY29wZSBVc2U8L2g0Pgo8cD5UaGUgbW9kZWwgaXMgbm90IHN1aXRhYmxlIGZvciBwcmVkaWN0aW5nIGluZGl2aWR1YWwtbGV2ZWwgb3V0Y29tZXMgb3IgZm9yIHVzZSBpbiBwb3B1bGF0aW9ucyB3aXRoIHNpZ25pZmljYW50bHkgZGlmZmVyZW50IGNoYXJhY3RlcmlzdGljcyBmcm9tIHRoZSBzdHVkeSBwb3B1bGF0aW9uLjwvcD48YnI+CjxoMj5CaWFzIFJpc2tzIExpbWl0YXRpb25zPC9oMj4KPGg0PkJpYXNlczwvaDQ+CjxwPlRoZSBtb2RlbCBhc3N1bWVzIGhvbW9nZW5lb3VzIG1peGluZyB3aXRoaW4gdGhlIHBvcHVsYXRpb24sIHdoaWNoIG1heSBub3QgcmVmbGVjdCByZWFsLXdvcmxkIGNvbnRhY3QgcGF0dGVybnMuPC9wPjxicj4KPGg0PlJpc2tzPC9oND4KPHA+UGFyYW1ldGVyIHVuY2VydGFpbnR5LCBzdWNoIGFzIHBvcHVsYXRpb24gc2l6ZSBhbmQgYmFzZWxpbmUgaW1tdW5pdHksIGNhbiBhZmZlY3QgbW9kZWwgcHJlZGljdGlvbnMuPC9wPjxicj4KPGg0PkxpbWl0YXRpb25zPC9oND4KPHA+VGhlIG1vZGVsIGRvZXMgbm90IGFjY291bnQgZm9yIGV4dGVybmFsIGZhY3RvcnMgc3VjaCBhcyBtaWdyYXRpb24gb3IgY2hhbmdlcyBpbiBwdWJsaWMgaGVhbHRoIHBvbGljaWVzIGR1cmluZyB0aGUgb3V0YnJlYWsuPC9wPjxicj4KPGgyPlRlc3Rpbmc8L2gyPgo8aDQ+VmFsaWRhdGlvbjwvaDQ+CjxwPlRoZSBtb2RlbCB3YXMgdmFsaWRhdGVkIGJ5IGZpdHRpbmcgdG8gb2JzZXJ2ZWQgY2FzZSBkYXRhIGZyb20gdGhlIExvdWlzdmlsbGUgb3V0YnJlYWsuPC9wPjxicj4KPGg0Pk1ldHJpY3M8L2g0Pgo8cD5NZXRyaWNzIGluY2x1ZGUgdGhlIGJhc2ljIHJlcHJvZHVjdGlvbiBudW1iZXIgKFIwKSwgY3JpdGljYWwgdmFjY2luYXRpb24gdGhyZXNob2xkIChWYyksIGFuZCB0aGUgbnVtYmVyIG9mIGNhc2VzIGFuZCBob3NwaXRhbGl6YXRpb25zIHByZXZlbnRlZCB1bmRlciBkaWZmZXJlbnQgc2NlbmFyaW9zLjwvcD48YnI+CjxoMj5HZXR0aW5nIFN0YXJ0ZWQ8L2gyPgo8aDQ+U3RlcHM8L2g0Pgo8dWw+CjxsaT5EZWZpbmUgdGhlIGluaXRpYWwgY29uZGl0aW9ucyBmb3IgdGhlIHN0YXRlcyAoUywgTCwgSSwgUiwgWikuPC9saT4KPGxpPlNldCBwYXJhbWV0ZXIgdmFsdWVzIGJhc2VkIG9uIHRoZSBzdHVkeSBvciBsb2NhbCBkYXRhLjwvbGk+CjxsaT5SdW4gc2ltdWxhdGlvbnMgdG8gb2JzZXJ2ZSB0aGUgZHluYW1pY3Mgb2YgSEFWIHRyYW5zbWlzc2lvbi48L2xpPgo8bGk+QW5hbHl6ZSB0aGUgaW1wYWN0IG9mIGRpZmZlcmVudCB2YWNjaW5hdGlvbiBzdHJhdGVnaWVzLjwvbGk+CjwvdWw+PGJyPgo8aDQ+RXhhbXBsZXM8L2g0Pgo8dWw+CjxsaT5TaW11bGF0ZSB0aGUgb3V0YnJlYWsgZHluYW1pY3Mgd2l0aCBhbmQgd2l0aG91dCB2YWNjaW5hdGlvbi48L2xpPgo8bGk+RXN0aW1hdGUgdGhlIGNyaXRpY2FsIHZhY2NpbmF0aW9uIHRocmVzaG9sZCB0byBhY2hpZXZlIGhlcmQgaW1tdW5pdHkuPC9saT4KPC91bD48YnI+CjxoMj5HbG9zc2FyeTwvaDI+Cjx1bD4KPGxpPkhlcmQgaW1tdW5pdHkgdGhyZXNob2xkOiBUaGUgcHJvcG9ydGlvbiBvZiB0aGUgcG9wdWxhdGlvbiB0aGF0IG11c3QgYmUgaW1tdW5lIHRvIHByZXZlbnQgZGlzZWFzZSBzcHJlYWQuPC9saT4KPGxpPkJhc2ljIHJlcHJvZHVjdGlvbiBudW1iZXIgKFIwKTogVGhlIGF2ZXJhZ2UgbnVtYmVyIG9mIHNlY29uZGFyeSBpbmZlY3Rpb25zIGNhdXNlZCBieSBvbmUgaW5mZWN0ZWQgaW5kaXZpZHVhbCBpbiBhIGZ1bGx5IHN1c2NlcHRpYmxlIHBvcHVsYXRpb24uPC9saT4KPGxpPkNyaXRpY2FsIHZhY2NpbmF0aW9uIHRocmVzaG9sZCAoVmMpOiBUaGUgcHJvcG9ydGlvbiBvZiB0aGUgcG9wdWxhdGlvbiB0aGF0IG11c3QgYmUgdmFjY2luYXRlZCB0byBhY2hpZXZlIGhlcmQgaW1tdW5pdHkuPC9saT4KPC91bD48YnI+CjxoMj5BdXRob3JzPC9oMj4KPHVsPgo8bGk+RW1tYW51ZWxsZSBBLiBEYW5rd2E8L2xpPgo8bGk+Q2hyaXN0bCBBLiBEb25uZWxseTwvbGk+CjxsaT5BbmRyZXcgRi4gQnJvdXdlcjwvbGk+CjxsaT5SdWkgWmhhbzwvbGk+CjxsaT5NYXJ0aGEgUC4gTW9udGdvbWVyeTwvbGk+CjxsaT5NYXJrIEsuIFdlbmc8L2xpPgo8bGk+TmF0YXNoYSBLLiBNYXJ0aW48L2xpPgo8L3VsPjxicj4KPGgyPkNpdGF0aW9uczwvaDI+Cjx1bD4KPGxpPkRhbmt3YSBFQSwgRG9ubmVsbHkgQ0EsIEJyb3V3ZXIgQUYsIGV0IGFsLiBFc3RpbWF0aW5nIHZhY2NpbmF0aW9uIHRocmVzaG9sZCBhbmQgaW1wYWN0IGluIHRoZSAyMDE34oCTMjAxOSBoZXBhdGl0aXMgQSB2aXJ1cyBvdXRicmVhayBhbW9uZyBwZXJzb25zIGV4cGVyaWVuY2luZyBob21lbGVzc25lc3Mgb3Igd2hvIHVzZSBkcnVncyBpbiBMb3Vpc3ZpbGxlLCBLZW50dWNreSwgVW5pdGVkIFN0YXRlcy4gVmFjY2luZS4gMjAyMTszOSgzOSk6NzE4Mi03MTkwLjwvbGk+CjwvdWw+PGJyPgo8aDI+TW9yZSBJbmZvcm1hdGlvbjwvaDI+CjxoND5GdW5kZWQgQnk8L2g0Pgo8cD5VUyBDZW50ZXJzIGZvciBEaXNlYXNlIENvbnRyb2wgYW5kIFByZXZlbnRpb24gTmF0aW9uYWwgQ2VudGVyIGZvciBISVYvQUlEUywgVmlyYWwgSGVwYXRpdGlzLCBTVEQsIGFuZCBUQiBQcmV2ZW50aW9uPC9wPjxicj4KPGg0PkxpbmtzPC9oND4KPHVsPgo8bGk+aHR0cHM6Ly9kb2kub3JnLzEwLjEwMTYvai52YWNjaW5lLjIwMjEuMTAuMDAxPC9saT4KPC91bD48YnI+Cg==",
+      "gollmCard": {
+        "summary": "The model represents the dynamics of Hepatitis A Virus (HAV) transmission among persons experiencing homelessness or who use drugs (PEH/PWUD) in Louisville, Kentucky, during the 2017–2019 outbreak. It is a deterministic compartmental model with states representing different stages of infection and immunity, transitions governed by parameters such as contact rates and vaccination efficacy, and observables related to case counts and hospitalizations.",
+        "specs": {
+          "domain": [
+            "Epidemiology",
+            "Public Health"
+          ],
+          "type": "Mathematical Model",
+          "specification": "The model includes five states (S, L, I, R, Z) and transitions between them governed by parameters such as contact rates and vaccination rates. It incorporates time-varying contact rates and vaccination interventions.",
+          "states": [
+            ": Susceptible individuals (S): Individuals who can contract HAV. Units: persons.",
+            "Latent individuals (L): Individuals exposed to HAV but not yet infectious. Units: persons.",
+            "Infectious individuals (I): Individuals capable of transmitting HAV. Units: persons.",
+            "Recovered individuals (R): Individuals who have recovered from HAV but may relapse. Units: persons.",
+            "Immune individuals (Z): Individuals who are immune to HAV. Units: persons."
+          ],
+          "parameters": [
+            "Effective contact rate (β_s): Rate at which susceptible individuals contact infectious individuals at the start of the outbreak. Units: 1/(person*week).",
+            "Effective contact rate (β_l): Rate at which susceptible individuals contact infectious individuals later in the outbreak. Units: 1/(person*week).",
+            "Transition midpoint time from beta_s to beta_l (t_s): Time at which the effective contact rate changes. Units: weeks.",
+            "Speed of transition from beta_s to beta_l (c): Speed coefficient in effective contact rate transition. Units: dimensionless.",
+            "Vaccination rate (θ): Rate of vaccination among susceptible individuals. Units: 1/week.",
+            "Latent period duration (1/alpha): Average duration individuals remain in the latent state. Units: weeks.",
+            "Infectious period duration (1/gamma): Average duration individuals remain infectious. Units: weeks.",
+            "Remission period duration (1/sigma): Average duration individuals remain in remission. Units: weeks.",
+            "Relapse probability (1-eta): Probability of relapse after remission. Units: dimensionless.",
+            "Initial immunity proportion (I_1(0)): Proportion of individuals initially immune. Units: dimensionless.",
+            "Fraction of vaccine doses given to at-risk individuals (ω): Fraction of vaccine doses given to at-risk individuals. Units: dimensionless.",
+            "Population size (N): Total population size. Units: persons.",
+            "First-dose vaccine efficacy (τ): Efficay of the first vaccine dose at preventing infection. Units: dimensionless."
+          ]
+        },
+        "uses": {
+          "directUse": "The model can be used to simulate HAV transmission dynamics and evaluate the impact of vaccination strategies.",
+          "outOfScopeUse": "The model is not suitable for predicting individual-level outcomes or for use in populations with significantly different characteristics from the study population."
+        },
+        "biasRisksLimitations": {
+          "biases": "The model assumes homogeneous mixing within the population, which may not reflect real-world contact patterns.",
+          "risks": "Parameter uncertainty, such as population size and baseline immunity, can affect model predictions.",
+          "limitations": "The model does not account for external factors such as migration or changes in public health policies during the outbreak."
+        },
+        "testing": {
+          "validation": "The model was validated by fitting to observed case data from the Louisville outbreak.",
+          "metrics": "Metrics include the basic reproduction number (R0), critical vaccination threshold (Vc), and the number of cases and hospitalizations prevented under different scenarios."
+        },
+        "gettingStarted": {
+          "steps": [
+            "Define the initial conditions for the states (S, L, I, R, Z).",
+            "Set parameter values based on the study or local data.",
+            "Run simulations to observe the dynamics of HAV transmission.",
+            "Analyze the impact of different vaccination strategies."
+          ],
+          "examples": [
+            "Simulate the outbreak dynamics with and without vaccination.",
+            "Estimate the critical vaccination threshold to achieve herd immunity."
+          ]
+        },
+        "glossary": [
+          "Herd immunity threshold: The proportion of the population that must be immune to prevent disease spread.",
+          "Basic reproduction number (R0): The average number of secondary infections caused by one infected individual in a fully susceptible population.",
+          "Critical vaccination threshold (Vc): The proportion of the population that must be vaccinated to achieve herd immunity."
+        ],
+        "authors": [
+          "Emmanuelle A. Dankwa",
+          "Christl A. Donnelly",
+          "Andrew F. Brouwer",
+          "Rui Zhao",
+          "Martha P. Montgomery",
+          "Mark K. Weng",
+          "Natasha K. Martin"
+        ],
+        "citations": [
+          "Dankwa EA, Donnelly CA, Brouwer AF, et al. Estimating vaccination threshold and impact in the 2017–2019 hepatitis A virus outbreak among persons experiencing homelessness or who use drugs in Louisville, Kentucky, United States. Vaccine. 2021;39(39):7182-7190."
+        ],
+        "moreInformation": {
+          "fundedBy": "US Centers for Disease Control and Prevention National Center for HIV/AIDS, Viral Hepatitis, STD, and TB Prevention",
+          "links": [
+            "https://doi.org/10.1016/j.vaccine.2021.10.001"
+          ]
+        }
+      },
+      "gollmExtractions": null,
+      "templateCard": null
+    }
+  }
